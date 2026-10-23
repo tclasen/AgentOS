@@ -12,7 +12,7 @@ status: stable
 # Minimum checks
 
 - Reconcile the selection/read checklist against all required catalog entries and the selected hard-dependency closure. Verify that each full selected source was actually read; load any omission before continuing.
-- For **each selected component**, compare its individual source Operational contract, Implementation and Verification obligations with the installed artifacts. Record a compact mapping of obligation → implementation location/mechanism → check and outcome, grouped by source component. This mapping may live in the installation report or another approved existing file; it is not a requirement to create one file per component. A component-level row saying its role or file exists does not establish coverage of its distinct operating steps.
+- For **each selected component**, compare its individual source Responsibilities or Operational contract, Implementation and Verification obligations with the installed artifacts. Record a compact mapping of obligation → implementation location/mechanism → check and outcome, grouped by source component. This mapping may live in the installation report or another approved existing file; it is not a requirement to create one file per component. A component-level row saying its role or file exists does not establish coverage of its distinct operating steps.
 - Root `AGENTS.md` exists, role-aware routing is coherent and referenced files resolve.
 - Director and Chief of Staff remain permanent with all constitutional guarantees.
 - Installed optional components have an actual implementation pathway; no unsupported feature is represented as enforced.
@@ -37,6 +37,8 @@ Use these checks to catch frequently lost obligations in a compact installation.
 Apply the same obligation-level check to CoS, activation, core context and self-improvement, and to every selected conditional component. Preserve failed attempts and unresolved checks; do not silently replace an unmet criterion with an easier assertion. Report contract completeness separately from the evidence level of each scenario.
 
 # Risk-based behavioral qualification
+
+When a fresh reviewer is available through the actual runtime and within the user's delegation/resource grants, use it before claiming installation qualification. Give it the selected original component sources, approved design/paths, pinned artifact identities and actual evidence. It must inspect installed content itself rather than trust the installer's mapping. Reconcile missing obligations, make scoped corrections within existing approval, and recheck the changed candidate. This is installation quality control, not automatic selection of permanent independent-evaluation infrastructure. Do not invent a reviewer when spawning is unavailable; disclose solo qualification and its limits instead. A reviewer label in the same context is not fresh review.
 
 Choose scenarios appropriate to the approved design, using [evidence levels](../concepts/evidence-levels.md): unassigned session → Director, delegated identity preserved, task/result handoff, refusal of unauthorized action, correct delivery status, interrupted-session recovery, duplicate external effect prevention and evaluation independence. Higher-risk installations warrant independent tests and actual native runtime trials where supported.
 

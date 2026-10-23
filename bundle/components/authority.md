@@ -29,6 +29,8 @@ Ask only if material: Which classes of actions may be autonomous? Which require 
 
 Put concise non-optional constraints in the active root/role context. When available, use runtime-native permissions and explicit action scopes. Use a simple approval convention for low-risk work; use bound approvals and traceable scopes for high-impact changes.
 
+Resolve granted relative paths against the agreed project root before writing. A shell directory change or organizational storage preference cannot relocate an approved destination. Check the actual changed paths against the current grant before accepting an output.
+
 # Verification
 
 Verify an authorized action is possible and an out-of-scope mutation is refused or escalated. Distinguish procedural instruction from technical enforcement.

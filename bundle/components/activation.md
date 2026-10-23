@@ -21,7 +21,14 @@ agentos:
 
 # Operational contract
 
-The repository-root `AGENTS.md` is a thin portable bridge to the installed organization. An unassigned interactive session activates the root Director; a delegated worker retains its assigned identity/context/task even if the root file is loaded. The temporary installer ceases to be active after handoff. Nested Directors are only explicit child assignments.
+The repository-root `AGENTS.md` is a thin portable bridge that preserves each routing rule:
+
+- Fresh unassigned user session → root Director.
+- Explicit delegated context → assigned identity, task, scope and reporting relationship, even when the root file is loaded.
+- Explicit nested Director → child assignment that **reports to its assigning Director**, never a peer root Director.
+- Handoff completed → temporary installer ends and does not reactivate on ordinary startup.
+
+Keep these rules in the active startup instructions, rather than relying on a role name to imply the reporting relationship.
 
 # Follow-up interview
 

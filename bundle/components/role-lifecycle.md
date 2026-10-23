@@ -20,7 +20,14 @@ agentos:
 
 # Operational contract
 
-Roles and capability identities must be discoverable and evolve without breaking active assignments. Preserve the Director and CoS invariants. When a role changes or retires, evaluate in-flight work, pinned instructions, historical identity, routing tables and dependent capabilities; do not delete responsibility midtask.
+Roles and capability identities remain discoverable and evolve without breaking active assignments. Preserve Director and CoS. Before changing or retiring another role, check each of:
+
+- In-flight work and accountable owners.
+- Instruction versions pinned to those assignments; preserve their old contracts until explicitly transferred.
+- Historical role identity and retained decision lineage.
+- Routing/discovery tables and dependent capabilities.
+
+Transfer responsibility explicitly and update discovery before retirement. Never delete responsibility midtask. A short record in an existing file is sufficient; this contract does not require a separate ledger.
 
 # Follow-up interview
 
