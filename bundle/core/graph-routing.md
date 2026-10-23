@@ -34,6 +34,8 @@ A component may declare:
 
 # Safety and graph discipline
 
+Before proposing an installation, reconcile a compact **selection/read checklist** against the actual catalog and completed reads, rather than memory. For each selected component, track its bundle path, selection reason, hard prerequisites and whether its full source has been read. Compare the checklist with **every required catalog entry**, then follow each selected node's `agentos.requires` until every prerequisite is selected and read. A batch read covers only the files actually included and successfully returned; mentioning a capability in a proposal does not satisfy this check. Load any missing source before asking for approval. Keep this provisional checklist in conversation until persistence is authorized; it need not become another installed file.
+
 - An OKF link states a relationship, **not necessarily a hard dependency**; only `agentos.requires` does that in this installer profile.
 - `agentos.when_any` describes *discovery hints*, not an exhaustive choice ontology or a compulsory static questionnaire.
 - A missing optional link is tolerated by OKF; a missing selected hard dependency is an **AgentOS installation blocker**.
