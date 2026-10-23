@@ -1,15 +1,40 @@
 """Verify evidence boundaries, source graph integrity and fixture preservation helpers."""
 import importlib.util
+import contextlib
+import io
 import json
 from pathlib import Path
 import tempfile
 from types import SimpleNamespace
 import unittest
+from unittest.mock import patch
 
 SPEC=importlib.util.spec_from_file_location('qualification',Path(__file__).parents[1]/'tools/qualification.py')
 q=importlib.util.module_from_spec(SPEC);SPEC.loader.exec_module(q)
 
 class QualificationTests(unittest.TestCase):
+    def test_returned_artifact_identities_survive_later_mutation_in_both_scopes(self):
+        with tempfile.TemporaryDirectory() as d:
+            root=Path(d);target=root/'fixture';target.mkdir();(target/'.git').mkdir()
+            extra=root/'destination';extra.mkdir();prompt=root/'prompt.txt';prompt.write_text('unit fixture')
+            args=SimpleNamespace(name='attempt',target=str(target),workspace=str(root),output=str(root/'evidence'),
+                                 add_dir=[str(extra)],sandbox='unit-fixture',model='gpt-6-luna',policy='workspace-write',
+                                 agents=0,strict_config=False,resume=None,schema=None,prompt=str(prompt),
+                                 source=str(Path(__file__).parents[1]))
+            def fixture_worker(cmd, input, stdout, stderr):
+                (target/'artifact.txt').write_text('returned artifact')
+                (extra/'receipt.txt').write_text('returned receipt')
+                stdout.write((json.dumps({'type':'turn.completed','usage':{}})+'\n').encode())
+                return SimpleNamespace(returncode=0)
+            with patch.object(q.subprocess,'run',side_effect=fixture_worker), contextlib.redirect_stdout(io.StringIO()):
+                self.assertEqual(q.run(args),0)
+            record=json.loads((root/'evidence/attempt.run.json').read_text())
+            self.assertEqual(record['after'],q.snapshot(target))
+            self.assertEqual(record['additional_scopes_after'][str(extra.resolve())],q.snapshot(extra))
+            (target/'artifact.txt').write_text('later changed artifact');(extra/'receipt.txt').unlink()
+            self.assertEqual(q.difference(record['after'],q.snapshot(target))['changed'],['artifact.txt'])
+            self.assertEqual(q.difference(record['additional_scopes_after'][str(extra.resolve())],q.snapshot(extra))['removed'],['receipt.txt'])
+
     def test_run_rejects_path_names_before_any_output(self):
         for name in ('../escape', '/absolute', 'nested/name', '.hidden', ''):
             with self.assertRaisesRegex(ValueError, 'not a path'):

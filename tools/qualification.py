@@ -165,8 +165,10 @@ def run(args):
     with log.open('wb') as stream:
         proc = subprocess.run(cmd, input=Path(args.prompt).read_bytes(), stdout=stream, stderr=subprocess.STDOUT)
     summary = summarize(log, source)
-    record.update(status='returned' if proc.returncode == 0 and summary['turn_completed'] and not summary['errors'] else 'failed', returncode=proc.returncode, ended_epoch=time.time(), summary=summary, delta=difference(before, snapshot(target)))
-    record['additional_scope_deltas'] = {str(p): difference(record['additional_scopes_before'][str(p)], snapshot(p)) for p in extra}
+    after = snapshot(target)
+    record.update(status='returned' if proc.returncode == 0 and summary['turn_completed'] and not summary['errors'] else 'failed', returncode=proc.returncode, ended_epoch=time.time(), summary=summary, after=after, delta=difference(before, after))
+    record['additional_scopes_after'] = {str(p): snapshot(p) for p in extra}
+    record['additional_scope_deltas'] = {str(p): difference(record['additional_scopes_before'][str(p)], record['additional_scopes_after'][str(p)]) for p in extra}
     write_json(manifest, record)
     print(json.dumps({'name': args.name, 'status': record['status'], 'threads': summary['threads'], 'delta': record['delta'], 'last_message': summary['messages'][-1] if summary['messages'] else '', 'failed_commands': len(summary['failed_commands'])}, indent=2), flush=True)
     return 0 if record['status'] == 'returned' else 1
