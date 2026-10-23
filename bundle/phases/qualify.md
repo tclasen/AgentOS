@@ -11,12 +11,30 @@ status: stable
 
 # Minimum checks
 
+- Reconcile the selection/read checklist against all required catalog entries and the selected hard-dependency closure. Verify that each full selected source was actually read; load any omission before continuing.
+- For **each selected component**, compare its individual source Operational contract, Implementation and Verification obligations with the installed artifacts. Record a compact mapping of obligation → implementation location/mechanism → check and outcome, grouped by source component. This mapping may live in the installation report or another approved existing file; it is not a requirement to create one file per component. A component-level row saying its role or file exists does not establish coverage of its distinct operating steps.
 - Root `AGENTS.md` exists, role-aware routing is coherent and referenced files resolve.
 - Director and Chief of Staff remain permanent with all constitutional guarantees.
 - Installed optional components have an actual implementation pathway; no unsupported feature is represented as enforced.
 - Native structured configuration parses and uses supported conventions where applicable.
 - Reconcile changed paths against approved scope; preserve existing user data and instructions.
-- Verify self-improvement can be triggered and has an execution/evaluation/retention path appropriate to runtime availability.
+- Verify self-improvement can be triggered and has an execution/evaluation/retention path appropriate to runtime availability. Check for evidence and hypothesis, authorized scope, criteria fixed before the candidate change, an actual evaluation step, a scoped rollback decision and retention of accepted, rejected and inconclusive outcomes. A lightweight lessons entry in an existing file is sufficient; optional independent-evaluation or learning-queue infrastructure is not required. Merely saying how an edit *could* be checked does not implement this loop. Exercise a bounded correction or controlled local scenario and label its evidence honestly.
+
+Missing required operating steps are installation defects even when the corresponding role/file exists. Correct them within the approved paths and authority, or report the installation incomplete with the exact gap. Do not label it qualified or complete on structural checks alone. Fresh-runtime tests may remain explicitly unverified where unavailable; that limitation does not excuse missing operational instructions.
+
+# Required operating checks
+
+Use these checks to catch frequently lost obligations in a compact installation. The component sources remain authoritative; this is a qualification aid, not a replacement for reading them. A controlled scenario can be carried out locally or reasoned through with an honest simulation label when native execution is unavailable.
+
+| Contract | Inspect the installed pathway and exercise a bounded scenario |
+| --- | --- |
+| Director and reconfiguration | Trace intent → capability → execution/delegation → verification → outcome report. Also trace a user reconfiguration request through Director clarification, CoS implementation within grants, evaluation and return to Director; the temporary installer must not be required. |
+| Capability routing | Match needed capabilities against actual availability, permissions and budget. For a missing capability, consider reuse, learning/training, an authorized tool integration or justified new role before escalation. Unknown resources stay unknown. Probe an available capability and a missing one; a dedicated budget system is unnecessary. |
+| Delegation | Ensure the assignee receives intent, accountable owner, authorized scope, necessary context, deliverable, **acceptance criteria** and reporting expectations. Nested assignments inherit limits and cumulative budgets. Exercise assignment → scoped work → evidence return → Director reconciliation; sequential specialization must be labelled honestly. |
+| Authority and delivery | Exercise an allowed local action and refusal/escalation of an action outside the grant. Compare a successful local outcome with a misleading worker-completion claim; verify the Director checks original intent and required delivery before acceptance. No real prohibited action is needed. |
+| Role lifecycle | Check active work, pinned instruction versions, historical role identity, routing and dependent capabilities before changing or retiring a role. Simulate an optional-role amendment/retirement with an active assignment: preserve its old contract/history, transfer responsibility explicitly and update discovery before retirement. Keep Director and CoS permanent. A brief record in an existing file is sufficient. |
+
+Apply the same obligation-level check to CoS, activation, core context and self-improvement, and to every selected conditional component. Preserve failed attempts and unresolved checks; do not silently replace an unmet criterion with an easier assertion. Report contract completeness separately from the evidence level of each scenario.
 
 # Risk-based behavioral qualification
 
