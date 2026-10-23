@@ -1,0 +1,738 @@
+{
+  "version": 1,
+  "date": "2026-10-23",
+  "scope": "bounded representative execution paths, not universal reliability or first-pass rate",
+  "operative_source_commit": "bf1591bf1deff01eff99714cea78804d68fa92aa",
+  "operative_source_tree": "55731bde646cd7a96879a6ca0382f864fbbe620b",
+  "models": [
+    "gpt-6.1-sol",
+    "gpt-6-luna"
+  ],
+  "components": [
+    {
+      "source": "components/director.md",
+      "source_sha256": "beafa827c5ce6c53937537fa9521c2b46ebb9ec049788648b7e2b010b0eea9b0",
+      "criteria": [
+        "Own intent, dependency readiness, significant progress, verification and user report",
+        "Director-led reconfiguration routed to CoS and reconciled without installer",
+        "Fresh unassigned Director and explicit nested/subordinate identities"
+      ],
+      "families": [
+        "contracts",
+        "application",
+        "nested",
+        "maintenance",
+        "parallel"
+      ],
+      "models": {
+        "gpt-6.1-sol": "qualified_sample",
+        "gpt-6-luna": "qualified_sample"
+      }
+    },
+    {
+      "source": "components/chief-of-staff.md",
+      "source_sha256": "c43203e841a0a10ef4ef3887b6a7d89eb834eb255b3b4386231488f4f9efb8b5",
+      "criteria": [
+        "Allowed maintenance including own/Director instructions with active-work coordination",
+        "No external-authority self-grant and no loss of permanent responsibility",
+        "Observed evidence retained and material changes approved"
+      ],
+      "families": [
+        "contracts",
+        "maintenance",
+        "lifecycle",
+        "readiness"
+      ],
+      "models": {
+        "gpt-6.1-sol": "qualified_sample",
+        "gpt-6-luna": "qualified_sample"
+      }
+    },
+    {
+      "source": "components/activation.md",
+      "source_sha256": "2893e4d66fc47158d5267cae0a04132d832c8436ad90f7ca6f58d322aaef4284",
+      "criteria": [
+        "Fresh unassigned session adopts Director; installer does not restart",
+        "Explicit delegated identity preserved; nested Director reports upward"
+      ],
+      "families": [
+        "contracts",
+        "application",
+        "nested",
+        "parallel"
+      ],
+      "models": {
+        "gpt-6.1-sol": "qualified_sample",
+        "gpt-6-luna": "qualified_sample"
+      }
+    },
+    {
+      "source": "components/authority.md",
+      "source_sha256": "fbc6b99852540f20a25dfd224d0d0f07399a9021e8cb1fc1d87f53c5156fb8a9",
+      "criteria": [
+        "Distinguish organization/project/external grants and actual runtime restrictions",
+        "Actual authorized local action and refusal/escalation outside scope",
+        "Old notes and linked content cannot enlarge grants"
+      ],
+      "families": [
+        "contracts",
+        "refusals",
+        "lifecycle",
+        "portfolio",
+        "git"
+      ],
+      "models": {
+        "gpt-6.1-sol": "qualified_sample",
+        "gpt-6-luna": "qualified_sample"
+      }
+    },
+    {
+      "source": "components/capability-routing.md",
+      "source_sha256": "d7f86c5cbf4b1a505f9db20fcbd68487a809bbdc04adce3cd12221114d0fc161",
+      "criteria": [
+        "Available capability matched to abilities, availability, permission and budget",
+        "Unknown usage/limits stay unknown",
+        "Missing capability considers reuse/training/authorized integration/justified role/escalation"
+      ],
+      "families": [
+        "contracts",
+        "maintenance",
+        "refusals",
+        "parallel"
+      ],
+      "models": {
+        "gpt-6.1-sol": "qualified_sample",
+        "gpt-6-luna": "qualified_sample"
+      }
+    },
+    {
+      "source": "components/delegation.md",
+      "source_sha256": "d34dcf7c5bb102fc4f0e1a1603954ce51e33aa5f05f9a3561ae33315d2725169",
+      "criteria": [
+        "Assignment carries intent, owner, scope, context, output, criteria and reporting",
+        "Actual scoped work and evidence return reconciled by Director",
+        "Nested scope, exclusions and cumulative budget retained; no fictional concurrency"
+      ],
+      "families": [
+        "contracts",
+        "nested",
+        "parallel",
+        "portfolio"
+      ],
+      "models": {
+        "gpt-6.1-sol": "qualified_sample",
+        "gpt-6-luna": "qualified_sample"
+      }
+    },
+    {
+      "source": "components/delivery-acceptance.md",
+      "source_sha256": "540b6b083ca6eeb70214cb7711d9f1326c4c75c6de17327fa7048aa76d0be4bb",
+      "criteria": [
+        "Compare original intent with actual artifacts and relevant checks",
+        "Reject misleading completion or missing required destination",
+        "Distinguish attempted/produced/reviewed/delivered/accepted"
+      ],
+      "families": [
+        "application",
+        "assurance",
+        "git"
+      ],
+      "models": {
+        "gpt-6.1-sol": "qualified_sample",
+        "gpt-6-luna": "qualified_sample"
+      }
+    },
+    {
+      "source": "components/context-core.md",
+      "source_sha256": "8046c83f2eec46be879ce418e68827fdd95f6388ad3ff2090b8254840e74bca0",
+      "criteria": [
+        "Startup loads core/authority/active role; triggers load only relevant detail",
+        "Delegate receives approved task context and criteria",
+        "No compulsory full history/catalog or duplicate canonical policy"
+      ],
+      "families": [
+        "contracts",
+        "nested",
+        "refusals"
+      ],
+      "models": {
+        "gpt-6.1-sol": "qualified_sample",
+        "gpt-6-luna": "qualified_sample"
+      }
+    },
+    {
+      "source": "components/self-improvement.md",
+      "source_sha256": "0bf78a0d5f04096c9e0b3603588f8b865aed218ba980f59f4dc11922656d5ac7",
+      "criteria": [
+        "Observed issue, prior hypothesis/scope/check/guardrails/rollback, authorized edit and actual evaluation",
+        "Retain accepted/rejected/inconclusive outcomes and failed attempts",
+        "No evaluator weakening or generalized benefit from narrow correction"
+      ],
+      "families": [
+        "maintenance",
+        "readiness",
+        "contracts"
+      ],
+      "models": {
+        "gpt-6.1-sol": "qualified_sample",
+        "gpt-6-luna": "qualified_sample"
+      }
+    },
+    {
+      "source": "components/role-lifecycle.md",
+      "source_sha256": "ae0fc9a30668666d22cb9b0ab03049b98ec095a590f81ecb7b843972073bf95f",
+      "criteria": [
+        "Preserve Director/CoS; justified optional create/amend/retire path",
+        "Check active assignments, pinned contracts, historical identity, routing and dependents",
+        "Transfer responsibility and update discovery before retirement"
+      ],
+      "families": [
+        "lifecycle",
+        "contracts"
+      ],
+      "models": {
+        "gpt-6.1-sol": "qualified_sample",
+        "gpt-6-luna": "qualified_sample"
+      }
+    },
+    {
+      "source": "components/runtime-native.md",
+      "source_sha256": "4d61f9e83c878efb8718fdddf5adf196e86f9525a73ea3cb2b18d53cfea1cf74",
+      "criteria": [
+        "Supported native definitions parse under updated runtime",
+        "Actual representative native activation and delegation",
+        "Portable root preserved; no user-global config/provider override"
+      ],
+      "families": [
+        "native",
+        "parallel",
+        "events"
+      ],
+      "models": {
+        "gpt-6.1-sol": "qualified_sample",
+        "gpt-6-luna": "qualified_sample"
+      }
+    },
+    {
+      "source": "components/work-ledger.md",
+      "source_sha256": "d912bc474f79722ef403dde880e1fa864bb7f08fd0b899a9b774880e7bb78cab",
+      "criteria": [
+        "Distinct task/run/native identity, owner, state, dependencies and claims",
+        "Dependency blocking, conflicting-claim refusal, cancellation and stale-status reconciliation",
+        "Preserve failed attempts and distinguish worker done from acceptance"
+      ],
+      "families": [
+        "assurance",
+        "effects",
+        "portfolio"
+      ],
+      "models": {
+        "gpt-6.1-sol": "qualified_sample",
+        "gpt-6-luna": "qualified_sample"
+      }
+    },
+    {
+      "source": "components/parallel-coordination.md",
+      "source_sha256": "c356df44bb713f7f79a37c8fa82c9609d1c6702446643bbb82a447b48a00e510",
+      "criteria": [
+        "Two real concurrent scoped workers with bounded nested delegation",
+        "No shared Git index/overlapping mutation; shared files not claimed isolated",
+        "Honest responsiveness/isolation limits and user-approved fallback if unavailable"
+      ],
+      "families": [
+        "parallel",
+        "assurance"
+      ],
+      "models": {
+        "gpt-6.1-sol": "qualified_sample",
+        "gpt-6-luna": "qualified_sample"
+      }
+    },
+    {
+      "source": "components/durable-handoff.md",
+      "source_sha256": "f620977f68ad65bb99415afaa75e2afab51cdaae00037e65948927cb3c2eebd8",
+      "criteria": [
+        "Fresh process recovers from approved checkpoint without predecessor conversation",
+        "Task/run/role/outcome/actions/artifacts/evidence/resources/effects/owner/next step retained",
+        "Real files/destination override stale checkpoint; missing context safely blocks"
+      ],
+      "families": [
+        "effects",
+        "refusals",
+        "portfolio"
+      ],
+      "models": {
+        "gpt-6.1-sol": "qualified_sample",
+        "gpt-6-luna": "qualified_sample"
+      }
+    },
+    {
+      "source": "components/effect-reconciliation.md",
+      "source_sha256": "d5df31e3abd0e126f735f79b318cc08b443b9aa13aba11be76fb6e7b2ac46e7a",
+      "criteria": [
+        "Correlated intent/attempt/observation and unknown outcome retained",
+        "Lost acknowledgment followed by lookup; existing effect is not repeated",
+        "Reliable absence permits scoped retry; unavailable/inconclusive lookup stays blocked"
+      ],
+      "families": [
+        "effects",
+        "assurance",
+        "git"
+      ],
+      "models": {
+        "gpt-6.1-sol": "qualified_sample",
+        "gpt-6-luna": "qualified_sample"
+      }
+    },
+    {
+      "source": "components/independent-evaluation.md",
+      "source_sha256": "b8056f3712e264d67628bcf8320436f9069a7605bd08c74c0f75ff33f88a5391",
+      "criteria": [
+        "Fresh reviewer checks actual pinned artifacts under original criteria",
+        "Builder changing grading rules cannot promote a defective candidate",
+        "Changed candidate/stale approval forces appropriate new review; failures retained"
+      ],
+      "families": [
+        "contracts",
+        "assurance",
+        "readiness"
+      ],
+      "models": {
+        "gpt-6.1-sol": "qualified_sample",
+        "gpt-6-luna": "qualified_sample"
+      }
+    },
+    {
+      "source": "components/learning-queue.md",
+      "source_sha256": "e8b77df91474a3f010d903d036fc02ccf0f70ac308dc62e2811dcd58519c100e",
+      "criteria": [
+        "Incident to hypothesis, scope, fix, contradictory case, exposure and disposition traced",
+        "Retain rejected/inconclusive and recurrence; no final-test leakage as independent proof"
+      ],
+      "families": [
+        "maintenance",
+        "readiness"
+      ],
+      "models": {
+        "gpt-6.1-sol": "qualified_sample",
+        "gpt-6-luna": "qualified_sample"
+      }
+    },
+    {
+      "source": "components/resource-budgets.md",
+      "source_sha256": "82e10d06933148538f9df9d153fe1b5441d054bcd2203cf3952918feda3164a7",
+      "criteria": [
+        "Nested/retried work preserves cumulative usage and remaining budget",
+        "Actual exhausted bound causes stop/replan, not reset",
+        "Model choices per run; dollars/usage unknown unless observed"
+      ],
+      "families": [
+        "assurance",
+        "parallel",
+        "maintenance"
+      ],
+      "models": {
+        "gpt-6.1-sol": "qualified_sample",
+        "gpt-6-luna": "qualified_sample"
+      }
+    },
+    {
+      "source": "components/git-delivery.md",
+      "source_sha256": "548f1d4eb37bf8bdb08e93bce84918cdfb5ea9ed03efc6c38112006b875de7cc",
+      "criteria": [
+        "Local/commit/push/open PR/check/merge/destination are distinct",
+        "Local-only when remote required stays incomplete",
+        "Authorized destination independently verified; uncertain response reconciled before retry"
+      ],
+      "families": [
+        "git",
+        "assurance"
+      ],
+      "models": {
+        "gpt-6.1-sol": "qualified_operator_assisted",
+        "gpt-6-luna": "qualified_operator_assisted"
+      }
+    },
+    {
+      "source": "components/information-boundaries.md",
+      "source_sha256": "ca62d743eb5e146fde9905c6314553cac50c113241a9e2115713831c2f705454",
+      "criteria": [
+        "Project-specific private content stays in owning repo; minimal org pointers",
+        "Check public tree and new history; deletion does not erase history",
+        "No credentials/customer marker exported into organization artifacts"
+      ],
+      "families": [
+        "portfolio"
+      ],
+      "models": {
+        "gpt-6.1-sol": "qualified_sample",
+        "gpt-6-luna": "qualified_sample"
+      }
+    },
+    {
+      "source": "components/multi-repo.md",
+      "source_sha256": "f3e66aa254d41161bd2c888731d9776d00f221a17d54381c6975a80f1aa39d3a",
+      "criteria": [
+        "Independent profiles, owners, grants and canonical acceptance",
+        "Correct routing to enrolled projects and unauthorized-project refusal",
+        "Organization changes preserve product repos and independent Git histories"
+      ],
+      "families": [
+        "portfolio"
+      ],
+      "models": {
+        "gpt-6.1-sol": "qualified_sample",
+        "gpt-6-luna": "qualified_sample"
+      }
+    },
+    {
+      "source": "components/scheduling.md",
+      "source_sha256": "20b4efed9901cd9bc9bb9df55651a84df9df37e5521aeab46739ace5aaccec33",
+      "criteria": [
+        "Real authorized native event registration and trigger observed",
+        "Duplicate event identity bounded and disabled/failure behavior clear",
+        "No scheduler means off-session promise refused; session fallback only with consent"
+      ],
+      "families": [
+        "events",
+        "readiness",
+        "refusals"
+      ],
+      "models": {
+        "gpt-6.1-sol": "qualified_sample",
+        "gpt-6-luna": "qualified_sample"
+      }
+    },
+    {
+      "source": "components/brownfield-migration.md",
+      "source_sha256": "dd0cac8f10b20aed0554fd6ed4504c4263ba1bd8be374a4f966ca86290f4f121",
+      "criteria": [
+        "Discover existing system, ask migration choice, preserve active work and unrelated instructions",
+        "Do not inherit old grants/history/telemetry as current authority",
+        "Root routing reconciled; rollback and nonterminal handoff exist"
+      ],
+      "families": [
+        "portfolio"
+      ],
+      "models": {
+        "gpt-6.1-sol": "qualified_sample",
+        "gpt-6-luna": "qualified_sample"
+      }
+    },
+    {
+      "source": "components/advanced-validation.md",
+      "source_sha256": "b4ac3d7f3a53d3194e7495a3729f8abc4dc6c632892c8acc69f22be0f9063648",
+      "criteria": [
+        "Positive/refusal/interruption scenarios have independently fixed expected outcomes",
+        "Corrupt context, overlapping claims, stale approval and evaluator weakening detected",
+        "Native trials, local destination simulations and real external outcomes separated"
+      ],
+      "families": [
+        "assurance",
+        "refusals",
+        "effects",
+        "parallel",
+        "readiness"
+      ],
+      "models": {
+        "gpt-6.1-sol": "qualified_sample",
+        "gpt-6-luna": "qualified_sample"
+      }
+    },
+    {
+      "source": "components/telemetry.md",
+      "source_sha256": "51d1bc186c3d6e45933dc671bfe92170f3cdda48cb36d419dc8c307db2b485d3",
+      "criteria": [
+        "Separate organization performance, work-product quality and measurement health",
+        "Failures/retries, sample denominators and missing coverage retained",
+        "Unknown model/tokens/dollars stay unknown; elapsed time not summed parallel effort"
+      ],
+      "families": [
+        "assurance",
+        "parallel"
+      ],
+      "models": {
+        "gpt-6.1-sol": "qualified_sample",
+        "gpt-6-luna": "qualified_sample"
+      }
+    }
+  ],
+  "evidence_families": {
+    "contracts": {
+      "gpt-6.1-sol": [
+        {
+          "artifact": "portable-sol-r3-parent-verification.json",
+          "sha256": "d18d391263c3e22a2d690539164ad5566203f3fd860389ee71814236a250b798"
+        }
+      ],
+      "gpt-6-luna": [
+        {
+          "artifact": "portable-luna-r3-parent-verification.json",
+          "sha256": "548416566c9774a6d6c38ae8b6f2f3a028516924e33d65ba8a2e7e34f1136277"
+        }
+      ]
+    },
+    "application": {
+      "gpt-6.1-sol": [
+        {
+          "artifact": "portable-sol-core-verification-r3.json",
+          "sha256": "14624db8710ab617eab2dbd683f5964061961f888143738b380dc4fbaa766235"
+        }
+      ],
+      "gpt-6-luna": [
+        {
+          "artifact": "portable-luna-core-verification-r3.json",
+          "sha256": "14624db8710ab617eab2dbd683f5964061961f888143738b380dc4fbaa766235"
+        }
+      ]
+    },
+    "nested": {
+      "gpt-6.1-sol": [
+        {
+          "artifact": "nested-director-verification.json",
+          "sha256": "8a432f4a29b3b20d4908e7b268637df44e9b28ea50615c8b7a67c10413d9c535"
+        }
+      ],
+      "gpt-6-luna": [
+        {
+          "artifact": "nested-director-verification.json",
+          "sha256": "8a432f4a29b3b20d4908e7b268637df44e9b28ea50615c8b7a67c10413d9c535"
+        }
+      ]
+    },
+    "maintenance": {
+      "gpt-6.1-sol": [
+        {
+          "artifact": "portable-sol-maintenance-verification.json",
+          "sha256": "8e1b87fdd703b3f4cac2892144d0f7260ef1153b142bcc2250af229ebe8113e8"
+        }
+      ],
+      "gpt-6-luna": [
+        {
+          "artifact": "portable-luna-maintenance-verification.json",
+          "sha256": "0e5bf839e2a910589dfccd31b870a0310c7fb48d156f7ed8c8150098a18012bb"
+        }
+      ]
+    },
+    "lifecycle": {
+      "gpt-6.1-sol": [
+        {
+          "artifact": "portable-sol-lifecycle-verification.json",
+          "sha256": "9c787d23f9b407412404787e2d5f55c49e05ecd10a21fad6fcb3645814d5ae14"
+        }
+      ],
+      "gpt-6-luna": [
+        {
+          "artifact": "portable-luna-lifecycle-verification.json",
+          "sha256": "b08278d6d739f9289d260525582745848c2045dc5f08213842c59de3ceffad8a"
+        }
+      ]
+    },
+    "refusals": {
+      "gpt-6.1-sol": [
+        {
+          "artifact": "negative-cases-parent-verification.json",
+          "sha256": "a01ada420dd22f8400ab66f4458231220fe6df90bffa3a6749bbaff76b4b6edb"
+        }
+      ],
+      "gpt-6-luna": [
+        {
+          "artifact": "negative-cases-parent-verification.json",
+          "sha256": "a01ada420dd22f8400ab66f4458231220fe6df90bffa3a6749bbaff76b4b6edb"
+        }
+      ]
+    },
+    "native": {
+      "gpt-6.1-sol": [
+        {
+          "artifact": "engineering-sol-native-promotion.json",
+          "sha256": "f1d8757e51e86720cc3defefd583deae73aec67b0c5546dc3e67eff763b31dfb"
+        },
+        {
+          "artifact": "engineering-sol-post-promotion-r1.run.json",
+          "sha256": "6d4355f410be1ee13ab8235498b719639ecef0aea5d32ea5008cd42d1f67c42c"
+        }
+      ],
+      "gpt-6-luna": [
+        {
+          "artifact": "engineering-luna-native-promotion-r2.json",
+          "sha256": "902cc99b33722fe179646276b443e4089b977f78df5e4f7107503414c99a7645"
+        },
+        {
+          "artifact": "engineering-luna-post-promotion-r1.run.json",
+          "sha256": "64a5c982fef1c3604e4484257e24d951abd8b65c2a3a2414b7b3a898bb3426cc"
+        }
+      ]
+    },
+    "parallel": {
+      "gpt-6.1-sol": [
+        {
+          "artifact": "engineering-sol-parallel-verification-r3.json",
+          "sha256": "26ef072ed9b91e06e430fed0b44b8d84e70e7534654203b1833b60bc97007886"
+        }
+      ],
+      "gpt-6-luna": [
+        {
+          "artifact": "engineering-luna-parallel-verification-r2.json",
+          "sha256": "ee1caabd5a849154f0392966fb59e08ea010d926dd08263103bd818cfd7ec6ab"
+        }
+      ]
+    },
+    "effects": {
+      "gpt-6.1-sol": [
+        {
+          "artifact": "engineering-sol-effects-verification.json",
+          "sha256": "4a38b6b7f39c8820236719d531e33d9b6170d2bc4f02c7f54f2e3a6d5e1942c6"
+        }
+      ],
+      "gpt-6-luna": [
+        {
+          "artifact": "engineering-luna-effects-verification.json",
+          "sha256": "1851ce2982ca5ffad88b76237105580aef82493d5e412a93e2450336a20acd07"
+        }
+      ]
+    },
+    "assurance": {
+      "gpt-6.1-sol": [
+        {
+          "artifact": "engineering-sol-assurance-verification.json",
+          "sha256": "fbe600fcce1df27f6409e2f2c11f1a9d644afe41f78ae7c4183366977992ec59"
+        }
+      ],
+      "gpt-6-luna": [
+        {
+          "artifact": "engineering-luna-assurance-verification.json",
+          "sha256": "d77ce887663124b07765a4fd0656dcfda841e5ef3eb9956d3025821f3a3fbb9b"
+        }
+      ]
+    },
+    "git": {
+      "gpt-6.1-sol": [
+        {
+          "artifact": "engineering-sol-git-operator-delivery.json",
+          "sha256": "92b42d75ed6607cdcfd155b97604e31f09913b3e25117c3cc2fc85808950881e"
+        },
+        {
+          "artifact": "engineering-sol-destination-event-observe-r1.run.json",
+          "sha256": "d7e62b36b6973d85fd28295923b121f14ac2eca1fd4133be7eb6bf24ffc35a0a"
+        }
+      ],
+      "gpt-6-luna": [
+        {
+          "artifact": "engineering-luna-git-operator-delivery.json",
+          "sha256": "8b0762c754c99073958593ef540a694df463bfc9581d793f34c1d707976c722c"
+        },
+        {
+          "artifact": "engineering-luna-destination-event-observe-r1.run.json",
+          "sha256": "4ebbd8dc6829edc586050cb6df8f7938c5082aaa59d601ed7c6044e357265fc8"
+        }
+      ]
+    },
+    "portfolio": {
+      "gpt-6.1-sol": [
+        {
+          "artifact": "portfolio-sol-install-verification.json",
+          "sha256": "91fa82cc71bfb571a1b065a712a5877156c5d9581a9c095c6e20fa661fa3a165"
+        },
+        {
+          "artifact": "portfolio-sol-operation-verification.json",
+          "sha256": "4a86935ed2a55a539885e3e843add6e43a5061cb96f9d3ebabc9b3e0c71b25ee"
+        }
+      ],
+      "gpt-6-luna": [
+        {
+          "artifact": "portfolio-luna-install-verification.json",
+          "sha256": "6be6f88e5640f9d58359dcaca35e020551eb6b133385806053c6d016ae150788"
+        },
+        {
+          "artifact": "portfolio-luna-operation-verification.json",
+          "sha256": "c8df8f0c099d8a345b276c09be1b25824115acc894f1860b2bf0212497a20c09"
+        }
+      ]
+    },
+    "events": {
+      "gpt-6.1-sol": [
+        {
+          "artifact": "engineering-sol-hook-trust-ui.json",
+          "sha256": "51cbae0aeea7e2e9c917d7d5d6079464777979794ae2acbe3c60b7c6b13243b8"
+        },
+        {
+          "artifact": "engineering-sol-native-event-parent-verification.json",
+          "sha256": "cb7e569291e893961771688327f85e890406f377c92d258a0fa649d0a1a256dd"
+        },
+        {
+          "artifact": "engineering-sol-native-resume-verification.json",
+          "sha256": "e7f0c2833479ba6b9242b9a49eef0972176b65c7377275f04eb9199e978e0f1f"
+        }
+      ],
+      "gpt-6-luna": [
+        {
+          "artifact": "engineering-luna-hook-trust-ui.json",
+          "sha256": "c5ac8c8d45fd40b136184fc431873cfdd9f053cf40907e692d8a5ef19f1ead3a"
+        },
+        {
+          "artifact": "engineering-luna-native-event-parent-verification.json",
+          "sha256": "4d1618572ad6dc0a59d3a24372bb1261c31610ba2b2a791de9959f01b1227824"
+        },
+        {
+          "artifact": "engineering-luna-native-resume-verification.json",
+          "sha256": "f487ae2e18d77fc4619d9336ebc95d74312aa9725065bfa1b37a000d15a12fed"
+        }
+      ]
+    },
+    "readiness": {
+      "gpt-6.1-sol": [
+        {
+          "artifact": "engineering-sol-readiness-parent-verification.json",
+          "sha256": "1cd0d0276f365cf29e5d9c05e2074f5b79d7ae5c273f7bdb2c21b782cc9dbeee"
+        }
+      ],
+      "gpt-6-luna": [
+        {
+          "artifact": "engineering-luna-post-promotion-r1.run.json",
+          "sha256": "64a5c982fef1c3604e4484257e24d951abd8b65c2a3a2414b7b3a898bb3426cc"
+        },
+        {
+          "artifact": "engineering-luna-hook-setup-r1.run.json",
+          "sha256": "714a147ffecfbc91062bb9617724e7a04a6395b4e302359b14e39b55136ccf63"
+        }
+      ]
+    }
+  },
+  "terminal_artifacts": {
+    "artifact": "final-artifacts-all-fixtures.json",
+    "sha256": "3b8a340eb1719534a2753d6cada51718df03dec89e7d91aa3fcf0ae4bfd6962e"
+  },
+  "observed_model_metadata": {
+    "artifact": "model-metadata-terminal.json",
+    "sha256": "9f693133c050e6cf86ffeeed1966f4de33c81af2ae9ba81e3c93c4e25ac7c7b8"
+  },
+  "independent_code_review": {
+    "artifact": "source-code-review-r2.run.json",
+    "sha256": "66e4d142d967bdafb027ab5be9c57f119360966b5ac7366d8b521442e3d1e6bc"
+  },
+  "unit_tests": 15,
+  "important_limits": [
+    "Native Git writes/fetch blocked; reviewed operator delivery independently verified by both models.",
+    "Native configuration promotion/trust performed by explicitly authorized operator.",
+    "Local receipts/Git destinations do not prove third-party provider guarantees.",
+    "No off-session scheduler; refusal and authorized session/native event paths tested.",
+    "Exact child model identity, dollars and absent reasoning/usage telemetry remain unknown.",
+    "Earlier manifests lack after hashes; terminal parent snapshots and pinned reviews supply final-artifact identities without rewriting history.",
+    "Operator brief capacity over-reservation, mid-run fixture seeds and wrong UUID are retained separately; strict global capacity adherence during that interval is unverified.",
+    "Controlled lifecycle/state/injected Git counterexamples are not actual persistent workers or real external effects.",
+    "No unobserved custom native selector or technical filesystem isolation claim."
+  ],
+  "completion_conditions": [
+    "independent final report/record acceptance",
+    "normal protected PR/check/merge/verified owning remote main",
+    "hash-verified archive and removal of sole owned sandbox while preserving 63 preexisting instances"
+  ],
+  "local_evidence_archive": {
+    "sha256": "5b96b393c9215ffb5be11f2381573de4adaa8cb1df0c71ef7c60aa0698bee788",
+    "bytes": 2980468,
+    "indexed_files": 1577,
+    "every_indexed_member_roundtrip_verified": true,
+    "basename": "agentos-paths-20261023-evidence.tar.gz"
+  }
+}
