@@ -1,0 +1,89 @@
+{
+  "task": "TASK-000202",
+  "run": "RUN-000197",
+  "observed_at": "2026-10-24T17:04:52.044481+00:00",
+  "disposition": "independently approved findings; rejected twelve-path operative package",
+  "reviewed_candidate": {
+    "base": "db2623e1ead49a05abb34a5084472bb9eb7bf110",
+    "head": "436a163508f9a3d83f693c0d6e081a765e5ace9c",
+    "tree": "587aaa2a13363629e9759f282f777cd01d9d1ec5",
+    "files": {
+      "docs/agent-records/runs/RUN-000197.md": {
+        "sha256": "383baac82e078d273d211bf54648773baa1d5e432a13f121208efb793b9e96b3",
+        "bytes": 9563
+      },
+      "docs/agent-records/tasks/project/TASK-000202.md": {
+        "sha256": "ca0a0d02cebd63676c008b84b512b0488b7d8ca028d3da29dd39d88bec7c10f0",
+        "bytes": 10008
+      },
+      "docs/testing/compact-approval-continuation-2026-10-24.json": {
+        "sha256": "82bfd3781755858f4446068467e3bb0d6a3357de79944a413ad4b3bf25d3b26d",
+        "bytes": 8893
+      },
+      "docs/testing/compact-approval-continuation-2026-10-24.md": {
+        "sha256": "03962213974df5019f2c982f4e01f9133c8ebbdb8686154cca4f1c967f5bfc19",
+        "bytes": 9383
+      }
+    }
+  },
+  "reviewed_files_unchanged": true,
+  "independent_review": {
+    "receipt": {
+      "sha256": "83739bb29f2d880fa14240dd2e638715e5ade215640c60f2f3155f0eea8919f4",
+      "bytes": 25079
+    },
+    "runtime": {
+      "name": "review-final",
+      "requested_model": "gpt-6.1-sol",
+      "requested_effort": "high",
+      "thread": "01a16ed1-9959-7df2-8992-7c9a7b5ef5b7",
+      "model": "gpt-6.1-sol",
+      "effort": "high",
+      "native_session": "/home/agent/.codex/sessions/2026/10/24/rollout-2026-10-24T16-49-52-01a16ed1-9959-7df2-8992-7c9a7b5ef5b7.jsonl"
+    },
+    "primary": {
+      "sha256": "f2878baf3de283cb7249bc609596fecca507fda4ac8e464e625da657ee40fac1",
+      "bytes": 739496
+    },
+    "duration_seconds": 879.0270490646362,
+    "nonzero_commands": 0,
+    "native_usage": [
+      {
+        "input_tokens": 4130170,
+        "cached_input_tokens": 3972608,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 33900,
+        "reasoning_output_tokens": 11059
+      }
+    ],
+    "index": {
+      "sha256": "01f87a90a877378d1eca47a3b3c4dcb5f3e47ddd9dcb69ea7b9d36c1ce0a222f",
+      "bytes": 233015
+    },
+    "indexed_regular_files": 1246,
+    "indexed_regular_bytes": 14434034
+  },
+  "trials_archive": {
+    "archive": "/private/tmp/agentos-compactapproval-20261024-trials.tar.gz",
+    "sha256": "ac43825d6e336351a413a38d2c6ec4f3396757ae055dfc567ab4baac9173d985",
+    "bytes": 2812721,
+    "indexed_files": 946,
+    "index": "evidence/trials-index.json",
+    "verified_all_members": true
+  },
+  "limits": [
+    "No operative approval; no historical regrade",
+    "Fresh runtime first use and broader intended paths remain unqualified",
+    "Luna repaired its initial zero-link checker; its no-other-retry claim is incomplete",
+    "Billing unknown"
+  ],
+  "delivery": "PR29 https://github.com/tclasen/AgentOS/pull/29 remains subject to expected-head merge and fetched owning-main verification",
+  "cleanup": "Pending verified full reviewer archive retention and exact-owned sandbox/raw-root removal; original63sandboxpairs must remain unchanged",
+  "stop_timing_qualification": {
+    "stop_record_observation": "2026-10-24T16:40:20.119039+00:00",
+    "luna_return": "2026-10-24T16:39:18.226434Z",
+    "sol_return": "2026-10-24T16:45:38.103742Z",
+    "correction": "The report phrase while the admitted pair was running means the pair phase remained active; only Sol was still running when the stop record was written. Luna had already returned. Six remaining roots were never admitted."
+  },
+  "broader_goal": "active"
+}
