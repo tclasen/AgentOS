@@ -22,6 +22,8 @@ status: stable
 
 Missing required operating steps are installation defects even when the corresponding role/file exists. Correct them within the approved paths and authority, or report the installation incomplete with the exact gap. Do not label it qualified or complete on structural checks alone. Fresh-runtime tests may remain explicitly unverified where unavailable; that limitation does not excuse missing operational instructions.
 
+For the minimal portable profile described in [implementation](implement.md), use the [concrete reference and correction exercise](../examples/portable-implementation.md) to check synthesis and evidence quality. The example is not a passing result: inspect the actual installed duties and evaluate concrete prior/candidate values against criteria fixed before the change. Retain usable recovery content and the real result; copying an illustrative outcome or saying how an edit could be checked is insufficient. Equivalent scoped exercises are allowed, and richer selected profiles retain all their own obligations.
+
 # Required operating checks
 
 Use these checks to catch frequently lost obligations in a compact installation. The component sources remain authoritative; this is a qualification aid, not a replacement for reading them. A controlled scenario can be carried out locally or reasoned through with an honest simulation label when native execution is unavailable.
@@ -35,6 +37,14 @@ Use these checks to catch frequently lost obligations in a compact installation.
 | Role lifecycle | Check active work, pinned instruction versions, historical role identity, routing and dependent capabilities before changing or retiring a role. Simulate an optional-role amendment/retirement with an active assignment: preserve its old contract/history, transfer responsibility explicitly and update discovery before retirement. Keep Director and CoS permanent. A brief record in an existing file is sufficient. |
 
 Apply the same obligation-level check to CoS, activation, core context and self-improvement, and to every selected conditional component. Preserve failed attempts and unresolved checks; do not silently replace an unmet criterion with an easier assertion. Report contract completeness separately from the evidence level of each scenario.
+
+## Check the scenario evidence before claiming completion
+
+For each required operating check, retain a short concrete record in an already approved evidence location: **input or prior state; fixed expected checks; observed decisions and result; installed instruction location used; evidence level; verdict and remaining gaps**. One scenario can cover several obligations when its actual trace demonstrates them. A simulation must still apply the installed instructions to particular inputs and record the resulting decisions; repeating the procedure or writing “scenario reasoned through” supplies no trace. A successful correction fixture does not establish delegation, reconfiguration, lifecycle or budgeting by itself.
+
+For the minimal portable profile, the [operating-scenario worksheet](../examples/portable-implementation.md#concrete-operating-scenario-worksheet) supplies concrete inputs you can adapt. Work through every applicable case using the installed files; do not copy its expected checks as observed results. Richer profiles need the corresponding selected-component checks as well.
+
+Before handoff, follow every evidence reference in the coverage mapping to its actual record. Check that the record contains the promised input, trace and result, and that the result satisfies the original checks. If a row promises a trace “below” but none exists, that check is incomplete. Perform the missing check within the grant or report the exact gap; do not label the installation qualified. Update current status after corrections while retaining failed attempts. Fresh-runtime activation and independent review retain their separate evidence limits.
 
 # Risk-based behavioral qualification
 
