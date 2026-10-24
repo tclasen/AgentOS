@@ -1,0 +1,55 @@
+{
+  "observed_at": "2026-10-24T11:26:23.410814+00:00",
+  "task": "TASK-000194",
+  "run": "RUN-000189",
+  "approval": "APP-000022",
+  "reviewed_head": "e5a2ddcf94d995b7d62130073c096ccbf4f6f5ad",
+  "reviewed_tree": "fcd967f4d1270a00332e63a0da9f0f128fb2b35b",
+  "reviewed_file_hashes": {
+    "docs/agent-records/runs/RUN-000189.md": "879a805e8eaeec6da587b2a0396f98d03c6c1f61623488c2d469ed08152256c0",
+    "docs/agent-records/tasks/project/TASK-000194.md": "6a45410e127cd0cde2762d0246a2e2dc6d629a5339b1a4b07ec5b81d4bb16fb0",
+    "docs/testing/requested-method-2026-10-24.json": "3bd32edff3cf6677a3fb980c8f2a87a591150587ca61cf6a99c0340887890dda",
+    "docs/testing/requested-method-2026-10-24.md": "f819f7d641fa1b0c235f5426c2cb39213f1e46b1a8a79bddbf26d5b1ace77d77"
+  },
+  "reviewed_hashes_unchanged": true,
+  "receipt_sha256": "65f21d53c77a8b04aa0ff88f6d8605199a7d39ded596678a9aec88f795da453d",
+  "receipt_copied_byte_identically": true,
+  "reviewer_actual": {
+    "name": "review-final",
+    "thread": "01a16da1-7f25-7530-a29f-8fdc5f302137",
+    "model": "gpt-6.1-sol",
+    "effort": "high",
+    "native_session": "/home/agent/.codex/sessions/2026/10/24/rollout-2026-10-24T11-17-42-01a16da1-7f25-7530-a29f-8fdc5f302137.jsonl"
+  },
+  "reviewer_wrapper_elapsed_seconds": 447.53317403793335,
+  "receipt_clock_limit": "Receipt records a283-second first-clock-to-decision checkpoint, distinct from the whole447.533-second wrapper; both within900bound.",
+  "reviewer_raw_sha256": "fcfa110e5ab8a8edf16bce4588cb0de4e3b4b9d3888b99aed9a2b011ba061ccf",
+  "reviewer_known_raw_usage": [
+    {
+      "input_tokens": 1667501,
+      "cached_input_tokens": 1568512,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 17581,
+      "reasoning_output_tokens": 3259
+    }
+  ],
+  "reviewer_nonzero_completed_commands": [],
+  "reviewer_result": "Approved findings-only rejection, no substantive corrections;44regressions2.623seconds,31recipe cases,4example/4cachecases,25components10/22/18closures,22unchangedbodies,31links. No unexpected failedchecks/retries.",
+  "reviewer_scope_delta_verified": true,
+  "operative_package": "All9sourcepaths withdrawn; final bundle/tools/tests equalbase. Method hypothesis has no I/U outcome.",
+  "native_recipe_evidence": "Bothmodels generated actual exact48file manifests fromplainnonGitbundle. Comparisonmode localtests only.",
+  "source_evidence_limit": "Complete design/recipe text observed in Luna failedaggregate; individualcat exitsunknown. Frozen gate unmet. Neither missingtext nor genericnewgateapproval asserted.",
+  "actual_selection_limit": "Luna12selected fullyread/dependencyclosed; private11component assumptiondetected beforehelperuse/approval. Futureprotocolrequires independentprospectivevalidation.",
+  "trials_archive": {
+    "archive": "/private/tmp/agentos-method-20261024-trials.tar.gz",
+    "sha256": "6e18530254c29151e433b37e5ef983fc324fb0621f9ff3849c07ffe5b0f19356",
+    "bytes": 2115013,
+    "indexed_files": 1293,
+    "index": "evidence/trials-index.json",
+    "verified_all_members": true
+  },
+  "delivery_state_at_attestation": "Not yet pushed/merged; current protections/checks/threads, normalPRmerge/fetchedmainverification stillrequired.",
+  "cleanup_state_at_attestation": "Owned sandbox/rawroot remain until delivered andbothindexedarchivesverified;63originalresources topreserve.",
+  "known_usage_limit": "Two trial-root and reviewer raw counters retained separately. Fulltaskbilling/cost andunobservedparent/localusage unknown.",
+  "broader_goal": "active; no bothmodel/allpath qualification."
+}
