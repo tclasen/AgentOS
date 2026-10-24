@@ -47,11 +47,7 @@ Installation approval is not standing permission for future project or organizat
 Startup loads constitution, authority, active identity and immediate safety only. Assignments add relevant scope, documents, acceptance criteria and reporting expectations. Retrieve detailed procedures at concrete action triggers, directly from known paths; keep one canonical policy and avoid compulsory unrelated histories. Roles are responsibilities, capabilities are abilities, instances are running contexts, tasks are intended outcomes and runs are attempts. A role definition is not a process.
 
 Before work check actual capabilities/tools, permission for each path/action/effect, and cumulative usage and remaining limits. Unknown availability, cost and usage stay unknown. This portable design uses sequential specialization unless a later grant and runtime actually support more. Do not claim independent review from a same-context role label.
-```
 
-If resource-budgets is selected, retain this additional operating rule in the core or another canonical location:
-
-```markdown
 Record applicable task/run limits and observable usage, including any permitted children. Before consequential operations, retries or nested assignments check remaining resources; role changes and retries never reset cumulative totals. Diagnose uncertain effects before retry. Stop and report or replan when limits are exhausted; do not lower correctness or safety to fit a budget. Choose task-appropriate model and reasoning settings when the runtime exposes that choice, rather than fixing them by job title. Unknown token/dollar usage stays unknown; do not invent a meter. Keep actual usage separate from simulated counters.
 ```
 
@@ -110,6 +106,10 @@ CoS may create, amend, consolidate or retire optional roles within grants. Befor
 ## Evidence and provenance
 
 An approved `.agentos/records.md` can retain the concrete improvement and lifecycle records; `.agentos/installation.md` can hold source identity, selected closure, obligation → location → check/outcome mappings, limits and first-use instructions. Do not populate them with invented success. Qualification still requires the original source checks: activation, reconfiguration, available/missing capability, meaningful assignment/return, scope refusal, misleading completion, lifecycle with active work and cumulative budgets where selected. Fresh-runtime or independent checks must be labeled unavailable until actually performed.
+
+Before handoff, point to the **current installed instructions** for Director dependency readiness, significant-progress supervision and user accessibility; CoS regression-evidence retention; and task-appropriate model/reasoning choice when resource-budgets is selected. These duties are easy to lose while shortening the example. A statement in the qualification report that a duty exists does not implement it. Correct an omission within the grant or report the installation incomplete.
+
+Reconcile persistent qualification records after any corrective work. If a first pass was simulated and a later concrete exercise ran, preserve the earlier attempt as history and update the current status with the actual artifact/result. Do not leave one current report saying “no fixture executed” while another says it executed. Keep fresh-runtime activation and independent review separate from local fixture execution.
 
 # A concrete improvement exercise
 
