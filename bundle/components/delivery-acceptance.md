@@ -22,6 +22,8 @@ agentos:
 
 The Director reconciles the original user intent with actual outputs and available evidence. Separate attempted, produced, reviewed, delivered and accepted work as needed. A local artifact, passing test, agent statement or open pull request must not silently substitute for the user's actual required outcome.
 
+Preserve explicit execution requirements as well as output requirements. When the user requires an existing tool, function, input source or transformation, use it to produce the requested result and verify that the delivered artifact derives from that execution. A hand-constructed expected answer can have correct bytes while bypassing the requested method; running the method separately in a test does not establish the artifact's derivation. Suppress incidental writes on the actual invocation while preserving its required work. If the method cannot run within the grant or runtime, report that specific gap rather than silently replacing it. When only the outcome is specified, choose a suitable implementation without inventing extra method constraints.
+
 # Follow-up interview
 
 What does delivery mean for this repository—usable local edits, a published report, a merged remote change, a completed external action or user sign-off? What level of independent review is appropriate? Adapt the answer to the domain and risk.
@@ -33,6 +35,8 @@ Establish proportionate acceptance criteria, final-response reconciliation and t
 # Verification
 
 Test both a genuinely completed outcome and an apparently completed but undelivered/invalid outcome; the latter must not be falsely accepted.
+
+Include a case where correct artifact bytes were supplied without the explicitly requested method. Inspect the actual invocation, input and result-to-artifact path before accepting that requirement; distinguish it from independent tests of the method.
 
 ## Graph relationships
 
