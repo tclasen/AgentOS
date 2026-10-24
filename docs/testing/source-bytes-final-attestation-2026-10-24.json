@@ -1,0 +1,166 @@
+{
+  "kind": "Coordinator machine identity and cleanup attestation; not independent acceptance",
+  "task": "TASK-000182",
+  "run": "RUN-000177",
+  "observed_at": "2026-10-24T04:55:26.911018+00:00",
+  "reviewed_head": "f8ba0623bf3f5307bd4775ae413a95958efb7538",
+  "reviewed_tree": "3199954afd65af5be7f8dfd71829212bf30b943e",
+  "receipt_sha256": "0b68351bdeebd600c8646037aac707e05c473633b5c246e2d4f272b1b9bdacfc",
+  "models": [
+    {
+      "run": "review-final-r1",
+      "requested_model": "gpt-6.1-sol",
+      "harness_status": "returned",
+      "thread": "01a16c3d-596e-7b71-838c-658b45542093",
+      "model": "gpt-6.1-sol",
+      "reasoning": null
+    },
+    {
+      "run": "baseline-dirty-luna-r1",
+      "requested_model": "gpt-6-luna",
+      "harness_status": "returned",
+      "thread": "01a16c2c-dec5-7f21-843d-6406e38d2ead",
+      "model": "gpt-6-luna",
+      "reasoning": null
+    },
+    {
+      "run": "candidate-dirty-luna-r1",
+      "requested_model": "gpt-6-luna",
+      "harness_status": "returned",
+      "thread": "01a16c2f-842f-7060-b58c-d1b8bc1450d6",
+      "model": "gpt-6-luna",
+      "reasoning": null
+    },
+    {
+      "run": "candidate2-dirty-sol-r1",
+      "requested_model": "gpt-6.1-sol",
+      "harness_status": "failed",
+      "thread": "01a16c31-ed09-77b1-9867-43cd236ade55",
+      "model": "gpt-6.1-sol",
+      "reasoning": null
+    },
+    {
+      "run": "candidate2-dirty-luna-r1",
+      "requested_model": "gpt-6-luna",
+      "harness_status": "returned",
+      "thread": "01a16c31-efd2-7f10-bde9-548eccf2cf9e",
+      "model": "gpt-6-luna",
+      "reasoning": null
+    },
+    {
+      "run": "baseline-archive-luna-r1",
+      "requested_model": "gpt-6-luna",
+      "harness_status": "returned",
+      "thread": "01a16c2d-e356-7a02-88fb-cb065f6adb16",
+      "model": "gpt-6-luna",
+      "reasoning": null
+    },
+    {
+      "run": "candidate2-archive-luna-r1",
+      "requested_model": "gpt-6-luna",
+      "harness_status": "returned",
+      "thread": "01a16c33-9483-7b13-a1b8-dbbdeec21676",
+      "model": "gpt-6-luna",
+      "reasoning": null
+    },
+    {
+      "run": "baseline-archive-sol-r1",
+      "requested_model": "gpt-6.1-sol",
+      "harness_status": "returned",
+      "thread": "01a16c2e-d0bb-7db0-9d7c-5d9d139f698d",
+      "model": "gpt-6.1-sol",
+      "reasoning": null
+    },
+    {
+      "run": "candidate2-archive-sol-r1",
+      "requested_model": "gpt-6.1-sol",
+      "harness_status": "returned",
+      "thread": "01a16c35-0041-7c32-bd65-c6c8fb17d32c",
+      "model": "gpt-6.1-sol",
+      "reasoning": null
+    },
+    {
+      "run": "baseline-dirty-sol-r1",
+      "requested_model": "gpt-6.1-sol",
+      "harness_status": "returned",
+      "thread": "01a16c2c-dadf-7673-b9d2-c0d88f6a15f1",
+      "model": "gpt-6.1-sol",
+      "reasoning": null
+    },
+    {
+      "run": "final-resume-sol-r1",
+      "requested_model": "gpt-6.1-sol",
+      "harness_status": "returned",
+      "thread": "01a16c37-16f5-7f32-9f1a-171b9f5d3bb9",
+      "model": "gpt-6.1-sol",
+      "reasoning": null
+    },
+    {
+      "run": "candidate-archive-luna-r1",
+      "requested_model": "gpt-6-luna",
+      "harness_status": "returned",
+      "thread": "01a16c30-73fc-7d32-a6be-0b2c3f394f00",
+      "model": "gpt-6-luna",
+      "reasoning": null
+    },
+    {
+      "run": "final-resume-luna-r1",
+      "requested_model": "gpt-6-luna",
+      "harness_status": "returned",
+      "thread": "01a16c37-1817-71d2-823d-9e2b714326a5",
+      "model": "gpt-6-luna",
+      "reasoning": null
+    }
+  ],
+  "actual_model_names_match_requested": true,
+  "effort_and_cost": "unknown",
+  "distinct_roots": 13,
+  "completed_cli_turns": 13,
+  "strict_harness_returned": 12,
+  "strict_harness_failed": 1,
+  "native_trial_roots": 12,
+  "planning_roots": 10,
+  "resume_roots": 2,
+  "required_component_full_reads": 100,
+  "resume_literal_expected_labels": "5/6; Sol caseC independently verified approved immutable Git snapshot; supported alternative reported separately",
+  "trial_nonzero_command_items": 11,
+  "additional_zero_exit_blocked_source_write": 1,
+  "recovered_transport_error_events": 1,
+  "review_nonzero_command_items": 0,
+  "regression_tests_on_unchanged_source": 32,
+  "disposition": "reject both prose revisions; publish findings only; operative source unchanged",
+  "archives": [
+    {
+      "archive": "/private/tmp/agentos-source-bytes-20261024-trials.tar.gz",
+      "sha256": "91c9bc272f2a42fafb0245ae257cde4e527dfcf419acb127fc5ef1688fefcd65",
+      "bytes": 1500835,
+      "indexed_files": 1441,
+      "all_indexed_members_verified": true,
+      "index": "evidence/trials-index.json"
+    },
+    {
+      "archive": "/private/tmp/agentos-source-bytes-20261024-acceptance.tar.gz",
+      "sha256": "a280e6991ddfa7d8e096402edf379a741a74059518bdf5d1530a40292a0b74b7",
+      "bytes": 108198,
+      "indexed_files": 37,
+      "all_indexed_members_verified": true,
+      "index": "evidence/acceptance-index.json"
+    }
+  ],
+  "archive_total_bytes": 1609033,
+  "cleanup": {
+    "owned_sandbox": "agentos-source-bytes-20261024",
+    "removed_and_absent": true,
+    "original_sandbox_pairs_preserved": 63,
+    "global_prune_performed": false,
+    "raw_fixture_directory_removed": true
+  },
+  "governance_hashes_unchanged": 14,
+  "delivery": "pending normal protected PR and fetched owning-main verification; recorded separately after delivery",
+  "global_goal_status": "active",
+  "limits": [
+    "one sample per condition and uneven candidate1 exposure; no full onboarding rerun",
+    "strict harness failure, blocked write attempt and literal recovery mismatch retained",
+    "identity generation remains unresolved; no global exhaustion claim"
+  ]
+}
