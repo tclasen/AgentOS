@@ -13,6 +13,7 @@ import sys
 import time
 
 MODELS = ('gpt-6.1-sol', 'gpt-6-luna')
+REASONING_EFFORTS = ('low', 'medium', 'high', 'xhigh', 'max', 'ultra')
 
 def sha(data: bytes) -> str:
     return hashlib.sha256(data).hexdigest()
@@ -251,6 +252,9 @@ def write_json(path: Path, value):
     path.write_text(json.dumps(value, indent=2) + '\n')
 
 def run(args):
+    effort = getattr(args, 'reasoning_effort', None)
+    if effort is not None and effort not in REASONING_EFFORTS:
+        raise ValueError('reasoning effort must be one of: ' + ', '.join(REASONING_EFFORTS))
     if not re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9_.-]{0,127}', args.name):
         raise ValueError('run name must be a simple evidence filename, not a path')
     if not re.fullmatch(r'TASK-[0-9]{6}', args.task):
@@ -273,6 +277,8 @@ def run(args):
            '-c', 'agents.enabled=' + ('true' if args.agents else 'false'),
            '-c', f'agents.max_concurrent_threads_per_session={max(args.agents, 1)}',
            '-c', 'agents.default_subagent_model=' + json.dumps(args.model)]
+    if effort is not None:
+        cmd += ['-c', 'model_reasoning_effort=' + json.dumps(effort)]
     if args.strict_config:
         cmd += ['--strict-config']
     for path in extra:
@@ -288,6 +294,8 @@ def run(args):
     source = Path(args.source).resolve()
     record = {'name': args.name, 'task': args.task, 'status': 'running', 'started_epoch': time.time(), 'owner': 'Coordinator', 'scope': str(target), 'additional_scopes_before': {str(p): snapshot(p) for p in extra}, 'requested_model': args.model, 'actual_model': 'unknown until session metadata collected', 'policy': args.policy, 'native_child_cap': args.agents, 'command': cmd, 'prompt_sha256': sha(Path(args.prompt).read_bytes()), 'before': before, 'source_components': graph(source / 'bundle'), 'monetary_cost': 'unknown'}
     record['source_bundle'] = snapshot(source / 'bundle')
+    record['requested_reasoning_effort'] = effort
+    record['actual_reasoning_effort'] = 'unknown until session metadata collected'
     write_json(manifest, record)
     with log.open('wb') as stream:
         proc = subprocess.run(cmd, input=Path(args.prompt).read_bytes(), stdout=stream, stderr=subprocess.STDOUT)
@@ -316,6 +324,8 @@ def main():
     for name in ('target', 'workspace', 'sandbox', 'output', 'name', 'task', 'prompt', 'source'):
         p.add_argument('--' + name, required=True)
     p.add_argument('--model', choices=MODELS, required=True)
+    p.add_argument('--reasoning-effort', choices=REASONING_EFFORTS,
+                   help='Optional native Codex effort override; omission preserves native configuration. Verify model support separately.')
     p.add_argument('--policy', choices=('read-only', 'workspace-write'), default='workspace-write')
     p.add_argument('--agents', type=int, choices=(0, 1, 2), default=0)
     p.add_argument('--resume')

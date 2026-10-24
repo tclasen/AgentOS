@@ -170,6 +170,53 @@ class QualificationTests(unittest.TestCase):
                 record=json.loads((root/'evidence'/f'{task}.run.json').read_text())
                 self.assertEqual(record['task'],task)
 
+    def test_reasoning_override_and_unset_preserve_fresh_and_resume_commands(self):
+        for effort in [None, *q.REASONING_EFFORTS]:
+            for resume in [None, 'observed-thread']:
+                with self.subTest(effort=effort, resume=resume), tempfile.TemporaryDirectory() as d:
+                    root=Path(d); target=root/'target'; target.mkdir(); (target/'.git').mkdir()
+                    prompt=root/'prompt'; prompt.write_text('bounded fixture')
+                    args=SimpleNamespace(name='effort',task='TASK-000188',target=str(target),workspace=str(root),
+                        output=str(root/'evidence'),add_dir=[],sandbox='unit-fixture',model='gpt-6-luna',
+                        policy='read-only',agents=0,strict_config=False,resume=resume,schema=None,
+                        prompt=str(prompt),source=str(Path(__file__).parents[1]),reasoning_effort=effort)
+                    def returned(cmd,input,stdout,stderr):
+                        overrides=[(i,x) for i,x in enumerate(cmd) if x.startswith('model_reasoning_effort=')]
+                        if effort is None:
+                            self.assertEqual(overrides,[])
+                        else:
+                            self.assertEqual(len(overrides),1)
+                            i,value=overrides[0];self.assertEqual(cmd[i-1],'-c')
+                            self.assertEqual(json.loads(value.split('=',1)[1]),effort)
+                            if resume:self.assertLess(i,cmd.index('resume'))
+                        self.assertIn('agents.enabled=false',cmd)
+                        self.assertEqual(cmd[cmd.index('--sandbox')+1],'read-only')
+                        self.assertEqual(cmd[-2:] if resume else cmd[-1:], [resume,'-'] if resume else ['-'])
+                        stdout.write(b'{"type":"turn.completed","usage":{}}\n')
+                        return SimpleNamespace(returncode=0)
+                    with patch.object(q.subprocess,'run',side_effect=returned),contextlib.redirect_stdout(io.StringIO()):
+                        self.assertEqual(q.run(args),0)
+                    record=json.loads((root/'evidence/effort.run.json').read_text())
+                    self.assertEqual(record['requested_reasoning_effort'],effort)
+                    self.assertEqual(record['actual_reasoning_effort'],'unknown until session metadata collected')
+                    self.assertEqual(record['delta'],{'added':[],'removed':[],'changed':[]})
+
+    def test_invalid_reasoning_effort_is_rejected_before_any_effect(self):
+        script=Path(__file__).parents[1]/'tools/qualification.py'
+        with tempfile.TemporaryDirectory() as d:
+            root=Path(d);out=root/'evidence'
+            for effort in ['', 'HIGH', 'high\n', 'high; command', 'unsupported']:
+                with self.subTest(effort=effort),patch.object(q.subprocess,'run') as native:
+                    with self.assertRaisesRegex(ValueError,'reasoning effort'):
+                        q.run(SimpleNamespace(reasoning_effort=effort))
+                    native.assert_not_called()
+                result=subprocess.run([sys.executable,str(script),'run','--name','invalid',
+                    '--task','TASK-000188','--target',str(root),'--workspace',str(root),'--output',str(out),
+                    '--sandbox','not-a-real-sandbox','--source',str(root),'--prompt',str(root/'absent'),
+                    '--model','gpt-6-luna','--reasoning-effort',effort],capture_output=True,text=True)
+                self.assertEqual(result.returncode,2);self.assertIn('--reasoning-effort',result.stderr)
+                self.assertFalse(out.exists())
+
     def test_run_rejects_path_names_before_any_output(self):
         for name in ('../escape', '/absolute', 'nested/name', '.hidden', ''):
             with self.assertRaisesRegex(ValueError, 'not a path'):
