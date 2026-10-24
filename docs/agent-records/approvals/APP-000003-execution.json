@@ -1,0 +1,15 @@
+{
+  "approval": "AgentOS/APP-000003",
+  "candidate": "a36ad83c811b1affbf289e8834d7519d429e1c62",
+  "candidate_tree": "9c5b966bc9bab2b02dda046bbea84bed95686f75",
+  "receipt_sha256": "5b26176beb11f7a308329a2d9348e79fd5755924f9e3a8c078f1d3d5abf50b02",
+  "native_root": {
+    "run": "graph-review-r1",
+    "requested_model": "gpt-6.1-sol",
+    "thread": "01a16b78-005b-7e93-bf1b-95deb669ec30",
+    "model": "gpt-6.1-sol",
+    "reasoning": null
+  },
+  "review_run_sha256": "976b90bdd17020f91c02fde14db52bdb21894a22fd193c9c6bcdcb551eebd703",
+  "publication_scope": "Byte-identical receipt and this machine-observed identity attestation only; normal protected delivery still pending."
+}
