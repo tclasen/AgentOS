@@ -1,0 +1,114 @@
+{
+  "kind": "Coordinator machine identity and cleanup attestation; not independent acceptance",
+  "task": "TASK-000183",
+  "run": "RUN-000178",
+  "observed_at": "2026-10-24T05:13:33.660574+00:00",
+  "reviewed_head": "10f2dfd8d14fa34349f42eab48d27fcc0dbac08f",
+  "reviewed_tree": "035cf0454d06db05d9ddb4c074e21180854a8054",
+  "receipt_sha256": "0eb07f8361a63bd54aaca28c3b95ee1aa1c532d214e5515e27a1a61ae22782aa",
+  "models": [
+    {
+      "run": "candidate-dirty-sol-r1",
+      "requested_model": "gpt-6.1-sol",
+      "harness_status": "returned",
+      "thread": "01a16c48-984b-74d1-b039-5a6aadce3c1f",
+      "model": "gpt-6.1-sol",
+      "reasoning": null
+    },
+    {
+      "run": "candidate-archive-luna-r1",
+      "requested_model": "gpt-6-luna",
+      "harness_status": "returned",
+      "thread": "01a16c49-a5ad-7c93-baa9-4cd41ea48d2c",
+      "model": "gpt-6-luna",
+      "reasoning": null
+    },
+    {
+      "run": "preflight-sol-r1",
+      "requested_model": "gpt-6.1-sol",
+      "harness_status": "returned",
+      "thread": "01a16c4c-285a-7d83-8c4b-855b72710cf2",
+      "model": "gpt-6.1-sol",
+      "reasoning": null
+    },
+    {
+      "run": "candidate-archive-sol-r1",
+      "requested_model": "gpt-6.1-sol",
+      "harness_status": "returned",
+      "thread": "01a16c4a-94dd-7fe2-a47c-b14629395b95",
+      "model": "gpt-6.1-sol",
+      "reasoning": null
+    },
+    {
+      "run": "candidate-dirty-luna-r1",
+      "requested_model": "gpt-6-luna",
+      "harness_status": "returned",
+      "thread": "01a16c48-9ad5-7521-867c-2115d30a4e90",
+      "model": "gpt-6-luna",
+      "reasoning": null
+    },
+    {
+      "run": "preflight-luna-r1",
+      "requested_model": "gpt-6-luna",
+      "harness_status": "returned",
+      "thread": "01a16c4a-9724-7400-94f3-365775487c6a",
+      "model": "gpt-6-luna",
+      "reasoning": null
+    },
+    {
+      "run": "review-final-r1",
+      "requested_model": "gpt-6.1-sol",
+      "harness_status": "returned",
+      "thread": "01a16c50-20bb-7dc2-83c4-c0a3836882b4",
+      "model": "gpt-6.1-sol",
+      "reasoning": null
+    }
+  ],
+  "actual_model_names_match_requested": true,
+  "effort_and_cost": "unknown",
+  "returned_distinct_roots": 7,
+  "returned_invocations": 7,
+  "native_trial_roots": 6,
+  "trial_nonzero_command_items": 1,
+  "review_nonzero_command_items": 1,
+  "review_diagnostic": "Initial python command unavailable (exit127); corrected to python3 once. Independent checks and39tests passed.",
+  "regression_tests": 39,
+  "planning_identity_results": "4/4",
+  "required_full_reads": "40/40",
+  "preflight_literal_results": "7/8; Luna D failed expected blocked label; incomplete identity detected and continuation withheld",
+  "disposition": "retain optional deterministic identity capability with explicit behavioral limitation; APP-000011 conditional independent acceptance",
+  "archives": [
+    {
+      "archive": "/private/tmp/agentos-source-identity-20261024-trials.tar.gz",
+      "sha256": "55c9035ca56823d05fdf17fd4ab2e5683980853f27cd4ed6e4704a98c4d14241",
+      "bytes": 1095953,
+      "indexed_files": 1044,
+      "all_indexed_members_verified": true,
+      "index": "evidence/trials-index.json"
+    },
+    {
+      "archive": "/private/tmp/agentos-source-identity-20261024-acceptance.tar.gz",
+      "sha256": "d1879771a733ebff47a74da6930a186a6b23776220aa7897bff951c1f2a69173",
+      "bytes": 150985,
+      "indexed_files": 39,
+      "all_indexed_members_verified": true,
+      "index": "evidence/acceptance-index.json"
+    }
+  ],
+  "archive_total_bytes": 1246938,
+  "cleanup": {
+    "owned_sandbox": "agentos-source-identity-20261024",
+    "removed_and_absent": true,
+    "original_sandbox_pairs_preserved": 63,
+    "global_prune_performed": false,
+    "raw_fixture_directory_removed": true
+  },
+  "governance_hashes_unchanged": 14,
+  "delivery": "pending normal protected PR and fetched owning-main verification; recorded separately after delivery",
+  "global_goal_status": "active",
+  "limits": [
+    "one sample per condition; historical baseline is not contemporaneous control",
+    "manual/no-Python/no-local-checkout fallback and full installation not qualified in this round",
+    "no all-criteria behavioral pass or global exhaustion claim"
+  ]
+}
