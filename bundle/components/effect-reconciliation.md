@@ -37,6 +37,8 @@ Select the smallest sufficient intent–attempt–observation pattern. Track tar
 
 Inject an interrupted response after a simulated/authorized effect and show no duplicate action; independently check actual destinations where scope permits. Distinguish simulated tests from live external verification.
 
+Also exercise a receipt whose correlation identity matches but whose candidate content differs. Verify the intended target and candidate against available destination evidence before accepting delivery; identity presence alone is insufficient. A conflict must not trigger an overwrite or duplicate retry. If candidate binding cannot be established, preserve the unknown outcome and obtain sufficient evidence or authority for the next action.
+
 ## Graph relationships
 
 - Requires [Authority](authority.md)

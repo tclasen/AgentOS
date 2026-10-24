@@ -31,6 +31,8 @@ Within this small profile, a top-level `status` value may be a plain, single-quo
 
 `local_effect_fixture.py` is a local SQLite test destination. A dropped acknowledgment commits a receipt but returns failure; offline attempts remain unknown. All attempt calls are journaled so a duplicate retry cannot be hidden by an idempotent receipt. It establishes no third-party guarantee. Give its exact disposable directory to the worker because lookups also append their call journal.
 
+Available `lookup` responses include `observed_payload_sha256`, the digest of the committed payload for that identity. It is `null` for absent or unavailable observations, including an offline lookup of an existing receipt. Compare it with the intended candidate before accepting delivery; `present` alone is not a match. A mismatch is a conflict to reconcile, not permission to overwrite or retry. The fixture returns no raw payload, and its local digest is not proof about any real provider.
+
 ```sh
 PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tests -v
 ```
