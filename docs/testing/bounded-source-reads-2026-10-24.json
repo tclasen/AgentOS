@@ -1,0 +1,2208 @@
+{
+  "task": "TASK-000198",
+  "run": "RUN-000193",
+  "baseline": "e7962a32982392308a93c02332e6d98a0a8be396",
+  "operative_candidate": "864ba90c206c47eb2cb617731876ed7c03a6c20e",
+  "disposition": "Reject promotion of ten-path package; findings-only delivery. All operative paths withdrawn.",
+  "hypothesis": "Required files in separate displayed responses with explicit truncation recovery might prevent context loss before installation writes.",
+  "tested_delta": "Restore prior nine-path package and add separate complete-read guidance to start, implement and graph-routing. Original criteria and approval-handoff generator preserved except current root/protocol binding.",
+  "local_validation": {
+    "unchanged_components": [
+      "effect-reconciliation.md",
+      "scheduling.md",
+      "work-ledger.md",
+      "self-improvement.md",
+      "activation.md",
+      "brownfield-migration.md",
+      "capability-routing.md",
+      "independent-evaluation.md",
+      "multi-repo.md",
+      "context-core.md",
+      "delegation.md",
+      "director.md",
+      "git-delivery.md",
+      "advanced-validation.md",
+      "role-lifecycle.md",
+      "chief-of-staff.md",
+      "durable-handoff.md",
+      "learning-queue.md",
+      "telemetry.md",
+      "runtime-native.md",
+      "information-boundaries.md",
+      "parallel-coordination.md"
+    ],
+    "profiles": {
+      "portable": 10,
+      "engineering": 22,
+      "portfolio": 18
+    },
+    "links": [
+      [
+        "core/graph-routing.md",
+        "../interviews/bootstrap.md"
+      ],
+      [
+        "core/graph-routing.md",
+        "../components/index.md"
+      ],
+      [
+        "start.md",
+        "core/constitution.md"
+      ],
+      [
+        "start.md",
+        "core/installer-policy.md"
+      ],
+      [
+        "start.md",
+        "core/graph-routing.md"
+      ],
+      [
+        "start.md",
+        "interviews/bootstrap.md"
+      ],
+      [
+        "start.md",
+        "phases/discover.md"
+      ],
+      [
+        "start.md",
+        "phases/implement.md"
+      ],
+      [
+        "start.md",
+        "phases/qualify.md"
+      ],
+      [
+        "start.md",
+        "phases/handoff.md"
+      ],
+      [
+        "start.md",
+        "examples/source-manifest.md"
+      ],
+      [
+        "start.md",
+        "components/index.md"
+      ],
+      [
+        "start.md",
+        "phases/implement.md"
+      ],
+      [
+        "start.md",
+        "phases/qualify.md"
+      ],
+      [
+        "start.md",
+        "phases/handoff.md"
+      ],
+      [
+        "phases/implement.md",
+        "qualify.md"
+      ],
+      [
+        "phases/implement.md",
+        "../examples/portable-implementation.md"
+      ],
+      [
+        "phases/implement.md",
+        "../examples/source-manifest.md"
+      ],
+      [
+        "phases/implement.md",
+        "qualify.md"
+      ],
+      [
+        "phases/qualify.md",
+        "implement.md"
+      ],
+      [
+        "phases/qualify.md",
+        "../examples/portable-implementation.md"
+      ],
+      [
+        "phases/qualify.md",
+        "../examples/portable-implementation.md#concrete-operating-scenario-worksheet"
+      ],
+      [
+        "phases/qualify.md",
+        "../concepts/evidence-levels.md"
+      ],
+      [
+        "phases/qualify.md",
+        "handoff.md"
+      ],
+      [
+        "examples/index.md",
+        "selection-scenarios.md"
+      ],
+      [
+        "examples/index.md",
+        "portable-implementation.md"
+      ],
+      [
+        "examples/index.md",
+        "source-manifest.md"
+      ],
+      [
+        "components/resource-budgets.md",
+        "delegation.md"
+      ],
+      [
+        "components/delivery-acceptance.md",
+        "git-delivery.md"
+      ],
+      [
+        "components/delivery-acceptance.md",
+        "independent-evaluation.md"
+      ],
+      [
+        "components/delivery-acceptance.md",
+        "authority.md"
+      ],
+      [
+        "components/delivery-acceptance.md",
+        "git-delivery.md"
+      ],
+      [
+        "components/delivery-acceptance.md",
+        "independent-evaluation.md"
+      ]
+    ],
+    "example_cases": [
+      {
+        "case": "normal",
+        "returncode": 0,
+        "before": {
+          ".agentos": {
+            "directory": true
+          }
+        },
+        "after": {
+          ".agentos": {
+            "directory": true
+          },
+          ".agentos/qualification-example.json": {
+            "sha256": "62beeafa993858c7321dff66e135f705f007ae73892ca2185c4f749837d3cf4c",
+            "bytes": 2628
+          }
+        },
+        "pass": true
+      },
+      {
+        "case": "existing",
+        "returncode": 1,
+        "before": {
+          ".agentos": {
+            "directory": true
+          },
+          ".agentos/qualification-example.json": {
+            "sha256": "ce7736b878c0c770c62784149b542c10137670af1eb9d864f0539c1f185463da",
+            "bytes": 27
+          }
+        },
+        "after": {
+          ".agentos": {
+            "directory": true
+          },
+          ".agentos/qualification-example.json": {
+            "sha256": "ce7736b878c0c770c62784149b542c10137670af1eb9d864f0539c1f185463da",
+            "bytes": 27
+          }
+        },
+        "pass": true
+      },
+      {
+        "case": "linked-home",
+        "returncode": 1,
+        "before": {
+          "actual": {
+            "directory": true
+          },
+          ".agentos": {
+            "symlink": "/private/tmp/agentos-boundedreads-20261024/work/example-linked-home/actual"
+          }
+        },
+        "after": {
+          "actual": {
+            "directory": true
+          },
+          ".agentos": {
+            "symlink": "/private/tmp/agentos-boundedreads-20261024/work/example-linked-home/actual"
+          }
+        },
+        "pass": true
+      },
+      {
+        "case": "linked-output",
+        "returncode": 1,
+        "before": {
+          ".agentos": {
+            "directory": true
+          },
+          "prior.json": {
+            "sha256": "787b47138f2f6f9431bf55413c2a3655c2e0e84f29cc25a0167342ea5c960888",
+            "bytes": 21
+          },
+          ".agentos/qualification-example.json": {
+            "symlink": "/private/tmp/agentos-boundedreads-20261024/work/example-linked-output/prior.json"
+          }
+        },
+        "after": {
+          ".agentos": {
+            "directory": true
+          },
+          "prior.json": {
+            "sha256": "787b47138f2f6f9431bf55413c2a3655c2e0e84f29cc25a0167342ea5c960888",
+            "bytes": 21
+          },
+          ".agentos/qualification-example.json": {
+            "symlink": "/private/tmp/agentos-boundedreads-20261024/work/example-linked-output/prior.json"
+          }
+        },
+        "pass": true
+      }
+    ],
+    "cache_probes": [
+      {
+        "mode": "unguarded",
+        "command": [
+          "/opt/homebrew/opt/python@3.15/bin/python3.15",
+          "-c",
+          "from pathlib import Path; from localprobe import normalize; Path(\"output.txt\").write_text(normalize(\" Hello  AgentOS \"))"
+        ],
+        "cache_files": [
+          "__pycache__/localprobe.cpython-315.pyc"
+        ],
+        "output_hex": "48656c6c6f204167656e744f530a",
+        "pass": true
+      },
+      {
+        "mode": "flag",
+        "command": [
+          "/opt/homebrew/opt/python@3.15/bin/python3.15",
+          "-B",
+          "-c",
+          "from pathlib import Path; from localprobe import normalize; Path(\"output.txt\").write_text(normalize(\" Hello  AgentOS \"))"
+        ],
+        "cache_files": [],
+        "output_hex": "48656c6c6f204167656e744f530a",
+        "pass": true
+      },
+      {
+        "mode": "environment",
+        "command": [
+          "/opt/homebrew/opt/python@3.15/bin/python3.15",
+          "-c",
+          "from pathlib import Path; from localprobe import normalize; Path(\"output.txt\").write_text(normalize(\" Hello  AgentOS \"))"
+        ],
+        "cache_files": [],
+        "output_hex": "48656c6c6f204167656e744f530a",
+        "pass": true
+      },
+      {
+        "mode": "both",
+        "command": [
+          "/opt/homebrew/opt/python@3.15/bin/python3.15",
+          "-B",
+          "-c",
+          "from pathlib import Path; from localprobe import normalize; Path(\"output.txt\").write_text(normalize(\" Hello  AgentOS \"))"
+        ],
+        "cache_files": [],
+        "output_hex": "48656c6c6f204167656e744f530a",
+        "pass": true
+      }
+    ]
+  },
+  "manifest_cases": {
+    "count": 31,
+    "all_passed": true,
+    "evidence": "evidence/manifest-recipe-validation.json"
+  },
+  "regressions": {
+    "count": 49,
+    "seconds": 15.002,
+    "pass": true
+  },
+  "designs": {
+    "bundle-luna-D": {
+      "actual_selected_components": [
+        "components/director.md",
+        "components/chief-of-staff.md",
+        "components/activation.md",
+        "components/authority.md",
+        "components/capability-routing.md",
+        "components/delegation.md",
+        "components/delivery-acceptance.md",
+        "components/context-core.md",
+        "components/self-improvement.md",
+        "components/role-lifecycle.md"
+      ],
+      "selection_binding": "Manually transcribed actual final requirement table/closure; original final message retained in raw and runner summary. Sol explicitly adds budgets; Luna explicitly defers all conditionals. No fixed11 substitution.",
+      "structural_verification": {
+        "complete": true,
+        "declared": [
+          "components/activation.md",
+          "components/authority.md",
+          "components/capability-routing.md",
+          "components/chief-of-staff.md",
+          "components/context-core.md",
+          "components/delegation.md",
+          "components/delivery-acceptance.md",
+          "components/director.md",
+          "components/role-lifecycle.md",
+          "components/self-improvement.md"
+        ],
+        "required": [
+          "components/activation.md",
+          "components/authority.md",
+          "components/capability-routing.md",
+          "components/chief-of-staff.md",
+          "components/context-core.md",
+          "components/delegation.md",
+          "components/delivery-acceptance.md",
+          "components/director.md",
+          "components/role-lifecycle.md",
+          "components/self-improvement.md"
+        ],
+        "closure": [
+          "components/activation.md",
+          "components/authority.md",
+          "components/capability-routing.md",
+          "components/chief-of-staff.md",
+          "components/context-core.md",
+          "components/delegation.md",
+          "components/delivery-acceptance.md",
+          "components/director.md",
+          "components/role-lifecycle.md",
+          "components/self-improvement.md"
+        ],
+        "missing_required": [],
+        "missing_dependencies": [],
+        "components": {
+          "components/activation.md": {
+            "selection": "required",
+            "requires": [
+              "components/authority.md",
+              "components/context-core.md"
+            ],
+            "status": "stable",
+            "sha256": "2893e4d66fc47158d5267cae0a04132d832c8436ad90f7ca6f58d322aaef4284"
+          },
+          "components/authority.md": {
+            "selection": "required",
+            "requires": [],
+            "status": "stable",
+            "sha256": "47ae9e02646be13d453e3219a55bc16610e115d2da221b944103b6c95a53ff95"
+          },
+          "components/capability-routing.md": {
+            "selection": "required",
+            "requires": [],
+            "status": "stable",
+            "sha256": "d7f86c5cbf4b1a505f9db20fcbd68487a809bbdc04adce3cd12221114d0fc161"
+          },
+          "components/chief-of-staff.md": {
+            "selection": "required",
+            "requires": [
+              "components/role-lifecycle.md",
+              "components/self-improvement.md"
+            ],
+            "status": "stable",
+            "sha256": "c43203e841a0a10ef4ef3887b6a7d89eb834eb255b3b4386231488f4f9efb8b5"
+          },
+          "components/context-core.md": {
+            "selection": "required",
+            "requires": [],
+            "status": "stable",
+            "sha256": "8046c83f2eec46be879ce418e68827fdd95f6388ad3ff2090b8254840e74bca0"
+          },
+          "components/delegation.md": {
+            "selection": "required",
+            "requires": [
+              "components/authority.md",
+              "components/capability-routing.md"
+            ],
+            "status": "stable",
+            "sha256": "d34dcf7c5bb102fc4f0e1a1603954ce51e33aa5f05f9a3561ae33315d2725169"
+          },
+          "components/delivery-acceptance.md": {
+            "selection": "required",
+            "requires": [
+              "components/authority.md"
+            ],
+            "status": "stable",
+            "sha256": "3a74e11cdae62fd5e0fc1ea4641775b6dabd5018eaed872d9ddecee354794000"
+          },
+          "components/director.md": {
+            "selection": "required",
+            "requires": [
+              "components/activation.md",
+              "components/delegation.md",
+              "components/delivery-acceptance.md"
+            ],
+            "status": "stable",
+            "sha256": "beafa827c5ce6c53937537fa9521c2b46ebb9ec049788648b7e2b010b0eea9b0"
+          },
+          "components/role-lifecycle.md": {
+            "selection": "required",
+            "requires": [
+              "components/capability-routing.md"
+            ],
+            "status": "stable",
+            "sha256": "ae0fc9a30668666d22cb9b0ab03049b98ec095a590f81ecb7b843972073bf95f"
+          },
+          "components/self-improvement.md": {
+            "selection": "required",
+            "requires": [
+              "components/authority.md",
+              "components/delivery-acceptance.md"
+            ],
+            "status": "stable",
+            "sha256": "0bf78a0d5f04096c9e0b3603588f8b865aed218ba980f59f4dc11922656d5ac7"
+          }
+        },
+        "limits": "Structural completeness only. Independently bind this exact list to the actual proposal, resolve contradictory deferrals, and assess every selected duty. No source-read, implementation, independence or authority credit."
+      },
+      "primary_record_sha256": "451ce172deda8365dce5140d85bdb6f599396da0188a8eb9aea037bdd5a9a02c",
+      "raw_sha256": "cbee7917a704ee04cbf86fb01c3857dfb5158c99f54fc469572b5db00889c7eb",
+      "source_findings": {
+        "components/director.md": {
+          "finding": "full-source delivery established",
+          "source": {
+            "sha256": "beafa827c5ce6c53937537fa9521c2b46ebb9ec049788648b7e2b010b0eea9b0",
+            "bytes": 2115
+          },
+          "item": "item_14",
+          "event_index": 29,
+          "command_sha256": "d1406ad4d183d45c574b1af6e2fd9928a9503cb4c5ec692f8b53fba8f1d01c1e",
+          "output_sha256": "beafa827c5ce6c53937537fa9521c2b46ebb9ec049788648b7e2b010b0eea9b0",
+          "primary_call_line": 92,
+          "primary_output_line": 95,
+          "primary_output_sha256": "4f674594dc24d7a05dfa6dbc4e77d3bef0a48ab527469fac196822def6e9dfd1",
+          "aggregate_exit": 0,
+          "individual_source_exit": "unknown",
+          "conditions": {
+            "identity": "Exact bound48filemanifest; source body/hash/bytes matched frozen source",
+            "provenance": "Manually inspected literal absolute cat of controlled read-only source; no substituted executable or dynamic unresolved path; full source inventory unchanged",
+            "completed_output": "Exact complete canonical body in one completed assigned native output; no transport flag",
+            "ordering": "Before actual final proposal in same D context; all commands read-only, no mutation",
+            "separate_obligations": "Aggregate status retained separately; structural actual-set validation and semantic requirement/effect reviews separate; no I admission or pass"
+          }
+        },
+        "components/chief-of-staff.md": {
+          "finding": "full-source delivery established",
+          "source": {
+            "sha256": "c43203e841a0a10ef4ef3887b6a7d89eb834eb255b3b4386231488f4f9efb8b5",
+            "bytes": 1726
+          },
+          "item": "item_15",
+          "event_index": 31,
+          "command_sha256": "3891c8d857bef5e39466659bbb414451dcd77f89927b43f360af099df72b5cc6",
+          "output_sha256": "c43203e841a0a10ef4ef3887b6a7d89eb834eb255b3b4386231488f4f9efb8b5",
+          "primary_call_line": 97,
+          "primary_output_line": 100,
+          "primary_output_sha256": "0ad781b32e1a077eed2a5d91327236e84340d9dd7fbed014af64fcbd55f279ab",
+          "aggregate_exit": 0,
+          "individual_source_exit": "unknown",
+          "conditions": {
+            "identity": "Exact bound48filemanifest; source body/hash/bytes matched frozen source",
+            "provenance": "Manually inspected literal absolute cat of controlled read-only source; no substituted executable or dynamic unresolved path; full source inventory unchanged",
+            "completed_output": "Exact complete canonical body in one completed assigned native output; no transport flag",
+            "ordering": "Before actual final proposal in same D context; all commands read-only, no mutation",
+            "separate_obligations": "Aggregate status retained separately; structural actual-set validation and semantic requirement/effect reviews separate; no I admission or pass"
+          }
+        },
+        "components/activation.md": {
+          "finding": "full-source delivery established",
+          "source": {
+            "sha256": "2893e4d66fc47158d5267cae0a04132d832c8436ad90f7ca6f58d322aaef4284",
+            "bytes": 2064
+          },
+          "item": "item_16",
+          "event_index": 33,
+          "command_sha256": "b0bb6ac6177d622746b920d78b1c8232636029e2f3059552e955329b1d211343",
+          "output_sha256": "2893e4d66fc47158d5267cae0a04132d832c8436ad90f7ca6f58d322aaef4284",
+          "primary_call_line": 102,
+          "primary_output_line": 105,
+          "primary_output_sha256": "f8f62c211980c2aa555ae5ece1bbf2cb35a72cadd1ba397239ce715f7a013a04",
+          "aggregate_exit": 0,
+          "individual_source_exit": "unknown",
+          "conditions": {
+            "identity": "Exact bound48filemanifest; source body/hash/bytes matched frozen source",
+            "provenance": "Manually inspected literal absolute cat of controlled read-only source; no substituted executable or dynamic unresolved path; full source inventory unchanged",
+            "completed_output": "Exact complete canonical body in one completed assigned native output; no transport flag",
+            "ordering": "Before actual final proposal in same D context; all commands read-only, no mutation",
+            "separate_obligations": "Aggregate status retained separately; structural actual-set validation and semantic requirement/effect reviews separate; no I admission or pass"
+          }
+        },
+        "components/authority.md": {
+          "finding": "full-source delivery established",
+          "source": {
+            "sha256": "47ae9e02646be13d453e3219a55bc16610e115d2da221b944103b6c95a53ff95",
+            "bytes": 3041
+          },
+          "item": "item_17",
+          "event_index": 35,
+          "command_sha256": "6beb934bed0600e62d0b2ef637d1f3dd2858de39886c4715959c6eca35e7a0bd",
+          "output_sha256": "47ae9e02646be13d453e3219a55bc16610e115d2da221b944103b6c95a53ff95",
+          "primary_call_line": 107,
+          "primary_output_line": 110,
+          "primary_output_sha256": "63523fe0366b0b3eaf7b7f79cffa1d6fc62a73fb84e727387ee05b3cc1a2bc94",
+          "aggregate_exit": 0,
+          "individual_source_exit": "unknown",
+          "conditions": {
+            "identity": "Exact bound48filemanifest; source body/hash/bytes matched frozen source",
+            "provenance": "Manually inspected literal absolute cat of controlled read-only source; no substituted executable or dynamic unresolved path; full source inventory unchanged",
+            "completed_output": "Exact complete canonical body in one completed assigned native output; no transport flag",
+            "ordering": "Before actual final proposal in same D context; all commands read-only, no mutation",
+            "separate_obligations": "Aggregate status retained separately; structural actual-set validation and semantic requirement/effect reviews separate; no I admission or pass"
+          }
+        },
+        "components/capability-routing.md": {
+          "finding": "full-source delivery established",
+          "source": {
+            "sha256": "d7f86c5cbf4b1a505f9db20fcbd68487a809bbdc04adce3cd12221114d0fc161",
+            "bytes": 1846
+          },
+          "item": "item_18",
+          "event_index": 37,
+          "command_sha256": "828a69f9d5183face3563307295e5472d63f5f23a1a1bc8168e7008cbeb60ea8",
+          "output_sha256": "d7f86c5cbf4b1a505f9db20fcbd68487a809bbdc04adce3cd12221114d0fc161",
+          "primary_call_line": 112,
+          "primary_output_line": 115,
+          "primary_output_sha256": "d63d7b72a059eac89225eae41e264ed5eedb1982f9051b4f20cc230a474df62d",
+          "aggregate_exit": 0,
+          "individual_source_exit": "unknown",
+          "conditions": {
+            "identity": "Exact bound48filemanifest; source body/hash/bytes matched frozen source",
+            "provenance": "Manually inspected literal absolute cat of controlled read-only source; no substituted executable or dynamic unresolved path; full source inventory unchanged",
+            "completed_output": "Exact complete canonical body in one completed assigned native output; no transport flag",
+            "ordering": "Before actual final proposal in same D context; all commands read-only, no mutation",
+            "separate_obligations": "Aggregate status retained separately; structural actual-set validation and semantic requirement/effect reviews separate; no I admission or pass"
+          }
+        },
+        "components/delegation.md": {
+          "finding": "full-source delivery established",
+          "source": {
+            "sha256": "d34dcf7c5bb102fc4f0e1a1603954ce51e33aa5f05f9a3561ae33315d2725169",
+            "bytes": 2146
+          },
+          "item": "item_19",
+          "event_index": 39,
+          "command_sha256": "ae60e58e40cd43eaaa92baf375598a7b51b4c9a19a6d7880dbd8d20fba31fc73",
+          "output_sha256": "d34dcf7c5bb102fc4f0e1a1603954ce51e33aa5f05f9a3561ae33315d2725169",
+          "primary_call_line": 117,
+          "primary_output_line": 120,
+          "primary_output_sha256": "2e42a0c033baf980cdfb5b906711021ea61f2bc97b5a21c433b007b9713f8d21",
+          "aggregate_exit": 0,
+          "individual_source_exit": "unknown",
+          "conditions": {
+            "identity": "Exact bound48filemanifest; source body/hash/bytes matched frozen source",
+            "provenance": "Manually inspected literal absolute cat of controlled read-only source; no substituted executable or dynamic unresolved path; full source inventory unchanged",
+            "completed_output": "Exact complete canonical body in one completed assigned native output; no transport flag",
+            "ordering": "Before actual final proposal in same D context; all commands read-only, no mutation",
+            "separate_obligations": "Aggregate status retained separately; structural actual-set validation and semantic requirement/effect reviews separate; no I admission or pass"
+          }
+        },
+        "components/delivery-acceptance.md": {
+          "finding": "full-source delivery established",
+          "source": {
+            "sha256": "3a74e11cdae62fd5e0fc1ea4641775b6dabd5018eaed872d9ddecee354794000",
+            "bytes": 2686
+          },
+          "item": "item_20",
+          "event_index": 41,
+          "command_sha256": "69ed1f2d84e781600c018231188889f05f56cc02fc7ff6d43e3cea87e07ed55c",
+          "output_sha256": "3a74e11cdae62fd5e0fc1ea4641775b6dabd5018eaed872d9ddecee354794000",
+          "primary_call_line": 122,
+          "primary_output_line": 125,
+          "primary_output_sha256": "9138a149f1d1023e5fd327ea5e084c83928ec461e6befac50e96c81f982d6f37",
+          "aggregate_exit": 0,
+          "individual_source_exit": "unknown",
+          "conditions": {
+            "identity": "Exact bound48filemanifest; source body/hash/bytes matched frozen source",
+            "provenance": "Manually inspected literal absolute cat of controlled read-only source; no substituted executable or dynamic unresolved path; full source inventory unchanged",
+            "completed_output": "Exact complete canonical body in one completed assigned native output; no transport flag",
+            "ordering": "Before actual final proposal in same D context; all commands read-only, no mutation",
+            "separate_obligations": "Aggregate status retained separately; structural actual-set validation and semantic requirement/effect reviews separate; no I admission or pass"
+          }
+        },
+        "components/context-core.md": {
+          "finding": "full-source delivery established",
+          "source": {
+            "sha256": "8046c83f2eec46be879ce418e68827fdd95f6388ad3ff2090b8254840e74bca0",
+            "bytes": 1602
+          },
+          "item": "item_21",
+          "event_index": 43,
+          "command_sha256": "a9a57bb7a20445327bff996f973cab7f7a185eaec6822862b7462e0cd98216dc",
+          "output_sha256": "8046c83f2eec46be879ce418e68827fdd95f6388ad3ff2090b8254840e74bca0",
+          "primary_call_line": 127,
+          "primary_output_line": 130,
+          "primary_output_sha256": "a0edd8fb1c02ae292809cabfa97cbc6e2613d68e33d269edb4a78781aa6e3076",
+          "aggregate_exit": 0,
+          "individual_source_exit": "unknown",
+          "conditions": {
+            "identity": "Exact bound48filemanifest; source body/hash/bytes matched frozen source",
+            "provenance": "Manually inspected literal absolute cat of controlled read-only source; no substituted executable or dynamic unresolved path; full source inventory unchanged",
+            "completed_output": "Exact complete canonical body in one completed assigned native output; no transport flag",
+            "ordering": "Before actual final proposal in same D context; all commands read-only, no mutation",
+            "separate_obligations": "Aggregate status retained separately; structural actual-set validation and semantic requirement/effect reviews separate; no I admission or pass"
+          }
+        },
+        "components/self-improvement.md": {
+          "finding": "full-source delivery established",
+          "source": {
+            "sha256": "0bf78a0d5f04096c9e0b3603588f8b865aed218ba980f59f4dc11922656d5ac7",
+            "bytes": 3002
+          },
+          "item": "item_22",
+          "event_index": 45,
+          "command_sha256": "f99cb00798c0b0b9e48a1c4d175984af73592a56448d90fafd133e2e7beb2e6c",
+          "output_sha256": "0bf78a0d5f04096c9e0b3603588f8b865aed218ba980f59f4dc11922656d5ac7",
+          "primary_call_line": 134,
+          "primary_output_line": 137,
+          "primary_output_sha256": "a59e8f6662f9e9b6d088f9286092e7cce957a3e7960b26c478591f132de7d670",
+          "aggregate_exit": 0,
+          "individual_source_exit": "unknown",
+          "conditions": {
+            "identity": "Exact bound48filemanifest; source body/hash/bytes matched frozen source",
+            "provenance": "Manually inspected literal absolute cat of controlled read-only source; no substituted executable or dynamic unresolved path; full source inventory unchanged",
+            "completed_output": "Exact complete canonical body in one completed assigned native output; no transport flag",
+            "ordering": "Before actual final proposal in same D context; all commands read-only, no mutation",
+            "separate_obligations": "Aggregate status retained separately; structural actual-set validation and semantic requirement/effect reviews separate; no I admission or pass"
+          }
+        },
+        "components/role-lifecycle.md": {
+          "finding": "full-source delivery established",
+          "source": {
+            "sha256": "ae0fc9a30668666d22cb9b0ab03049b98ec095a590f81ecb7b843972073bf95f",
+            "bytes": 1897
+          },
+          "item": "item_23",
+          "event_index": 47,
+          "command_sha256": "b1b28ec559b8f942e130552f92ddca249271db0c0c4b52e8283a44b94a9947ba",
+          "output_sha256": "ae0fc9a30668666d22cb9b0ab03049b98ec095a590f81ecb7b843972073bf95f",
+          "primary_call_line": 139,
+          "primary_output_line": 142,
+          "primary_output_sha256": "f5e58b32115c4a5c575212d96d0cb78234b1dcd748c5cfb0238b213e24c414ad",
+          "aggregate_exit": 0,
+          "individual_source_exit": "unknown",
+          "conditions": {
+            "identity": "Exact bound48filemanifest; source body/hash/bytes matched frozen source",
+            "provenance": "Manually inspected literal absolute cat of controlled read-only source; no substituted executable or dynamic unresolved path; full source inventory unchanged",
+            "completed_output": "Exact complete canonical body in one completed assigned native output; no transport flag",
+            "ordering": "Before actual final proposal in same D context; all commands read-only, no mutation",
+            "separate_obligations": "Aggregate status retained separately; structural actual-set validation and semantic requirement/effect reviews separate; no I admission or pass"
+          }
+        },
+        "start.md": {
+          "finding": "full-source delivery established",
+          "source": {
+            "sha256": "dc13340978457a8460a81e9da4c32fa195bc4f6c5d5d404f7547306fc233b258",
+            "bytes": 6274
+          },
+          "item": "item_1",
+          "event_index": 4,
+          "command_sha256": "5990dd1810964249b87119e99cb1ef465a60ea6fb5f4a0a8b31e078c81530c26",
+          "output_sha256": "9efafeb65798485ca2a13d97533178b5aa58af831ccbc872aa59fdf42bbcff3a",
+          "primary_call_line": 16,
+          "primary_output_line": 19,
+          "primary_output_sha256": "df2faa2469d3a406ca5a7034b0b1f6b078ddf961e3a8d30d067b9ba64b528eec",
+          "aggregate_exit": 0,
+          "individual_source_exit": "unknown",
+          "conditions": {
+            "identity": "Exact bound48filemanifest; source body/hash/bytes matched frozen source",
+            "provenance": "Manually inspected literal absolute cat of controlled read-only source; no substituted executable or dynamic unresolved path; full source inventory unchanged",
+            "completed_output": "Exact complete canonical body in one completed assigned native output; no transport flag",
+            "ordering": "Before actual final proposal in same D context; all commands read-only, no mutation",
+            "separate_obligations": "Aggregate status retained separately; structural actual-set validation and semantic requirement/effect reviews separate; no I admission or pass"
+          }
+        },
+        "core/constitution.md": {
+          "finding": "full-source delivery established",
+          "source": {
+            "sha256": "6797e597f48135da527f87aff5b0f1b01e2c265ebb5378cb2826d70665a5ed82",
+            "bytes": 2665
+          },
+          "item": "item_2",
+          "event_index": 6,
+          "command_sha256": "336e10216408b7a028109bb26aee0189f3a1c2518b5087775343f3d115c6624f",
+          "output_sha256": "6797e597f48135da527f87aff5b0f1b01e2c265ebb5378cb2826d70665a5ed82",
+          "primary_call_line": 23,
+          "primary_output_line": 26,
+          "primary_output_sha256": "e06fe29e0801da4ae8dca1bf1dbd8819f4089202bbe62acb16e7cb2e5e2c5718",
+          "aggregate_exit": 0,
+          "individual_source_exit": "unknown",
+          "conditions": {
+            "identity": "Exact bound48filemanifest; source body/hash/bytes matched frozen source",
+            "provenance": "Manually inspected literal absolute cat of controlled read-only source; no substituted executable or dynamic unresolved path; full source inventory unchanged",
+            "completed_output": "Exact complete canonical body in one completed assigned native output; no transport flag",
+            "ordering": "Before actual final proposal in same D context; all commands read-only, no mutation",
+            "separate_obligations": "Aggregate status retained separately; structural actual-set validation and semantic requirement/effect reviews separate; no I admission or pass"
+          }
+        },
+        "core/installer-policy.md": {
+          "finding": "full-source delivery established",
+          "source": {
+            "sha256": "c6e48d24fa13124d2f623e131c96c83b77aa32734b5ae706f2e6912cc82db4aa",
+            "bytes": 2634
+          },
+          "item": "item_3",
+          "event_index": 8,
+          "command_sha256": "48be9dd2df6d108ed3b5f060ee11ce632c8a411bd58a5853cbb2a38d0781cd28",
+          "output_sha256": "c6e48d24fa13124d2f623e131c96c83b77aa32734b5ae706f2e6912cc82db4aa",
+          "primary_call_line": 28,
+          "primary_output_line": 31,
+          "primary_output_sha256": "786854196bedbe3c6c99849ef88b29915a6c45f2aa493df8ff93f981fa98c303",
+          "aggregate_exit": 0,
+          "individual_source_exit": "unknown",
+          "conditions": {
+            "identity": "Exact bound48filemanifest; source body/hash/bytes matched frozen source",
+            "provenance": "Manually inspected literal absolute cat of controlled read-only source; no substituted executable or dynamic unresolved path; full source inventory unchanged",
+            "completed_output": "Exact complete canonical body in one completed assigned native output; no transport flag",
+            "ordering": "Before actual final proposal in same D context; all commands read-only, no mutation",
+            "separate_obligations": "Aggregate status retained separately; structural actual-set validation and semantic requirement/effect reviews separate; no I admission or pass"
+          }
+        },
+        "core/graph-routing.md": {
+          "finding": "full-source delivery established",
+          "source": {
+            "sha256": "5540bc994513b93f3f072f265e8e8e19f9df0504ca3740d0c3562785434d50f2",
+            "bytes": 7629
+          },
+          "item": "item_4",
+          "event_index": 10,
+          "command_sha256": "bbef37fa5717b14517fa03ea774e1d04f5ab0d175f4611201a3bd144fbc03e7f",
+          "output_sha256": "5540bc994513b93f3f072f265e8e8e19f9df0504ca3740d0c3562785434d50f2",
+          "primary_call_line": 33,
+          "primary_output_line": 36,
+          "primary_output_sha256": "2dfd375342eb74c9a3aa2c782b26f1d979a3f22344e91ec223cfb701354677ce",
+          "aggregate_exit": 0,
+          "individual_source_exit": "unknown",
+          "conditions": {
+            "identity": "Exact bound48filemanifest; source body/hash/bytes matched frozen source",
+            "provenance": "Manually inspected literal absolute cat of controlled read-only source; no substituted executable or dynamic unresolved path; full source inventory unchanged",
+            "completed_output": "Exact complete canonical body in one completed assigned native output; no transport flag",
+            "ordering": "Before actual final proposal in same D context; all commands read-only, no mutation",
+            "separate_obligations": "Aggregate status retained separately; structural actual-set validation and semantic requirement/effect reviews separate; no I admission or pass"
+          }
+        },
+        "interviews/bootstrap.md": {
+          "finding": "full-source delivery established",
+          "source": {
+            "sha256": "eb471fc596bf6705c656911716e3022e99d818a905b744b8314acf3b3c988ce4",
+            "bytes": 2279
+          },
+          "item": "item_5",
+          "event_index": 12,
+          "command_sha256": "821ed8ed1b193ef54d3cabfc00c98515e6835b4c5423f3b8b7008d351a72b1fb",
+          "output_sha256": "eb471fc596bf6705c656911716e3022e99d818a905b744b8314acf3b3c988ce4",
+          "primary_call_line": 40,
+          "primary_output_line": 43,
+          "primary_output_sha256": "f9d0f902568d93678f1fcc168b61671d1c0504cac6590b0f1c466e3ec31b7824",
+          "aggregate_exit": 0,
+          "individual_source_exit": "unknown",
+          "conditions": {
+            "identity": "Exact bound48filemanifest; source body/hash/bytes matched frozen source",
+            "provenance": "Manually inspected literal absolute cat of controlled read-only source; no substituted executable or dynamic unresolved path; full source inventory unchanged",
+            "completed_output": "Exact complete canonical body in one completed assigned native output; no transport flag",
+            "ordering": "Before actual final proposal in same D context; all commands read-only, no mutation",
+            "separate_obligations": "Aggregate status retained separately; structural actual-set validation and semantic requirement/effect reviews separate; no I admission or pass"
+          }
+        },
+        "phases/discover.md": {
+          "finding": "full-source delivery established",
+          "source": {
+            "sha256": "513fc2cea5ca6a7164e1f37ce764abf1a7a5c3e849d9ff83dd3fd894d4238b9d",
+            "bytes": 1377
+          },
+          "item": "item_6",
+          "event_index": 14,
+          "command_sha256": "0ee5ee568b691d96b474f26b23bbca316b18643dcc974285621abdae3c8ccc76",
+          "output_sha256": "513fc2cea5ca6a7164e1f37ce764abf1a7a5c3e849d9ff83dd3fd894d4238b9d",
+          "primary_call_line": 45,
+          "primary_output_line": 48,
+          "primary_output_sha256": "d971f1b50971669494d9cb9a7fb71858a3f34a59b769d37fb5a01fa6bd8997d9",
+          "aggregate_exit": 0,
+          "individual_source_exit": "unknown",
+          "conditions": {
+            "identity": "Exact bound48filemanifest; source body/hash/bytes matched frozen source",
+            "provenance": "Manually inspected literal absolute cat of controlled read-only source; no substituted executable or dynamic unresolved path; full source inventory unchanged",
+            "completed_output": "Exact complete canonical body in one completed assigned native output; no transport flag",
+            "ordering": "Before actual final proposal in same D context; all commands read-only, no mutation",
+            "separate_obligations": "Aggregate status retained separately; structural actual-set validation and semantic requirement/effect reviews separate; no I admission or pass"
+          }
+        },
+        "phases/design.md": {
+          "finding": "full-source delivery established",
+          "source": {
+            "sha256": "95681cf0f3fd3d77219bbe14d79ac4be78056a69dbe50e5f04c13fd768396aba",
+            "bytes": 2207
+          },
+          "item": "item_24",
+          "event_index": 49,
+          "command_sha256": "115f0c8ed9ba2fde630b6a919929dbb863c8019c4f425e3196362cfb35fc667a",
+          "output_sha256": "95681cf0f3fd3d77219bbe14d79ac4be78056a69dbe50e5f04c13fd768396aba",
+          "primary_call_line": 146,
+          "primary_output_line": 149,
+          "primary_output_sha256": "0a8e64071c9a26852638c2ff3ba9bb553af00eeae54b557d3dab61a2765b69c4",
+          "aggregate_exit": 0,
+          "individual_source_exit": "unknown",
+          "conditions": {
+            "identity": "Exact bound48filemanifest; source body/hash/bytes matched frozen source",
+            "provenance": "Manually inspected literal absolute cat of controlled read-only source; no substituted executable or dynamic unresolved path; full source inventory unchanged",
+            "completed_output": "Exact complete canonical body in one completed assigned native output; no transport flag",
+            "ordering": "Before actual final proposal in same D context; all commands read-only, no mutation",
+            "separate_obligations": "Aggregate status retained separately; structural actual-set validation and semantic requirement/effect reviews separate; no I admission or pass"
+          }
+        },
+        "examples/source-manifest.md": {
+          "finding": "full-source delivery established",
+          "source": {
+            "sha256": "7dfc8beb62625ea982fc97caf7b8d7b18b7c5d987a66dd73d2ede2e2fc19cde0",
+            "bytes": 4626
+          },
+          "item": "item_13",
+          "event_index": 27,
+          "command_sha256": "fc03802d1ac59b3bacbfb72c47b5f0f86abc8af7d0dbe0d41faedd91b6f0d96f",
+          "output_sha256": "7dfc8beb62625ea982fc97caf7b8d7b18b7c5d987a66dd73d2ede2e2fc19cde0",
+          "primary_call_line": 85,
+          "primary_output_line": 88,
+          "primary_output_sha256": "90576dc4b90027eb0109c48e5ba2238fc06a66e62755f00cee8896ef3c131fcc",
+          "aggregate_exit": 0,
+          "individual_source_exit": "unknown",
+          "conditions": {
+            "identity": "Exact bound48filemanifest; source body/hash/bytes matched frozen source",
+            "provenance": "Manually inspected literal absolute cat of controlled read-only source; no substituted executable or dynamic unresolved path; full source inventory unchanged",
+            "completed_output": "Exact complete canonical body in one completed assigned native output; no transport flag",
+            "ordering": "Before actual final proposal in same D context; all commands read-only, no mutation",
+            "separate_obligations": "Aggregate status retained separately; structural actual-set validation and semantic requirement/effect reviews separate; no I admission or pass"
+          }
+        }
+      },
+      "identity": {
+        "item": "item_27",
+        "native_output_line": 168,
+        "format": "agentos-source-v1",
+        "files": 48,
+        "exact_frozen_match": true
+      },
+      "semantic_verdict": "D fail: unreconciled resource-budgets deferral despite explicit limited slots/time/retries and graph trigger",
+      "effects_review": "Inspected all27commands: cat/discovery/read-onlyGit/guardedstdlib-only identity; no project imports/tests/writes/external effects/children. Full target/Git/source snapshots unchanged. No arbitrary transient monitor claim.",
+      "failures": "item12 exit2 absentoptionaltools; && prevented sourceGit probes. No targeteffects; absence established directly, guarded recipe generated exactmanifest. Kept aggregate failure; no source read depends on failed probe.",
+      "command_terminal_completeness": true,
+      "extra_reads": "Resource-budget source never read; all10selected bodies plus8startup/recipe delivered in full."
+    },
+    "bundle-sol-D": {
+      "actual_selected_components": [
+        "components/director.md",
+        "components/chief-of-staff.md",
+        "components/activation.md",
+        "components/authority.md",
+        "components/capability-routing.md",
+        "components/delegation.md",
+        "components/delivery-acceptance.md",
+        "components/context-core.md",
+        "components/self-improvement.md",
+        "components/role-lifecycle.md",
+        "components/resource-budgets.md"
+      ],
+      "selection_binding": "Manually transcribed actual final requirement table/closure; original final message retained in raw and runner summary. Sol explicitly adds budgets; Luna explicitly defers all conditionals. No fixed11 substitution.",
+      "structural_verification": {
+        "complete": true,
+        "declared": [
+          "components/activation.md",
+          "components/authority.md",
+          "components/capability-routing.md",
+          "components/chief-of-staff.md",
+          "components/context-core.md",
+          "components/delegation.md",
+          "components/delivery-acceptance.md",
+          "components/director.md",
+          "components/resource-budgets.md",
+          "components/role-lifecycle.md",
+          "components/self-improvement.md"
+        ],
+        "required": [
+          "components/activation.md",
+          "components/authority.md",
+          "components/capability-routing.md",
+          "components/chief-of-staff.md",
+          "components/context-core.md",
+          "components/delegation.md",
+          "components/delivery-acceptance.md",
+          "components/director.md",
+          "components/role-lifecycle.md",
+          "components/self-improvement.md"
+        ],
+        "closure": [
+          "components/activation.md",
+          "components/authority.md",
+          "components/capability-routing.md",
+          "components/chief-of-staff.md",
+          "components/context-core.md",
+          "components/delegation.md",
+          "components/delivery-acceptance.md",
+          "components/director.md",
+          "components/resource-budgets.md",
+          "components/role-lifecycle.md",
+          "components/self-improvement.md"
+        ],
+        "missing_required": [],
+        "missing_dependencies": [],
+        "components": {
+          "components/activation.md": {
+            "selection": "required",
+            "requires": [
+              "components/authority.md",
+              "components/context-core.md"
+            ],
+            "status": "stable",
+            "sha256": "2893e4d66fc47158d5267cae0a04132d832c8436ad90f7ca6f58d322aaef4284"
+          },
+          "components/authority.md": {
+            "selection": "required",
+            "requires": [],
+            "status": "stable",
+            "sha256": "47ae9e02646be13d453e3219a55bc16610e115d2da221b944103b6c95a53ff95"
+          },
+          "components/capability-routing.md": {
+            "selection": "required",
+            "requires": [],
+            "status": "stable",
+            "sha256": "d7f86c5cbf4b1a505f9db20fcbd68487a809bbdc04adce3cd12221114d0fc161"
+          },
+          "components/chief-of-staff.md": {
+            "selection": "required",
+            "requires": [
+              "components/role-lifecycle.md",
+              "components/self-improvement.md"
+            ],
+            "status": "stable",
+            "sha256": "c43203e841a0a10ef4ef3887b6a7d89eb834eb255b3b4386231488f4f9efb8b5"
+          },
+          "components/context-core.md": {
+            "selection": "required",
+            "requires": [],
+            "status": "stable",
+            "sha256": "8046c83f2eec46be879ce418e68827fdd95f6388ad3ff2090b8254840e74bca0"
+          },
+          "components/delegation.md": {
+            "selection": "required",
+            "requires": [
+              "components/authority.md",
+              "components/capability-routing.md"
+            ],
+            "status": "stable",
+            "sha256": "d34dcf7c5bb102fc4f0e1a1603954ce51e33aa5f05f9a3561ae33315d2725169"
+          },
+          "components/delivery-acceptance.md": {
+            "selection": "required",
+            "requires": [
+              "components/authority.md"
+            ],
+            "status": "stable",
+            "sha256": "3a74e11cdae62fd5e0fc1ea4641775b6dabd5018eaed872d9ddecee354794000"
+          },
+          "components/director.md": {
+            "selection": "required",
+            "requires": [
+              "components/activation.md",
+              "components/delegation.md",
+              "components/delivery-acceptance.md"
+            ],
+            "status": "stable",
+            "sha256": "beafa827c5ce6c53937537fa9521c2b46ebb9ec049788648b7e2b010b0eea9b0"
+          },
+          "components/resource-budgets.md": {
+            "selection": "conditional",
+            "requires": [
+              "components/delegation.md"
+            ],
+            "status": "stable",
+            "sha256": "1c6e69123d8186d8cda6f74cac0850d7c64aa0b97f7ef8d5f679982951834a5e"
+          },
+          "components/role-lifecycle.md": {
+            "selection": "required",
+            "requires": [
+              "components/capability-routing.md"
+            ],
+            "status": "stable",
+            "sha256": "ae0fc9a30668666d22cb9b0ab03049b98ec095a590f81ecb7b843972073bf95f"
+          },
+          "components/self-improvement.md": {
+            "selection": "required",
+            "requires": [
+              "components/authority.md",
+              "components/delivery-acceptance.md"
+            ],
+            "status": "stable",
+            "sha256": "0bf78a0d5f04096c9e0b3603588f8b865aed218ba980f59f4dc11922656d5ac7"
+          }
+        },
+        "limits": "Structural completeness only. Independently bind this exact list to the actual proposal, resolve contradictory deferrals, and assess every selected duty. No source-read, implementation, independence or authority credit."
+      },
+      "primary_record_sha256": "e7422848aa3d9caa17dc9739d4379e22be4c82d92c730766507a4a569e78e92f",
+      "raw_sha256": "7468b248d31d758500577f187962106681776326194c3ace22ff604334299041",
+      "source_findings": {
+        "components/director.md": {
+          "finding": "full-source delivery established",
+          "source": {
+            "sha256": "beafa827c5ce6c53937537fa9521c2b46ebb9ec049788648b7e2b010b0eea9b0",
+            "bytes": 2115
+          },
+          "item": "item_17",
+          "event_index": 35,
+          "command_sha256": "d1406ad4d183d45c574b1af6e2fd9928a9503cb4c5ec692f8b53fba8f1d01c1e",
+          "output_sha256": "beafa827c5ce6c53937537fa9521c2b46ebb9ec049788648b7e2b010b0eea9b0",
+          "primary_call_line": 85,
+          "primary_output_line": 88,
+          "primary_output_sha256": "0d80e69d2934e17360e5d2e55163f1cf9d75bda468f64d5c94fe44fd4a0249a0",
+          "aggregate_exit": 0,
+          "individual_source_exit": "unknown",
+          "conditions": {
+            "identity": "Exact bound48filemanifest; source body/hash/bytes matched frozen source",
+            "provenance": "Manually inspected literal absolute cat of controlled read-only source; no substituted executable or dynamic unresolved path; full source inventory unchanged",
+            "completed_output": "Exact complete canonical body in one completed assigned native output; no transport flag",
+            "ordering": "Before actual final proposal in same D context; all commands read-only, no mutation",
+            "separate_obligations": "Aggregate status retained separately; structural actual-set validation and semantic requirement/effect reviews separate; no I admission or pass"
+          }
+        },
+        "components/chief-of-staff.md": {
+          "finding": "full-source delivery established",
+          "source": {
+            "sha256": "c43203e841a0a10ef4ef3887b6a7d89eb834eb255b3b4386231488f4f9efb8b5",
+            "bytes": 1726
+          },
+          "item": "item_18",
+          "event_index": 37,
+          "command_sha256": "3891c8d857bef5e39466659bbb414451dcd77f89927b43f360af099df72b5cc6",
+          "output_sha256": "c43203e841a0a10ef4ef3887b6a7d89eb834eb255b3b4386231488f4f9efb8b5",
+          "primary_call_line": 90,
+          "primary_output_line": 93,
+          "primary_output_sha256": "3c0068fdaf8cbd1e7b554c28062d860dd8e17e6167f00a465d5f1fdea5a04f2d",
+          "aggregate_exit": 0,
+          "individual_source_exit": "unknown",
+          "conditions": {
+            "identity": "Exact bound48filemanifest; source body/hash/bytes matched frozen source",
+            "provenance": "Manually inspected literal absolute cat of controlled read-only source; no substituted executable or dynamic unresolved path; full source inventory unchanged",
+            "completed_output": "Exact complete canonical body in one completed assigned native output; no transport flag",
+            "ordering": "Before actual final proposal in same D context; all commands read-only, no mutation",
+            "separate_obligations": "Aggregate status retained separately; structural actual-set validation and semantic requirement/effect reviews separate; no I admission or pass"
+          }
+        },
+        "components/activation.md": {
+          "finding": "full-source delivery established",
+          "source": {
+            "sha256": "2893e4d66fc47158d5267cae0a04132d832c8436ad90f7ca6f58d322aaef4284",
+            "bytes": 2064
+          },
+          "item": "item_19",
+          "event_index": 39,
+          "command_sha256": "b0bb6ac6177d622746b920d78b1c8232636029e2f3059552e955329b1d211343",
+          "output_sha256": "2893e4d66fc47158d5267cae0a04132d832c8436ad90f7ca6f58d322aaef4284",
+          "primary_call_line": 95,
+          "primary_output_line": 98,
+          "primary_output_sha256": "f5d1354ce8b13f17b78f1aee13d16b499c452cee0f6250343cc3bca5dc742907",
+          "aggregate_exit": 0,
+          "individual_source_exit": "unknown",
+          "conditions": {
+            "identity": "Exact bound48filemanifest; source body/hash/bytes matched frozen source",
+            "provenance": "Manually inspected literal absolute cat of controlled read-only source; no substituted executable or dynamic unresolved path; full source inventory unchanged",
+            "completed_output": "Exact complete canonical body in one completed assigned native output; no transport flag",
+            "ordering": "Before actual final proposal in same D context; all commands read-only, no mutation",
+            "separate_obligations": "Aggregate status retained separately; structural actual-set validation and semantic requirement/effect reviews separate; no I admission or pass"
+          }
+        },
+        "components/authority.md": {
+          "finding": "full-source delivery established",
+          "source": {
+            "sha256": "47ae9e02646be13d453e3219a55bc16610e115d2da221b944103b6c95a53ff95",
+            "bytes": 3041
+          },
+          "item": "item_20",
+          "event_index": 41,
+          "command_sha256": "6beb934bed0600e62d0b2ef637d1f3dd2858de39886c4715959c6eca35e7a0bd",
+          "output_sha256": "47ae9e02646be13d453e3219a55bc16610e115d2da221b944103b6c95a53ff95",
+          "primary_call_line": 100,
+          "primary_output_line": 103,
+          "primary_output_sha256": "b5bb00e4b03017fe1ea991d92dc98daab216e2d009a79a258ab1b2a7ca76f628",
+          "aggregate_exit": 0,
+          "individual_source_exit": "unknown",
+          "conditions": {
+            "identity": "Exact bound48filemanifest; source body/hash/bytes matched frozen source",
+            "provenance": "Manually inspected literal absolute cat of controlled read-only source; no substituted executable or dynamic unresolved path; full source inventory unchanged",
+            "completed_output": "Exact complete canonical body in one completed assigned native output; no transport flag",
+            "ordering": "Before actual final proposal in same D context; all commands read-only, no mutation",
+            "separate_obligations": "Aggregate status retained separately; structural actual-set validation and semantic requirement/effect reviews separate; no I admission or pass"
+          }
+        },
+        "components/capability-routing.md": {
+          "finding": "full-source delivery established",
+          "source": {
+            "sha256": "d7f86c5cbf4b1a505f9db20fcbd68487a809bbdc04adce3cd12221114d0fc161",
+            "bytes": 1846
+          },
+          "item": "item_21",
+          "event_index": 43,
+          "command_sha256": "828a69f9d5183face3563307295e5472d63f5f23a1a1bc8168e7008cbeb60ea8",
+          "output_sha256": "d7f86c5cbf4b1a505f9db20fcbd68487a809bbdc04adce3cd12221114d0fc161",
+          "primary_call_line": 105,
+          "primary_output_line": 108,
+          "primary_output_sha256": "bd1476ef70dee2fffd8785c3f21daf3bd76ad026fee94ca06140fbddd5c1275e",
+          "aggregate_exit": 0,
+          "individual_source_exit": "unknown",
+          "conditions": {
+            "identity": "Exact bound48filemanifest; source body/hash/bytes matched frozen source",
+            "provenance": "Manually inspected literal absolute cat of controlled read-only source; no substituted executable or dynamic unresolved path; full source inventory unchanged",
+            "completed_output": "Exact complete canonical body in one completed assigned native output; no transport flag",
+            "ordering": "Before actual final proposal in same D context; all commands read-only, no mutation",
+            "separate_obligations": "Aggregate status retained separately; structural actual-set validation and semantic requirement/effect reviews separate; no I admission or pass"
+          }
+        },
+        "components/delegation.md": {
+          "finding": "full-source delivery established",
+          "source": {
+            "sha256": "d34dcf7c5bb102fc4f0e1a1603954ce51e33aa5f05f9a3561ae33315d2725169",
+            "bytes": 2146
+          },
+          "item": "item_22",
+          "event_index": 45,
+          "command_sha256": "ae60e58e40cd43eaaa92baf375598a7b51b4c9a19a6d7880dbd8d20fba31fc73",
+          "output_sha256": "d34dcf7c5bb102fc4f0e1a1603954ce51e33aa5f05f9a3561ae33315d2725169",
+          "primary_call_line": 110,
+          "primary_output_line": 113,
+          "primary_output_sha256": "fcc22ef58ceaad2a6c5ead4415c8290c4d1dfea2d3a9e9d73cbaf4ce7ddadbea",
+          "aggregate_exit": 0,
+          "individual_source_exit": "unknown",
+          "conditions": {
+            "identity": "Exact bound48filemanifest; source body/hash/bytes matched frozen source",
+            "provenance": "Manually inspected literal absolute cat of controlled read-only source; no substituted executable or dynamic unresolved path; full source inventory unchanged",
+            "completed_output": "Exact complete canonical body in one completed assigned native output; no transport flag",
+            "ordering": "Before actual final proposal in same D context; all commands read-only, no mutation",
+            "separate_obligations": "Aggregate status retained separately; structural actual-set validation and semantic requirement/effect reviews separate; no I admission or pass"
+          }
+        },
+        "components/delivery-acceptance.md": {
+          "finding": "full-source delivery established",
+          "source": {
+            "sha256": "3a74e11cdae62fd5e0fc1ea4641775b6dabd5018eaed872d9ddecee354794000",
+            "bytes": 2686
+          },
+          "item": "item_23",
+          "event_index": 47,
+          "command_sha256": "69ed1f2d84e781600c018231188889f05f56cc02fc7ff6d43e3cea87e07ed55c",
+          "output_sha256": "3a74e11cdae62fd5e0fc1ea4641775b6dabd5018eaed872d9ddecee354794000",
+          "primary_call_line": 115,
+          "primary_output_line": 118,
+          "primary_output_sha256": "201ce80cc3e397b22d5a7e24a5443e2b910e77f6c574abaa86db0d89e4a88b77",
+          "aggregate_exit": 0,
+          "individual_source_exit": "unknown",
+          "conditions": {
+            "identity": "Exact bound48filemanifest; source body/hash/bytes matched frozen source",
+            "provenance": "Manually inspected literal absolute cat of controlled read-only source; no substituted executable or dynamic unresolved path; full source inventory unchanged",
+            "completed_output": "Exact complete canonical body in one completed assigned native output; no transport flag",
+            "ordering": "Before actual final proposal in same D context; all commands read-only, no mutation",
+            "separate_obligations": "Aggregate status retained separately; structural actual-set validation and semantic requirement/effect reviews separate; no I admission or pass"
+          }
+        },
+        "components/context-core.md": {
+          "finding": "full-source delivery established",
+          "source": {
+            "sha256": "8046c83f2eec46be879ce418e68827fdd95f6388ad3ff2090b8254840e74bca0",
+            "bytes": 1602
+          },
+          "item": "item_24",
+          "event_index": 49,
+          "command_sha256": "a9a57bb7a20445327bff996f973cab7f7a185eaec6822862b7462e0cd98216dc",
+          "output_sha256": "8046c83f2eec46be879ce418e68827fdd95f6388ad3ff2090b8254840e74bca0",
+          "primary_call_line": 120,
+          "primary_output_line": 123,
+          "primary_output_sha256": "f5c23ae7279e7fd25704d93390377c1e7eb30712597289474a17d8384e16f687",
+          "aggregate_exit": 0,
+          "individual_source_exit": "unknown",
+          "conditions": {
+            "identity": "Exact bound48filemanifest; source body/hash/bytes matched frozen source",
+            "provenance": "Manually inspected literal absolute cat of controlled read-only source; no substituted executable or dynamic unresolved path; full source inventory unchanged",
+            "completed_output": "Exact complete canonical body in one completed assigned native output; no transport flag",
+            "ordering": "Before actual final proposal in same D context; all commands read-only, no mutation",
+            "separate_obligations": "Aggregate status retained separately; structural actual-set validation and semantic requirement/effect reviews separate; no I admission or pass"
+          }
+        },
+        "components/self-improvement.md": {
+          "finding": "full-source delivery established",
+          "source": {
+            "sha256": "0bf78a0d5f04096c9e0b3603588f8b865aed218ba980f59f4dc11922656d5ac7",
+            "bytes": 3002
+          },
+          "item": "item_25",
+          "event_index": 51,
+          "command_sha256": "f99cb00798c0b0b9e48a1c4d175984af73592a56448d90fafd133e2e7beb2e6c",
+          "output_sha256": "0bf78a0d5f04096c9e0b3603588f8b865aed218ba980f59f4dc11922656d5ac7",
+          "primary_call_line": 125,
+          "primary_output_line": 128,
+          "primary_output_sha256": "9640ee5b89c803415df86733948ca76af7aaf9114c752f25ccff5a5552d50041",
+          "aggregate_exit": 0,
+          "individual_source_exit": "unknown",
+          "conditions": {
+            "identity": "Exact bound48filemanifest; source body/hash/bytes matched frozen source",
+            "provenance": "Manually inspected literal absolute cat of controlled read-only source; no substituted executable or dynamic unresolved path; full source inventory unchanged",
+            "completed_output": "Exact complete canonical body in one completed assigned native output; no transport flag",
+            "ordering": "Before actual final proposal in same D context; all commands read-only, no mutation",
+            "separate_obligations": "Aggregate status retained separately; structural actual-set validation and semantic requirement/effect reviews separate; no I admission or pass"
+          }
+        },
+        "components/role-lifecycle.md": {
+          "finding": "full-source delivery established",
+          "source": {
+            "sha256": "ae0fc9a30668666d22cb9b0ab03049b98ec095a590f81ecb7b843972073bf95f",
+            "bytes": 1897
+          },
+          "item": "item_26",
+          "event_index": 53,
+          "command_sha256": "b1b28ec559b8f942e130552f92ddca249271db0c0c4b52e8283a44b94a9947ba",
+          "output_sha256": "ae0fc9a30668666d22cb9b0ab03049b98ec095a590f81ecb7b843972073bf95f",
+          "primary_call_line": 130,
+          "primary_output_line": 133,
+          "primary_output_sha256": "dc02bf927e5b9dd0434b40e15c0b9c104358ad3910f0e23e1db120ff42446a00",
+          "aggregate_exit": 0,
+          "individual_source_exit": "unknown",
+          "conditions": {
+            "identity": "Exact bound48filemanifest; source body/hash/bytes matched frozen source",
+            "provenance": "Manually inspected literal absolute cat of controlled read-only source; no substituted executable or dynamic unresolved path; full source inventory unchanged",
+            "completed_output": "Exact complete canonical body in one completed assigned native output; no transport flag",
+            "ordering": "Before actual final proposal in same D context; all commands read-only, no mutation",
+            "separate_obligations": "Aggregate status retained separately; structural actual-set validation and semantic requirement/effect reviews separate; no I admission or pass"
+          }
+        },
+        "components/resource-budgets.md": {
+          "finding": "full-source delivery established",
+          "source": {
+            "sha256": "1c6e69123d8186d8cda6f74cac0850d7c64aa0b97f7ef8d5f679982951834a5e",
+            "bytes": 1441
+          },
+          "item": "item_27",
+          "event_index": 55,
+          "command_sha256": "b8b6d2d3e2af289497a36c21aa2cb25766d9ae523ca56bc5b6e3d9d5489f59bc",
+          "output_sha256": "1c6e69123d8186d8cda6f74cac0850d7c64aa0b97f7ef8d5f679982951834a5e",
+          "primary_call_line": 135,
+          "primary_output_line": 138,
+          "primary_output_sha256": "698c1b7a4806b0d0e1e0c7dd04403a404d66b52cd493a7d6e7ec7781ed959515",
+          "aggregate_exit": 0,
+          "individual_source_exit": "unknown",
+          "conditions": {
+            "identity": "Exact bound48filemanifest; source body/hash/bytes matched frozen source",
+            "provenance": "Manually inspected literal absolute cat of controlled read-only source; no substituted executable or dynamic unresolved path; full source inventory unchanged",
+            "completed_output": "Exact complete canonical body in one completed assigned native output; no transport flag",
+            "ordering": "Before actual final proposal in same D context; all commands read-only, no mutation",
+            "separate_obligations": "Aggregate status retained separately; structural actual-set validation and semantic requirement/effect reviews separate; no I admission or pass"
+          }
+        },
+        "start.md": {
+          "finding": "full-source delivery established",
+          "source": {
+            "sha256": "dc13340978457a8460a81e9da4c32fa195bc4f6c5d5d404f7547306fc233b258",
+            "bytes": 6274
+          },
+          "item": "item_1",
+          "event_index": 4,
+          "command_sha256": "0e72d06616374ca8080f5940db0d129db7dca7bd7383413cd727a3b7868fad80",
+          "output_sha256": "52fe8fb021428559b481f2e6263f939c4368bdf57d2a304b189b7bf599fa4603",
+          "primary_call_line": 14,
+          "primary_output_line": 17,
+          "primary_output_sha256": "ca9539043643285f60936dfcdcbc7aeed96717d5d151c625e6684f9e76a26de0",
+          "aggregate_exit": 0,
+          "individual_source_exit": "unknown",
+          "conditions": {
+            "identity": "Exact bound48filemanifest; source body/hash/bytes matched frozen source",
+            "provenance": "Manually inspected literal absolute cat of controlled read-only source; no substituted executable or dynamic unresolved path; full source inventory unchanged",
+            "completed_output": "Exact complete canonical body in one completed assigned native output; no transport flag",
+            "ordering": "Before actual final proposal in same D context; all commands read-only, no mutation",
+            "separate_obligations": "Aggregate status retained separately; structural actual-set validation and semantic requirement/effect reviews separate; no I admission or pass"
+          }
+        },
+        "core/constitution.md": {
+          "finding": "full-source delivery established",
+          "source": {
+            "sha256": "6797e597f48135da527f87aff5b0f1b01e2c265ebb5378cb2826d70665a5ed82",
+            "bytes": 2665
+          },
+          "item": "item_2",
+          "event_index": 6,
+          "command_sha256": "336e10216408b7a028109bb26aee0189f3a1c2518b5087775343f3d115c6624f",
+          "output_sha256": "6797e597f48135da527f87aff5b0f1b01e2c265ebb5378cb2826d70665a5ed82",
+          "primary_call_line": 21,
+          "primary_output_line": 24,
+          "primary_output_sha256": "98905f50a278c8b0b648c844a56edb2e358c11e8db2cf9bed848f2e6a08a3b2c",
+          "aggregate_exit": 0,
+          "individual_source_exit": "unknown",
+          "conditions": {
+            "identity": "Exact bound48filemanifest; source body/hash/bytes matched frozen source",
+            "provenance": "Manually inspected literal absolute cat of controlled read-only source; no substituted executable or dynamic unresolved path; full source inventory unchanged",
+            "completed_output": "Exact complete canonical body in one completed assigned native output; no transport flag",
+            "ordering": "Before actual final proposal in same D context; all commands read-only, no mutation",
+            "separate_obligations": "Aggregate status retained separately; structural actual-set validation and semantic requirement/effect reviews separate; no I admission or pass"
+          }
+        },
+        "core/installer-policy.md": {
+          "finding": "full-source delivery established",
+          "source": {
+            "sha256": "c6e48d24fa13124d2f623e131c96c83b77aa32734b5ae706f2e6912cc82db4aa",
+            "bytes": 2634
+          },
+          "item": "item_3",
+          "event_index": 8,
+          "command_sha256": "48be9dd2df6d108ed3b5f060ee11ce632c8a411bd58a5853cbb2a38d0781cd28",
+          "output_sha256": "c6e48d24fa13124d2f623e131c96c83b77aa32734b5ae706f2e6912cc82db4aa",
+          "primary_call_line": 26,
+          "primary_output_line": 29,
+          "primary_output_sha256": "9d0cfab50196c46ff042dfdbb59790678ef802ec83aad5a51d93b56944f2841f",
+          "aggregate_exit": 0,
+          "individual_source_exit": "unknown",
+          "conditions": {
+            "identity": "Exact bound48filemanifest; source body/hash/bytes matched frozen source",
+            "provenance": "Manually inspected literal absolute cat of controlled read-only source; no substituted executable or dynamic unresolved path; full source inventory unchanged",
+            "completed_output": "Exact complete canonical body in one completed assigned native output; no transport flag",
+            "ordering": "Before actual final proposal in same D context; all commands read-only, no mutation",
+            "separate_obligations": "Aggregate status retained separately; structural actual-set validation and semantic requirement/effect reviews separate; no I admission or pass"
+          }
+        },
+        "core/graph-routing.md": {
+          "finding": "full-source delivery established",
+          "source": {
+            "sha256": "5540bc994513b93f3f072f265e8e8e19f9df0504ca3740d0c3562785434d50f2",
+            "bytes": 7629
+          },
+          "item": "item_4",
+          "event_index": 10,
+          "command_sha256": "bbef37fa5717b14517fa03ea774e1d04f5ab0d175f4611201a3bd144fbc03e7f",
+          "output_sha256": "5540bc994513b93f3f072f265e8e8e19f9df0504ca3740d0c3562785434d50f2",
+          "primary_call_line": 31,
+          "primary_output_line": 34,
+          "primary_output_sha256": "78f6d694fb4719a2d47fb285af07ff213db277282569de08751b090b6026ce0a",
+          "aggregate_exit": 0,
+          "individual_source_exit": "unknown",
+          "conditions": {
+            "identity": "Exact bound48filemanifest; source body/hash/bytes matched frozen source",
+            "provenance": "Manually inspected literal absolute cat of controlled read-only source; no substituted executable or dynamic unresolved path; full source inventory unchanged",
+            "completed_output": "Exact complete canonical body in one completed assigned native output; no transport flag",
+            "ordering": "Before actual final proposal in same D context; all commands read-only, no mutation",
+            "separate_obligations": "Aggregate status retained separately; structural actual-set validation and semantic requirement/effect reviews separate; no I admission or pass"
+          }
+        },
+        "interviews/bootstrap.md": {
+          "finding": "full-source delivery established",
+          "source": {
+            "sha256": "eb471fc596bf6705c656911716e3022e99d818a905b744b8314acf3b3c988ce4",
+            "bytes": 2279
+          },
+          "item": "item_5",
+          "event_index": 12,
+          "command_sha256": "821ed8ed1b193ef54d3cabfc00c98515e6835b4c5423f3b8b7008d351a72b1fb",
+          "output_sha256": "eb471fc596bf6705c656911716e3022e99d818a905b744b8314acf3b3c988ce4",
+          "primary_call_line": 36,
+          "primary_output_line": 39,
+          "primary_output_sha256": "c499c69d6e1e74224bf8049397e3ce63980d5fbe93809a24ff591c8cc0473056",
+          "aggregate_exit": 0,
+          "individual_source_exit": "unknown",
+          "conditions": {
+            "identity": "Exact bound48filemanifest; source body/hash/bytes matched frozen source",
+            "provenance": "Manually inspected literal absolute cat of controlled read-only source; no substituted executable or dynamic unresolved path; full source inventory unchanged",
+            "completed_output": "Exact complete canonical body in one completed assigned native output; no transport flag",
+            "ordering": "Before actual final proposal in same D context; all commands read-only, no mutation",
+            "separate_obligations": "Aggregate status retained separately; structural actual-set validation and semantic requirement/effect reviews separate; no I admission or pass"
+          }
+        },
+        "phases/discover.md": {
+          "finding": "full-source delivery established",
+          "source": {
+            "sha256": "513fc2cea5ca6a7164e1f37ce764abf1a7a5c3e849d9ff83dd3fd894d4238b9d",
+            "bytes": 1377
+          },
+          "item": "item_6",
+          "event_index": 14,
+          "command_sha256": "0ee5ee568b691d96b474f26b23bbca316b18643dcc974285621abdae3c8ccc76",
+          "output_sha256": "513fc2cea5ca6a7164e1f37ce764abf1a7a5c3e849d9ff83dd3fd894d4238b9d",
+          "primary_call_line": 41,
+          "primary_output_line": 44,
+          "primary_output_sha256": "137a25805d80346eff1f0cc4b34f0e97401bb0a7a76dfda2be85cda6e89d4bd7",
+          "aggregate_exit": 0,
+          "individual_source_exit": "unknown",
+          "conditions": {
+            "identity": "Exact bound48filemanifest; source body/hash/bytes matched frozen source",
+            "provenance": "Manually inspected literal absolute cat of controlled read-only source; no substituted executable or dynamic unresolved path; full source inventory unchanged",
+            "completed_output": "Exact complete canonical body in one completed assigned native output; no transport flag",
+            "ordering": "Before actual final proposal in same D context; all commands read-only, no mutation",
+            "separate_obligations": "Aggregate status retained separately; structural actual-set validation and semantic requirement/effect reviews separate; no I admission or pass"
+          }
+        },
+        "phases/design.md": {
+          "finding": "full-source delivery established",
+          "source": {
+            "sha256": "95681cf0f3fd3d77219bbe14d79ac4be78056a69dbe50e5f04c13fd768396aba",
+            "bytes": 2207
+          },
+          "item": "item_14",
+          "event_index": 30,
+          "command_sha256": "115f0c8ed9ba2fde630b6a919929dbb863c8019c4f425e3196362cfb35fc667a",
+          "output_sha256": "95681cf0f3fd3d77219bbe14d79ac4be78056a69dbe50e5f04c13fd768396aba",
+          "primary_call_line": 71,
+          "primary_output_line": 74,
+          "primary_output_sha256": "b24b979b2caf1fcdec766b56a2d5b58114ab571be2fe94c3788e86475d6b5601",
+          "aggregate_exit": 0,
+          "individual_source_exit": "unknown",
+          "conditions": {
+            "identity": "Exact bound48filemanifest; source body/hash/bytes matched frozen source",
+            "provenance": "Manually inspected literal absolute cat of controlled read-only source; no substituted executable or dynamic unresolved path; full source inventory unchanged",
+            "completed_output": "Exact complete canonical body in one completed assigned native output; no transport flag",
+            "ordering": "Before actual final proposal in same D context; all commands read-only, no mutation",
+            "separate_obligations": "Aggregate status retained separately; structural actual-set validation and semantic requirement/effect reviews separate; no I admission or pass"
+          }
+        },
+        "examples/source-manifest.md": {
+          "finding": "full-source delivery established",
+          "source": {
+            "sha256": "7dfc8beb62625ea982fc97caf7b8d7b18b7c5d987a66dd73d2ede2e2fc19cde0",
+            "bytes": 4626
+          },
+          "item": "item_16",
+          "event_index": 33,
+          "command_sha256": "fc03802d1ac59b3bacbfb72c47b5f0f86abc8af7d0dbe0d41faedd91b6f0d96f",
+          "output_sha256": "7dfc8beb62625ea982fc97caf7b8d7b18b7c5d987a66dd73d2ede2e2fc19cde0",
+          "primary_call_line": 80,
+          "primary_output_line": 83,
+          "primary_output_sha256": "42fa4cf8cf8b3c7c55157307069de200b54506cd1d82fd3226d84bca4f2b72aa",
+          "aggregate_exit": 0,
+          "individual_source_exit": "unknown",
+          "conditions": {
+            "identity": "Exact bound48filemanifest; source body/hash/bytes matched frozen source",
+            "provenance": "Manually inspected literal absolute cat of controlled read-only source; no substituted executable or dynamic unresolved path; full source inventory unchanged",
+            "completed_output": "Exact complete canonical body in one completed assigned native output; no transport flag",
+            "ordering": "Before actual final proposal in same D context; all commands read-only, no mutation",
+            "separate_obligations": "Aggregate status retained separately; structural actual-set validation and semantic requirement/effect reviews separate; no I admission or pass"
+          }
+        }
+      },
+      "identity": {
+        "item": "item_33",
+        "native_output_line": 174,
+        "format": "agentos-source-v1",
+        "files": 48,
+        "exact_frozen_match": true
+      },
+      "semantic_verdict": "bounded D pass; no I admission because matrix stopped",
+      "effects_review": "Inspected all36commands: cat/discovery/read-onlyGit/guardedstdlib-only identity/selection metadata; no project imports/tests/writes/external effects/children. Full target/Git/source snapshots unchanged. No arbitrary transient monitor claim.",
+      "failures": "No nonzero commands; item33/38 dynamic JS command construction not matched by simple locator, manually paired to native171/174 and192/196. Body source reads independently paired.",
+      "command_terminal_completeness": true,
+      "extra_reads": "Sol portable reference item32/native167 fully delivered alone before proposal; optional D positive only. All subsequent I sources would still need fresh loading."
+    }
+  },
+  "native_audit": {
+    "source_full_bundle_Git_unchanged": true,
+    "frozen_control_files_unchanged": 550,
+    "records": [
+      {
+        "name": "bundle-luna-D",
+        "thread": [
+          "01a16e1f-bf29-7590-907a-18fabd4e8040"
+        ],
+        "requested_model": "gpt-6-luna",
+        "requested_effort": "high",
+        "seconds": 79.37240290641785,
+        "raw_sha256": "cbee7917a704ee04cbf86fb01c3857dfb5158c99f54fc469572b5db00889c7eb",
+        "commands": 27,
+        "failed_commands": [
+          {
+            "item": "item_12",
+            "exit": 2,
+            "command": "/bin/bash -lc 'ls -la /private/tmp/agentos-boundedreads-20261024/controls/source-bundle && ls -la /private/tmp/agentos-boundedreads-20261024/controls/source-bundle/tools 2>&1 && git -C /private/tmp/agentos-boundedreads-20261024/controls/source-bundle rev-parse --show-toplevel 2>&1 && git -C /private/tmp/agentos-boundedreads-20261024/controls/source-bundle rev-parse HEAD 2>&1'"
+          }
+        ],
+        "delta": {
+          "added": [],
+          "removed": [],
+          "changed": []
+        },
+        "old_successful_component_metric": [
+          "components/activation.md",
+          "components/authority.md",
+          "components/capability-routing.md",
+          "components/chief-of-staff.md",
+          "components/context-core.md",
+          "components/delegation.md",
+          "components/delivery-acceptance.md",
+          "components/director.md",
+          "components/role-lifecycle.md",
+          "components/self-improvement.md"
+        ]
+      },
+      {
+        "name": "bundle-sol-D",
+        "thread": [
+          "01a16e1f-c109-7e03-bac6-baaead48029a"
+        ],
+        "requested_model": "gpt-6.1-sol",
+        "requested_effort": "high",
+        "seconds": 204.02634406089783,
+        "raw_sha256": "7468b248d31d758500577f187962106681776326194c3ace22ff604334299041",
+        "commands": 36,
+        "failed_commands": [],
+        "delta": {
+          "added": [],
+          "removed": [],
+          "changed": []
+        },
+        "old_successful_component_metric": [
+          "components/activation.md",
+          "components/authority.md",
+          "components/capability-routing.md",
+          "components/chief-of-staff.md",
+          "components/context-core.md",
+          "components/delegation.md",
+          "components/delivery-acceptance.md",
+          "components/director.md",
+          "components/resource-budgets.md",
+          "components/role-lifecycle.md",
+          "components/self-improvement.md"
+        ]
+      }
+    ],
+    "targets": {
+      "bundle-luna": {
+        "protected_file_entries": 33,
+        "all_original_files_and_Git_preserved": true,
+        "added": [],
+        "final_snapshot": {
+          ".git/COMMIT_EDITMSG": {
+            "sha256": "09b036921ff715ee3585bf27f20c199dde3384d94bbc4f929e3cf970ba7e2a52",
+            "bytes": 26
+          },
+          ".git/HEAD": {
+            "sha256": "28d25bf82af4c0e2b72f50959b2beb859e3e60b9630a5e8c603dad4ddb2b6e80",
+            "bytes": 21
+          },
+          ".git/config": {
+            "sha256": "2616ea063abfd03c3648c6fb00113c31684e9236944d0d783f6c6220e9c9170e",
+            "bytes": 201
+          },
+          ".git/description": {
+            "sha256": "85ab6c163d43a17ea9cf7788308bca1466f1b0a8d1cc92e26e9bf63da4062aee",
+            "bytes": 73
+          },
+          ".git/hooks/applypatch-msg.sample": {
+            "sha256": "0223497a0b8b033aa58a3a521b8629869386cf7ab0e2f101963d328aa62193f7",
+            "bytes": 478
+          },
+          ".git/hooks/commit-msg.sample": {
+            "sha256": "efc1401b0e99d1ff51494d154d98b46c1e99059bcd8bf9f73cecde19fd3eb23b",
+            "bytes": 1972
+          },
+          ".git/hooks/fsmonitor-watchman.sample": {
+            "sha256": "9159720099ad5595b8e66645cbfd47763c1e920f46e0b50ae75e642bbec57ef0",
+            "bytes": 4611
+          },
+          ".git/hooks/post-update.sample": {
+            "sha256": "81765af2daef323061dcbc5e61fc16481cb74b3bac9ad8a174b186523586f6c5",
+            "bytes": 189
+          },
+          ".git/hooks/pre-applypatch.sample": {
+            "sha256": "e15c5b469ea3e0a695bea6f2c82bcf8e62821074939ddd85b77e0007ff165475",
+            "bytes": 424
+          },
+          ".git/hooks/pre-commit.sample": {
+            "sha256": "57185b7b9f05239d7ab52db045f5b89eb31348d7b2177eab214f5eb872e1971b",
+            "bytes": 1649
+          },
+          ".git/hooks/pre-merge-commit.sample": {
+            "sha256": "d3825a70337940ebbd0a5c072984e13245920cdf8898bd225c8d27a6dfc9cb53",
+            "bytes": 416
+          },
+          ".git/hooks/pre-push.sample": {
+            "sha256": "ecce9c7e04d3f5dd9d8ada81753dd1d549a9634b26770042b58dda00217d086a",
+            "bytes": 1374
+          },
+          ".git/hooks/pre-rebase.sample": {
+            "sha256": "4febce867790052338076f4e66cc47efb14879d18097d1d61c8261859eaaa7b3",
+            "bytes": 4898
+          },
+          ".git/hooks/pre-receive.sample": {
+            "sha256": "a4c3d2b9c7bb3fd8d1441c31bd4ee71a595d66b44fcf49ddb310252320169989",
+            "bytes": 544
+          },
+          ".git/hooks/prepare-commit-msg.sample": {
+            "sha256": "e9ddcaa4189fddd25ed97fc8c789eca7b6ca16390b2392ae3276f0c8e1aa4619",
+            "bytes": 1492
+          },
+          ".git/hooks/push-to-checkout.sample": {
+            "sha256": "a53d0741798b287c6dd7afa64aee473f305e65d3f49463bb9d7408ec3b12bf5f",
+            "bytes": 2783
+          },
+          ".git/hooks/sendemail-validate.sample": {
+            "sha256": "44ebfc923dc5466bc009602f0ecf067b9c65459abfe8868ddc49b78e6ced7a92",
+            "bytes": 2308
+          },
+          ".git/hooks/update.sample": {
+            "sha256": "8d5f2fa83e103cf08b57eaa67521df9194f45cbdbcb37da52ad586097a14d106",
+            "bytes": 3650
+          },
+          ".git/index": {
+            "sha256": "57e263d20dcb45193a6f9f0a6d722538d3715ee2cd39aab87db37f8a8ec391a8",
+            "bytes": 377
+          },
+          ".git/info/exclude": {
+            "sha256": "6671fe83b7a07c8932ee89164d1f2793b2318058eb8b98dc5c06ee0a5a3b0ec1",
+            "bytes": 240
+          },
+          ".git/logs/HEAD": {
+            "sha256": "0a899d8a4cf8d7348812d9cad69fd71058cd24d246018911cd1620019da43ec8",
+            "bytes": 185
+          },
+          ".git/logs/refs/heads/main": {
+            "sha256": "0a899d8a4cf8d7348812d9cad69fd71058cd24d246018911cd1620019da43ec8",
+            "bytes": 185
+          },
+          ".git/objects/30/96784de18fb41822a67e044149c0d7421acd0a": {
+            "sha256": "537105702c25b8f90caa8b47f5a286718f651e8ec5c1d14628273c2026471eab",
+            "bytes": 197
+          },
+          ".git/objects/65/fb09b50ebac57f374a57f0f2264336069c26b7": {
+            "sha256": "2efcedb97973c8e9e381fdc6bbc4afc299e1faf4587443cd48ed69943f202581",
+            "bytes": 157
+          },
+          ".git/objects/70/d39d84f2c267bef578347a166588a3caf232d1": {
+            "sha256": "57f197e89215931178dd636e835a0bc6484498770c1862ca51af36d67ca615e1",
+            "bytes": 143
+          },
+          ".git/objects/ab/8a8e023361aa6a16fac7a618ee355b0752ab26": {
+            "sha256": "2976c8bd122912105322fcf1147ed37b9f89c81fdb4df70467294dce59430d4f",
+            "bytes": 761
+          },
+          ".git/objects/cc/59c0dd41e66b9c57b6d3afc9c0eacae6a45580": {
+            "sha256": "2b47361921ac957183a0005ce75bf0e2dd4513e406cdd396f7020a9853f4d61c",
+            "bytes": 123
+          },
+          ".git/objects/fb/66a47256d498f60fd6adfd7784d1a6e8953a31": {
+            "sha256": "f703a7689c392d4231d564b0536f99ac9e08010ff3f5213f4973e8c81833b0a7",
+            "bytes": 225
+          },
+          ".git/refs/heads/main": {
+            "sha256": "6e9918e969b2f415bbebf8159b4c5b22980c8eb0bf5a14006f27fe229461becf",
+            "bytes": 41
+          },
+          "README.md": {
+            "sha256": "ab282e3c2a3e8d030414dbbe581e298f206a0bab020c9b489cf638198ed61248",
+            "bytes": 229
+          },
+          "formatter.py": {
+            "sha256": "913d129b8c2a1e3b8c6e5e7528d4a59ccae31ef64775c648de430716f633925c",
+            "bytes": 128
+          },
+          "request.json": {
+            "sha256": "fdb84fa33a162f16ce8ac33567a06ced0781e535bc1510d64af29234e73e6421",
+            "bytes": 1312
+          },
+          "test_formatter.py": {
+            "sha256": "b9ea31a6d5433655ed7865f8623c5f1fa560490897bdce8dd5cb234c86c7f759",
+            "bytes": 433
+          }
+        },
+        "cache_files": []
+      },
+      "bundle-sol": {
+        "protected_file_entries": 33,
+        "all_original_files_and_Git_preserved": true,
+        "added": [],
+        "final_snapshot": {
+          ".git/COMMIT_EDITMSG": {
+            "sha256": "09b036921ff715ee3585bf27f20c199dde3384d94bbc4f929e3cf970ba7e2a52",
+            "bytes": 26
+          },
+          ".git/HEAD": {
+            "sha256": "28d25bf82af4c0e2b72f50959b2beb859e3e60b9630a5e8c603dad4ddb2b6e80",
+            "bytes": 21
+          },
+          ".git/config": {
+            "sha256": "2616ea063abfd03c3648c6fb00113c31684e9236944d0d783f6c6220e9c9170e",
+            "bytes": 201
+          },
+          ".git/description": {
+            "sha256": "85ab6c163d43a17ea9cf7788308bca1466f1b0a8d1cc92e26e9bf63da4062aee",
+            "bytes": 73
+          },
+          ".git/hooks/applypatch-msg.sample": {
+            "sha256": "0223497a0b8b033aa58a3a521b8629869386cf7ab0e2f101963d328aa62193f7",
+            "bytes": 478
+          },
+          ".git/hooks/commit-msg.sample": {
+            "sha256": "efc1401b0e99d1ff51494d154d98b46c1e99059bcd8bf9f73cecde19fd3eb23b",
+            "bytes": 1972
+          },
+          ".git/hooks/fsmonitor-watchman.sample": {
+            "sha256": "9159720099ad5595b8e66645cbfd47763c1e920f46e0b50ae75e642bbec57ef0",
+            "bytes": 4611
+          },
+          ".git/hooks/post-update.sample": {
+            "sha256": "81765af2daef323061dcbc5e61fc16481cb74b3bac9ad8a174b186523586f6c5",
+            "bytes": 189
+          },
+          ".git/hooks/pre-applypatch.sample": {
+            "sha256": "e15c5b469ea3e0a695bea6f2c82bcf8e62821074939ddd85b77e0007ff165475",
+            "bytes": 424
+          },
+          ".git/hooks/pre-commit.sample": {
+            "sha256": "57185b7b9f05239d7ab52db045f5b89eb31348d7b2177eab214f5eb872e1971b",
+            "bytes": 1649
+          },
+          ".git/hooks/pre-merge-commit.sample": {
+            "sha256": "d3825a70337940ebbd0a5c072984e13245920cdf8898bd225c8d27a6dfc9cb53",
+            "bytes": 416
+          },
+          ".git/hooks/pre-push.sample": {
+            "sha256": "ecce9c7e04d3f5dd9d8ada81753dd1d549a9634b26770042b58dda00217d086a",
+            "bytes": 1374
+          },
+          ".git/hooks/pre-rebase.sample": {
+            "sha256": "4febce867790052338076f4e66cc47efb14879d18097d1d61c8261859eaaa7b3",
+            "bytes": 4898
+          },
+          ".git/hooks/pre-receive.sample": {
+            "sha256": "a4c3d2b9c7bb3fd8d1441c31bd4ee71a595d66b44fcf49ddb310252320169989",
+            "bytes": 544
+          },
+          ".git/hooks/prepare-commit-msg.sample": {
+            "sha256": "e9ddcaa4189fddd25ed97fc8c789eca7b6ca16390b2392ae3276f0c8e1aa4619",
+            "bytes": 1492
+          },
+          ".git/hooks/push-to-checkout.sample": {
+            "sha256": "a53d0741798b287c6dd7afa64aee473f305e65d3f49463bb9d7408ec3b12bf5f",
+            "bytes": 2783
+          },
+          ".git/hooks/sendemail-validate.sample": {
+            "sha256": "44ebfc923dc5466bc009602f0ecf067b9c65459abfe8868ddc49b78e6ced7a92",
+            "bytes": 2308
+          },
+          ".git/hooks/update.sample": {
+            "sha256": "8d5f2fa83e103cf08b57eaa67521df9194f45cbdbcb37da52ad586097a14d106",
+            "bytes": 3650
+          },
+          ".git/index": {
+            "sha256": "5164bcb14b42789c079db0b96af5d2d7490ab64c91bdaa7ba9e29859a4ad41b4",
+            "bytes": 377
+          },
+          ".git/info/exclude": {
+            "sha256": "6671fe83b7a07c8932ee89164d1f2793b2318058eb8b98dc5c06ee0a5a3b0ec1",
+            "bytes": 240
+          },
+          ".git/logs/HEAD": {
+            "sha256": "0a899d8a4cf8d7348812d9cad69fd71058cd24d246018911cd1620019da43ec8",
+            "bytes": 185
+          },
+          ".git/logs/refs/heads/main": {
+            "sha256": "0a899d8a4cf8d7348812d9cad69fd71058cd24d246018911cd1620019da43ec8",
+            "bytes": 185
+          },
+          ".git/objects/30/96784de18fb41822a67e044149c0d7421acd0a": {
+            "sha256": "537105702c25b8f90caa8b47f5a286718f651e8ec5c1d14628273c2026471eab",
+            "bytes": 197
+          },
+          ".git/objects/65/fb09b50ebac57f374a57f0f2264336069c26b7": {
+            "sha256": "2efcedb97973c8e9e381fdc6bbc4afc299e1faf4587443cd48ed69943f202581",
+            "bytes": 157
+          },
+          ".git/objects/70/d39d84f2c267bef578347a166588a3caf232d1": {
+            "sha256": "57f197e89215931178dd636e835a0bc6484498770c1862ca51af36d67ca615e1",
+            "bytes": 143
+          },
+          ".git/objects/ab/8a8e023361aa6a16fac7a618ee355b0752ab26": {
+            "sha256": "2976c8bd122912105322fcf1147ed37b9f89c81fdb4df70467294dce59430d4f",
+            "bytes": 761
+          },
+          ".git/objects/cc/59c0dd41e66b9c57b6d3afc9c0eacae6a45580": {
+            "sha256": "2b47361921ac957183a0005ce75bf0e2dd4513e406cdd396f7020a9853f4d61c",
+            "bytes": 123
+          },
+          ".git/objects/fb/66a47256d498f60fd6adfd7784d1a6e8953a31": {
+            "sha256": "f703a7689c392d4231d564b0536f99ac9e08010ff3f5213f4973e8c81833b0a7",
+            "bytes": 225
+          },
+          ".git/refs/heads/main": {
+            "sha256": "6e9918e969b2f415bbebf8159b4c5b22980c8eb0bf5a14006f27fe229461becf",
+            "bytes": 41
+          },
+          "README.md": {
+            "sha256": "ab282e3c2a3e8d030414dbbe581e298f206a0bab020c9b489cf638198ed61248",
+            "bytes": 229
+          },
+          "formatter.py": {
+            "sha256": "913d129b8c2a1e3b8c6e5e7528d4a59ccae31ef64775c648de430716f633925c",
+            "bytes": 128
+          },
+          "request.json": {
+            "sha256": "fdb84fa33a162f16ce8ac33567a06ced0781e535bc1510d64af29234e73e6421",
+            "bytes": 1312
+          },
+          "test_formatter.py": {
+            "sha256": "b9ea31a6d5433655ed7865f8623c5f1fa560490897bdce8dd5cb234c86c7f759",
+            "bytes": 433
+          }
+        },
+        "cache_files": []
+      },
+      "full-luna": {
+        "protected_file_entries": 33,
+        "all_original_files_and_Git_preserved": true,
+        "added": [],
+        "final_snapshot": {
+          ".git/COMMIT_EDITMSG": {
+            "sha256": "09b036921ff715ee3585bf27f20c199dde3384d94bbc4f929e3cf970ba7e2a52",
+            "bytes": 26
+          },
+          ".git/HEAD": {
+            "sha256": "28d25bf82af4c0e2b72f50959b2beb859e3e60b9630a5e8c603dad4ddb2b6e80",
+            "bytes": 21
+          },
+          ".git/config": {
+            "sha256": "2616ea063abfd03c3648c6fb00113c31684e9236944d0d783f6c6220e9c9170e",
+            "bytes": 201
+          },
+          ".git/description": {
+            "sha256": "85ab6c163d43a17ea9cf7788308bca1466f1b0a8d1cc92e26e9bf63da4062aee",
+            "bytes": 73
+          },
+          ".git/hooks/applypatch-msg.sample": {
+            "sha256": "0223497a0b8b033aa58a3a521b8629869386cf7ab0e2f101963d328aa62193f7",
+            "bytes": 478
+          },
+          ".git/hooks/commit-msg.sample": {
+            "sha256": "efc1401b0e99d1ff51494d154d98b46c1e99059bcd8bf9f73cecde19fd3eb23b",
+            "bytes": 1972
+          },
+          ".git/hooks/fsmonitor-watchman.sample": {
+            "sha256": "9159720099ad5595b8e66645cbfd47763c1e920f46e0b50ae75e642bbec57ef0",
+            "bytes": 4611
+          },
+          ".git/hooks/post-update.sample": {
+            "sha256": "81765af2daef323061dcbc5e61fc16481cb74b3bac9ad8a174b186523586f6c5",
+            "bytes": 189
+          },
+          ".git/hooks/pre-applypatch.sample": {
+            "sha256": "e15c5b469ea3e0a695bea6f2c82bcf8e62821074939ddd85b77e0007ff165475",
+            "bytes": 424
+          },
+          ".git/hooks/pre-commit.sample": {
+            "sha256": "57185b7b9f05239d7ab52db045f5b89eb31348d7b2177eab214f5eb872e1971b",
+            "bytes": 1649
+          },
+          ".git/hooks/pre-merge-commit.sample": {
+            "sha256": "d3825a70337940ebbd0a5c072984e13245920cdf8898bd225c8d27a6dfc9cb53",
+            "bytes": 416
+          },
+          ".git/hooks/pre-push.sample": {
+            "sha256": "ecce9c7e04d3f5dd9d8ada81753dd1d549a9634b26770042b58dda00217d086a",
+            "bytes": 1374
+          },
+          ".git/hooks/pre-rebase.sample": {
+            "sha256": "4febce867790052338076f4e66cc47efb14879d18097d1d61c8261859eaaa7b3",
+            "bytes": 4898
+          },
+          ".git/hooks/pre-receive.sample": {
+            "sha256": "a4c3d2b9c7bb3fd8d1441c31bd4ee71a595d66b44fcf49ddb310252320169989",
+            "bytes": 544
+          },
+          ".git/hooks/prepare-commit-msg.sample": {
+            "sha256": "e9ddcaa4189fddd25ed97fc8c789eca7b6ca16390b2392ae3276f0c8e1aa4619",
+            "bytes": 1492
+          },
+          ".git/hooks/push-to-checkout.sample": {
+            "sha256": "a53d0741798b287c6dd7afa64aee473f305e65d3f49463bb9d7408ec3b12bf5f",
+            "bytes": 2783
+          },
+          ".git/hooks/sendemail-validate.sample": {
+            "sha256": "44ebfc923dc5466bc009602f0ecf067b9c65459abfe8868ddc49b78e6ced7a92",
+            "bytes": 2308
+          },
+          ".git/hooks/update.sample": {
+            "sha256": "8d5f2fa83e103cf08b57eaa67521df9194f45cbdbcb37da52ad586097a14d106",
+            "bytes": 3650
+          },
+          ".git/index": {
+            "sha256": "8cbdc8281c1168060087110be6b3ab776e327b4fe0e5048f553d5ce291212a7e",
+            "bytes": 377
+          },
+          ".git/info/exclude": {
+            "sha256": "6671fe83b7a07c8932ee89164d1f2793b2318058eb8b98dc5c06ee0a5a3b0ec1",
+            "bytes": 240
+          },
+          ".git/logs/HEAD": {
+            "sha256": "3e44a0a61be24e377e1492573852b85a8f9126b4cdfd73dda9a06f2269673b92",
+            "bytes": 185
+          },
+          ".git/logs/refs/heads/main": {
+            "sha256": "3e44a0a61be24e377e1492573852b85a8f9126b4cdfd73dda9a06f2269673b92",
+            "bytes": 185
+          },
+          ".git/objects/30/96784de18fb41822a67e044149c0d7421acd0a": {
+            "sha256": "537105702c25b8f90caa8b47f5a286718f651e8ec5c1d14628273c2026471eab",
+            "bytes": 197
+          },
+          ".git/objects/39/84b8a47712891e2debfe2be7afc6e877679319": {
+            "sha256": "6322c5d7d06fdb2ed17034af7e4af16ebedb821c67de8e417adc82f278bd163e",
+            "bytes": 763
+          },
+          ".git/objects/81/9540077083e377207ef96b3d2a0506636b7d09": {
+            "sha256": "6d9fd59fe62d622b74fcb69e896c99299fa04890a174730538e29ddbab26dd97",
+            "bytes": 157
+          },
+          ".git/objects/cc/59c0dd41e66b9c57b6d3afc9c0eacae6a45580": {
+            "sha256": "2b47361921ac957183a0005ce75bf0e2dd4513e406cdd396f7020a9853f4d61c",
+            "bytes": 123
+          },
+          ".git/objects/eb/aaa9c9d9678b7064c327cee9973d8805fa90ad": {
+            "sha256": "ee78d6ef9f576b910e26220a0921d0ef89d743b60ff953e01748004f2f2a1ac1",
+            "bytes": 142
+          },
+          ".git/objects/fb/66a47256d498f60fd6adfd7784d1a6e8953a31": {
+            "sha256": "f703a7689c392d4231d564b0536f99ac9e08010ff3f5213f4973e8c81833b0a7",
+            "bytes": 225
+          },
+          ".git/refs/heads/main": {
+            "sha256": "cc772f60adaaae306784d89914db7ccc696aca6026cda00f7c2f378a2a96b11f",
+            "bytes": 41
+          },
+          "README.md": {
+            "sha256": "ab282e3c2a3e8d030414dbbe581e298f206a0bab020c9b489cf638198ed61248",
+            "bytes": 229
+          },
+          "formatter.py": {
+            "sha256": "913d129b8c2a1e3b8c6e5e7528d4a59ccae31ef64775c648de430716f633925c",
+            "bytes": 128
+          },
+          "request.json": {
+            "sha256": "6efaa8c827aceda1b23b6ab30ab2b0dd435d833540d1433c6ea226c90c52285d",
+            "bytes": 1308
+          },
+          "test_formatter.py": {
+            "sha256": "b9ea31a6d5433655ed7865f8623c5f1fa560490897bdce8dd5cb234c86c7f759",
+            "bytes": 433
+          }
+        },
+        "cache_files": []
+      },
+      "full-sol": {
+        "protected_file_entries": 33,
+        "all_original_files_and_Git_preserved": true,
+        "added": [],
+        "final_snapshot": {
+          ".git/COMMIT_EDITMSG": {
+            "sha256": "09b036921ff715ee3585bf27f20c199dde3384d94bbc4f929e3cf970ba7e2a52",
+            "bytes": 26
+          },
+          ".git/HEAD": {
+            "sha256": "28d25bf82af4c0e2b72f50959b2beb859e3e60b9630a5e8c603dad4ddb2b6e80",
+            "bytes": 21
+          },
+          ".git/config": {
+            "sha256": "2616ea063abfd03c3648c6fb00113c31684e9236944d0d783f6c6220e9c9170e",
+            "bytes": 201
+          },
+          ".git/description": {
+            "sha256": "85ab6c163d43a17ea9cf7788308bca1466f1b0a8d1cc92e26e9bf63da4062aee",
+            "bytes": 73
+          },
+          ".git/hooks/applypatch-msg.sample": {
+            "sha256": "0223497a0b8b033aa58a3a521b8629869386cf7ab0e2f101963d328aa62193f7",
+            "bytes": 478
+          },
+          ".git/hooks/commit-msg.sample": {
+            "sha256": "efc1401b0e99d1ff51494d154d98b46c1e99059bcd8bf9f73cecde19fd3eb23b",
+            "bytes": 1972
+          },
+          ".git/hooks/fsmonitor-watchman.sample": {
+            "sha256": "9159720099ad5595b8e66645cbfd47763c1e920f46e0b50ae75e642bbec57ef0",
+            "bytes": 4611
+          },
+          ".git/hooks/post-update.sample": {
+            "sha256": "81765af2daef323061dcbc5e61fc16481cb74b3bac9ad8a174b186523586f6c5",
+            "bytes": 189
+          },
+          ".git/hooks/pre-applypatch.sample": {
+            "sha256": "e15c5b469ea3e0a695bea6f2c82bcf8e62821074939ddd85b77e0007ff165475",
+            "bytes": 424
+          },
+          ".git/hooks/pre-commit.sample": {
+            "sha256": "57185b7b9f05239d7ab52db045f5b89eb31348d7b2177eab214f5eb872e1971b",
+            "bytes": 1649
+          },
+          ".git/hooks/pre-merge-commit.sample": {
+            "sha256": "d3825a70337940ebbd0a5c072984e13245920cdf8898bd225c8d27a6dfc9cb53",
+            "bytes": 416
+          },
+          ".git/hooks/pre-push.sample": {
+            "sha256": "ecce9c7e04d3f5dd9d8ada81753dd1d549a9634b26770042b58dda00217d086a",
+            "bytes": 1374
+          },
+          ".git/hooks/pre-rebase.sample": {
+            "sha256": "4febce867790052338076f4e66cc47efb14879d18097d1d61c8261859eaaa7b3",
+            "bytes": 4898
+          },
+          ".git/hooks/pre-receive.sample": {
+            "sha256": "a4c3d2b9c7bb3fd8d1441c31bd4ee71a595d66b44fcf49ddb310252320169989",
+            "bytes": 544
+          },
+          ".git/hooks/prepare-commit-msg.sample": {
+            "sha256": "e9ddcaa4189fddd25ed97fc8c789eca7b6ca16390b2392ae3276f0c8e1aa4619",
+            "bytes": 1492
+          },
+          ".git/hooks/push-to-checkout.sample": {
+            "sha256": "a53d0741798b287c6dd7afa64aee473f305e65d3f49463bb9d7408ec3b12bf5f",
+            "bytes": 2783
+          },
+          ".git/hooks/sendemail-validate.sample": {
+            "sha256": "44ebfc923dc5466bc009602f0ecf067b9c65459abfe8868ddc49b78e6ced7a92",
+            "bytes": 2308
+          },
+          ".git/hooks/update.sample": {
+            "sha256": "8d5f2fa83e103cf08b57eaa67521df9194f45cbdbcb37da52ad586097a14d106",
+            "bytes": 3650
+          },
+          ".git/index": {
+            "sha256": "f3a8d093193577893948dea77c6606b475b8883925462e1eb44fffdd57601903",
+            "bytes": 377
+          },
+          ".git/info/exclude": {
+            "sha256": "6671fe83b7a07c8932ee89164d1f2793b2318058eb8b98dc5c06ee0a5a3b0ec1",
+            "bytes": 240
+          },
+          ".git/logs/HEAD": {
+            "sha256": "65e7a587a27656cba1dbff1af5d970b356adc6ed127af990d3182a812a9c5a7e",
+            "bytes": 185
+          },
+          ".git/logs/refs/heads/main": {
+            "sha256": "65e7a587a27656cba1dbff1af5d970b356adc6ed127af990d3182a812a9c5a7e",
+            "bytes": 185
+          },
+          ".git/objects/30/96784de18fb41822a67e044149c0d7421acd0a": {
+            "sha256": "537105702c25b8f90caa8b47f5a286718f651e8ec5c1d14628273c2026471eab",
+            "bytes": 197
+          },
+          ".git/objects/39/84b8a47712891e2debfe2be7afc6e877679319": {
+            "sha256": "6322c5d7d06fdb2ed17034af7e4af16ebedb821c67de8e417adc82f278bd163e",
+            "bytes": 763
+          },
+          ".git/objects/81/9540077083e377207ef96b3d2a0506636b7d09": {
+            "sha256": "6d9fd59fe62d622b74fcb69e896c99299fa04890a174730538e29ddbab26dd97",
+            "bytes": 157
+          },
+          ".git/objects/cc/59c0dd41e66b9c57b6d3afc9c0eacae6a45580": {
+            "sha256": "2b47361921ac957183a0005ce75bf0e2dd4513e406cdd396f7020a9853f4d61c",
+            "bytes": 123
+          },
+          ".git/objects/f7/6dae65492d8bcb5a366e7ff927caeec0af77ea": {
+            "sha256": "a5d69e037c272cbf170bca67f20eb8f875f9f4c94323e2375fe0f0b8b69f8356",
+            "bytes": 142
+          },
+          ".git/objects/fb/66a47256d498f60fd6adfd7784d1a6e8953a31": {
+            "sha256": "f703a7689c392d4231d564b0536f99ac9e08010ff3f5213f4973e8c81833b0a7",
+            "bytes": 225
+          },
+          ".git/refs/heads/main": {
+            "sha256": "07d9af686b0059eba844edc7e5456e150e96d8d0583f0a35a298296f2928519b",
+            "bytes": 41
+          },
+          "README.md": {
+            "sha256": "ab282e3c2a3e8d030414dbbe581e298f206a0bab020c9b489cf638198ed61248",
+            "bytes": 229
+          },
+          "formatter.py": {
+            "sha256": "913d129b8c2a1e3b8c6e5e7528d4a59ccae31ef64775c648de430716f633925c",
+            "bytes": 128
+          },
+          "request.json": {
+            "sha256": "6efaa8c827aceda1b23b6ab30ab2b0dd435d833540d1433c6ea226c90c52285d",
+            "bytes": 1308
+          },
+          "test_formatter.py": {
+            "sha256": "b9ea31a6d5433655ed7865f8623c5f1fa560490897bdce8dd5cb234c86c7f759",
+            "bytes": 433
+          }
+        },
+        "cache_files": []
+      }
+    },
+    "raw_usage": {
+      "input_tokens": 1230826,
+      "cached_input_tokens": 1130496,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 11908,
+      "reasoning_output_tokens": 3552
+    },
+    "billing": "unknown; raw counters not dollars",
+    "interpretation": "Mechanical inventories/counters only; actualcommands, sourceprimary and semantics require manualreview. No firstuse run."
+  },
+  "protocol_sha256": "6745d9bc17269074a06dfa36c56139fb73a639c50736dd1edfd7aac4b3b9201c",
+  "primary_runtime": {
+    "models": [
+      {
+        "name": "bundle-luna-D",
+        "requested_model": "gpt-6-luna",
+        "requested_effort": "high",
+        "thread": "01a16e1f-bf29-7590-907a-18fabd4e8040",
+        "model": "gpt-6-luna",
+        "effort": "high",
+        "native_session": "/home/agent/.codex/sessions/2026/10/24/rollout-2026-10-24T13-35-36-01a16e1f-bf29-7590-907a-18fabd4e8040.jsonl"
+      },
+      {
+        "name": "bundle-sol-D",
+        "requested_model": "gpt-6.1-sol",
+        "requested_effort": "high",
+        "thread": "01a16e1f-c109-7e03-bac6-baaead48029a",
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "native_session": "/home/agent/.codex/sessions/2026/10/24/rollout-2026-10-24T13-35-37-01a16e1f-c109-7e03-bac6-baaead48029a.jsonl"
+      }
+    ],
+    "startup": [],
+    "primary_tool_subsets": [
+      {
+        "path": "/private/tmp/agentos-boundedreads-20261024/work/primary-bundle-luna-D.json",
+        "sha256": "451ce172deda8365dce5140d85bdb6f599396da0188a8eb9aea037bdd5a9a02c",
+        "records": 56
+      },
+      {
+        "path": "/private/tmp/agentos-boundedreads-20261024/work/primary-bundle-sol-D.json",
+        "sha256": "e7422848aa3d9caa17dc9739d4379e22be4c82d92c730766507a4a569e78e92f",
+        "records": 66
+      }
+    ]
+  },
+  "archive": {
+    "archive": "/private/tmp/agentos-boundedreads-20261024-trials.tar.gz",
+    "sha256": "ee08ef60267fc3e16ed6595991c317fd89b171a21700ba452aa15755af286c96",
+    "bytes": 1836111,
+    "indexed_files": 801,
+    "index": "evidence/trials-index.json",
+    "verified_all_members": true
+  },
+  "unstarted": [
+    "full-luna-D",
+    "full-sol-D",
+    "bundle-luna-I",
+    "bundle-sol-I",
+    "full-luna-I",
+    "full-sol-I",
+    "bundle-luna-U",
+    "bundle-sol-U",
+    "full-luna-U",
+    "full-sol-U"
+  ],
+  "limits": [
+    "One fresh sample per model on bundle-only design, not a reliability estimate.",
+    "No installation/first-use or checkout trial admitted this round.",
+    "No causal proof that guidance repairs prior installation truncation; no subset promotion.",
+    "No current all-path engineering/portfolio/native integration/delegated startup/Git/lifecycle/recovery proof.",
+    "Billing unknown; raw native usage counters retained without dollar inference."
+  ],
+  "next_hypothesis": "Require explicit reconciliation of every supplied resource constraint before any conditional deferral; test prospectively under unchanged source and semantic gates. Not admitted or approved by this report."
+}
