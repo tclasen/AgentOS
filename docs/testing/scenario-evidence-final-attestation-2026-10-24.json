@@ -1,0 +1,110 @@
+{
+  "record_kind": "Observed post-review model and cleanup facts under APP-000015 limited addition allowance",
+  "observed_at": "2026-10-24T07:36:16.959844+00:00",
+  "task": "TASK-000187",
+  "run": "RUN-000182",
+  "reviewed_candidate": {
+    "base": "c3f84f87ce47aa6668597a3f1204c020985ecc50",
+    "head": "25547404f0b6fe21bbec14c9a81205c90dc5260d",
+    "tree": "cd5c6e7946943bc9e9f6608c3e2a2442b6414262",
+    "paths": {
+      "docs/agent-records/runs/RUN-000182.md": "f41e8b34900849e34184eddca1b19250badc64a778f76bfeb4c4ea9e6a71baa2",
+      "docs/agent-records/tasks/project/TASK-000187.md": "1c118aaa843259e2a594f8d25066c5952ebe3af8b75e441734c901acfd9fb04f",
+      "docs/testing/scenario-evidence-2026-10-24.json": "4da1d50469df84f91a68e95b42024a6fba09faa2876498d21afe49c782b2f823",
+      "docs/testing/scenario-evidence-2026-10-24.md": "cf1a3dedea07d8f9d4794828dfc57b4cb96d42bcdb8f1cb610c8d6107a3ac999"
+    }
+  },
+  "receipt": {
+    "path": "docs/agent-records/approvals/APP-000015.md",
+    "sha256": "bc49d960b56b4415c3d0c42a073267271fa5725aad5347756740c9cc4b141a73",
+    "byte_identical_to_independent_output": true,
+    "decision": "conditional acceptance of findings-only rejection"
+  },
+  "reviewer_actual": {
+    "name": "review-final",
+    "requested": "gpt-6.1-sol",
+    "thread": "01a16cd0-b2fc-72f1-815f-da1b582d0aed",
+    "model": "gpt-6.1-sol",
+    "effort": null
+  },
+  "all_seven_native_models_matched": true,
+  "native_trials": 6,
+  "independent_review_invocations": 1,
+  "receipt_correction_invocations": 0,
+  "reviewer_validation": {
+    "regressions": 39,
+    "exact_frozen_code_safety_reproduced": true,
+    "nonzero_command_items": 0
+  },
+  "current_main_rules_observed": [
+    {
+      "type": "deletion",
+      "ruleset_source_type": "Repository",
+      "ruleset_source": "tclasen/AgentOS",
+      "ruleset_id": 25755038
+    },
+    {
+      "type": "non_fast_forward",
+      "ruleset_source_type": "Repository",
+      "ruleset_source": "tclasen/AgentOS",
+      "ruleset_id": 25755038
+    },
+    {
+      "type": "pull_request",
+      "parameters": {
+        "required_approving_review_count": 0,
+        "dismiss_stale_reviews_on_push": false,
+        "required_reviewers": [],
+        "require_code_owner_review": false,
+        "require_last_push_approval": false,
+        "required_review_thread_resolution": true,
+        "require_extra_approval_for_unattributed_changes": true,
+        "allowed_merge_methods": [
+          "merge"
+        ]
+      },
+      "ruleset_source_type": "Repository",
+      "ruleset_source": "tclasen/AgentOS",
+      "ruleset_id": 25755038
+    }
+  ],
+  "cleanup": {
+    "observed_at": "2026-10-24T07:36:04.950229+00:00",
+    "owned_sandbox_removed": {
+      "name": "agentos-scenarios-20261024",
+      "id": "0240d640-7b14-4c29-a629-fd63030bcdb1"
+    },
+    "owned_raw_directory_removed": "/private/tmp/agentos-scenarios-20261024",
+    "original_sandbox_pairs_preserved": 63,
+    "all_others_unchanged": true,
+    "remaining_count": 63,
+    "archives": [
+      {
+        "archive": "/private/tmp/agentos-scenarios-20261024-trials.tar.gz",
+        "sha256": "8dfabe4d579e913d83528180b19dba53a9175ff28114aacbb3c96e3f3a666c01",
+        "bytes": 1418679,
+        "indexed_files": 837,
+        "index": "evidence/trials-index.json",
+        "verified_all_members": true
+      },
+      {
+        "archive": "/private/tmp/agentos-scenarios-20261024-acceptance.tar.gz",
+        "sha256": "8c18b6b6306d8259c62c0b65611d8e145df3095a9ff6f3e64e2b033d8c5a5635",
+        "bytes": 157572,
+        "indexed_files": 36,
+        "index": "evidence/acceptance-index.json",
+        "verified_all_members": true
+      }
+    ],
+    "archive_bytes_total": 1576251,
+    "no_global_prune": true,
+    "primary_worktrees_before_cleanup": "worktree /Users/Shared/projects/AgentOS\nHEAD 25547404f0b6fe21bbec14c9a81205c90dc5260d\nbranch refs/heads/improve/scenario-evidence\n\n"
+  },
+  "post_review_paths_allowed": [
+    "docs/agent-records/approvals/APP-000015.md",
+    "docs/testing/scenario-evidence-final-attestation-2026-10-24.json"
+  ],
+  "operative_source_changes": false,
+  "delivery_status": "Pending normal protected PR/checks/threads/merge and fetched-main equivalence; recorded separately after observation.",
+  "global_goal_status": "active; worksheet did not resolve Luna obligations and qualification gaps."
+}
