@@ -1,0 +1,105 @@
+{
+  "candidate": "Optional structural graph selection helper",
+  "baseline": "7483513dfcd6926491ef51f8b40c4f99cc2e8502",
+  "proof": {
+    "candidate": "graph selection helper",
+    "rows": [
+      {
+        "name": "graph-baseline-sol-r1",
+        "cases": 6,
+        "result": "PASS against corrected original semantics",
+        "thread": [
+          "01a16b73-2665-7793-a3dc-d40da104453c"
+        ],
+        "result_sha256": "f14cf9749d6979ae7e01461e419af24d080657cbaaff1adbe2912030f54d174f",
+        "run_sha256": "8b04449744abe4c4a34b096bcf989b3dc6176c51e10dde882434e6cc5242270b",
+        "delta": {
+          "added": [
+            "result.json"
+          ],
+          "removed": [],
+          "changed": []
+        },
+        "limits": "Structural selection only. Metadata traversal does not establish full operational source reads, semantic compatibility, runtime capability or activation, successful qualification or installation, or authorization for installation, target mutations, agent spawning, persistence, network access or external effects.",
+        "git_index_empty_and_no_commits": true
+      },
+      {
+        "name": "graph-baseline-luna-r1",
+        "cases": 6,
+        "result": "PASS against corrected original semantics",
+        "thread": [
+          "01a16b73-26b7-78b1-ac7e-0ddc1281fbb8"
+        ],
+        "result_sha256": "9d3da4745efcce2882596d29267f321e9984107bca27ce0b233a771e8f34aa14",
+        "run_sha256": "f67c832ae252f39605ad7eac6e3989b8d9b747fdb102c21ebb514367efc84d62",
+        "delta": {
+          "added": [
+            "result.json"
+          ],
+          "removed": [],
+          "changed": []
+        },
+        "limits": "Structural dependency selection only. Does not establish that full operational component sources were read, components work in a runtime, installation is authorized, or any effect/permission is granted.",
+        "git_index_empty_and_no_commits": true
+      },
+      {
+        "name": "graph-candidate-sol-r1",
+        "cases": 7,
+        "result": "PASS against corrected original semantics",
+        "thread": [
+          "01a16b74-bc7a-7bc3-8b65-65f9607a6d9e"
+        ],
+        "result_sha256": "64424684a5b49374b42e7c7d4cac9097599be6a73b2c97782b7887a0a2ec8b95",
+        "run_sha256": "14aa424827a150ed49c6376d3204808124921f694b154adb65911a29fee4c41d",
+        "delta": {
+          "added": [
+            "result.json"
+          ],
+          "removed": [],
+          "changed": []
+        },
+        "limits": "Structural metadata selection only. This does not establish full operational source reads, complete user-requirement coverage, runtime availability or activation, operational correctness, or authorization for installation, mutations, or effects. No installation or external effects were performed.",
+        "git_index_empty_and_no_commits": true,
+        "actual_helper_use": "Parent inspected completed successful CLI invocations and expected exit-2 refusals; Sol batched all seven calls, Luna invoked seven separately."
+      },
+      {
+        "name": "graph-candidate-luna-r1",
+        "cases": 7,
+        "result": "PASS against corrected original semantics",
+        "thread": [
+          "01a16b74-be0f-74e2-ae2f-fc9105f031a7"
+        ],
+        "result_sha256": "27ea0e015f45656dad2a5cfe348fa6cee470d35c7b484a5fedd871ee8d11480e",
+        "run_sha256": "82dd26d3f3781d4273538e7211ad73cf300ff3eb78660f3defa884bbd3a5765a",
+        "delta": {
+          "added": [
+            "result.json"
+          ],
+          "removed": [],
+          "changed": []
+        },
+        "limits": "Structural selection only. Does not establish that full operational component sources were read, that requirements are covered, that installation is authorized, or that any runtime activation or effect is authorized.",
+        "git_index_empty_and_no_commits": true,
+        "actual_helper_use": "Parent inspected completed successful CLI invocations and expected exit-2 refusals; Sol batched all seven calls, Luna invoked seven separately."
+      }
+    ],
+    "decision_basis": "Deterministic baseline closure admits deprecated selected nodes; candidate rejects selected/transitive deprecation, includes required closure, preserves valid unselected case. 18 unit/integrity tests pass. Both models correctly use helper. No model-quality improvement claimed: baseline manual outcomes already correct.",
+    "oracle_correction": "Both models exposed incorrect dependency assumption; original oracle/inputs preserved; corrected six common cases and seventh candidate-only real prerequisite case.",
+    "criteria_waived": false,
+    "model_metadata": {
+      "artifact": "graph-model-metadata.json",
+      "sha256": "ffbf18c7c877332874cbfb23cca56b957db97a6e6f8c8feebaca3bcbb695899c",
+      "all_four_root_models_match_requested": true,
+      "reasoning_and_dollars": "unknown"
+    }
+  },
+  "tests": 18,
+  "archive": {
+    "basename": "agentos-improvements-20261024-graph.tar.gz",
+    "sha256": "3b421e7c4f58090c4726d5ebc3b203f1c5901fbf92a4e0028ab2d19176a0af24",
+    "bytes": 373576,
+    "indexed_files": 394,
+    "all_members_verified": true
+  },
+  "decision": "Recommend merge pending independent exact-candidate acceptance and protected delivery"
+}
