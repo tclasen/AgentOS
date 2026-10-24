@@ -370,4 +370,64 @@ class QualificationTests(unittest.TestCase):
             s=q.summarize(log)
             self.assertEqual(s['turn_completed'],0);self.assertEqual(len(s['errors']),1)
 
+    def test_failed_compound_command_exposure_keeps_failure_and_strict_metric(self):
+        with tempfile.TemporaryDirectory() as d:
+            root=Path(d);(root/'bundle/components').mkdir(parents=True)
+            body='# Canonical contract\nPreserve scope and evidence.\n'
+            source=root/'bundle/components/a.md';source.write_text(body)
+            command='cat components/a.md; rg --files missing-directory'
+            output=body+'rg: missing-directory: No such file or directory\n'
+            item={'id':'item_6','type':'command_execution','command':command,
+                  'aggregated_output':output,'exit_code':2,'status':'failed'}
+            log=root/'run.jsonl';log.write_text('router noise\n'+json.dumps({'type':'item.completed','item':item}))
+            result=q.summarize(log,root)
+            self.assertEqual(result['full_component_reads_observed'],[])
+            self.assertEqual(result['failed_commands'],[{'command':command,'exit_code':2,'aggregated_output':output}])
+            self.assertEqual(result['source_content_exposures'],{'components/a.md':{
+                'sha256':q.sha(source.read_bytes()),'bytes':len(source.read_bytes()),'observations':[{
+                    'event_index':0,'item_id':'item_6','command_sha256':q.sha(command.encode()),
+                    'output_sha256':q.sha(output.encode()),'outer_exit_code':2,'outer_status':'failed'}]}})
+            self.assertEqual(result['turn_completed'],0)
+
+    def test_exposure_requires_complete_matching_command_output(self):
+        with tempfile.TemporaryDirectory() as d:
+            root=Path(d);(root/'bundle/phases').mkdir(parents=True)
+            body='# Design\nFirst obligation.\nSecond obligation.\n'
+            (root/'bundle/phases/design.md').write_text(body)
+            base={'type':'item.completed','item':{'type':'command_execution','command':'cat phases/design.md',
+                  'exit_code':0,'status':'completed','aggregated_output':body}}
+            cases=[
+                {'type':'item.started','item':base['item']},
+                {'type':'item.completed','item':{'type':'agent_message','text':body}},
+                {'type':'item.completed','item':dict(base['item'],aggregated_output=body[:20])},
+                {'type':'item.completed','item':dict(base['item'],aggregated_output=body.replace('Second','Different'))},
+                {'type':'item.completed','item':dict(base['item'],aggregated_output=body[:20]+'[truncated]'+body[-10:])},
+                {'type':'item.completed','item':dict(base['item'],command='')},
+            ]
+            log=root/'run.jsonl';log.write_text('\n'.join(json.dumps(x) for x in cases))
+            self.assertEqual(q.summarize(log,root)['source_content_exposures'],{})
+            # Two separately exposed fragments are not silently joined into full-read credit.
+            log.write_text('\n'.join(json.dumps({'type':'item.completed','item':dict(base['item'],aggregated_output=part)})
+                                     for part in (body[:20],body[20:])))
+            self.assertEqual(q.summarize(log,root)['source_content_exposures'],{})
+            log.write_text(json.dumps(base));result=q.summarize(log,root)
+            self.assertEqual(set(result['source_content_exposures']),{'phases/design.md'})
+            self.assertEqual(result['failed_commands'],[])
+
+    def test_exposure_skips_empty_and_linked_sources_and_preserves_inputs(self):
+        with tempfile.TemporaryDirectory() as d:
+            root=Path(d);bundle=root/'bundle';bundle.mkdir()
+            outside=root/'outside.md';outside.write_text('Outside content\n')
+            (bundle/'linked.md').symlink_to(outside)
+            (bundle/'empty.md').write_text(' \n')
+            (bundle/'real.md').write_text('Real content\n')
+            log=root/'run.jsonl';log.write_text(json.dumps({'type':'item.completed','item':{
+                'type':'command_execution','command':'cat real.md','aggregated_output':'Real content\nOutside content\n \n',
+                'exit_code':0}}))
+            before={p.name:p.read_bytes() for p in (log,outside,bundle/'real.md',bundle/'empty.md')}
+            result=q.summarize(log,root)
+            self.assertEqual(set(result['source_content_exposures']),{'real.md'})
+            self.assertEqual(before,{p.name:p.read_bytes() for p in (log,outside,bundle/'real.md',bundle/'empty.md')})
+            self.assertTrue((bundle/'linked.md').is_symlink())
+
 if __name__=='__main__':unittest.main()

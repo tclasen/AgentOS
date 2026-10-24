@@ -1,0 +1,139 @@
+{
+  "task": "TASK-000192",
+  "run": "RUN-000187",
+  "approval": "APP-000020 pending independent review",
+  "base": "9fec32e2f944f70a777cfa142ccc534aeeb0350e",
+  "operative_candidate": "c12f9bf1e16339d93fcca394101db7577c426579",
+  "recommendations": [
+    {
+      "change": "Add source_content_exposures and source_exposure_limit independently of the existing strict metric",
+      "proposed_disposition": "accept helper subject to independent exact-candidate review",
+      "evidence": "44regressions,4archived native replays,3fresh native logs, old summary fields unchanged and failures retained"
+    },
+    {
+      "change": "Full-source continuation/concrete qualification/implicit-write guidance",
+      "disposition": "reject promotion as unqualified under frozen path/hash/length gate; all7source paths withdrawn",
+      "limitation": "Luna supplied47correct paths and hashes without lengths. No wrong-source proof or installed cache-benefit test; source contract asks equivalent verifiable manifest, whereas this trial requires lengths."
+    }
+  ],
+  "runs": [
+    {
+      "name": "bundle-luna-D",
+      "all_original_summary_fields_unchanged": true,
+      "source_exposures": 25,
+      "nonzero_outer_commands": 1,
+      "seconds": 74.8911201953888,
+      "thread": "01a16d5e-be47-7950-a2ca-94728511ae26",
+      "model": "gpt-6-luna",
+      "effort": "high",
+      "gate": "identity format incomplete"
+    },
+    {
+      "name": "full-sol-D",
+      "all_original_summary_fields_unchanged": true,
+      "source_exposures": 26,
+      "nonzero_outer_commands": 0,
+      "seconds": 189.98432517051697,
+      "thread": "01a16d5d-9ba8-7f83-af1a-e7cae6909c6d",
+      "model": "gpt-6.1-sol",
+      "effort": "high",
+      "gate": "pass bounded D gate"
+    },
+    {
+      "name": "full-luna-D",
+      "all_original_summary_fields_unchanged": true,
+      "source_exposures": 21,
+      "nonzero_outer_commands": 0,
+      "seconds": 50.90240716934204,
+      "thread": "01a16d5d-96d0-7961-992a-1f1272910c46",
+      "model": "gpt-6-luna",
+      "effort": "high",
+      "gate": "pass bounded D gate"
+    }
+  ],
+  "native_invocations": 3,
+  "native_retries": 0,
+  "peak_native_roots": 2,
+  "children": 0,
+  "unstarted": [
+    "bundle-sol-D",
+    "all4I",
+    "all4U"
+  ],
+  "local_validation": {
+    "regressions": 44,
+    "seconds": 12.053,
+    "original_regressions": 41,
+    "new_tests": 3,
+    "prior_replays": 4,
+    "current_backcompat_replays": 3,
+    "profiles": [
+      10,
+      22,
+      18
+    ],
+    "unchanged_components": 23,
+    "links": 23,
+    "embedded_example_cases": 4,
+    "cache_probes": 4,
+    "all_passed": true
+  },
+  "identity_failure": {
+    "accepted": false,
+    "raw_sha256": "a17835a5c78e66aba698816551ccb8ea4fbd9f044e1fb35514880990c2395fd8",
+    "reason": "Frozen trial gate requires exact full path/hash/byte-length manifest; actual manifest has47correct paths and hashes, no byte counts. No parent repair or I admission.",
+    "source_contract_limit": "Portable source asks equivalent verifiable byte manifest; path plus cryptographic hash is substantive identity evidence. Byte-count requirement is this preregistered trial/schema constraint, not proof of substituted source or ineffective cache guidance.",
+    "manifest_item": "item_7",
+    "manifest_sha256": "7d158ba9de1cc41fce9bc9a184f665e9a224e530b73d2062fbf4a0cc5fef61e3",
+    "all47paths_hashes_correct": true,
+    "missing_byte_counts": 47,
+    "full_selected_bodies": 11,
+    "startup_content_exposure_verified": true,
+    "failed_outer_item2": {
+      "status": "failed",
+      "exit": 2,
+      "cause": "optional tools directory absent after complete source cats",
+      "full_canonical_bodies_observed": [
+        "core/constitution.md",
+        "core/installer-policy.md",
+        "core/graph-routing.md",
+        "interviews/bootstrap.md",
+        "phases/discover.md"
+      ]
+    },
+    "native_retry": false,
+    "decision": "Reject operative promotion as unqualified; assess additive helper under separate predeclared criteria; no new D/I/U"
+  },
+  "protection": {
+    "all4target_files_caches_git_unchanged": true,
+    "both_sources_unchanged": true,
+    "native_roots": 3,
+    "no_I_U": true,
+    "unstarted_bundle_sol_D": true
+  },
+  "sandbox": {
+    "name": "agentos-exposure-20261024",
+    "id": "0dbabc61-38d1-4a95-ba12-e77b64fa1aec",
+    "codex_before": "0.149.1",
+    "codex_after": "0.164.0",
+    "original_count": 63,
+    "cleanup": "pending verified delivery and archives"
+  },
+  "trial_archive": {
+    "archive": "/private/tmp/agentos-exposure-20261024-trials.tar.gz",
+    "sha256": "6a6a3fa12ed7a7e2b3579d16f505563188f918f98912afe1ca3d33b463458b12",
+    "bytes": 4073691,
+    "indexed_files": 1193,
+    "index": "evidence/trials-index.json",
+    "verified_all_members": true
+  },
+  "limits": [
+    "Exposure is exact text containment, not proof of file-read provenance/source-specific exit/comprehension/before-write order",
+    "Inspect actual command, pinned sources and observed behavior before admission",
+    "Partial fragments are not automatically combined; missing exposure inconclusive",
+    "Historical criteria/verdicts unchanged; proposed helper does not retroactively pass prior trials",
+    "No native installation or first use this round; broad all-path goal active",
+    "Token and monetary cost unknown"
+  ],
+  "delivery": "pending exact-candidate independent review and protected PR/main verification"
+}

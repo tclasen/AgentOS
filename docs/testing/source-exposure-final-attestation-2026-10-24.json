@@ -1,0 +1,110 @@
+{
+  "observed_at": "2026-10-24T10:20:04.000199+00:00",
+  "scope": "Observed facts under APP-000020 narrow additive allowance;7reviewedhashes unchanged",
+  "reviewed": {
+    "head": "32bd7fa42723b9befb83cc8fff1213b40792fe87",
+    "tree": "81d37f79747650ebb053da00aea0f679a6d1e948",
+    "base": "9fec32e2f944f70a777cfa142ccc534aeeb0350e",
+    "operative": "c12f9bf1e16339d93fcca394101db7577c426579",
+    "files": {
+      "tools/qualification.py": "af3ab25da4fb3362face2d6c87428195bb7fe23e263e1fd13610303fd28188d7",
+      "tools/README.md": "70ecda7d03cea17811a297e23128900a93d8d80ece44e8847b5526ad9793c50c",
+      "tests/test_qualification.py": "b8d60d98ee2ff4c31d805e15d4efa5bf3dbf330df58ae7023a69b94331b09ce6",
+      "docs/agent-records/tasks/project/TASK-000192.md": "5a398081ce99f0786a8456e8b13ae9adb2ee3eac739d45d90ca83584e5040f7c",
+      "docs/agent-records/runs/RUN-000187.md": "c85593b2e72312d1872d10d9ab21a8bc065fd922c351f44204c755896ec0161d",
+      "docs/testing/source-exposure-2026-10-24.md": "ab99ea817b85ec8624574cf476077b2dd604e57eac5600f63e0140b87310a567",
+      "docs/testing/source-exposure-2026-10-24.json": "38fda7883e2b938715e6825245c3c1e9f0fb8a17ec563ed18928905c6c129fcf"
+    }
+  },
+  "receipt_sha256": "4df35d1b34f74f7f3bed21115369dc34812e6da380c4ee18cb11d1fe131aaee4",
+  "review": {
+    "thread": "01a16d65-cda2-7b63-8b35-c4ed3457263a",
+    "status": "returned",
+    "seconds": 379.5019779205322,
+    "requested_model": "gpt-6.1-sol",
+    "requested_reasoning": "high",
+    "observed_model": "gpt-6.1-sol",
+    "observed_reasoning": "high",
+    "nonzero_outer_commands": [
+      {
+        "command": "/bin/bash -lc 'rg --files /Users/Shared/projects/AgentOS -g AGENTS.md -g .gitmodules'",
+        "exit_code": 1,
+        "aggregated_output": ""
+      }
+    ],
+    "nonzero_explanation": "Read-only rg for AGENTS.md/.gitmodules returned1 because no matches; retained unchanged; no positive-check failure or retry claimed. Expected-negative probes retained separately.",
+    "decision_checkpoint_seconds": 346.9,
+    "independent_regressions": 44,
+    "independent_test_seconds": 2.596,
+    "raw_returned_usage": [
+      {
+        "input_tokens": 1582594,
+        "cached_input_tokens": 1485568,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 17994,
+        "reasoning_output_tokens": 2765
+      }
+    ]
+  },
+  "observed_trial_usage": {
+    "per_run": [
+      {
+        "name": "bundle-luna-D",
+        "usage": [
+          {
+            "input_tokens": 146318,
+            "cached_input_tokens": 112768,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 6422,
+            "reasoning_output_tokens": 3519
+          }
+        ]
+      },
+      {
+        "name": "full-sol-D",
+        "usage": [
+          {
+            "input_tokens": 401206,
+            "cached_input_tokens": 354432,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 7997,
+            "reasoning_output_tokens": 1709
+          }
+        ]
+      },
+      {
+        "name": "full-luna-D",
+        "usage": [
+          {
+            "input_tokens": 159410,
+            "cached_input_tokens": 133248,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 4885,
+            "reasoning_output_tokens": 2075
+          }
+        ]
+      }
+    ],
+    "summed_raw_counts": {
+      "input_tokens": 706934,
+      "cached_input_tokens": 600448,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 19304,
+      "reasoning_output_tokens": 7303
+    },
+    "limits": "Only3returned trial roots; cached/reasoning categories are not additional billed totals. Full-task costs/usage remain unknown; raw known counters retained, no billing inference."
+  },
+  "methodology_limit": "Approval is for additive observable and findings, not replacement of prior source-success gate or generally weaker semantic evaluator. Fresh bundle-Luna source-specific success separately corroborated via its actual && chain. Historical failed semicolon verdict unchanged.",
+  "trial_archive": {
+    "archive": "/private/tmp/agentos-exposure-20261024-trials.tar.gz",
+    "sha256": "6a6a3fa12ed7a7e2b3579d16f505563188f918f98912afe1ca3d33b463458b12",
+    "bytes": 4073691,
+    "indexed_files": 1193,
+    "index": "evidence/trials-index.json",
+    "verified_all_members": true
+  },
+  "delivery": "pending at this attestation; expected-head PR merge and fetched-main verification required",
+  "acceptance_export": "pending terminal evidence export",
+  "cleanup": "pending verified archives/delivery; exact owned sandbox/root only",
+  "broad_goal": "active; no I/U in this round; operative bundle edits withdrawn"
+}
