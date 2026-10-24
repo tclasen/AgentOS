@@ -172,7 +172,7 @@ def verify_selection(bundle: Path, declared: list[str]) -> dict:
                       'No source-read, implementation, independence or authority credit.'}
 
 def snapshot(root: Path) -> dict:
-    """Record files, subdirectories and links; never follow links outside the fixture."""
+    """Record entries without opening special files or following symlinks."""
     root = root.resolve()
     result = {}
     for folder, dirs, files in os.walk(root, followlinks=False):
@@ -185,10 +185,13 @@ def snapshot(root: Path) -> dict:
         for name in sorted(files + [d for d in dirs if (base / d).is_symlink()]):
             p = base / name
             key = p.relative_to(root).as_posix()
-            if p.is_symlink():
+            mode = p.lstat().st_mode
+            if stat.S_ISLNK(mode):
                 result[key] = {'symlink': os.readlink(p)}
-            else:
+            elif stat.S_ISREG(mode):
                 result[key] = {'sha256': sha(p.read_bytes()), 'bytes': p.stat().st_size}
+            else:
+                result[key] = {'special': stat.S_IFMT(mode)}
     return result
 
 def difference(before: dict, after: dict) -> dict:
