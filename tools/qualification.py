@@ -4,6 +4,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import math
 import os
 from pathlib import Path
 import re
@@ -317,6 +318,9 @@ def run(args):
     effort = getattr(args, 'reasoning_effort', None)
     if effort is not None and effort not in REASONING_EFFORTS:
         raise ValueError('reasoning effort must be one of: ' + ', '.join(REASONING_EFFORTS))
+    timeout_seconds = getattr(args, 'timeout_seconds', 600)
+    if type(timeout_seconds) is not int or not 1 <= timeout_seconds <= 86400:
+        raise ValueError('timeout seconds must be an integer from 1 to 86400')
     if not re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9_.-]{0,127}', args.name):
         raise ValueError('run name must be a simple evidence filename, not a path')
     if not re.fullmatch(r'TASK-[0-9]{6}', args.task):
@@ -335,7 +339,10 @@ def run(args):
     extra = [Path(p).resolve() for p in args.add_dir]
     if any(not p.is_relative_to(workspace) or not p.is_dir() for p in extra):
         raise ValueError('additional writes must name existing task-owned directories within workspace')
-    cmd = ['sbx', 'exec', '-i', '-w', str(target), args.sandbox, 'codex', 'exec', '-m', args.model, '--sandbox', args.policy,
+    supervisor = Path(__file__).with_name('trial_supervisor.py').read_text()
+    cmd = ['sbx', 'exec', '-i', '-w', str(target), args.sandbox,
+           'python3', '-B', '-c', supervisor, str(timeout_seconds), args.name,
+           'codex', 'exec', '-m', args.model, '--sandbox', args.policy,
            '-c', 'agents.enabled=' + ('true' if args.agents else 'false'),
            '-c', f'agents.max_concurrent_threads_per_session={max(args.agents, 1)}',
            '-c', 'agents.default_subagent_model=' + json.dumps(args.model)]
@@ -358,12 +365,48 @@ def run(args):
     record['source_bundle'] = snapshot(source / 'bundle')
     record['requested_reasoning_effort'] = effort
     record['actual_reasoning_effort'] = 'unknown until session metadata collected'
+    record['timeout_seconds'] = timeout_seconds
+    record['transport_timeout_seconds'] = timeout_seconds + 30
+    record['supervisor_sha256'] = sha(supervisor.encode())
     write_json(manifest, record)
+    transport_timed_out = False
     with log.open('wb') as stream:
-        proc = subprocess.run(cmd, input=Path(args.prompt).read_bytes(), stdout=stream, stderr=subprocess.STDOUT)
+        try:
+            proc = subprocess.run(cmd, input=Path(args.prompt).read_bytes(), stdout=stream,
+                                  stderr=subprocess.STDOUT, timeout=timeout_seconds + 30)
+            returncode = proc.returncode
+        except subprocess.TimeoutExpired:
+            # The local transport being killed does not prove remote termination.
+            transport_timed_out = True
+            returncode = None
     summary = summarize(log, source)
+    controls = [row for row in events(log) if row.get('type') == 'agentos.run_control']
+    control_valid = (len(controls) == 2
+        and [row.get('phase') for row in controls] == ['started', 'finished']
+        and all(row.get('version') == 1 and row.get('control_id') == args.name
+                and row.get('timeout_seconds') == timeout_seconds
+                and row.get('grace_seconds') == 5 for row in controls)
+        and type(controls[-1].get('timed_out')) is bool
+        and type(controls[0].get('pid')) is int and controls[0]['pid'] > 0
+        and controls[-1].get('pid') == controls[0]['pid']
+        and all(row.get('process_group') == controls[0]['pid'] for row in controls)
+        and type(controls[-1].get('child_returncode')) is int
+        and type(controls[-1].get('elapsed_seconds')) in (int, float)
+        and math.isfinite(controls[-1]['elapsed_seconds']) and controls[-1]['elapsed_seconds'] >= 0
+        and isinstance(controls[-1].get('signals'), list)
+        and all(sig in ('SIGINT', 'SIGKILL') for sig in controls[-1]['signals'])
+        and controls[-1].get('exit_code') == returncode
+        and returncode == (124 if controls[-1]['timed_out'] else
+            (controls[-1]['child_returncode'] if controls[-1]['child_returncode'] >= 0
+             else 128 - controls[-1]['child_returncode'])))
+    timed_out = controls[-1]['timed_out'] if control_valid else None
+    record.update(run_control=controls, control_evidence_valid=control_valid,
+                  timed_out=timed_out, transport_timed_out=transport_timed_out)
     after = snapshot(target)
-    record.update(status='returned' if proc.returncode == 0 and summary['turn_completed'] and not summary['errors'] else 'failed', returncode=proc.returncode, ended_epoch=time.time(), summary=summary, after=after, delta=difference(before, after))
+    record.update(status='returned' if returncode == 0 and control_valid and not timed_out
+                  and not transport_timed_out and summary['turn_completed'] and not summary['errors']
+                  else 'failed', returncode=returncode, ended_epoch=time.time(), summary=summary,
+                  after=after, delta=difference(before, after))
     record['additional_scopes_after'] = {str(p): snapshot(p) for p in extra}
     record['additional_scope_deltas'] = {str(p): difference(record['additional_scopes_before'][str(p)], record['additional_scopes_after'][str(p)]) for p in extra}
     write_json(manifest, record)
@@ -391,6 +434,8 @@ def main():
     p.add_argument('--model', choices=MODELS, required=True)
     p.add_argument('--reasoning-effort', choices=REASONING_EFFORTS,
                    help='Optional native Codex effort override; omission preserves native configuration. Verify model support separately.')
+    p.add_argument('--timeout-seconds', type=int, default=600,
+                   help='Native command deadline, 1..86400 seconds (default 600); within the caller grant. Five-second interrupt grace, thirty-second transport allowance.')
     p.add_argument('--policy', choices=('read-only', 'workspace-write'), default='workspace-write')
     p.add_argument('--agents', type=int, choices=(0, 1, 2), default=0)
     p.add_argument('--resume')
