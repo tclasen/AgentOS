@@ -1,0 +1,282 @@
+{
+  "task": "TASK-000204",
+  "run": "RUN-000199",
+  "observed_at": "2026-10-24T18:43:15.577118+00:00",
+  "disposition": "independently approved findings; whole twelve-path operative package rejected",
+  "reviewed_candidate": {
+    "candidate": "d3babbf28f4c467fe6ab8f7d65e9418d5134e0a0",
+    "tree": "983b5cc03627cce752e5ee0502e590a0bee0994e",
+    "base": "9e30e1525aa9fa2046f9e52b1d5e56b07a15f4a7",
+    "files": {
+      "docs/agent-records/tasks/project/TASK-000204.md": {
+        "sha256": "22d709449b4a29f8c586d260bb29bebbf89d1f463929228211e54d96f99596fd",
+        "bytes": 12817
+      },
+      "docs/agent-records/runs/RUN-000199.md": {
+        "sha256": "8189f7cfc969eaae43439eaa97cd0ea12fe11c92b85275f7a75a067feb7bea30",
+        "bytes": 12815
+      },
+      "docs/testing/bounded-source-batches-2026-10-24.md": {
+        "sha256": "547489f831192454870117894a65895b8dd7255d555184dc0dd6486d2894de8d",
+        "bytes": 6595
+      },
+      "docs/testing/bounded-source-batches-2026-10-24.json": {
+        "sha256": "8d110bc34e17abafba601de7857e43dd2202c65ceee7cb69923bac4868745fc1",
+        "bytes": 9005
+      },
+      "docs/agent-records/approvals/APP-000032.md": {
+        "sha256": "890bcff73a44bb9c857e61400a5236f2160e80a569ee00c4f738a4c97acaa5c5",
+        "bytes": 26617
+      }
+    }
+  },
+  "reviewed_files_unchanged": true,
+  "independent_review": {
+    "receipt": {
+      "sha256": "e4644bc690f84c54e84891339caad037a423e884b2f1f8677e0e2d81fdf96d60",
+      "bytes": 24066
+    },
+    "runtime": {
+      "name": "review-final",
+      "requested_model": "gpt-6.1-sol",
+      "requested_effort": "high",
+      "thread": "01a16f2c-8b36-7e33-a75a-10e3cc59e5a9",
+      "model": "gpt-6.1-sol",
+      "effort": "high",
+      "native_session": "/home/agent/.codex/sessions/2026/10/24/rollout-2026-10-24T18-29-12-01a16f2c-8b36-7e33-a75a-10e3cc59e5a9.jsonl"
+    },
+    "primary": {
+      "sha256": "0b7a2f7ce55f918e8ed7612208a2a068f34ac42198c9dbfd93b1424aefa0ff2f",
+      "bytes": 632576
+    },
+    "duration_seconds": 800.0852479934692,
+    "nonzero_commands": 1,
+    "native_usage": [
+      {
+        "input_tokens": 3138078,
+        "cached_input_tokens": 3003904,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 33493,
+        "reasoning_output_tokens": 11475
+      }
+    ],
+    "index": {
+      "sha256": "eb8f6cde1ca19c02463a43037ec4b25992a37e56458171c265622629fa54ecd6",
+      "bytes": 375418
+    },
+    "indexed_regular_files": 1922,
+    "indexed_regular_bytes": 10960623,
+    "observed_disposition": {
+      "decision": "approved findings only",
+      "observed_at": "2026-10-24T18:43:15.292384+00:00",
+      "receipt_sha256": "e4644bc690f84c54e84891339caad037a423e884b2f1f8677e0e2d81fdf96d60",
+      "manual_review": "Coordinator read complete APP33 and reconciled all criterion-level outcomes and six conditions. Approves exact findings delivery only; twelve-path operative package remains rejected.",
+      "scope": "Only byte-identical APP33 plus observed-fact attestation additions; five reviewed files unchanged.",
+      "reviewer_errors": "Two read-only JSON-inspection failures, optional freeze-key initial0 superseded by mandatory69 check, and bounded display repairs retained. One nonzero outer CLI aggregate does not erase nested failures.",
+      "remaining_conditions": [
+        "ordinary current protected PR/check/thread/expected-head merge/main verification",
+        "both reviewer indexed regulars directly in each of two final verified external archives plus exact receipts/indexes/metadata/native wrappers",
+        "exact-owned sandbox/rawroot cleanup; preserve original63 pairs and unrelated branch"
+      ],
+      "runtime_identity": "Parent separately observed Sol/high; preserve receipt unknown-to-reviewer statement unchanged."
+    }
+  },
+  "trials_archive": {
+    "archive": "/private/tmp/agentos-boundedbatch-20261024-trials.tar.gz",
+    "sha256": "94f9f8c37467533331d1d128b60ba98d593c4fff895f0417d2acba4b13dcde8a",
+    "bytes": 3147973,
+    "indexed_files": 1545,
+    "index": "evidence/trials-index.json",
+    "verified_all_members": true
+  },
+  "limits": [
+    "19/19 full required D source bodies for both models; Luna max_output_tokens terminal and malformed copied final manifest;600second bound missed,699seconds observed",
+    "No historical verdict regrade; no operative approval",
+    "Ten remaining matrix roots stopped; no fresh first use or broader path acceptance",
+    "Billing unknown"
+  ],
+  "delivery": "PR31 https://github.com/tclasen/AgentOS/pull/31 subject to normal expected-head merge and fetched owning-main verification",
+  "cleanup": "Pending verified complete reviewer archive and exact-owned sandbox/rawroot removal; preserve original63sandboxpairs",
+  "broader_goal": "active",
+  "review_deadline_monitor": {
+    "scope": "review-final only",
+    "started_epoch": 1792866551.180032,
+    "deadline_epoch": 1792868351.180032,
+    "limit_seconds": 1800,
+    "monitor_started_epoch": 1792866576.643991,
+    "status": "returned_before_monitor_signal",
+    "candidate_mutation": false,
+    "note": "Independent parent administrative deadline monitor for final review; no matrix rerun or retroactive enforcement claim.",
+    "run_status": "returned",
+    "observed_epoch": 1792867352.444304,
+    "limitation": "Administrative monitor for final review only; returned before signal. Timeout signal path not exercised or promoted as a harness change; no retroactive D enforcement."
+  },
+  "independent_local_checks": {
+    "regressions": {
+      "tests": 51,
+      "failures": 0,
+      "errors": 0,
+      "skipped": [],
+      "seconds": 3.2739576270000157,
+      "passed": true,
+      "test_source": "byte-identical extracted source-full/tests",
+      "nested_subprocess_default_timeout_seconds": 30
+    },
+    "other": {
+      "manifest_cases": 31,
+      "manifest_all_passed": true,
+      "graph_nodes": 25,
+      "profile_closures": {
+        "portable": 10,
+        "engineering": 22,
+        "portfolio": 18
+      },
+      "unchanged_components": [
+        "activation.md",
+        "learning-queue.md",
+        "work-ledger.md",
+        "git-delivery.md",
+        "telemetry.md",
+        "information-boundaries.md",
+        "brownfield-migration.md",
+        "runtime-native.md",
+        "chief-of-staff.md",
+        "capability-routing.md",
+        "parallel-coordination.md",
+        "durable-handoff.md",
+        "delegation.md",
+        "multi-repo.md",
+        "context-core.md",
+        "effect-reconciliation.md",
+        "independent-evaluation.md",
+        "role-lifecycle.md",
+        "self-improvement.md",
+        "advanced-validation.md",
+        "director.md",
+        "scheduling.md"
+      ],
+      "links": 61,
+      "embedded_cases": [
+        {
+          "case": "normal",
+          "exit": 0,
+          "passed_expected_outcome": true
+        },
+        {
+          "case": "existing",
+          "exit": 1,
+          "passed_expected_outcome": true
+        },
+        {
+          "case": "linked-home",
+          "exit": 1,
+          "passed_expected_outcome": true
+        },
+        {
+          "case": "linked-output",
+          "exit": 1,
+          "passed_expected_outcome": true
+        }
+      ],
+      "historical_roundtrips": [
+        {
+          "case": "bundle-luna",
+          "fields": [
+            "evidence_limits",
+            "messages_verbatim",
+            "parent_review",
+            "source_design_thread",
+            "source_identity_observations_verbatim"
+          ],
+          "all_five_exact": true
+        },
+        {
+          "case": "bundle-sol",
+          "fields": [
+            "evidence_limits",
+            "messages_verbatim",
+            "parent_review",
+            "source_design_thread",
+            "source_identity_observations_verbatim"
+          ],
+          "all_five_exact": true
+        },
+        {
+          "case": "full-luna",
+          "fields": [
+            "evidence_limits",
+            "messages_verbatim",
+            "parent_review",
+            "source_design_thread",
+            "source_identity_observations_verbatim"
+          ],
+          "all_five_exact": true
+        },
+        {
+          "case": "full-sol",
+          "fields": [
+            "evidence_limits",
+            "messages_verbatim",
+            "parent_review",
+            "source_design_thread",
+            "source_identity_observations_verbatim"
+          ],
+          "all_five_exact": true
+        }
+      ],
+      "current_sol_five_fields_exact_to_trace": true,
+      "current_sol_final_message_preserved": true,
+      "cache_probe_scope": "Parent four retained probes inspected; reviewer guarded Python only; no unguarded cache-positive rerun. Full unchanged regressions independently rerun separately."
+    }
+  },
+  "both_reviewer_integrity": {
+    "reviews": {
+      "review-procedure": {
+        "receipt": {
+          "sha256": "890bcff73a44bb9c857e61400a5236f2160e80a569ee00c4f738a4c97acaa5c5",
+          "bytes": 26617
+        },
+        "index": {
+          "sha256": "9486e1edf563bbbdaf0a4432a079ca31f2c4dc8c088c6cbd85b93103ef606fd4",
+          "bytes": 94137
+        },
+        "indexed_files": 572,
+        "indexed_bytes": 1658568,
+        "original_regulars_unchanged": 27,
+        "exact_current_fileset_verified": true
+      },
+      "review-final": {
+        "receipt": {
+          "sha256": "e4644bc690f84c54e84891339caad037a423e884b2f1f8677e0e2d81fdf96d60",
+          "bytes": 24066
+        },
+        "index": {
+          "sha256": "eb8f6cde1ca19c02463a43037ec4b25992a37e56458171c265622629fa54ecd6",
+          "bytes": 375418
+        },
+        "indexed_files": 1922,
+        "indexed_bytes": 10960623,
+        "original_regulars_unchanged": 27,
+        "exact_current_fileset_verified": true
+      }
+    },
+    "reviewed_files_unchanged": true,
+    "review_final": {
+      "runtime": {
+        "name": "review-final",
+        "requested_model": "gpt-6.1-sol",
+        "requested_effort": "high",
+        "thread": "01a16f2c-8b36-7e33-a75a-10e3cc59e5a9",
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "native_session": "/home/agent/.codex/sessions/2026/10/24/rollout-2026-10-24T18-29-12-01a16f2c-8b36-7e33-a75a-10e3cc59e5a9.jsonl"
+      },
+      "seconds": 800.0852479934692,
+      "failed_cli_commands": 1,
+      "primary": {
+        "sha256": "0b7a2f7ce55f918e8ed7612208a2a068f34ac42198c9dbfd93b1424aefa0ff2f",
+        "bytes": 632576
+      }
+    }
+  }
+}
