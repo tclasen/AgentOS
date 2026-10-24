@@ -1,0 +1,120 @@
+{
+  "kind": "Coordinator machine identity and cleanup attestation; not independent acceptance",
+  "task": "TASK-000180",
+  "run": "RUN-000175",
+  "observed_at": "2026-10-24T04:06:30.284938+00:00",
+  "reviewed_head": "0af4b271b40b1d6770f24d2a4f44ca9e9654101f",
+  "reviewed_tree": "357ac530516955cef1f8278b6749644e21c7eba2",
+  "receipt_sha256": "cad9fdf45f87c36d59f2d8c078b148f59fa21eeefadb808ba317cbb329ec757f",
+  "models": [
+    {
+      "run": "c1-baseline-luna-r1",
+      "requested_model": "gpt-6-luna",
+      "thread": "01a16c04-23ff-7cd2-b16d-574e8f5e53d1",
+      "model": "gpt-6-luna",
+      "reasoning": null
+    },
+    {
+      "run": "c2-c2-candidate-sol-r1",
+      "requested_model": "gpt-6.1-sol",
+      "thread": "01a16c09-e19c-76b3-a1bb-d49777d60a91",
+      "model": "gpt-6.1-sol",
+      "reasoning": null
+    },
+    {
+      "run": "c1-baseline-sol-r1",
+      "requested_model": "gpt-6.1-sol",
+      "thread": "01a16c04-2396-75c3-9ae8-d8a6fc2b147f",
+      "model": "gpt-6.1-sol",
+      "reasoning": null
+    },
+    {
+      "run": "review-final-r1",
+      "requested_model": "gpt-6.1-sol",
+      "thread": "01a16c10-cd3a-7e81-9614-af91e691c21b",
+      "model": "gpt-6.1-sol",
+      "reasoning": null
+    },
+    {
+      "run": "c2-c2-baseline-luna-r1",
+      "requested_model": "gpt-6-luna",
+      "thread": "01a16c08-bd4b-7f40-a445-77692f1a61f6",
+      "model": "gpt-6-luna",
+      "reasoning": null
+    },
+    {
+      "run": "c1-c1-candidate-sol-r1",
+      "requested_model": "gpt-6.1-sol",
+      "thread": "01a16c05-5ea7-7923-9c8b-2e96a971b810",
+      "model": "gpt-6.1-sol",
+      "reasoning": null
+    },
+    {
+      "run": "c2-c2-baseline-sol-r1",
+      "requested_model": "gpt-6.1-sol",
+      "thread": "01a16c08-bd1f-7ff2-aa2e-32f6f6712c75",
+      "model": "gpt-6.1-sol",
+      "reasoning": null
+    },
+    {
+      "run": "c1-c1-candidate-luna-r1",
+      "requested_model": "gpt-6-luna",
+      "thread": "01a16c05-5ea5-70b1-9540-e3708a1cb5d9",
+      "model": "gpt-6-luna",
+      "reasoning": null
+    },
+    {
+      "run": "c2-c2-candidate-luna-r1",
+      "requested_model": "gpt-6-luna",
+      "thread": "01a16c09-e2a7-7772-909d-b629c2227652",
+      "model": "gpt-6-luna",
+      "reasoning": null
+    }
+  ],
+  "actual_model_names_match_requested": true,
+  "effort_and_cost": "unknown",
+  "returned_roots": 9,
+  "native_trial_roots": 8,
+  "native_case_results": 120,
+  "trial_nonzero_command_diagnostics": 6,
+  "review_nonzero_command_diagnostics": 2,
+  "regression_tests_passed": 32,
+  "dispositions": {
+    "C1": "retain; baseline4/14 candidate14/14 per model",
+    "C2": "retain; baseline13/16 candidate16/16 per model"
+  },
+  "archives": [
+    {
+      "archive": "/private/tmp/agentos-graph-contracts-20261024-trials.tar.gz",
+      "sha256": "3293ab9206dea7de8343cffd91c247d9dec348d21e99cf1e7f91efea8da5afdb",
+      "bytes": 465719,
+      "indexed_files": 624,
+      "all_indexed_members_verified": true,
+      "index": "evidence/trials-index.json"
+    },
+    {
+      "archive": "/private/tmp/agentos-graph-contracts-20261024-acceptance.tar.gz",
+      "sha256": "208e13bfc748be8115dee0165d7d1883ebdbf9673a01e12e1ab4c064b833bae2",
+      "bytes": 87123,
+      "indexed_files": 31,
+      "all_indexed_members_verified": true,
+      "index": "evidence/acceptance-index.json"
+    }
+  ],
+  "archive_total_bytes": 552842,
+  "cleanup": {
+    "owned_sandbox": "agentos-graph-contracts-20261024",
+    "removed_and_absent": true,
+    "original_sandbox_pairs_preserved": 63,
+    "global_prune_performed": false,
+    "raw_fixture_directory_removed": true
+  },
+  "governance_hashes_unchanged": 14,
+  "delivery": "pending protected PR and fetched owning-main verification; recorded separately after delivery",
+  "global_goal_status": "active",
+  "limits": [
+    "bounded helper contracts, not full onboarding proof",
+    "no claim of model accuracy improvement",
+    "no claim of global exhaustion"
+  ]
+}

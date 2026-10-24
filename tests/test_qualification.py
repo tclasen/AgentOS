@@ -38,6 +38,39 @@ class QualificationTests(unittest.TestCase):
                 with self.assertRaisesRegex(ValueError,'status'):
                     q.select_components(root,[])
 
+    def test_requires_blank_comments_and_trailing_space_preserve_dependencies(self):
+        with tempfile.TemporaryDirectory() as d:
+            root=Path(d);self.fixture_graph(root);p=root/'components/a.md'
+            p.write_text(p.read_text().replace('  requires:\n  - /components/b.md',
+                '  requires:\n\n  # hard dependency\n  - /components/b.md   '))
+            self.assertEqual(q.select_components(root,[])['selected'],['components/a.md','components/b.md'])
+
+    def test_ambiguous_metadata_cannot_silently_remove_dependencies(self):
+        original='agentos:\n  selection: required\n  requires:\n  - /components/b.md\n  provides: []\n'
+        forms=[original.replace('  - /components/b.md','    - /components/b.md'),
+               original.replace('  requires:\n','  requires: []\n  requires:\n'),
+               'agentos:\n  selection: required\n  requires: []\n'+original,
+               original.replace('  selection: required\n','  selection: required\n  selection: conditional\n'),
+               original.replace('agentos:\n','agentos:\n  when_any: []\nother:\n'),
+               original.replace('  - /components/b.md\n',''),
+               original.replace('requires:\n  - /components/b.md','requires: [/components/b.md]'),
+               original.replace('/components/b.md','/components/b.md extra'),
+               original.replace('/components/b.md','"/components/b.md"')]
+        script=Path(__file__).parents[1]/'tools/qualification.py'
+        for front in forms:
+            with self.subTest(front=front),tempfile.TemporaryDirectory() as d:
+                root=Path(d);self.fixture_graph(root);(root/'components/a.md').write_text('---\n'+front+'---\n# A\n')
+                before=q.snapshot(root)
+                result=subprocess.run([sys.executable,str(script),'select',str(root)],capture_output=True,text=True)
+                self.assertEqual(result.returncode,2,result.stderr);self.assertEqual(result.stdout,'')
+                self.assertIn('metadata profile',result.stderr);self.assertEqual(q.snapshot(root),before)
+
+    def test_unterminated_frontmatter_cannot_borrow_body_metadata(self):
+        with tempfile.TemporaryDirectory() as d:
+            root=Path(d);self.fixture_graph(root);p=root/'components/a.md'
+            p.write_text(p.read_text().replace('---\n# a','\n# a'))
+            with self.assertRaisesRegex(ValueError,'unterminated frontmatter'):q.select_components(root,[])
+
     def test_selection_seeds_required_and_closes_requested_dependencies(self):
         root=Path(__file__).parents[1];nodes=q.graph(root/'bundle')
         minimal=q.select_components(root/'bundle',[])
@@ -166,6 +199,41 @@ class QualificationTests(unittest.TestCase):
         self.assertEqual(set(nodes),{x['source'] for x in matrix['components']})
         self.assertTrue(all(x['criteria'] and x['profiles'] for x in matrix['components']))
         self.assertEqual(sum(v['selection']=='required' for v in nodes.values()),10)
+
+    def test_selection_ignores_unselected_broken_edges_but_graph_audits_them(self):
+        for dep in ['/components/missing.md','../outside.md']:
+            with self.subTest(dep=dep),tempfile.TemporaryDirectory() as d:
+                root=Path(d);self.fixture_graph(root)
+                a=root/'components/a.md';a.write_text(a.read_text().replace('requires:\n  - /components/b.md','requires: []'))
+                b=root/'components/b.md';b.write_text(b.read_text().replace('requires: []','requires:\n  - '+dep))
+                self.assertEqual(q.select_components(root,[])['selected'],['components/a.md'])
+                with self.assertRaisesRegex(ValueError,'unknown component'):q.select_components(root,['components/b.md'])
+                with self.assertRaisesRegex(ValueError,'missing or escaping'):q.graph(root)
+
+    def test_closure_detects_cycles_and_only_selected_cycles_block_selection(self):
+        nodes={'a':{'requires':['b']},'b':{'requires':['a']},'c':{'requires':[]}}
+        self.assertEqual(q.closure(nodes,['c']),['c'])
+        with self.assertRaisesRegex(ValueError,'cycle'):q.closure(nodes,['a'])
+        with tempfile.TemporaryDirectory() as d:
+            root=Path(d);self.fixture_graph(root)
+            a=root/'components/a.md';a.write_text(a.read_text().replace('requires:\n  - /components/b.md','requires: []'))
+            b=root/'components/b.md';b.write_text(b.read_text().replace('requires: []','requires:\n  - /components/b.md'))
+            self.assertEqual(q.select_components(root,[])['selected'],['components/a.md'])
+            with self.assertRaisesRegex(ValueError,'cycle'):q.select_components(root,['components/b.md'])
+            with self.assertRaisesRegex(ValueError,'cycle'):q.graph(root)
+
+    def test_selection_and_full_audit_cli_keep_distinct_read_only_contracts(self):
+        script=Path(__file__).parents[1]/'tools/qualification.py'
+        with tempfile.TemporaryDirectory() as d:
+            root=Path(d);self.fixture_graph(root)
+            a=root/'components/a.md';a.write_text(a.read_text().replace('requires:\n  - /components/b.md','requires: []'))
+            b=root/'components/b.md';b.write_text(b.read_text().replace('requires: []','requires:\n  - /components/missing.md'));before=q.snapshot(root)
+            minimal=subprocess.run([sys.executable,str(script),'select',str(root)],capture_output=True,text=True)
+            self.assertEqual(minimal.returncode,0,minimal.stderr);self.assertEqual(json.loads(minimal.stdout)['selected'],['components/a.md'])
+            for command,extra in [('graph',[]),('select',['--component','components/b.md'])]:
+                result=subprocess.run([sys.executable,str(script),command,str(root),*extra],capture_output=True,text=True)
+                self.assertNotEqual(result.returncode,0);self.assertEqual(result.stdout,'')
+            self.assertEqual(q.snapshot(root),before)
 
     def test_dependency_closure_includes_transitive_prerequisites(self):
         nodes={'a':{'requires':['b']},'b':{'requires':['c']},'c':{'requires':[]}}

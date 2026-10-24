@@ -30,30 +30,75 @@ def component_status(front: str) -> str | None:
         raise ValueError('unsupported status scalar; use a plain or quoted word, optionally followed by a comment')
     return next(part for part in value.groups() if part is not None)
 
-def graph(bundle: Path) -> dict:
-    """Read the deliberately small AgentOS metadata profile, not arbitrary YAML."""
+def component_profile(front: str) -> dict | None:
+    """Parse one bounded agentos mapping without dropping unrecognized dependencies."""
+    markers = list(re.finditer(r'^agentos[ \t]*:(.*)$', front, re.M))
+    if not markers:
+        return None
+    if len(markers) != 1 or markers[0].group(1).strip():
+        raise ValueError('agentos must be one block mapping')
+    lines = []
+    for line in front[markers[0].end():].splitlines():
+        if line and not line[0].isspace() and not line.startswith('#'):
+            break
+        lines.append(line)
+    fields = [(i, match) for i, line in enumerate(lines)
+              if (match := re.fullmatch(r'  ([A-Za-z_][A-Za-z0-9_-]*)[ \t]*:(.*)', line))]
+    values = {}
+    for key in ('selection', 'requires'):
+        matches = [(n, i, m) for n, (i, m) in enumerate(fields) if m.group(1) == key]
+        if len(matches) != 1:
+            raise ValueError(f'agentos needs exactly one {key} declaration')
+        n, start, match = matches[0]
+        end = fields[n + 1][0] if n + 1 < len(fields) else len(lines)
+        body = [line.rstrip() for line in lines[start + 1:end]
+                if line.strip() and not line.lstrip().startswith('#')]
+        value = match.group(2).strip()
+        if key == 'selection':
+            if value not in ('required', 'conditional') or body:
+                raise ValueError('unsupported agentos selection scalar')
+            values[key] = value
+        elif value == '[]' and not body:
+            values[key] = []
+        elif not value and body:
+            deps = [re.fullmatch(r'  - ([A-Za-z0-9_./-]+)', line) for line in body]
+            if not all(deps):
+                raise ValueError('unsupported agentos requires list entry')
+            values[key] = [dep.group(1) for dep in deps]
+        else:
+            raise ValueError('agentos requires must be [] or a two-space dash list')
+    return values
+
+def graph(bundle: Path, *, validate_dependencies: bool = True) -> dict:
+    """Read bounded metadata and, by default, audit every component's dependencies."""
     bundle = bundle.resolve()
     nodes = {}
     for path in sorted((bundle / 'components').glob('*.md')):
         if not path.resolve().is_relative_to(bundle):
             raise ValueError(f'component escapes bundle: {path.name}')
         content = path.read_text()
-        front = content.split('---\n', 2)[1] if content.startswith('---\n') else ''
-        marker = re.search(r'^agentos:\n', front, re.M)
-        if marker is None:
+        lines = content.splitlines()
+        front = ''
+        if lines and lines[0] == '---':
+            try:
+                end = lines.index('---', 1)
+            except ValueError:
+                raise ValueError(f'unterminated frontmatter: {path.name}') from None
+            front = '\n'.join(lines[1:end]) + '\n'
+        try:
+            profile = component_profile(front)
+        except ValueError as error:
+            raise ValueError(f'invalid AgentOS metadata profile: {path.name}: {error}') from None
+        if profile is None:
             continue
-        profile = front[marker.end():]
-        selection = re.search(r'^  selection: (required|conditional)$', profile, re.M)
-        requires = re.search(r'^  requires:(?: \[\])?\n((?:  - [^\n]+\n)*)', profile, re.M)
-        if not selection or not requires:
-            raise ValueError(f'invalid AgentOS metadata profile: {path.name}')
-        deps = re.findall(r'^  - (\S+)$', requires.group(1), re.M)
-        for dep in deps:
-            target = (bundle / dep.lstrip('/')).resolve()
-            if not target.is_relative_to(bundle) or not target.is_file():
-                raise ValueError(f'missing or escaping dependency: {path.name} -> {dep}')
+        deps = profile['requires']
+        if validate_dependencies:
+            for dep in deps:
+                target = (bundle / dep.lstrip('/')).resolve()
+                if not target.is_relative_to(bundle) or not target.is_file():
+                    raise ValueError(f'missing or escaping dependency: {path.name} -> {dep}')
         key = path.relative_to(bundle).as_posix()
-        nodes[key] = {'selection': selection.group(1), 'requires': [x.lstrip('/') for x in deps],
+        nodes[key] = {'selection': profile['selection'], 'requires': [x.lstrip('/') for x in deps],
                       'status': component_status(front), 'sha256': sha(path.read_bytes())}
     def visit(node, visiting, visited):
         if node in visiting:
@@ -66,8 +111,9 @@ def graph(bundle: Path) -> dict:
             visit(dep, visiting | {node}, visited)
         visited.add(node)
     visited = set()
-    for node in nodes:
-        visit(node, set(), visited)
+    if validate_dependencies:
+        for node in nodes:
+            visit(node, set(), visited)
     catalog = (bundle / 'components/index.md').read_text().split('## Conditional components')[0]
     listed = {'components/' + x for x in re.findall(r'\]\(([^)]+\.md)\)', catalog)}
     required = {k for k, v in nodes.items() if v['selection'] == 'required'}
@@ -77,23 +123,25 @@ def graph(bundle: Path) -> dict:
 
 def closure(nodes: dict, selected: list[str]) -> list[str]:
     result = set()
-    def visit(node):
+    def visit(node, visiting):
+        if node in visiting:
+            raise ValueError(f'dependency cycle: {node}')
         if node in result:
             return
         if node not in nodes:
             raise ValueError(f'unknown component: {node}')
         if nodes[node].get('status') == 'deprecated':
             raise ValueError(f'selected component is deprecated: {node}')
-        result.add(node)
         for dep in nodes[node]['requires']:
-            visit(dep)
+            visit(dep, visiting | {node})
+        result.add(node)
     for node in selected:
-        visit(node)
+        visit(node, set())
     return sorted(result)
 
 def select_components(bundle: Path, requested: list[str]) -> dict:
     """Compute structural selection only; this grants no authority or source-read credit."""
-    nodes = graph(bundle)
+    nodes = graph(bundle, validate_dependencies=False)
     required = sorted(k for k, v in nodes.items() if v['selection'] == 'required')
     requested = sorted(set(requested))
     selected = closure(nodes, required + requested)
