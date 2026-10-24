@@ -1,0 +1,61 @@
+{
+  "observed_at": "2026-10-24T11:49:39.538671+00:00",
+  "task": "TASK-000195",
+  "run": "RUN-000190",
+  "reviewed_head": "b41cdd2caa505d8676eb80bb1a724b509b158e59",
+  "reviewed_tree": "8bdb350376a8e9d455e0faaa8dc46c1366217b3a",
+  "reviewed_files": {
+    "docs/agent-records/runs/RUN-000190.md": "12e1f785242aeca15969c0b5abe4a9a05bb257bf1973ac2f704632957a78871c",
+    "docs/agent-records/tasks/project/TASK-000195.md": "02dfa39b2ba772b2360ce13b461495daea530ac00a59317d83eaf8ed3a92aa4f",
+    "docs/testing/proposed-selection-2026-10-24.json": "fd531b1cf3b0a492d682bf87d4c33968c3a3af2bc96533e84873db882ebf7744",
+    "docs/testing/proposed-selection-2026-10-24.md": "e90069852b388350e4894beb37d1727f1faefe44838d9192d7001a7ee652b5c3",
+    "tests/test_qualification.py": "72e057d967711fedba71422226d3f4bbbd1c2fc7ae721e6d0694b1da83b2face",
+    "tools/README.md": "57decff442ae2f21ffd8faab49269c8cc1df356fc2b0a8c18431de2dfeefcd19",
+    "tools/qualification.py": "e6a45ed32a78c713977338e61919a83c6ec545d92286d50ba46aa7917f1047d7"
+  },
+  "receipt_sha256": "db710d04b6f74a81ed8208915207afd86bc3700a60c029e80c1b0c873b8f4c0e",
+  "reviewer_evidence_index_sha256": "b91fdf56126bf363cb02e5c04e2e85235aead945ed00f6e502d0dfac7fe48862",
+  "reviewer_index_verified_all_entries": true,
+  "reviewer": {
+    "name": "review-final",
+    "expected_model": "gpt-6.1-sol",
+    "expected_effort": "high",
+    "expected_cwd": "/private/tmp/agentos-selection-20261024/work/review-final",
+    "thread": "01a16db7-bb41-7f03-8e48-b0c33e3106ec",
+    "model": "gpt-6.1-sol",
+    "effort": "high",
+    "native_session": "/home/agent/.codex/sessions/2026/10/24/rollout-2026-10-24T11-42-00-01a16db7-bb41-7f03-8e48-b0c33e3106ec.jsonl"
+  },
+  "reviewer_duration_seconds": 395.19960284233093,
+  "reviewer_raw_usage": [
+    {
+      "input_tokens": 2136234,
+      "cached_input_tokens": 2017024,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 19417,
+      "reasoning_output_tokens": 3700
+    }
+  ],
+  "reviewer_outer_nonzero_commands": 2,
+  "reviewer_diagnostics": "Retained mistaken archive prefix, operative-file-count assertion and dependent missing diff read, and integer-as-list inventory inspection; one diagnosed recovery per operation, no candidate repair. Two outer commands failed; failures inside later aggregates remain in raw evidence.",
+  "reviewer_regressions": {
+    "tests": 49,
+    "unittest_seconds": 3.191,
+    "wrapper_seconds": 3.2359691690000005
+  },
+  "parent_status_reader_diagnostic": "Naive JSON parsing encountered the retained non-JSON sbx startup line during live status inspection; recovered with JSON-event filtering while preserving the raw line. No candidate/evaluator effect.",
+  "trials_archive": {
+    "archive": "/private/tmp/agentos-selection-20261024-trials.tar.gz",
+    "sha256": "7ae154bc61e7f2038c51a7704fcdd637edcc93e0f2feb074f59a41775f78ee6f",
+    "bytes": 607448,
+    "indexed_files": 294,
+    "index": "evidence/trials-index.json",
+    "verified_all_members": true
+  },
+  "all_three_native_roots_returned": true,
+  "reviewed_hashes_unchanged": true,
+  "remote_delivery": "pending; not yet observed",
+  "acceptance_export_and_cleanup": "pending; not yet observed",
+  "full_task_billing_and_cost": "unknown",
+  "broader_goal": "active"
+}
