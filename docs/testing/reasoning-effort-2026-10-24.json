@@ -1,0 +1,551 @@
+{
+  "task": "TASK-000188",
+  "run": "RUN-000183",
+  "base": "3def1b566f99c07e076c79d85f7b2cbb35880383",
+  "operative_candidate": "7c5aab456b22b449948fe380f4647700d3bf3ae3",
+  "observed_at": "2026-10-24T08:05:10.309632+00:00",
+  "recommendations": {
+    "A": {
+      "change": "Optional --reasoning-effort; separate requested and unknown actual fields, no override when omitted",
+      "decision": "Propose adoption pending independent APP16 and normal protected delivery",
+      "criteria": "Fixed Plan1 instrumentation acceptance, independently evaluated from B",
+      "validation": "41regressions including fresh/resume command routing, default omission, invalid syntax before effects; six native high turns across bothmodels, two unsetLuna turns; native metadata matches requested fields",
+      "limits": "Only high exercised natively; other accepted labels and resume argument placement unit-tested, model support must be checked at invocation; catalog includes ultra for Sol but not Luna; omitted actualeffort null does not prove effectivelevel"
+    },
+    "B": {
+      "change": "Use explicit high effort as sufficient two-model portable onboarding remedy",
+      "decision": "Reject",
+      "criteria": "All4high checkout/bundle-only Sol/Luna D/I/U flows, unchanged original duty/exposure/scenario gates",
+      "reason": "High Luna I read4of11bodies and no implementation/qualification/handoff procedures, missed selected model/reasoning duty and concrete scenarios; no truncation explanation",
+      "remaining_paths": "Unstarted bundle I/allU not credited; already admitted Sol I completed bounded local qualification. No new defaultmodel/effort or bundle change."
+    }
+  },
+  "bundle_changes": false,
+  "runtime": {
+    "sandbox": "agentos-reasoning-20261024",
+    "id": "1ffefee6-ebc8-4127-a069-f39ba3dd8a0b",
+    "codex_before": "0.149.1",
+    "codex_after": "0.164.0",
+    "catalog_source": "native app-server model/list after update; no model invocation",
+    "catalog": {
+      "models": [
+        {
+          "id": "gpt-6.1-sol",
+          "model": "gpt-6.1-sol",
+          "defaultReasoningEffort": "low",
+          "supportedReasoningEfforts": [
+            {
+              "reasoningEffort": "low",
+              "description": "Fast responses with lighter reasoning"
+            },
+            {
+              "reasoningEffort": "medium",
+              "description": "Balances speed and reasoning depth for everyday tasks"
+            },
+            {
+              "reasoningEffort": "high",
+              "description": "Greater reasoning depth for complex problems"
+            },
+            {
+              "reasoningEffort": "xhigh",
+              "description": "Extra high reasoning depth for complex problems"
+            },
+            {
+              "reasoningEffort": "max",
+              "description": "Maximum reasoning depth for the hardest problems"
+            },
+            {
+              "reasoningEffort": "ultra",
+              "description": "Maximum reasoning with automatic task delegation"
+            }
+          ]
+        },
+        {
+          "id": "gpt-6-luna",
+          "model": "gpt-6-luna",
+          "defaultReasoningEffort": "medium",
+          "supportedReasoningEfforts": [
+            {
+              "reasoningEffort": "low",
+              "description": "Fast responses with lighter reasoning"
+            },
+            {
+              "reasoningEffort": "medium",
+              "description": "Balances speed and reasoning depth for everyday tasks"
+            },
+            {
+              "reasoningEffort": "high",
+              "description": "Greater reasoning depth for complex problems"
+            },
+            {
+              "reasoningEffort": "xhigh",
+              "description": "Extra high reasoning depth for complex problems"
+            },
+            {
+              "reasoningEffort": "max",
+              "description": "Maximum reasoning depth for the hardest problems"
+            }
+          ]
+        }
+      ],
+      "nextCursor": null,
+      "source": "native codex app-server model/list, no model turn"
+    }
+  },
+  "local_checks": {
+    "profiles": {
+      "portable": 10,
+      "engineering": 22,
+      "portfolio": 18
+    },
+    "bundle_byte_identical_to_base": true,
+    "components": 25,
+    "regressions": 41,
+    "governance": {
+      "AGENTS.md": true,
+      "policies/AUTHORITY.md": true,
+      "policies/SCOPE_BOUNDARIES.md": true,
+      "policies/PLANNING.md": true,
+      "shared/WORK_GRAPH.md": true,
+      "shared/RECORD_FORMATS.md": true,
+      "policies/PROJECT_CHANGES.md": true,
+      "policies/MODEL_SELECTION.md": true,
+      "policies/RESOURCE_BUDGETS.md": true,
+      "shared/CONTEXT_MANAGEMENT.md": true,
+      "policies/ACCEPTANCE.md": true,
+      "policies/APPROVALS.md": true,
+      "policies/GIT.md": true,
+      "policies/CHANGE_CONTROL.md": true,
+      "agents/coordinator/AGENTS.md": true
+    }
+  },
+  "terminal_audit": {
+    "trials": 8,
+    "peak_concurrency": 2,
+    "all_returned": true,
+    "all_under_600_seconds": true,
+    "models_matched": true,
+    "effort_values_matched_requests": true,
+    "unset_effective_reasoning": "Unknown; native turn_context effort null is not proof of catalog default applied",
+    "nonzero_outer_command_items": 5,
+    "masked_internal_assertions": [
+      {
+        "run": "full-luna-I",
+        "items": [
+          "item_13",
+          "item_16"
+        ],
+        "outer_exit": 0
+      }
+    ],
+    "governance_unchanged": true
+  },
+  "trials": [
+    {
+      "name": "bundle-luna-D",
+      "thread": "01a16ce0-9539-7771-b7b2-32d10156c4fa",
+      "requested_model": "gpt-6-luna",
+      "observed_model": "gpt-6-luna",
+      "requested_effort": "high",
+      "observed_effort_field": "high",
+      "seconds": 71.21478199958801,
+      "selected_components": 11,
+      "full_selected_bodies_in_successful_output": 11,
+      "nonzero_command_items": 1,
+      "protected_unchanged": true,
+      "full_source_reads": [
+        "components/activation.md",
+        "components/authority.md",
+        "components/capability-routing.md",
+        "components/chief-of-staff.md",
+        "components/context-core.md",
+        "components/delegation.md",
+        "components/delivery-acceptance.md",
+        "components/director.md",
+        "components/resource-budgets.md",
+        "components/role-lifecycle.md",
+        "components/runtime-native.md",
+        "components/self-improvement.md",
+        "concepts/progressive-context.md",
+        "concepts/role-capability-instance.md",
+        "core/constitution.md",
+        "core/graph-routing.md",
+        "core/installer-policy.md",
+        "interviews/bootstrap.md",
+        "phases/design.md",
+        "phases/discover.md",
+        "start.md"
+      ]
+    },
+    {
+      "name": "bundle-sol-D",
+      "thread": "01a16ce2-0d64-7b02-973b-181cc83f1106",
+      "requested_model": "gpt-6.1-sol",
+      "observed_model": "gpt-6.1-sol",
+      "requested_effort": "high",
+      "observed_effort_field": "high",
+      "seconds": 197.40711212158203,
+      "selected_components": 11,
+      "full_selected_bodies_in_successful_output": 11,
+      "nonzero_command_items": 1,
+      "protected_unchanged": true,
+      "full_source_reads": [
+        "components/activation.md",
+        "components/authority.md",
+        "components/capability-routing.md",
+        "components/chief-of-staff.md",
+        "components/context-core.md",
+        "components/delegation.md",
+        "components/delivery-acceptance.md",
+        "components/director.md",
+        "components/index.md",
+        "components/resource-budgets.md",
+        "components/role-lifecycle.md",
+        "components/self-improvement.md",
+        "concepts/evidence-levels.md",
+        "concepts/progressive-context.md",
+        "concepts/role-capability-instance.md",
+        "core/constitution.md",
+        "core/graph-routing.md",
+        "core/installer-policy.md",
+        "interviews/bootstrap.md",
+        "phases/design.md",
+        "phases/discover.md",
+        "phases/handoff.md",
+        "phases/implement.md",
+        "phases/qualify.md",
+        "start.md"
+      ]
+    },
+    {
+      "name": "default-luna-D",
+      "thread": "01a16ce2-589a-7301-ba39-26bfc58d42e9",
+      "requested_model": "gpt-6-luna",
+      "observed_model": "gpt-6-luna",
+      "requested_effort": null,
+      "observed_effort_field": null,
+      "seconds": 28.504560947418213,
+      "selected_components": 10,
+      "full_selected_bodies_in_successful_output": 10,
+      "nonzero_command_items": 2,
+      "protected_unchanged": true,
+      "full_source_reads": [
+        "components/activation.md",
+        "components/authority.md",
+        "components/capability-routing.md",
+        "components/chief-of-staff.md",
+        "components/context-core.md",
+        "components/delegation.md",
+        "components/delivery-acceptance.md",
+        "components/director.md",
+        "components/index.md",
+        "components/role-lifecycle.md",
+        "components/self-improvement.md",
+        "core/constitution.md",
+        "core/graph-routing.md",
+        "core/installer-policy.md",
+        "interviews/bootstrap.md",
+        "phases/design.md",
+        "phases/discover.md"
+      ]
+    },
+    {
+      "name": "default-luna-I",
+      "thread": "01a16ce3-5b80-7820-9b5e-1167ea074129",
+      "requested_model": "gpt-6-luna",
+      "observed_model": "gpt-6-luna",
+      "requested_effort": null,
+      "observed_effort_field": null,
+      "seconds": 48.425780057907104,
+      "selected_components": 10,
+      "full_selected_bodies_in_successful_output": 10,
+      "nonzero_command_items": 0,
+      "protected_unchanged": true,
+      "full_source_reads": [
+        "components/activation.md",
+        "components/authority.md",
+        "components/capability-routing.md",
+        "components/chief-of-staff.md",
+        "components/context-core.md",
+        "components/delegation.md",
+        "components/delivery-acceptance.md",
+        "components/director.md",
+        "components/index.md",
+        "components/role-lifecycle.md",
+        "components/self-improvement.md",
+        "concepts/evidence-levels.md",
+        "core/constitution.md",
+        "core/graph-routing.md",
+        "core/installer-policy.md",
+        "interviews/bootstrap.md",
+        "phases/discover.md",
+        "phases/handoff.md",
+        "phases/implement.md",
+        "phases/qualify.md",
+        "start.md"
+      ]
+    },
+    {
+      "name": "full-luna-D",
+      "thread": "01a16cde-971b-7fa1-9d25-cb40bbd36d72",
+      "requested_model": "gpt-6-luna",
+      "observed_model": "gpt-6-luna",
+      "requested_effort": "high",
+      "observed_effort_field": "high",
+      "seconds": 79.48720598220825,
+      "selected_components": 11,
+      "full_selected_bodies_in_successful_output": 11,
+      "nonzero_command_items": 0,
+      "protected_unchanged": true,
+      "full_source_reads": [
+        "components/activation.md",
+        "components/authority.md",
+        "components/capability-routing.md",
+        "components/chief-of-staff.md",
+        "components/context-core.md",
+        "components/delegation.md",
+        "components/delivery-acceptance.md",
+        "components/director.md",
+        "components/index.md",
+        "components/resource-budgets.md",
+        "components/role-lifecycle.md",
+        "components/self-improvement.md",
+        "concepts/progressive-context.md",
+        "concepts/role-capability-instance.md",
+        "core/constitution.md",
+        "core/graph-routing.md",
+        "core/installer-policy.md",
+        "interviews/bootstrap.md",
+        "phases/design.md",
+        "phases/discover.md",
+        "start.md"
+      ]
+    },
+    {
+      "name": "full-luna-I",
+      "thread": "01a16ce4-4ba7-7d12-a126-45826d6fa38e",
+      "requested_model": "gpt-6-luna",
+      "observed_model": "gpt-6-luna",
+      "requested_effort": "high",
+      "observed_effort_field": "high",
+      "seconds": 169.74979710578918,
+      "selected_components": 11,
+      "full_selected_bodies_in_successful_output": 4,
+      "nonzero_command_items": 0,
+      "protected_unchanged": true,
+      "full_source_reads": [
+        "components/activation.md",
+        "components/chief-of-staff.md",
+        "components/delivery-acceptance.md",
+        "components/director.md",
+        "core/constitution.md",
+        "core/graph-routing.md",
+        "core/installer-policy.md",
+        "interviews/bootstrap.md",
+        "phases/discover.md",
+        "start.md"
+      ]
+    },
+    {
+      "name": "full-sol-D",
+      "thread": "01a16cde-9e83-7561-92d6-030c8de62512",
+      "requested_model": "gpt-6.1-sol",
+      "observed_model": "gpt-6.1-sol",
+      "requested_effort": "high",
+      "observed_effort_field": "high",
+      "seconds": 222.53915405273438,
+      "selected_components": 11,
+      "full_selected_bodies_in_successful_output": 11,
+      "nonzero_command_items": 0,
+      "protected_unchanged": true,
+      "full_source_reads": [
+        "components/activation.md",
+        "components/authority.md",
+        "components/capability-routing.md",
+        "components/chief-of-staff.md",
+        "components/context-core.md",
+        "components/delegation.md",
+        "components/delivery-acceptance.md",
+        "components/director.md",
+        "components/index.md",
+        "components/resource-budgets.md",
+        "components/role-lifecycle.md",
+        "components/self-improvement.md",
+        "concepts/evidence-levels.md",
+        "concepts/progressive-context.md",
+        "concepts/role-capability-instance.md",
+        "core/constitution.md",
+        "core/graph-routing.md",
+        "core/installer-policy.md",
+        "interviews/bootstrap.md",
+        "phases/design.md",
+        "phases/discover.md",
+        "phases/handoff.md",
+        "phases/implement.md",
+        "phases/qualify.md",
+        "start.md"
+      ]
+    },
+    {
+      "name": "full-sol-I",
+      "thread": "01a16ce5-90cf-7c72-8ed4-927ee9d193db",
+      "requested_model": "gpt-6.1-sol",
+      "observed_model": "gpt-6.1-sol",
+      "requested_effort": "high",
+      "observed_effort_field": "high",
+      "seconds": 571.4260220527649,
+      "selected_components": 11,
+      "full_selected_bodies_in_successful_output": 11,
+      "nonzero_command_items": 1,
+      "protected_unchanged": true,
+      "full_source_reads": [
+        "components/activation.md",
+        "components/authority.md",
+        "components/capability-routing.md",
+        "components/chief-of-staff.md",
+        "components/context-core.md",
+        "components/delegation.md",
+        "components/delivery-acceptance.md",
+        "components/director.md",
+        "components/index.md",
+        "components/resource-budgets.md",
+        "components/role-lifecycle.md",
+        "components/self-improvement.md",
+        "concepts/evidence-levels.md",
+        "concepts/progressive-context.md",
+        "concepts/role-capability-instance.md",
+        "core/constitution.md",
+        "core/graph-routing.md",
+        "core/installer-policy.md",
+        "interviews/bootstrap.md",
+        "phases/design.md",
+        "phases/discover.md",
+        "phases/handoff.md",
+        "phases/implement.md",
+        "phases/qualify.md",
+        "start.md"
+      ]
+    }
+  ],
+  "evaluations": {
+    "default-luna": {
+      "fixture": "default-luna",
+      "phase": "I",
+      "verifier": "Coordinator direct full-artifact inspection",
+      "observed_at": "2026-10-24T07:52:03.353307+00:00",
+      "decision": "incomplete; no U",
+      "selection": 10,
+      "limitations": [
+        "Control D startup-source successful-command exposure gap retained separately; not a clean default/high comparison.",
+        "All ten selected components read; optional resource-budgets not selected, so do not score its model/reasoning rule as a missing selected duty."
+      ],
+      "findings": [
+        {
+          "criterion": "Complete bounded improvement evaluation/retention/recovery exercise",
+          "outcome": "failed",
+          "evidence": ".agentos/evidence/lessons.md scenario1",
+          "observation": "Accepted-only self-referential new evidence-entry correction. No concrete rejected/inconclusive evaluation or scoped recovery exercise. Prior content pointer is described as version immediately preceding this entry; no retained prior content/recovery artifact demonstrated."
+        },
+        {
+          "criterion": "Meaningful assignment, reconfiguration and active-role lifecycle scenarios",
+          "outcome": "failed",
+          "evidence": ".agentos/evidence/lessons.md scenarios3-5",
+          "observation": "Generic procedure recitation: local Markdown may be assigned with allfields; unspecified organization change; unspecified optional role/assignment. No particular assignment/scoped result/evidence return, actual prior/candidate reconfiguration, or specific active ownership/contract transfer/discovery trace."
+        },
+        {
+          "criterion": "Distinguish instructions from qualification",
+          "outcome": "failed",
+          "evidence": "Final response Installation complete vs artifacts",
+          "observation": "Several useful duties preserved, including user responsiveness and full improvement retention procedure. These instructions do not establish the missing exercises. Simulation label alone neither fails nor passes; missing concrete trace is decisive."
+        }
+      ]
+    },
+    "full-luna": {
+      "fixture": "full-luna",
+      "phase": "I",
+      "verifier": "Coordinator complete generated Markdown and raw command inspection",
+      "observed_at": "2026-10-24T07:55:15.378858+00:00",
+      "decision": "B rejected; installation incomplete; no U",
+      "findings": [
+        {
+          "criterion": "Full selected component and procedure exposure before implementation",
+          "outcome": "failed",
+          "observation": "Only activation, chief-of-staff, delivery-acceptance, director bodies in successful output; seven other selected sources and implement/qualify/handoff procedures absent. No output truncation explains this; graph/hash/selection metadata is not full-source read credit. Agent claimed all11read and complete closure."
+        },
+        {
+          "criterion": "All selected operating duties",
+          "outcome": "failed",
+          "evidence": ".agentos/operations.md capability and resource gate",
+          "observation": "No task-appropriate model/reasoning selection rule from selected resource-budgets component. Director user accessibility is present, so do not repeat prior missing-duty finding for it."
+        },
+        {
+          "criterion": "Concrete selected operating scenarios and correction outcomes",
+          "outcome": "failed",
+          "evidence": ".agentos/records/improvements.md",
+          "observation": "One actual accepted README sentence correction, but no concrete rejected/inconclusive evaluation or scoped restoration exercise. Other scenarios are generic claimed traces, lacking specific assignment/work/return, prior/candidate reconfiguration, active role/owner transfer/discovery, and cumulative budget numbers."
+        },
+        {
+          "criterion": "Usable prior-content retention accuracy",
+          "outcome": "failed precision claim",
+          "observation": "Quoted rollback paragraph initially contained Markdown links; following link-check failure the record changed them to plain file names while still calling it exact pre-change paragraph. Python item10 preserves actual prior linked paragraph. Final record is not exact prior bytes."
+        },
+        {
+          "criterion": "Failed check preservation",
+          "outcome": "retained with limitation",
+          "observation": "No nonzero outer commanditems, but item13 link assertion and item16 phrase assertion failed before final successful gitstatus masked shell exit. Agent records one diagnosed retry and later phrase mismatch; final linker passed29. Do not count the whole check command as a pass."
+        }
+      ],
+      "preserved": [
+        "source identity explicitly compared against retained actual manifest beforewrites, then later helper verification against saved currentmanifest; distinguish these",
+        "protected target/Git/source unchanged",
+        "operating improvement procedure retains failed/accepted/rejected/inconclusive outcomes",
+        "user accessibility and authority root anchoring preserved"
+      ],
+      "status_claim": "Final says complete portable procedural setup; current evidence does not support complete installation."
+    },
+    "full-sol": {
+      "fixture": "full-sol",
+      "phase": "I",
+      "decision": "bounded local procedural duties and qualification supported; no U because B already rejected",
+      "verifier": "Coordinator full instructions/obligation mapping/JSON and raw script inspection plus independent read-only evaluator replay",
+      "complete_source_exposure": true,
+      "selected": 11,
+      "actual_local_assignment": "Predeclared INSTALL-LOCAL-1 CoS capability probe and single registry-row update, returned and reconciled with saved before/after content",
+      "actual_corrections": [
+        "accepted typo correction",
+        "rejected CoS removal with scoped restoration preserving intervening note",
+        "inconclusive latency claim restored despite passing invariants"
+      ],
+      "evaluator_replay": true,
+      "evaluator_sha256": "0375804b17a78d23c4e95a170b73b5ee9d685c3b8bd6c14f047af704ee97a337",
+      "final_artifact_hashes_match": true,
+      "simulations": "Concrete identity, authority, capability alternatives, unsupported completion claim, optional Link Auditor v1 active SIM-A transfer to CoS/discovery update/retirement, cumulative0\u21921\u21922 and third refusal",
+      "nonzero_command_items": 1,
+      "failure": "Preflight excluded runtime-protected .codex/.aws/.agents directories; named-only inventory corrected once. Instructions patch ran after failed preflight; no out-of-scope mutation and protected hashes preserved. Source identity verification succeeded before later inventory assertion failed.",
+      "native_runtime_identity": "Unverified; no U or fresh delegated root this round",
+      "scope": "All protected project/Git/source preserved, links resolve",
+      "duration_seconds": 571.4260220527649
+    }
+  },
+  "control_admission_limitation": {
+    "observed_at": "2026-10-24T07:50:44.807037+00:00",
+    "name": "default-luna",
+    "original_decision_retained": "controls/default-luna-D-decision.json",
+    "finding": "Parent selected-component/identity admission checker passed all10selected reads and exact46file manifest but did not require startup read in successful outer command. Audit found start.md complete only in command whose second cat request.json failed. No successful-output startup credit under frozen evaluator.",
+    "scope": "Only default control; high D startup successful outputs observed.",
+    "action": "Already admitted default-luna-I may return as diagnostic; no U on this control and no clean causal comparison. No source or prompt repair or semantic retry. Preserve original decision and native attempt.",
+    "authority": "I remains within expressly granted disposable installation paths; its admission is not installation qualification."
+  },
+  "archive": {
+    "archive": "/private/tmp/agentos-reasoning-20261024-trials.tar.gz",
+    "sha256": "ec644b1916e18055a7355f6980b2d644cbc82bdee5a342cf346e52a9b3e12d03",
+    "bytes": 2276462,
+    "indexed_files": 1374,
+    "index": "evidence/trials-index.json",
+    "verified_all_members": true
+  },
+  "independent_review": "APP-000016 pending; exact report/source head to be reviewed",
+  "cleanup": "Pending verified independent review archive then exact owned sandbox/raw cleanup; preserve63original identities",
+  "next_hypothesis": "Test explicit fresh-resumption source-body loading at the entrypoint; previous phase read flags are not current-context source content. Inference for a separate future candidate, not validated here.",
+  "global_goal": "Active; no claim of all-model/all-path onboarding completion or statistical reliability."
+}
