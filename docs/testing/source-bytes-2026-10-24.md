@@ -1,0 +1,24 @@
+# Source-byte identity qualification — 2026-10-24
+
+**Reject both proposed prose revisions. AgentOS instructions, code and tests remain unchanged.** Existing source-continuity guidance did not reliably produce accurate byte identities in these Luna planning samples. Adding explicit hash wording, then a recomputation instruction, did not satisfy every original criterion. The next candidate should address deterministic identity generation and verification; neither rejected revision is promoted.
+
+The [machine record](source-bytes-2026-10-24.json) binds original criteria, each actual artifact/native root, failures and observed identities. Codex was updated0.149.1→0.164.0 before12 fresh trial roots using gpt-6.1-sol/gpt-6-luna, agents0. Actual model names match all12 requests.
+
+| Planning source identity | Sol | Luna | Disposition |
+| --- | --- | --- | --- |
+| Baseline, modified source | Accurate20-path manifest and reproducible aggregate | Notices dirty source, supplies no byte identity | Gap retained |
+| Baseline, non-Git archive | Reproducible whole-source digest | Wrong delegation digest; design source omitted | Gap retained |
+| Candidate1: explicit paths/hashes | Not run after material failure | Dirty: wrong capability-routing hash. Archive: correct referenced conversation manifest | Reject |
+| Candidate2: generate and recheck emitted identity | Accurate20-path manifests in both cases | Dirty: reproducible20-path digest. Archive: stated order does not reproduce digest | Reject |
+
+Candidate2 archive Luna reports digest `ffb1bd45222f4c10f57a067be9ccc43c5b470d8aa50bd39160d20ba14cf9b69c`. Its stated absolute-path recipe computes `be282321b4ebe521a04f9da32746ab853ef3b98fbdca90b93b8b14b3d0f99a87`: the actual command puts design.md after components, whereas the proposal puts it before them. Correct tool observations do not repair a contradictory emitted identity. Candidate1 archive is credited under the original proposal-or-conversation allowance; its proposal references the correct18-path manifest in successful tool output. No new standalone-artifact rule was imposed after testing.
+
+All10 planning roots fully read all ten mandatory components (100 observed reads) and selected the required closure. This does not establish full implementation quality. Candidate2 archive Luna additionally proposed an optional formatter-specialist file; it was not independently qualified or adopted. Across12 roots, only permitted proposal.md/results.json outputs were added; original source/input files, target Git heads/indexes and source status were preserved.
+
+Final unchanged-source preflight used correct manifests for three controlled cases per model: matching non-Git source, changed archive authority, and unchanged Git HEAD with dirty authority bytes. **Five of six literal decisions match** the fixed expected labels. Sol caseC detected the dirty file, independently verified all46 committed blobs against the approved manifest, and chose continue using approved Git objects without overwriting the worktree. This follows the existing intact-snapshot recovery path; the original expected reconcile-label mismatch is retained separately, not silently rescored. Neither model used dirty bytes as approved content. These are preflight assessments, not actual installation.
+
+Diagnostics remain visible: 11 nonzero command items; one Luna attempted relative proposal write in the read-only source failed even though a following digest command made the overall exit0; only the later target write succeeded. Sol candidate2 dirty completed its CLI turn with exit0 after a transport reconnection, but the strict harness manifest remains **failed** because it retains that error event. Its artifact was checked independently; this is not a clean whole-run pass. No native execution was retried to obtain a cleaner label. One parent inspection initially parsed sbx progress as JSON, failed without mutation, and was corrected once.
+
+Original criteria were frozen before trials. Plan2 was recorded before the one candidate revision, raising the bounded total to14 invocations;12 trial roots plus fresh review fit that bound. Both failed candidates and all source/prompt/fixture versions remain archived.32 tests pass on the unchanged operative source. One sample per condition, uneven candidate1 exposure, and retained diagnostics prevent model-reliability or broad benefit claims. Effort/cost are unknown. The weaker-model identity-generation gap remains unresolved; this round does not establish full path qualification or global exhaustion.
+
+Verified local trial archive `agentos-source-bytes-20261024-trials.tar.gz`: 1500835 bytes, 1441 indexed members, SHA256 `91c9bc272f2a42fafb0245ae257cde4e527dfcf419acb127fc5ef1688fefcd65`. Raw logs/fixture data remain local. Independent acceptance covers the rejection report, followed by normal protected delivery and verified owned-only cleanup; separate attestations record observed completion.
