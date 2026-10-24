@@ -1,0 +1,85 @@
+{
+  "observed_at": "2026-10-24T08:50:16.136520+00:00",
+  "reviewed_head": "f41e72b27cdb0aaeb9d50aa5106e1ee0e7bd6606",
+  "reviewed_tree": "43c11b7cb11b7ad0799615225c7029f8d5f13419",
+  "reviewed_paths": {
+    "docs/agent-records/runs/RUN-000184.md": "b7b7d7a81be365d026488935a8e6e5483c1f16660d6ea6668082532051a13025",
+    "docs/agent-records/tasks/project/TASK-000189.md": "929b0f6609a81639a408b0ad9c735a2b5e77f21ea6f818ced57267569c99040a",
+    "docs/testing/resumption-routing-2026-10-24.json": "df907848d47014d8288ad87e99ebe9d4bbbc14595e1ec0c021e5259c2ca5074b",
+    "docs/testing/resumption-routing-2026-10-24.md": "7db15f762af082d5740037f0a789036d71624070eb18b80eb5cf5852a8ef9008"
+  },
+  "receipt_sha256": "8edf8e23058b40a1998d9597d38e7b6337cd64ac4b2025a26c9b06a2a8955523",
+  "review_status": "returned",
+  "review_duration_seconds": 499.0640070438385,
+  "review_native_observation": {
+    "name": "review-final",
+    "requested_model": "gpt-6.1-sol",
+    "requested_reasoning_effort": "high",
+    "thread": "01a16d12-15c8-7f80-a03b-1366a9631607",
+    "model": "gpt-6.1-sol",
+    "effort": "high",
+    "native_session": "/home/agent/.codex/sessions/2026/10/24/rollout-2026-10-24T08-41-04-01a16d12-15c8-7f80-a03b-1366a9631607.jsonl"
+  },
+  "review_failed_commands": [
+    {
+      "exit_code": 127,
+      "output": "/bin/bash: line 1: python: command not found\n"
+    },
+    {
+      "exit_code": 1,
+      "output": "Traceback (most recent call last):\n  File \"/private/tmp/agentos-resumption-20261024/work/review-final/verify_review.py\", line 11, in <module>\n    g=q.graph(R/'bundle'); print('graph',len(g['components'])); print('profiles stored keys',list(j(C/'profile-selections.json')))\n                                             ~^^^^^^^^^^^^^^\nKeyError: 'components'\n"
+    }
+  ],
+  "six_native_roots_terminal": true,
+  "review_allowance": "Only byte-identical APP-000017 and separately labeled observed attestation; four reviewed hashes unchanged",
+  "candidate_clean_before_receipt": true,
+  "trial_export": {
+    "archive": "/private/tmp/agentos-resumption-20261024-trials.tar.gz",
+    "sha256": "98c58aa9ed118ca64430cbd05af5ec67963904fcc46f9eec5b409bef73f143c7",
+    "bytes": 1741329,
+    "indexed_files": 1017,
+    "index": "evidence/trials-index.json",
+    "verified_all_members": true
+  },
+  "cleanup": {
+    "observed_at": "2026-10-24T08:50:01.590845+00:00",
+    "owned_sandbox_removed": {
+      "name": "agentos-resumption-20261024",
+      "id": "ca4c5e2a-b6f0-470f-88c8-47a1b3a78ee5"
+    },
+    "owned_raw_directory_removed": "/private/tmp/agentos-resumption-20261024",
+    "original_sandbox_pairs_preserved": 63,
+    "all_others_unchanged": true,
+    "remaining_count": 63,
+    "archives": [
+      {
+        "archive": "/private/tmp/agentos-resumption-20261024-trials.tar.gz",
+        "sha256": "98c58aa9ed118ca64430cbd05af5ec67963904fcc46f9eec5b409bef73f143c7",
+        "bytes": 1741329,
+        "indexed_files": 1017,
+        "index": "evidence/trials-index.json",
+        "verified_all_members": true
+      },
+      {
+        "archive": "/private/tmp/agentos-resumption-20261024-acceptance.tar.gz",
+        "sha256": "03e93ed8a8e670c9ce99a8a2e5262998b3cc662cbc12d197b11f5ea4c85974ae",
+        "bytes": 1959137,
+        "indexed_files": 1053,
+        "index": "evidence/acceptance-index.json",
+        "verified_all_members": true
+      }
+    ],
+    "archive_bytes_total": 3700466,
+    "no_global_prune": true,
+    "primary_worktrees_before_cleanup": "worktree /Users/Shared/projects/AgentOS\nHEAD f41e72b27cdb0aaeb9d50aa5106e1ee0e7bd6606\nbranch refs/heads/improve/resumption-routing\n\n"
+  },
+  "delivery": "Not yet observed at this pre-merge attestation. Coordinator must complete normal protected PR, expected-head merge and fetched-owning-main content verification; observed result will be recorded in session handoff and external delivery receipt.",
+  "review_export": {
+    "archive": "/private/tmp/agentos-resumption-20261024-acceptance.tar.gz",
+    "sha256": "03e93ed8a8e670c9ce99a8a2e5262998b3cc662cbc12d197b11f5ea4c85974ae",
+    "bytes": 1959137,
+    "indexed_files": 1053,
+    "index": "evidence/acceptance-index.json",
+    "verified_all_members": true
+  }
+}
