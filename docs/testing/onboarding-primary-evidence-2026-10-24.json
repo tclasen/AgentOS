@@ -1,0 +1,390 @@
+{
+  "task": "TASK-000197",
+  "run": "RUN-000192",
+  "approval": "APP-000025 pending independent review",
+  "base": "eaab594ceb939626c109f5ea9b027df8e685e23b",
+  "operative": "4a8c632497bf40bbb5461ba021f1e134c56bbab5",
+  "protocol_revision": "eaab594ceb939626c109f5ea9b027df8e685e23b",
+  "protocol_sha256": "6745d9bc17269074a06dfa36c56139fb73a639c50736dd1edfd7aac4b3b9201c",
+  "model_name_clarification": "Pretrial typo correction from gpt-6-sol to actual supported gpt-6.1-sol retained before roots; not fallback",
+  "candidate": "coherent nine-path portable onboarding package restored from ffd1564136da73b7696376f602fb322af88cc40e",
+  "disposition": "withdraw all nine; deliver findings only after independent review and normal protected merge",
+  "product_bundle_tools_tests_equal_base": true,
+  "local": {
+    "regressions": 49,
+    "seconds": 15.005,
+    "manifest_recipe_cases": 31,
+    "embedded_example_cases": 4,
+    "cache_probes": 4,
+    "graph_nodes": 25,
+    "closures": [
+      10,
+      22,
+      18
+    ],
+    "unchanged_other_components": 22,
+    "links": 31
+  },
+  "native": [
+    {
+      "name": "bundle-luna-D",
+      "thread": [
+        "01a16de9-5aef-70b0-82eb-ce3c3d0d4e25"
+      ],
+      "requested_model": "gpt-6-luna",
+      "requested_effort": "high",
+      "seconds": 51.896549701690674,
+      "raw_sha256": "0e1ff4619ebd86a1a7b43ad8745349dbb4580e6f3cb0379dbfbc4a23803470e6",
+      "commands": 7,
+      "failed_commands": [],
+      "old_successful_component_metric": [
+        "components/activation.md",
+        "components/authority.md",
+        "components/capability-routing.md",
+        "components/chief-of-staff.md",
+        "components/context-core.md",
+        "components/delegation.md",
+        "components/delivery-acceptance.md",
+        "components/director.md",
+        "components/resource-budgets.md",
+        "components/role-lifecycle.md",
+        "components/self-improvement.md"
+      ],
+      "result": "bounded design pass",
+      "actual_runtime": {
+        "name": "bundle-luna-D",
+        "thread": "01a16de9-5aef-70b0-82eb-ce3c3d0d4e25",
+        "model": "gpt-6-luna",
+        "effort": "high",
+        "native_session": "/home/agent/.codex/sessions/2026/10/24/rollout-2026-10-24T12-36-12-01a16de9-5aef-70b0-82eb-ce3c3d0d4e25.jsonl"
+      }
+    },
+    {
+      "name": "bundle-luna-I",
+      "thread": [
+        "01a16df0-2898-79b3-9cf8-aa1c2ebcabf2"
+      ],
+      "requested_model": "gpt-6-luna",
+      "requested_effort": "high",
+      "seconds": 207.7696409225464,
+      "raw_sha256": "28227acf7ab04c48fa8dfe5b4d8de2b1754c314d54b735dbab676d1a01feb33c",
+      "commands": 19,
+      "failed_commands": [],
+      "old_successful_component_metric": [
+        "components/activation.md",
+        "components/authority.md",
+        "components/capability-routing.md",
+        "components/chief-of-staff.md",
+        "components/context-core.md",
+        "components/delegation.md",
+        "components/delivery-acceptance.md",
+        "components/director.md",
+        "components/resource-budgets.md",
+        "components/role-lifecycle.md",
+        "components/self-improvement.md"
+      ],
+      "result": "no overall installation acceptance; see source/semantic/effect findings",
+      "actual_runtime": {
+        "name": "bundle-luna-I",
+        "thread": "01a16df0-2898-79b3-9cf8-aa1c2ebcabf2",
+        "model": "gpt-6-luna",
+        "effort": "high",
+        "native_session": "/home/agent/.codex/sessions/2026/10/24/rollout-2026-10-24T12-43-38-01a16df0-2898-79b3-9cf8-aa1c2ebcabf2.jsonl"
+      }
+    },
+    {
+      "name": "bundle-sol-D",
+      "thread": [
+        "01a16de9-66ab-7503-91f9-baac696ffa8f"
+      ],
+      "requested_model": "gpt-6.1-sol",
+      "requested_effort": "high",
+      "seconds": 180.0721139907837,
+      "raw_sha256": "5a70f8145a3faa7417219096babdd81962f81189882db66907c4bcb66db8df97",
+      "commands": 15,
+      "failed_commands": [
+        {
+          "item": "item_3",
+          "exit": 2,
+          "command": "/bin/bash -lc 'ls -ld /private/tmp/agentos-onboarding-20261024/controls/source-bundle/tools /private/tmp/agentos-onboarding-20261024/controls/source-bundle/.git'"
+        },
+        {
+          "item": "item_14",
+          "exit": 128,
+          "command": "/bin/bash -lc \"sed -n '361,560p' examples/portable-implementation.md; git --no-optional-locks status --porcelain=v1 --untracked-files=all\""
+        },
+        {
+          "item": "item_16",
+          "exit": 2,
+          "command": "/bin/bash -lc \"git --no-optional-locks status --porcelain=v1 --untracked-files=all; git rev-parse HEAD; rg --files --hidden -g '\"'!.git'\"'; ls -ld AGENTS.md .agentos\""
+        }
+      ],
+      "old_successful_component_metric": [
+        "components/activation.md",
+        "components/authority.md",
+        "components/capability-routing.md",
+        "components/chief-of-staff.md",
+        "components/context-core.md",
+        "components/delegation.md",
+        "components/delivery-acceptance.md",
+        "components/director.md",
+        "components/resource-budgets.md",
+        "components/role-lifecycle.md",
+        "components/self-improvement.md"
+      ],
+      "result": "bounded design pass",
+      "actual_runtime": {
+        "name": "bundle-sol-D",
+        "thread": "01a16de9-66ab-7503-91f9-baac696ffa8f",
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "native_session": "/home/agent/.codex/sessions/2026/10/24/rollout-2026-10-24T12-36-15-01a16de9-66ab-7503-91f9-baac696ffa8f.jsonl"
+      }
+    },
+    {
+      "name": "bundle-sol-I",
+      "thread": [
+        "01a16df0-2f3d-7a91-85c5-78b815aaede3"
+      ],
+      "requested_model": "gpt-6.1-sol",
+      "requested_effort": "high",
+      "seconds": 648.047000169754,
+      "raw_sha256": "24504e3fd316d7c8025f81a8976ebf04f1b34964f2d18fea71616b12f29b84fe",
+      "commands": 24,
+      "failed_commands": [
+        {
+          "item": "item_24",
+          "exit": 1,
+          "command": "/bin/bash -lc \"PYTHONDONTWRITEBYTECODE=1 python3 -B - <<'PY'\nfrom pathlib import Path\nimport json, hashlib, os, stat, re, subprocess\nroot=Path.cwd().resolve(); home=root/'.agentos'\nassert root==Path('/private/tmp/agentos-onboarding-20261024/work/bundle-sol').resolve()\nrecord=(home/'records.md').read_text()\nbaseline=json.loads(record.split('## Protected baseline\\\\n',1)[1].split('\"'```json'\"\\\\n',1)[1].split('\\\\n\"'```'\"',1)[0])\ndef inventory():\n    values={}\n    for folder,dirs,files in os.walk(root,followlinks=False):\n        for name in dirs+files:\n            p=Path(folder)/name; mode=p.lstat().st_mode; rel=p.relative_to(root).as_posix()\n            if stat.S_ISLNK(mode): values[rel]={'link':os.readlink(p),'mode':stat.S_IMODE(mode)}\n            elif stat.S_ISDIR(mode): values[rel]={'directory':True,'mode':stat.S_IMODE(mode)}\n            else:\n                assert stat.S_ISREG(mode)\n                data=p.read_bytes(); values[rel]={'sha256':hashlib.sha256(data).hexdigest(),'bytes':len(data),'mode':stat.S_IMODE(mode)}\n    return values\nnow=inventory()\nremoved=sorted(set(baseline)-set(now)); changed=sorted(k for k,v in baseline.items() if now.get(k)\"'!=v)\nexpected={'\"'AGENTS.md','.agentos','.agentos/core.md','.agentos/roles.md','.agentos/operations.md','.agentos/records.md','.agentos/source-manifest.json','.agentos/qualification-example.json'}\nadded=set(now)-set(baseline)\nassert not removed and not changed,(removed,changed)\nassert added==expected,sorted(added)\nassert all('link' not in now[k] for k in added)\ndef unique(pairs):\n    out={}\n    for k,v in pairs:\n        if k in out: raise ValueError('duplicate key '+k)\n        out[k]=v\n    return out\nfor p in home.glob('*.json'): json.loads(p.read_text(),object_pairs_hook=unique)\nhandoff=json.loads(Path('/private/tmp/agentos-onboarding-20261024/controls/bundle-sol-approved-handoff.json').read_text(),object_pairs_hook=unique)\noriginal=handoff['source_identity_observations_verbatim'][0]['aggregated_output']\nassert (home/'source-manifest.json').read_text()==original\nsource=Path('/private/tmp/agentos-onboarding-20261024/controls/source-bundle/bundle')\ncode=(source/'examples/source-manifest.md').read_text().split('\"'```python'\"\\\\n',1)[1].split('\\\\n\"'```'\"',1)[0]\nproc=subprocess.run(['python3','-B','-c',code,str(source),'--verify'],input=original,text=True,capture_output=True,env=dict(os.environ,PYTHONDONTWRITEBYTECODE='1'))\nassert proc.returncode==0,(proc.returncode,proc.stdout,proc.stderr)\nassert json.loads(proc.stdout)=={'match':True}\ndef anchors(text):\n    values=set()\n    for heading in re.findall(r'\"'^#{1,6}'\"\\\\s+(.+)\"'$'\"',text,re.M):\n        slug=re.sub(r'[\"'^'\"\\\\w\\\\- ]','',heading.lower()).replace(' ','-'); values.add(slug)\n    return values\nlinks=[]\nfor p in [root/'AGENTS.md',*sorted(home.glob('*.md'))]:\n    for target in re.findall(r'\\\\[[\"'^'\"\\\\]]*\\\\]\\\\(([\"'^)]+)'\"\\\\)',p.read_text()):\n        assert not re.match(r'\\\\w+://',target),target\n        file,_,fragment=target.partition('#')\n        dest=(p.parent/file).resolve() if file else p.resolve()\n        assert dest.is_relative_to(root) and dest.is_file(),(p,target)\n        if fragment: assert fragment in anchors(dest.read_text()),(p,target)\n        links.append([p.relative_to(root).as_posix(),target])\nfor case in ['S1','S2','S3','S4','S5','S6','S7','F1']:\n    heading='### '+case+' result\\\\n'\n    assert record.count(heading)==1,(case,'missing result')\n    body=record.split(heading,1)[1].split('\\\\n### ',1)[0]\n    assert 'Verdict:' in body and 'Evidence:' in body and ('Gap:' in body or 'Gaps:' in body),(case,'incomplete evidence')\n    assert len(body)>600\nfixture=json.loads((home/'qualification-example.json').read_text(),object_pairs_hook=unique)\nassert fixture['current']=={'route':'Director','unrelated':'keep','later_note':'preserve this later work'}\nassert fixture['events'][0]['functional'] is False\nassert len(fixture['events'])==4\nassert fixture['events'][1]['functional'] is True and fixture['events'][1]['disposition']=='accepted; retain'\nassert fixture['events'][2]['functional'] is False and fixture['events'][2]['scoped_rollback_verified'] is True\nassert fixture['events'][3]['functional'] is True and fixture['events'][3]['scoped_rollback_verified'] is True and fixture['events'][3]['disposition'].startswith('inconclusive')\nassert len(fixture['plans'])==3 and fixture['prior']['route']=='Installer'\nprint(json.dumps({'protected_preexisting_entries':len(baseline),'changed_preexisting':changed,'removed_preexisting':removed,'added_paths':sorted(added),'source_match':json.loads(proc.stdout),'json_files_parsed':2,'links_checked':len(links),'scenario_results_checked':8,'fixture_checks':'pass','artifact_pins':{k:now[k] for k in sorted(added) if not now[k].get('directory') and k\"'!='\"'.agentos/records.md'}},indent=2))\nPY\""
+        }
+      ],
+      "old_successful_component_metric": [
+        "components/activation.md",
+        "components/authority.md",
+        "components/capability-routing.md",
+        "components/chief-of-staff.md",
+        "components/context-core.md",
+        "components/delegation.md",
+        "components/delivery-acceptance.md",
+        "components/director.md",
+        "components/resource-budgets.md",
+        "components/role-lifecycle.md",
+        "components/self-improvement.md"
+      ],
+      "result": "no overall installation acceptance; see source/semantic/effect findings",
+      "actual_runtime": {
+        "name": "bundle-sol-I",
+        "thread": "01a16df0-2f3d-7a91-85c5-78b815aaede3",
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "native_session": "/home/agent/.codex/sessions/2026/10/24/rollout-2026-10-24T12-43-39-01a16df0-2f3d-7a91-85c5-78b815aaede3.jsonl"
+      }
+    },
+    {
+      "name": "full-luna-D",
+      "thread": [
+        "01a16dec-c884-7ee3-85e3-b6858c9fc02e"
+      ],
+      "requested_model": "gpt-6-luna",
+      "requested_effort": "high",
+      "seconds": 56.882209062576294,
+      "raw_sha256": "fbb567e260018b710911121386a12eddf737c716ed5c9a65a669f8c4f2b62477",
+      "commands": 15,
+      "failed_commands": [],
+      "old_successful_component_metric": [
+        "components/activation.md",
+        "components/authority.md",
+        "components/capability-routing.md",
+        "components/chief-of-staff.md",
+        "components/context-core.md",
+        "components/delegation.md",
+        "components/delivery-acceptance.md",
+        "components/director.md",
+        "components/resource-budgets.md",
+        "components/role-lifecycle.md",
+        "components/self-improvement.md"
+      ],
+      "result": "bounded design pass",
+      "actual_runtime": {
+        "name": "full-luna-D",
+        "thread": "01a16dec-c884-7ee3-85e3-b6858c9fc02e",
+        "model": "gpt-6-luna",
+        "effort": "high",
+        "native_session": "/home/agent/.codex/sessions/2026/10/24/rollout-2026-10-24T12-39-56-01a16dec-c884-7ee3-85e3-b6858c9fc02e.jsonl"
+      }
+    },
+    {
+      "name": "full-sol-D",
+      "thread": [
+        "01a16dec-d2d7-7302-a4d1-c65752e02c64"
+      ],
+      "requested_model": "gpt-6.1-sol",
+      "requested_effort": "high",
+      "seconds": 162.18728613853455,
+      "raw_sha256": "d41e80572f8119ca5ffe1bd50c238b1e3a21613016102ef47a037be9b99b23ac",
+      "commands": 13,
+      "failed_commands": [],
+      "old_successful_component_metric": [
+        "components/activation.md",
+        "components/authority.md",
+        "components/capability-routing.md",
+        "components/chief-of-staff.md",
+        "components/context-core.md",
+        "components/delegation.md",
+        "components/delivery-acceptance.md",
+        "components/director.md",
+        "components/resource-budgets.md",
+        "components/role-lifecycle.md",
+        "components/self-improvement.md"
+      ],
+      "result": "bounded design pass",
+      "actual_runtime": {
+        "name": "full-sol-D",
+        "thread": "01a16dec-d2d7-7302-a4d1-c65752e02c64",
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "native_session": "/home/agent/.codex/sessions/2026/10/24/rollout-2026-10-24T12-39-59-01a16dec-d2d7-7302-a4d1-c65752e02c64.jsonl"
+      }
+    }
+  ],
+  "design_pass_count": 4,
+  "installation_roots": 2,
+  "unstarted": [
+    "full-luna-I",
+    "full-sol-I",
+    "bundle-luna-U",
+    "bundle-sol-U",
+    "full-luna-U",
+    "full-sol-U"
+  ],
+  "installation_decisions": {
+    "bundle-luna": {
+      "accepted_for_fresh_use": false,
+      "raw_sha256": "28227acf7ab04c48fa8dfe5b4d8de2b1754c314d54b735dbab676d1a01feb33c",
+      "first_write_item": "item_14",
+      "source_gate": "failed beforewrite",
+      "identity_continuity": "Original48filemanifest compared beforefirstwrite, exact source and fullsource/target/Git inventory independently unchanged",
+      "actual_selected_components": [
+        "components/director.md",
+        "components/chief-of-staff.md",
+        "components/activation.md",
+        "components/authority.md",
+        "components/capability-routing.md",
+        "components/delegation.md",
+        "components/delivery-acceptance.md",
+        "components/context-core.md",
+        "components/self-improvement.md",
+        "components/role-lifecycle.md",
+        "components/resource-budgets.md"
+      ],
+      "semantic_review": "Coordinator read all current installed instructions and concrete scenario records. All11selected duties present, including Director readiness/progress/accessibility, CoS regressionretention, cumulative budget/taskappropriateeffort, requestedmethod artifactderivation. Seven concrete same-context scenarios plus actual predeclared correctionfixture, accepted/rejected/inconclusive and scopedrollback retaininglater_note. These are bounded positive semantic observations, not overall onboarding acceptance.",
+      "effects_review": "All completed commands/patches inspected; firstactualwrite matchesfirstpatch. OnlyAGENTS/.agentos additions, no protectedproject/Git/source change, no project imports/tests/cache/externalcalls/children. Snapshots supplement actualeffectaudit; arbitrary invisibleprocess effects not claimed instrumented.",
+      "source_details": "FullCLIaggregate item8 contains reference, but nativeprimary line61 has11965-token transporttruncation. Item12 line87 recoversfragment8558:20558, stillleavingreferencechars7713:8558 absentfromthosemodelvisibleoutputs beforepatch14. No wholeuntruncatedreference. See stop-unstarted.json and retainedfirstwriteprimary. Laterhandoffproofread item23/24 cannotretroactivelycompletecurrentcontext beforewrite. All11componentbodies were independentlyfullyreturnedbeforewrite; no claimthosecontractsneverreachedmodel.",
+      "failures_limits": "No nonzero completedcommands. Truncated handoff and sourcebatch, fragmentrecovery retained; final no diagnosedretries statement doesnotmean no retrievalrecovery. Lifecycle initiallysafe-deferral thenitem21recordrewrittenasexplicittransfer; finaltracepositive butverdictstill says deferringretirement, a minorstalephrase. No parent repairs.",
+      "phase_limit": "Allunstartedroots stopped afterLunafailure; noU foranymodel and no checkoutI. No inference about requestedmethod firstuse or broaderprofiles."
+    },
+    "bundle-sol": {
+      "accepted_for_fresh_use": false,
+      "raw_sha256": "24504e3fd316d7c8025f81a8976ebf04f1b34964f2d18fea71616b12f29b84fe",
+      "first_write_item": "item_17",
+      "source_gate": "not established conservatively under explicit transport-truncation rule",
+      "identity_continuity": "Original48filemanifest compared beforefirstwrite, exact source and fullsource/target/Git inventory independently unchanged",
+      "actual_selected_components": [
+        "components/director.md",
+        "components/chief-of-staff.md",
+        "components/activation.md",
+        "components/authority.md",
+        "components/capability-routing.md",
+        "components/delegation.md",
+        "components/delivery-acceptance.md",
+        "components/context-core.md",
+        "components/self-improvement.md",
+        "components/role-lifecycle.md",
+        "components/resource-budgets.md"
+      ],
+      "semantic_review": "Coordinator read all current installed instructions and concrete scenario records. All11selected duties present, including Director readiness/progress/accessibility, CoS regressionretention, cumulative budget/taskappropriateeffort, requestedmethod artifactderivation. Seven concrete same-context scenarios plus actual predeclared correctionfixture, accepted/rejected/inconclusive and scopedrollback retaininglater_note. These are bounded positive semantic observations, not overall onboarding acceptance.",
+      "effects_review": "All completed commands/patches inspected; firstactualwrite matchesfirstpatch. OnlyAGENTS/.agentos additions, no protectedproject/Git/source change, no project imports/tests/cache/externalcalls/children. Snapshots supplement actualeffectaudit; arbitrary invisibleprocess effects not claimed instrumented.",
+      "source_details": "Reference actuallyreloadedalone item14/native61 beforepatch17. Item13/native54 fivecomponentbodies are intact in a parseablecomplete firstJSONexecresult, but enclosingmultiresulttransportoutput isexplicitlytruncated11240tokens. Under preregistered conservative flagrule nooverallsourcegatepass claimed; do NOTclaimthosefivebodiesmissing. Independentreview mayassess boundedclassification, cannotrescueLuna/history. Locator erroneouslymatches identical item12 anditem14 rawcommands to laterprimary61; manualorderingbinds freshwhole-readcredit to actualitem14 only. Remaining prerequisitescore/phases/selectedfullread checkedseparately.",
+      "failures_limits": "Two diagnosedtruncationretrievalrecoveries counted2/2. Initialstructuralaudit item24exit1 pending #t1-result anchor. ReportaddsT1item27, rg28directtargetinspection; item29executesonlynot-yet-runchecks including116remaininglinks andscenarios/fixture. Originalfailedcommand/predicate notrerunorclaimedpass; criteriaunaltered. Finalrecordcorrectedcurrentstatus andretainsfailure. Positivefinalartifactassessment separatefrom initialfailedaggregate. Native elapsed648.047sec; handoffclock620sec isearliersnapshot, notrunnerduration.",
+      "phase_limit": "Allunstartedroots stopped afterLunafailure; noU foranymodel and no checkoutI. No inference about requestedmethod firstuse or broaderprofiles."
+    }
+  },
+  "stop_record": {
+    "observed_at": "2026-10-24T12:46:47.287646+00:00",
+    "name": "bundle-luna-I",
+    "mandatory_failure": true,
+    "first_write_item": "item_14",
+    "first_write_event_index": 28,
+    "source_gate": "not established before actualwrite",
+    "primary_record": "/private/tmp/agentos-onboarding-20261024/work/primary-bundle-luna-I.json",
+    "primary_record_sha256_at_observation": "efa07ba441bed04245f3c48292eaa3eb1e095d789f8e89eb7319b3bddf382a1c",
+    "primary_truncated_output_line": 61,
+    "missing_whole_source": "examples/portable-implementation.md",
+    "reason": "Native model-visible item8 explicitly truncated (11965originaltokens). Item12 prints a12000character fragment from the capability heading. No complete reference in oneuntruncatedoutput before patch14. Even combining these fragments diagnostically leaves chars7713:8558 of canonicalreference unseen in thoseoutputs; no assembly is used asapproval. CLI aggregate holds fullsource but model-visible textdoesnot.",
+    "diagnostic_visible_character_ranges": [
+      [
+        0,
+        7713,
+        61
+      ],
+      [
+        15556,
+        27287,
+        61
+      ],
+      [
+        8558,
+        20558,
+        87
+      ]
+    ],
+    "diagnostic_gap_excerpt": "Identify capability gaps and bottlenecks. Within current grants improve roles, prompts, procedures, configurations, hierarchies and evaluation practices, directly or through authorized specialization. You may edit yourself and Director while preserving constitutional duties. Keep organizational maintenance separate from unauthorized project work. Retain regression evidence and coordinate changes affecting active assignments through Director.\n\nOn meaningful incidents, feedback or task-completion evidence, use operations.md's improvement loop. For role changes use its lifecycle procedure. Maintain the capability registry below, distinguishing descriptions from tested availability. Report changes, checks, failures, uncertainty and disposition through Director. No background monitoring, new provider or independent reviewer is implied.\n\n#",
+    "protocol": "baseline tools/read-evidence.md preregistered; no gatechange",
+    "stop_unstarted": [
+      "full-luna-I",
+      "full-sol-I",
+      "bundle-luna-U",
+      "bundle-sol-U",
+      "full-luna-U",
+      "full-sol-U"
+    ],
+    "allow_already_admitted_finish": [
+      "bundle-luna-I",
+      "bundle-sol-I"
+    ],
+    "candidate_disposition": "withholdall9; await completedrawsemantic/effectreview and independentreview; nofirstuse/allpathsuccess",
+    "parent_diagnostic_failure_retained": "Initial stop-record script incorrectly asserted item12 returned only chars/noFOUND; assertionfailedbefore writingrecord. Inspection shows FOUND #Capability and12000charfragment. Corrected sourcecoverage explanation above, original toolfailure retained in session; no participantretry or gatechange.",
+    "retained_primary_at_observation": "/private/tmp/agentos-onboarding-20261024/evidence/primary-bundle-luna-I-first-write.json"
+  },
+  "all_original_project_Git_sources_preserved": true,
+  "frozen_controls_unchanged": 518,
+  "actual_roots": 6,
+  "peak_concurrent": 2,
+  "children": 0,
+  "codex_update": "0.149.1 -> 0.164.0 before roots",
+  "raw_usage": {
+    "input_tokens": 3039308,
+    "cached_input_tokens": 2729088,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 67231,
+    "reasoning_output_tokens": 20613
+  },
+  "billing": "unknown; raw counters are not billed spend",
+  "trial_archive": {
+    "archive": "/private/tmp/agentos-onboarding-20261024-trials.tar.gz",
+    "sha256": "f1429175fba83cf926fd9a69e68c18d02c0c1bbe8781af57a10d707860593ed5",
+    "bytes": 2509246,
+    "indexed_files": 895,
+    "index": "evidence/trials-index.json",
+    "verified_all_members": true
+  },
+  "limits": [
+    "No first-use execution; required formatter-method efficacy unverified",
+    "No checkout installations in this round",
+    "No current engineering/portfolio/native-hooks/delegation/Git/lifecycle/recovery all-path claim",
+    "Simulation traces do not establish fresh runtime activation or independent execution",
+    "Primary locator is post-trial navigation only; duplicated commands can match a later output and require manual correlation",
+    "No source/evaluator changes after results, no historical regrading, no stochastic benefit claim"
+  ],
+  "delivery": "Pending APP25, protected PR, fetched main content verification and exact cleanup"
+}

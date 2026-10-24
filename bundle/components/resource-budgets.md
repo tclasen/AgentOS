@@ -31,12 +31,7 @@ What limits matter (time, tokens, concurrency, dollars, retries, storage or atte
 
 # Implementation
 
-Preserve each of these duties in the installed instructions:
-
-- Track observable costs at task and child-run levels; retries and nested delegation do not reset totals.
-- Use task-appropriate model and reasoning choices rather than fixed job-title assignments.
-- Unknown usage stays unknown; don't substitute an imaginary dollar counter.
-- Limit runaway coordination without reducing correctness/safety goals.
+Track observable costs at task and child-run levels; retries and nested delegation do not reset totals. Use task-appropriate model and reasoning choices rather than fixed job-title assignments. Unknown usage stays unknown; don't substitute an imaginary dollar counter. Limit runaway coordination without reducing correctness/safety goals.
 
 # Verification
 
