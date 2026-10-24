@@ -1,0 +1,172 @@
+{
+  "task": "TASK-000201",
+  "run": "RUN-000196",
+  "approval": "APP-000029",
+  "observed_at": "2026-10-24T16:14:45.544683+00:00",
+  "reviewed_candidate": {
+    "base": "dc19ed51e18177550ba8027997b029f175123504",
+    "head": "af080bdb7bdebd982f50a9cbbc362e7b5985f59f",
+    "tree": "198b17e394fc716da067a725fd763bac1923f39c",
+    "operative": "023b2d4321bb4cedfae856d85f6804d42dd7324d",
+    "files": {
+      "docs/agent-records/runs/RUN-000196.md": {
+        "sha256": "1d497c52e9d64f6917a589adda9ec4f8aca831bb1dedf9e387ac47c1dfd4a299",
+        "bytes": 6651
+      },
+      "docs/agent-records/tasks/project/TASK-000201.md": {
+        "sha256": "1eb771151a5c2bedaf0cd35e318d74e9835cf0ae6ad1b98e2ee8127303f2edb5",
+        "bytes": 7107
+      },
+      "docs/testing/portable-special-file-snapshot-2026-10-24.json": {
+        "sha256": "ee3e52899b116a6817662beb0f703209109b1aa7226e934aa195ce6bfed31ee8",
+        "bytes": 5557
+      },
+      "docs/testing/portable-special-file-snapshot-2026-10-24.md": {
+        "sha256": "6961a3a7020bcd667a833bc7d40069d192a284eff69d68569ed80218f4320da0",
+        "bytes": 5919
+      },
+      "tests/test_qualification.py": {
+        "sha256": "9d07c475dc0e5eb438d03ac0ab481e5f7907ab349ef808f8bd5040e14291c12b",
+        "bytes": 42255
+      },
+      "tools/README.md": {
+        "sha256": "97936973c56a6d90608b44bb0e639084669deb85c894be788c7ebfe6e4050229",
+        "bytes": 15876
+      },
+      "tools/qualification.py": {
+        "sha256": "fddb86876b7a3b80e301675f994708bd0d65c7dab0df96200852847ca78d3aef",
+        "bytes": 23641
+      }
+    },
+    "observation_time": "2026-10-24T15:58:57.104167+00:00"
+  },
+  "receipt": {
+    "sha256": "1b65e28144d092fa2119a070681de72ffa4f1ec69fdd51a1dee07610dc73eed7",
+    "bytes": 21513
+  },
+  "reviewer_index": {
+    "sha256": "e5dfcf18f59ab96d90be22e56b7e6a22979778c55a2c05fbd2476480e58648a0",
+    "bytes": 100670
+  },
+  "reviewer_indexed_regular_files": 524,
+  "reviewer_indexed_regular_bytes": 3845958,
+  "all_indexed_hashes_verified": true,
+  "actual_reviewer": {
+    "name": "review-final",
+    "requested_model": "gpt-6.1-sol",
+    "requested_effort": "high",
+    "thread": "01a16ea3-fdfd-7b91-9909-44f06f38fbec",
+    "model": "gpt-6.1-sol",
+    "effort": "high",
+    "native_session": "/home/agent/.codex/sessions/2026/10/24/rollout-2026-10-24T16-00-03-01a16ea3-fdfd-7b91-9909-44f06f38fbec.jsonl"
+  },
+  "runtime_evidence": {
+    "sha256": "2256b9ebd1325ad39cfaac3f8a6db314a880f2e179fdc95f03b207648f406d84",
+    "bytes": 1759
+  },
+  "reviewer_duration_seconds": 834.145779132843,
+  "reviewer_status": "returned",
+  "reviewer_cli_completed_commands": 34,
+  "reviewer_cli_failed_commands": 0,
+  "reviewer_usage": [
+    {
+      "input_tokens": 2523853,
+      "cached_input_tokens": 2425600,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 30660,
+      "reasoning_output_tokens": 9139
+    }
+  ],
+  "reviewer_tests": [
+    {
+      "name": "full51",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "/private/tmp/agentos-portablesnapshot-20261024/controls/source-full/tests",
+        "-v"
+      ],
+      "cwd": "/private/tmp/agentos-portablesnapshot-20261024/controls/source-full/tests",
+      "timeout_seconds": 120,
+      "started": "2026-10-24T16:01:27.080468+00:00",
+      "returncode": 0,
+      "timeout": false,
+      "seconds": 3.3734943759999965
+    },
+    {
+      "name": "focused",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "-v",
+        "test_qualification.QualificationTests.test_snapshot_cli_does_not_open_fifo_or_socket",
+        "test_qualification.QualificationTests.test_special_file_deltas_and_run_finalization_in_both_scopes"
+      ],
+      "cwd": "/private/tmp/agentos-portablesnapshot-20261024/controls/source-full/tests",
+      "timeout_seconds": 120,
+      "started": "2026-10-24T16:01:30.453989+00:00",
+      "returncode": 0,
+      "timeout": false,
+      "seconds": 0.09657654100000457
+    }
+  ],
+  "reviewer_diagnostic_recovery": {
+    "failures": [
+      {
+        "operation": "final_immutability.py scope inventory",
+        "attempt": 1,
+        "time": "2026-10-24T16:07:31.520393+00:00",
+        "failure": "Only assigned paths added check counted pre-existing read-only .agents/.codex/.aws directories as additions.",
+        "diagnosis": "Environment context explicitly identifies these runtime directories as read-only. Root lstat listing showed all three as directories mode 0555, no evidence of writes.",
+        "correction": "Distinguish pre-existing read-only runtime mount directories from task-created paths; do not traverse them.",
+        "retry": 1,
+        "semantic_trial_repair": false
+      }
+    ],
+    "all_trial_and_test_retries": 0
+  },
+  "parent_observation_diagnostic": {
+    "operation": "live review log observation",
+    "first_attempt": "JSONDecodeError parsing non-JSON log line; no trial interrupted or restarted",
+    "recovery": "parse JSON records and retain non-JSON line separately",
+    "non_json_lines": [
+      {
+        "line": 1,
+        "text": "  \u2713 sandbox agentos-portablesnapshot-20261024 \u2014 started"
+      }
+    ]
+  },
+  "parent_review_finalization_special_entries": {
+    "scratch/independent-fixture/fifo": {
+      "special": 4096
+    },
+    "scratch/independent-fixture/socket": {
+      "special": 49152
+    }
+  },
+  "parent_intervention": false,
+  "original_reviewer_files_unchanged": true,
+  "seven_reviewed_files_unchanged": true,
+  "permitted_additions_only": [
+    "docs/agent-records/approvals/APP-000029.md",
+    "docs/testing/portable-special-file-snapshot-final-attestation-2026-10-24.json"
+  ],
+  "trials_archive": {
+    "archive": "/private/tmp/agentos-portablesnapshot-20261024-trials.tar.gz",
+    "sha256": "79479d4921c8cc9829a3d250cc2ecdf4169709ffc05da2b739fc1f2cac03420e",
+    "bytes": 938071,
+    "indexed_files": 481,
+    "index": "evidence/trials-index.json",
+    "verified_all_members": true
+  },
+  "delivery": "pending normal protected PR, expected-head merge and fetched-main content/ancestry verification; no delivery claim yet",
+  "cleanup": "pending verified acceptance archive retaining all indexed regular files and metadata, then exact-owned sandbox/raw fixtures removal",
+  "limits": "Only scoped snapshot helper accepted. Prior TASK200 rejection unchanged; no onboarding/full-source, socket communication, device-content or race-safe monitoring claim. Broader goal active.",
+  "billing": "unknown"
+}

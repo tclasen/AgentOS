@@ -3,7 +3,10 @@ import importlib.util
 import contextlib
 import io
 import json
+import os
 from pathlib import Path
+import socket
+import stat
 import tempfile
 import subprocess
 import sys
@@ -431,6 +434,74 @@ class QualificationTests(unittest.TestCase):
             self.assertEqual(delta,{'added':['new'],'removed':[],'changed':['untracked']})
             self.assertEqual(before['link'],{'symlink':str(outside)})
             self.assertNotIn('secret',json.dumps(before))
+
+    def test_snapshot_cli_does_not_open_fifo_or_socket(self):
+        script=Path(__file__).parents[1]/'tools/qualification.py'
+        with tempfile.TemporaryDirectory() as d:
+            parent=Path(d);root=parent/'fixture';root.mkdir()
+            os.mkfifo(root/'fifo');(root/'link').symlink_to('fifo')
+            (root/'plain').write_bytes(b'content');(root/'empty').mkdir()
+            with socket.socket(socket.AF_UNIX, socket.SOCK_STREAM) as endpoint:
+                try:
+                    endpoint.bind(str(root/'socket'))
+                    fixture_kind='bound Unix socket'
+                except PermissionError:
+                    if not sys.platform.startswith('linux'):
+                        raise
+                    # Some command sandboxes deny bind while allowing filesystem
+                    # socket inodes. The snapshot contract concerns entry types,
+                    # not socket communication. mknod fails if the path exists.
+                    os.mknod(root/'socket', stat.S_IFSOCK | 0o600)
+                    fixture_kind='unbound Unix socket inode (bind denied)'
+                print(f'snapshot socket fixture: {fixture_kind}', file=sys.stderr)
+                before={p.name:(p.lstat().st_ino,p.lstat().st_mode) for p in root.iterdir()}
+                output=parent/'snapshot.json'
+                result=subprocess.run([sys.executable,'-B',str(script),'snapshot',str(root),str(output)],
+                                      capture_output=True,text=True,timeout=5)
+                self.assertEqual(result.returncode,0,result.stderr)
+                self.assertEqual(json.loads(output.read_text()),{
+                    'fifo':{'special':stat.S_IFIFO},'socket':{'special':stat.S_IFSOCK},
+                    'link':{'symlink':'fifo'},'empty':{'directory':True},
+                    'plain':{'sha256':q.sha(b'content'),'bytes':7}})
+                self.assertEqual(before,{p.name:(p.lstat().st_ino,p.lstat().st_mode) for p in root.iterdir()})
+                self.assertEqual((root/'plain').read_bytes(),b'content')
+
+    def test_special_file_deltas_and_run_finalization_in_both_scopes(self):
+        with tempfile.TemporaryDirectory() as d:
+            root=Path(d);target=root/'target';target.mkdir();(target/'.git').mkdir()
+            extra=root/'extra';extra.mkdir();prompt=root/'prompt';prompt.write_text('unit fixture')
+            args=SimpleNamespace(name='special',task='TASK-000200',target=str(target),workspace=str(root),
+                output=str(root/'evidence'),add_dir=[str(extra)],sandbox='unit-fixture',model='gpt-6-luna',
+                policy='workspace-write',agents=0,strict_config=False,resume=None,schema=None,
+                prompt=str(prompt),source=str(Path(__file__).parents[1]))
+            def returned(cmd,input,stdout,stderr):
+                os.mkfifo(target/'entry');os.mkfifo(extra/'entry')
+                stdout.write((json.dumps({'type':'turn.completed','usage':{}})+'\n').encode())
+                return SimpleNamespace(returncode=0)
+            original_read=Path.read_bytes
+            def regular_read(path):
+                if not stat.S_ISREG(path.lstat().st_mode):
+                    raise AssertionError('Snapshot attempted to open a nonregular entry')
+                return original_read(path)
+            with patch.object(q.subprocess,'run',side_effect=returned), patch.object(Path,'read_bytes',regular_read), contextlib.redirect_stdout(io.StringIO()):
+                self.assertEqual(q.run(args),0)
+                record=json.loads((root/'evidence/special.run.json').read_text())
+                self.assertEqual(record['status'],'returned')
+                self.assertEqual(record['after']['entry'],{'special':stat.S_IFIFO})
+                self.assertEqual(record['additional_scopes_after'][str(extra.resolve())]['entry'],{'special':stat.S_IFIFO})
+                self.assertEqual(record['delta']['added'],['entry'])
+                self.assertEqual(record['additional_scope_deltas'][str(extra.resolve())]['added'],['entry'])
+                for kind in ('file','directory','link','fifo'):
+                    before=q.snapshot(target);p=target/'entry'
+                    if p.is_dir() and not p.is_symlink():p.rmdir()
+                    else:p.unlink()
+                    if kind=='file':p.write_bytes(b'x')
+                    elif kind=='directory':p.mkdir()
+                    elif kind=='link':p.symlink_to('missing')
+                    else:os.mkfifo(p)
+                    self.assertEqual(q.difference(before,q.snapshot(target)),{'added':[],'removed':[],'changed':['entry']})
+                (target/'entry').unlink()
+                self.assertEqual(q.difference(record['after'],q.snapshot(target))['removed'],['entry'])
 
     def test_only_successfully_completed_full_source_reads_are_credited(self):
         with tempfile.TemporaryDirectory() as d:

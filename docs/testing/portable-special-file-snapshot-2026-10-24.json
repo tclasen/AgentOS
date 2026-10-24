@@ -1,0 +1,137 @@
+{
+  "task": "TASK-000201",
+  "run": "RUN-000196",
+  "plan_revision": 1,
+  "base": "dc19ed51e18177550ba8027997b029f175123504",
+  "operative_candidate": "023b2d4321bb4cedfae856d85f6804d42dd7324d",
+  "operative_tree": "3157819ab5cd41833621f752e92fd70fdfd21208",
+  "proposed_disposition": "accept pending independent APP29 and normal protected delivery",
+  "change": "lstat classifies special entries without opening them; Linux PermissionError-only filesystem socket fixture fallback and public guidance",
+  "original_tests": 49,
+  "total_tests": 51,
+  "host_restricted": {
+    "result": "50 passed, 1 socket.bind PermissionError on macOS",
+    "evidence": "evidence/host-restricted-tests.txt",
+    "seconds": 16.242
+  },
+  "host_authorized": {
+    "result": "51 passed; real bound Unix socket",
+    "evidence": "evidence/host-authorized-tests.txt",
+    "seconds": 16.851
+  },
+  "baseline": {
+    "timeout": true,
+    "seconds": 3.0035716249840334,
+    "owned_child_reaped_by_subprocess_run": true,
+    "no_writer": true,
+    "output_exists": false
+  },
+  "parent_audit": {
+    "observed_at": "2026-10-24T15:57:37.561839+00:00",
+    "operative": "023b2d4321bb4cedfae856d85f6804d42dd7324d",
+    "frozen_source_and_controls_unchanged": true,
+    "source_files": 223,
+    "trials": {
+      "sol": {
+        "status": "returned",
+        "thread": "01a16e9d-eb3e-76d0-93b2-449dff5a844b",
+        "actual_model": "gpt-6.1-sol",
+        "effort": "high",
+        "duration_seconds": 183.28543400764465,
+        "usage": {
+          "input_tokens": 160351,
+          "cached_input_tokens": 129792,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 8953,
+          "reasoning_output_tokens": 1606
+        },
+        "cli_completed_commands": 10,
+        "cli_failed_commands": 0,
+        "native_tool_records": 14,
+        "explicit_truncation_native_lines": [
+          27
+        ],
+        "original_regular_files_unchanged": 27,
+        "added_regular_files": 37,
+        "retained_special_entries": {
+          "scratch/task201-snapshot/fixture/keep.socket": 49152,
+          "scratch/task201-snapshot/fixture/fifo-to-file": 4096,
+          "scratch/task201-snapshot/fixture/keep.fifo": 4096,
+          "scratch/task201-snapshot/fixture/socket-to-directory": 49152,
+          "scratch/task201-snapshot/fixture/fifo-to-symlink": 4096,
+          "scratch/task201-snapshot/fixture/socket-to-symlink": 49152,
+          "scratch/task201-snapshot/fixture/socket-to-file": 49152,
+          "scratch/task201-snapshot/fixture/fifo-to-directory": 4096
+        },
+        "parent_returned_without_intervention": true,
+        "new_regular_files_only_in_scratch": true,
+        "no_bytecode": true,
+        "checks": 34,
+        "snapshot_calls": 3,
+        "socket_bind_permission_errors": 11,
+        "snapshot_max_seconds": 0.02410029200001418
+      },
+      "luna": {
+        "status": "returned",
+        "thread": "01a16e9d-f6b5-7210-a894-fb58b22d96a8",
+        "actual_model": "gpt-6-luna",
+        "effort": "high",
+        "duration_seconds": 43.86763000488281,
+        "usage": {
+          "input_tokens": 136984,
+          "cached_input_tokens": 111104,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 4609,
+          "reasoning_output_tokens": 602
+        },
+        "cli_completed_commands": 5,
+        "cli_failed_commands": 0,
+        "native_tool_records": 14,
+        "explicit_truncation_native_lines": [
+          17
+        ],
+        "original_regular_files_unchanged": 27,
+        "added_regular_files": 81,
+        "retained_special_entries": {
+          "scratch/fixture/fifo-entry": 4096,
+          "scratch/fixture/socket-entry": 49152
+        },
+        "parent_returned_without_intervention": true,
+        "new_regular_files_only_in_scratch": true,
+        "no_bytecode": true,
+        "checks": 54,
+        "snapshot_calls": 26,
+        "socket_bind_permission_errors": 8,
+        "snapshot_max_seconds": 0.03477462499999717
+      }
+    },
+    "limitations": [
+      "Filesystem socket inode coverage; native bind denied, no communication coverage.",
+      "Initial batched reads explicitly truncated; no full-source delivery or onboarding credit claimed. Relevant snapshot implementation reread; functional fixture evidence assessed separately.",
+      "Billing unknown; no semantic rerun or parent repair."
+    ]
+  },
+  "codex_update": {
+    "before": "0.149.1",
+    "after": "0.164.0",
+    "evidence": "evidence/codex-update.txt"
+  },
+  "approval": "APP-000029 pending",
+  "review_receipt": "docs/agent-records/approvals/APP-000029.md",
+  "raw_evidence_root": "/private/tmp/agentos-portablesnapshot-20261024",
+  "planned_archives": [
+    "/private/tmp/agentos-portablesnapshot-20261024-trials.tar.gz",
+    "/private/tmp/agentos-portablesnapshot-20261024-acceptance.tar.gz"
+  ],
+  "limitations": [
+    "Filesystem socket inode coverage; native bind denied, no communication coverage.",
+    "Initial batched reads explicitly truncated; no full-source delivery or onboarding credit claimed. Relevant snapshot implementation reread; functional fixture evidence assessed separately.",
+    "Billing unknown; no semantic rerun or parent repair.",
+    "No device I/O or race-safe monitoring claim. Original onboarding matrix remains required. Prior TASK200 remains rejected; this prospective round changes fixture construction under fixed functional criteria."
+  ],
+  "billing": "unknown",
+  "no_semantic_native_retries": true,
+  "native_roots_used_before_review": 2,
+  "peak_native_roots": 2,
+  "children": 0
+}
