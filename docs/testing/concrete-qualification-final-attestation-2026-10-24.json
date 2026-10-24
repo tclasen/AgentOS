@@ -1,0 +1,59 @@
+{
+  "observed_at": "2026-10-24T09:30:07.949828+00:00",
+  "reviewed_head": "67948168cdaf8ed573382e8c5883eafa122a85b7",
+  "reviewed_tree": "46dd479122edb39ead9097ac5132873bb04f3198",
+  "reviewed_paths": {
+    "docs/agent-records/runs/RUN-000185.md": "5989ac006b965fad1195cb3c5b0c030faa1bacacec809968d04d7cfa38d484f4",
+    "docs/agent-records/tasks/project/TASK-000190.md": "42d3ed3e5db7eee710e63b806ab6698bd6c17de8a5f8f02889abea26c470e539",
+    "docs/testing/concrete-qualification-2026-10-24.json": "1332a8d8ac1376e033c61769b0681a58f4436d758ddb0ac15fe01b3141ad32f7",
+    "docs/testing/concrete-qualification-2026-10-24.md": "43a609bea1139a57ea6aa4595b1f9bd2227d6fa00333f02474692f3a3654b75e"
+  },
+  "receipt_sha256": "61b04b828573fbd7a9d772f199bb9af2c3980262498465a563ba68c7c3477c35",
+  "review_status": "returned",
+  "review_duration_seconds": 489.0009562969208,
+  "review_native_observation": {
+    "name": "review-final",
+    "requested_model": "gpt-6.1-sol",
+    "requested_reasoning_effort": "high",
+    "thread": "01a16d36-4115-7291-9cb0-49eb405d91f2",
+    "model": "gpt-6.1-sol",
+    "effort": "high",
+    "native_session": "/home/agent/.codex/sessions/2026/10/24/rollout-2026-10-24T09-20-34-01a16d36-4115-7291-9cb0-49eb405d91f2.jsonl"
+  },
+  "review_nonzero_outer_commands": 0,
+  "review_internal_failures_retained": [
+    {
+      "path": "work/review-final/scratch/verify-attempt1.txt",
+      "sha256": "aa457495713c601f63b0138afa693b467c1b289032914408129bc6691cc49de8",
+      "tail": "Traceback (most recent call last):\n  File \"/private/tmp/agentos-concrete-20261024/work/review-final/scratch/verify.py\", line 137, in <module>\n    assert any(identities(i['aggregated_output']) for i in good),n\n           ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: full-luna\n"
+    },
+    {
+      "path": "work/review-final/scratch/verify-attempt2.txt",
+      "sha256": "4ece81b5aeac244b3e940330202a2c8341a546c38ed9f1cd51efc02410782c3d",
+      "tail": "Traceback (most recent call last):\n  File \"/private/tmp/agentos-concrete-20261024/work/review-final/scratch/verify.py\", line 161, in <module>\n    cmd=fixture_items[0]['command'];assert cmd.index('\"criteria\"')<cmd.index('with out.open')<cmd.index('def functional(')\n                                           ~~~~~~~~~^^^^^^^^^^^^^^\nValueError: substring not found\n"
+    }
+  ],
+  "all_nine_native_roots_terminal": true,
+  "review_allowance": "Only byte-identical APP-000018 and separate observed facts attestation; four reviewed hashes unchanged",
+  "trial_export": {
+    "archive": "/private/tmp/agentos-concrete-20261024-trials.tar.gz",
+    "sha256": "6da1c057bf41fe63fc9ee967281c146cc799125bc9906c85f25d0284f4de4249",
+    "bytes": 2153581,
+    "indexed_files": 1106,
+    "index": "evidence/trials-index.json",
+    "verified_all_members": true
+  },
+  "cleanup": "Pending exact owned sandbox/raw fixture removal after protected delivery and archive verification, per Reviewer next-action ordering",
+  "delivery": "Pending protected PR, expected-head merge and fetched-owning-main verification",
+  "claim": "Coordinator owns delivery/cleanup; broader goal active",
+  "review_export": {
+    "archive": "/private/tmp/agentos-concrete-20261024-acceptance.tar.gz",
+    "sha256": "f0cc2af5181e5bd8c25531b85e51708f9ff792febe1aa651c47e184fe09d9f3c",
+    "bytes": 2696900,
+    "indexed_files": 1182,
+    "index": "evidence/acceptance-index.json",
+    "verified_all_members": true
+  },
+  "postmerge_receipt": "/private/tmp/agentos-concrete-20261024-delivery.json",
+  "cleanup_receipt": "/private/tmp/agentos-concrete-20261024-cleanup.json"
+}
