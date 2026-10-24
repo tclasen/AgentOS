@@ -1,0 +1,352 @@
+{
+  "task": "TASK-000181",
+  "base": "18c23431851f153b31ff8acfbf241d4cd87c237b",
+  "recommendation": "retain source-continuity guidance, pending independent acceptance and main delivery",
+  "criteria_sha256": "944deac1f80f966de9d685b77572eac2be7825d3b4b5ca1da25fed6c218d939f",
+  "evaluator_sha256": "b31a4d505e9d84ca2587633232ee7919066896d57d9755a1ec5a3fd735c933bd",
+  "full_verification_sha256": "e8b3821eba1b911c0b00014ab6710bba4cd7fe42464e1b2ffe383b02555b2816",
+  "models": [
+    {
+      "run": "baseline-planning-luna-r1",
+      "requested_model": "gpt-6-luna",
+      "thread": "01a16c1c-b49b-7c80-8922-8a9da36e453f",
+      "model": "gpt-6-luna",
+      "reasoning": null
+    },
+    {
+      "run": "baseline-resume-luna-r1",
+      "requested_model": "gpt-6-luna",
+      "thread": "01a16c1e-8c02-7bd2-98a9-a41c90f94d2e",
+      "model": "gpt-6-luna",
+      "reasoning": null
+    },
+    {
+      "run": "candidate-resume-luna-r1",
+      "requested_model": "gpt-6-luna",
+      "thread": "01a16c20-5fb5-7232-848b-8558c5e22bf7",
+      "model": "gpt-6-luna",
+      "reasoning": null
+    },
+    {
+      "run": "candidate-planning-sol-r1",
+      "requested_model": "gpt-6.1-sol",
+      "thread": "01a16c1e-8876-7693-ac56-bed5503e4886",
+      "model": "gpt-6.1-sol",
+      "reasoning": null
+    },
+    {
+      "run": "baseline-planning-sol-r1",
+      "requested_model": "gpt-6.1-sol",
+      "thread": "01a16c1c-af25-7990-a01f-74e067fe2e93",
+      "model": "gpt-6.1-sol",
+      "reasoning": null
+    },
+    {
+      "run": "candidate-resume-sol-r1",
+      "requested_model": "gpt-6.1-sol",
+      "thread": "01a16c20-5c37-73a1-80c3-82391b44f1f2",
+      "model": "gpt-6.1-sol",
+      "reasoning": null
+    },
+    {
+      "run": "candidate-planning-luna-r1",
+      "requested_model": "gpt-6-luna",
+      "thread": "01a16c1d-8f6a-7a41-9edb-8bb4d5e28ce6",
+      "model": "gpt-6-luna",
+      "reasoning": null
+    },
+    {
+      "run": "baseline-resume-sol-r1",
+      "requested_model": "gpt-6.1-sol",
+      "thread": "01a16c1f-0ff2-7670-a8ca-1e595e552c4b",
+      "model": "gpt-6.1-sol",
+      "reasoning": null
+    }
+  ],
+  "runs": [
+    {
+      "run": "baseline-planning-sol-r1",
+      "requested_model": "gpt-6.1-sol",
+      "native_thread": "01a16c1c-af25-7990-a01f-74e067fe2e93",
+      "manifest_sha256": "23f1c74eaa96c8a2bc0d4153bd03dcaa98a3ceadf1d2124d3f0dc6db0eed8b5f",
+      "artifact_sha256": "e85c7e109c9b5560c43f0744df3171f7138b7be91d09d2aafe319d158add6def",
+      "source_revision": "6b33cc598b39308f93a4b183dfa599b9f3384277",
+      "scope_and_git_preserved": true,
+      "nonzero_command_items": 3,
+      "source_revision_in_proposal": true,
+      "all_required_full_reads_observed": true,
+      "parent_proposal_review": "all ten selected; no optional activation; proposed paths inside explicit target; no invented effect authority"
+    },
+    {
+      "run": "baseline-planning-luna-r1",
+      "requested_model": "gpt-6-luna",
+      "native_thread": "01a16c1c-b49b-7c80-8922-8a9da36e453f",
+      "manifest_sha256": "53e211845013efba4c214e5d35d98470b8f9483d7f2e100f4d7933d4f6845088",
+      "artifact_sha256": "650ada687f682b55741422eeb1bf137f7d69512ef0c70245cb325ea50eb01165",
+      "source_revision": "6b33cc598b39308f93a4b183dfa599b9f3384277",
+      "scope_and_git_preserved": true,
+      "nonzero_command_items": 1,
+      "source_revision_in_proposal": false,
+      "all_required_full_reads_observed": true,
+      "parent_proposal_review": "all ten selected; no optional activation; proposed paths inside explicit target; no invented effect authority"
+    },
+    {
+      "run": "baseline-resume-sol-r1",
+      "requested_model": "gpt-6.1-sol",
+      "native_thread": "01a16c1f-0ff2-7670-a8ca-1e595e552c4b",
+      "manifest_sha256": "caf9b94fc7e8644e178de078d3a55eedc5fa500a9a8ec133b854b979097fb1eb",
+      "artifact_sha256": "614b677bfaed1dc12ea170d3f797ad8c16ffcbcc0bf48d55ecee70ec07fef3c9",
+      "source_revision": "6b33cc598b39308f93a4b183dfa599b9f3384277",
+      "scope_and_git_preserved": true,
+      "nonzero_command_items": 0,
+      "cases": [
+        {
+          "id": "a",
+          "expected_decision": "continue",
+          "actual_decision": "continue",
+          "decision_matches": true,
+          "parent_source_observation": {
+            "revision": "6b33cc598b39308f93a4b183dfa599b9f3384277",
+            "authority_sha256": "fbc6b99852540f20a25dfd224d0d0f07399a9021e8cb1fc1d87f53c5156fb8a9"
+          },
+          "parent_evidence_accuracy": "passed",
+          "finding": "Source, target and decision evidence inspected against actual files and native completed output."
+        },
+        {
+          "id": "b",
+          "expected_decision": "reconcile",
+          "actual_decision": "reconcile",
+          "decision_matches": true,
+          "parent_source_observation": {
+            "revision": "a1b0f2fe127086d3840e1775885f351fe9820f41",
+            "authority_sha256": "584525c1fdc2326692a75a204dbb418a605e43277cad94562a2087510ec3db8d"
+          },
+          "parent_evidence_accuracy": "passed",
+          "finding": "Source, target and decision evidence inspected against actual files and native completed output."
+        },
+        {
+          "id": "c",
+          "expected_decision": "blocked",
+          "actual_decision": "blocked",
+          "decision_matches": true,
+          "parent_source_observation": {
+            "revision": null,
+            "authority_sha256": null,
+            "files": [
+              "UNAVAILABLE.txt"
+            ]
+          },
+          "parent_evidence_accuracy": "passed",
+          "finding": "Source, target and decision evidence inspected against actual files and native completed output."
+        }
+      ]
+    },
+    {
+      "run": "baseline-resume-luna-r1",
+      "requested_model": "gpt-6-luna",
+      "native_thread": "01a16c1e-8c02-7bd2-98a9-a41c90f94d2e",
+      "manifest_sha256": "1d30ffe21d08492bfaa62986be28ee19eb0dbb893e17d3b42f0ad596827e2c4f",
+      "artifact_sha256": "962d30676056a3d38ea3254a613fe8b9e4be87242784d1f3ca0bf6889ea2f177",
+      "source_revision": "6b33cc598b39308f93a4b183dfa599b9f3384277",
+      "scope_and_git_preserved": true,
+      "nonzero_command_items": 2,
+      "cases": [
+        {
+          "id": "a",
+          "expected_decision": "continue",
+          "actual_decision": "continue",
+          "decision_matches": true,
+          "parent_source_observation": {
+            "revision": "6b33cc598b39308f93a4b183dfa599b9f3384277",
+            "authority_sha256": "fbc6b99852540f20a25dfd224d0d0f07399a9021e8cb1fc1d87f53c5156fb8a9"
+          },
+          "parent_evidence_accuracy": "passed",
+          "finding": "Source, target and decision evidence inspected against actual files and native completed output."
+        },
+        {
+          "id": "b",
+          "expected_decision": "reconcile",
+          "actual_decision": "reconcile",
+          "decision_matches": true,
+          "parent_source_observation": {
+            "revision": "a1b0f2fe127086d3840e1775885f351fe9820f41",
+            "authority_sha256": "584525c1fdc2326692a75a204dbb418a605e43277cad94562a2087510ec3db8d"
+          },
+          "parent_evidence_accuracy": "failed",
+          "finding": "Artifact labels checkpoint authority hash as current without hashing case-b authority; actual current hash differs. Decision to reconcile remains correct."
+        },
+        {
+          "id": "c",
+          "expected_decision": "blocked",
+          "actual_decision": "blocked",
+          "decision_matches": true,
+          "parent_source_observation": {
+            "revision": null,
+            "authority_sha256": null,
+            "files": [
+              "UNAVAILABLE.txt"
+            ]
+          },
+          "parent_evidence_accuracy": "passed",
+          "finding": "Source, target and decision evidence inspected against actual files and native completed output."
+        }
+      ]
+    },
+    {
+      "run": "candidate-planning-sol-r1",
+      "requested_model": "gpt-6.1-sol",
+      "native_thread": "01a16c1e-8876-7693-ac56-bed5503e4886",
+      "manifest_sha256": "e6d19b9ea8e028b9067a185126653b1cfdad23a767d62fb7602e4afbb914c396",
+      "artifact_sha256": "c0714a56892707f3d8be006171d24df343bc10d6ffb099beaa8442a1393ce500",
+      "source_revision": "10079b2d5b26e284223e019c590f3b0fd48e379f",
+      "scope_and_git_preserved": true,
+      "nonzero_command_items": 2,
+      "source_revision_in_proposal": true,
+      "all_required_full_reads_observed": true,
+      "parent_proposal_review": "all ten selected; no optional activation; proposed paths inside explicit target; no invented effect authority"
+    },
+    {
+      "run": "candidate-planning-luna-r1",
+      "requested_model": "gpt-6-luna",
+      "native_thread": "01a16c1d-8f6a-7a41-9edb-8bb4d5e28ce6",
+      "manifest_sha256": "765f85d1894b073d2be6fd99e521e49d7bf987d0422ca1dedca741318ac8ceac",
+      "artifact_sha256": "76af86bba54b93c0bea8851280f865aaaf9bb67c40170359c52a0293b6df843d",
+      "source_revision": "10079b2d5b26e284223e019c590f3b0fd48e379f",
+      "scope_and_git_preserved": true,
+      "nonzero_command_items": 1,
+      "source_revision_in_proposal": true,
+      "all_required_full_reads_observed": true,
+      "parent_proposal_review": "all ten selected; no optional activation; proposed paths inside explicit target; no invented effect authority"
+    },
+    {
+      "run": "candidate-resume-sol-r1",
+      "requested_model": "gpt-6.1-sol",
+      "native_thread": "01a16c20-5c37-73a1-80c3-82391b44f1f2",
+      "manifest_sha256": "a5c44dc87374f9b0833e78955448c12a11a0982f1fd2ecb73faf4a6f493cee0a",
+      "artifact_sha256": "ddb6305875f162c3b8865f7c5143f91ff4e538034df979844e65fee1462f63ae",
+      "source_revision": "10079b2d5b26e284223e019c590f3b0fd48e379f",
+      "scope_and_git_preserved": true,
+      "nonzero_command_items": 1,
+      "cases": [
+        {
+          "id": "a",
+          "expected_decision": "continue",
+          "actual_decision": "continue",
+          "decision_matches": true,
+          "parent_source_observation": {
+            "revision": "10079b2d5b26e284223e019c590f3b0fd48e379f",
+            "authority_sha256": "fbc6b99852540f20a25dfd224d0d0f07399a9021e8cb1fc1d87f53c5156fb8a9"
+          },
+          "parent_evidence_accuracy": "passed",
+          "finding": "Source, target and decision evidence inspected against actual files and native completed output."
+        },
+        {
+          "id": "b",
+          "expected_decision": "reconcile",
+          "actual_decision": "reconcile",
+          "decision_matches": true,
+          "parent_source_observation": {
+            "revision": "20eb8969db5acbd9beca74e513618aa03953b876",
+            "authority_sha256": "584525c1fdc2326692a75a204dbb418a605e43277cad94562a2087510ec3db8d"
+          },
+          "parent_evidence_accuracy": "passed",
+          "finding": "Source, target and decision evidence inspected against actual files and native completed output."
+        },
+        {
+          "id": "c",
+          "expected_decision": "blocked",
+          "actual_decision": "blocked",
+          "decision_matches": true,
+          "parent_source_observation": {
+            "revision": null,
+            "authority_sha256": null,
+            "files": [
+              "UNAVAILABLE.txt"
+            ]
+          },
+          "parent_evidence_accuracy": "passed",
+          "finding": "Source, target and decision evidence inspected against actual files and native completed output."
+        }
+      ]
+    },
+    {
+      "run": "candidate-resume-luna-r1",
+      "requested_model": "gpt-6-luna",
+      "native_thread": "01a16c20-5fb5-7232-848b-8558c5e22bf7",
+      "manifest_sha256": "9a767b5a239f6cd721db567e09bf30e4642de46a6fbd99ce079afa09bd148899",
+      "artifact_sha256": "b16cf078c7270f6883004fe749feb9dda451815ee485c674540d06377936db24",
+      "source_revision": "10079b2d5b26e284223e019c590f3b0fd48e379f",
+      "scope_and_git_preserved": true,
+      "nonzero_command_items": 1,
+      "cases": [
+        {
+          "id": "a",
+          "expected_decision": "continue",
+          "actual_decision": "continue",
+          "decision_matches": true,
+          "parent_source_observation": {
+            "revision": "10079b2d5b26e284223e019c590f3b0fd48e379f",
+            "authority_sha256": "fbc6b99852540f20a25dfd224d0d0f07399a9021e8cb1fc1d87f53c5156fb8a9"
+          },
+          "parent_evidence_accuracy": "passed",
+          "finding": "Source, target and decision evidence inspected against actual files and native completed output."
+        },
+        {
+          "id": "b",
+          "expected_decision": "reconcile",
+          "actual_decision": "reconcile",
+          "decision_matches": true,
+          "parent_source_observation": {
+            "revision": "20eb8969db5acbd9beca74e513618aa03953b876",
+            "authority_sha256": "584525c1fdc2326692a75a204dbb418a605e43277cad94562a2087510ec3db8d"
+          },
+          "parent_evidence_accuracy": "passed",
+          "finding": "Source, target and decision evidence inspected against actual files and native completed output."
+        },
+        {
+          "id": "c",
+          "expected_decision": "blocked",
+          "actual_decision": "blocked",
+          "decision_matches": true,
+          "parent_source_observation": {
+            "revision": null,
+            "authority_sha256": null,
+            "files": [
+              "UNAVAILABLE.txt"
+            ]
+          },
+          "parent_evidence_accuracy": "passed",
+          "finding": "Source, target and decision evidence inspected against actual files and native completed output."
+        }
+      ]
+    }
+  ],
+  "results": {
+    "planning_revision_present": {
+      "baseline_sol": true,
+      "baseline_luna": false,
+      "candidate_sol": true,
+      "candidate_luna": true
+    },
+    "preflight_decisions": {
+      "baseline": "6/6",
+      "candidate": "6/6"
+    },
+    "preflight_evidence_accuracy": {
+      "baseline": "5/6; Luna changed-source current-hash claim fails",
+      "candidate": "6/6"
+    },
+    "scope_preserved_roots": 8,
+    "full_required_component_reads_planning": 40,
+    "regression_tests": 32,
+    "nonzero_command_items": 11
+  },
+  "limits": [
+    "one root per model/variant/phase; no reliability or statistical gain claim",
+    "controlled planning/preflight, not installation execution or full onboarding rerun",
+    "same synthetic checkpoints contain explicit pins/grants and cues; preflight decision results equal",
+    "target is a subdirectory of the disposable Git fixture, not an independent target repository",
+    "Git-backed sources only; archive/no-Git manifest fallback and dirty source are untested",
+    "effort/cost unknown; no children; no repeated native attempts"
+  ]
+}
