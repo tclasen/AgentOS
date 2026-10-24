@@ -1,0 +1,112 @@
+{
+  "observed_at": "2026-10-24T15:03:21.900364+00:00",
+  "reviewed_candidate": {
+    "head": "cff33137c7038dbecd98d1ffc450e91604dfbc38",
+    "tree": "85b2eec11a311db903a76eb64c56b7a5b958419f",
+    "base": "3763b16578251d145aaee18e5c41219b8db1619a",
+    "operative": "a47073e59f5de502ad74dfed5ac4458d67b22568",
+    "files": {
+      "docs/agent-records/runs/RUN-000194.md": {
+        "sha256": "1218219e114c2ab2209a8cb1f5d12e3326bd637e84721f3c2544af30025d3dc8",
+        "bytes": 10321
+      },
+      "docs/agent-records/tasks/project/TASK-000199.md": {
+        "sha256": "e56f16dcaea0a0d0749034fd0c6dd4fa271c57e97a5ae0183abef96ba5fe6dc1",
+        "bytes": 10323
+      },
+      "docs/testing/budget-discovery-signals-2026-10-24.json": {
+        "sha256": "6df25c4c17108960c2c81f9ad9a7ff3791da5078231177c3aff4917a745d873f",
+        "bytes": 11830
+      },
+      "docs/testing/budget-discovery-signals-2026-10-24.md": {
+        "sha256": "aa189b08a04d818919d07131a4f9501a44c00cbb370dd4168fbe92428f4853d5",
+        "bytes": 8904
+      }
+    }
+  },
+  "independent_receipt": {
+    "path": "docs/agent-records/approvals/APP-000027.md",
+    "sha256": "2f4589ddcfd03eebe3908cb5958272b675d80e149408ab734c13f78a36344b1c",
+    "bytes": 20143,
+    "decision": "approve findings-only withdrawal; reject operative package"
+  },
+  "reviewer": {
+    "thread": "01a16e5f-618e-7011-b2c4-f6a397ab35f0",
+    "actual_model": "gpt-6.1-sol",
+    "actual_effort": "high",
+    "native_cli_turn_completed": true,
+    "host_runner_status": "returned",
+    "host_runner_elapsed_seconds_including_postnative_FIFO_stall": 996.25315117836,
+    "reviewer_sealing_elapsed_seconds": 801.599209,
+    "commands": 93,
+    "all_started_commands_completed": true,
+    "nonzero_commands": [
+      {
+        "item": "item_33",
+        "exit_code": 2,
+        "output": "cat: scratch/archive/controls/source-full/Makefile: No such file or directory\ncat: scratch/archive/controls/source-full/pyproject.toml: No such file or directory\n"
+      },
+      {
+        "item": "item_75",
+        "exit_code": 1,
+        "output": "bundle-luna-I tools ['apply_patch', 'clock__curr_time', 'exec_command']\n204 ['AGENTS.md', '.agentos/README.md', '.agentos/authority-and-context.md', '.agentos/director.md', '.agentos/chief-of-staff.md', '.agentos/capability-registry.md', '.agentos/operations.md', '.agentos/improvement-log.md']\n217 ['.agentos/installation.md', '.agentos/qualification.md']\n242 ['.agentos/qualification.md']\n269 ['.agentos/qualification.md']\n321 ['.agentos/installation.md']\nTraceback (most recent call last):\n  File \"<stdin>\", line 11, in <module>\n  File \"/usr/lib/python3.14/json/__init__.py\", line 352, in loads\n    return _default_decoder.decode(s)\n           ~~~~~~~~~~~~~~~~~~~~~~~^^^\n  File \"/usr/lib/python3.14/json/decoder.py\", line 345, in decode\n    obj, end = self.raw_decode(s, idx=_w(s, 0).end())\n               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.14/json/decoder.py\", line 363, in raw_decode\n    raise JSONDecodeError(\"Expecting value\", s, err.value) from None\njson.decoder.JSONDecodeError: Expecting value: line 1 column 3 (char 2)\n"
+      },
+      {
+        "item": "item_79",
+        "exit_code": 1,
+        "output": "Traceback (most recent call last):\n  File \"<stdin>\", line 10, in <module>\nAssertionError\n"
+      },
+      {
+        "item": "item_83",
+        "exit_code": 1,
+        "output": ""
+      }
+    ],
+    "usage": [
+      {
+        "input_tokens": 4863907,
+        "cached_input_tokens": 4580352,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 36179,
+        "reasoning_output_tokens": 10436
+      }
+    ],
+    "billing": "unknown"
+  },
+  "reviewer_evidence_index": {
+    "path": "work/review-final/scratch/reviewer-evidence-index.json",
+    "sha256": "7c051d0256482a31bbebd65fc35a5f42ed309a78368259107cbfc35b2d28b8cd",
+    "regular_files": 1254,
+    "regular_bytes": 10476160,
+    "symlinks": 8,
+    "special_entries": 1,
+    "all_indexed_regular_files_verified_on_disk": true,
+    "direct_acceptance_archive_retention": "required before cleanup; pending final export"
+  },
+  "trials_export": {
+    "archive": "/private/tmp/agentos-budgetsignals-20261024-trials.tar.gz",
+    "sha256": "d39df35ea3fb00565f6aa8c71e5bbca866a3e5b8af5982390d36483a77b35634",
+    "bytes": 2732271,
+    "indexed_files": 884,
+    "index": "evidence/trials-index.json",
+    "verified_all_members": true
+  },
+  "postreview_driver_recovery": {
+    "diagnosis": "snapshot() attempts read_bytes on nonsymlink FIFO after native CLI turn.completed and sealed approval; host runner waited for FIFO reader completion",
+    "observation": "Exact host PID3130 owned review command; nonblocking writer open on indexed FIFO succeeded, confirming waiting reader; closed without writing bytes; host runner immediately returned exit0.",
+    "evidence": [
+      "evidence/review-driver-process-diagnostic.txt",
+      "evidence/review-driver-fifo-diagnostic.json",
+      "evidence/review-driver-fifo-recovery.json"
+    ],
+    "limitations": "Host snapshot misrepresents this FIFO as an empty regular file after EOF; authoritative indexed lstat metadata retains actual FIFO type. Do not treat the host snapshot as special-file evidence or runner elapsed as native review time.",
+    "index_receipt_and_all_indexed_regular_hashes_unchanged": true,
+    "model_retry": false,
+    "product_change": false,
+    "next_prospective_fix": "Classify special entries without opening them, with bounded FIFO regression and both-model validation; not approved by this receipt."
+  },
+  "parent_diagnostic_recovery": "Restricted ps was denied by local sandbox; authorized targeted escalation inspected only the exact owned runner. No auto-review rejection. One zero-data FIFO recovery, no semantic retry.",
+  "delivery": "Pending normal protected PR/current checks and fetched owning-main verification; exact reviewed hashes and permitted additions only.",
+  "cleanup": "Pending two verified external archives, exact-owned sandbox/raw-root removal and preservation of63 original identities.",
+  "goal": "active; no all-path or no-further-improvement claim"
+}
