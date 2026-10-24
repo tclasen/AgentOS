@@ -11,8 +11,6 @@ status: stable
 
 # Procedure
 
-Enter with the approved design, its retained source identity, the full selected component bodies and the complete qualification and handoff procedures available in the current context. In a fresh continuation, load those sources before the first write; an earlier session's read checklist or a helper's metadata cannot stand in for the contracts. Use their individual obligations and required scenarios to plan the installation and its checks together.
-
 1. Reconcile target repository state and permissions immediately before editing; avoid conflicts with new user changes. Verify the installer source against the revision or source-byte manifest bound to the approved design, including after resumption. If it changed, compare affected contracts and reconcile the design, checks and affected approval before adopting it; use the intact approved snapshot when available. If the approved source cannot be recovered or verified, report the blocker rather than inventing it.
 2. Create/integrate a minimal role-aware root `AGENTS.md`: unassigned interactive session activates the root Director; delegated workers preserve assigned roles. Respect existing instructions.
 3. Install a compact organizational home, preferring `.agentos/` but following approved runtime conventions. Implement permanent Director and Chief of Staff; only justified additional roles. Use native structured definitions where practical, Markdown where freeform.
@@ -20,8 +18,6 @@ Enter with the approved design, its retained source identity, the full selected 
 5. Preserve constitution, grants, sensitive data separation, operational fact/unknown distinction, authorized boundaries and user work. Minimize duplicated canonical rules and top-level clutter.
 6. Do not claim nonexistent background execution, universal instrumentation, independent sandboxing, locks or idempotence. Implement approved fallback or report a missing capability.
 7. Record sufficient installation provenance/selected capabilities when approved; make the installed CoS capable of reconfiguring the organization without this source repository.
-
-For an approved portable sequential design selecting only the required components, optionally resource-budgets, read the [concrete portable implementation reference](../examples/portable-implementation.md) before synthesis. Adapt its operating pathways to the actual grant and project; preserve every selected source obligation. It is an aid for this small profile, not a substitute for full component reads, a mandate for its filenames, or permission to reduce a richer design to that profile. Its illustrative records are not evidence of execution.
 
 # Transition
 
