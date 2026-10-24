@@ -1,0 +1,2687 @@
+{
+  "task": "TASK-000206",
+  "run": "RUN-000201",
+  "base": "ac38e29304571a2c47be4ffd3990f247e29733f5",
+  "tested_candidate": "9eb913daed87ac52920fdeb3cdfe4ec3a420075a",
+  "tested_tree": "19704174fced356e0398f4e0b6546ffd60ba96fb",
+  "source_fixture_head": "e17fc70dc6b1dd8b3b03b75690471a7dbb752c0b",
+  "disposition": "rejected; all twelve operative paths withdrawn to baseline; independent findings review pending",
+  "disposition_at": "2026-10-24T19:40:21.723655+00:00",
+  "preregistration": {
+    "task": "TASK-000206",
+    "run": "RUN-000201",
+    "base": "ac38e29304571a2c47be4ffd3990f247e29733f5",
+    "candidate": "9eb913daed87ac52920fdeb3cdfe4ec3a420075a",
+    "tree": "19704174fced356e0398f4e0b6546ffd60ba96fb",
+    "frozen_at": "2026-10-24T19:36:01.616264+00:00",
+    "operative_files": {
+      "bundle/components/authority.md": {
+        "sha256": "47ae9e02646be13d453e3219a55bc16610e115d2da221b944103b6c95a53ff95",
+        "bytes": 3041
+      },
+      "bundle/components/delivery-acceptance.md": {
+        "sha256": "3a74e11cdae62fd5e0fc1ea4641775b6dabd5018eaed872d9ddecee354794000",
+        "bytes": 2686
+      },
+      "bundle/components/index.md": {
+        "sha256": "81750c4c5254aa47942c556cf7390e95865153abad7af1cd053f3e8997440d67",
+        "bytes": 3619
+      },
+      "bundle/components/resource-budgets.md": {
+        "sha256": "02f41da067d039db46fd6a8c8802994cb36d6ad72b78879baa65ac5c2cb9870f",
+        "bytes": 1706
+      },
+      "bundle/core/graph-routing.md": {
+        "sha256": "131746a30086a490c0d660f3d9658d6400303ca68f8d5fed0f77af15ffe4673b",
+        "bytes": 8000
+      },
+      "bundle/examples/index.md": {
+        "sha256": "2347847e8efea199a6b61ac370fa6e4afdb15587579723585815071cbcbbccc9",
+        "bytes": 479
+      },
+      "bundle/examples/portable-implementation.md": {
+        "sha256": "ec9c16d55337ae8c9a466e52677d10fc639c346f175ca47aa1ad3aa75dfacb69",
+        "bytes": 27325
+      },
+      "bundle/examples/source-manifest.md": {
+        "sha256": "984d83a51b774184945926149c63d7f05329f3da7a0a98a1f21107d45df90118",
+        "bytes": 5101
+      },
+      "bundle/phases/design.md": {
+        "sha256": "02178dbea3c3de8e70c8308a8ace5e5676a68737f90a3489d7952f015672ec54",
+        "bytes": 3113
+      },
+      "bundle/phases/implement.md": {
+        "sha256": "678214cc5fda60193c78a767b556aa00caea7816c7329fd6bcfeb6c6835774b0",
+        "bytes": 6436
+      },
+      "bundle/phases/qualify.md": {
+        "sha256": "5abcda47da22abfa5ff87b4a2fde2e7596d50e3338130bed39ad5e551cda1496",
+        "bytes": 10182
+      },
+      "bundle/start.md": {
+        "sha256": "23771ad33e2d5e66e0db66ce4443503b82e2e28c928b9e3bfd4d8a131ce11a27",
+        "bytes": 7351
+      }
+    },
+    "source_fixture_head": "e17fc70dc6b1dd8b3b03b75690471a7dbb752c0b",
+    "source_manifest": {
+      "format": "agentos-source-v1",
+      "files": {
+        "components/activation.md": {
+          "sha256": "2893e4d66fc47158d5267cae0a04132d832c8436ad90f7ca6f58d322aaef4284",
+          "bytes": 2064
+        },
+        "components/advanced-validation.md": {
+          "sha256": "b4ac3d7f3a53d3194e7495a3729f8abc4dc6c632892c8acc69f22be0f9063648",
+          "bytes": 1693
+        },
+        "components/authority.md": {
+          "sha256": "47ae9e02646be13d453e3219a55bc16610e115d2da221b944103b6c95a53ff95",
+          "bytes": 3041
+        },
+        "components/brownfield-migration.md": {
+          "sha256": "dd0cac8f10b20aed0554fd6ed4504c4263ba1bd8be374a4f966ca86290f4f121",
+          "bytes": 1598
+        },
+        "components/capability-routing.md": {
+          "sha256": "d7f86c5cbf4b1a505f9db20fcbd68487a809bbdc04adce3cd12221114d0fc161",
+          "bytes": 1846
+        },
+        "components/chief-of-staff.md": {
+          "sha256": "c43203e841a0a10ef4ef3887b6a7d89eb834eb255b3b4386231488f4f9efb8b5",
+          "bytes": 1726
+        },
+        "components/context-core.md": {
+          "sha256": "8046c83f2eec46be879ce418e68827fdd95f6388ad3ff2090b8254840e74bca0",
+          "bytes": 1602
+        },
+        "components/delegation.md": {
+          "sha256": "d34dcf7c5bb102fc4f0e1a1603954ce51e33aa5f05f9a3561ae33315d2725169",
+          "bytes": 2146
+        },
+        "components/delivery-acceptance.md": {
+          "sha256": "3a74e11cdae62fd5e0fc1ea4641775b6dabd5018eaed872d9ddecee354794000",
+          "bytes": 2686
+        },
+        "components/director.md": {
+          "sha256": "beafa827c5ce6c53937537fa9521c2b46ebb9ec049788648b7e2b010b0eea9b0",
+          "bytes": 2115
+        },
+        "components/durable-handoff.md": {
+          "sha256": "f620977f68ad65bb99415afaa75e2afab51cdaae00037e65948927cb3c2eebd8",
+          "bytes": 1477
+        },
+        "components/effect-reconciliation.md": {
+          "sha256": "955360b0112b872255287836a713d7bd646461f2ca073dd20042581e468cd2b8",
+          "bytes": 2074
+        },
+        "components/git-delivery.md": {
+          "sha256": "548f1d4eb37bf8bdb08e93bce84918cdfb5ea9ed03efc6c38112006b875de7cc",
+          "bytes": 1644
+        },
+        "components/independent-evaluation.md": {
+          "sha256": "b8056f3712e264d67628bcf8320436f9069a7605bd08c74c0f75ff33f88a5391",
+          "bytes": 1716
+        },
+        "components/index.md": {
+          "sha256": "81750c4c5254aa47942c556cf7390e95865153abad7af1cd053f3e8997440d67",
+          "bytes": 3619
+        },
+        "components/information-boundaries.md": {
+          "sha256": "ca62d743eb5e146fde9905c6314553cac50c113241a9e2115713831c2f705454",
+          "bytes": 1425
+        },
+        "components/learning-queue.md": {
+          "sha256": "e8b77df91474a3f010d903d036fc02ccf0f70ac308dc62e2811dcd58519c100e",
+          "bytes": 1533
+        },
+        "components/multi-repo.md": {
+          "sha256": "f3e66aa254d41161bd2c888731d9776d00f221a17d54381c6975a80f1aa39d3a",
+          "bytes": 1443
+        },
+        "components/parallel-coordination.md": {
+          "sha256": "c356df44bb713f7f79a37c8fa82c9609d1c6702446643bbb82a447b48a00e510",
+          "bytes": 1484
+        },
+        "components/resource-budgets.md": {
+          "sha256": "02f41da067d039db46fd6a8c8802994cb36d6ad72b78879baa65ac5c2cb9870f",
+          "bytes": 1706
+        },
+        "components/role-lifecycle.md": {
+          "sha256": "ae0fc9a30668666d22cb9b0ab03049b98ec095a590f81ecb7b843972073bf95f",
+          "bytes": 1897
+        },
+        "components/runtime-native.md": {
+          "sha256": "4d61f9e83c878efb8718fdddf5adf196e86f9525a73ea3cb2b18d53cfea1cf74",
+          "bytes": 1441
+        },
+        "components/scheduling.md": {
+          "sha256": "20b4efed9901cd9bc9bb9df55651a84df9df37e5521aeab46739ace5aaccec33",
+          "bytes": 1508
+        },
+        "components/self-improvement.md": {
+          "sha256": "0bf78a0d5f04096c9e0b3603588f8b865aed218ba980f59f4dc11922656d5ac7",
+          "bytes": 3002
+        },
+        "components/telemetry.md": {
+          "sha256": "51d1bc186c3d6e45933dc671bfe92170f3cdda48cb36d419dc8c307db2b485d3",
+          "bytes": 1483
+        },
+        "components/work-ledger.md": {
+          "sha256": "d912bc474f79722ef403dde880e1fa864bb7f08fd0b899a9b774880e7bb78cab",
+          "bytes": 1713
+        },
+        "concepts/evidence-levels.md": {
+          "sha256": "da302b93ef5f1cd85b51c3d4b4973b03da1031f10554d5e7417c51ca995846d2",
+          "bytes": 1257
+        },
+        "concepts/index.md": {
+          "sha256": "c334562a78706220654b15394e6d9f4b747867acda296b03660053d72e18cb5b",
+          "bytes": 362
+        },
+        "concepts/progressive-context.md": {
+          "sha256": "e810a0b0862e20852483b13661e03fda07f26bd96f0c48fd75a9ec58cc9b33fe",
+          "bytes": 1082
+        },
+        "concepts/role-capability-instance.md": {
+          "sha256": "b0b4a7f3124956343caea65c21be255a3f323f52351935bdb07f4d72308ad69d",
+          "bytes": 1282
+        },
+        "core/constitution.md": {
+          "sha256": "6797e597f48135da527f87aff5b0f1b01e2c265ebb5378cb2826d70665a5ed82",
+          "bytes": 2665
+        },
+        "core/graph-routing.md": {
+          "sha256": "131746a30086a490c0d660f3d9658d6400303ca68f8d5fed0f77af15ffe4673b",
+          "bytes": 8000
+        },
+        "core/index.md": {
+          "sha256": "16d92c1d015d84a6ab2c3af56fc3a0581f77b671c7f85fb71849ee7a804a48d1",
+          "bytes": 279
+        },
+        "core/installer-policy.md": {
+          "sha256": "c6e48d24fa13124d2f623e131c96c83b77aa32734b5ae706f2e6912cc82db4aa",
+          "bytes": 2634
+        },
+        "examples/index.md": {
+          "sha256": "2347847e8efea199a6b61ac370fa6e4afdb15587579723585815071cbcbbccc9",
+          "bytes": 479
+        },
+        "examples/portable-implementation.md": {
+          "sha256": "ec9c16d55337ae8c9a466e52677d10fc639c346f175ca47aa1ad3aa75dfacb69",
+          "bytes": 27325
+        },
+        "examples/selection-scenarios.md": {
+          "sha256": "e59845245220622b50b1a16e9fead94825e6c2fdf07f7872c54d131ff7c86470",
+          "bytes": 2259
+        },
+        "examples/source-manifest.md": {
+          "sha256": "984d83a51b774184945926149c63d7f05329f3da7a0a98a1f21107d45df90118",
+          "bytes": 5101
+        },
+        "index.md": {
+          "sha256": "2635e2fb8d4791bde2792ebb0d904c6347350ae18454bc01f435007fee4d7226",
+          "bytes": 1416
+        },
+        "interviews/bootstrap.md": {
+          "sha256": "eb471fc596bf6705c656911716e3022e99d818a905b744b8314acf3b3c988ce4",
+          "bytes": 2279
+        },
+        "interviews/index.md": {
+          "sha256": "02f4b6b9a94e8af5260f1d90cdc3ad01bb004291b14259d2a55870b9642d4057",
+          "bytes": 162
+        },
+        "phases/design.md": {
+          "sha256": "02178dbea3c3de8e70c8308a8ace5e5676a68737f90a3489d7952f015672ec54",
+          "bytes": 3113
+        },
+        "phases/discover.md": {
+          "sha256": "513fc2cea5ca6a7164e1f37ce764abf1a7a5c3e849d9ff83dd3fd894d4238b9d",
+          "bytes": 1377
+        },
+        "phases/handoff.md": {
+          "sha256": "8b282f7b34684c4323b9677c00b72323861043ad605ecc79a4fa2371ec6e9511",
+          "bytes": 2105
+        },
+        "phases/implement.md": {
+          "sha256": "678214cc5fda60193c78a767b556aa00caea7816c7329fd6bcfeb6c6835774b0",
+          "bytes": 6436
+        },
+        "phases/index.md": {
+          "sha256": "6d529c0d37adca24391092eabfa68a3c94b3dbeaa7ae2849ba329309a93c68cc",
+          "bytes": 468
+        },
+        "phases/qualify.md": {
+          "sha256": "5abcda47da22abfa5ff87b4a2fde2e7596d50e3338130bed39ad5e551cda1496",
+          "bytes": 10182
+        },
+        "start.md": {
+          "sha256": "23771ad33e2d5e66e0db66ce4443503b82e2e28c928b9e3bfd4d8a131ce11a27",
+          "bytes": 7351
+        }
+      }
+    },
+    "controls": {
+      "approve_design.py": {
+        "sha256": "0ffc780fb33a822df6b2ed98f6a59f82017c86b343a35efffa5b2ef7c312a2c0",
+        "bytes": 8418
+      },
+      "audit_phases.py": {
+        "sha256": "45706bca0103df5665fce8cf735c969263cff9d4b706bbba332f1c5ec2c41c47",
+        "bytes": 3333
+      },
+      "bundle-luna-design.txt": {
+        "sha256": "d5e849754feb4ad218b20dc4e843769cc15c6983cf6fe9b8d5edea558d953c34",
+        "bytes": 1254
+      },
+      "bundle-luna-install.txt": {
+        "sha256": "ff47ad12442bbb9f64ea7c5767191bbc04cc6ec2735c4d9a484caea2e0f8777b",
+        "bytes": 2371
+      },
+      "bundle-luna-use.txt": {
+        "sha256": "f0836c258fdba99afccdf0436a672ddb1fcf7b6de659677b082e3ba44870de29",
+        "bytes": 334
+      },
+      "bundle-sol-design.txt": {
+        "sha256": "edde7082c267793d152681bddd2573f9981bd6c5d9e7d262fb67518c63ccf0c5",
+        "bytes": 1253
+      },
+      "bundle-sol-install.txt": {
+        "sha256": "29d8e408295c5dc46e9fef16293c42a3103bb2c712cdb9646796e0c2f1bea182",
+        "bytes": 2369
+      },
+      "bundle-sol-use.txt": {
+        "sha256": "f0836c258fdba99afccdf0436a672ddb1fcf7b6de659677b082e3ba44870de29",
+        "bytes": 334
+      },
+      "collect_runtime.py": {
+        "sha256": "51c6e7840cc9a0fa312f4875bd87eedc5fcd10cf3edb31e61e84648461bf2dea",
+        "bytes": 1765
+      },
+      "compact_handoff.py": {
+        "sha256": "548d4cb487845a72fc0240174afb7d286ee68c72edb61eeeb6f465240c2b78c4",
+        "bytes": 1963
+      },
+      "embedded-example.py": {
+        "sha256": "056420c4907f19462e7f1d21c5b31599072d9bbd26a71ce820df9cb664fad972",
+        "bytes": 3546
+      },
+      "fixtures-before.json": {
+        "sha256": "50f8c37009159a5aa8de3392f740c5df8a4a9e63265856ca5693ad8e21618158",
+        "bytes": 21739
+      },
+      "freeze.py": {
+        "sha256": "5ba730f6fed1e554c6144d79c202c8482f0b42b8d0be4012f179275315a32d09",
+        "bytes": 4621
+      },
+      "full-luna-design.txt": {
+        "sha256": "e81cd60a19269e18d3c2f779630c7c9479779172a56572cd804b7ad18589e764",
+        "bytes": 1246
+      },
+      "full-luna-install.txt": {
+        "sha256": "97937ad457b79c0386ad396bd87bc2d685993fb275143b0b45ce2f28c1d36927",
+        "bytes": 2365
+      },
+      "full-luna-use.txt": {
+        "sha256": "f0836c258fdba99afccdf0436a672ddb1fcf7b6de659677b082e3ba44870de29",
+        "bytes": 334
+      },
+      "full-sol-design.txt": {
+        "sha256": "0885bad86388d5b8f159f1a65cd05cba481562330eac999a94de1fc36fc156d0",
+        "bytes": 1245
+      },
+      "full-sol-install.txt": {
+        "sha256": "f65455f8c455758920a89eec94807a1d54d20a0fea28631a67ce85255c678689",
+        "bytes": 2363
+      },
+      "full-sol-use.txt": {
+        "sha256": "f0836c258fdba99afccdf0436a672ddb1fcf7b6de659677b082e3ba44870de29",
+        "bytes": 334
+      },
+      "graph.json": {
+        "sha256": "08620458f897ec3f8869acea4514edf22c8f019be527d18a739b8fffaa9586a8",
+        "bytes": 6457
+      },
+      "manifest-recipe.py": {
+        "sha256": "8970c3d3fd38abd0dbffa9ac954998ee4caa2c258ca771b402d5b5ad213eae22",
+        "bytes": 1869
+      },
+      "model_catalog.py": {
+        "sha256": "5dd2799b77017e079453d09c11339cf98c98de6494156f98c41455c5759d9e2e",
+        "bytes": 1513
+      },
+      "preregistered-plan.md": {
+        "sha256": "d9d28cc0a978f15e982469d1a36d7812101be83bfe42aa2725744dbe66022e65",
+        "bytes": 7174
+      },
+      "profile-selections.json": {
+        "sha256": "37ffcd8165ccb80ecdb05d2589a6125b930b5f27866fedfbeaffb5c367f9900a",
+        "bytes": 20192
+      },
+      "round.json": {
+        "sha256": "1b3a7410da3c7e1205b39e4fba45a2cfca171f907c6079109f343966435bff3b",
+        "bytes": 760
+      },
+      "source-review-assist.py": {
+        "sha256": "900964c8d5e36d6f8deec6c86242026ca1c196d7ff99c62a52903fa5ff7182f5",
+        "bytes": 4675
+      },
+      "sources-before.json": {
+        "sha256": "eae864e105ee3d778e5574e8b8ad0268e4d9010a5f2a54fed4c8e62be091f755",
+        "bytes": 109286
+      },
+      "test_handoff.py": {
+        "sha256": "237f2c219ae29067287d07364317dd0ef600f3b569769ea9fd77659b65dba4dc",
+        "bytes": 3567
+      },
+      "test_manifest_recipe.py": {
+        "sha256": "d3f192f23cf35c66417818bc69786a24ea7c8fcd3bbaeadd4a89ff94c0eb67a4",
+        "bytes": 5437
+      },
+      "validate_local.py": {
+        "sha256": "bd16068bb2e0cacb86c2b502ad4887bb9eed391c7afa21fad7f8154a90ab21d0",
+        "bytes": 4700
+      },
+      "governance/manifest.json": {
+        "sha256": "7b718bc507d9cfa61770e66415788fdae0c8bb3f9f00fb73264a90816f45426f",
+        "bytes": 2451
+      },
+      "governance/AGENTS.md": {
+        "sha256": "a70c0bfd3142f63c18892f8ff299e81bb1f2aa0e4094bb4d69736cceaf3f61f3",
+        "bytes": 3938
+      },
+      "governance/shared/WORK_GRAPH.md": {
+        "sha256": "cdd27373777e73ce61f06520ac5d078c234fc77ab8e20cbd2282024e8d32219f",
+        "bytes": 3712
+      },
+      "governance/shared/CONTEXT_MANAGEMENT.md": {
+        "sha256": "c0c8908b250e367726c5aa90664352cfefef9bf7dd4d79d2db9ec6dd04a8f6a6",
+        "bytes": 3544
+      },
+      "governance/shared/RECORD_FORMATS.md": {
+        "sha256": "317236250041fdacb1135350309ec287186aa7ed22c2f4605a7b6a47a60833fb",
+        "bytes": 3341
+      },
+      "governance/policies/AUTHORITY.md": {
+        "sha256": "082de2f8fec06bc6dc9027d2f8605ca61cda12a5f5c175d1c3019bd1035d1118",
+        "bytes": 1883
+      },
+      "governance/policies/ROUTING.md": {
+        "sha256": "ea7e4df8c4d7a3514a90e543b7acf1f19f5db481fe863ab0a117e65052a07f38",
+        "bytes": 1344
+      },
+      "governance/policies/PLANNING.md": {
+        "sha256": "5106f3f295505ffa62e5987015767204b290bb25b8a7c53881c087948d771966",
+        "bytes": 1631
+      },
+      "governance/policies/SCOPE_BOUNDARIES.md": {
+        "sha256": "928bd2564f7090cfc2379c5362e9265aab83d6ec42ee830106c4da24a3380b82",
+        "bytes": 2485
+      },
+      "governance/policies/CHANGE_CONTROL.md": {
+        "sha256": "95b9916fbbd0ce42e8d32c70b98c20b9bc15103761e62af18df8c69459254207",
+        "bytes": 2322
+      },
+      "governance/policies/PROJECT_CHANGES.md": {
+        "sha256": "efb7af04da619657d585575da17f10cd870083df0470a4d7fe125ddd2761d8d6",
+        "bytes": 2358
+      },
+      "governance/policies/RESOURCE_BUDGETS.md": {
+        "sha256": "47416e3ad0ee31ba15e3c1c8cd92373caa6b500d296ef3956f1d82a6ee474f8c",
+        "bytes": 2034
+      },
+      "governance/policies/APPROVALS.md": {
+        "sha256": "65e6f15ab93cdf1aba5eecc172a51aa8484e0be35a67e29936b5b3cacca976b2",
+        "bytes": 1846
+      },
+      "governance/policies/SELF_IMPROVEMENT.md": {
+        "sha256": "cc0bb4daca4a99e6925846e10b43d19405d191d321304f736024d0ee16c38e5e",
+        "bytes": 2612
+      },
+      "governance/policies/GIT.md": {
+        "sha256": "5e0494d5903bada6d309295d06b8fcf815972165a05e517cc692a6460b806001",
+        "bytes": 5408
+      },
+      "governance/policies/MODEL_SELECTION.md": {
+        "sha256": "d500ac114d42bdae6dc72e434b393815dd6f7c0e6d9a39f3cb0ae6e9a9d416b5",
+        "bytes": 2103
+      },
+      "governance/policies/ACCEPTANCE.md": {
+        "sha256": "e4df277eb7c64b7a3f89f8620e914912e6772a130a96b6891e2bea7935d202c5",
+        "bytes": 5675
+      },
+      "governance/agents/reviewer/CONTEXT.md": {
+        "sha256": "40eeb8053d4ba743fb805bd2ddde44c603c926d66b99b2c9b49046db54e5c872",
+        "bytes": 1454
+      },
+      "governance/agents/reviewer/AGENTS.md": {
+        "sha256": "44c74153fcb9a21eb69026d303428666ef4e5cc878cd9cccdd2607c5fa8920ff",
+        "bytes": 2337
+      }
+    },
+    "criteria": "Unchanged TASK204 matrix and accepted five-condition protocol; same lossless handoff; original JSON must resolve, no inference or regeneration",
+    "models": [
+      "gpt-6.1-sol",
+      "gpt-6-luna"
+    ],
+    "effort": "high",
+    "native_roots_maximum": 14,
+    "peak": 2,
+    "children": 0,
+    "deadline_seconds": {
+      "D": 600,
+      "I": 900,
+      "U": 600,
+      "review": 1800
+    }
+  },
+  "assessment": {
+    "candidate": "9eb913daed87ac52920fdeb3cdfe4ec3a420075a",
+    "trials": {
+      "bundle-luna-D": {
+        "runtime": {
+          "name": "bundle-luna-D",
+          "requested_model": "gpt-6-luna",
+          "requested_effort": "high",
+          "thread": "01a16f69-fdd2-71f2-a236-3b2ff2adfd8d",
+          "model": "gpt-6-luna",
+          "effort": "high",
+          "native_session": "/home/agent/.codex/sessions/2026/10/24/rollout-2026-10-24T19-36-19-01a16f69-fdd2-71f2-a236-3b2ff2adfd8d.jsonl"
+        },
+        "native_seconds": 35.745992892,
+        "host_seconds": 36.94647979736328,
+        "status": "returned",
+        "control_valid": true,
+        "deadline_expired": false,
+        "nonzero_commands": [],
+        "selected_components": [
+          "components/director.md",
+          "components/chief-of-staff.md",
+          "components/activation.md",
+          "components/authority.md",
+          "components/capability-routing.md",
+          "components/delegation.md",
+          "components/delivery-acceptance.md",
+          "components/context-core.md",
+          "components/self-improvement.md",
+          "components/role-lifecycle.md",
+          "components/resource-budgets.md"
+        ],
+        "selection_evidence": "## Proposed AgentOS design\n\n**Mission:** support this repository\u2019s local formatter work through a portable, sequential AgentOS. A fresh, unassigned Codex CLI session starts as the Director. The Chief of Staff maintains the organization. With no child agents, role specialization means sequential role focused work within the session; it does not imply separate processes or concurrent workers.\n\n**Repository findings:** the project contains `formatter.py`, `test_formatter.py`, `README.md`, and the completed `request.json`. There is no existing `AGENTS.md` or visible AgentOS installation. Git reports a clean `main` worktree. I did not run project scripts or tests.\n\n### Requirements and proposed mechanisms\n\n| Stated requirement | Selected component | Proposed mechanism | Activation / grant |\n|---|---|---|---|\n| Permanent user facing Director and Chief of Staff | [Director](components/director.md), [Chief of Staff](components/chief-of-staff.md), [Activation](components/activation.md) | Root `AGENTS.md` routes unassigned sessions to Director and preserves explicit delegated identities. `.agentos/` holds concise role instructions. | Startup behavior is procedural; no native hooks or background process. Installation paths require your approval. |\n| Local, sequential work with capability based routing | [Capability routing](components/capability-routing.md), [Delegation](components/delegation.md) | A small capability registry and assignment / handoff guidance; role specialization happens sequentially in the current session. | No child agents or concurrency. Delegation does not create a separate worker. |\n| Scope and effect limits | [Authority](components/authority.md) | State project versus organization scope, approval boundaries, and incidental-write precautions. | This installation is limited to root `AGENTS.md` and `.agentos/**`; no external effects, providers, spending, messages, or Git changes. |\n| Verify requested outcomes and report accurately | [Delivery acceptance](components/delivery-acceptance.md) | Acceptance and evidence guidance in the operating instructions. | Procedural. Does not claim a test ran or an outcome was independently verified. |\n| Minimal, relevant startup context | [Core context](components/context-core.md) | Keep root startup instructions brief; load role and detailed procedure files when needed. | Markdown instructions; no native integration. |\n| Evolve roles and improve from evidence | [Role lifecycle](components/role-lifecycle.md), [Self-improvement](components/self-improvement.md) | Chief of Staff can revise organization files within grants; retain scoped hypotheses, checks, outcomes, and rollback information under `.agentos/`. | Reversible organization edits only within the installation grant; project edits remain separately governed. |\n| One session, ten minutes, at most two diagnosed retries; no child agents | [Resource budgets](components/resource-budgets.md) | Track elapsed time and retries, keep cumulative limits across sequential role work, and stop or replan when a limit is reached. Unknown usage remains unknown. | Procedural accounting; actual enforcement depends on the runtime and is not claimed. |\n\n### Selection and source record\n\nSelected: all ten required catalog responsibilities\u2014Director, Chief of Staff, Activation, Authority, Capability Routing, Delegation, Delivery Acceptance, Core Context, Self-improvement, and Role Lifecycle\u2014plus conditional Resource Budgets because the request sets explicit time and retry limits and prohibits child agents.\n\nI read each selected component in full. Their declared hard prerequisites resolve within that selected set: Activation \u2192 Authority and Core Context; Director \u2192 Activation, Delegation, and Delivery Acceptance; Delegation \u2192 Authority and Capability Routing; Chief of Staff \u2192 Role Lifecycle and Self-improvement; Role Lifecycle \u2192 Capability Routing; Self-improvement \u2192 Authority and Delivery Acceptance; Resource Budgets \u2192 Delegation. No unresolved prerequisite remains.\n\nDeferred: runtime native integration, parallel coordination, durable handoff, work ledger, external effect reconciliation, scheduling, Git delivery, multi repository and sensitive information boundaries, telemetry, independent evaluation, learning queue, and advanced validation. The request describes one local repository and one bounded session, and does not ask for those capabilities.\n\nThe source is the supplied frozen bundle at `/private/tmp/agentos-manifestref-20261024/controls/source-bundle/bundle`; I did not fetch or substitute another version. No Git revision or optional qualification helper was available in the source location. I generated the complete `agentos-source-v1` byte manifest using the supplied portable recipe. Its original full JSON is the output of the manifest-generation tool call in this conversation, and should accompany approval into the fresh installation session as the approved source identity.\n\n### Proposed affected paths\n\n- `AGENTS.md` \u2014 minimal portable startup bridge and authority boundaries.\n- `.agentos/` \u2014 compact organization home, likely containing the two permanent role instructions, core operating policies, capability registry, and improvement/evidence records. Exact files can be kept minimal during implementation.\n\nNo other target paths are proposed. No proposal file or target file has been created or modified; Git state remains untouched. This proposal does not include ordinary formatter work.\n\n**Approval requested:** approve this design and the listed installation path scope (`AGENTS.md` and `.agentos/**`). After approval, the fresh installation session should use this exact proposal and the original manifest output above.",
+        "source_delivery": {
+          "components/activation.md": {
+            "finding": "full-source delivery established",
+            "observations": [
+              {
+                "item": "item_15",
+                "command": "/bin/bash -lc \"cat '/private/tmp/agentos-manifestref-20261024/controls/source-bundle/bundle/components/activation.md'\"",
+                "primary_call_line": 46,
+                "primary_output_line": 59,
+                "aggregate_exit": 0,
+                "source_specific_exit": "unknown",
+                "source": {
+                  "sha256": "2893e4d66fc47158d5267cae0a04132d832c8436ad90f7ca6f58d322aaef4284",
+                  "bytes": 2064
+                },
+                "primary_output_sha256": "5fe89f7e31bd69d0b58363e5c1b38a8d132e7e9fe10ff018f76a1d0ed5bc1217"
+              }
+            ],
+            "conditions": {
+              "identity": "exact frozen source root and file hash/length",
+              "stability_provenance": "read-only controls mount; manually inspected actual cat commands, full source before/after including Git preserved",
+              "complete_output": "exact full canonical body in one unflagged completed assigned primary output; no fragment joining",
+              "ordering": "actual completed reads precede final proposal; no prior-session read credit or target mutation",
+              "separate_obligations": "aggregate exit0 retained; source-specific exit conservatively unknown; no comprehension or D admission inferred"
+            }
+          },
+          "components/authority.md": {
+            "finding": "full-source delivery established",
+            "observations": [
+              {
+                "item": "item_14",
+                "command": "/bin/bash -lc \"cat '/private/tmp/agentos-manifestref-20261024/controls/source-bundle/bundle/components/authority.md'\"",
+                "primary_call_line": 46,
+                "primary_output_line": 59,
+                "aggregate_exit": 0,
+                "source_specific_exit": "unknown",
+                "source": {
+                  "sha256": "47ae9e02646be13d453e3219a55bc16610e115d2da221b944103b6c95a53ff95",
+                  "bytes": 3041
+                },
+                "primary_output_sha256": "5fe89f7e31bd69d0b58363e5c1b38a8d132e7e9fe10ff018f76a1d0ed5bc1217"
+              }
+            ],
+            "conditions": {
+              "identity": "exact frozen source root and file hash/length",
+              "stability_provenance": "read-only controls mount; manually inspected actual cat commands, full source before/after including Git preserved",
+              "complete_output": "exact full canonical body in one unflagged completed assigned primary output; no fragment joining",
+              "ordering": "actual completed reads precede final proposal; no prior-session read credit or target mutation",
+              "separate_obligations": "aggregate exit0 retained; source-specific exit conservatively unknown; no comprehension or D admission inferred"
+            }
+          },
+          "components/capability-routing.md": {
+            "finding": "full-source delivery established",
+            "observations": [
+              {
+                "item": "item_21",
+                "command": "/bin/bash -lc \"cat '/private/tmp/agentos-manifestref-20261024/controls/source-bundle/bundle/components/capability-routing.md'\"",
+                "primary_call_line": 46,
+                "primary_output_line": 59,
+                "aggregate_exit": 0,
+                "source_specific_exit": "unknown",
+                "source": {
+                  "sha256": "d7f86c5cbf4b1a505f9db20fcbd68487a809bbdc04adce3cd12221114d0fc161",
+                  "bytes": 1846
+                },
+                "primary_output_sha256": "5fe89f7e31bd69d0b58363e5c1b38a8d132e7e9fe10ff018f76a1d0ed5bc1217"
+              }
+            ],
+            "conditions": {
+              "identity": "exact frozen source root and file hash/length",
+              "stability_provenance": "read-only controls mount; manually inspected actual cat commands, full source before/after including Git preserved",
+              "complete_output": "exact full canonical body in one unflagged completed assigned primary output; no fragment joining",
+              "ordering": "actual completed reads precede final proposal; no prior-session read credit or target mutation",
+              "separate_obligations": "aggregate exit0 retained; source-specific exit conservatively unknown; no comprehension or D admission inferred"
+            }
+          },
+          "components/chief-of-staff.md": {
+            "finding": "full-source delivery established",
+            "observations": [
+              {
+                "item": "item_13",
+                "command": "/bin/bash -lc \"cat '/private/tmp/agentos-manifestref-20261024/controls/source-bundle/bundle/components/chief-of-staff.md'\"",
+                "primary_call_line": 46,
+                "primary_output_line": 59,
+                "aggregate_exit": 0,
+                "source_specific_exit": "unknown",
+                "source": {
+                  "sha256": "c43203e841a0a10ef4ef3887b6a7d89eb834eb255b3b4386231488f4f9efb8b5",
+                  "bytes": 1726
+                },
+                "primary_output_sha256": "5fe89f7e31bd69d0b58363e5c1b38a8d132e7e9fe10ff018f76a1d0ed5bc1217"
+              }
+            ],
+            "conditions": {
+              "identity": "exact frozen source root and file hash/length",
+              "stability_provenance": "read-only controls mount; manually inspected actual cat commands, full source before/after including Git preserved",
+              "complete_output": "exact full canonical body in one unflagged completed assigned primary output; no fragment joining",
+              "ordering": "actual completed reads precede final proposal; no prior-session read credit or target mutation",
+              "separate_obligations": "aggregate exit0 retained; source-specific exit conservatively unknown; no comprehension or D admission inferred"
+            }
+          },
+          "components/context-core.md": {
+            "finding": "full-source delivery established",
+            "observations": [
+              {
+                "item": "item_22",
+                "command": "/bin/bash -lc \"cat '/private/tmp/agentos-manifestref-20261024/controls/source-bundle/bundle/components/context-core.md'\"",
+                "primary_call_line": 46,
+                "primary_output_line": 59,
+                "aggregate_exit": 0,
+                "source_specific_exit": "unknown",
+                "source": {
+                  "sha256": "8046c83f2eec46be879ce418e68827fdd95f6388ad3ff2090b8254840e74bca0",
+                  "bytes": 1602
+                },
+                "primary_output_sha256": "5fe89f7e31bd69d0b58363e5c1b38a8d132e7e9fe10ff018f76a1d0ed5bc1217"
+              }
+            ],
+            "conditions": {
+              "identity": "exact frozen source root and file hash/length",
+              "stability_provenance": "read-only controls mount; manually inspected actual cat commands, full source before/after including Git preserved",
+              "complete_output": "exact full canonical body in one unflagged completed assigned primary output; no fragment joining",
+              "ordering": "actual completed reads precede final proposal; no prior-session read credit or target mutation",
+              "separate_obligations": "aggregate exit0 retained; source-specific exit conservatively unknown; no comprehension or D admission inferred"
+            }
+          },
+          "components/delegation.md": {
+            "finding": "full-source delivery established",
+            "observations": [
+              {
+                "item": "item_16",
+                "command": "/bin/bash -lc \"cat '/private/tmp/agentos-manifestref-20261024/controls/source-bundle/bundle/components/delegation.md'\"",
+                "primary_call_line": 46,
+                "primary_output_line": 59,
+                "aggregate_exit": 0,
+                "source_specific_exit": "unknown",
+                "source": {
+                  "sha256": "d34dcf7c5bb102fc4f0e1a1603954ce51e33aa5f05f9a3561ae33315d2725169",
+                  "bytes": 2146
+                },
+                "primary_output_sha256": "5fe89f7e31bd69d0b58363e5c1b38a8d132e7e9fe10ff018f76a1d0ed5bc1217"
+              }
+            ],
+            "conditions": {
+              "identity": "exact frozen source root and file hash/length",
+              "stability_provenance": "read-only controls mount; manually inspected actual cat commands, full source before/after including Git preserved",
+              "complete_output": "exact full canonical body in one unflagged completed assigned primary output; no fragment joining",
+              "ordering": "actual completed reads precede final proposal; no prior-session read credit or target mutation",
+              "separate_obligations": "aggregate exit0 retained; source-specific exit conservatively unknown; no comprehension or D admission inferred"
+            }
+          },
+          "components/delivery-acceptance.md": {
+            "finding": "full-source delivery established",
+            "observations": [
+              {
+                "item": "item_19",
+                "command": "/bin/bash -lc \"cat '/private/tmp/agentos-manifestref-20261024/controls/source-bundle/bundle/components/delivery-acceptance.md'\"",
+                "primary_call_line": 46,
+                "primary_output_line": 59,
+                "aggregate_exit": 0,
+                "source_specific_exit": "unknown",
+                "source": {
+                  "sha256": "3a74e11cdae62fd5e0fc1ea4641775b6dabd5018eaed872d9ddecee354794000",
+                  "bytes": 2686
+                },
+                "primary_output_sha256": "5fe89f7e31bd69d0b58363e5c1b38a8d132e7e9fe10ff018f76a1d0ed5bc1217"
+              }
+            ],
+            "conditions": {
+              "identity": "exact frozen source root and file hash/length",
+              "stability_provenance": "read-only controls mount; manually inspected actual cat commands, full source before/after including Git preserved",
+              "complete_output": "exact full canonical body in one unflagged completed assigned primary output; no fragment joining",
+              "ordering": "actual completed reads precede final proposal; no prior-session read credit or target mutation",
+              "separate_obligations": "aggregate exit0 retained; source-specific exit conservatively unknown; no comprehension or D admission inferred"
+            }
+          },
+          "components/director.md": {
+            "finding": "full-source delivery established",
+            "observations": [
+              {
+                "item": "item_12",
+                "command": "/bin/bash -lc \"cat '/private/tmp/agentos-manifestref-20261024/controls/source-bundle/bundle/components/director.md'\"",
+                "primary_call_line": 46,
+                "primary_output_line": 59,
+                "aggregate_exit": 0,
+                "source_specific_exit": "unknown",
+                "source": {
+                  "sha256": "beafa827c5ce6c53937537fa9521c2b46ebb9ec049788648b7e2b010b0eea9b0",
+                  "bytes": 2115
+                },
+                "primary_output_sha256": "5fe89f7e31bd69d0b58363e5c1b38a8d132e7e9fe10ff018f76a1d0ed5bc1217"
+              }
+            ],
+            "conditions": {
+              "identity": "exact frozen source root and file hash/length",
+              "stability_provenance": "read-only controls mount; manually inspected actual cat commands, full source before/after including Git preserved",
+              "complete_output": "exact full canonical body in one unflagged completed assigned primary output; no fragment joining",
+              "ordering": "actual completed reads precede final proposal; no prior-session read credit or target mutation",
+              "separate_obligations": "aggregate exit0 retained; source-specific exit conservatively unknown; no comprehension or D admission inferred"
+            }
+          },
+          "components/resource-budgets.md": {
+            "finding": "full-source delivery established",
+            "observations": [
+              {
+                "item": "item_18",
+                "command": "/bin/bash -lc \"cat '/private/tmp/agentos-manifestref-20261024/controls/source-bundle/bundle/components/resource-budgets.md'\"",
+                "primary_call_line": 46,
+                "primary_output_line": 59,
+                "aggregate_exit": 0,
+                "source_specific_exit": "unknown",
+                "source": {
+                  "sha256": "02f41da067d039db46fd6a8c8802994cb36d6ad72b78879baa65ac5c2cb9870f",
+                  "bytes": 1706
+                },
+                "primary_output_sha256": "5fe89f7e31bd69d0b58363e5c1b38a8d132e7e9fe10ff018f76a1d0ed5bc1217"
+              }
+            ],
+            "conditions": {
+              "identity": "exact frozen source root and file hash/length",
+              "stability_provenance": "read-only controls mount; manually inspected actual cat commands, full source before/after including Git preserved",
+              "complete_output": "exact full canonical body in one unflagged completed assigned primary output; no fragment joining",
+              "ordering": "actual completed reads precede final proposal; no prior-session read credit or target mutation",
+              "separate_obligations": "aggregate exit0 retained; source-specific exit conservatively unknown; no comprehension or D admission inferred"
+            }
+          },
+          "components/role-lifecycle.md": {
+            "finding": "full-source delivery established",
+            "observations": [
+              {
+                "item": "item_20",
+                "command": "/bin/bash -lc \"cat '/private/tmp/agentos-manifestref-20261024/controls/source-bundle/bundle/components/role-lifecycle.md'\"",
+                "primary_call_line": 46,
+                "primary_output_line": 59,
+                "aggregate_exit": 0,
+                "source_specific_exit": "unknown",
+                "source": {
+                  "sha256": "ae0fc9a30668666d22cb9b0ab03049b98ec095a590f81ecb7b843972073bf95f",
+                  "bytes": 1897
+                },
+                "primary_output_sha256": "5fe89f7e31bd69d0b58363e5c1b38a8d132e7e9fe10ff018f76a1d0ed5bc1217"
+              }
+            ],
+            "conditions": {
+              "identity": "exact frozen source root and file hash/length",
+              "stability_provenance": "read-only controls mount; manually inspected actual cat commands, full source before/after including Git preserved",
+              "complete_output": "exact full canonical body in one unflagged completed assigned primary output; no fragment joining",
+              "ordering": "actual completed reads precede final proposal; no prior-session read credit or target mutation",
+              "separate_obligations": "aggregate exit0 retained; source-specific exit conservatively unknown; no comprehension or D admission inferred"
+            }
+          },
+          "components/self-improvement.md": {
+            "finding": "full-source delivery established",
+            "observations": [
+              {
+                "item": "item_17",
+                "command": "/bin/bash -lc \"cat '/private/tmp/agentos-manifestref-20261024/controls/source-bundle/bundle/components/self-improvement.md'\"",
+                "primary_call_line": 46,
+                "primary_output_line": 59,
+                "aggregate_exit": 0,
+                "source_specific_exit": "unknown",
+                "source": {
+                  "sha256": "0bf78a0d5f04096c9e0b3603588f8b865aed218ba980f59f4dc11922656d5ac7",
+                  "bytes": 3002
+                },
+                "primary_output_sha256": "5fe89f7e31bd69d0b58363e5c1b38a8d132e7e9fe10ff018f76a1d0ed5bc1217"
+              }
+            ],
+            "conditions": {
+              "identity": "exact frozen source root and file hash/length",
+              "stability_provenance": "read-only controls mount; manually inspected actual cat commands, full source before/after including Git preserved",
+              "complete_output": "exact full canonical body in one unflagged completed assigned primary output; no fragment joining",
+              "ordering": "actual completed reads precede final proposal; no prior-session read credit or target mutation",
+              "separate_obligations": "aggregate exit0 retained; source-specific exit conservatively unknown; no comprehension or D admission inferred"
+            }
+          },
+          "core/constitution.md": {
+            "finding": "full-source delivery established",
+            "observations": [
+              {
+                "item": "item_2",
+                "command": "/bin/bash -lc \"cat '/private/tmp/agentos-manifestref-20261024/controls/source-bundle/bundle/core/constitution.md'\"",
+                "primary_call_line": 23,
+                "primary_output_line": 31,
+                "aggregate_exit": 0,
+                "source_specific_exit": "unknown",
+                "source": {
+                  "sha256": "6797e597f48135da527f87aff5b0f1b01e2c265ebb5378cb2826d70665a5ed82",
+                  "bytes": 2665
+                },
+                "primary_output_sha256": "6a65cb371c7f9d9c725f4e66e61f571134332dfd67ce34b389bb76804ece5bfd"
+              }
+            ],
+            "conditions": {
+              "identity": "exact frozen source root and file hash/length",
+              "stability_provenance": "read-only controls mount; manually inspected actual cat commands, full source before/after including Git preserved",
+              "complete_output": "exact full canonical body in one unflagged completed assigned primary output; no fragment joining",
+              "ordering": "actual completed reads precede final proposal; no prior-session read credit or target mutation",
+              "separate_obligations": "aggregate exit0 retained; source-specific exit conservatively unknown; no comprehension or D admission inferred"
+            }
+          },
+          "core/graph-routing.md": {
+            "finding": "full-source delivery established",
+            "observations": [
+              {
+                "item": "item_3",
+                "command": "/bin/bash -lc \"cat '/private/tmp/agentos-manifestref-20261024/controls/source-bundle/bundle/core/graph-routing.md'\"",
+                "primary_call_line": 23,
+                "primary_output_line": 31,
+                "aggregate_exit": 0,
+                "source_specific_exit": "unknown",
+                "source": {
+                  "sha256": "131746a30086a490c0d660f3d9658d6400303ca68f8d5fed0f77af15ffe4673b",
+                  "bytes": 8000
+                },
+                "primary_output_sha256": "6a65cb371c7f9d9c725f4e66e61f571134332dfd67ce34b389bb76804ece5bfd"
+              }
+            ],
+            "conditions": {
+              "identity": "exact frozen source root and file hash/length",
+              "stability_provenance": "read-only controls mount; manually inspected actual cat commands, full source before/after including Git preserved",
+              "complete_output": "exact full canonical body in one unflagged completed assigned primary output; no fragment joining",
+              "ordering": "actual completed reads precede final proposal; no prior-session read credit or target mutation",
+              "separate_obligations": "aggregate exit0 retained; source-specific exit conservatively unknown; no comprehension or D admission inferred"
+            }
+          },
+          "core/installer-policy.md": {
+            "finding": "full-source delivery established",
+            "observations": [
+              {
+                "item": "item_5",
+                "command": "/bin/bash -lc \"cat '/private/tmp/agentos-manifestref-20261024/controls/source-bundle/bundle/core/installer-policy.md'\"",
+                "primary_call_line": 23,
+                "primary_output_line": 31,
+                "aggregate_exit": 0,
+                "source_specific_exit": "unknown",
+                "source": {
+                  "sha256": "c6e48d24fa13124d2f623e131c96c83b77aa32734b5ae706f2e6912cc82db4aa",
+                  "bytes": 2634
+                },
+                "primary_output_sha256": "6a65cb371c7f9d9c725f4e66e61f571134332dfd67ce34b389bb76804ece5bfd"
+              }
+            ],
+            "conditions": {
+              "identity": "exact frozen source root and file hash/length",
+              "stability_provenance": "read-only controls mount; manually inspected actual cat commands, full source before/after including Git preserved",
+              "complete_output": "exact full canonical body in one unflagged completed assigned primary output; no fragment joining",
+              "ordering": "actual completed reads precede final proposal; no prior-session read credit or target mutation",
+              "separate_obligations": "aggregate exit0 retained; source-specific exit conservatively unknown; no comprehension or D admission inferred"
+            }
+          },
+          "examples/source-manifest.md": {
+            "finding": "full-source delivery established",
+            "observations": [
+              {
+                "item": "item_23",
+                "command": "/bin/bash -lc \"cat '/private/tmp/agentos-manifestref-20261024/controls/source-bundle/bundle/examples/source-manifest.md'\"",
+                "primary_call_line": 63,
+                "primary_output_line": 66,
+                "aggregate_exit": 0,
+                "source_specific_exit": "unknown",
+                "source": {
+                  "sha256": "984d83a51b774184945926149c63d7f05329f3da7a0a98a1f21107d45df90118",
+                  "bytes": 5101
+                },
+                "primary_output_sha256": "7773f3c941e68ca24bace8115342a64ab1796da4a7ff5720179062100e92cc5e"
+              }
+            ],
+            "conditions": {
+              "identity": "exact frozen source root and file hash/length",
+              "stability_provenance": "read-only controls mount; manually inspected actual cat commands, full source before/after including Git preserved",
+              "complete_output": "exact full canonical body in one unflagged completed assigned primary output; no fragment joining",
+              "ordering": "actual completed reads precede final proposal; no prior-session read credit or target mutation",
+              "separate_obligations": "aggregate exit0 retained; source-specific exit conservatively unknown; no comprehension or D admission inferred"
+            }
+          },
+          "interviews/bootstrap.md": {
+            "finding": "full-source delivery established",
+            "observations": [
+              {
+                "item": "item_6",
+                "command": "/bin/bash -lc \"cat '/private/tmp/agentos-manifestref-20261024/controls/source-bundle/bundle/interviews/bootstrap.md'\"",
+                "primary_call_line": 23,
+                "primary_output_line": 31,
+                "aggregate_exit": 0,
+                "source_specific_exit": "unknown",
+                "source": {
+                  "sha256": "eb471fc596bf6705c656911716e3022e99d818a905b744b8314acf3b3c988ce4",
+                  "bytes": 2279
+                },
+                "primary_output_sha256": "6a65cb371c7f9d9c725f4e66e61f571134332dfd67ce34b389bb76804ece5bfd"
+              }
+            ],
+            "conditions": {
+              "identity": "exact frozen source root and file hash/length",
+              "stability_provenance": "read-only controls mount; manually inspected actual cat commands, full source before/after including Git preserved",
+              "complete_output": "exact full canonical body in one unflagged completed assigned primary output; no fragment joining",
+              "ordering": "actual completed reads precede final proposal; no prior-session read credit or target mutation",
+              "separate_obligations": "aggregate exit0 retained; source-specific exit conservatively unknown; no comprehension or D admission inferred"
+            }
+          },
+          "phases/design.md": {
+            "finding": "full-source delivery established",
+            "observations": [
+              {
+                "item": "item_9",
+                "command": "/bin/bash -lc 'cat /private/tmp/agentos-manifestref-20261024/controls/source-bundle/bundle/phases/design.md'",
+                "primary_call_line": 37,
+                "primary_output_line": 42,
+                "aggregate_exit": 0,
+                "source_specific_exit": "unknown",
+                "source": {
+                  "sha256": "02178dbea3c3de8e70c8308a8ace5e5676a68737f90a3489d7952f015672ec54",
+                  "bytes": 3113
+                },
+                "primary_output_sha256": "fb2725e7e4b216ada076c965d56c5159cc5343a4b7d1938568719332a2fa3d55"
+              }
+            ],
+            "conditions": {
+              "identity": "exact frozen source root and file hash/length",
+              "stability_provenance": "read-only controls mount; manually inspected actual cat commands, full source before/after including Git preserved",
+              "complete_output": "exact full canonical body in one unflagged completed assigned primary output; no fragment joining",
+              "ordering": "actual completed reads precede final proposal; no prior-session read credit or target mutation",
+              "separate_obligations": "aggregate exit0 retained; source-specific exit conservatively unknown; no comprehension or D admission inferred"
+            }
+          },
+          "phases/discover.md": {
+            "finding": "full-source delivery established",
+            "observations": [
+              {
+                "item": "item_4",
+                "command": "/bin/bash -lc \"cat '/private/tmp/agentos-manifestref-20261024/controls/source-bundle/bundle/phases/discover.md'\"",
+                "primary_call_line": 23,
+                "primary_output_line": 31,
+                "aggregate_exit": 0,
+                "source_specific_exit": "unknown",
+                "source": {
+                  "sha256": "513fc2cea5ca6a7164e1f37ce764abf1a7a5c3e849d9ff83dd3fd894d4238b9d",
+                  "bytes": 1377
+                },
+                "primary_output_sha256": "6a65cb371c7f9d9c725f4e66e61f571134332dfd67ce34b389bb76804ece5bfd"
+              }
+            ],
+            "conditions": {
+              "identity": "exact frozen source root and file hash/length",
+              "stability_provenance": "read-only controls mount; manually inspected actual cat commands, full source before/after including Git preserved",
+              "complete_output": "exact full canonical body in one unflagged completed assigned primary output; no fragment joining",
+              "ordering": "actual completed reads precede final proposal; no prior-session read credit or target mutation",
+              "separate_obligations": "aggregate exit0 retained; source-specific exit conservatively unknown; no comprehension or D admission inferred"
+            }
+          },
+          "start.md": {
+            "finding": "full-source delivery established",
+            "observations": [
+              {
+                "item": "item_1",
+                "command": "/bin/bash -lc \"cat /private/tmp/agentos-manifestref-20261024/controls/source-bundle/bundle/start.md && printf '\\\\n--- REQUEST ---\\\\n' && cat request.json && printf '\\\\n--- PROJECT FILES ---\\\\n' && rg --files -g '\"'!**/.git/**'\"' | head -200 && printf '\\\\n--- GIT ---\\\\n' && git status --short --branch 2>/dev/null || true && git rev-parse --show-toplevel 2>/dev/null || true\"",
+                "primary_call_line": 16,
+                "primary_output_line": 19,
+                "aggregate_exit": 0,
+                "source_specific_exit": "unknown",
+                "source": {
+                  "sha256": "23771ad33e2d5e66e0db66ce4443503b82e2e28c928b9e3bfd4d8a131ce11a27",
+                  "bytes": 7351
+                },
+                "primary_output_sha256": "4e3e951b26643377c162ec9952d3ee9ccfb1177d6529e0e31db9c9a087c50a15"
+              }
+            ],
+            "conditions": {
+              "identity": "exact frozen source root and file hash/length",
+              "stability_provenance": "read-only controls mount; manually inspected actual cat commands, full source before/after including Git preserved",
+              "complete_output": "exact full canonical body in one unflagged completed assigned primary output; no fragment joining",
+              "ordering": "actual completed reads precede final proposal; no prior-session read credit or target mutation",
+              "separate_obligations": "aggregate exit0 retained; source-specific exit conservatively unknown; no comprehension or D admission inferred"
+            }
+          }
+        },
+        "manifest_item": "item_24",
+        "original_manifest_matches": true,
+        "manifest_files": 48,
+        "literal_recipe_preserved": false,
+        "executable_ast_equal": false,
+        "executed_code_sha256": "139e71a47abfd9869fbfd3cba0e2db18dab316b72756650947683d01742413dd",
+        "recipe_sha256": "8970c3d3fd38abd0dbffa9ac954998ee4caa2c258ca771b402d5b5ad213eae22",
+        "procedure_detail": "Luna shortens to generation-only code, omitting argument guard and verification branch; Sol retains executable AST but omits explanatory comment",
+        "source_target_git_unchanged": true,
+        "identity_reference": "Both final proposals reference actual complete generation output; Sol names native chunk547f06; Luna identifies sole manifest generation call and source root",
+        "D_admitted": false,
+        "limits": "No current approval handoff or I/U admission; reference observation alone proves no reliable benefit or causality"
+      },
+      "bundle-sol-D": {
+        "runtime": {
+          "name": "bundle-sol-D",
+          "requested_model": "gpt-6.1-sol",
+          "requested_effort": "high",
+          "thread": "01a16f69-fe3b-71c2-8a5d-a627b590588b",
+          "model": "gpt-6.1-sol",
+          "effort": "high",
+          "native_session": "/home/agent/.codex/sessions/2026/10/24/rollout-2026-10-24T19-36-19-01a16f69-fe3b-71c2-8a5d-a627b590588b.jsonl"
+        },
+        "native_seconds": 113.747210138,
+        "host_seconds": 114.09466481208801,
+        "status": "returned",
+        "control_valid": true,
+        "deadline_expired": false,
+        "nonzero_commands": [],
+        "selected_components": [
+          "components/director.md",
+          "components/chief-of-staff.md",
+          "components/activation.md",
+          "components/authority.md",
+          "components/capability-routing.md",
+          "components/delegation.md",
+          "components/delivery-acceptance.md",
+          "components/context-core.md",
+          "components/self-improvement.md",
+          "components/role-lifecycle.md",
+          "components/resource-budgets.md"
+        ],
+        "selection_evidence": "The proposed installation is a portable, sequential AgentOS with exactly two permanent roles: **Director** and **Chief of Staff**. Nothing has been written, and no formatter work or project tests have been performed.\n\nThe target is a clean Python repository at Git revision `190907be0f5dfd7d65950060952bfd62226659db`, with no existing AgentOS instructions. `request.json` resolves the interview questions; no further design decisions are needed.\n\nThe selected contracts, mechanisms, and approval status are:\n\n| Stated requirement | Selected component under `bundle/components/` | Proposed mechanism | Activation / grant |\n|---|---|---|---|\n| User-facing ownership | `director.md` | Director owns intent, dependencies, progress, verification, and reporting | After installation |\n| Permanent organizational maintenance | `chief-of-staff.md` | CoS maintains capabilities and instructions within current grants | Sequential specialization |\n| Portable, role-aware startup | `activation.md` | Root bridge activates Director; preserves delegated identities and subordinate Director reporting | Fresh-runtime behavior unverified |\n| Strict scope boundaries | `authority.md` | Separate organization, project, and external permissions; inspect implicit command effects | Installation approval pending |\n| Minimal capability registry | `capability-routing.md` | Check actual abilities, permissions, and remaining resources before work | Procedural |\n| No child agents | `delegation.md` | Complete bounded assignments and evidence returns within one context | No spawning or independent-review claim |\n| Verified local delivery | `delivery-acceptance.md` | Reconcile original intent, required method, artifacts, scope, and delivery evidence | Local qualification after approval |\n| Small startup context | `context-core.md` | Load core policy and active role; retrieve procedures on demand | Read-only startup |\n| Reversible improvement | `self-improvement.md` | Evidence \u2192 fixed hypothesis/criteria \u2192 authorized change \u2192 evaluation \u2192 retain/revise/rollback | Bounded installation exercise |\n| Safe organizational evolution | `role-lifecycle.md` | Preserve active assignments, pinned contracts, history, ownership, and routing | Controlled simulation initially |\n| Time and retry limits | `resource-budgets.md` | Track cumulative usage; role switches and retries never reset limits | Current task: \u226410 minutes, \u22642 diagnosed retries, zero children |\n\n**Selection/read check:** all eleven component bodies were delivered completely. All ten required catalog entries are included. Hard prerequisites are resolved:\n\n- Director \u2192 activation, delegation, delivery acceptance.\n- CoS \u2192 role lifecycle, self-improvement.\n- Activation \u2192 authority, core context.\n- Delegation \u2192 authority, capability routing.\n- Delivery acceptance \u2192 authority.\n- Self-improvement \u2192 authority, delivery acceptance.\n- Role lifecycle \u2192 capability routing.\n- Resource budgets \u2192 delegation.\n- Authority, capability routing, and core context have no additional hard prerequisites.\n\nThe proposed affected paths, relative to `/private/tmp/agentos-manifestref-20261024/work/bundle-sol`, are:\n\n| Path | Purpose |\n|---|---|\n| `AGENTS.md` | Thin startup bridge; preserve delegated identities and end the temporary installer after handoff |\n| `.agentos/core.md` | Constitutional guarantees, authority, context rules, resource accounting, and runtime limitations |\n| `.agentos/roles.md` | Director and CoS instructions plus the capability registry |\n| `.agentos/operations.md` | Assignment/return, delivery, improvement, and role-lifecycle procedures |\n| `.agentos/records.md` | Concrete qualification scenarios, improvement decisions, and recovery evidence |\n| `.agentos/installation.md` | Source provenance, selected contracts, obligation-level coverage, qualification results, limitations, and first-use instructions |\n| `.agentos/qualification-example.json` | Controlled improvement fixture with accepted, rejected, and inconclusive outcomes and scoped rollback |\n\nThe instructions will preserve dependency readiness, progress supervision, user communication, CoS regression evidence, and task-appropriate reasoning choices where the runtime exposes them. Improvements trigger during authorized sessions after meaningful task evidence or feedback. Future organizational edits still require an applicable grant.\n\nOther conditional components are deferred: native integration, parallel coordination, work ledger, durable handoff, external-effect reconciliation, Git delivery, scheduling, telemetry, independent evaluation, learning queue, information-boundary extensions, multi-repository operation, migration, and advanced qualification. The stated single-repository workload does not require those additional contracts or infrastructure.\n\nAfter approval, qualification will:\n\n- Map each selected source obligation to installed instructions and a concrete check.\n- Check references, permanent roles, approved destinations, and actual command effects.\n- Record labeled simulations for startup identities, reconfiguration, assignment/return, missing capabilities, scope refusal, misleading completion, required-method delivery, lifecycle transfer, and cumulative retry limits.\n- Execute the bounded improvement fixture solely within `.agentos/`, fixing criteria before changes and retaining real readbacks and rollback evidence.\n- Suppress incidental Python caches on every relevant invocation.\n\nQualification will be solo. Same-context role specialization will be labeled accurately; fresh-session activation and independent review will remain unverified unless actually observed. Startup will perform no writes or background work. Handoff will instruct the user to start a fresh session in the project.\n\n**Frozen source and continuation:** this design uses only `/private/tmp/agentos-manifestref-20261024/controls/source-bundle/bundle`. Its identity is the complete 48-file `agentos-source-v1` JSON emitted by the successful portable-manifest command in this conversation, tool output chunk **`547f06`**. That exact original JSON must accompany this proposal and approval into the fresh session; this reference alone is insufficient. If it is unavailable, implementation must stop before writes.\n\nThe fresh installer must reread the selected contracts, implementation/qualification/handoff procedures, portable implementation reference, and manifest recipe; verify the original approved manifest; and reconcile current target state before editing.\n\n**Approval requested for the later session:** create the seven listed paths, perform the scoped qualification above, and hand off to Director. Per your read-only phase instruction, implementation awaits that explicit approval.",
+        "source_delivery": {
+          "components/activation.md": {
+            "finding": "full-source delivery established",
+            "observations": [
+              {
+                "item": "item_11",
+                "command": "/bin/bash -lc 'cat /private/tmp/agentos-manifestref-20261024/controls/source-bundle/bundle/components/director.md && cat /private/tmp/agentos-manifestref-20261024/controls/source-bundle/bundle/components/chief-of-staff.md && cat /private/tmp/agentos-manifestref-20261024/controls/source-bundle/bundle/components/activation.md'",
+                "primary_call_line": 39,
+                "primary_output_line": 45,
+                "aggregate_exit": 0,
+                "source_specific_exit": "unknown",
+                "source": {
+                  "sha256": "2893e4d66fc47158d5267cae0a04132d832c8436ad90f7ca6f58d322aaef4284",
+                  "bytes": 2064
+                },
+                "primary_output_sha256": "c51807cf4bace2617db81a75e43da375d417bbf7bd862282ff0f376c91e7752c"
+              }
+            ],
+            "conditions": {
+              "identity": "exact frozen source root and file hash/length",
+              "stability_provenance": "read-only controls mount; manually inspected actual cat commands, full source before/after including Git preserved",
+              "complete_output": "exact full canonical body in one unflagged completed assigned primary output; no fragment joining",
+              "ordering": "actual completed reads precede final proposal; no prior-session read credit or target mutation",
+              "separate_obligations": "aggregate exit0 retained; source-specific exit conservatively unknown; no comprehension or D admission inferred"
+            }
+          },
+          "components/authority.md": {
+            "finding": "full-source delivery established",
+            "observations": [
+              {
+                "item": "item_14",
+                "command": "/bin/bash -lc 'cat /private/tmp/agentos-manifestref-20261024/controls/source-bundle/bundle/components/authority.md && cat /private/tmp/agentos-manifestref-20261024/controls/source-bundle/bundle/components/capability-routing.md && cat /private/tmp/agentos-manifestref-20261024/controls/source-bundle/bundle/components/delegation.md'",
+                "primary_call_line": 39,
+                "primary_output_line": 45,
+                "aggregate_exit": 0,
+                "source_specific_exit": "unknown",
+                "source": {
+                  "sha256": "47ae9e02646be13d453e3219a55bc16610e115d2da221b944103b6c95a53ff95",
+                  "bytes": 3041
+                },
+                "primary_output_sha256": "c51807cf4bace2617db81a75e43da375d417bbf7bd862282ff0f376c91e7752c"
+              }
+            ],
+            "conditions": {
+              "identity": "exact frozen source root and file hash/length",
+              "stability_provenance": "read-only controls mount; manually inspected actual cat commands, full source before/after including Git preserved",
+              "complete_output": "exact full canonical body in one unflagged completed assigned primary output; no fragment joining",
+              "ordering": "actual completed reads precede final proposal; no prior-session read credit or target mutation",
+              "separate_obligations": "aggregate exit0 retained; source-specific exit conservatively unknown; no comprehension or D admission inferred"
+            }
+          },
+          "components/capability-routing.md": {
+            "finding": "full-source delivery established",
+            "observations": [
+              {
+                "item": "item_14",
+                "command": "/bin/bash -lc 'cat /private/tmp/agentos-manifestref-20261024/controls/source-bundle/bundle/components/authority.md && cat /private/tmp/agentos-manifestref-20261024/controls/source-bundle/bundle/components/capability-routing.md && cat /private/tmp/agentos-manifestref-20261024/controls/source-bundle/bundle/components/delegation.md'",
+                "primary_call_line": 39,
+                "primary_output_line": 45,
+                "aggregate_exit": 0,
+                "source_specific_exit": "unknown",
+                "source": {
+                  "sha256": "d7f86c5cbf4b1a505f9db20fcbd68487a809bbdc04adce3cd12221114d0fc161",
+                  "bytes": 1846
+                },
+                "primary_output_sha256": "c51807cf4bace2617db81a75e43da375d417bbf7bd862282ff0f376c91e7752c"
+              }
+            ],
+            "conditions": {
+              "identity": "exact frozen source root and file hash/length",
+              "stability_provenance": "read-only controls mount; manually inspected actual cat commands, full source before/after including Git preserved",
+              "complete_output": "exact full canonical body in one unflagged completed assigned primary output; no fragment joining",
+              "ordering": "actual completed reads precede final proposal; no prior-session read credit or target mutation",
+              "separate_obligations": "aggregate exit0 retained; source-specific exit conservatively unknown; no comprehension or D admission inferred"
+            }
+          },
+          "components/chief-of-staff.md": {
+            "finding": "full-source delivery established",
+            "observations": [
+              {
+                "item": "item_11",
+                "command": "/bin/bash -lc 'cat /private/tmp/agentos-manifestref-20261024/controls/source-bundle/bundle/components/director.md && cat /private/tmp/agentos-manifestref-20261024/controls/source-bundle/bundle/components/chief-of-staff.md && cat /private/tmp/agentos-manifestref-20261024/controls/source-bundle/bundle/components/activation.md'",
+                "primary_call_line": 39,
+                "primary_output_line": 45,
+                "aggregate_exit": 0,
+                "source_specific_exit": "unknown",
+                "source": {
+                  "sha256": "c43203e841a0a10ef4ef3887b6a7d89eb834eb255b3b4386231488f4f9efb8b5",
+                  "bytes": 1726
+                },
+                "primary_output_sha256": "c51807cf4bace2617db81a75e43da375d417bbf7bd862282ff0f376c91e7752c"
+              }
+            ],
+            "conditions": {
+              "identity": "exact frozen source root and file hash/length",
+              "stability_provenance": "read-only controls mount; manually inspected actual cat commands, full source before/after including Git preserved",
+              "complete_output": "exact full canonical body in one unflagged completed assigned primary output; no fragment joining",
+              "ordering": "actual completed reads precede final proposal; no prior-session read credit or target mutation",
+              "separate_obligations": "aggregate exit0 retained; source-specific exit conservatively unknown; no comprehension or D admission inferred"
+            }
+          },
+          "components/context-core.md": {
+            "finding": "full-source delivery established",
+            "observations": [
+              {
+                "item": "item_12",
+                "command": "/bin/bash -lc 'cat /private/tmp/agentos-manifestref-20261024/controls/source-bundle/bundle/components/delivery-acceptance.md && cat /private/tmp/agentos-manifestref-20261024/controls/source-bundle/bundle/components/context-core.md && cat /private/tmp/agentos-manifestref-20261024/controls/source-bundle/bundle/components/self-improvement.md'",
+                "primary_call_line": 39,
+                "primary_output_line": 45,
+                "aggregate_exit": 0,
+                "source_specific_exit": "unknown",
+                "source": {
+                  "sha256": "8046c83f2eec46be879ce418e68827fdd95f6388ad3ff2090b8254840e74bca0",
+                  "bytes": 1602
+                },
+                "primary_output_sha256": "c51807cf4bace2617db81a75e43da375d417bbf7bd862282ff0f376c91e7752c"
+              }
+            ],
+            "conditions": {
+              "identity": "exact frozen source root and file hash/length",
+              "stability_provenance": "read-only controls mount; manually inspected actual cat commands, full source before/after including Git preserved",
+              "complete_output": "exact full canonical body in one unflagged completed assigned primary output; no fragment joining",
+              "ordering": "actual completed reads precede final proposal; no prior-session read credit or target mutation",
+              "separate_obligations": "aggregate exit0 retained; source-specific exit conservatively unknown; no comprehension or D admission inferred"
+            }
+          },
+          "components/delegation.md": {
+            "finding": "full-source delivery established",
+            "observations": [
+              {
+                "item": "item_14",
+                "command": "/bin/bash -lc 'cat /private/tmp/agentos-manifestref-20261024/controls/source-bundle/bundle/components/authority.md && cat /private/tmp/agentos-manifestref-20261024/controls/source-bundle/bundle/components/capability-routing.md && cat /private/tmp/agentos-manifestref-20261024/controls/source-bundle/bundle/components/delegation.md'",
+                "primary_call_line": 39,
+                "primary_output_line": 45,
+                "aggregate_exit": 0,
+                "source_specific_exit": "unknown",
+                "source": {
+                  "sha256": "d34dcf7c5bb102fc4f0e1a1603954ce51e33aa5f05f9a3561ae33315d2725169",
+                  "bytes": 2146
+                },
+                "primary_output_sha256": "c51807cf4bace2617db81a75e43da375d417bbf7bd862282ff0f376c91e7752c"
+              }
+            ],
+            "conditions": {
+              "identity": "exact frozen source root and file hash/length",
+              "stability_provenance": "read-only controls mount; manually inspected actual cat commands, full source before/after including Git preserved",
+              "complete_output": "exact full canonical body in one unflagged completed assigned primary output; no fragment joining",
+              "ordering": "actual completed reads precede final proposal; no prior-session read credit or target mutation",
+              "separate_obligations": "aggregate exit0 retained; source-specific exit conservatively unknown; no comprehension or D admission inferred"
+            }
+          },
+          "components/delivery-acceptance.md": {
+            "finding": "full-source delivery established",
+            "observations": [
+              {
+                "item": "item_12",
+                "command": "/bin/bash -lc 'cat /private/tmp/agentos-manifestref-20261024/controls/source-bundle/bundle/components/delivery-acceptance.md && cat /private/tmp/agentos-manifestref-20261024/controls/source-bundle/bundle/components/context-core.md && cat /private/tmp/agentos-manifestref-20261024/controls/source-bundle/bundle/components/self-improvement.md'",
+                "primary_call_line": 39,
+                "primary_output_line": 45,
+                "aggregate_exit": 0,
+                "source_specific_exit": "unknown",
+                "source": {
+                  "sha256": "3a74e11cdae62fd5e0fc1ea4641775b6dabd5018eaed872d9ddecee354794000",
+                  "bytes": 2686
+                },
+                "primary_output_sha256": "c51807cf4bace2617db81a75e43da375d417bbf7bd862282ff0f376c91e7752c"
+              }
+            ],
+            "conditions": {
+              "identity": "exact frozen source root and file hash/length",
+              "stability_provenance": "read-only controls mount; manually inspected actual cat commands, full source before/after including Git preserved",
+              "complete_output": "exact full canonical body in one unflagged completed assigned primary output; no fragment joining",
+              "ordering": "actual completed reads precede final proposal; no prior-session read credit or target mutation",
+              "separate_obligations": "aggregate exit0 retained; source-specific exit conservatively unknown; no comprehension or D admission inferred"
+            }
+          },
+          "components/director.md": {
+            "finding": "full-source delivery established",
+            "observations": [
+              {
+                "item": "item_11",
+                "command": "/bin/bash -lc 'cat /private/tmp/agentos-manifestref-20261024/controls/source-bundle/bundle/components/director.md && cat /private/tmp/agentos-manifestref-20261024/controls/source-bundle/bundle/components/chief-of-staff.md && cat /private/tmp/agentos-manifestref-20261024/controls/source-bundle/bundle/components/activation.md'",
+                "primary_call_line": 39,
+                "primary_output_line": 45,
+                "aggregate_exit": 0,
+                "source_specific_exit": "unknown",
+                "source": {
+                  "sha256": "beafa827c5ce6c53937537fa9521c2b46ebb9ec049788648b7e2b010b0eea9b0",
+                  "bytes": 2115
+                },
+                "primary_output_sha256": "c51807cf4bace2617db81a75e43da375d417bbf7bd862282ff0f376c91e7752c"
+              }
+            ],
+            "conditions": {
+              "identity": "exact frozen source root and file hash/length",
+              "stability_provenance": "read-only controls mount; manually inspected actual cat commands, full source before/after including Git preserved",
+              "complete_output": "exact full canonical body in one unflagged completed assigned primary output; no fragment joining",
+              "ordering": "actual completed reads precede final proposal; no prior-session read credit or target mutation",
+              "separate_obligations": "aggregate exit0 retained; source-specific exit conservatively unknown; no comprehension or D admission inferred"
+            }
+          },
+          "components/resource-budgets.md": {
+            "finding": "full-source delivery established",
+            "observations": [
+              {
+                "item": "item_13",
+                "command": "/bin/bash -lc 'cat /private/tmp/agentos-manifestref-20261024/controls/source-bundle/bundle/components/role-lifecycle.md && cat /private/tmp/agentos-manifestref-20261024/controls/source-bundle/bundle/components/resource-budgets.md && cat /private/tmp/agentos-manifestref-20261024/controls/source-bundle/bundle/phases/design.md'",
+                "primary_call_line": 39,
+                "primary_output_line": 45,
+                "aggregate_exit": 0,
+                "source_specific_exit": "unknown",
+                "source": {
+                  "sha256": "02f41da067d039db46fd6a8c8802994cb36d6ad72b78879baa65ac5c2cb9870f",
+                  "bytes": 1706
+                },
+                "primary_output_sha256": "c51807cf4bace2617db81a75e43da375d417bbf7bd862282ff0f376c91e7752c"
+              }
+            ],
+            "conditions": {
+              "identity": "exact frozen source root and file hash/length",
+              "stability_provenance": "read-only controls mount; manually inspected actual cat commands, full source before/after including Git preserved",
+              "complete_output": "exact full canonical body in one unflagged completed assigned primary output; no fragment joining",
+              "ordering": "actual completed reads precede final proposal; no prior-session read credit or target mutation",
+              "separate_obligations": "aggregate exit0 retained; source-specific exit conservatively unknown; no comprehension or D admission inferred"
+            }
+          },
+          "components/role-lifecycle.md": {
+            "finding": "full-source delivery established",
+            "observations": [
+              {
+                "item": "item_13",
+                "command": "/bin/bash -lc 'cat /private/tmp/agentos-manifestref-20261024/controls/source-bundle/bundle/components/role-lifecycle.md && cat /private/tmp/agentos-manifestref-20261024/controls/source-bundle/bundle/components/resource-budgets.md && cat /private/tmp/agentos-manifestref-20261024/controls/source-bundle/bundle/phases/design.md'",
+                "primary_call_line": 39,
+                "primary_output_line": 45,
+                "aggregate_exit": 0,
+                "source_specific_exit": "unknown",
+                "source": {
+                  "sha256": "ae0fc9a30668666d22cb9b0ab03049b98ec095a590f81ecb7b843972073bf95f",
+                  "bytes": 1897
+                },
+                "primary_output_sha256": "c51807cf4bace2617db81a75e43da375d417bbf7bd862282ff0f376c91e7752c"
+              }
+            ],
+            "conditions": {
+              "identity": "exact frozen source root and file hash/length",
+              "stability_provenance": "read-only controls mount; manually inspected actual cat commands, full source before/after including Git preserved",
+              "complete_output": "exact full canonical body in one unflagged completed assigned primary output; no fragment joining",
+              "ordering": "actual completed reads precede final proposal; no prior-session read credit or target mutation",
+              "separate_obligations": "aggregate exit0 retained; source-specific exit conservatively unknown; no comprehension or D admission inferred"
+            }
+          },
+          "components/self-improvement.md": {
+            "finding": "full-source delivery established",
+            "observations": [
+              {
+                "item": "item_12",
+                "command": "/bin/bash -lc 'cat /private/tmp/agentos-manifestref-20261024/controls/source-bundle/bundle/components/delivery-acceptance.md && cat /private/tmp/agentos-manifestref-20261024/controls/source-bundle/bundle/components/context-core.md && cat /private/tmp/agentos-manifestref-20261024/controls/source-bundle/bundle/components/self-improvement.md'",
+                "primary_call_line": 39,
+                "primary_output_line": 45,
+                "aggregate_exit": 0,
+                "source_specific_exit": "unknown",
+                "source": {
+                  "sha256": "0bf78a0d5f04096c9e0b3603588f8b865aed218ba980f59f4dc11922656d5ac7",
+                  "bytes": 3002
+                },
+                "primary_output_sha256": "c51807cf4bace2617db81a75e43da375d417bbf7bd862282ff0f376c91e7752c"
+              }
+            ],
+            "conditions": {
+              "identity": "exact frozen source root and file hash/length",
+              "stability_provenance": "read-only controls mount; manually inspected actual cat commands, full source before/after including Git preserved",
+              "complete_output": "exact full canonical body in one unflagged completed assigned primary output; no fragment joining",
+              "ordering": "actual completed reads precede final proposal; no prior-session read credit or target mutation",
+              "separate_obligations": "aggregate exit0 retained; source-specific exit conservatively unknown; no comprehension or D admission inferred"
+            }
+          },
+          "core/constitution.md": {
+            "finding": "full-source delivery established",
+            "observations": [
+              {
+                "item": "item_4",
+                "command": "/bin/bash -lc 'cat /private/tmp/agentos-manifestref-20261024/controls/source-bundle/bundle/core/constitution.md'",
+                "primary_call_line": 19,
+                "primary_output_line": 25,
+                "aggregate_exit": 0,
+                "source_specific_exit": "unknown",
+                "source": {
+                  "sha256": "6797e597f48135da527f87aff5b0f1b01e2c265ebb5378cb2826d70665a5ed82",
+                  "bytes": 2665
+                },
+                "primary_output_sha256": "846572080f5e0233567d2a740c14fe6b4f262849a9545e1ff9dd102ff3a84421"
+              }
+            ],
+            "conditions": {
+              "identity": "exact frozen source root and file hash/length",
+              "stability_provenance": "read-only controls mount; manually inspected actual cat commands, full source before/after including Git preserved",
+              "complete_output": "exact full canonical body in one unflagged completed assigned primary output; no fragment joining",
+              "ordering": "actual completed reads precede final proposal; no prior-session read credit or target mutation",
+              "separate_obligations": "aggregate exit0 retained; source-specific exit conservatively unknown; no comprehension or D admission inferred"
+            }
+          },
+          "core/graph-routing.md": {
+            "finding": "full-source delivery established",
+            "observations": [
+              {
+                "item": "item_5",
+                "command": "/bin/bash -lc 'cat /private/tmp/agentos-manifestref-20261024/controls/source-bundle/bundle/core/installer-policy.md && cat /private/tmp/agentos-manifestref-20261024/controls/source-bundle/bundle/core/graph-routing.md'",
+                "primary_call_line": 19,
+                "primary_output_line": 25,
+                "aggregate_exit": 0,
+                "source_specific_exit": "unknown",
+                "source": {
+                  "sha256": "131746a30086a490c0d660f3d9658d6400303ca68f8d5fed0f77af15ffe4673b",
+                  "bytes": 8000
+                },
+                "primary_output_sha256": "846572080f5e0233567d2a740c14fe6b4f262849a9545e1ff9dd102ff3a84421"
+              }
+            ],
+            "conditions": {
+              "identity": "exact frozen source root and file hash/length",
+              "stability_provenance": "read-only controls mount; manually inspected actual cat commands, full source before/after including Git preserved",
+              "complete_output": "exact full canonical body in one unflagged completed assigned primary output; no fragment joining",
+              "ordering": "actual completed reads precede final proposal; no prior-session read credit or target mutation",
+              "separate_obligations": "aggregate exit0 retained; source-specific exit conservatively unknown; no comprehension or D admission inferred"
+            }
+          },
+          "core/installer-policy.md": {
+            "finding": "full-source delivery established",
+            "observations": [
+              {
+                "item": "item_5",
+                "command": "/bin/bash -lc 'cat /private/tmp/agentos-manifestref-20261024/controls/source-bundle/bundle/core/installer-policy.md && cat /private/tmp/agentos-manifestref-20261024/controls/source-bundle/bundle/core/graph-routing.md'",
+                "primary_call_line": 19,
+                "primary_output_line": 25,
+                "aggregate_exit": 0,
+                "source_specific_exit": "unknown",
+                "source": {
+                  "sha256": "c6e48d24fa13124d2f623e131c96c83b77aa32734b5ae706f2e6912cc82db4aa",
+                  "bytes": 2634
+                },
+                "primary_output_sha256": "846572080f5e0233567d2a740c14fe6b4f262849a9545e1ff9dd102ff3a84421"
+              }
+            ],
+            "conditions": {
+              "identity": "exact frozen source root and file hash/length",
+              "stability_provenance": "read-only controls mount; manually inspected actual cat commands, full source before/after including Git preserved",
+              "complete_output": "exact full canonical body in one unflagged completed assigned primary output; no fragment joining",
+              "ordering": "actual completed reads precede final proposal; no prior-session read credit or target mutation",
+              "separate_obligations": "aggregate exit0 retained; source-specific exit conservatively unknown; no comprehension or D admission inferred"
+            }
+          },
+          "examples/source-manifest.md": {
+            "finding": "full-source delivery established",
+            "observations": [
+              {
+                "item": "item_7",
+                "command": "/bin/bash -lc 'cat /private/tmp/agentos-manifestref-20261024/controls/source-bundle/bundle/examples/source-manifest.md'",
+                "primary_call_line": 27,
+                "primary_output_line": 33,
+                "aggregate_exit": 0,
+                "source_specific_exit": "unknown",
+                "source": {
+                  "sha256": "984d83a51b774184945926149c63d7f05329f3da7a0a98a1f21107d45df90118",
+                  "bytes": 5101
+                },
+                "primary_output_sha256": "a0e27e501b148327bda4b2a0cd78344803a776537d194c8a6721989a8ad5b8b8"
+              }
+            ],
+            "conditions": {
+              "identity": "exact frozen source root and file hash/length",
+              "stability_provenance": "read-only controls mount; manually inspected actual cat commands, full source before/after including Git preserved",
+              "complete_output": "exact full canonical body in one unflagged completed assigned primary output; no fragment joining",
+              "ordering": "actual completed reads precede final proposal; no prior-session read credit or target mutation",
+              "separate_obligations": "aggregate exit0 retained; source-specific exit conservatively unknown; no comprehension or D admission inferred"
+            }
+          },
+          "interviews/bootstrap.md": {
+            "finding": "full-source delivery established",
+            "observations": [
+              {
+                "item": "item_8",
+                "command": "/bin/bash -lc 'cat /private/tmp/agentos-manifestref-20261024/controls/source-bundle/bundle/interviews/bootstrap.md && cat /private/tmp/agentos-manifestref-20261024/controls/source-bundle/bundle/phases/discover.md'",
+                "primary_call_line": 27,
+                "primary_output_line": 33,
+                "aggregate_exit": 0,
+                "source_specific_exit": "unknown",
+                "source": {
+                  "sha256": "eb471fc596bf6705c656911716e3022e99d818a905b744b8314acf3b3c988ce4",
+                  "bytes": 2279
+                },
+                "primary_output_sha256": "a0e27e501b148327bda4b2a0cd78344803a776537d194c8a6721989a8ad5b8b8"
+              }
+            ],
+            "conditions": {
+              "identity": "exact frozen source root and file hash/length",
+              "stability_provenance": "read-only controls mount; manually inspected actual cat commands, full source before/after including Git preserved",
+              "complete_output": "exact full canonical body in one unflagged completed assigned primary output; no fragment joining",
+              "ordering": "actual completed reads precede final proposal; no prior-session read credit or target mutation",
+              "separate_obligations": "aggregate exit0 retained; source-specific exit conservatively unknown; no comprehension or D admission inferred"
+            }
+          },
+          "phases/design.md": {
+            "finding": "full-source delivery established",
+            "observations": [
+              {
+                "item": "item_13",
+                "command": "/bin/bash -lc 'cat /private/tmp/agentos-manifestref-20261024/controls/source-bundle/bundle/components/role-lifecycle.md && cat /private/tmp/agentos-manifestref-20261024/controls/source-bundle/bundle/components/resource-budgets.md && cat /private/tmp/agentos-manifestref-20261024/controls/source-bundle/bundle/phases/design.md'",
+                "primary_call_line": 39,
+                "primary_output_line": 45,
+                "aggregate_exit": 0,
+                "source_specific_exit": "unknown",
+                "source": {
+                  "sha256": "02178dbea3c3de8e70c8308a8ace5e5676a68737f90a3489d7952f015672ec54",
+                  "bytes": 3113
+                },
+                "primary_output_sha256": "c51807cf4bace2617db81a75e43da375d417bbf7bd862282ff0f376c91e7752c"
+              }
+            ],
+            "conditions": {
+              "identity": "exact frozen source root and file hash/length",
+              "stability_provenance": "read-only controls mount; manually inspected actual cat commands, full source before/after including Git preserved",
+              "complete_output": "exact full canonical body in one unflagged completed assigned primary output; no fragment joining",
+              "ordering": "actual completed reads precede final proposal; no prior-session read credit or target mutation",
+              "separate_obligations": "aggregate exit0 retained; source-specific exit conservatively unknown; no comprehension or D admission inferred"
+            }
+          },
+          "phases/discover.md": {
+            "finding": "full-source delivery established",
+            "observations": [
+              {
+                "item": "item_8",
+                "command": "/bin/bash -lc 'cat /private/tmp/agentos-manifestref-20261024/controls/source-bundle/bundle/interviews/bootstrap.md && cat /private/tmp/agentos-manifestref-20261024/controls/source-bundle/bundle/phases/discover.md'",
+                "primary_call_line": 27,
+                "primary_output_line": 33,
+                "aggregate_exit": 0,
+                "source_specific_exit": "unknown",
+                "source": {
+                  "sha256": "513fc2cea5ca6a7164e1f37ce764abf1a7a5c3e849d9ff83dd3fd894d4238b9d",
+                  "bytes": 1377
+                },
+                "primary_output_sha256": "a0e27e501b148327bda4b2a0cd78344803a776537d194c8a6721989a8ad5b8b8"
+              }
+            ],
+            "conditions": {
+              "identity": "exact frozen source root and file hash/length",
+              "stability_provenance": "read-only controls mount; manually inspected actual cat commands, full source before/after including Git preserved",
+              "complete_output": "exact full canonical body in one unflagged completed assigned primary output; no fragment joining",
+              "ordering": "actual completed reads precede final proposal; no prior-session read credit or target mutation",
+              "separate_obligations": "aggregate exit0 retained; source-specific exit conservatively unknown; no comprehension or D admission inferred"
+            }
+          },
+          "start.md": {
+            "finding": "full-source delivery established",
+            "observations": [
+              {
+                "item": "item_1",
+                "command": "/bin/bash -lc \"pwd && rg --files -g 'request.json' -g 'AGENTS.md' -g '\"'!node_modules'\"' -g '\"'!vendor'\"' -g '\"'!.git'\"' && cat /private/tmp/agentos-manifestref-20261024/controls/source-bundle/bundle/start.md\"",
+                "primary_call_line": 14,
+                "primary_output_line": 17,
+                "aggregate_exit": 0,
+                "source_specific_exit": "unknown",
+                "source": {
+                  "sha256": "23771ad33e2d5e66e0db66ce4443503b82e2e28c928b9e3bfd4d8a131ce11a27",
+                  "bytes": 7351
+                },
+                "primary_output_sha256": "3756991a66968cca467c79e3d8040ff53d6c7b52d7518863f1c5aa51e844fd60"
+              }
+            ],
+            "conditions": {
+              "identity": "exact frozen source root and file hash/length",
+              "stability_provenance": "read-only controls mount; manually inspected actual cat commands, full source before/after including Git preserved",
+              "complete_output": "exact full canonical body in one unflagged completed assigned primary output; no fragment joining",
+              "ordering": "actual completed reads precede final proposal; no prior-session read credit or target mutation",
+              "separate_obligations": "aggregate exit0 retained; source-specific exit conservatively unknown; no comprehension or D admission inferred"
+            }
+          }
+        },
+        "manifest_item": "item_15",
+        "original_manifest_matches": true,
+        "manifest_files": 48,
+        "literal_recipe_preserved": false,
+        "executable_ast_equal": true,
+        "executed_code_sha256": "6026b9a66ac8a9022908a9880d52409efdb0b23fe2474c0ca61765dbaab21498",
+        "recipe_sha256": "8970c3d3fd38abd0dbffa9ac954998ee4caa2c258ca771b402d5b5ad213eae22",
+        "procedure_detail": "Luna shortens to generation-only code, omitting argument guard and verification branch; Sol retains executable AST but omits explanatory comment",
+        "source_target_git_unchanged": true,
+        "identity_reference": "Both final proposals reference actual complete generation output; Sol names native chunk547f06; Luna identifies sole manifest generation call and source root",
+        "D_admitted": false,
+        "limits": "No current approval handoff or I/U admission; reference observation alone proves no reliable benefit or causality"
+      }
+    },
+    "all_original_controls_sources_targets_preserved": true,
+    "matrix": {
+      "planned": 12,
+      "executed": 2,
+      "unstarted": 10,
+      "installation": 0,
+      "first_use": 0
+    },
+    "disposition": "Reject coherent12path candidate for explicit recipe preservation failure; retain narrow correct-identity/reference/source positives; fresh independent review required",
+    "known_limits": [
+      "No historical regrade",
+      "No stochastic improvement claim",
+      "No source gap or wrong manifest alleged",
+      "Literal script requirement itself may be burdensome; a future prospective design may eliminate manual transcription without changing identity invariants"
+    ]
+  },
+  "validation": {
+    "local-validation.json": {
+      "unchanged_components": [
+        "effect-reconciliation.md",
+        "scheduling.md",
+        "work-ledger.md",
+        "self-improvement.md",
+        "activation.md",
+        "brownfield-migration.md",
+        "capability-routing.md",
+        "independent-evaluation.md",
+        "multi-repo.md",
+        "context-core.md",
+        "delegation.md",
+        "director.md",
+        "git-delivery.md",
+        "advanced-validation.md",
+        "role-lifecycle.md",
+        "chief-of-staff.md",
+        "durable-handoff.md",
+        "learning-queue.md",
+        "telemetry.md",
+        "runtime-native.md",
+        "information-boundaries.md",
+        "parallel-coordination.md"
+      ],
+      "profiles": {
+        "portable": 10,
+        "engineering": 22,
+        "portfolio": 18
+      },
+      "links": [
+        [
+          "phases/design.md",
+          "../core/graph-routing.md"
+        ],
+        [
+          "phases/design.md",
+          "implement.md"
+        ],
+        [
+          "components/index.md",
+          "director.md"
+        ],
+        [
+          "components/index.md",
+          "chief-of-staff.md"
+        ],
+        [
+          "components/index.md",
+          "activation.md"
+        ],
+        [
+          "components/index.md",
+          "authority.md"
+        ],
+        [
+          "components/index.md",
+          "capability-routing.md"
+        ],
+        [
+          "components/index.md",
+          "delegation.md"
+        ],
+        [
+          "components/index.md",
+          "delivery-acceptance.md"
+        ],
+        [
+          "components/index.md",
+          "context-core.md"
+        ],
+        [
+          "components/index.md",
+          "self-improvement.md"
+        ],
+        [
+          "components/index.md",
+          "role-lifecycle.md"
+        ],
+        [
+          "components/index.md",
+          "runtime-native.md"
+        ],
+        [
+          "components/index.md",
+          "work-ledger.md"
+        ],
+        [
+          "components/index.md",
+          "parallel-coordination.md"
+        ],
+        [
+          "components/index.md",
+          "durable-handoff.md"
+        ],
+        [
+          "components/index.md",
+          "effect-reconciliation.md"
+        ],
+        [
+          "components/index.md",
+          "independent-evaluation.md"
+        ],
+        [
+          "components/index.md",
+          "learning-queue.md"
+        ],
+        [
+          "components/index.md",
+          "telemetry.md"
+        ],
+        [
+          "components/index.md",
+          "resource-budgets.md"
+        ],
+        [
+          "components/index.md",
+          "git-delivery.md"
+        ],
+        [
+          "components/index.md",
+          "information-boundaries.md"
+        ],
+        [
+          "components/index.md",
+          "multi-repo.md"
+        ],
+        [
+          "components/index.md",
+          "scheduling.md"
+        ],
+        [
+          "components/index.md",
+          "brownfield-migration.md"
+        ],
+        [
+          "components/index.md",
+          "advanced-validation.md"
+        ],
+        [
+          "core/graph-routing.md",
+          "../interviews/bootstrap.md"
+        ],
+        [
+          "core/graph-routing.md",
+          "../components/index.md"
+        ],
+        [
+          "start.md",
+          "core/constitution.md"
+        ],
+        [
+          "start.md",
+          "core/installer-policy.md"
+        ],
+        [
+          "start.md",
+          "core/graph-routing.md"
+        ],
+        [
+          "start.md",
+          "interviews/bootstrap.md"
+        ],
+        [
+          "start.md",
+          "phases/discover.md"
+        ],
+        [
+          "start.md",
+          "phases/implement.md"
+        ],
+        [
+          "start.md",
+          "phases/qualify.md"
+        ],
+        [
+          "start.md",
+          "phases/handoff.md"
+        ],
+        [
+          "start.md",
+          "examples/source-manifest.md"
+        ],
+        [
+          "start.md",
+          "components/index.md"
+        ],
+        [
+          "start.md",
+          "phases/implement.md"
+        ],
+        [
+          "start.md",
+          "phases/qualify.md"
+        ],
+        [
+          "start.md",
+          "phases/handoff.md"
+        ],
+        [
+          "phases/implement.md",
+          "../examples/source-manifest.md"
+        ],
+        [
+          "phases/implement.md",
+          "qualify.md"
+        ],
+        [
+          "phases/implement.md",
+          "../examples/portable-implementation.md"
+        ],
+        [
+          "phases/implement.md",
+          "../examples/source-manifest.md"
+        ],
+        [
+          "phases/implement.md",
+          "qualify.md"
+        ],
+        [
+          "phases/qualify.md",
+          "implement.md"
+        ],
+        [
+          "phases/qualify.md",
+          "../examples/portable-implementation.md"
+        ],
+        [
+          "phases/qualify.md",
+          "../examples/portable-implementation.md#concrete-operating-scenario-worksheet"
+        ],
+        [
+          "phases/qualify.md",
+          "../concepts/evidence-levels.md"
+        ],
+        [
+          "phases/qualify.md",
+          "handoff.md"
+        ],
+        [
+          "examples/index.md",
+          "selection-scenarios.md"
+        ],
+        [
+          "examples/index.md",
+          "portable-implementation.md"
+        ],
+        [
+          "examples/index.md",
+          "source-manifest.md"
+        ],
+        [
+          "components/resource-budgets.md",
+          "delegation.md"
+        ],
+        [
+          "components/delivery-acceptance.md",
+          "git-delivery.md"
+        ],
+        [
+          "components/delivery-acceptance.md",
+          "independent-evaluation.md"
+        ],
+        [
+          "components/delivery-acceptance.md",
+          "authority.md"
+        ],
+        [
+          "components/delivery-acceptance.md",
+          "git-delivery.md"
+        ],
+        [
+          "components/delivery-acceptance.md",
+          "independent-evaluation.md"
+        ]
+      ],
+      "example_cases": [
+        {
+          "case": "normal",
+          "returncode": 0,
+          "before": {
+            ".agentos": {
+              "directory": true
+            }
+          },
+          "after": {
+            ".agentos": {
+              "directory": true
+            },
+            ".agentos/qualification-example.json": {
+              "sha256": "8d4c442e7dbd1dc34fde30e49ac0f82197926d59928bf407351f3f0c3411fdd0",
+              "bytes": 2627
+            }
+          },
+          "pass": true
+        },
+        {
+          "case": "existing",
+          "returncode": 1,
+          "before": {
+            ".agentos": {
+              "directory": true
+            },
+            ".agentos/qualification-example.json": {
+              "sha256": "ce7736b878c0c770c62784149b542c10137670af1eb9d864f0539c1f185463da",
+              "bytes": 27
+            }
+          },
+          "after": {
+            ".agentos": {
+              "directory": true
+            },
+            ".agentos/qualification-example.json": {
+              "sha256": "ce7736b878c0c770c62784149b542c10137670af1eb9d864f0539c1f185463da",
+              "bytes": 27
+            }
+          },
+          "pass": true
+        },
+        {
+          "case": "linked-home",
+          "returncode": 1,
+          "before": {
+            "actual": {
+              "directory": true
+            },
+            ".agentos": {
+              "symlink": "/private/tmp/agentos-manifestref-20261024/work/example-linked-home/actual"
+            }
+          },
+          "after": {
+            "actual": {
+              "directory": true
+            },
+            ".agentos": {
+              "symlink": "/private/tmp/agentos-manifestref-20261024/work/example-linked-home/actual"
+            }
+          },
+          "pass": true
+        },
+        {
+          "case": "linked-output",
+          "returncode": 1,
+          "before": {
+            ".agentos": {
+              "directory": true
+            },
+            "prior.json": {
+              "sha256": "787b47138f2f6f9431bf55413c2a3655c2e0e84f29cc25a0167342ea5c960888",
+              "bytes": 21
+            },
+            ".agentos/qualification-example.json": {
+              "symlink": "/private/tmp/agentos-manifestref-20261024/work/example-linked-output/prior.json"
+            }
+          },
+          "after": {
+            ".agentos": {
+              "directory": true
+            },
+            "prior.json": {
+              "sha256": "787b47138f2f6f9431bf55413c2a3655c2e0e84f29cc25a0167342ea5c960888",
+              "bytes": 21
+            },
+            ".agentos/qualification-example.json": {
+              "symlink": "/private/tmp/agentos-manifestref-20261024/work/example-linked-output/prior.json"
+            }
+          },
+          "pass": true
+        }
+      ],
+      "cache_probes": [
+        {
+          "mode": "unguarded",
+          "command": [
+            "/opt/homebrew/opt/python@3.15/bin/python3.15",
+            "-c",
+            "from pathlib import Path; from localprobe import normalize; Path(\"output.txt\").write_text(normalize(\" Hello  AgentOS \"))"
+          ],
+          "cache_files": [
+            "__pycache__/localprobe.cpython-315.pyc"
+          ],
+          "output_hex": "48656c6c6f204167656e744f530a",
+          "pass": true
+        },
+        {
+          "mode": "flag",
+          "command": [
+            "/opt/homebrew/opt/python@3.15/bin/python3.15",
+            "-B",
+            "-c",
+            "from pathlib import Path; from localprobe import normalize; Path(\"output.txt\").write_text(normalize(\" Hello  AgentOS \"))"
+          ],
+          "cache_files": [],
+          "output_hex": "48656c6c6f204167656e744f530a",
+          "pass": true
+        },
+        {
+          "mode": "environment",
+          "command": [
+            "/opt/homebrew/opt/python@3.15/bin/python3.15",
+            "-c",
+            "from pathlib import Path; from localprobe import normalize; Path(\"output.txt\").write_text(normalize(\" Hello  AgentOS \"))"
+          ],
+          "cache_files": [],
+          "output_hex": "48656c6c6f204167656e744f530a",
+          "pass": true
+        },
+        {
+          "mode": "both",
+          "command": [
+            "/opt/homebrew/opt/python@3.15/bin/python3.15",
+            "-B",
+            "-c",
+            "from pathlib import Path; from localprobe import normalize; Path(\"output.txt\").write_text(normalize(\" Hello  AgentOS \"))"
+          ],
+          "cache_files": [],
+          "output_hex": "48656c6c6f204167656e744f530a",
+          "pass": true
+        }
+      ]
+    },
+    "manifest-recipe-validation.json": {
+      "recipe_sha256": "8970c3d3fd38abd0dbffa9ac954998ee4caa2c258ca771b402d5b5ad213eae22",
+      "cases": [
+        {
+          "name": "normal",
+          "exit": 0,
+          "expected_success": true,
+          "read_only": true,
+          "stdout_sha256": "7fa18d5e5d73e9526bd6942a6d71e1f11940677ef1ee8eb30480046bbb01307b",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "name": "match",
+          "exit": 0,
+          "expected_success": true,
+          "read_only": true,
+          "stdout_sha256": "a16b5f6fc9cdba8371dccadf4b77791219b0871f5dfd05b113ef374bd9a51b3c",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "name": "relocated",
+          "exit": 0,
+          "expected_success": true,
+          "read_only": true,
+          "stdout_sha256": "7fa18d5e5d73e9526bd6942a6d71e1f11940677ef1ee8eb30480046bbb01307b",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "name": "relocated-match",
+          "exit": 0,
+          "expected_success": true,
+          "read_only": true,
+          "stdout_sha256": "a16b5f6fc9cdba8371dccadf4b77791219b0871f5dfd05b113ef374bd9a51b3c",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "name": "changed-generate",
+          "exit": 0,
+          "expected_success": true,
+          "read_only": true,
+          "stdout_sha256": "d8a88fd61fc113a37ee5fc39c7b0d84869aa8770395d64489ea3ad5d73121700",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "name": "changed-refuse",
+          "exit": 1,
+          "expected_success": false,
+          "read_only": true,
+          "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr_sha256": "2c61f6416b8819fe619e6c28fc85455e5b2518fa7509bdb5d5f80d614dcc655f"
+        },
+        {
+          "name": "added-generate",
+          "exit": 0,
+          "expected_success": true,
+          "read_only": true,
+          "stdout_sha256": "1ffb4a1a3ad2951bec09f6fe7b37d077df2c57a805f4d2e229f668f5c8c5bb42",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "name": "added-refuse",
+          "exit": 1,
+          "expected_success": false,
+          "read_only": true,
+          "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr_sha256": "2c61f6416b8819fe619e6c28fc85455e5b2518fa7509bdb5d5f80d614dcc655f"
+        },
+        {
+          "name": "removed-generate",
+          "exit": 0,
+          "expected_success": true,
+          "read_only": true,
+          "stdout_sha256": "d6fbc2d1bda76dfbd9b44a0e18acb605f9caec69a49b5356eed6efec3393f056",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "name": "removed-refuse",
+          "exit": 1,
+          "expected_success": false,
+          "read_only": true,
+          "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr_sha256": "2c61f6416b8819fe619e6c28fc85455e5b2518fa7509bdb5d5f80d614dcc655f"
+        },
+        {
+          "name": "missing-root",
+          "exit": 1,
+          "expected_success": false,
+          "read_only": true,
+          "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr_sha256": "47797b83cd13f9f06aa747bf744916cffee57897fa6fe4232f596710c6914c21"
+        },
+        {
+          "name": "missing-start",
+          "exit": 1,
+          "expected_success": false,
+          "read_only": true,
+          "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr_sha256": "47797b83cd13f9f06aa747bf744916cffee57897fa6fe4232f596710c6914c21"
+        },
+        {
+          "name": "file-link",
+          "exit": 1,
+          "expected_success": false,
+          "read_only": true,
+          "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr_sha256": "793ed4d28689ea433124887279ffd816b77c59eb6892d96ad721f612f0052278"
+        },
+        {
+          "name": "directory-link",
+          "exit": 1,
+          "expected_success": false,
+          "read_only": true,
+          "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr_sha256": "793ed4d28689ea433124887279ffd816b77c59eb6892d96ad721f612f0052278"
+        },
+        {
+          "name": "fifo",
+          "exit": 1,
+          "expected_success": false,
+          "read_only": true,
+          "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr_sha256": "8c68703ba7340c1a89c8e742959a99ab6b4c87481895a8c8fe3c953c76322f41"
+        },
+        {
+          "name": "missing-length",
+          "exit": 1,
+          "expected_success": false,
+          "read_only": true,
+          "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr_sha256": "2c61f6416b8819fe619e6c28fc85455e5b2518fa7509bdb5d5f80d614dcc655f"
+        },
+        {
+          "name": "extra-entry",
+          "exit": 1,
+          "expected_success": false,
+          "read_only": true,
+          "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr_sha256": "2c61f6416b8819fe619e6c28fc85455e5b2518fa7509bdb5d5f80d614dcc655f"
+        },
+        {
+          "name": "missing-entry",
+          "exit": 1,
+          "expected_success": false,
+          "read_only": true,
+          "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr_sha256": "2c61f6416b8819fe619e6c28fc85455e5b2518fa7509bdb5d5f80d614dcc655f"
+        },
+        {
+          "name": "wrong-hash",
+          "exit": 1,
+          "expected_success": false,
+          "read_only": true,
+          "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr_sha256": "2c61f6416b8819fe619e6c28fc85455e5b2518fa7509bdb5d5f80d614dcc655f"
+        },
+        {
+          "name": "wrong-length",
+          "exit": 1,
+          "expected_success": false,
+          "read_only": true,
+          "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr_sha256": "2c61f6416b8819fe619e6c28fc85455e5b2518fa7509bdb5d5f80d614dcc655f"
+        },
+        {
+          "name": "wrong-format",
+          "exit": 1,
+          "expected_success": false,
+          "read_only": true,
+          "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr_sha256": "2c61f6416b8819fe619e6c28fc85455e5b2518fa7509bdb5d5f80d614dcc655f"
+        },
+        {
+          "name": "bool-length",
+          "exit": 1,
+          "expected_success": false,
+          "read_only": true,
+          "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr_sha256": "2c61f6416b8819fe619e6c28fc85455e5b2518fa7509bdb5d5f80d614dcc655f"
+        },
+        {
+          "name": "float-length",
+          "exit": 1,
+          "expected_success": false,
+          "read_only": true,
+          "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr_sha256": "2c61f6416b8819fe619e6c28fc85455e5b2518fa7509bdb5d5f80d614dcc655f"
+        },
+        {
+          "name": "absolute-path",
+          "exit": 1,
+          "expected_success": false,
+          "read_only": true,
+          "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr_sha256": "2c61f6416b8819fe619e6c28fc85455e5b2518fa7509bdb5d5f80d614dcc655f"
+        },
+        {
+          "name": "parent-path",
+          "exit": 1,
+          "expected_success": false,
+          "read_only": true,
+          "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr_sha256": "2c61f6416b8819fe619e6c28fc85455e5b2518fa7509bdb5d5f80d614dcc655f"
+        },
+        {
+          "name": "malformed",
+          "exit": 1,
+          "expected_success": false,
+          "read_only": true,
+          "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr_sha256": "c96b0ca59de7cd13bdf3504b72a9d4e2040da96e45ab231922523cf4c997c844"
+        },
+        {
+          "name": "duplicate-top",
+          "exit": 1,
+          "expected_success": false,
+          "read_only": true,
+          "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr_sha256": "25101739885024b9507e5dfbff98b511807e9fc5d4ce6988f0ed696cbc0280e5"
+        },
+        {
+          "name": "duplicate-entry",
+          "exit": 1,
+          "expected_success": false,
+          "read_only": true,
+          "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr_sha256": "860c3025659659c330a5fed34e2edd15bd042c122872ae5ab82bff98e4c245e1"
+        },
+        {
+          "name": "nonfinite",
+          "exit": 1,
+          "expected_success": false,
+          "read_only": true,
+          "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr_sha256": "d1eb376456cea3841fc6cc8675c2cadd586792765d89470893ea06a22d3cc0be"
+        },
+        {
+          "name": "candidate-bundle",
+          "exit": 0,
+          "expected_success": true,
+          "read_only": true,
+          "stdout_sha256": "0cfa384080f68082e58bcca7d6ea3f9656cf07026b593890c442ae1bff7e653b",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "name": "candidate-match",
+          "exit": 0,
+          "expected_success": true,
+          "read_only": true,
+          "stdout_sha256": "a16b5f6fc9cdba8371dccadf4b77791219b0871f5dfd05b113ef374bd9a51b3c",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "count": 31,
+      "all_passed": true,
+      "before_special_cleanup": {
+        "missing-start": {
+          "directory": true
+        },
+        "added": {
+          "directory": true
+        },
+        "file-link": {
+          "directory": true
+        },
+        "relocated": {
+          "directory": true
+        },
+        "removed": {
+          "directory": true
+        },
+        "directory-link": {
+          "directory": true
+        },
+        "fifo": {
+          "directory": true
+        },
+        "normal": {
+          "directory": true
+        },
+        "changed": {
+          "directory": true
+        },
+        "added/nested": {
+          "directory": true
+        },
+        "added/.hidden": {
+          "sha256": "06eb7d6a69ee19e5fbdf749018d3d2abfa04bcbd1365db312eb86dc7169389b8",
+          "bytes": 2
+        },
+        "added/empty": {
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        "added/one-byte": {
+          "sha256": "2d711642b726b04401627ca9fbac32f5c8530fb1903cc4db02258717921a4881",
+          "bytes": 1
+        },
+        "added/later.txt": {
+          "sha256": "11507a0e2f5e69d5dfa40a62a1bd7b6ee57e6bcd85c67c9b8431b36fff21c437",
+          "bytes": 3
+        },
+        "added/unicode.md": {
+          "sha256": "7b49b9e063bd91a4f9252b413261f5557b9c570aa61516989499f64a62dbcdd6",
+          "bytes": 6
+        },
+        "added/start.md": {
+          "sha256": "34e4fd548706409f320dd4e33d551d13c4c193520e7d13059f2eda806d32f6db",
+          "bytes": 6
+        },
+        "added/nested/a.json": {
+          "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+          "bytes": 3
+        },
+        "file-link/link": {
+          "link": "/private/tmp/agentos-manifestref-20261024/work/manifest-probes/normal/one-byte"
+        },
+        "file-link/start.md": {
+          "sha256": "cced28c6dc3f99c2396a5eaad732bf6b28142335892b1cd0e6af6cdb53f5ccfa",
+          "bytes": 5
+        },
+        "relocated/nested": {
+          "directory": true
+        },
+        "relocated/.hidden": {
+          "sha256": "06eb7d6a69ee19e5fbdf749018d3d2abfa04bcbd1365db312eb86dc7169389b8",
+          "bytes": 2
+        },
+        "relocated/empty": {
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        "relocated/one-byte": {
+          "sha256": "2d711642b726b04401627ca9fbac32f5c8530fb1903cc4db02258717921a4881",
+          "bytes": 1
+        },
+        "relocated/unicode.md": {
+          "sha256": "7b49b9e063bd91a4f9252b413261f5557b9c570aa61516989499f64a62dbcdd6",
+          "bytes": 6
+        },
+        "relocated/start.md": {
+          "sha256": "34e4fd548706409f320dd4e33d551d13c4c193520e7d13059f2eda806d32f6db",
+          "bytes": 6
+        },
+        "relocated/nested/a.json": {
+          "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+          "bytes": 3
+        },
+        "removed/nested": {
+          "directory": true
+        },
+        "removed/.hidden": {
+          "sha256": "06eb7d6a69ee19e5fbdf749018d3d2abfa04bcbd1365db312eb86dc7169389b8",
+          "bytes": 2
+        },
+        "removed/one-byte": {
+          "sha256": "2d711642b726b04401627ca9fbac32f5c8530fb1903cc4db02258717921a4881",
+          "bytes": 1
+        },
+        "removed/unicode.md": {
+          "sha256": "7b49b9e063bd91a4f9252b413261f5557b9c570aa61516989499f64a62dbcdd6",
+          "bytes": 6
+        },
+        "removed/start.md": {
+          "sha256": "34e4fd548706409f320dd4e33d551d13c4c193520e7d13059f2eda806d32f6db",
+          "bytes": 6
+        },
+        "removed/nested/a.json": {
+          "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+          "bytes": 3
+        },
+        "directory-link/link": {
+          "link": "/private/tmp/agentos-manifestref-20261024/work/manifest-probes/normal"
+        },
+        "directory-link/start.md": {
+          "sha256": "cced28c6dc3f99c2396a5eaad732bf6b28142335892b1cd0e6af6cdb53f5ccfa",
+          "bytes": 5
+        },
+        "fifo/pipe": {
+          "special_mode": 4096
+        },
+        "fifo/start.md": {
+          "sha256": "cced28c6dc3f99c2396a5eaad732bf6b28142335892b1cd0e6af6cdb53f5ccfa",
+          "bytes": 5
+        },
+        "normal/nested": {
+          "directory": true
+        },
+        "normal/.hidden": {
+          "sha256": "06eb7d6a69ee19e5fbdf749018d3d2abfa04bcbd1365db312eb86dc7169389b8",
+          "bytes": 2
+        },
+        "normal/empty": {
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        "normal/one-byte": {
+          "sha256": "2d711642b726b04401627ca9fbac32f5c8530fb1903cc4db02258717921a4881",
+          "bytes": 1
+        },
+        "normal/unicode.md": {
+          "sha256": "7b49b9e063bd91a4f9252b413261f5557b9c570aa61516989499f64a62dbcdd6",
+          "bytes": 6
+        },
+        "normal/start.md": {
+          "sha256": "34e4fd548706409f320dd4e33d551d13c4c193520e7d13059f2eda806d32f6db",
+          "bytes": 6
+        },
+        "normal/nested/a.json": {
+          "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+          "bytes": 3
+        },
+        "changed/nested": {
+          "directory": true
+        },
+        "changed/.hidden": {
+          "sha256": "06eb7d6a69ee19e5fbdf749018d3d2abfa04bcbd1365db312eb86dc7169389b8",
+          "bytes": 2
+        },
+        "changed/empty": {
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        "changed/one-byte": {
+          "sha256": "2d711642b726b04401627ca9fbac32f5c8530fb1903cc4db02258717921a4881",
+          "bytes": 1
+        },
+        "changed/unicode.md": {
+          "sha256": "7b49b9e063bd91a4f9252b413261f5557b9c570aa61516989499f64a62dbcdd6",
+          "bytes": 6
+        },
+        "changed/start.md": {
+          "sha256": "34e4fd548706409f320dd4e33d551d13c4c193520e7d13059f2eda806d32f6db",
+          "bytes": 6
+        },
+        "changed/nested/a.json": {
+          "sha256": "014846e6d5c4d2f6a684e4b829f263b54314313208189df4d9904d8717a19874",
+          "bytes": 17
+        }
+      },
+      "special_entries_removed": true,
+      "candidate_file_count": 48,
+      "candidate_manifest": {
+        "format": "agentos-source-v1",
+        "files": {
+          "components/activation.md": {
+            "sha256": "2893e4d66fc47158d5267cae0a04132d832c8436ad90f7ca6f58d322aaef4284",
+            "bytes": 2064
+          },
+          "components/advanced-validation.md": {
+            "sha256": "b4ac3d7f3a53d3194e7495a3729f8abc4dc6c632892c8acc69f22be0f9063648",
+            "bytes": 1693
+          },
+          "components/authority.md": {
+            "sha256": "47ae9e02646be13d453e3219a55bc16610e115d2da221b944103b6c95a53ff95",
+            "bytes": 3041
+          },
+          "components/brownfield-migration.md": {
+            "sha256": "dd0cac8f10b20aed0554fd6ed4504c4263ba1bd8be374a4f966ca86290f4f121",
+            "bytes": 1598
+          },
+          "components/capability-routing.md": {
+            "sha256": "d7f86c5cbf4b1a505f9db20fcbd68487a809bbdc04adce3cd12221114d0fc161",
+            "bytes": 1846
+          },
+          "components/chief-of-staff.md": {
+            "sha256": "c43203e841a0a10ef4ef3887b6a7d89eb834eb255b3b4386231488f4f9efb8b5",
+            "bytes": 1726
+          },
+          "components/context-core.md": {
+            "sha256": "8046c83f2eec46be879ce418e68827fdd95f6388ad3ff2090b8254840e74bca0",
+            "bytes": 1602
+          },
+          "components/delegation.md": {
+            "sha256": "d34dcf7c5bb102fc4f0e1a1603954ce51e33aa5f05f9a3561ae33315d2725169",
+            "bytes": 2146
+          },
+          "components/delivery-acceptance.md": {
+            "sha256": "3a74e11cdae62fd5e0fc1ea4641775b6dabd5018eaed872d9ddecee354794000",
+            "bytes": 2686
+          },
+          "components/director.md": {
+            "sha256": "beafa827c5ce6c53937537fa9521c2b46ebb9ec049788648b7e2b010b0eea9b0",
+            "bytes": 2115
+          },
+          "components/durable-handoff.md": {
+            "sha256": "f620977f68ad65bb99415afaa75e2afab51cdaae00037e65948927cb3c2eebd8",
+            "bytes": 1477
+          },
+          "components/effect-reconciliation.md": {
+            "sha256": "955360b0112b872255287836a713d7bd646461f2ca073dd20042581e468cd2b8",
+            "bytes": 2074
+          },
+          "components/git-delivery.md": {
+            "sha256": "548f1d4eb37bf8bdb08e93bce84918cdfb5ea9ed03efc6c38112006b875de7cc",
+            "bytes": 1644
+          },
+          "components/independent-evaluation.md": {
+            "sha256": "b8056f3712e264d67628bcf8320436f9069a7605bd08c74c0f75ff33f88a5391",
+            "bytes": 1716
+          },
+          "components/index.md": {
+            "sha256": "81750c4c5254aa47942c556cf7390e95865153abad7af1cd053f3e8997440d67",
+            "bytes": 3619
+          },
+          "components/information-boundaries.md": {
+            "sha256": "ca62d743eb5e146fde9905c6314553cac50c113241a9e2115713831c2f705454",
+            "bytes": 1425
+          },
+          "components/learning-queue.md": {
+            "sha256": "e8b77df91474a3f010d903d036fc02ccf0f70ac308dc62e2811dcd58519c100e",
+            "bytes": 1533
+          },
+          "components/multi-repo.md": {
+            "sha256": "f3e66aa254d41161bd2c888731d9776d00f221a17d54381c6975a80f1aa39d3a",
+            "bytes": 1443
+          },
+          "components/parallel-coordination.md": {
+            "sha256": "c356df44bb713f7f79a37c8fa82c9609d1c6702446643bbb82a447b48a00e510",
+            "bytes": 1484
+          },
+          "components/resource-budgets.md": {
+            "sha256": "02f41da067d039db46fd6a8c8802994cb36d6ad72b78879baa65ac5c2cb9870f",
+            "bytes": 1706
+          },
+          "components/role-lifecycle.md": {
+            "sha256": "ae0fc9a30668666d22cb9b0ab03049b98ec095a590f81ecb7b843972073bf95f",
+            "bytes": 1897
+          },
+          "components/runtime-native.md": {
+            "sha256": "4d61f9e83c878efb8718fdddf5adf196e86f9525a73ea3cb2b18d53cfea1cf74",
+            "bytes": 1441
+          },
+          "components/scheduling.md": {
+            "sha256": "20b4efed9901cd9bc9bb9df55651a84df9df37e5521aeab46739ace5aaccec33",
+            "bytes": 1508
+          },
+          "components/self-improvement.md": {
+            "sha256": "0bf78a0d5f04096c9e0b3603588f8b865aed218ba980f59f4dc11922656d5ac7",
+            "bytes": 3002
+          },
+          "components/telemetry.md": {
+            "sha256": "51d1bc186c3d6e45933dc671bfe92170f3cdda48cb36d419dc8c307db2b485d3",
+            "bytes": 1483
+          },
+          "components/work-ledger.md": {
+            "sha256": "d912bc474f79722ef403dde880e1fa864bb7f08fd0b899a9b774880e7bb78cab",
+            "bytes": 1713
+          },
+          "concepts/evidence-levels.md": {
+            "sha256": "da302b93ef5f1cd85b51c3d4b4973b03da1031f10554d5e7417c51ca995846d2",
+            "bytes": 1257
+          },
+          "concepts/index.md": {
+            "sha256": "c334562a78706220654b15394e6d9f4b747867acda296b03660053d72e18cb5b",
+            "bytes": 362
+          },
+          "concepts/progressive-context.md": {
+            "sha256": "e810a0b0862e20852483b13661e03fda07f26bd96f0c48fd75a9ec58cc9b33fe",
+            "bytes": 1082
+          },
+          "concepts/role-capability-instance.md": {
+            "sha256": "b0b4a7f3124956343caea65c21be255a3f323f52351935bdb07f4d72308ad69d",
+            "bytes": 1282
+          },
+          "core/constitution.md": {
+            "sha256": "6797e597f48135da527f87aff5b0f1b01e2c265ebb5378cb2826d70665a5ed82",
+            "bytes": 2665
+          },
+          "core/graph-routing.md": {
+            "sha256": "131746a30086a490c0d660f3d9658d6400303ca68f8d5fed0f77af15ffe4673b",
+            "bytes": 8000
+          },
+          "core/index.md": {
+            "sha256": "16d92c1d015d84a6ab2c3af56fc3a0581f77b671c7f85fb71849ee7a804a48d1",
+            "bytes": 279
+          },
+          "core/installer-policy.md": {
+            "sha256": "c6e48d24fa13124d2f623e131c96c83b77aa32734b5ae706f2e6912cc82db4aa",
+            "bytes": 2634
+          },
+          "examples/index.md": {
+            "sha256": "2347847e8efea199a6b61ac370fa6e4afdb15587579723585815071cbcbbccc9",
+            "bytes": 479
+          },
+          "examples/portable-implementation.md": {
+            "sha256": "ec9c16d55337ae8c9a466e52677d10fc639c346f175ca47aa1ad3aa75dfacb69",
+            "bytes": 27325
+          },
+          "examples/selection-scenarios.md": {
+            "sha256": "e59845245220622b50b1a16e9fead94825e6c2fdf07f7872c54d131ff7c86470",
+            "bytes": 2259
+          },
+          "examples/source-manifest.md": {
+            "sha256": "984d83a51b774184945926149c63d7f05329f3da7a0a98a1f21107d45df90118",
+            "bytes": 5101
+          },
+          "index.md": {
+            "sha256": "2635e2fb8d4791bde2792ebb0d904c6347350ae18454bc01f435007fee4d7226",
+            "bytes": 1416
+          },
+          "interviews/bootstrap.md": {
+            "sha256": "eb471fc596bf6705c656911716e3022e99d818a905b744b8314acf3b3c988ce4",
+            "bytes": 2279
+          },
+          "interviews/index.md": {
+            "sha256": "02f4b6b9a94e8af5260f1d90cdc3ad01bb004291b14259d2a55870b9642d4057",
+            "bytes": 162
+          },
+          "phases/design.md": {
+            "sha256": "02178dbea3c3de8e70c8308a8ace5e5676a68737f90a3489d7952f015672ec54",
+            "bytes": 3113
+          },
+          "phases/discover.md": {
+            "sha256": "513fc2cea5ca6a7164e1f37ce764abf1a7a5c3e849d9ff83dd3fd894d4238b9d",
+            "bytes": 1377
+          },
+          "phases/handoff.md": {
+            "sha256": "8b282f7b34684c4323b9677c00b72323861043ad605ecc79a4fa2371ec6e9511",
+            "bytes": 2105
+          },
+          "phases/implement.md": {
+            "sha256": "678214cc5fda60193c78a767b556aa00caea7816c7329fd6bcfeb6c6835774b0",
+            "bytes": 6436
+          },
+          "phases/index.md": {
+            "sha256": "6d529c0d37adca24391092eabfa68a3c94b3dbeaa7ae2849ba329309a93c68cc",
+            "bytes": 468
+          },
+          "phases/qualify.md": {
+            "sha256": "5abcda47da22abfa5ff87b4a2fde2e7596d50e3338130bed39ad5e551cda1496",
+            "bytes": 10182
+          },
+          "start.md": {
+            "sha256": "23771ad33e2d5e66e0db66ce4443503b82e2e28c928b9e3bfd4d8a131ce11a27",
+            "bytes": 7351
+          }
+        }
+      }
+    },
+    "handoff-validation.json": {
+      "historical_archive_sha256": "ac43825d6e336351a413a38d2c6ec4f3396757ae055dfc567ab4baac9173d985",
+      "historical_four_roundtrips": [
+        {
+          "name": "bundle-luna",
+          "original_sha256": "4926cf8b441c014b40cebd33e445cdb773247f393fd5217b505e93e3f94b6698",
+          "roundtrip": true
+        },
+        {
+          "name": "bundle-sol",
+          "original_sha256": "5bff3b9db51b1c14f70ec4d4315680324f9b22654d9df9f527aa919bce2f5fbf",
+          "roundtrip": true
+        },
+        {
+          "name": "full-luna",
+          "original_sha256": "e4eeb6b33a7db4c157cdbc3700c797920cbae2ca7e8bc420d1583f5177af9709",
+          "roundtrip": true
+        },
+        {
+          "name": "full-sol",
+          "original_sha256": "ee24c058eb60b56ff18b528b619b8b8bed650f2f63c34ce30dd4541fb79c0852",
+          "roundtrip": true
+        }
+      ],
+      "failed_luna_original_manifest_item": "item_19",
+      "failed_luna_roundtrip": true,
+      "historical_status_unchanged": "failed",
+      "manifest_file_count": 48,
+      "no_regrade": true
+    },
+    "preflight-diagnostics.json": {
+      "handoff_attempt1": "AssertionError before any output file: selected older concrete archive used a different pre-compact schema. Diagnosed actual compactapproval archive and its linked original identity/proof records; one corrected serialization-only attempt, no model rerun or criterion change.",
+      "discovery": [
+        "bundle/core/source-identity.md does not exist; used actual start.md and tools/read-evidence.md instead",
+        "No AgentOS organization profile found; explicit user grant and task record govern this project scope",
+        "Broad rg in /private/tmp reported unrelated permission-denied directories; no access widening attempted, subsequent discovery uses shallow named task archive glob",
+        "sbx help emitted macOS preference-access warnings; actual authorized operations use ordinary escalation"
+      ],
+      "historical_failures": "All prior failures remain failed; no regrade"
+    }
+  },
+  "host_regressions": "61 passed in30.194seconds",
+  "runtime": {
+    "models": [
+      {
+        "name": "bundle-luna-D",
+        "requested_model": "gpt-6-luna",
+        "requested_effort": "high",
+        "thread": "01a16f69-fdd2-71f2-a236-3b2ff2adfd8d",
+        "model": "gpt-6-luna",
+        "effort": "high",
+        "native_session": "/home/agent/.codex/sessions/2026/10/24/rollout-2026-10-24T19-36-19-01a16f69-fdd2-71f2-a236-3b2ff2adfd8d.jsonl"
+      },
+      {
+        "name": "bundle-sol-D",
+        "requested_model": "gpt-6.1-sol",
+        "requested_effort": "high",
+        "thread": "01a16f69-fe3b-71c2-8a5d-a627b590588b",
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "native_session": "/home/agent/.codex/sessions/2026/10/24/rollout-2026-10-24T19-36-19-01a16f69-fe3b-71c2-8a5d-a627b590588b.jsonl"
+      }
+    ],
+    "startup": [],
+    "primary_tool_subsets": [
+      {
+        "path": "/private/tmp/agentos-manifestref-20261024/work/primary-bundle-luna-D.json",
+        "sha256": "df18eb0d122e7579ce8eb67ab8b05fbff4ed9dd00a057daa5ad5b736f2082c2e",
+        "records": 14
+      },
+      {
+        "path": "/private/tmp/agentos-manifestref-20261024/work/primary-bundle-sol-D.json",
+        "sha256": "c8c5ad137988b97271ec1d48b808292dc04704d916544b7f13109d923367175f",
+        "records": 16
+      }
+    ]
+  },
+  "limits": [
+    "No I/U or full-checkout D admitted",
+    "No historical result regrade or causal/reliability claim",
+    "Final trees are not continuous transient monitoring; actual primary commands separately inspected",
+    "Both native roots returned; qualification rejects procedure adherence independently",
+    "Billing unknown"
+  ],
+  "delivery": "Pending independent APP36 and normal protected PR/main verification",
+  "cleanup": "Pending verified external archives and exact-owned removal",
+  "broader_goal": "active"
+}
