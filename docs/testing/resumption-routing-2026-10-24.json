@@ -1,0 +1,481 @@
+{
+  "decision": "reject",
+  "observed_at": "2026-10-24T08:39:10.800023+00:00",
+  "baseline": "0967317288379c9d117fb9330d0f01640da3aef5",
+  "operative_candidate": "598b0dc512cc295a4afb148cfe37718871e05647",
+  "trials": [
+    {
+      "name": "bundle-luna-D",
+      "status": "returned",
+      "requested_model": "gpt-6-luna",
+      "requested_reasoning_effort": "high",
+      "started_epoch": 1792830548.05086,
+      "ended_epoch": 1792830610.01256,
+      "threads": [
+        "01a16d07-29a6-7ca1-a12b-865480b9984c"
+      ],
+      "failed_commands": 0,
+      "full_component_reads": [
+        "components/activation.md",
+        "components/authority.md",
+        "components/capability-routing.md",
+        "components/chief-of-staff.md",
+        "components/context-core.md",
+        "components/delegation.md",
+        "components/delivery-acceptance.md",
+        "components/director.md",
+        "components/resource-budgets.md",
+        "components/role-lifecycle.md",
+        "components/self-improvement.md"
+      ]
+    },
+    {
+      "name": "full-sol-D",
+      "status": "returned",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "started_epoch": 1792830412.616075,
+      "ended_epoch": 1792830638.981577,
+      "threads": [
+        "01a16d05-18b7-7533-b60b-a51f5edb00ab"
+      ],
+      "failed_commands": 0,
+      "full_component_reads": [
+        "components/activation.md",
+        "components/authority.md",
+        "components/capability-routing.md",
+        "components/chief-of-staff.md",
+        "components/context-core.md",
+        "components/delegation.md",
+        "components/delivery-acceptance.md",
+        "components/director.md",
+        "components/resource-budgets.md",
+        "components/role-lifecycle.md",
+        "components/self-improvement.md"
+      ]
+    },
+    {
+      "name": "bundle-sol-D",
+      "status": "returned",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "started_epoch": 1792830642.616419,
+      "ended_epoch": 1792830819.350346,
+      "threads": [
+        "01a16d08-9afa-7803-9a25-d3c5de3c17a9"
+      ],
+      "failed_commands": 1,
+      "full_component_reads": [
+        "components/activation.md",
+        "components/authority.md",
+        "components/capability-routing.md",
+        "components/chief-of-staff.md",
+        "components/context-core.md",
+        "components/delegation.md",
+        "components/delivery-acceptance.md",
+        "components/director.md",
+        "components/resource-budgets.md",
+        "components/role-lifecycle.md",
+        "components/self-improvement.md"
+      ]
+    },
+    {
+      "name": "full-luna-D",
+      "status": "returned",
+      "requested_model": "gpt-6-luna",
+      "requested_reasoning_effort": "high",
+      "started_epoch": 1792830411.330546,
+      "ended_epoch": 1792830481.7341619,
+      "threads": [
+        "01a16d05-1392-77a2-b429-cb87e262f8b5"
+      ],
+      "failed_commands": 0,
+      "full_component_reads": [
+        "components/activation.md",
+        "components/authority.md",
+        "components/capability-routing.md",
+        "components/chief-of-staff.md",
+        "components/context-core.md",
+        "components/delegation.md",
+        "components/delivery-acceptance.md",
+        "components/director.md",
+        "components/resource-budgets.md",
+        "components/role-lifecycle.md",
+        "components/self-improvement.md"
+      ]
+    },
+    {
+      "name": "full-luna-I",
+      "status": "returned",
+      "requested_model": "gpt-6-luna",
+      "requested_reasoning_effort": "high",
+      "started_epoch": 1792830660.9533792,
+      "ended_epoch": 1792830784.640794,
+      "threads": [
+        "01a16d08-e2fb-7620-8638-6b8d69f58b17"
+      ],
+      "failed_commands": 1,
+      "full_component_reads": [
+        "components/activation.md",
+        "components/authority.md",
+        "components/capability-routing.md",
+        "components/chief-of-staff.md",
+        "components/context-core.md",
+        "components/delegation.md",
+        "components/delivery-acceptance.md",
+        "components/director.md",
+        "components/resource-budgets.md",
+        "components/role-lifecycle.md",
+        "components/self-improvement.md"
+      ]
+    }
+  ],
+  "trial_count": 5,
+  "peak_concurrency": 2,
+  "children": 0,
+  "actual_native_models": {
+    "models": [
+      {
+        "name": "full-sol-D",
+        "requested_model": "gpt-6.1-sol",
+        "requested_reasoning_effort": "high",
+        "thread": "01a16d05-18b7-7533-b60b-a51f5edb00ab",
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "native_session": "/home/agent/.codex/sessions/2026/10/24/rollout-2026-10-24T08-26-52-01a16d05-18b7-7533-b60b-a51f5edb00ab.jsonl"
+      },
+      {
+        "name": "bundle-luna-D",
+        "requested_model": "gpt-6-luna",
+        "requested_reasoning_effort": "high",
+        "thread": "01a16d07-29a6-7ca1-a12b-865480b9984c",
+        "model": "gpt-6-luna",
+        "effort": "high",
+        "native_session": "/home/agent/.codex/sessions/2026/10/24/rollout-2026-10-24T08-29-08-01a16d07-29a6-7ca1-a12b-865480b9984c.jsonl"
+      },
+      {
+        "name": "full-luna-D",
+        "requested_model": "gpt-6-luna",
+        "requested_reasoning_effort": "high",
+        "thread": "01a16d05-1392-77a2-b429-cb87e262f8b5",
+        "model": "gpt-6-luna",
+        "effort": "high",
+        "native_session": "/home/agent/.codex/sessions/2026/10/24/rollout-2026-10-24T08-26-51-01a16d05-1392-77a2-b429-cb87e262f8b5.jsonl"
+      },
+      {
+        "name": "full-luna-I",
+        "requested_model": "gpt-6-luna",
+        "requested_reasoning_effort": "high",
+        "thread": "01a16d08-e2fb-7620-8638-6b8d69f58b17",
+        "model": "gpt-6-luna",
+        "effort": "high",
+        "native_session": "/home/agent/.codex/sessions/2026/10/24/rollout-2026-10-24T08-31-01-01a16d08-e2fb-7620-8638-6b8d69f58b17.jsonl"
+      },
+      {
+        "name": "bundle-sol-D",
+        "requested_model": "gpt-6.1-sol",
+        "requested_reasoning_effort": "high",
+        "thread": "01a16d08-9afa-7803-9a25-d3c5de3c17a9",
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "native_session": "/home/agent/.codex/sessions/2026/10/24/rollout-2026-10-24T08-30-42-01a16d08-9afa-7803-9a25-d3c5de3c17a9.jsonl"
+      }
+    ],
+    "startup": []
+  },
+  "admission_negative_regression": {
+    "source_archive_sha256": "ec644b1916e18055a7355f6980b2d644cbc82bdee5a342cf346e52a9b3e12d03",
+    "historical_log_sha256": "f537a66daa328a614815d4eee97bff2d3a44bb00b6649e3ff98a2e5fe7f39d2b",
+    "historical_start_sha256": "e051b4825362e420b5ca7d564d4c563a3911eeb8b448b03ec4e8a75280d45f2d",
+    "startup_complete_in_any_completed_output": true,
+    "startup_complete_in_successful_output": false,
+    "new_admission_gate_outcome": "reject before I",
+    "current_positive": "full-luna-D passed all seven startup/design bodies plus selected11 and exact46file identity",
+    "evaluator_sha256": "6e582044b41ef39c02cbc7f0635de65088bb5f2a151a770473e193084dbac343",
+    "native_retries_added": 0
+  },
+  "luna_installation": {
+    "first_file_change": "item_16",
+    "before_write_full_successful_bodies": {
+      "start.md": [
+        "item_2"
+      ],
+      "core/constitution.md": [
+        "item_8"
+      ],
+      "core/installer-policy.md": [
+        "item_8"
+      ],
+      "core/graph-routing.md": [
+        "item_8"
+      ],
+      "components/authority.md": [
+        "item_7",
+        "item_12"
+      ],
+      "components/self-improvement.md": [
+        "item_9",
+        "item_13"
+      ],
+      "components/activation.md": [
+        "item_7",
+        "item_12"
+      ],
+      "components/capability-routing.md": [
+        "item_7",
+        "item_12"
+      ],
+      "components/delivery-acceptance.md": [
+        "item_9",
+        "item_11"
+      ],
+      "components/context-core.md": [
+        "item_7",
+        "item_11"
+      ],
+      "components/delegation.md": [
+        "item_9",
+        "item_11"
+      ],
+      "components/director.md": [
+        "item_9",
+        "item_13"
+      ],
+      "components/resource-budgets.md": [
+        "item_9",
+        "item_13"
+      ],
+      "components/role-lifecycle.md": [
+        "item_9",
+        "item_13"
+      ],
+      "components/chief-of-staff.md": [
+        "item_7",
+        "item_11"
+      ],
+      "concepts/progressive-context.md": [
+        "item_9"
+      ],
+      "concepts/evidence-levels.md": [
+        "item_9"
+      ],
+      "concepts/role-capability-instance.md": [
+        "item_9"
+      ],
+      "phases/implement.md": [
+        "item_2"
+      ],
+      "phases/qualify.md": [
+        "item_2"
+      ],
+      "phases/handoff.md": [
+        "item_2"
+      ]
+    },
+    "earlier_commands": [
+      {
+        "id": "item_1",
+        "command": "/bin/bash -lc 'cat /private/tmp/agentos-resumption-20261024/controls/full-luna-approved-handoff.json'",
+        "exit_code": 0
+      },
+      {
+        "id": "item_2",
+        "command": "/bin/bash -lc 'cat start.md phases/implement.md phases/qualify.md phases/handoff.md'",
+        "exit_code": 0
+      },
+      {
+        "id": "item_3",
+        "command": "/bin/bash -lc 'python3 tools/qualification.py identity bundle'",
+        "exit_code": 2
+      },
+      {
+        "id": "item_4",
+        "command": "/bin/bash -lc \"git status --short --branch && git rev-parse HEAD && git diff --quiet; printf 'tracked_diff_exit=%s\\\\n' \\\"\"'$?\" && git diff --cached --quiet; printf '\"'staged_diff_exit=%s\\\\n' \\\"\"'$?\" && rg --files -g '\"'AGENTS.md' -g '.agentos/**' -g 'formatter.py' -g 'test_formatter.py' -g 'README.md' -g 'request.json'\"",
+        "exit_code": 0
+      },
+      {
+        "id": "item_6",
+        "command": "/bin/bash -lc 'rg --files'",
+        "exit_code": 0
+      },
+      {
+        "id": "item_7",
+        "command": "/bin/bash -lc 'cat components/activation.md components/authority.md components/capability-routing.md components/chief-of-staff.md components/context-core.md'",
+        "exit_code": 0
+      },
+      {
+        "id": "item_8",
+        "command": "/bin/bash -lc 'cat core/constitution.md core/installer-policy.md core/graph-routing.md'",
+        "exit_code": 0
+      },
+      {
+        "id": "item_9",
+        "command": "/bin/bash -lc 'cat components/delegation.md components/delivery-acceptance.md components/director.md components/role-lifecycle.md components/self-improvement.md components/resource-budgets.md concepts/evidence-levels.md concepts/progressive-context.md concepts/role-capability-instance.md'",
+        "exit_code": 0
+      },
+      {
+        "id": "item_10",
+        "command": "/bin/bash -lc \"python3 -c 'import json; p=\\\"/private/tmp/agentos-resumption-20261024/controls/full-luna-approved-handoff.json\\\"; h=json.load(open(p)); s=h[\\\"successful_source_identity_observations_verbatim\\\"][0][\\\"aggregated_output\\\"]; start=s.index(\\\"{\\\\n  \\\\\\\"format\\\\\\\": \\\\\\\"agentos-source-v1\\\\\\\"\\\"); end=s.index(\\\"\\\\n}\\\\n{\\\\n  \\\\\\\"required\\\\\\\"\\\",start)+2; print(s[start:end],end=\\\"\\\")' | python3 tools/qualification.py identity bundle --verify -\"",
+        "exit_code": 0
+      },
+      {
+        "id": "item_11",
+        "command": "/bin/bash -lc 'cat components/chief-of-staff.md components/context-core.md components/delegation.md components/delivery-acceptance.md'",
+        "exit_code": 0
+      },
+      {
+        "id": "item_12",
+        "command": "/bin/bash -lc 'cat components/activation.md components/authority.md components/capability-routing.md'",
+        "exit_code": 0
+      },
+      {
+        "id": "item_13",
+        "command": "/bin/bash -lc 'cat components/director.md components/role-lifecycle.md components/self-improvement.md components/resource-budgets.md'",
+        "exit_code": 0
+      },
+      {
+        "id": "item_14",
+        "command": "/bin/bash -lc 'git rev-parse HEAD && git status --short --branch'",
+        "exit_code": 0
+      }
+    ],
+    "mutation_order": [
+      {
+        "id": "item_1",
+        "type": "command_execution"
+      },
+      {
+        "id": "item_2",
+        "type": "command_execution"
+      },
+      {
+        "id": "item_3",
+        "type": "command_execution"
+      },
+      {
+        "id": "item_4",
+        "type": "command_execution"
+      },
+      {
+        "id": "item_6",
+        "type": "command_execution"
+      },
+      {
+        "id": "item_7",
+        "type": "command_execution"
+      },
+      {
+        "id": "item_8",
+        "type": "command_execution"
+      },
+      {
+        "id": "item_9",
+        "type": "command_execution"
+      },
+      {
+        "id": "item_10",
+        "type": "command_execution"
+      },
+      {
+        "id": "item_11",
+        "type": "command_execution"
+      },
+      {
+        "id": "item_12",
+        "type": "command_execution"
+      },
+      {
+        "id": "item_13",
+        "type": "command_execution"
+      },
+      {
+        "id": "item_14",
+        "type": "command_execution"
+      },
+      {
+        "id": "item_16",
+        "type": "file_change"
+      },
+      {
+        "id": "item_18",
+        "type": "file_change"
+      },
+      {
+        "id": "item_19",
+        "type": "command_execution"
+      },
+      {
+        "id": "item_20",
+        "type": "file_change"
+      },
+      {
+        "id": "item_22",
+        "type": "command_execution"
+      },
+      {
+        "id": "item_23",
+        "type": "command_execution"
+      },
+      {
+        "id": "item_24",
+        "type": "command_execution"
+      },
+      {
+        "id": "item_25",
+        "type": "file_change"
+      },
+      {
+        "id": "item_26",
+        "type": "command_execution"
+      }
+    ],
+    "disposition": "reject: full-source resumption improved in this observation; qualification/duty gates still failed",
+    "failed_gates": [
+      "Installed resource-budget instructions omit the selected task-appropriate model/reasoning-choice rule",
+      "Generic delegation/reconfiguration traces omit concrete assignment payload, performed role work and evidence return",
+      "Role lifecycle trace lacks concrete active task/pinned contract/ownership and discovery states",
+      "No concrete rejected or inconclusive improvement outcomes or recovery preserving intervening work; only accepted disposable exact-string correction",
+      "Cumulative-budget record tracks actual one retry but does not exercise boundary inheritance/refusal scenario"
+    ],
+    "prohibited_followups": "No unstarted I/U admitted after first mandatory gate failure; already admitted bundle-sol-D allowed to return"
+  },
+  "local_checks": {
+    "regressions": 41,
+    "components": 25,
+    "component_bytes_unchanged": true,
+    "profile_counts": {
+      "portable": 10,
+      "engineering": 22,
+      "portfolio": 18
+    },
+    "changed_page_relative_links": 14,
+    "navigation_anchor_preserved": true,
+    "private_admission_checker": "Full startup/design successful-body gate added before handoff; original criterion, no loosened proof",
+    "governance_unchanged": true
+  },
+  "protected_sources_and_targets": {
+    "current_state_note": "Current target/link/protection observations are audit-time observations; phase-specific target before/after and deltas remain in each run manifest. Later phases can add files without changing a prior phase delta.",
+    "source_full_unchanged": true,
+    "source_bundle_unchanged": true
+  },
+  "stopped_unstarted": [
+    "full-sol-I",
+    "bundle-sol-I",
+    "bundle-luna-I",
+    "full-sol-U",
+    "full-luna-U",
+    "bundle-sol-U",
+    "bundle-luna-U"
+  ],
+  "source_withdrawn_to_base": true,
+  "claim": "Coordinator owns report/review/delivery/cleanup until verified owning-main delivery",
+  "broader_goal": "active; no all-path success claim",
+  "trial_archive": {
+    "archive": "/private/tmp/agentos-resumption-20261024-trials.tar.gz",
+    "sha256": "98c58aa9ed118ca64430cbd05af5ec67963904fcc46f9eec5b409bef73f143c7",
+    "bytes": 1741329,
+    "indexed_files": 1017,
+    "index": "evidence/trials-index.json",
+    "verified_all_members": true
+  }
+}
