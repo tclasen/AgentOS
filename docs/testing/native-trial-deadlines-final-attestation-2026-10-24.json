@@ -1,0 +1,179 @@
+{
+  "task": "TASK-000205",
+  "run": "RUN-000200",
+  "observed_at": "2026-10-24T19:28:24.375426+00:00",
+  "disposition": "independently approved native trial deadline implementation",
+  "reviewed_candidate": {
+    "candidate": "56ec83cae6030d41dbe985fc571996eaf496933d",
+    "tree": "bc02bd9e72a525b3afa6bbd98ef510535278a410",
+    "base": "586fcc4e60324df4e9a23960b1e0497453792855",
+    "plan_revision": 2,
+    "files": {
+      "tools/qualification.py": {
+        "sha256": "bf82abd6835764aa083d505a5ccc5ddfef23da320bdd379042216514ec6a5ca1",
+        "bytes": 26676
+      },
+      "tools/trial_supervisor.py": {
+        "sha256": "02b10a8879d0261d4a8945c15dfa6765c7c028fe1f410a67a370738fbcd2a7d5",
+        "bytes": 2630
+      },
+      "tools/README.md": {
+        "sha256": "ad2325d3cf5b7ae0ff06d447a0b1d87bab61ad805421ab0fa8fe82e7e0311b21",
+        "bytes": 18366
+      },
+      "tests/test_qualification.py": {
+        "sha256": "6d96d6d187869662ac3fcd16594c2ca65b07689241ac445d5befa5e12c478916",
+        "bytes": 42944
+      },
+      "tests/test_trial_supervisor.py": {
+        "sha256": "26e92572c1d15701f25884e4ed86b09a81d4691cd310964a771418eed4b40504",
+        "bytes": 10781
+      },
+      "docs/agent-records/tasks/project/TASK-000205.md": {
+        "sha256": "34043dda744bbea4e7b9ea6e7f8fb3b2105589594f69796394f98a9812e1dbb0",
+        "bytes": 11492
+      },
+      "docs/agent-records/runs/RUN-000200.md": {
+        "sha256": "62e58523922c9484595c66e48e6fa722d5e9078255c98d245cee08ff8591b5ca",
+        "bytes": 11490
+      },
+      "docs/testing/native-trial-deadlines-2026-10-24.md": {
+        "sha256": "ceda0fbc96c3d45cc49fc932aa4595d12347c0b3db33876d1f01d483ca2e2848",
+        "bytes": 6424
+      },
+      "docs/testing/native-trial-deadlines-2026-10-24.json": {
+        "sha256": "f6c54c3a77d7e2e0b1faf22555923724978493344a47d874caf9111bbb00674b",
+        "bytes": 26476
+      }
+    }
+  },
+  "reviewed_files_unchanged": true,
+  "independent_review": {
+    "receipt": {
+      "sha256": "fbe6c65a4fb6fa2f56ba9c965c4b879f5ebd7ea7275771faf8bfe45707ed6958",
+      "bytes": 24197
+    },
+    "runtime": {
+      "name": "review-revision",
+      "requested_model": "gpt-6.1-sol",
+      "requested_effort": "high",
+      "thread": "01a16f5a-b5a0-7152-97c1-cb542f53a7e8",
+      "model": "gpt-6.1-sol",
+      "effort": "high",
+      "native_session": "/home/agent/.codex/sessions/2026/10/24/rollout-2026-10-24T19-19-38-01a16f5a-b5a0-7152-97c1-cb542f53a7e8.jsonl"
+    },
+    "primary": {
+      "sha256": "7096b322cfe9b2f6726a517e76414832f395c7ac35fbe75a877525cb165a689f",
+      "bytes": 518402
+    },
+    "duration_seconds": 321.189395904541,
+    "nonzero_commands": 1,
+    "native_usage": [
+      {
+        "input_tokens": 1851916,
+        "cached_input_tokens": 1727104,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 20352,
+        "reasoning_output_tokens": 4025
+      }
+    ],
+    "index": {
+      "sha256": "e6257f9e101e5c12a67c073c076c72071440ec67b35bb86c64052afa45193787",
+      "bytes": 541758
+    },
+    "indexed_regular_files": 2560,
+    "indexed_regular_bytes": 17130613,
+    "observed_disposition": {
+      "decision": "approved candidate",
+      "receipt_sha256": "fbe6c65a4fb6fa2f56ba9c965c4b879f5ebd7ea7275771faf8bfe45707ed6958",
+      "receipt_read_completely": true,
+      "revision1": "rejected and preserved unchanged",
+      "conditions": "Only exact APP35 receipt and observed-fact final attestation may be added; all nine reviewed files unchanged. Normal protected expected-head merge, fetched-main content verification, both reviews directly retained in each of two verified external archives, exact-owned cleanup and preservation of original 63 sandbox pairs required.",
+      "reviewer_runtime_verified": "gpt-6.1-sol/high; returned 0; 321.189395904541 seconds within 1200-second limit",
+      "broader_goal": "active"
+    }
+  },
+  "trials_archive": {
+    "archive": "/private/tmp/agentos-deadlines-20261024-trials.tar.gz",
+    "sha256": "439ccecd251b629952211722b63828ffc55fe6c6404ddd7ce5c915d4104d5e57",
+    "bytes": 1936457,
+    "indexed_files": 753,
+    "index": "evidence/trials-index.json",
+    "verified_all_members": true
+  },
+  "limits": [
+    "Both models normal completion and deliberate15second timeout verified; runner control only",
+    "No historical verdict regrade or onboarding approval",
+    "Original onboarding matrix remains stopped; this helper change proves no D/I/U or broader path acceptance",
+    "Billing unknown"
+  ],
+  "delivery": "PR32 https://github.com/tclasen/AgentOS/pull/32 subject to normal expected-head merge and fetched owning-main verification",
+  "cleanup": "Pending verified complete reviewer archive and exact-owned sandbox/rawroot removal; preserve original63sandboxpairs",
+  "broader_goal": "active",
+  "revision2_trials_archive": {
+    "archive": "/private/tmp/agentos-deadlines-20261024-revision2-trials.tar.gz",
+    "sha256": "4646357107db8f2dcd07eca57414af10f562014c3e2ebca2403409ba72dc4346",
+    "bytes": 6333228,
+    "indexed_files": 2361,
+    "index": "evidence/revision2-trials-index.json",
+    "verified_all_members": true
+  },
+  "both_reviews_integrity": {
+    "reviews": {
+      "review-final": {
+        "receipt": {
+          "sha256": "e257300c93345e858a650643ff7492fc1f247b916afa265796c51dd9f943605a",
+          "bytes": 18579
+        },
+        "index": {
+          "sha256": "4fc0157934ada3d89a5c7385cb184923dd539cc0909b35bb80586e08e39d0afc",
+          "bytes": 179399
+        },
+        "indexed_files": 880,
+        "indexed_bytes": 5341926,
+        "original_regulars_unchanged": 27,
+        "exact_current_fileset_verified": true
+      },
+      "review-revision": {
+        "receipt": {
+          "sha256": "fbe6c65a4fb6fa2f56ba9c965c4b879f5ebd7ea7275771faf8bfe45707ed6958",
+          "bytes": 24197
+        },
+        "index": {
+          "sha256": "e6257f9e101e5c12a67c073c076c72071440ec67b35bb86c64052afa45193787",
+          "bytes": 541758
+        },
+        "indexed_files": 2560,
+        "indexed_bytes": 17130613,
+        "original_regulars_unchanged": 27,
+        "exact_current_fileset_verified": true
+      }
+    },
+    "reviewed_files_unchanged": true,
+    "review_final": {
+      "runtime": {
+        "name": "review-revision",
+        "requested_model": "gpt-6.1-sol",
+        "requested_effort": "high",
+        "thread": "01a16f5a-b5a0-7152-97c1-cb542f53a7e8",
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "native_session": "/home/agent/.codex/sessions/2026/10/24/rollout-2026-10-24T19-19-38-01a16f5a-b5a0-7152-97c1-cb542f53a7e8.jsonl"
+      },
+      "seconds": 321.189395904541,
+      "failed_cli_commands": 1,
+      "primary": {
+        "sha256": "7096b322cfe9b2f6726a517e76414832f395c7ac35fbe75a877525cb165a689f",
+        "bytes": 518402
+      }
+    }
+  },
+  "independent_validation": {
+    "tests_passed": 61,
+    "regression_subcases": 24,
+    "old_code_failed_refusals": 15,
+    "replacement_refusals": 24,
+    "revision1_disposition": "rejected",
+    "interrupted_native_runs": "Failed by design; aborted-tool records and rollout-write errors retained; no completed sleep credit"
+  }
+}
