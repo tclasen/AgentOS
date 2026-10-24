@@ -2,7 +2,7 @@
   "task": "TASK-000205",
   "run": "RUN-000200",
   "plan_revision": 2,
-  "decision": "revision1 rejected; revised candidate under validation, not approved",
+  "decision": "recommend corrected candidate subject to fresh independent APP35; revision1 rejected",
   "revision1": {
     "task": "TASK-000205",
     "run": "RUN-000200",
@@ -417,5 +417,298 @@
     "cases": 24,
     "expected_red_failures": 15,
     "original_criteria_unchanged": true
+  },
+  "revision1_disposition": "Rejected by APP34 for malformed Boolean numeric controls; never promoted or regraded",
+  "revision2": {
+    "candidate": {
+      "candidate": "af4c13cb2612b40105e8bd138fc66dbe3f1ea7d2",
+      "tree": "d712f3454d63d4e304ea298b46effc3d932dc2e7",
+      "base": "586fcc4e60324df4e9a23960b1e0497453792855",
+      "plan_revision": 2,
+      "created_at": "2026-10-24T19:13:17.641114+00:00",
+      "operative_files": {
+        "tools/qualification.py": {
+          "sha256": "bf82abd6835764aa083d505a5ccc5ddfef23da320bdd379042216514ec6a5ca1",
+          "bytes": 26676
+        },
+        "tools/trial_supervisor.py": {
+          "sha256": "02b10a8879d0261d4a8945c15dfa6765c7c028fe1f410a67a370738fbcd2a7d5",
+          "bytes": 2630
+        },
+        "tools/README.md": {
+          "sha256": "ad2325d3cf5b7ae0ff06d447a0b1d87bab61ad805421ab0fa8fe82e7e0311b21",
+          "bytes": 18366
+        },
+        "tests/test_qualification.py": {
+          "sha256": "6d96d6d187869662ac3fcd16594c2ca65b07689241ac445d5befa5e12c478916",
+          "bytes": 42944
+        },
+        "tests/test_trial_supervisor.py": {
+          "sha256": "26e92572c1d15701f25884e4ed86b09a81d4691cd310964a771418eed4b40504",
+          "bytes": 10781
+        }
+      },
+      "frozen_controls": {
+        "revision2-plan.md": {
+          "sha256": "0f27b5721f4ed276e9784826b1edda25333f050a529cb72567eb4c39f399f77b",
+          "bytes": 3586
+        },
+        "fixtures-v2-before.json": {
+          "sha256": "f4ecb6e949646062424b20c44140c8ea68d75ba069aa6af6ab85e738cc67c8a5",
+          "bytes": 17547
+        },
+        "source-v2-before.json": {
+          "sha256": "fe90c1a40a3b61103d2a9aa89964db08bb6c50ceb219655724e69960271abb2f",
+          "bytes": 87958
+        },
+        "preregistered.json": {
+          "sha256": "5860da3afb3ce164629974c6117d368000823370f04fbaf2315ee426139f84f0",
+          "bytes": 4476
+        },
+        "normal-v2-sol.txt": {
+          "sha256": "51e000694beb710098aebf986d9c833da03d1739ca88316f919cc4aacf9191d2",
+          "bytes": 199
+        },
+        "normal-v2-luna.txt": {
+          "sha256": "51e000694beb710098aebf986d9c833da03d1739ca88316f919cc4aacf9191d2",
+          "bytes": 199
+        },
+        "interrupt-v2-sol.txt": {
+          "sha256": "cb213593474d69bee3417c2ec7e61836a318ec87fc08f0fb735a8f2f2d429f59",
+          "bytes": 466
+        },
+        "interrupt-v2-luna.txt": {
+          "sha256": "cb213593474d69bee3417c2ec7e61836a318ec87fc08f0fb735a8f2f2d429f59",
+          "bytes": 466
+        }
+      },
+      "source_fixture_head": "57c58a5b38e3a0842c404464620d8bc08af22aca",
+      "rejected_revision1": {
+        "candidate": "4d6996253610ee9b94a7b9b377a35744c664dd99",
+        "review_receipt": {
+          "sha256": "e257300c93345e858a650643ff7492fc1f247b916afa265796c51dd9f943605a",
+          "bytes": 18579
+        },
+        "review_index": {
+          "sha256": "4fc0157934ada3d89a5c7385cb184923dd539cc0909b35bb80586e08e39d0afc",
+          "bytes": 179399
+        }
+      },
+      "tests": {
+        "host": [
+          "61",
+          "29.070"
+        ],
+        "linux": [
+          "61",
+          "15.729"
+        ]
+      },
+      "max_native_roots_total": 11
+    },
+    "observed_at": "2026-10-24T19:17:50.547194+00:00",
+    "native": {
+      "normal-v2-sol": {
+        "criterion_passed": true,
+        "status": "returned",
+        "returncode": 0,
+        "host_seconds": 5.671597957611084,
+        "control": {
+          "type": "agentos.run_control",
+          "version": 1,
+          "control_id": "normal-v2-sol",
+          "timeout_seconds": 120,
+          "grace_seconds": 5,
+          "phase": "finished",
+          "pid": 351,
+          "process_group": 351,
+          "timed_out": false,
+          "signals": [],
+          "child_returncode": 0,
+          "exit_code": 0,
+          "elapsed_seconds": 5.393218545
+        },
+        "actual_runtime": {
+          "name": "normal-v2-sol",
+          "requested_model": "gpt-6.1-sol",
+          "requested_effort": "high",
+          "thread": "01a16f55-769a-7bb0-8182-e13096668079",
+          "model": "gpt-6.1-sol",
+          "effort": "high",
+          "native_session": "/home/agent/.codex/sessions/2026/10/24/rollout-2026-10-24T19-13-54-01a16f55-769a-7bb0-8182-e13096668079.jsonl"
+        },
+        "original_regulars_unchanged": 27,
+        "raw": {
+          "sha256": "d09fad04f5f7778bf548160b573e53ae7912303386ec35bfc51c3bc5f2155eca",
+          "bytes": 1367
+        },
+        "manifest": {
+          "sha256": "e161502f7d480232349833ac335d8bfc2ed5aaa36b89322444407fa677ba6f8c",
+          "bytes": 20500
+        },
+        "primary": {
+          "sha256": "7a304611730c40d676ed16dec54d9e45c4c7b549911d9d25624e19d73398df16",
+          "bytes": 26482
+        }
+      },
+      "normal-v2-luna": {
+        "criterion_passed": true,
+        "status": "returned",
+        "returncode": 0,
+        "host_seconds": 4.643665075302124,
+        "control": {
+          "type": "agentos.run_control",
+          "version": 1,
+          "control_id": "normal-v2-luna",
+          "timeout_seconds": 120,
+          "grace_seconds": 5,
+          "phase": "finished",
+          "pid": 254,
+          "process_group": 254,
+          "timed_out": false,
+          "signals": [],
+          "child_returncode": 0,
+          "exit_code": 0,
+          "elapsed_seconds": 3.3237318339999997
+        },
+        "actual_runtime": {
+          "name": "normal-v2-luna",
+          "requested_model": "gpt-6-luna",
+          "requested_effort": "high",
+          "thread": "01a16f55-7564-7ec2-b675-9a0a667fe809",
+          "model": "gpt-6-luna",
+          "effort": "high",
+          "native_session": "/home/agent/.codex/sessions/2026/10/24/rollout-2026-10-24T19-13-54-01a16f55-7564-7ec2-b675-9a0a667fe809.jsonl"
+        },
+        "original_regulars_unchanged": 27,
+        "raw": {
+          "sha256": "f89f28c4cede15ab8618e53fffb8bc1e725a1da0f1f2f8bee1c7e30303fd4d6c",
+          "bytes": 1473
+        },
+        "manifest": {
+          "sha256": "33f8a08509b8b387e7099892425b98bdd273494c4e2bf2d11b15bee7cf4ca1a5",
+          "bytes": 20555
+        },
+        "primary": {
+          "sha256": "ff34888d0e3692e29148e6572455a9c3efb5fbe6ff0694f187a694dae73eee0c",
+          "bytes": 23024
+        }
+      },
+      "interrupt-v2-sol": {
+        "criterion_passed": true,
+        "status": "failed",
+        "returncode": 124,
+        "host_seconds": 16.212276935577393,
+        "control": {
+          "type": "agentos.run_control",
+          "version": 1,
+          "control_id": "interrupt-v2-sol",
+          "timeout_seconds": 15,
+          "grace_seconds": 5,
+          "phase": "finished",
+          "pid": 256,
+          "process_group": 256,
+          "timed_out": true,
+          "signals": [
+            "SIGINT"
+          ],
+          "child_returncode": 1,
+          "exit_code": 124,
+          "elapsed_seconds": 15.016041716
+        },
+        "actual_runtime": {
+          "name": "interrupt-v2-sol",
+          "requested_model": "gpt-6.1-sol",
+          "requested_effort": "high",
+          "thread": "01a16f56-875a-7eb2-bb26-6005e53e0366",
+          "model": "gpt-6.1-sol",
+          "effort": "high",
+          "native_session": "/home/agent/.codex/sessions/2026/10/24/rollout-2026-10-24T19-15-04-01a16f56-875a-7eb2-bb26-6005e53e0366.jsonl"
+        },
+        "original_regulars_unchanged": 27,
+        "raw": {
+          "sha256": "a61c37b90558236ddfd1d4d5ae91680a78ef2a082599ac8df1555e7e6ef6cb28",
+          "bytes": 1206
+        },
+        "manifest": {
+          "sha256": "49cb70739b2aa3eb909bbbafaf677e9ffac886dc4dcc6e4ebb42fe3ee65ca5e3",
+          "bytes": 20376
+        },
+        "primary": {
+          "sha256": "8b512f430a6ee594915bae5bf3abdc675b9eccfb2fdb43548de4865fab145e5c",
+          "bytes": 30182
+        }
+      },
+      "interrupt-v2-luna": {
+        "criterion_passed": true,
+        "status": "failed",
+        "returncode": 124,
+        "host_seconds": 15.39873194694519,
+        "control": {
+          "type": "agentos.run_control",
+          "version": 1,
+          "control_id": "interrupt-v2-luna",
+          "timeout_seconds": 15,
+          "grace_seconds": 5,
+          "phase": "finished",
+          "pid": 255,
+          "process_group": 255,
+          "timed_out": true,
+          "signals": [
+            "SIGINT"
+          ],
+          "child_returncode": 1,
+          "exit_code": 124,
+          "elapsed_seconds": 15.016078799
+        },
+        "actual_runtime": {
+          "name": "interrupt-v2-luna",
+          "requested_model": "gpt-6-luna",
+          "requested_effort": "high",
+          "thread": "01a16f56-8757-7741-8c05-9d7b42bf7699",
+          "model": "gpt-6-luna",
+          "effort": "high",
+          "native_session": "/home/agent/.codex/sessions/2026/10/24/rollout-2026-10-24T19-15-04-01a16f56-8757-7741-8c05-9d7b42bf7699.jsonl"
+        },
+        "original_regulars_unchanged": 27,
+        "raw": {
+          "sha256": "fcf74939b322847d2a48022ac784801426e54e709d23f12676ac3f4b5c090524",
+          "bytes": 1119
+        },
+        "manifest": {
+          "sha256": "b897842e24597cdf9536e8b7d225ce9445d745847f84066e79403aed8acdcc65",
+          "bytes": 20344
+        },
+        "primary": {
+          "sha256": "0f300fffcb54aaed24a59fdf5d88910a46eeddf5537ebf3168e8d084482b28e5",
+          "bytes": 22988
+        }
+      }
+    },
+    "new_native_roots": 4,
+    "total_native_roots_so_far": 9,
+    "source_v1_regulars_unchanged": 542,
+    "source_v2_regulars_unchanged": 546,
+    "controls_v1_unchanged": 23,
+    "controls_v2_unchanged": 8,
+    "all_eight_targets_unchanged": true,
+    "process_inspection": {
+      "observed_epoch": 1792869368.084323,
+      "active_target_processes": []
+    },
+    "local_tests": {
+      "host": [
+        "61",
+        "29.070"
+      ],
+      "linux": [
+        "61",
+        "15.729"
+      ]
+    },
+    "new_adversarial_cases": 24,
+    "expected_red_failures_against_rejected_code": 15,
+    "first_rejection_preserved": true,
+    "no_onboarding_credit": true
   }
 }
