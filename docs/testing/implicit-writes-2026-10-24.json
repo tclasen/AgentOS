@@ -1,0 +1,138 @@
+{
+  "task": "TASK-000191",
+  "run": "RUN-000186",
+  "approval": "APP-000019 pending independent review",
+  "base": "e8df1cfa7679f3d8a322d44579da88843824d642",
+  "operative_candidate": "3facc2433007827e2dd9e58934a9bff774194a0b",
+  "recommendation": "Explicitly account for incidental caches/temp/test reports before every command; preserve full-source continuation, concrete qualification and all budget duties.",
+  "disposition": "Rejected for promotion: frozen discovery evidence gate not met. Source merits and installed first-use benefit inconclusive; no installed execution occurred.",
+  "summary": {
+    "runs": [
+      {
+        "name": "bundle-luna-D",
+        "thread": "01a16d4a-1d37-71f3-b009-5d50815bc957",
+        "seconds": 55.419577836990356,
+        "model": "gpt-6-luna",
+        "effort": "high",
+        "full_selected_bodies": 11,
+        "nonzero_outer_commands": 2,
+        "source_identity_exact": true,
+        "protected_files_and_git_exact": true,
+        "D_gate": "pass",
+        "raw": "evidence/bundle-luna-D.jsonl"
+      },
+      {
+        "name": "bundle-sol-D",
+        "thread": "01a16d4b-2664-7733-a7af-079a527109d1",
+        "seconds": 149.93528199195862,
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "full_selected_bodies": 11,
+        "nonzero_outer_commands": 2,
+        "source_identity_exact": true,
+        "protected_files_and_git_exact": true,
+        "D_gate": "pass",
+        "raw": "evidence/bundle-sol-D.jsonl"
+      },
+      {
+        "name": "full-luna-D",
+        "thread": "01a16d48-d444-74c2-8296-195331f2c597",
+        "seconds": 51.18720722198486,
+        "model": "gpt-6-luna",
+        "effort": "high",
+        "full_selected_bodies": 11,
+        "nonzero_outer_commands": 0,
+        "source_identity_exact": true,
+        "protected_files_and_git_exact": true,
+        "D_gate": "pass",
+        "raw": "evidence/full-luna-D.jsonl"
+      },
+      {
+        "name": "full-sol-D",
+        "thread": "01a16d48-df96-75e2-ad2e-4a17d68e2c65",
+        "seconds": 236.74416399002075,
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "full_selected_bodies": 11,
+        "nonzero_outer_commands": 1,
+        "source_identity_exact": true,
+        "protected_files_and_git_exact": true,
+        "D_gate": "unqualified successful-read evidence",
+        "raw": "evidence/full-sol-D.jsonl"
+      }
+    ],
+    "source_preserved": true,
+    "all_target_bytes_including_git_and_caches_unchanged": true,
+    "I_runs": 0,
+    "U_runs": 0,
+    "native_retries": 0,
+    "cache_behavior_in_installed_native_use": "untested",
+    "full_sol_identity_item": [
+      "item_14"
+    ]
+  },
+  "local_validation": {
+    "regressions": 41,
+    "seconds": 11.911,
+    "profiles": {
+      "portable": 10,
+      "engineering": 22,
+      "portfolio": 18
+    },
+    "unchanged_component_bodies": 23,
+    "links": 23,
+    "example_cases": 4,
+    "cache_probes": 4,
+    "result": "pass",
+    "evidence": "evidence/local-validation.json"
+  },
+  "method_limitation": {
+    "disposition": "No installation admission under frozen successful-source-read rule; evidence limitation, not proof of missing source body or ineffective cache guidance",
+    "source_body_fully_observed": true,
+    "outer_exit": 2,
+    "source_exit_observed": false,
+    "source_exit_proven_by_shell_order": false,
+    "later_failure": "rg nonexistent patterns directory",
+    "source_read_command": "cat phases/design.md",
+    "command_sha256": "4fed450a1127ef828ba7a8a837513a9e671ff67cebf24f4c1f8b4cd8b43e3068",
+    "output_sha256": "8e984e941a518ae36444e65eacf811e70930037d62a65636c726861b778a8280",
+    "criterion_changed": false,
+    "next_action": "Reject promotion as unqualified; retain already-running D result; no I/U. Independently review exact findings and evaluator limitation.",
+    "stripped_source_text_sha256": "781c85cbc765f2fb0643ac5351223d0562a04e00d9584811d2a510e0f58bfa75",
+    "source_file_sha256": "95681cf0f3fd3d77219bbe14d79ac4be78056a69dbe50e5f04c13fd768396aba"
+  },
+  "setup_correction": {
+    "timing": "Before any model trial",
+    "reason": "Copied previous request had stale source_entrypoint and full kind in bundle cells; corrected per target before admission. Preserve original setup snapshot; native prompts/source/criteria unchanged.",
+    "fixtures_before_sha256": "8c64837451c84bce9950a9cd16bbfbe26ee6060c881b72808fffca2e307d8eb5"
+  },
+  "limits": {
+    "max_parallel_native_roots": 2,
+    "children": 0,
+    "trial_invocations": 4,
+    "review_pending": true,
+    "installation_trials": 0,
+    "first_use_trials": 0,
+    "trial_native_retries": 0,
+    "cost": "unknown",
+    "source_subcommand_proof_used": false,
+    "broad_all_path_goal": "active"
+  },
+  "sandbox": {
+    "name": "agentos-implicit-20261024",
+    "id": "31ed40ba-3386-41fc-b270-21bda40ad96b",
+    "codex_before": "0.149.1",
+    "codex_after": "0.164.0",
+    "original_sandboxes_preserved": 63,
+    "cleanup": "pending verified delivery and acceptance export"
+  },
+  "trial_archive": {
+    "archive": "/private/tmp/agentos-implicit-20261024-trials.tar.gz",
+    "sha256": "1e4f42b2755ee3098b7d4d4c2b391d0347b8e2799a7c4b889d6c2510c017d3bd",
+    "bytes": 1908434,
+    "indexed_files": 1114,
+    "index": "evidence/trials-index.json",
+    "verified_all_members": true
+  },
+  "delivery": "pending independent review, protected PR and fetched-main verification"
+}

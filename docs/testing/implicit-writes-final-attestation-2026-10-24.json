@@ -1,0 +1,43 @@
+{
+  "observed_at": "2026-10-24T09:55:56.026493+00:00",
+  "scope": "Observed facts only under APP-000019 narrow additive allowance; reviewed findings unchanged",
+  "reviewed": {
+    "head": "9b14cde2d38f273e1b9b7f0a1da72d8f0d8481f4",
+    "tree": "d94212dc9ddde4b7f1fe8526f6a62c4a50573b0a",
+    "base": "e8df1cfa7679f3d8a322d44579da88843824d642",
+    "operative": "3facc2433007827e2dd9e58934a9bff774194a0b",
+    "files": {
+      "docs/agent-records/tasks/project/TASK-000191.md": "d9ba98931594caee0aa8529aedf4d4ebdfa2826d8ea28ca60a62116e52126066",
+      "docs/agent-records/runs/RUN-000186.md": "87c2340ffd9802ec2a8d631d3fd3936124e38ec94d680f1791ff7b4172ac6f69",
+      "docs/testing/implicit-writes-2026-10-24.md": "c9d3eb7bd4ee13cb95c5af24ee26536a367a495c9bb74f4d40246332c874edc1",
+      "docs/testing/implicit-writes-2026-10-24.json": "04a3a3835f521aaef62c5a24ac652495acfa6debdcc89818581b7ccc0223c469"
+    }
+  },
+  "receipt_sha256": "4cadaf69df2ab1d166ce177df7c582d48ec9a61038909697b0c0c6788c23d3a5",
+  "review": {
+    "thread": "01a16d50-4a28-7ab0-878f-c114c6c04d1f",
+    "status": "returned",
+    "seconds": 393.04299807548523,
+    "requested_model": "gpt-6.1-sol",
+    "requested_reasoning": "high",
+    "observed_model": "gpt-6.1-sol",
+    "observed_reasoning": "high",
+    "nonzero_outer_commands": 0,
+    "expected_negative_checks": "Original/scratch checker refusal and three fixture refusals retained; zero unexpected positive-check failures per receipt",
+    "own_decision_checkpoint_seconds": 249,
+    "independent_regressions": 41,
+    "independent_test_seconds": 2.478
+  },
+  "trial_archive": {
+    "archive": "/private/tmp/agentos-implicit-20261024-trials.tar.gz",
+    "sha256": "1e4f42b2755ee3098b7d4d4c2b391d0347b8e2799a7c4b889d6c2510c017d3bd",
+    "bytes": 1908434,
+    "indexed_files": 1114,
+    "index": "evidence/trials-index.json",
+    "verified_all_members": true
+  },
+  "delivery": "Pending at this attestation; expected-head normal PR merge and fetched-main content verification required",
+  "acceptance_export": "Pending terminal evidence export outside owned cleanup root",
+  "cleanup": "Pending verified archives and delivery; exact owned sandbox/root only",
+  "broad_goal": "active; no I/U evidence in this round; operative source withdrawn"
+}
