@@ -31,9 +31,13 @@ Put concise non-optional constraints in the active root/role context. When avail
 
 Resolve granted relative paths against the agreed project root before writing. A shell directory change or organizational storage preference cannot relocate an approved destination. Check the actual changed paths against the current grant before accepting an output.
 
+Before each command, account for implicit writes as well as its intended output: interpreter caches, build/test artifacts, temporary files and reports. A read or import may write. Suppress incidental writes with supported per-command options when they are outside the grant; otherwise stop that action and report the missing permission. Apply suppression to every relevant invocation, not only a later test command. For example, Python commands importing local modules can use `PYTHONDONTWRITEBYTECODE=1 python3 -B ...` to avoid bytecode caches; this does not suppress other file writes. Do not change global configuration to widen a task's scope. Removing an unauthorized file afterward does not make the original write authorized.
+
 # Verification
 
 Verify an authorized action is possible and an out-of-scope mutation is refused or escalated. Distinguish procedural instruction from technical enforcement.
+
+Include a narrow output-only grant and a command with an incidental cache or report. Trace the effects before execution and choose a permitted invocation or refuse it. Do not perform a prohibited write to test refusal. Inspect actual command history as well as final changed paths; a clean final snapshot cannot establish that no transient write occurred.
 
 ## Graph relationships
 
