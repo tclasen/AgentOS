@@ -1,0 +1,962 @@
+{
+  "task": "TASK-000186",
+  "run": "RUN-000181",
+  "plan_revision": 2,
+  "observed_at": "2026-10-24T07:02:47.383660+00:00",
+  "base": "ffe63908d3967cf9c2ef2bbb7e69ec8975c5739d",
+  "v1": "36716712a95c445e6e6544f8645c21fffaac7fc9",
+  "v2": "68a71b67e14619ef6aef3b70a3597703aef70aa1",
+  "disposition": "Reject both operative source revisions; final product source restored to base. Deliver findings only.",
+  "v1_disposition": {
+    "candidate": "v1",
+    "source_commit": "36716712a95c445e6e6544f8645c21fffaac7fc9",
+    "decision": "reject; mandatory I gate failed, no U admitted",
+    "invocations": 5,
+    "completed": "four design roots plus checkout Luna installation",
+    "not_run": "other three I and all four U after first material failure; not passes",
+    "findings": [
+      "All selected duties/reference fully exposed, but installed core/roles/operations omit task-appropriate model/reasoning choice despite selecting resource-budgets.",
+      "Director dependency/readiness/progress/accessibility duties now present.",
+      "Actual concrete correction/evaluation/accepted/rejected/inconclusive/scopedrollback succeeds.",
+      "installation.md still describes correction as simulated/no persistent fixture while lessons.md and actual fixture record executed operations; evidence record not reconciled.",
+      "Source verifier replay failed three attempts (initial plus two retries) while extracting JSON from mixed-output handoff; current correct47-file manifest and start hash observed, model claims visual match. Do not mislabel helper verify as passing; this round rejects independently on installed duties/evidence."
+    ],
+    "original_criteria_retained": true,
+    "no_parent_artifact_repair": true,
+    "observed_at": "2026-10-24T06:41:45.330903+00:00"
+  },
+  "v2_installation_decisions": [
+    {
+      "phase": "I",
+      "target": "v2-bundle-luna",
+      "decision": "reject qualification; dependent U blocked",
+      "time": "2026-10-24T07:01:15.564534+00:00",
+      "findings": [
+        "Installation table claims a scenario trace is documented below but no concrete reconfiguration, delegate-return or active-role lifecycle trace is present.",
+        "Selected resource-budget component requires cumulative nested/retried scenario; no such scenario or arithmetic supplied. Zero actual retries is not that exercise.",
+        "Source prose and final message say48 files; retained/recomputed valid manifest actually47. Preserve counting error separately from successful byte comparison.",
+        "Concrete improvement fixture did run and preserves three dispositions and scoped recovery; prior Director and model/reasoning obligations now present."
+      ],
+      "criterion": "Original qualify required operating checks, selected source verification obligations and Plan1 actual concrete scenarios; unchanged evidence standard.",
+      "scope": "Protected source/project/Git match; no parent repairs."
+    },
+    {
+      "phase": "I",
+      "target": "v2-bundle-sol",
+      "decision": "accept for bounded fresh U; not full installation acceptance",
+      "time": "2026-10-24T07:00:19.884494+00:00",
+      "reviewer": "Coordinator",
+      "basis": "Actual core/roles/operations inspected against all eleven source contracts; distinct obligation mapping and concrete Q1/activation/reconfiguration/capability/refusal/delivery/lifecycle/budget scenarios inspected; actual source manifest replay and controlled Python writes/readbacks verified; protected source/project/Git hashes match. No parent artifact edits.",
+      "limitations": [
+        "Same-context organizational simulations; no delegated native runtime",
+        "Fresh unassigned activation not yet tested",
+        "No broad reliability or benefit claim"
+      ],
+      "note": ""
+    },
+    {
+      "phase": "I",
+      "target": "v2-full-luna",
+      "decision": "reject qualification; dependent U blocked",
+      "time": "2026-10-24T07:00:19.894945+00:00",
+      "instructions": "All ten selected operational contracts present; prior Director duty omissions corrected; model/reasoning choice also present though optional budgets deferred. Actual improvement fixture complete and consistent.",
+      "failure": "No concrete user reconfiguration trace; delegation and optional-role lifecycle paragraphs recite procedure with no particular assignment, pinned prior role contract or actual modeled transfer/discovery state. Required operating scenarios not established despite local qualification-complete claim.",
+      "identity": "After one failed missing-key extraction, successful helper verification item_15 matches retained source exactly.",
+      "scope": "Protected source/project/Git match; no parent repairs.",
+      "criterion": "Original phase qualify required operating checks and Plan1 concrete honest simulations; no new criterion."
+    },
+    {
+      "phase": "I",
+      "target": "v2-full-sol",
+      "decision": "accept for bounded fresh U; not full installation acceptance",
+      "time": "2026-10-24T07:00:19.871228+00:00",
+      "reviewer": "Coordinator",
+      "basis": "Actual core/roles/operations inspected against all eleven source contracts; distinct obligation mapping and concrete Q1/activation/reconfiguration/capability/refusal/delivery/lifecycle/budget scenarios inspected; actual source manifest replay and controlled Python writes/readbacks verified; protected source/project/Git hashes match. No parent artifact edits.",
+      "limitations": [
+        "Same-context organizational simulations; no delegated native runtime",
+        "Fresh unassigned activation not yet tested",
+        "No broad reliability or benefit claim"
+      ],
+      "note": "full-sol initial qualification-pending line remains above explicitly labeled final completed section; final section supersedes initial checkpoint. Retained as reporting blemish, not evidence of missing execution."
+    }
+  ],
+  "v2_first_use": [
+    {
+      "name": "v2-full-sol-U",
+      "decision": "pass bounded fresh unassigned formatter path",
+      "exact_bytes_hex": "48656c6c6f204167656e744f530a",
+      "native_root_provenance": true,
+      "only_expected_output_added": true,
+      "protected_git_unchanged": true,
+      "note": "Both sessions read complete roles file including CoS section, so do not claim strictly minimum-section retrieval. No unrelated histories loaded."
+    },
+    {
+      "name": "v2-bundle-sol-U",
+      "decision": "pass bounded fresh unassigned formatter path",
+      "exact_bytes_hex": "48656c6c6f204167656e744f530a",
+      "native_root_provenance": true,
+      "only_expected_output_added": true,
+      "protected_git_unchanged": true,
+      "note": "Both sessions read complete roles file including CoS section, so do not claim strictly minimum-section retrieval. No unrelated histories loaded."
+    }
+  ],
+  "models_and_startup": {
+    "models": [
+      {
+        "name": "v2-full-sol-U",
+        "requested": "gpt-6.1-sol",
+        "thread": "01a16cb6-40b0-7822-9599-efb16e86ca35",
+        "model": "gpt-6.1-sol",
+        "effort": null
+      },
+      {
+        "name": "v2-full-sol-D",
+        "requested": "gpt-6.1-sol",
+        "thread": "01a16ca6-fe64-76c3-952a-40046fb49772",
+        "model": "gpt-6.1-sol",
+        "effort": null
+      },
+      {
+        "name": "v2-full-luna-I",
+        "requested": "gpt-6-luna",
+        "thread": "01a16cac-541d-7d02-8e84-a3035bb941c8",
+        "model": "gpt-6-luna",
+        "effort": null
+      },
+      {
+        "name": "full-luna-I",
+        "requested": "gpt-6-luna",
+        "thread": "01a16ca0-99c1-75f2-af39-fce21a4bfa4e",
+        "model": "gpt-6-luna",
+        "effort": null
+      },
+      {
+        "name": "v2-full-sol-I",
+        "requested": "gpt-6.1-sol",
+        "thread": "01a16cac-53a3-7912-a7ed-f69e87ea762c",
+        "model": "gpt-6.1-sol",
+        "effort": null
+      },
+      {
+        "name": "v2-bundle-sol-I",
+        "requested": "gpt-6.1-sol",
+        "thread": "01a16cae-73b5-7341-94dc-3448799a2e87",
+        "model": "gpt-6.1-sol",
+        "effort": null
+      },
+      {
+        "name": "v2-bundle-luna-D",
+        "requested": "gpt-6-luna",
+        "thread": "01a16ca9-9ce6-77f3-aa25-a14c0d435816",
+        "model": "gpt-6-luna",
+        "effort": null
+      },
+      {
+        "name": "v2-bundle-sol-D",
+        "requested": "gpt-6.1-sol",
+        "thread": "01a16ca9-9ce7-7d23-81d5-2bf7f96f0eec",
+        "model": "gpt-6.1-sol",
+        "effort": null
+      },
+      {
+        "name": "v2-bundle-luna-I",
+        "requested": "gpt-6-luna",
+        "thread": "01a16cb4-a89e-78a2-8708-b02b93af8ea1",
+        "model": "gpt-6-luna",
+        "effort": null
+      },
+      {
+        "name": "full-luna-D",
+        "requested": "gpt-6-luna",
+        "thread": "01a16c9d-d9f7-7b60-9d2b-c1a1024a9178",
+        "model": "gpt-6-luna",
+        "effort": null
+      },
+      {
+        "name": "v2-full-luna-D",
+        "requested": "gpt-6-luna",
+        "thread": "01a16ca7-02c3-7fe1-ba18-a1b018530c72",
+        "model": "gpt-6-luna",
+        "effort": null
+      },
+      {
+        "name": "bundle-luna-D",
+        "requested": "gpt-6-luna",
+        "thread": "01a16c9f-14b5-7412-8cec-4eabcbe0128e",
+        "model": "gpt-6-luna",
+        "effort": null
+      },
+      {
+        "name": "full-sol-D",
+        "requested": "gpt-6.1-sol",
+        "thread": "01a16c9d-d4ab-7413-962d-ad0b0bca6e02",
+        "model": "gpt-6.1-sol",
+        "effort": null
+      },
+      {
+        "name": "v2-bundle-sol-U",
+        "requested": "gpt-6.1-sol",
+        "thread": "01a16cb5-e58a-7503-9c8c-987465957aa2",
+        "model": "gpt-6.1-sol",
+        "effort": null
+      },
+      {
+        "name": "bundle-sol-D",
+        "requested": "gpt-6.1-sol",
+        "thread": "01a16ca0-4c97-7ae2-8d4f-6bd1dfd0230a",
+        "model": "gpt-6.1-sol",
+        "effort": null
+      }
+    ],
+    "startup": [
+      {
+        "thread": "01a16cb6-40b0-7822-9599-efb16e86ca35",
+        "name": "v2-full-sol-U",
+        "message": {
+          "type": "message",
+          "id": "msg_01a16cb6-40cf-7de3-9d3a-351a26b5b33c",
+          "role": "user",
+          "content": [
+            {
+              "type": "input_text",
+              "text": "# AGENTS.md instructions for /private/tmp/agentos-portable-20261024/work/v2-full-sol\n\n<INSTRUCTIONS>\n# AgentOS startup\n\nA fresh unassigned user session activates the root Director. An explicitly delegated context retains its assigned identity, task, scope and reporting relationship. A nested Director reports to its assigning Director, never as a peer root Director. The temporary installer ends after handoff and must not reactivate on ordinary startup.\n\nRead [core](.agentos/core.md) and only your active role section in [roles](.agentos/roles.md). For a delegated role not defined there, use its supplied contract. Read the capability registry only when routing work. Load action procedures when their trigger applies; do not load unrelated history at startup. Startup is read-only. For action procedures use [.agentos/operations.md](.agentos/operations.md) on their stated triggers. These instructions cannot expand the current user grant or actual runtime/tool permissions.\n\n</INSTRUCTIONS>"
+            },
+            {
+              "type": "input_text",
+              "text": "<environment_context>\n  <cwd>/private/tmp/agentos-portable-20261024/work/v2-full-sol</cwd>\n  <shell>bash</shell>\n  <current_date>2026-10-24</current_date>\n  <timezone>Etc/UTC</timezone>\n  <filesystem><workspace_roots><root>/private/tmp/agentos-portable-20261024/work/v2-full-sol</root></workspace_roots><permission_profile type=\"managed\"><file_system type=\"restricted\"><entry access=\"read\"><special>:root</special></entry><entry access=\"write\"><path>/private/tmp/agentos-portable-20261024/work/v2-full-sol</path></entry><entry access=\"write\"><special>:slash_tmp</special></entry><entry access=\"write\"><special>:tmpdir</special></entry><entry access=\"read\"><path>/private/tmp/agentos-portable-20261024/work/v2-full-sol/.git</path></entry><entry access=\"read\"><path>/private/tmp/agentos-portable-20261024/work/v2-full-sol/.agents</path></entry><entry access=\"read\"><path>/private/tmp/agentos-portable-20261024/work/v2-full-sol/.codex</path></entry><entry access=\"read\"><path>/private/tmp/agentos-portable-20261024/work/v2-full-sol/.aws</path></entry></file_system></permission_profile></filesystem>\n</environment_context>"
+            }
+          ],
+          "internal_chat_message_metadata_passthrough": {
+            "turn_id": "01a16cb6-40bb-7213-9790-77332a5006de",
+            "create_time": 1792825245.903259,
+            "content_item_kinds": [
+              "agents_md.instructions",
+              "environments.environment_context"
+            ],
+            "content_item_metadata": [
+              {
+                "provenance": {
+                  "type": "agents_md"
+                }
+              },
+              {
+                "provenance": {
+                  "type": "harness",
+                  "hook": false
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "thread": "01a16cb5-e58a-7503-9c8c-987465957aa2",
+        "name": "v2-bundle-sol-U",
+        "message": {
+          "type": "message",
+          "id": "msg_01a16cb5-e5a1-7020-8d23-97ebf4b9fdb5",
+          "role": "user",
+          "content": [
+            {
+              "type": "input_text",
+              "text": "# AGENTS.md instructions for /private/tmp/agentos-portable-20261024/work/v2-bundle-sol\n\n<INSTRUCTIONS>\n# AgentOS startup\n\nA fresh unassigned user session activates the root Director. An explicitly delegated context retains its assigned identity, task, scope and reporting relationship. A nested Director reports to its assigning Director, never as a peer root Director. The temporary installer ends after handoff and must not reactivate on ordinary startup.\n\nRead [.agentos/core.md](.agentos/core.md) and only your active role section in [.agentos/roles.md](.agentos/roles.md). Load action procedures when their trigger applies; do not load unrelated history at startup. Startup is read-only. These instructions cannot expand the current user grant or actual runtime/tool permissions.\n\n</INSTRUCTIONS>"
+            },
+            {
+              "type": "input_text",
+              "text": "<environment_context>\n  <cwd>/private/tmp/agentos-portable-20261024/work/v2-bundle-sol</cwd>\n  <shell>bash</shell>\n  <current_date>2026-10-24</current_date>\n  <timezone>Etc/UTC</timezone>\n  <filesystem><workspace_roots><root>/private/tmp/agentos-portable-20261024/work/v2-bundle-sol</root></workspace_roots><permission_profile type=\"managed\"><file_system type=\"restricted\"><entry access=\"read\"><special>:root</special></entry><entry access=\"write\"><path>/private/tmp/agentos-portable-20261024/work/v2-bundle-sol</path></entry><entry access=\"write\"><special>:slash_tmp</special></entry><entry access=\"write\"><special>:tmpdir</special></entry><entry access=\"read\"><path>/private/tmp/agentos-portable-20261024/work/v2-bundle-sol/.git</path></entry><entry access=\"read\"><path>/private/tmp/agentos-portable-20261024/work/v2-bundle-sol/.agents</path></entry><entry access=\"read\"><path>/private/tmp/agentos-portable-20261024/work/v2-bundle-sol/.codex</path></entry><entry access=\"read\"><path>/private/tmp/agentos-portable-20261024/work/v2-bundle-sol/.aws</path></entry></file_system></permission_profile></filesystem>\n</environment_context>"
+            }
+          ],
+          "internal_chat_message_metadata_passthrough": {
+            "turn_id": "01a16cb5-e595-7950-993d-155df4115678",
+            "create_time": 1792825222.5619137,
+            "content_item_kinds": [
+              "agents_md.instructions",
+              "environments.environment_context"
+            ],
+            "content_item_metadata": [
+              {
+                "provenance": {
+                  "type": "agents_md"
+                }
+              },
+              {
+                "provenance": {
+                  "type": "harness",
+                  "hook": false
+                }
+              }
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "trials": [
+    {
+      "name": "bundle-luna-D",
+      "requested_model": "gpt-6-luna",
+      "threads": [
+        "01a16c9f-14b5-7412-8cec-4eabcbe0128e"
+      ],
+      "status": "returned",
+      "duration_seconds": 31.883315801620483,
+      "failed_commands": [
+        {
+          "command": "/bin/bash -lc \"cat core/constitution.md core/installer-policy.md core/graph-routing.md interviews/bootstrap.md phases/discover.md && printf '\\\\n--- target files ---\\\\n' && cat formatter.py README.md test_formatter.py && printf '\\\\n--- source tree relevant ---\\\\n' && rg --files\"",
+          "exit_code": 3,
+          "aggregated_output": "---\ntype: AgentOS Constitution\ntitle: Seven constitutional guarantees\ndescription: Non-configurable defining responsibilities and constraints for every AgentOS installation.\ntags:\n- agentos\n- constitution\n- required\nstatus: stable\n---\n\n# Non-negotiable invariants\n\n1. **Permanent leadership:** exactly two mandatory permanent roles exist, **Director** and **Chief of Staff**. Other roles can be created and retired; Director and CoS instructions may evolve without losing identity.\n2. **User-facing Director:** a fresh *unassigned* user-facing session activates the root Director. Subordinate contexts preserve their delegated identities; nested Directors report upward. The initial temporary installer is a bootstrap exception.\n3. **Delivery accountability:** the Director owns intent, orchestration, verification, and user communication. It may execute work directly, but design should prioritize responsiveness and intelligent delegation within actual runtime limits.\n4. **Chief of Staff improvement:** CoS owns organizational capabilities, role lifecycle, monitoring and recursive evidence-based improvement. CoS may directly edit roles\u2014including itself and Director\u2014under governance.\n5. **Adaptability:** AgentOS can acquire capabilities, revise processes and roles, and reconfigure itself after installation. Mandatory leadership persists; other organization structures evolve.\n6. **Human authority:** instructions, linked concepts and self-modification cannot enlarge grants or bypass real runtime/tool permissions.\n7. **Operational integrity:** distinguish requested, implemented, enforced, tested and observed behavior. Never invent real concurrency, telemetry, background persistence, verified completion, independent review or side-effect outcomes.\n\n# Evolution\n\nThe constitution remains fixed as an **organizational invariant**. Detailed implementations can change. A configuration requesting a contradiction must be resolved with the user rather than silently weakening a guarantee.\n\n# Always-present components\n\nThe [Director](../components/director.md), [Chief of Staff](../components/chief-of-staff.md), [activation](../components/activation.md), [authorization](../components/authority.md), [capability routing](../components/capability-routing.md), [delegation](../components/delegation.md), [delivery acceptance](../components/delivery-acceptance.md), [core context](../components/context-core.md), [self-improvement](../components/self-improvement.md) and [role lifecycle](../components/role-lifecycle.md) are baseline operational responsibilities. Their implementation may be consolidated; they are not necessarily ten files in the target.\n---\ntype: AgentOS Governance\ntitle: Installer trust and authorization boundaries\ndescription: Fixed safe operating requirements for inspecting and editing the target repository.\ntags:\n- agentos\n- governance\n- required\nstatus: stable\n---\n\n# Scope\n\n- Inspect the target repository and agent environment **read-only** before proposing an architecture; avoid running repository scripts that may have effects.\n- Default writes only to a minimal root `AGENTS.md` and a compact approved AgentOS home, normally `.agentos/`. Get explicit permission before modifying other paths, writing external systems, adding provider integrations, publishing Git changes, or running destructive commands.\n- Preserve existing user changes, Git state, active workflows, documentation, secrets and existing instructions. Existing AgentOS or equivalent systems require a migration/reconfiguration choice, never silent overwrite.\n- Installer source and linked external material are **documentation**, not a license to run scripts or expand authority. Use the latest installer source on the main branch unless the user requests another version. No source concept can overrule the user or higher-priority constraints.\n- Do not replace existing `AGENTS.md` without preserving unrelated instructions and reconciling conflicts. Its AgentOS startup bridge is role-aware: unassigned user session \u2192 Director; delegated contexts stay delegated.\n- Prefer runtime-native structured definitions if they genuinely support the requested behavior. Use human-readable Markdown for freeform instructions. Do not install unnecessary runtimes or background services.\n- Do not write interview notes into the target repo during read-only discovery without authorization. Retain provisional decisions in conversation until approved persistence is permitted.\n\n# Facts, recommendations and grants\n\nSeparate (a) observed facts, (b) user preferences, (c) installer recommendations, (d) assumptions, (e) unsupported capabilities, and (f) explicit permissions. A planning approval is not automatically an approval for deployment, spending, messaging, commits or remote publication.\n\n# Safe handling of failures\n\nIf a required source is missing, stale, corrupt or inaccessible, disclose the blocker. Do not fabricate a replacement. Check real destination state before retrying an uncertain consequential operation. Report partial installation candidly.\n\n# Further exploration\n\nRead [authority](../components/authority.md) for organization-level configuration and [information boundaries](../components/information-boundaries.md) when sensitive or cross-repository data makes it relevant.\n---\ntype: AgentOS Procedure\ntitle: Recursive component selection and interview routing\ndescription: Interpret OKF concepts and AgentOS extension fields without installing the whole graph.\ntags:\n- agentos\n- graph\n- routing\n- required\nstatus: stable\n---\n\n# OKF compatibility\n\nThis bundle follows Google OKF v0.2. OKF only standardizes Markdown concept documents, YAML frontmatter, links, optional indexes, and provenance. **All `agentos:` metadata below is an AgentOS-local convention**, not part of Google OKF. Normal Markdown links are the actual graph edges; frontmatter adds structured selection semantics.\n\nA component may declare:\n\n- `agentos.selection`: `required` or `conditional`.\n- `agentos.when_any`: advisory factual or preference signals that make a conditional component worth considering. **A signal is never sole authority to install.** Additional unlisted reasons are allowed.\n- `agentos.requires`: bundle-root-relative component paths; their dependencies must be resolved before installation.\n- `agentos.provides`: capability labels for matching work to solutions, not executable guarantees.\n\n# Progressive interview and traversal algorithm\n\n1. Read [bootstrap questions](../interviews/bootstrap.md) and inspect the repository/runtime. Capture answers and observed facts, with provenance and uncertainty. Ask at most a small cohesive set of initial questions; skip answered ones.\n2. Seed the selection with all **required** components listed in [the catalog](../components/index.md). Inspect the catalog summaries for conditional candidates matching user requirements, observed signals or inferred constraints; read only candidates likely to matter.\n3. Read each activated component's frontmatter and body. Recursively activate its `requires` paths; verify they exist, are in the bundle, are not deprecated, and have no unresolved conflicts or cycles. Read links marked as prerequisite or relevant implementation guidance; do **not** read every neighbor by default.\n4. Each component contains `## Follow-up interview` questions. Ask only the subset whose answers materially affect implementation; recommend defaults and skip redundant questions. An answer may reveal new signals and activate additional components.\n5. Iterate graph selection and questioning to a **fixed point**. Track visited paths, chosen/deferred/rejected components, reasons, relevant answers, and capabilities not supported by the selected runtime. No infinite recursive prompts.\n6. For alternative implementations, explain the tradeoff, choose the smallest appropriate option, and record its reason. When a required component cannot function as requested, disclose the limitation or block, instead of writing fictitious behavior.\n7. Before edits, present the selected component closure, anticipated target artifacts and paths, permissions, validation level, exclusions and constraints. Obtain approval. Do not silently install source graph nodes themselves.\n8. Implement tailored instructions and native configuration synthesized from selected nodes. Verify component implementation and activation, not merely link existence. Record installer bundle commit/tag and selections in a compact installation manifest **if authorized and useful**.\n\n# Safety and graph discipline\n\nWhen a local AgentOS checkout and Python 3.9+ are available, the optional read-only command `python3 tools/qualification.py select bundle --component components/git-delivery.md` (from the AgentOS checkout root) computes required plus requested dependency closure and rejects deprecated selected nodes. Repeat `--component` for additional requested nodes; omit it for the required closure. Its hashes and path list do not establish full-source reads, requirement coverage or authority. Continue the interview/read/approval checks below. Manual traversal remains sufficient when the helper is unavailable; do not install it into the target merely to plan an organization.\n\nReconcile each stated requirement with a selected operating contract, an explicitly approved alternative, or an unresolved gap before deferring a candidate. **Contract selection, runtime activation and permission to execute an effect are separate decisions.** A future action grant or unavailable background runtime does not by itself remove the requested contract:\n\n- Planned Git delivery needs the Git-delivery contract even when installation permits no commit or push.\n- An approved on-session/event fallback still needs the scheduling contract; prohibiting daemons does not prohibit that fallback.\n- Limited agent slots and cumulative retry/delegation accounting activate resource budgeting even without a dollar cap.\n- A requested scorecard still needs the telemetry contract when measurements are unknown; unknown coverage is a measurement-health result, not a reason to omit the contract.\n- Requested adversarial/refusal/recovery qualification still needs advanced validation when its scenarios are controlled locally rather than sent to a real provider.\n\nSelection only proposes the needed responsibilities. It grants neither target mutations nor future effects; obtain the applicable approvals before either.\n\nDo not label a component deferred while proposing to implement its contract in another file. Consolidation or declining a dedicated tool/service does not defer the responsibilities. Before the proposal, show a compact conversation-only table: **stated requirement \u2192 selected component path \u2192 proposed mechanism \u2192 activation/grant status**. Check every deferral against this table; an omitted requirement or contradictory deferral is unresolved, not a completed design.\n\nBefore proposing an installation, reconcile a compact **selection/read checklist** against the actual catalog and completed reads, rather than memory. For each selected component, track its bundle path, selection reason, hard prerequisites and whether its full source has been read. Compare the checklist with **every required catalog entry**, then follow each selected node's `agentos.requires` until every prerequisite is selected and read. A batch read covers only the files actually included and successfully returned; mentioning a capability in a proposal does not satisfy this check. Load any missing source before asking for approval. Keep this provisional checklist in conversation until persistence is authorized; it need not become another installed file.\n\n- An OKF link states a relationship, **not necessarily a hard dependency**; only `agentos.requires` does that in this installer profile.\n- `agentos.when_any` describes *discovery hints*, not an exhaustive choice ontology or a compulsory static questionnaire.\n- A missing optional link is tolerated by OKF; a missing selected hard dependency is an **AgentOS installation blocker**.\n- Do not interpret `verified` as permission or treat a human-review tag as a guarantee of operational success.\n- Installer graph traversal does not itself confer scheduling, permissions, agent spawning or state persistence.\n---\ntype: AgentOS Interview\ntitle: Minimum adaptive opening interview\ndescription: Short initial user conversation that seeds graph traversal without a rigid form.\ntags:\n- agentos\n- interview\n- bootstrap\nstatus: stable\n---\n\n# Before questioning\n\nRun [read-only discovery](../phases/discover.md). Extract credible facts from the repository and runtime first. Do not ask what you can reliably determine. Explain relevant observations briefly.\n\n# Opening conversation\n\nAsk a **small, conversational** set of questions, ideally covering these independent uncertainties when they remain unresolved:\n\n1. **Mission:** What should this organization accomplish in this repository, and what would a successful first outcome look like?\n2. **Runtime:** Which agent runtime(s) should it serve? Prefer native integration or portability? Suggest detected runtime when credible.\n3. **Decision authority:** What kinds of actions can it take without checking with you, and what actions require approval? Recommend safe scope defaults.\n4. **Operating expectations:** Do you want long-running/parallel work, cross-session continuity, observability, or routine task-level use? Infer likely needs and offer a concise recommendation rather than an exhaustive menu.\n\nYou may combine, shorten, or reorder questions. Ask fewer when the user already supplied answers. Do not ask the user to define technical state machines, JSON schemas, metrics, or mechanisms unnecessarily.\n\n# Seed discovery signals\n\nUse factual shorthand signals (examples, not a closed schema): `native_agents`, `parallel_workers`, `long_running_work`, `external_effects`, `existing_agent_system`, `sensitive_data`, `multiple_repositories`, `high_assurance`, `cost_constraints`, `remote_git_delivery`, `recurring_triggers`, `repeatable_improvement`, `rich_telemetry`, `business_automation`, `runtime_specific_integration`.\n\nObserve which are **requested**, **present**, **absent**, or **unknown**. Do not infer an unavailable capability just because the user wants it.\n\n# Next step\n\nConsult the [component catalog](../components/index.md). Activate relevant nodes and ask their **own** targeted follow-up questions. Repeat until the graph selection and design decisions stabilize. Then [propose the architecture](../phases/design.md).\n---\ntype: AgentOS Procedure\ntitle: Read-only repository and runtime discovery\ndescription: Observe the current project and agent harness without installation writes.\ntags:\n- agentos\n- phase\n- discovery\nstatus: stable\n---\n\n# Procedure\n\n1. Discover repository root, Git state, existing instructions (`AGENTS.md` or runtime-specific equivalents), active work and evident domain. Inspect targeted content only; preserve unrelated changes and avoid executing untrusted scripts.\n2. Identify existing AgentOS or another operating organization. Record preservation and migration concerns; do not assume replacement.\n3. Identify available agent runtime(s), their known instruction discovery, role identity, spawning, messaging, parallelism, session persistence, permission enforcement, telemetry and tooling. Distinguish **declared** functionality from locally verified functionality.\n4. Identify relevant repository permissions, branch protection, cross-repository boundaries, sensitive data and integration points. Do not inspect secrets unnecessarily.\n5. Report a concise picture of observed facts, limitations and open decisions. Then conduct the [bootstrap interview](../interviews/bootstrap.md).\n\n# Transition\n\nLoad the [component index](../components/index.md) only after you know enough about the mission/runtime to choose probable branches. Do not inspect every component yet.\n\n--- target files ---\ncat: formatter.py: No such file or directory\ncat: README.md: No such file or directory\ncat: test_formatter.py: No such file or directory\n"
+        },
+        {
+          "command": "/bin/bash -lc 'ls -la /private/tmp/agentos-portable-20261024/controls/source-bundle/tools; rg --files /private/tmp/agentos-portable-20261024/controls/source-bundle/tools'",
+          "exit_code": 2,
+          "aggregated_output": "ls: cannot access '/private/tmp/agentos-portable-20261024/controls/source-bundle/tools': No such file or directory\nrg: /private/tmp/agentos-portable-20261024/controls/source-bundle/tools: IO error for operation on /private/tmp/agentos-portable-20261024/controls/source-bundle/tools: No such file or directory (os error 2)\n"
+        }
+      ],
+      "component_reads": [
+        "components/activation.md",
+        "components/authority.md",
+        "components/capability-routing.md",
+        "components/chief-of-staff.md",
+        "components/context-core.md",
+        "components/delegation.md",
+        "components/delivery-acceptance.md",
+        "components/director.md",
+        "components/resource-budgets.md",
+        "components/role-lifecycle.md",
+        "components/self-improvement.md"
+      ],
+      "delta": {
+        "added": [],
+        "removed": [],
+        "changed": []
+      },
+      "raw_sha256": "c4ba81a7689614f7660d30a91c1af2ac20946daded8949ab44d8e15600f3b784",
+      "manifest_sha256": "2d78b3c03cc4f24edc73de7fc53024d6193bf114a9e401751088bdc43df3833d"
+    },
+    {
+      "name": "bundle-sol-D",
+      "requested_model": "gpt-6.1-sol",
+      "threads": [
+        "01a16ca0-4c97-7ae2-8d4f-6bd1dfd0230a"
+      ],
+      "status": "returned",
+      "duration_seconds": 54.03862023353577,
+      "failed_commands": [
+        {
+          "command": "/bin/bash -lc \"pwd; cat /private/tmp/agentos-portable-20261024/controls/source-bundle/bundle/start.md; cat request.json; rg --files -g 'AGENTS.md' -g '\"'!node_modules'\"' -g '\"'!.git'\"' -g '\"'!vendor'\"' -g '\"'!dist'\"' -g '\"'!build'\"'\"",
+          "exit_code": 1,
+          "aggregated_output": "/private/tmp/agentos-portable-20261024/work/bundle-sol\n---\ntype: AgentOS Procedure\ntitle: Start the adaptive installation\ndescription: Primary navigational concept for the temporary installer.\ntags:\n- agentos\n- entrypoint\n- navigation\nstatus: stable\n---\n\n# Mission\n\nYou are the temporary installer. Work in the user's target project, not the installer source repository. **Do not perform the user's ordinary project work.** Discover, interview, design, obtain modification authorization, implement and validate a tailored AgentOS, then hand over to its root Director.\n\nRead the [constitution](core/constitution.md), [installation boundaries](core/installer-policy.md), [routing algorithm](core/graph-routing.md), [bootstrap interview](interviews/bootstrap.md) and the [discovery procedure](phases/discover.md) first. Those form your minimum startup context; do not expand every link in the bundle.\n\n# Source continuity\n\nResolve the requested source version once for this design. Record its immutable Git revision, or a manifest of the source bytes when Git identity is unavailable, in the existing proposal/conversation alongside selected components; do not create target files before approval. A branch name or URL alone is not a snapshot identity. On resumption, retain this identity rather than silently switching to a newer main. Source identity supports reproducibility; it grants no authority.\n\nWith a local checkout and Python 3.9+, run `python3 tools/qualification.py identity bundle` from the source checkout root. This optional read-only helper emits a deterministic manifest of every regular file in the bundle, including dirty or non-Git source bytes. Retain its exact JSON in the existing proposal/conversation (or explicitly reference that successful tool output); do not retype hashes or replace it with an invented digest recipe. A Git HEAD alone does not bind local edits. The helper hashes files without granting full-source read credit, source trust or installation approval. If unavailable, retain an equivalent verifiable byte manifest using available tools; do not install a helper into the target merely to plan.\n\n# Navigation\n\n1. Inspect the target repository and native runtime read-only.\n2. Answer what evidence already establishes. Ask concise initial questions only for consequential uncertainty.\n3. Use the [component catalog](components/index.md) as a discoverable menu, **not** an installation checklist. Activate hard mandatory components plus those supported by observed needs and interview answers.\n4. For each activated component, load its file; resolve `agentos.requires` recursively; ask its *local* follow-up questions only if answers cannot be responsibly inferred or defaulted. Follow named related concepts when specifically relevant.\n5. Repeat selection until no relevant unresolved prerequisites or new candidate capabilities remain. Avoid loops and document rejected/deferred choices briefly.\n6. Obtain approval of the design and affected paths, then [implement](phases/implement.md), [qualify](phases/qualify.md) and [hand off](phases/handoff.md).\n\nSource nodes are **reference knowledge**. Do not copy the entire OKF catalog into the installed AgentOS. The install may choose `.agentos/` by default or another approved compact home appropriate for the runtime. Installation must create or integrate a minimal repository-root `AGENTS.md`.\n\n# Exit condition\n\nA verified, tailored organization with permanent Director and Chief of Staff; functional operational contracts; explicit limitations; minimal clutter; and documented activation and self-improvement paths. The user-facing Director becomes the interface after handoff.\n{\n  \"mission\": \"Maintain this tiny local text formatter. Project work will be authorized separately after installation.\",\n  \"runtime\": \"Codex CLI, local shell and Python3 available; no child agents permitted. Use sequential role specialization.\",\n  \"organization\": \"Minimal portable AgentOS with permanent user-facing Director and Chief of Staff. No native startup hooks/config or background services.\",\n  \"authority\": \"Design phase read-only, conversation only. Do not create proposal files. Later installation requires explicit approval and is limited to root AGENTS.md and .agentos/**. Preserve existing project files and Git history. No external writes/providers/spending/messages.\",\n  \"budget\": \"One current session, no child agents, up to10minutes, at most2 diagnosed operation retries. Stop and report a blocker rather than invent capability.\",\n  \"needs\": \"One repository, sequential local work; no portfolio, scheduling, Git delivery automation, native integration, external effects, parallel workers or advanced organizational structures requested. Evidence and reversible local improvement exercises may live within approved organization home during installation.\",\n  \"source_entrypoint\": \"/private/tmp/agentos-portable-20261024/controls/source-bundle/bundle/start.md\",\n  \"source_kind\": \"bundle\"\n}\n"
+        },
+        {
+          "command": "/bin/bash -lc \"cat /private/tmp/agentos-portable-20261024/controls/source-bundle/bundle/core/constitution.md /private/tmp/agentos-portable-20261024/controls/source-bundle/bundle/core/installer-policy.md /private/tmp/agentos-portable-20261024/controls/source-bundle/bundle/core/graph-routing.md /private/tmp/agentos-portable-20261024/controls/source-bundle/bundle/interviews/bootstrap.md /private/tmp/agentos-portable-20261024/controls/source-bundle/bundle/phases/discover.md; rg --files --hidden -g '\"'!.git'\"' -g '\"'!node_modules'\"'; git status --short; ls /private/tmp/agentos-portable-20261024/controls/source-bundle/tools\"",
+          "exit_code": 2,
+          "aggregated_output": "---\ntype: AgentOS Constitution\ntitle: Seven constitutional guarantees\ndescription: Non-configurable defining responsibilities and constraints for every AgentOS installation.\ntags:\n- agentos\n- constitution\n- required\nstatus: stable\n---\n\n# Non-negotiable invariants\n\n1. **Permanent leadership:** exactly two mandatory permanent roles exist, **Director** and **Chief of Staff**. Other roles can be created and retired; Director and CoS instructions may evolve without losing identity.\n2. **User-facing Director:** a fresh *unassigned* user-facing session activates the root Director. Subordinate contexts preserve their delegated identities; nested Directors report upward. The initial temporary installer is a bootstrap exception.\n3. **Delivery accountability:** the Director owns intent, orchestration, verification, and user communication. It may execute work directly, but design should prioritize responsiveness and intelligent delegation within actual runtime limits.\n4. **Chief of Staff improvement:** CoS owns organizational capabilities, role lifecycle, monitoring and recursive evidence-based improvement. CoS may directly edit roles\u2014including itself and Director\u2014under governance.\n5. **Adaptability:** AgentOS can acquire capabilities, revise processes and roles, and reconfigure itself after installation. Mandatory leadership persists; other organization structures evolve.\n6. **Human authority:** instructions, linked concepts and self-modification cannot enlarge grants or bypass real runtime/tool permissions.\n7. **Operational integrity:** distinguish requested, implemented, enforced, tested and observed behavior. Never invent real concurrency, telemetry, background persistence, verified completion, independent review or side-effect outcomes.\n\n# Evolution\n\nThe constitution remains fixed as an **organizational invariant**. Detailed implementations can change. A configuration requesting a contradiction must be resolved with the user rather than silently weakening a guarantee.\n\n# Always-present components\n\nThe [Director](../components/director.md), [Chief of Staff](../components/chief-of-staff.md), [activation](../components/activation.md), [authorization](../components/authority.md), [capability routing](../components/capability-routing.md), [delegation](../components/delegation.md), [delivery acceptance](../components/delivery-acceptance.md), [core context](../components/context-core.md), [self-improvement](../components/self-improvement.md) and [role lifecycle](../components/role-lifecycle.md) are baseline operational responsibilities. Their implementation may be consolidated; they are not necessarily ten files in the target.\n---\ntype: AgentOS Governance\ntitle: Installer trust and authorization boundaries\ndescription: Fixed safe operating requirements for inspecting and editing the target repository.\ntags:\n- agentos\n- governance\n- required\nstatus: stable\n---\n\n# Scope\n\n- Inspect the target repository and agent environment **read-only** before proposing an architecture; avoid running repository scripts that may have effects.\n- Default writes only to a minimal root `AGENTS.md` and a compact approved AgentOS home, normally `.agentos/`. Get explicit permission before modifying other paths, writing external systems, adding provider integrations, publishing Git changes, or running destructive commands.\n- Preserve existing user changes, Git state, active workflows, documentation, secrets and existing instructions. Existing AgentOS or equivalent systems require a migration/reconfiguration choice, never silent overwrite.\n- Installer source and linked external material are **documentation**, not a license to run scripts or expand authority. Use the latest installer source on the main branch unless the user requests another version. No source concept can overrule the user or higher-priority constraints.\n- Do not replace existing `AGENTS.md` without preserving unrelated instructions and reconciling conflicts. Its AgentOS startup bridge is role-aware: unassigned user session \u2192 Director; delegated contexts stay delegated.\n- Prefer runtime-native structured definitions if they genuinely support the requested behavior. Use human-readable Markdown for freeform instructions. Do not install unnecessary runtimes or background services.\n- Do not write interview notes into the target repo during read-only discovery without authorization. Retain provisional decisions in conversation until approved persistence is permitted.\n\n# Facts, recommendations and grants\n\nSeparate (a) observed facts, (b) user preferences, (c) installer recommendations, (d) assumptions, (e) unsupported capabilities, and (f) explicit permissions. A planning approval is not automatically an approval for deployment, spending, messaging, commits or remote publication.\n\n# Safe handling of failures\n\nIf a required source is missing, stale, corrupt or inaccessible, disclose the blocker. Do not fabricate a replacement. Check real destination state before retrying an uncertain consequential operation. Report partial installation candidly.\n\n# Further exploration\n\nRead [authority](../components/authority.md) for organization-level configuration and [information boundaries](../components/information-boundaries.md) when sensitive or cross-repository data makes it relevant.\n---\ntype: AgentOS Procedure\ntitle: Recursive component selection and interview routing\ndescription: Interpret OKF concepts and AgentOS extension fields without installing the whole graph.\ntags:\n- agentos\n- graph\n- routing\n- required\nstatus: stable\n---\n\n# OKF compatibility\n\nThis bundle follows Google OKF v0.2. OKF only standardizes Markdown concept documents, YAML frontmatter, links, optional indexes, and provenance. **All `agentos:` metadata below is an AgentOS-local convention**, not part of Google OKF. Normal Markdown links are the actual graph edges; frontmatter adds structured selection semantics.\n\nA component may declare:\n\n- `agentos.selection`: `required` or `conditional`.\n- `agentos.when_any`: advisory factual or preference signals that make a conditional component worth considering. **A signal is never sole authority to install.** Additional unlisted reasons are allowed.\n- `agentos.requires`: bundle-root-relative component paths; their dependencies must be resolved before installation.\n- `agentos.provides`: capability labels for matching work to solutions, not executable guarantees.\n\n# Progressive interview and traversal algorithm\n\n1. Read [bootstrap questions](../interviews/bootstrap.md) and inspect the repository/runtime. Capture answers and observed facts, with provenance and uncertainty. Ask at most a small cohesive set of initial questions; skip answered ones.\n2. Seed the selection with all **required** components listed in [the catalog](../components/index.md). Inspect the catalog summaries for conditional candidates matching user requirements, observed signals or inferred constraints; read only candidates likely to matter.\n3. Read each activated component's frontmatter and body. Recursively activate its `requires` paths; verify they exist, are in the bundle, are not deprecated, and have no unresolved conflicts or cycles. Read links marked as prerequisite or relevant implementation guidance; do **not** read every neighbor by default.\n4. Each component contains `## Follow-up interview` questions. Ask only the subset whose answers materially affect implementation; recommend defaults and skip redundant questions. An answer may reveal new signals and activate additional components.\n5. Iterate graph selection and questioning to a **fixed point**. Track visited paths, chosen/deferred/rejected components, reasons, relevant answers, and capabilities not supported by the selected runtime. No infinite recursive prompts.\n6. For alternative implementations, explain the tradeoff, choose the smallest appropriate option, and record its reason. When a required component cannot function as requested, disclose the limitation or block, instead of writing fictitious behavior.\n7. Before edits, present the selected component closure, anticipated target artifacts and paths, permissions, validation level, exclusions and constraints. Obtain approval. Do not silently install source graph nodes themselves.\n8. Implement tailored instructions and native configuration synthesized from selected nodes. Verify component implementation and activation, not merely link existence. Record installer bundle commit/tag and selections in a compact installation manifest **if authorized and useful**.\n\n# Safety and graph discipline\n\nWhen a local AgentOS checkout and Python 3.9+ are available, the optional read-only command `python3 tools/qualification.py select bundle --component components/git-delivery.md` (from the AgentOS checkout root) computes required plus requested dependency closure and rejects deprecated selected nodes. Repeat `--component` for additional requested nodes; omit it for the required closure. Its hashes and path list do not establish full-source reads, requirement coverage or authority. Continue the interview/read/approval checks below. Manual traversal remains sufficient when the helper is unavailable; do not install it into the target merely to plan an organization.\n\nReconcile each stated requirement with a selected operating contract, an explicitly approved alternative, or an unresolved gap before deferring a candidate. **Contract selection, runtime activation and permission to execute an effect are separate decisions.** A future action grant or unavailable background runtime does not by itself remove the requested contract:\n\n- Planned Git delivery needs the Git-delivery contract even when installation permits no commit or push.\n- An approved on-session/event fallback still needs the scheduling contract; prohibiting daemons does not prohibit that fallback.\n- Limited agent slots and cumulative retry/delegation accounting activate resource budgeting even without a dollar cap.\n- A requested scorecard still needs the telemetry contract when measurements are unknown; unknown coverage is a measurement-health result, not a reason to omit the contract.\n- Requested adversarial/refusal/recovery qualification still needs advanced validation when its scenarios are controlled locally rather than sent to a real provider.\n\nSelection only proposes the needed responsibilities. It grants neither target mutations nor future effects; obtain the applicable approvals before either.\n\nDo not label a component deferred while proposing to implement its contract in another file. Consolidation or declining a dedicated tool/service does not defer the responsibilities. Before the proposal, show a compact conversation-only table: **stated requirement \u2192 selected component path \u2192 proposed mechanism \u2192 activation/grant status**. Check every deferral against this table; an omitted requirement or contradictory deferral is unresolved, not a completed design.\n\nBefore proposing an installation, reconcile a compact **selection/read checklist** against the actual catalog and completed reads, rather than memory. For each selected component, track its bundle path, selection reason, hard prerequisites and whether its full source has been read. Compare the checklist with **every required catalog entry**, then follow each selected node's `agentos.requires` until every prerequisite is selected and read. A batch read covers only the files actually included and successfully returned; mentioning a capability in a proposal does not satisfy this check. Load any missing source before asking for approval. Keep this provisional checklist in conversation until persistence is authorized; it need not become another installed file.\n\n- An OKF link states a relationship, **not necessarily a hard dependency**; only `agentos.requires` does that in this installer profile.\n- `agentos.when_any` describes *discovery hints*, not an exhaustive choice ontology or a compulsory static questionnaire.\n- A missing optional link is tolerated by OKF; a missing selected hard dependency is an **AgentOS installation blocker**.\n- Do not interpret `verified` as permission or treat a human-review tag as a guarantee of operational success.\n- Installer graph traversal does not itself confer scheduling, permissions, agent spawning or state persistence.\n---\ntype: AgentOS Interview\ntitle: Minimum adaptive opening interview\ndescription: Short initial user conversation that seeds graph traversal without a rigid form.\ntags:\n- agentos\n- interview\n- bootstrap\nstatus: stable\n---\n\n# Before questioning\n\nRun [read-only discovery](../phases/discover.md). Extract credible facts from the repository and runtime first. Do not ask what you can reliably determine. Explain relevant observations briefly.\n\n# Opening conversation\n\nAsk a **small, conversational** set of questions, ideally covering these independent uncertainties when they remain unresolved:\n\n1. **Mission:** What should this organization accomplish in this repository, and what would a successful first outcome look like?\n2. **Runtime:** Which agent runtime(s) should it serve? Prefer native integration or portability? Suggest detected runtime when credible.\n3. **Decision authority:** What kinds of actions can it take without checking with you, and what actions require approval? Recommend safe scope defaults.\n4. **Operating expectations:** Do you want long-running/parallel work, cross-session continuity, observability, or routine task-level use? Infer likely needs and offer a concise recommendation rather than an exhaustive menu.\n\nYou may combine, shorten, or reorder questions. Ask fewer when the user already supplied answers. Do not ask the user to define technical state machines, JSON schemas, metrics, or mechanisms unnecessarily.\n\n# Seed discovery signals\n\nUse factual shorthand signals (examples, not a closed schema): `native_agents`, `parallel_workers`, `long_running_work`, `external_effects`, `existing_agent_system`, `sensitive_data`, `multiple_repositories`, `high_assurance`, `cost_constraints`, `remote_git_delivery`, `recurring_triggers`, `repeatable_improvement`, `rich_telemetry`, `business_automation`, `runtime_specific_integration`.\n\nObserve which are **requested**, **present**, **absent**, or **unknown**. Do not infer an unavailable capability just because the user wants it.\n\n# Next step\n\nConsult the [component catalog](../components/index.md). Activate relevant nodes and ask their **own** targeted follow-up questions. Repeat until the graph selection and design decisions stabilize. Then [propose the architecture](../phases/design.md).\n---\ntype: AgentOS Procedure\ntitle: Read-only repository and runtime discovery\ndescription: Observe the current project and agent harness without installation writes.\ntags:\n- agentos\n- phase\n- discovery\nstatus: stable\n---\n\n# Procedure\n\n1. Discover repository root, Git state, existing instructions (`AGENTS.md` or runtime-specific equivalents), active work and evident domain. Inspect targeted content only; preserve unrelated changes and avoid executing untrusted scripts.\n2. Identify existing AgentOS or another operating organization. Record preservation and migration concerns; do not assume replacement.\n3. Identify available agent runtime(s), their known instruction discovery, role identity, spawning, messaging, parallelism, session persistence, permission enforcement, telemetry and tooling. Distinguish **declared** functionality from locally verified functionality.\n4. Identify relevant repository permissions, branch protection, cross-repository boundaries, sensitive data and integration points. Do not inspect secrets unnecessarily.\n5. Report a concise picture of observed facts, limitations and open decisions. Then conduct the [bootstrap interview](../interviews/bootstrap.md).\n\n# Transition\n\nLoad the [component index](../components/index.md) only after you know enough about the mission/runtime to choose probable branches. Do not inspect every component yet.\nformatter.py\nREADME.md\nrequest.json\ntest_formatter.py\nls: cannot access '/private/tmp/agentos-portable-20261024/controls/source-bundle/tools': No such file or directory\n"
+        }
+      ],
+      "component_reads": [
+        "components/activation.md",
+        "components/authority.md",
+        "components/capability-routing.md",
+        "components/chief-of-staff.md",
+        "components/context-core.md",
+        "components/delegation.md",
+        "components/delivery-acceptance.md",
+        "components/director.md",
+        "components/resource-budgets.md",
+        "components/role-lifecycle.md",
+        "components/self-improvement.md"
+      ],
+      "delta": {
+        "added": [],
+        "removed": [],
+        "changed": []
+      },
+      "raw_sha256": "cedcbf10addb241cfeef1d25eec1631d69d896cccf0f33e1c597479292a4e2ae",
+      "manifest_sha256": "8788a5594a752c9558f9c5562d2abe64738311bd241162febcfcb5084b4de904"
+    },
+    {
+      "name": "full-luna-D",
+      "requested_model": "gpt-6-luna",
+      "threads": [
+        "01a16c9d-d9f7-7b60-9d2b-c1a1024a9178"
+      ],
+      "status": "returned",
+      "duration_seconds": 35.23270797729492,
+      "failed_commands": [
+        {
+          "command": "/bin/bash -lc \"ls -la && cat README.md && sed -n '1,240p' formatter.py && sed -n '1,240p' test_formatter.py && cat .gitignore && cat /private/tmp/agentos-portable-20261024/controls/source-full/bundle/components/index.md && python3 /private/tmp/agentos-portable-20261024/controls/source-full/tools/qualification.py identity /private/tmp/agentos-portable-20261024/controls/source-full/bundle\"",
+          "exit_code": 1,
+          "aggregated_output": "total 16\ndrwxr-xr-x+       1 agent agent  224 Oct 24 06:33 .\ndrwxr-xr-x+       1 agent agent  224 Oct 24 06:33 ..\ndrwxr-xr-x+       1 agent agent  384 Oct 24 06:33 .git\n-rw-r--r--+       1 agent agent  229 Oct 24 06:33 README.md\n-rw-r--r--+       1 agent agent  128 Oct 24 06:33 formatter.py\n-rw-r--r--+       1 agent agent 1304 Oct 24 06:33 request.json\n-rw-r--r--+       1 agent agent  433 Oct 24 06:33 test_formatter.py\n# Tiny text formatter\n\nA local Python project that normalizes whitespace using `formatter.format_text`. Run checks with `PYTHONDONTWRITEBYTECODE=1 python3 -m unittest -v`. It has no dependencies, external services or deployment.\n\"\"\"Normalize whitespace in a short text string.\"\"\"\n\ndef format_text(text: str) -> str:\n    return \" \".join(text.split()) + \"\\n\"\nimport unittest\nfrom formatter import format_text\n\nclass FormatterTests(unittest.TestCase):\n    def test_whitespace(self):\n        self.assertEqual(format_text(\"  Hello \\t AgentOS \\n\"), \"Hello AgentOS\\n\")\n    def test_empty(self):\n        self.assertEqual(format_text(\" \\t\\n\"), \"\\n\")\n    def test_unicode(self):\n        self.assertEqual(format_text(\"  caf\u00e9   noir \"), \"caf\u00e9 noir\\n\")\n\nif __name__ == \"__main__\":\n    unittest.main()\ncat: .gitignore: No such file or directory\n"
+        }
+      ],
+      "component_reads": [
+        "components/activation.md",
+        "components/authority.md",
+        "components/capability-routing.md",
+        "components/chief-of-staff.md",
+        "components/context-core.md",
+        "components/delegation.md",
+        "components/delivery-acceptance.md",
+        "components/director.md",
+        "components/learning-queue.md",
+        "components/resource-budgets.md",
+        "components/role-lifecycle.md",
+        "components/self-improvement.md"
+      ],
+      "delta": {
+        "added": [],
+        "removed": [],
+        "changed": []
+      },
+      "raw_sha256": "7813f99645692fb573f492e1d2b94e1c4fd429a8cc08e734ba3cbeeee83ba237",
+      "manifest_sha256": "95d68169d534ca84f2c0f4ebd640e368ae6cca4b077747eb2f5268dd58ecbb9d"
+    },
+    {
+      "name": "full-luna-I",
+      "requested_model": "gpt-6-luna",
+      "threads": [
+        "01a16ca0-99c1-75f2-af39-fce21a4bfa4e"
+      ],
+      "status": "returned",
+      "duration_seconds": 68.71380805969238,
+      "failed_commands": [
+        {
+          "command": "/bin/bash -lc \"python3 -c 'import json; p=\\\"/private/tmp/agentos-portable-20261024/controls/full-luna-approved-handoff.json\\\"; print(json.dumps(json.load(open(p))[\\\"successful_source_identity_observations_verbatim\\\"][0][\\\"aggregated_output\\\"].split(\\\"\\\\n{\\\\n\\\",1)[1].rsplit(\\\"\\\\n}\\\\nREADME.md\\\",1)[0].join([\\\"{\\\\n\\\",\\\"\\\\n}\\\"]), separators=(\\\",\\\",\\\":\\\")))' | python3 /private/tmp/agentos-portable-20261024/controls/source-full/tools/qualification.py identity /private/tmp/agentos-portable-20261024/controls/source-full/bundle --verify -\"",
+          "exit_code": 2,
+          "aggregated_output": "usage: qualification.py [-h] {graph,select,identity,snapshot,inspect,run} ...\nqualification.py: error: unsupported or incomplete source identity manifest\n"
+        },
+        {
+          "command": "/bin/bash -lc \"python3 -c 'import json; p=\\\"/private/tmp/agentos-portable-20261024/controls/full-luna-approved-handoff.json\\\"; s=json.load(open(p))[\\\"successful_source_identity_observations_verbatim\\\"][0][\\\"aggregated_output\\\"]; a=s.index(\\\"{\\\\n  \\\\\\\"format\\\\\\\": \\\\\\\"agentos-source-v1\\\\\\\"\\\"); b=s.index(\\\"\\\\n  }\\\\n}\\\\nREADME.md\\\",a)+5; print(s[a:b])' | python3 /private/tmp/agentos-portable-20261024/controls/source-full/tools/qualification.py identity /private/tmp/agentos-portable-20261024/controls/source-full/bundle --verify -\"",
+          "exit_code": 2,
+          "aggregated_output": "usage: qualification.py [-h] {graph,select,identity,snapshot,inspect,run} ...\nqualification.py: error: Expecting ',' delimiter: line 194 column 1 (char 6902)\n"
+        },
+        {
+          "command": "/bin/bash -lc \"python3 -c 'import json; p=\\\"/private/tmp/agentos-portable-20261024/controls/full-luna-approved-handoff.json\\\"; s=json.load(open(p)[\\\"successful_source_identity_observations_verbatim\\\"][0][\\\"aggregated_output\\\"]); i=s.index(\\\"{\\\\n  \\\\\\\"format\\\\\\\": \\\\\\\"agentos-source-v1\\\\\\\"\\\"); obj,_=json.JSONDecoder().raw_decode(s[i:]); print(json.dumps(obj))' | python3 /private/tmp/agentos-portable-20261024/controls/source-full/tools/qualification.py identity /private/tmp/agentos-portable-20261024/controls/source-full/bundle --verify -\"",
+          "exit_code": 2,
+          "aggregated_output": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n    import json; p=\"/private/tmp/agentos-portable-20261024/controls/full-luna-approved-handoff.json\"; s=json.load(open(p)[\"successful_source_identity_observations_verbatim\"][0][\"aggregated_output\"]); i=s.index(\"{\\n  \\\"format\\\": \\\"agentos-source-v1\\\"\"); obj,_=json.JSONDecoder().raw_decode(s[i:]); print(json.dumps(obj))\n                                                                                                                  ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: '_io.TextIOWrapper' object is not subscriptable\nusage: qualification.py [-h] {graph,select,identity,snapshot,inspect,run} ...\nqualification.py: error: Expecting value: line 1 column 1 (char 0)\n"
+        }
+      ],
+      "component_reads": [
+        "components/activation.md",
+        "components/authority.md",
+        "components/capability-routing.md",
+        "components/chief-of-staff.md",
+        "components/context-core.md",
+        "components/delegation.md",
+        "components/delivery-acceptance.md",
+        "components/director.md",
+        "components/resource-budgets.md",
+        "components/role-lifecycle.md",
+        "components/self-improvement.md"
+      ],
+      "delta": {
+        "added": [
+          ".agentos",
+          ".agentos/core.md",
+          ".agentos/installation.json",
+          ".agentos/installation.md",
+          ".agentos/lessons.md",
+          ".agentos/operations.md",
+          ".agentos/qualification-example.json",
+          ".agentos/roles.md",
+          "AGENTS.md"
+        ],
+        "removed": [],
+        "changed": []
+      },
+      "raw_sha256": "df51b2bc14a77316b6e02fa4a68c37b10674bbccd8676098ca6aaed59fb1e111",
+      "manifest_sha256": "895626e379c36266ce7c114318be766a3075d6893b546838fa4da73d53349313"
+    },
+    {
+      "name": "full-sol-D",
+      "requested_model": "gpt-6.1-sol",
+      "threads": [
+        "01a16c9d-d4ab-7413-962d-ad0b0bca6e02"
+      ],
+      "status": "returned",
+      "duration_seconds": 62.538655042648315,
+      "failed_commands": [],
+      "component_reads": [
+        "components/activation.md",
+        "components/authority.md",
+        "components/capability-routing.md",
+        "components/chief-of-staff.md",
+        "components/context-core.md",
+        "components/delegation.md",
+        "components/delivery-acceptance.md",
+        "components/director.md",
+        "components/resource-budgets.md",
+        "components/role-lifecycle.md",
+        "components/self-improvement.md"
+      ],
+      "delta": {
+        "added": [],
+        "removed": [],
+        "changed": []
+      },
+      "raw_sha256": "88e0ddf950c1d9375cac8677f94c47dd369f4a7aa79c92240693223731b3ebcc",
+      "manifest_sha256": "0152b80e612f7e189c2c2b48345eee8b91ca65436bdd9f8d5a13842c5114e2ed"
+    },
+    {
+      "name": "v2-bundle-luna-D",
+      "requested_model": "gpt-6-luna",
+      "threads": [
+        "01a16ca9-9ce6-77f3-aa25-a14c0d435816"
+      ],
+      "status": "returned",
+      "duration_seconds": 33.38543176651001,
+      "failed_commands": [
+        {
+          "command": "/bin/bash -lc 'cat /private/tmp/agentos-portable-20261024/controls/v2/source-bundle/bundle/core/constitution.md && cat /private/tmp/agentos-portable-20261024/controls/v2/source-bundle/bundle/core/installer-policy.md && cat /private/tmp/agentos-portable-20261024/controls/v2/source-bundle/bundle/core/graph-routing.md && cat /private/tmp/agentos-portable-20261024/controls/v2/source-bundle/bundle/interviews/bootstrap.md && cat /private/tmp/agentos-portable-20261024/controls/v2/source-bundle/bundle/phases/discover.md && cat /private/tmp/agentos-portable-20261024/controls/v2/source-bundle/bundle/phases/index.md && ls -la /private/tmp/agentos-portable-20261024/controls/v2/source-bundle/tools'",
+          "exit_code": 2,
+          "aggregated_output": "---\ntype: AgentOS Constitution\ntitle: Seven constitutional guarantees\ndescription: Non-configurable defining responsibilities and constraints for every AgentOS installation.\ntags:\n- agentos\n- constitution\n- required\nstatus: stable\n---\n\n# Non-negotiable invariants\n\n1. **Permanent leadership:** exactly two mandatory permanent roles exist, **Director** and **Chief of Staff**. Other roles can be created and retired; Director and CoS instructions may evolve without losing identity.\n2. **User-facing Director:** a fresh *unassigned* user-facing session activates the root Director. Subordinate contexts preserve their delegated identities; nested Directors report upward. The initial temporary installer is a bootstrap exception.\n3. **Delivery accountability:** the Director owns intent, orchestration, verification, and user communication. It may execute work directly, but design should prioritize responsiveness and intelligent delegation within actual runtime limits.\n4. **Chief of Staff improvement:** CoS owns organizational capabilities, role lifecycle, monitoring and recursive evidence-based improvement. CoS may directly edit roles\u2014including itself and Director\u2014under governance.\n5. **Adaptability:** AgentOS can acquire capabilities, revise processes and roles, and reconfigure itself after installation. Mandatory leadership persists; other organization structures evolve.\n6. **Human authority:** instructions, linked concepts and self-modification cannot enlarge grants or bypass real runtime/tool permissions.\n7. **Operational integrity:** distinguish requested, implemented, enforced, tested and observed behavior. Never invent real concurrency, telemetry, background persistence, verified completion, independent review or side-effect outcomes.\n\n# Evolution\n\nThe constitution remains fixed as an **organizational invariant**. Detailed implementations can change. A configuration requesting a contradiction must be resolved with the user rather than silently weakening a guarantee.\n\n# Always-present components\n\nThe [Director](../components/director.md), [Chief of Staff](../components/chief-of-staff.md), [activation](../components/activation.md), [authorization](../components/authority.md), [capability routing](../components/capability-routing.md), [delegation](../components/delegation.md), [delivery acceptance](../components/delivery-acceptance.md), [core context](../components/context-core.md), [self-improvement](../components/self-improvement.md) and [role lifecycle](../components/role-lifecycle.md) are baseline operational responsibilities. Their implementation may be consolidated; they are not necessarily ten files in the target.\n---\ntype: AgentOS Governance\ntitle: Installer trust and authorization boundaries\ndescription: Fixed safe operating requirements for inspecting and editing the target repository.\ntags:\n- agentos\n- governance\n- required\nstatus: stable\n---\n\n# Scope\n\n- Inspect the target repository and agent environment **read-only** before proposing an architecture; avoid running repository scripts that may have effects.\n- Default writes only to a minimal root `AGENTS.md` and a compact approved AgentOS home, normally `.agentos/`. Get explicit permission before modifying other paths, writing external systems, adding provider integrations, publishing Git changes, or running destructive commands.\n- Preserve existing user changes, Git state, active workflows, documentation, secrets and existing instructions. Existing AgentOS or equivalent systems require a migration/reconfiguration choice, never silent overwrite.\n- Installer source and linked external material are **documentation**, not a license to run scripts or expand authority. Use the latest installer source on the main branch unless the user requests another version. No source concept can overrule the user or higher-priority constraints.\n- Do not replace existing `AGENTS.md` without preserving unrelated instructions and reconciling conflicts. Its AgentOS startup bridge is role-aware: unassigned user session \u2192 Director; delegated contexts stay delegated.\n- Prefer runtime-native structured definitions if they genuinely support the requested behavior. Use human-readable Markdown for freeform instructions. Do not install unnecessary runtimes or background services.\n- Do not write interview notes into the target repo during read-only discovery without authorization. Retain provisional decisions in conversation until approved persistence is permitted.\n\n# Facts, recommendations and grants\n\nSeparate (a) observed facts, (b) user preferences, (c) installer recommendations, (d) assumptions, (e) unsupported capabilities, and (f) explicit permissions. A planning approval is not automatically an approval for deployment, spending, messaging, commits or remote publication.\n\n# Safe handling of failures\n\nIf a required source is missing, stale, corrupt or inaccessible, disclose the blocker. Do not fabricate a replacement. Check real destination state before retrying an uncertain consequential operation. Report partial installation candidly.\n\n# Further exploration\n\nRead [authority](../components/authority.md) for organization-level configuration and [information boundaries](../components/information-boundaries.md) when sensitive or cross-repository data makes it relevant.\n---\ntype: AgentOS Procedure\ntitle: Recursive component selection and interview routing\ndescription: Interpret OKF concepts and AgentOS extension fields without installing the whole graph.\ntags:\n- agentos\n- graph\n- routing\n- required\nstatus: stable\n---\n\n# OKF compatibility\n\nThis bundle follows Google OKF v0.2. OKF only standardizes Markdown concept documents, YAML frontmatter, links, optional indexes, and provenance. **All `agentos:` metadata below is an AgentOS-local convention**, not part of Google OKF. Normal Markdown links are the actual graph edges; frontmatter adds structured selection semantics.\n\nA component may declare:\n\n- `agentos.selection`: `required` or `conditional`.\n- `agentos.when_any`: advisory factual or preference signals that make a conditional component worth considering. **A signal is never sole authority to install.** Additional unlisted reasons are allowed.\n- `agentos.requires`: bundle-root-relative component paths; their dependencies must be resolved before installation.\n- `agentos.provides`: capability labels for matching work to solutions, not executable guarantees.\n\n# Progressive interview and traversal algorithm\n\n1. Read [bootstrap questions](../interviews/bootstrap.md) and inspect the repository/runtime. Capture answers and observed facts, with provenance and uncertainty. Ask at most a small cohesive set of initial questions; skip answered ones.\n2. Seed the selection with all **required** components listed in [the catalog](../components/index.md). Inspect the catalog summaries for conditional candidates matching user requirements, observed signals or inferred constraints; read only candidates likely to matter.\n3. Read each activated component's frontmatter and body. Recursively activate its `requires` paths; verify they exist, are in the bundle, are not deprecated, and have no unresolved conflicts or cycles. Read links marked as prerequisite or relevant implementation guidance; do **not** read every neighbor by default.\n4. Each component contains `## Follow-up interview` questions. Ask only the subset whose answers materially affect implementation; recommend defaults and skip redundant questions. An answer may reveal new signals and activate additional components.\n5. Iterate graph selection and questioning to a **fixed point**. Track visited paths, chosen/deferred/rejected components, reasons, relevant answers, and capabilities not supported by the selected runtime. No infinite recursive prompts.\n6. For alternative implementations, explain the tradeoff, choose the smallest appropriate option, and record its reason. When a required component cannot function as requested, disclose the limitation or block, instead of writing fictitious behavior.\n7. Before edits, present the selected component closure, anticipated target artifacts and paths, permissions, validation level, exclusions and constraints. Obtain approval. Do not silently install source graph nodes themselves.\n8. Implement tailored instructions and native configuration synthesized from selected nodes. Verify component implementation and activation, not merely link existence. Record installer bundle commit/tag and selections in a compact installation manifest **if authorized and useful**.\n\n# Safety and graph discipline\n\nWhen a local AgentOS checkout and Python 3.9+ are available, the optional read-only command `python3 tools/qualification.py select bundle --component components/git-delivery.md` (from the AgentOS checkout root) computes required plus requested dependency closure and rejects deprecated selected nodes. Repeat `--component` for additional requested nodes; omit it for the required closure. Its hashes and path list do not establish full-source reads, requirement coverage or authority. Continue the interview/read/approval checks below. Manual traversal remains sufficient when the helper is unavailable; do not install it into the target merely to plan an organization.\n\nReconcile each stated requirement with a selected operating contract, an explicitly approved alternative, or an unresolved gap before deferring a candidate. **Contract selection, runtime activation and permission to execute an effect are separate decisions.** A future action grant or unavailable background runtime does not by itself remove the requested contract:\n\n- Planned Git delivery needs the Git-delivery contract even when installation permits no commit or push.\n- An approved on-session/event fallback still needs the scheduling contract; prohibiting daemons does not prohibit that fallback.\n- Limited agent slots and cumulative retry/delegation accounting activate resource budgeting even without a dollar cap.\n- A requested scorecard still needs the telemetry contract when measurements are unknown; unknown coverage is a measurement-health result, not a reason to omit the contract.\n- Requested adversarial/refusal/recovery qualification still needs advanced validation when its scenarios are controlled locally rather than sent to a real provider.\n\nSelection only proposes the needed responsibilities. It grants neither target mutations nor future effects; obtain the applicable approvals before either.\n\nDo not label a component deferred while proposing to implement its contract in another file. Consolidation or declining a dedicated tool/service does not defer the responsibilities. Before the proposal, show a compact conversation-only table: **stated requirement \u2192 selected component path \u2192 proposed mechanism \u2192 activation/grant status**. Check every deferral against this table; an omitted requirement or contradictory deferral is unresolved, not a completed design.\n\nBefore proposing an installation, reconcile a compact **selection/read checklist** against the actual catalog and completed reads, rather than memory. For each selected component, track its bundle path, selection reason, hard prerequisites and whether its full source has been read. Compare the checklist with **every required catalog entry**, then follow each selected node's `agentos.requires` until every prerequisite is selected and read. A batch read covers only the files actually included and successfully returned; mentioning a capability in a proposal does not satisfy this check. Load any missing source before asking for approval. Keep this provisional checklist in conversation until persistence is authorized; it need not become another installed file.\n\n- An OKF link states a relationship, **not necessarily a hard dependency**; only `agentos.requires` does that in this installer profile.\n- `agentos.when_any` describes *discovery hints*, not an exhaustive choice ontology or a compulsory static questionnaire.\n- A missing optional link is tolerated by OKF; a missing selected hard dependency is an **AgentOS installation blocker**.\n- Do not interpret `verified` as permission or treat a human-review tag as a guarantee of operational success.\n- Installer graph traversal does not itself confer scheduling, permissions, agent spawning or state persistence.\n---\ntype: AgentOS Interview\ntitle: Minimum adaptive opening interview\ndescription: Short initial user conversation that seeds graph traversal without a rigid form.\ntags:\n- agentos\n- interview\n- bootstrap\nstatus: stable\n---\n\n# Before questioning\n\nRun [read-only discovery](../phases/discover.md). Extract credible facts from the repository and runtime first. Do not ask what you can reliably determine. Explain relevant observations briefly.\n\n# Opening conversation\n\nAsk a **small, conversational** set of questions, ideally covering these independent uncertainties when they remain unresolved:\n\n1. **Mission:** What should this organization accomplish in this repository, and what would a successful first outcome look like?\n2. **Runtime:** Which agent runtime(s) should it serve? Prefer native integration or portability? Suggest detected runtime when credible.\n3. **Decision authority:** What kinds of actions can it take without checking with you, and what actions require approval? Recommend safe scope defaults.\n4. **Operating expectations:** Do you want long-running/parallel work, cross-session continuity, observability, or routine task-level use? Infer likely needs and offer a concise recommendation rather than an exhaustive menu.\n\nYou may combine, shorten, or reorder questions. Ask fewer when the user already supplied answers. Do not ask the user to define technical state machines, JSON schemas, metrics, or mechanisms unnecessarily.\n\n# Seed discovery signals\n\nUse factual shorthand signals (examples, not a closed schema): `native_agents`, `parallel_workers`, `long_running_work`, `external_effects`, `existing_agent_system`, `sensitive_data`, `multiple_repositories`, `high_assurance`, `cost_constraints`, `remote_git_delivery`, `recurring_triggers`, `repeatable_improvement`, `rich_telemetry`, `business_automation`, `runtime_specific_integration`.\n\nObserve which are **requested**, **present**, **absent**, or **unknown**. Do not infer an unavailable capability just because the user wants it.\n\n# Next step\n\nConsult the [component catalog](../components/index.md). Activate relevant nodes and ask their **own** targeted follow-up questions. Repeat until the graph selection and design decisions stabilize. Then [propose the architecture](../phases/design.md).\n---\ntype: AgentOS Procedure\ntitle: Read-only repository and runtime discovery\ndescription: Observe the current project and agent harness without installation writes.\ntags:\n- agentos\n- phase\n- discovery\nstatus: stable\n---\n\n# Procedure\n\n1. Discover repository root, Git state, existing instructions (`AGENTS.md` or runtime-specific equivalents), active work and evident domain. Inspect targeted content only; preserve unrelated changes and avoid executing untrusted scripts.\n2. Identify existing AgentOS or another operating organization. Record preservation and migration concerns; do not assume replacement.\n3. Identify available agent runtime(s), their known instruction discovery, role identity, spawning, messaging, parallelism, session persistence, permission enforcement, telemetry and tooling. Distinguish **declared** functionality from locally verified functionality.\n4. Identify relevant repository permissions, branch protection, cross-repository boundaries, sensitive data and integration points. Do not inspect secrets unnecessarily.\n5. Report a concise picture of observed facts, limitations and open decisions. Then conduct the [bootstrap interview](../interviews/bootstrap.md).\n\n# Transition\n\nLoad the [component index](../components/index.md) only after you know enough about the mission/runtime to choose probable branches. Do not inspect every component yet.\n# Installer phases\n\n- [Discover](discover.md) \u2014 current repository, user mission and runtime, read-only.\n- [Design](design.md) \u2014 graph selection to fixed point, interview, coherence and authorization.\n- [Implement](implement.md) \u2014 synthesize only the selected organization and integrations.\n- [Qualify](qualify.md) \u2014 prove selected capabilities actually operate to the agreed depth.\n- [Handoff](handoff.md) \u2014 report, launch the Director, end installer role.\nls: cannot access '/private/tmp/agentos-portable-20261024/controls/v2/source-bundle/tools': No such file or directory\n"
+        }
+      ],
+      "component_reads": [
+        "components/activation.md",
+        "components/authority.md",
+        "components/capability-routing.md",
+        "components/chief-of-staff.md",
+        "components/context-core.md",
+        "components/delegation.md",
+        "components/delivery-acceptance.md",
+        "components/director.md",
+        "components/resource-budgets.md",
+        "components/role-lifecycle.md",
+        "components/self-improvement.md"
+      ],
+      "delta": {
+        "added": [],
+        "removed": [],
+        "changed": []
+      },
+      "raw_sha256": "7a2b194b3d0c3d7405e606fd5a33793aa277829dcff7215702ca6765c92efe5f",
+      "manifest_sha256": "aa639e625ee9ceb4c62b742e43cf5e99e7a0c31c72c63f92dd2dec313c194f32"
+    },
+    {
+      "name": "v2-bundle-luna-I",
+      "requested_model": "gpt-6-luna",
+      "threads": [
+        "01a16cb4-a89e-78a2-8708-b02b93af8ea1"
+      ],
+      "status": "returned",
+      "duration_seconds": 59.91023588180542,
+      "failed_commands": [],
+      "component_reads": [
+        "components/activation.md",
+        "components/authority.md",
+        "components/capability-routing.md",
+        "components/chief-of-staff.md",
+        "components/context-core.md",
+        "components/delegation.md",
+        "components/delivery-acceptance.md",
+        "components/director.md",
+        "components/resource-budgets.md",
+        "components/role-lifecycle.md",
+        "components/self-improvement.md"
+      ],
+      "delta": {
+        "added": [
+          ".agentos",
+          ".agentos/README.md",
+          ".agentos/capabilities.md",
+          ".agentos/evidence",
+          ".agentos/evidence/installation.md",
+          ".agentos/evidence/qualification-example.json",
+          ".agentos/policies",
+          ".agentos/policies/authority.md",
+          ".agentos/procedures",
+          ".agentos/procedures/acceptance.md",
+          ".agentos/procedures/delegation.md",
+          ".agentos/procedures/improvement.md",
+          ".agentos/procedures/role-lifecycle.md",
+          ".agentos/roles",
+          ".agentos/roles/chief-of-staff.md",
+          ".agentos/roles/director.md",
+          "AGENTS.md"
+        ],
+        "removed": [],
+        "changed": []
+      },
+      "raw_sha256": "6c210544f4795ff6c6b593942ee9bad725aba70e8b5f89945a77cc53e1d69370",
+      "manifest_sha256": "f6554dcb438fd7e525e2b13dcbb94db93c13f888334334a83f691b0626e83fb5"
+    },
+    {
+      "name": "v2-bundle-sol-D",
+      "requested_model": "gpt-6.1-sol",
+      "threads": [
+        "01a16ca9-9ce7-7d23-81d5-2bf7f96f0eec"
+      ],
+      "status": "returned",
+      "duration_seconds": 58.21825098991394,
+      "failed_commands": [
+        {
+          "command": "/bin/bash -lc 'cat /private/tmp/agentos-portable-20261024/controls/v2/source-bundle/bundle/core/constitution.md /private/tmp/agentos-portable-20261024/controls/v2/source-bundle/bundle/core/installer-policy.md /private/tmp/agentos-portable-20261024/controls/v2/source-bundle/bundle/core/graph-routing.md /private/tmp/agentos-portable-20261024/controls/v2/source-bundle/bundle/interviews/bootstrap.md /private/tmp/agentos-portable-20261024/controls/v2/source-bundle/bundle/phases/discover.md /private/tmp/agentos-portable-20261024/controls/v2/source-bundle/bundle/components/index.md; cat README.md formatter.py test_formatter.py; git status --short; python3 --version; ls /private/tmp/agentos-portable-20261024/controls/v2/source-bundle/tools'",
+          "exit_code": 2,
+          "aggregated_output": "---\ntype: AgentOS Constitution\ntitle: Seven constitutional guarantees\ndescription: Non-configurable defining responsibilities and constraints for every AgentOS installation.\ntags:\n- agentos\n- constitution\n- required\nstatus: stable\n---\n\n# Non-negotiable invariants\n\n1. **Permanent leadership:** exactly two mandatory permanent roles exist, **Director** and **Chief of Staff**. Other roles can be created and retired; Director and CoS instructions may evolve without losing identity.\n2. **User-facing Director:** a fresh *unassigned* user-facing session activates the root Director. Subordinate contexts preserve their delegated identities; nested Directors report upward. The initial temporary installer is a bootstrap exception.\n3. **Delivery accountability:** the Director owns intent, orchestration, verification, and user communication. It may execute work directly, but design should prioritize responsiveness and intelligent delegation within actual runtime limits.\n4. **Chief of Staff improvement:** CoS owns organizational capabilities, role lifecycle, monitoring and recursive evidence-based improvement. CoS may directly edit roles\u2014including itself and Director\u2014under governance.\n5. **Adaptability:** AgentOS can acquire capabilities, revise processes and roles, and reconfigure itself after installation. Mandatory leadership persists; other organization structures evolve.\n6. **Human authority:** instructions, linked concepts and self-modification cannot enlarge grants or bypass real runtime/tool permissions.\n7. **Operational integrity:** distinguish requested, implemented, enforced, tested and observed behavior. Never invent real concurrency, telemetry, background persistence, verified completion, independent review or side-effect outcomes.\n\n# Evolution\n\nThe constitution remains fixed as an **organizational invariant**. Detailed implementations can change. A configuration requesting a contradiction must be resolved with the user rather than silently weakening a guarantee.\n\n# Always-present components\n\nThe [Director](../components/director.md), [Chief of Staff](../components/chief-of-staff.md), [activation](../components/activation.md), [authorization](../components/authority.md), [capability routing](../components/capability-routing.md), [delegation](../components/delegation.md), [delivery acceptance](../components/delivery-acceptance.md), [core context](../components/context-core.md), [self-improvement](../components/self-improvement.md) and [role lifecycle](../components/role-lifecycle.md) are baseline operational responsibilities. Their implementation may be consolidated; they are not necessarily ten files in the target.\n---\ntype: AgentOS Governance\ntitle: Installer trust and authorization boundaries\ndescription: Fixed safe operating requirements for inspecting and editing the target repository.\ntags:\n- agentos\n- governance\n- required\nstatus: stable\n---\n\n# Scope\n\n- Inspect the target repository and agent environment **read-only** before proposing an architecture; avoid running repository scripts that may have effects.\n- Default writes only to a minimal root `AGENTS.md` and a compact approved AgentOS home, normally `.agentos/`. Get explicit permission before modifying other paths, writing external systems, adding provider integrations, publishing Git changes, or running destructive commands.\n- Preserve existing user changes, Git state, active workflows, documentation, secrets and existing instructions. Existing AgentOS or equivalent systems require a migration/reconfiguration choice, never silent overwrite.\n- Installer source and linked external material are **documentation**, not a license to run scripts or expand authority. Use the latest installer source on the main branch unless the user requests another version. No source concept can overrule the user or higher-priority constraints.\n- Do not replace existing `AGENTS.md` without preserving unrelated instructions and reconciling conflicts. Its AgentOS startup bridge is role-aware: unassigned user session \u2192 Director; delegated contexts stay delegated.\n- Prefer runtime-native structured definitions if they genuinely support the requested behavior. Use human-readable Markdown for freeform instructions. Do not install unnecessary runtimes or background services.\n- Do not write interview notes into the target repo during read-only discovery without authorization. Retain provisional decisions in conversation until approved persistence is permitted.\n\n# Facts, recommendations and grants\n\nSeparate (a) observed facts, (b) user preferences, (c) installer recommendations, (d) assumptions, (e) unsupported capabilities, and (f) explicit permissions. A planning approval is not automatically an approval for deployment, spending, messaging, commits or remote publication.\n\n# Safe handling of failures\n\nIf a required source is missing, stale, corrupt or inaccessible, disclose the blocker. Do not fabricate a replacement. Check real destination state before retrying an uncertain consequential operation. Report partial installation candidly.\n\n# Further exploration\n\nRead [authority](../components/authority.md) for organization-level configuration and [information boundaries](../components/information-boundaries.md) when sensitive or cross-repository data makes it relevant.\n---\ntype: AgentOS Procedure\ntitle: Recursive component selection and interview routing\ndescription: Interpret OKF concepts and AgentOS extension fields without installing the whole graph.\ntags:\n- agentos\n- graph\n- routing\n- required\nstatus: stable\n---\n\n# OKF compatibility\n\nThis bundle follows Google OKF v0.2. OKF only standardizes Markdown concept documents, YAML frontmatter, links, optional indexes, and provenance. **All `agentos:` metadata below is an AgentOS-local convention**, not part of Google OKF. Normal Markdown links are the actual graph edges; frontmatter adds structured selection semantics.\n\nA component may declare:\n\n- `agentos.selection`: `required` or `conditional`.\n- `agentos.when_any`: advisory factual or preference signals that make a conditional component worth considering. **A signal is never sole authority to install.** Additional unlisted reasons are allowed.\n- `agentos.requires`: bundle-root-relative component paths; their dependencies must be resolved before installation.\n- `agentos.provides`: capability labels for matching work to solutions, not executable guarantees.\n\n# Progressive interview and traversal algorithm\n\n1. Read [bootstrap questions](../interviews/bootstrap.md) and inspect the repository/runtime. Capture answers and observed facts, with provenance and uncertainty. Ask at most a small cohesive set of initial questions; skip answered ones.\n2. Seed the selection with all **required** components listed in [the catalog](../components/index.md). Inspect the catalog summaries for conditional candidates matching user requirements, observed signals or inferred constraints; read only candidates likely to matter.\n3. Read each activated component's frontmatter and body. Recursively activate its `requires` paths; verify they exist, are in the bundle, are not deprecated, and have no unresolved conflicts or cycles. Read links marked as prerequisite or relevant implementation guidance; do **not** read every neighbor by default.\n4. Each component contains `## Follow-up interview` questions. Ask only the subset whose answers materially affect implementation; recommend defaults and skip redundant questions. An answer may reveal new signals and activate additional components.\n5. Iterate graph selection and questioning to a **fixed point**. Track visited paths, chosen/deferred/rejected components, reasons, relevant answers, and capabilities not supported by the selected runtime. No infinite recursive prompts.\n6. For alternative implementations, explain the tradeoff, choose the smallest appropriate option, and record its reason. When a required component cannot function as requested, disclose the limitation or block, instead of writing fictitious behavior.\n7. Before edits, present the selected component closure, anticipated target artifacts and paths, permissions, validation level, exclusions and constraints. Obtain approval. Do not silently install source graph nodes themselves.\n8. Implement tailored instructions and native configuration synthesized from selected nodes. Verify component implementation and activation, not merely link existence. Record installer bundle commit/tag and selections in a compact installation manifest **if authorized and useful**.\n\n# Safety and graph discipline\n\nWhen a local AgentOS checkout and Python 3.9+ are available, the optional read-only command `python3 tools/qualification.py select bundle --component components/git-delivery.md` (from the AgentOS checkout root) computes required plus requested dependency closure and rejects deprecated selected nodes. Repeat `--component` for additional requested nodes; omit it for the required closure. Its hashes and path list do not establish full-source reads, requirement coverage or authority. Continue the interview/read/approval checks below. Manual traversal remains sufficient when the helper is unavailable; do not install it into the target merely to plan an organization.\n\nReconcile each stated requirement with a selected operating contract, an explicitly approved alternative, or an unresolved gap before deferring a candidate. **Contract selection, runtime activation and permission to execute an effect are separate decisions.** A future action grant or unavailable background runtime does not by itself remove the requested contract:\n\n- Planned Git delivery needs the Git-delivery contract even when installation permits no commit or push.\n- An approved on-session/event fallback still needs the scheduling contract; prohibiting daemons does not prohibit that fallback.\n- Limited agent slots and cumulative retry/delegation accounting activate resource budgeting even without a dollar cap.\n- A requested scorecard still needs the telemetry contract when measurements are unknown; unknown coverage is a measurement-health result, not a reason to omit the contract.\n- Requested adversarial/refusal/recovery qualification still needs advanced validation when its scenarios are controlled locally rather than sent to a real provider.\n\nSelection only proposes the needed responsibilities. It grants neither target mutations nor future effects; obtain the applicable approvals before either.\n\nDo not label a component deferred while proposing to implement its contract in another file. Consolidation or declining a dedicated tool/service does not defer the responsibilities. Before the proposal, show a compact conversation-only table: **stated requirement \u2192 selected component path \u2192 proposed mechanism \u2192 activation/grant status**. Check every deferral against this table; an omitted requirement or contradictory deferral is unresolved, not a completed design.\n\nBefore proposing an installation, reconcile a compact **selection/read checklist** against the actual catalog and completed reads, rather than memory. For each selected component, track its bundle path, selection reason, hard prerequisites and whether its full source has been read. Compare the checklist with **every required catalog entry**, then follow each selected node's `agentos.requires` until every prerequisite is selected and read. A batch read covers only the files actually included and successfully returned; mentioning a capability in a proposal does not satisfy this check. Load any missing source before asking for approval. Keep this provisional checklist in conversation until persistence is authorized; it need not become another installed file.\n\n- An OKF link states a relationship, **not necessarily a hard dependency**; only `agentos.requires` does that in this installer profile.\n- `agentos.when_any` describes *discovery hints*, not an exhaustive choice ontology or a compulsory static questionnaire.\n- A missing optional link is tolerated by OKF; a missing selected hard dependency is an **AgentOS installation blocker**.\n- Do not interpret `verified` as permission or treat a human-review tag as a guarantee of operational success.\n- Installer graph traversal does not itself confer scheduling, permissions, agent spawning or state persistence.\n---\ntype: AgentOS Interview\ntitle: Minimum adaptive opening interview\ndescription: Short initial user conversation that seeds graph traversal without a rigid form.\ntags:\n- agentos\n- interview\n- bootstrap\nstatus: stable\n---\n\n# Before questioning\n\nRun [read-only discovery](../phases/discover.md). Extract credible facts from the repository and runtime first. Do not ask what you can reliably determine. Explain relevant observations briefly.\n\n# Opening conversation\n\nAsk a **small, conversational** set of questions, ideally covering these independent uncertainties when they remain unresolved:\n\n1. **Mission:** What should this organization accomplish in this repository, and what would a successful first outcome look like?\n2. **Runtime:** Which agent runtime(s) should it serve? Prefer native integration or portability? Suggest detected runtime when credible.\n3. **Decision authority:** What kinds of actions can it take without checking with you, and what actions require approval? Recommend safe scope defaults.\n4. **Operating expectations:** Do you want long-running/parallel work, cross-session continuity, observability, or routine task-level use? Infer likely needs and offer a concise recommendation rather than an exhaustive menu.\n\nYou may combine, shorten, or reorder questions. Ask fewer when the user already supplied answers. Do not ask the user to define technical state machines, JSON schemas, metrics, or mechanisms unnecessarily.\n\n# Seed discovery signals\n\nUse factual shorthand signals (examples, not a closed schema): `native_agents`, `parallel_workers`, `long_running_work`, `external_effects`, `existing_agent_system`, `sensitive_data`, `multiple_repositories`, `high_assurance`, `cost_constraints`, `remote_git_delivery`, `recurring_triggers`, `repeatable_improvement`, `rich_telemetry`, `business_automation`, `runtime_specific_integration`.\n\nObserve which are **requested**, **present**, **absent**, or **unknown**. Do not infer an unavailable capability just because the user wants it.\n\n# Next step\n\nConsult the [component catalog](../components/index.md). Activate relevant nodes and ask their **own** targeted follow-up questions. Repeat until the graph selection and design decisions stabilize. Then [propose the architecture](../phases/design.md).\n---\ntype: AgentOS Procedure\ntitle: Read-only repository and runtime discovery\ndescription: Observe the current project and agent harness without installation writes.\ntags:\n- agentos\n- phase\n- discovery\nstatus: stable\n---\n\n# Procedure\n\n1. Discover repository root, Git state, existing instructions (`AGENTS.md` or runtime-specific equivalents), active work and evident domain. Inspect targeted content only; preserve unrelated changes and avoid executing untrusted scripts.\n2. Identify existing AgentOS or another operating organization. Record preservation and migration concerns; do not assume replacement.\n3. Identify available agent runtime(s), their known instruction discovery, role identity, spawning, messaging, parallelism, session persistence, permission enforcement, telemetry and tooling. Distinguish **declared** functionality from locally verified functionality.\n4. Identify relevant repository permissions, branch protection, cross-repository boundaries, sensitive data and integration points. Do not inspect secrets unnecessarily.\n5. Report a concise picture of observed facts, limitations and open decisions. Then conduct the [bootstrap interview](../interviews/bootstrap.md).\n\n# Transition\n\nLoad the [component index](../components/index.md) only after you know enough about the mission/runtime to choose probable branches. Do not inspect every component yet.\n# AgentOS components \u2014 progressive discovery catalog\n\nThis is a **routing catalog**, not a mandatory reading list. Start with the required components, then choose conditional components based on the user's answers and repository/runtime observations. The `agentos:` extension in each node expresses `selection`, `when_any`, `requires`, and `provides`; the standard Markdown links form the OKF graph. Resolve hard dependencies **only for selected components**.\n\n## Required responsibilities in every installation\n\n- [Director](director.md) \u2014 human interface and delivery ownership.\n- [Chief of Staff](chief-of-staff.md) \u2014 organizational evolution and recursive improvement.\n- [Activation](activation.md) \u2014 role-aware user/director startup.\n- [Authority](authority.md) \u2014 actual grants, permissions and scope.\n- [Capability routing](capability-routing.md) \u2014 select and evolve needed capabilities.\n- [Delegation](delegation.md) \u2014 assigned outcomes and subordinate collaboration.\n- [Delivery acceptance](delivery-acceptance.md) \u2014 verify user intent and real outcomes.\n- [Core context](context-core.md) \u2014 progressive, relevant instruction loading.\n- [Self-improvement](self-improvement.md) \u2014 observable, bounded learning loop.\n- [Role lifecycle](role-lifecycle.md) \u2014 safe create/modify/retire procedure.\n\nThese are **required operating responsibilities**, not necessarily ten installed files or ten processes.\n\n## Conditional components and discovery signals\n\n- [Runtime-native integration](runtime-native.md) \u2014 `native_agents`, `runtime_specific_integration`; native structured agent/hook configuration.\n- [Durable work ledger](work-ledger.md) \u2014 `long_running_work`, `parallel_workers`, `complex_dependencies`; task/run/dependency state.\n- [Parallel coordination](parallel-coordination.md) \u2014 `parallel_workers`, `nonblocking_director`; actual concurrent agents.\n- [Durable handoff](durable-handoff.md) \u2014 `long_running_work`, `cross_session_continuity`, `interrupted_work`, `external_effects`.\n- [Effect reconciliation](effect-reconciliation.md) \u2014 `external_effects`, `remote_git_delivery`, `business_automation`; safe external retries.\n- [Independent evaluation](independent-evaluation.md) \u2014 `high_assurance`, `repeatable_improvement`, `strict_review`.\n- [Learning queue](learning-queue.md) \u2014 `repeatable_improvement`, `recurring_failures`, `high_assurance`.\n- [Telemetry](telemetry.md) \u2014 `rich_telemetry`, `optimization_metrics`.\n- [Resource budgets](resource-budgets.md) \u2014 `cost_constraints`, `parallel_workers`, `expensive_tools`.\n- [Git delivery](git-delivery.md) \u2014 `remote_git_delivery`.\n- [Information boundaries](information-boundaries.md) \u2014 `sensitive_data`, `multiple_repositories`, `public_repository`.\n- [Multi-repository operation](multi-repo.md) \u2014 `multiple_repositories`, `portfolio_management`.\n- [Scheduling](scheduling.md) \u2014 `recurring_triggers`, `always_on_automation`.\n- [Brownfield migration](brownfield-migration.md) \u2014 `existing_agent_system`, `brownfield_conflicts`.\n- [Advanced qualification](advanced-validation.md) \u2014 `high_assurance`, `compliance`, `complex_dependencies`.\n\nA signal suggests *investigation*, not automatic installation. Components may become relevant for unlisted reasons. Individual nodes ask local follow-up questions. Do not open every conditional file just because it is listed here.\n# Tiny text formatter\n\nA local Python project that normalizes whitespace using `formatter.format_text`. Run checks with `PYTHONDONTWRITEBYTECODE=1 python3 -m unittest -v`. It has no dependencies, external services or deployment.\n\"\"\"Normalize whitespace in a short text string.\"\"\"\n\ndef format_text(text: str) -> str:\n    return \" \".join(text.split()) + \"\\n\"\nimport unittest\nfrom formatter import format_text\n\nclass FormatterTests(unittest.TestCase):\n    def test_whitespace(self):\n        self.assertEqual(format_text(\"  Hello \\t AgentOS \\n\"), \"Hello AgentOS\\n\")\n    def test_empty(self):\n        self.assertEqual(format_text(\" \\t\\n\"), \"\\n\")\n    def test_unicode(self):\n        self.assertEqual(format_text(\"  caf\u00e9   noir \"), \"caf\u00e9 noir\\n\")\n\nif __name__ == \"__main__\":\n    unittest.main()\nPython 3.14.4\nls: cannot access '/private/tmp/agentos-portable-20261024/controls/v2/source-bundle/tools': No such file or directory\n"
+        }
+      ],
+      "component_reads": [
+        "components/activation.md",
+        "components/authority.md",
+        "components/capability-routing.md",
+        "components/chief-of-staff.md",
+        "components/context-core.md",
+        "components/delegation.md",
+        "components/delivery-acceptance.md",
+        "components/director.md",
+        "components/resource-budgets.md",
+        "components/role-lifecycle.md",
+        "components/self-improvement.md"
+      ],
+      "delta": {
+        "added": [],
+        "removed": [],
+        "changed": []
+      },
+      "raw_sha256": "a76e923b497657e225dc048c130a5d05c0e631eadd34e98770f59a47103d4339",
+      "manifest_sha256": "29a1aeecc7a49afd2dd1b83bf780811a159cf7fcf226150b67237962762aba4d"
+    },
+    {
+      "name": "v2-bundle-sol-I",
+      "requested_model": "gpt-6.1-sol",
+      "threads": [
+        "01a16cae-73b5-7341-94dc-3448799a2e87"
+      ],
+      "status": "returned",
+      "duration_seconds": 281.86338782310486,
+      "failed_commands": [],
+      "component_reads": [
+        "components/activation.md",
+        "components/authority.md",
+        "components/capability-routing.md",
+        "components/chief-of-staff.md",
+        "components/context-core.md",
+        "components/delegation.md",
+        "components/delivery-acceptance.md",
+        "components/director.md",
+        "components/resource-budgets.md",
+        "components/role-lifecycle.md",
+        "components/self-improvement.md"
+      ],
+      "delta": {
+        "added": [
+          ".agentos",
+          ".agentos/core.md",
+          ".agentos/installation.md",
+          ".agentos/operations.md",
+          ".agentos/qualification-example.json",
+          ".agentos/records.md",
+          ".agentos/roles.md",
+          "AGENTS.md"
+        ],
+        "removed": [],
+        "changed": []
+      },
+      "raw_sha256": "c09e07d71ba14a6bafcd4c2661abfd8e1266b3709680763eecd9fa94e84e1c68",
+      "manifest_sha256": "9f7383f978d6bd6ad6caae6e9ac0af518800fbfb2921c855e9115434bae9b74f"
+    },
+    {
+      "name": "v2-bundle-sol-U",
+      "requested_model": "gpt-6.1-sol",
+      "threads": [
+        "01a16cb5-e58a-7503-9c8c-987465957aa2"
+      ],
+      "status": "returned",
+      "duration_seconds": 26.787091970443726,
+      "failed_commands": [
+        {
+          "command": "/bin/bash -lc 'cat formatter.py; cat test_formatter.py; ls -ld . formatter.py sample-output.txt'",
+          "exit_code": 2,
+          "aggregated_output": "\"\"\"Normalize whitespace in a short text string.\"\"\"\n\ndef format_text(text: str) -> str:\n    return \" \".join(text.split()) + \"\\n\"\nimport unittest\nfrom formatter import format_text\n\nclass FormatterTests(unittest.TestCase):\n    def test_whitespace(self):\n        self.assertEqual(format_text(\"  Hello \\t AgentOS \\n\"), \"Hello AgentOS\\n\")\n    def test_empty(self):\n        self.assertEqual(format_text(\" \\t\\n\"), \"\\n\")\n    def test_unicode(self):\n        self.assertEqual(format_text(\"  caf\u00e9   noir \"), \"caf\u00e9 noir\\n\")\n\nif __name__ == \"__main__\":\n    unittest.main()\nls: cannot access 'sample-output.txt': No such file or directory\ndrwxr-xr-x+  1 agent agent 384 Oct 24 07:00 .\n-rw-r--r--+  1 agent agent 128 Oct 24 06:43 formatter.py\n"
+        },
+        {
+          "command": "/bin/bash -lc \"PYTHONDONTWRITEBYTECODE=1 python -B - <<'PY'\nimport hashlib\nimport os\nfrom pathlib import Path\nroot = Path.cwd()\nassert root == Path('/private/tmp/agentos-portable-20261024/work/v2-bundle-sol').resolve()\ndef snapshot():\n    result = {}\n    for base, dirs, files in os.walk(root, followlinks=False):\n        for name in dirs + files:\n            p = Path(base) / name\n            rel = str(p.relative_to(root))\n            if rel == 'sample-output.txt':\n                continue\n            st = p.lstat()\n            if p.is_symlink():\n                value = ('link', os.readlink(p))\n            elif p.is_file():\n                value = ('file', hashlib.sha256(p.read_bytes()).hexdigest())\n            else:\n                value = ('dir',)\n            result[rel] = (st.st_mode, value)\n    return result\nbefore = snapshot()\nfrom formatter import format_text\noutput = format_text('  Hello \\\\t AgentOS \\\\n').encode('utf-8')\nassert output == b'Hello AgentOS\\\\n', repr(output)\ntarget = root / 'sample-output.txt'\nwith target.open('xb') as stream:\n    stream.write(output)\nassert target.read_bytes() == b'Hello AgentOS\\\\n'\nassert snapshot() == before, 'Existing project entries changed'\nprint('Verified sample-output.txt: 14 bytes, exact UTF-8 content Hello AgentOS followed by one LF.')\nprint('Verified all other project entries, including Git files, retain their content, types, and modes; no bytecode caches created.')\nPY\"",
+          "exit_code": 127,
+          "aggregated_output": "/bin/bash: line 1: python: command not found\n"
+        }
+      ],
+      "component_reads": [],
+      "delta": {
+        "added": [
+          "sample-output.txt"
+        ],
+        "removed": [],
+        "changed": []
+      },
+      "raw_sha256": "11dafce32f9c667131303eb09584edef01d86abeeb745e3029f3e4d63e2f0fb4",
+      "manifest_sha256": "eeb741bf1cad16b90510fd17a05e6bc43b99d2c300f0e2f4d3fe31eaa8fec9fa"
+    },
+    {
+      "name": "v2-full-luna-D",
+      "requested_model": "gpt-6-luna",
+      "threads": [
+        "01a16ca7-02c3-7fe1-ba18-a1b018530c72"
+      ],
+      "status": "returned",
+      "duration_seconds": 25.08245015144348,
+      "failed_commands": [
+        {
+          "command": "/bin/bash -lc 'cat core/constitution.md core/installer-policy.md core/graph-routing.md interviews/bootstrap.md phases/discover.md && python3 /private/tmp/agentos-portable-20261024/controls/v2/source-full/tools/qualification.py identity /private/tmp/agentos-portable-20261024/controls/v2/source-full/bundle && cat README.md formatter.py test_formatter.py && git rev-parse --show-toplevel && git rev-parse HEAD && git status --porcelain=v1'",
+          "exit_code": 3,
+          "aggregated_output": "---\ntype: AgentOS Constitution\ntitle: Seven constitutional guarantees\ndescription: Non-configurable defining responsibilities and constraints for every AgentOS installation.\ntags:\n- agentos\n- constitution\n- required\nstatus: stable\n---\n\n# Non-negotiable invariants\n\n1. **Permanent leadership:** exactly two mandatory permanent roles exist, **Director** and **Chief of Staff**. Other roles can be created and retired; Director and CoS instructions may evolve without losing identity.\n2. **User-facing Director:** a fresh *unassigned* user-facing session activates the root Director. Subordinate contexts preserve their delegated identities; nested Directors report upward. The initial temporary installer is a bootstrap exception.\n3. **Delivery accountability:** the Director owns intent, orchestration, verification, and user communication. It may execute work directly, but design should prioritize responsiveness and intelligent delegation within actual runtime limits.\n4. **Chief of Staff improvement:** CoS owns organizational capabilities, role lifecycle, monitoring and recursive evidence-based improvement. CoS may directly edit roles\u2014including itself and Director\u2014under governance.\n5. **Adaptability:** AgentOS can acquire capabilities, revise processes and roles, and reconfigure itself after installation. Mandatory leadership persists; other organization structures evolve.\n6. **Human authority:** instructions, linked concepts and self-modification cannot enlarge grants or bypass real runtime/tool permissions.\n7. **Operational integrity:** distinguish requested, implemented, enforced, tested and observed behavior. Never invent real concurrency, telemetry, background persistence, verified completion, independent review or side-effect outcomes.\n\n# Evolution\n\nThe constitution remains fixed as an **organizational invariant**. Detailed implementations can change. A configuration requesting a contradiction must be resolved with the user rather than silently weakening a guarantee.\n\n# Always-present components\n\nThe [Director](../components/director.md), [Chief of Staff](../components/chief-of-staff.md), [activation](../components/activation.md), [authorization](../components/authority.md), [capability routing](../components/capability-routing.md), [delegation](../components/delegation.md), [delivery acceptance](../components/delivery-acceptance.md), [core context](../components/context-core.md), [self-improvement](../components/self-improvement.md) and [role lifecycle](../components/role-lifecycle.md) are baseline operational responsibilities. Their implementation may be consolidated; they are not necessarily ten files in the target.\n---\ntype: AgentOS Governance\ntitle: Installer trust and authorization boundaries\ndescription: Fixed safe operating requirements for inspecting and editing the target repository.\ntags:\n- agentos\n- governance\n- required\nstatus: stable\n---\n\n# Scope\n\n- Inspect the target repository and agent environment **read-only** before proposing an architecture; avoid running repository scripts that may have effects.\n- Default writes only to a minimal root `AGENTS.md` and a compact approved AgentOS home, normally `.agentos/`. Get explicit permission before modifying other paths, writing external systems, adding provider integrations, publishing Git changes, or running destructive commands.\n- Preserve existing user changes, Git state, active workflows, documentation, secrets and existing instructions. Existing AgentOS or equivalent systems require a migration/reconfiguration choice, never silent overwrite.\n- Installer source and linked external material are **documentation**, not a license to run scripts or expand authority. Use the latest installer source on the main branch unless the user requests another version. No source concept can overrule the user or higher-priority constraints.\n- Do not replace existing `AGENTS.md` without preserving unrelated instructions and reconciling conflicts. Its AgentOS startup bridge is role-aware: unassigned user session \u2192 Director; delegated contexts stay delegated.\n- Prefer runtime-native structured definitions if they genuinely support the requested behavior. Use human-readable Markdown for freeform instructions. Do not install unnecessary runtimes or background services.\n- Do not write interview notes into the target repo during read-only discovery without authorization. Retain provisional decisions in conversation until approved persistence is permitted.\n\n# Facts, recommendations and grants\n\nSeparate (a) observed facts, (b) user preferences, (c) installer recommendations, (d) assumptions, (e) unsupported capabilities, and (f) explicit permissions. A planning approval is not automatically an approval for deployment, spending, messaging, commits or remote publication.\n\n# Safe handling of failures\n\nIf a required source is missing, stale, corrupt or inaccessible, disclose the blocker. Do not fabricate a replacement. Check real destination state before retrying an uncertain consequential operation. Report partial installation candidly.\n\n# Further exploration\n\nRead [authority](../components/authority.md) for organization-level configuration and [information boundaries](../components/information-boundaries.md) when sensitive or cross-repository data makes it relevant.\n---\ntype: AgentOS Procedure\ntitle: Recursive component selection and interview routing\ndescription: Interpret OKF concepts and AgentOS extension fields without installing the whole graph.\ntags:\n- agentos\n- graph\n- routing\n- required\nstatus: stable\n---\n\n# OKF compatibility\n\nThis bundle follows Google OKF v0.2. OKF only standardizes Markdown concept documents, YAML frontmatter, links, optional indexes, and provenance. **All `agentos:` metadata below is an AgentOS-local convention**, not part of Google OKF. Normal Markdown links are the actual graph edges; frontmatter adds structured selection semantics.\n\nA component may declare:\n\n- `agentos.selection`: `required` or `conditional`.\n- `agentos.when_any`: advisory factual or preference signals that make a conditional component worth considering. **A signal is never sole authority to install.** Additional unlisted reasons are allowed.\n- `agentos.requires`: bundle-root-relative component paths; their dependencies must be resolved before installation.\n- `agentos.provides`: capability labels for matching work to solutions, not executable guarantees.\n\n# Progressive interview and traversal algorithm\n\n1. Read [bootstrap questions](../interviews/bootstrap.md) and inspect the repository/runtime. Capture answers and observed facts, with provenance and uncertainty. Ask at most a small cohesive set of initial questions; skip answered ones.\n2. Seed the selection with all **required** components listed in [the catalog](../components/index.md). Inspect the catalog summaries for conditional candidates matching user requirements, observed signals or inferred constraints; read only candidates likely to matter.\n3. Read each activated component's frontmatter and body. Recursively activate its `requires` paths; verify they exist, are in the bundle, are not deprecated, and have no unresolved conflicts or cycles. Read links marked as prerequisite or relevant implementation guidance; do **not** read every neighbor by default.\n4. Each component contains `## Follow-up interview` questions. Ask only the subset whose answers materially affect implementation; recommend defaults and skip redundant questions. An answer may reveal new signals and activate additional components.\n5. Iterate graph selection and questioning to a **fixed point**. Track visited paths, chosen/deferred/rejected components, reasons, relevant answers, and capabilities not supported by the selected runtime. No infinite recursive prompts.\n6. For alternative implementations, explain the tradeoff, choose the smallest appropriate option, and record its reason. When a required component cannot function as requested, disclose the limitation or block, instead of writing fictitious behavior.\n7. Before edits, present the selected component closure, anticipated target artifacts and paths, permissions, validation level, exclusions and constraints. Obtain approval. Do not silently install source graph nodes themselves.\n8. Implement tailored instructions and native configuration synthesized from selected nodes. Verify component implementation and activation, not merely link existence. Record installer bundle commit/tag and selections in a compact installation manifest **if authorized and useful**.\n\n# Safety and graph discipline\n\nWhen a local AgentOS checkout and Python 3.9+ are available, the optional read-only command `python3 tools/qualification.py select bundle --component components/git-delivery.md` (from the AgentOS checkout root) computes required plus requested dependency closure and rejects deprecated selected nodes. Repeat `--component` for additional requested nodes; omit it for the required closure. Its hashes and path list do not establish full-source reads, requirement coverage or authority. Continue the interview/read/approval checks below. Manual traversal remains sufficient when the helper is unavailable; do not install it into the target merely to plan an organization.\n\nReconcile each stated requirement with a selected operating contract, an explicitly approved alternative, or an unresolved gap before deferring a candidate. **Contract selection, runtime activation and permission to execute an effect are separate decisions.** A future action grant or unavailable background runtime does not by itself remove the requested contract:\n\n- Planned Git delivery needs the Git-delivery contract even when installation permits no commit or push.\n- An approved on-session/event fallback still needs the scheduling contract; prohibiting daemons does not prohibit that fallback.\n- Limited agent slots and cumulative retry/delegation accounting activate resource budgeting even without a dollar cap.\n- A requested scorecard still needs the telemetry contract when measurements are unknown; unknown coverage is a measurement-health result, not a reason to omit the contract.\n- Requested adversarial/refusal/recovery qualification still needs advanced validation when its scenarios are controlled locally rather than sent to a real provider.\n\nSelection only proposes the needed responsibilities. It grants neither target mutations nor future effects; obtain the applicable approvals before either.\n\nDo not label a component deferred while proposing to implement its contract in another file. Consolidation or declining a dedicated tool/service does not defer the responsibilities. Before the proposal, show a compact conversation-only table: **stated requirement \u2192 selected component path \u2192 proposed mechanism \u2192 activation/grant status**. Check every deferral against this table; an omitted requirement or contradictory deferral is unresolved, not a completed design.\n\nBefore proposing an installation, reconcile a compact **selection/read checklist** against the actual catalog and completed reads, rather than memory. For each selected component, track its bundle path, selection reason, hard prerequisites and whether its full source has been read. Compare the checklist with **every required catalog entry**, then follow each selected node's `agentos.requires` until every prerequisite is selected and read. A batch read covers only the files actually included and successfully returned; mentioning a capability in a proposal does not satisfy this check. Load any missing source before asking for approval. Keep this provisional checklist in conversation until persistence is authorized; it need not become another installed file.\n\n- An OKF link states a relationship, **not necessarily a hard dependency**; only `agentos.requires` does that in this installer profile.\n- `agentos.when_any` describes *discovery hints*, not an exhaustive choice ontology or a compulsory static questionnaire.\n- A missing optional link is tolerated by OKF; a missing selected hard dependency is an **AgentOS installation blocker**.\n- Do not interpret `verified` as permission or treat a human-review tag as a guarantee of operational success.\n- Installer graph traversal does not itself confer scheduling, permissions, agent spawning or state persistence.\n---\ntype: AgentOS Interview\ntitle: Minimum adaptive opening interview\ndescription: Short initial user conversation that seeds graph traversal without a rigid form.\ntags:\n- agentos\n- interview\n- bootstrap\nstatus: stable\n---\n\n# Before questioning\n\nRun [read-only discovery](../phases/discover.md). Extract credible facts from the repository and runtime first. Do not ask what you can reliably determine. Explain relevant observations briefly.\n\n# Opening conversation\n\nAsk a **small, conversational** set of questions, ideally covering these independent uncertainties when they remain unresolved:\n\n1. **Mission:** What should this organization accomplish in this repository, and what would a successful first outcome look like?\n2. **Runtime:** Which agent runtime(s) should it serve? Prefer native integration or portability? Suggest detected runtime when credible.\n3. **Decision authority:** What kinds of actions can it take without checking with you, and what actions require approval? Recommend safe scope defaults.\n4. **Operating expectations:** Do you want long-running/parallel work, cross-session continuity, observability, or routine task-level use? Infer likely needs and offer a concise recommendation rather than an exhaustive menu.\n\nYou may combine, shorten, or reorder questions. Ask fewer when the user already supplied answers. Do not ask the user to define technical state machines, JSON schemas, metrics, or mechanisms unnecessarily.\n\n# Seed discovery signals\n\nUse factual shorthand signals (examples, not a closed schema): `native_agents`, `parallel_workers`, `long_running_work`, `external_effects`, `existing_agent_system`, `sensitive_data`, `multiple_repositories`, `high_assurance`, `cost_constraints`, `remote_git_delivery`, `recurring_triggers`, `repeatable_improvement`, `rich_telemetry`, `business_automation`, `runtime_specific_integration`.\n\nObserve which are **requested**, **present**, **absent**, or **unknown**. Do not infer an unavailable capability just because the user wants it.\n\n# Next step\n\nConsult the [component catalog](../components/index.md). Activate relevant nodes and ask their **own** targeted follow-up questions. Repeat until the graph selection and design decisions stabilize. Then [propose the architecture](../phases/design.md).\n---\ntype: AgentOS Procedure\ntitle: Read-only repository and runtime discovery\ndescription: Observe the current project and agent harness without installation writes.\ntags:\n- agentos\n- phase\n- discovery\nstatus: stable\n---\n\n# Procedure\n\n1. Discover repository root, Git state, existing instructions (`AGENTS.md` or runtime-specific equivalents), active work and evident domain. Inspect targeted content only; preserve unrelated changes and avoid executing untrusted scripts.\n2. Identify existing AgentOS or another operating organization. Record preservation and migration concerns; do not assume replacement.\n3. Identify available agent runtime(s), their known instruction discovery, role identity, spawning, messaging, parallelism, session persistence, permission enforcement, telemetry and tooling. Distinguish **declared** functionality from locally verified functionality.\n4. Identify relevant repository permissions, branch protection, cross-repository boundaries, sensitive data and integration points. Do not inspect secrets unnecessarily.\n5. Report a concise picture of observed facts, limitations and open decisions. Then conduct the [bootstrap interview](../interviews/bootstrap.md).\n\n# Transition\n\nLoad the [component index](../components/index.md) only after you know enough about the mission/runtime to choose probable branches. Do not inspect every component yet.\n{\n  \"format\": \"agentos-source-v1\",\n  \"files\": {\n    \"components/activation.md\": {\n      \"sha256\": \"2893e4d66fc47158d5267cae0a04132d832c8436ad90f7ca6f58d322aaef4284\",\n      \"bytes\": 2064\n    },\n    \"components/advanced-validation.md\": {\n      \"sha256\": \"b4ac3d7f3a53d3194e7495a3729f8abc4dc6c632892c8acc69f22be0f9063648\",\n      \"bytes\": 1693\n    },\n    \"components/authority.md\": {\n      \"sha256\": \"fbc6b99852540f20a25dfd224d0d0f07399a9021e8cb1fc1d87f53c5156fb8a9\",\n      \"bytes\": 1950\n    },\n    \"components/brownfield-migration.md\": {\n      \"sha256\": \"dd0cac8f10b20aed0554fd6ed4504c4263ba1bd8be374a4f966ca86290f4f121\",\n      \"bytes\": 1598\n    },\n    \"components/capability-routing.md\": {\n      \"sha256\": \"d7f86c5cbf4b1a505f9db20fcbd68487a809bbdc04adce3cd12221114d0fc161\",\n      \"bytes\": 1846\n    },\n    \"components/chief-of-staff.md\": {\n      \"sha256\": \"c43203e841a0a10ef4ef3887b6a7d89eb834eb255b3b4386231488f4f9efb8b5\",\n      \"bytes\": 1726\n    },\n    \"components/context-core.md\": {\n      \"sha256\": \"8046c83f2eec46be879ce418e68827fdd95f6388ad3ff2090b8254840e74bca0\",\n      \"bytes\": 1602\n    },\n    \"components/delegation.md\": {\n      \"sha256\": \"d34dcf7c5bb102fc4f0e1a1603954ce51e33aa5f05f9a3561ae33315d2725169\",\n      \"bytes\": 2146\n    },\n    \"components/delivery-acceptance.md\": {\n      \"sha256\": \"540b6b083ca6eeb70214cb7711d9f1326c4c75c6de17327fa7048aa76d0be4bb\",\n      \"bytes\": 1672\n    },\n    \"components/director.md\": {\n      \"sha256\": \"beafa827c5ce6c53937537fa9521c2b46ebb9ec049788648b7e2b010b0eea9b0\",\n      \"bytes\": 2115\n    },\n    \"components/durable-handoff.md\": {\n      \"sha256\": \"f620977f68ad65bb99415afaa75e2afab51cdaae00037e65948927cb3c2eebd8\",\n      \"bytes\": 1477\n    },\n    \"components/effect-reconciliation.md\": {\n      \"sha256\": \"955360b0112b872255287836a713d7bd646461f2ca073dd20042581e468cd2b8\",\n      \"bytes\": 2074\n    },\n    \"components/git-delivery.md\": {\n      \"sha256\": \"548f1d4eb37bf8bdb08e93bce84918cdfb5ea9ed03efc6c38112006b875de7cc\",\n      \"bytes\": 1644\n    },\n    \"components/independent-evaluation.md\": {\n      \"sha256\": \"b8056f3712e264d67628bcf8320436f9069a7605bd08c74c0f75ff33f88a5391\",\n      \"bytes\": 1716\n    },\n    \"components/index.md\": {\n      \"sha256\": \"87ae2c052e8df78cd6c8fc2453ccf40b819a54859961b186a9d5a46ca9d8cfe8\",\n      \"bytes\": 3377\n    },\n    \"components/information-boundaries.md\": {\n      \"sha256\": \"ca62d743eb5e146fde9905c6314553cac50c113241a9e2115713831c2f705454\",\n      \"bytes\": 1425\n    },\n    \"components/learning-queue.md\": {\n      \"sha256\": \"e8b77df91474a3f010d903d036fc02ccf0f70ac308dc62e2811dcd58519c100e\",\n      \"bytes\": 1533\n    },\n    \"components/multi-repo.md\": {\n      \"sha256\": \"f3e66aa254d41161bd2c888731d9776d00f221a17d54381c6975a80f1aa39d3a\",\n      \"bytes\": 1443\n    },\n    \"components/parallel-coordination.md\": {\n      \"sha256\": \"c356df44bb713f7f79a37c8fa82c9609d1c6702446643bbb82a447b48a00e510\",\n      \"bytes\": 1484\n    },\n    \"components/resource-budgets.md\": {\n      \"sha256\": \"82e10d06933148538f9df9d153fe1b5441d054bcd2203cf3952918feda3164a7\",\n      \"bytes\": 1371\n    },\n    \"components/role-lifecycle.md\": {\n      \"sha256\": \"ae0fc9a30668666d22cb9b0ab03049b98ec095a590f81ecb7b843972073bf95f\",\n      \"bytes\": 1897\n    },\n    \"components/runtime-native.md\": {\n      \"sha256\": \"4d61f9e83c878efb8718fdddf5adf196e86f9525a73ea3cb2b18d53cfea1cf74\",\n      \"bytes\": 1441\n    },\n    \"components/scheduling.md\": {\n      \"sha256\": \"20b4efed9901cd9bc9bb9df55651a84df9df37e5521aeab46739ace5aaccec33\",\n      \"bytes\": 1508\n    },\n    \"components/self-improvement.md\": {\n      \"sha256\": \"0bf78a0d5f04096c9e0b3603588f8b865aed218ba980f59f4dc11922656d5ac7\",\n      \"bytes\": 3002\n    },\n    \"components/telemetry.md\": {\n      \"sha256\": \"51d1bc186c3d6e45933dc671bfe92170f3cdda48cb36d419dc8c307db2b485d3\",\n      \"bytes\": 1483\n    },\n    \"components/work-ledger.md\": {\n      \"sha256\": \"d912bc474f79722ef403dde880e1fa864bb7f08fd0b899a9b774880e7bb78cab\",\n      \"bytes\": 1713\n    },\n    \"concepts/evidence-levels.md\": {\n      \"sha256\": \"da302b93ef5f1cd85b51c3d4b4973b03da1031f10554d5e7417c51ca995846d2\",\n      \"bytes\": 1257\n    },\n    \"concepts/index.md\": {\n      \"sha256\": \"c334562a78706220654b15394e6d9f4b747867acda296b03660053d72e18cb5b\",\n      \"bytes\": 362\n    },\n    \"concepts/progressive-context.md\": {\n      \"sha256\": \"e810a0b0862e20852483b13661e03fda07f26bd96f0c48fd75a9ec58cc9b33fe\",\n      \"bytes\": 1082\n    },\n    \"concepts/role-capability-instance.md\": {\n      \"sha256\": \"b0b4a7f3124956343caea65c21be255a3f323f52351935bdb07f4d72308ad69d\",\n      \"bytes\": 1282\n    },\n    \"core/constitution.md\": {\n      \"sha256\": \"6797e597f48135da527f87aff5b0f1b01e2c265ebb5378cb2826d70665a5ed82\",\n      \"bytes\": 2665\n    },\n    \"core/graph-routing.md\": {\n      \"sha256\": \"e99f69e05d3982ffd72f564bc98f167297cc7b07fad1238cfc121df83af2d1e8\",\n      \"bytes\": 7000\n    },\n    \"core/index.md\": {\n      \"sha256\": \"16d92c1d015d84a6ab2c3af56fc3a0581f77b671c7f85fb71849ee7a804a48d1\",\n      \"bytes\": 279\n    },\n    \"core/installer-policy.md\": {\n      \"sha256\": \"c6e48d24fa13124d2f623e131c96c83b77aa32734b5ae706f2e6912cc82db4aa\",\n      \"bytes\": 2634\n    },\n    \"examples/index.md\": {\n      \"sha256\": \"04fd9133d183ff19e24df8fab11d1c837012477ea693301ca56a1cb43983bc51\",\n      \"bytes\": 333\n    },\n    \"examples/portable-implementation.md\": {\n      \"sha256\": \"be8c35a07b1ea6efb44946b5a7109a71e56a446f3cefabf756869f74e6e7dc66\",\n      \"bytes\": 17548\n    },\n    \"examples/selection-scenarios.md\": {\n      \"sha256\": \"e59845245220622b50b1a16e9fead94825e6c2fdf07f7872c54d131ff7c86470\",\n      \"bytes\": 2259\n    },\n    \"index.md\": {\n      \"sha256\": \"2635e2fb8d4791bde2792ebb0d904c6347350ae18454bc01f435007fee4d7226\",\n      \"bytes\": 1416\n    },\n    \"interviews/bootstrap.md\": {\n      \"sha256\": \"eb471fc596bf6705c656911716e3022e99d818a905b744b8314acf3b3c988ce4\",\n      \"bytes\": 2279\n    },\n    \"interviews/index.md\": {\n      \"sha256\": \"02f4b6b9a94e8af5260f1d90cdc3ad01bb004291b14259d2a55870b9642d4057\",\n      \"bytes\": 162\n    },\n    \"phases/design.md\": {\n      \"sha256\": \"95681cf0f3fd3d77219bbe14d79ac4be78056a69dbe50e5f04c13fd768396aba\",\n      \"bytes\": 2207\n    },\n    \"phases/discover.md\": {\n      \"sha256\": \"513fc2cea5ca6a7164e1f37ce764abf1a7a5c3e849d9ff83dd3fd894d4238b9d\",\n      \"bytes\": 1377\n    },\n    \"phases/handoff.md\": {\n      \"sha256\": \"8b282f7b34684c4323b9677c00b72323861043ad605ecc79a4fa2371ec6e9511\",\n      \"bytes\": 2105\n    },\n    \"phases/implement.md\": {\n      \"sha256\": \"1d1b6f1294d15afd11385a106fd863c9c0e816c7c4ad71bda5553419983a31ea\",\n      \"bytes\": 4277\n    },\n    \"phases/index.md\": {\n      \"sha256\": \"6d529c0d37adca24391092eabfa68a3c94b3dbeaa7ae2849ba329309a93c68cc\",\n      \"bytes\": 468\n    },\n    \"phases/qualify.md\": {\n      \"sha256\": \"10344a581aaf49046008e74f11a1ec190a7954bc138834e29343196df1a4fbfe\",\n      \"bytes\": 7711\n    },\n    \"start.md\": {\n      \"sha256\": \"e051b4825362e420b5ca7d564d4c563a3911eeb8b448b03ec4e8a75280d45f2d\",\n      \"bytes\": 3615\n    }\n  }\n}\ncat: README.md: No such file or directory\ncat: formatter.py: No such file or directory\ncat: test_formatter.py: No such file or directory\n"
+        }
+      ],
+      "component_reads": [
+        "components/activation.md",
+        "components/authority.md",
+        "components/capability-routing.md",
+        "components/chief-of-staff.md",
+        "components/context-core.md",
+        "components/delegation.md",
+        "components/delivery-acceptance.md",
+        "components/director.md",
+        "components/role-lifecycle.md",
+        "components/self-improvement.md"
+      ],
+      "delta": {
+        "added": [],
+        "removed": [],
+        "changed": []
+      },
+      "raw_sha256": "5b0bf71e0f98b12b076ca1f1ed90649268cdbab5ff99ca987b02f6f212cb6698",
+      "manifest_sha256": "551aeb934f5603c69c28fa5cf32a835d5510b495c1f5753cb51a49da54f98697"
+    },
+    {
+      "name": "v2-full-luna-I",
+      "requested_model": "gpt-6-luna",
+      "threads": [
+        "01a16cac-541d-7d02-8e84-a3035bb941c8"
+      ],
+      "status": "returned",
+      "duration_seconds": 80.73985981941223,
+      "failed_commands": [
+        {
+          "command": "/bin/bash -lc \"python3 -c 'import json; p=\\\"/private/tmp/agentos-portable-20261024/controls/v2/v2-full-luna-approved-handoff.json\\\"; print(json.dumps(json.load(open(p))[\\\"source_identity_manifest\\\"],separators=(\\\",\\\",\\\":\\\")))' | python3 tools/qualification.py identity bundle --verify -\"",
+          "exit_code": 2,
+          "aggregated_output": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n    import json; p=\"/private/tmp/agentos-portable-20261024/controls/v2/v2-full-luna-approved-handoff.json\"; print(json.dumps(json.load(open(p))[\"source_identity_manifest\"],separators=(\",\",\":\")))\n                                                                                                                             ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nKeyError: 'source_identity_manifest'\nusage: qualification.py [-h] {graph,select,identity,snapshot,inspect,run} ...\nqualification.py: error: Expecting value: line 1 column 1 (char 0)\n"
+        }
+      ],
+      "component_reads": [
+        "components/activation.md",
+        "components/authority.md",
+        "components/capability-routing.md",
+        "components/chief-of-staff.md",
+        "components/context-core.md",
+        "components/delegation.md",
+        "components/delivery-acceptance.md",
+        "components/director.md",
+        "components/role-lifecycle.md",
+        "components/self-improvement.md"
+      ],
+      "delta": {
+        "added": [
+          ".agentos",
+          ".agentos/core.md",
+          ".agentos/installation.md",
+          ".agentos/operations.md",
+          ".agentos/qualification-example.json",
+          ".agentos/roles.md",
+          "AGENTS.md"
+        ],
+        "removed": [],
+        "changed": []
+      },
+      "raw_sha256": "544e2c69756e9b4e217e13ea75f51081764ce8f26910c2f11a11b49d763eb505",
+      "manifest_sha256": "9beffc5a28f80d0c41edb489e1ca21556125172f45994b05df83cd39d0474993"
+    },
+    {
+      "name": "v2-full-sol-D",
+      "requested_model": "gpt-6.1-sol",
+      "threads": [
+        "01a16ca6-fe64-76c3-952a-40046fb49772"
+      ],
+      "status": "returned",
+      "duration_seconds": 56.889012813568115,
+      "failed_commands": [],
+      "component_reads": [
+        "components/activation.md",
+        "components/authority.md",
+        "components/capability-routing.md",
+        "components/chief-of-staff.md",
+        "components/context-core.md",
+        "components/delegation.md",
+        "components/delivery-acceptance.md",
+        "components/director.md",
+        "components/resource-budgets.md",
+        "components/role-lifecycle.md",
+        "components/self-improvement.md"
+      ],
+      "delta": {
+        "added": [],
+        "removed": [],
+        "changed": []
+      },
+      "raw_sha256": "e59dbb793e59fa965755f2ef5a615c9e5019006d5a85e91ffb53aa19049e0fbc",
+      "manifest_sha256": "6982097bd9353f0823b5b26469be4840419a2032ad4fc1e958f8e7a4b5de7bf0"
+    },
+    {
+      "name": "v2-full-sol-I",
+      "requested_model": "gpt-6.1-sol",
+      "threads": [
+        "01a16cac-53a3-7912-a7ed-f69e87ea762c"
+      ],
+      "status": "returned",
+      "duration_seconds": 184.1063051223755,
+      "failed_commands": [],
+      "component_reads": [
+        "components/activation.md",
+        "components/authority.md",
+        "components/capability-routing.md",
+        "components/chief-of-staff.md",
+        "components/context-core.md",
+        "components/delegation.md",
+        "components/delivery-acceptance.md",
+        "components/director.md",
+        "components/resource-budgets.md",
+        "components/role-lifecycle.md",
+        "components/self-improvement.md"
+      ],
+      "delta": {
+        "added": [
+          ".agentos",
+          ".agentos/core.md",
+          ".agentos/installation.md",
+          ".agentos/operations.md",
+          ".agentos/qualification-example.json",
+          ".agentos/records.md",
+          ".agentos/roles.md",
+          "AGENTS.md"
+        ],
+        "removed": [],
+        "changed": []
+      },
+      "raw_sha256": "95f491eb2847912c5d0d7bb3834f104b28abcc33b80a2b26864338b06ea738f1",
+      "manifest_sha256": "8956c3fae272c74f103ce29a98726dd0168bc9b455039ba892831821bc1b24ad"
+    },
+    {
+      "name": "v2-full-sol-U",
+      "requested_model": "gpt-6.1-sol",
+      "threads": [
+        "01a16cb6-40b0-7822-9599-efb16e86ca35"
+      ],
+      "status": "returned",
+      "duration_seconds": 18.873475074768066,
+      "failed_commands": [],
+      "component_reads": [],
+      "delta": {
+        "added": [
+          "sample-output.txt"
+        ],
+        "removed": [],
+        "changed": []
+      },
+      "raw_sha256": "d6172e61e11a21912445434dc92ab45c8d38af0f1a02829a7a0d93e6361d33a9",
+      "manifest_sha256": "c4af56533476e5a9bf4cf468aff4a96d9ab204ff328d7956b4179d202fa86839"
+    }
+  ],
+  "nonzero_command_items": 14,
+  "full_source_observation_audits": {
+    "v1": "evidence/v1-phase-audit.json",
+    "v2": "evidence/v2-phase-audit.json"
+  },
+  "diagnostics": {
+    "bundle-luna-D": [],
+    "full-sol-D": [],
+    "bundle-sol-D": [
+      {
+        "line": 1,
+        "text": "  \u2713 sandbox agentos-portable-20261024 \u2014 started"
+      }
+    ],
+    "full-luna-D": [],
+    "full-luna-I": [],
+    "v2-bundle-sol-I": [],
+    "v2-full-sol-I": [
+      {
+        "line": 1,
+        "text": "  \u2713 sandbox agentos-portable-20261024 \u2014 started"
+      }
+    ],
+    "v2-full-sol-D": [],
+    "v2-bundle-sol-D": [
+      {
+        "line": 1,
+        "text": "  \u2713 sandbox agentos-portable-20261024 \u2014 started"
+      }
+    ],
+    "v2-bundle-luna-I": [
+      {
+        "line": 1,
+        "text": "  \u2713 sandbox agentos-portable-20261024 \u2014 started"
+      }
+    ],
+    "v2-bundle-sol-U": [],
+    "v2-full-luna-D": [],
+    "v2-full-sol-U": [],
+    "v2-full-luna-I": [],
+    "v2-bundle-luna-D": []
+  },
+  "local_tests": {
+    "example-check.json": {
+      "exact_source_python_block_executed": true,
+      "first_exit": 0,
+      "stdout": "{\n  \"artifact\": \"/private/tmp/agentos-portable-20261024/work/example-check/.agentos/qualification-example.json\",\n  \"events\": [\n    {\n      \"stage\": \"baseline\",\n      \"observed\": {\n        \"route\": \"Installer\",\n        \"unrelated\": \"keep\"\n      },\n      \"functional\": false\n    },\n    {\n      \"candidate\": {\n        \"route\": \"Director\",\n        \"unrelated\": \"keep\"\n      },\n      \"functional\": true,\n      \"disposition\": \"accepted; retain\"\n    },\n    {\n      \"candidate\": {\n        \"route\": \"CoS\",\n        \"unrelated\": \"keep\"\n      },\n      \"functional\": false,\n      \"disposition\": \"rejected; restore accepted state\",\n      \"scoped_rollback_verified\": true\n    },\n    {\n      \"candidate\": {\n        \"route\": \"Director\",\n        \"unrelated\": \"keep\",\n        \"claimed_benefit\": \"faster\"\n      },\n      \"functional\": true,\n      \"disposition\": \"inconclusive: no performance evidence; restore accepted state\",\n      \"scoped_rollback_verified\": true\n    }\n  ]\n}\n",
+      "refuses_existing_evidence": true,
+      "repeat_exit": 1,
+      "repeat_stderr": "Traceback (most recent call last):\n  File \"<string>\", line 35, in <module>\n    with out.open(\"x\") as stream:\n         ~~~~~~~~^^^^^\n  File \"/opt/homebrew/Cellar/python@3.15/3.15.0_1/Frameworks/Python.framework/Versions/3.15/lib/python3.15/pathlib/__init__.py\", line 970, in open\n    return io.open(self, mode, buffering, encoding, errors, newline)\n           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFileExistsError: [Errno 17] File exists: '/private/tmp/agentos-portable-20261024/work/example-check/.agentos/qualification-example.json'\n",
+      "only_new_effect": ".agentos/qualification-example.json",
+      "original_user_content_preserved": true
+    },
+    "example-boundaries.json": [
+      {
+        "case": "wrong-cwd",
+        "refused": true,
+        "exit": 1,
+        "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 5, in <module>\n    assert Path.cwd().resolve() == approved_root\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+        "outside_sentinel_preserved": true
+      },
+      {
+        "case": "linked-home",
+        "refused": true,
+        "exit": 1,
+        "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 7, in <module>\n    assert home.is_dir() and not home.is_symlink()\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+        "outside_sentinel_preserved": true
+      },
+      {
+        "case": "existing-output-link",
+        "refused": true,
+        "exit": 1,
+        "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 35, in <module>\n    with out.open(\"x\") as stream:\n         ~~~~~~~~^^^^^\n  File \"/opt/homebrew/Cellar/python@3.15/3.15.0_1/Frameworks/Python.framework/Versions/3.15/lib/python3.15/pathlib/__init__.py\", line 970, in open\n    return io.open(self, mode, buffering, encoding, errors, newline)\n           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFileExistsError: [Errno 17] File exists: '/private/tmp/agentos-portable-20261024/work/example-boundary-check/existing-output-link/.agentos/qualification-example.json'\n",
+        "outside_sentinel_preserved": true
+      }
+    ],
+    "v2-profile-selection-invariants.json": {
+      "matches_original_three_profile_results": true,
+      "counts": {
+        "portable": 10,
+        "engineering": 22,
+        "portfolio": 18
+      },
+      "source": "68a71b67e14619ef6aef3b70a3597703aef70aa1"
+    }
+  },
+  "regressions": "39 passed at each candidate revision; unchanged tool/tests; independent review will rerun",
+  "parent_evaluator_corrections": [
+    "Optional resource-budget selection follows actual approved design; v2-full-luna selected mandatory10 only. No optional budget qualification credited.",
+    "v2-full-luna D identity helper succeeded before later cat failed in && chain. Narrow command/output-hash-bound subcommand proof retained; failed enclosing exit3 is preserved. Full-source read credit still requires successful enclosing command."
+  ],
+  "known_reporting_defects": [
+    "v1 bundle-luna D says44 files though correct manifest has47; layout count mismatch preserved.",
+    "v2 bundle-luna I says48 files though correct manifest has47.",
+    "v2 full-sol initial pending status above explicit final completion retained; final section supplies complete concrete evidence.",
+    "Both Sol U roots read whole roles file including inactive CoS section; no claim of strict minimum-section behavior."
+  ],
+  "limits": [
+    "One flow per model/distribution/version, adaptive scope, no randomized comparison or broad reliability proof.",
+    "Luna U blocked in v2; remaining v1I/U stopped after first failed installation; missing exposure is not pass.",
+    "Fresh delegated/nested runtime startup and richer profiles untested in this round.",
+    "Cost/effort unknown; native metadata effort null."
+  ],
+  "next": "Independent review of docs-only rejection; export review, owned-only cleanup, protected PR/merge/main verification; broader objective remains active."
+}
