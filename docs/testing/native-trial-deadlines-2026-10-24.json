@@ -1,366 +1,421 @@
 {
   "task": "TASK-000205",
   "run": "RUN-000200",
-  "decision": "recommend candidate promotion subject to fresh independent APP34 and normal delivery",
-  "candidate": {
-    "candidate": "4d6996253610ee9b94a7b9b377a35744c664dd99",
-    "tree": "ff4d0a91554d1e1fa99cbb487c27942709e3d734",
-    "base": "586fcc4e60324df4e9a23960b1e0497453792855",
-    "created_at": "2026-10-24T18:55:48.834939+00:00",
-    "operative_files": {
-      "tools/qualification.py": {
-        "sha256": "ed45beecea0b1f98c0276f04df80d34a21a45bd05f185566ac4045afe4892b6b",
-        "bytes": 26459
+  "plan_revision": 2,
+  "decision": "revision1 rejected; revised candidate under validation, not approved",
+  "revision1": {
+    "task": "TASK-000205",
+    "run": "RUN-000200",
+    "decision": "recommend candidate promotion subject to fresh independent APP34 and normal delivery",
+    "candidate": {
+      "candidate": "4d6996253610ee9b94a7b9b377a35744c664dd99",
+      "tree": "ff4d0a91554d1e1fa99cbb487c27942709e3d734",
+      "base": "586fcc4e60324df4e9a23960b1e0497453792855",
+      "created_at": "2026-10-24T18:55:48.834939+00:00",
+      "operative_files": {
+        "tools/qualification.py": {
+          "sha256": "ed45beecea0b1f98c0276f04df80d34a21a45bd05f185566ac4045afe4892b6b",
+          "bytes": 26459
+        },
+        "tools/trial_supervisor.py": {
+          "sha256": "02b10a8879d0261d4a8945c15dfa6765c7c028fe1f410a67a370738fbcd2a7d5",
+          "bytes": 2630
+        },
+        "tools/README.md": {
+          "sha256": "ad2325d3cf5b7ae0ff06d447a0b1d87bab61ad805421ab0fa8fe82e7e0311b21",
+          "bytes": 18366
+        },
+        "tests/test_qualification.py": {
+          "sha256": "6d96d6d187869662ac3fcd16594c2ca65b07689241ac445d5befa5e12c478916",
+          "bytes": 42944
+        },
+        "tests/test_trial_supervisor.py": {
+          "sha256": "694eed674caf3f82d541b3b4bef2c461de4a1ca29c4c1773c8e5469d7b831534",
+          "bytes": 9118
+        }
       },
-      "tools/trial_supervisor.py": {
-        "sha256": "02b10a8879d0261d4a8945c15dfa6765c7c028fe1f410a67a370738fbcd2a7d5",
-        "bytes": 2630
+      "frozen_controls": {
+        "collect_runtime.py": {
+          "sha256": "4d7ac199f1e8fd2efc1eb8711f8292d8784d6ded287734d2ef26ffd381b8e6dd",
+          "bytes": 1763
+        },
+        "normal-luna.txt": {
+          "sha256": "51e000694beb710098aebf986d9c833da03d1739ca88316f919cc4aacf9191d2",
+          "bytes": 199
+        },
+        "source-before.json": {
+          "sha256": "73fbc4c5aa18efcfb5eb1bf8e28a5d25a2ee7524eedba3e9a7400ce86ae86ca8",
+          "bytes": 87294
+        },
+        "normal-sol.txt": {
+          "sha256": "51e000694beb710098aebf986d9c833da03d1739ca88316f919cc4aacf9191d2",
+          "bytes": 199
+        },
+        "preregistered-plan.md": {
+          "sha256": "993676d7c15876303c14a5a7821bd80aabbe45b02ed12307202f5e219cdfe878",
+          "bytes": 4845
+        },
+        "model_catalog.py": {
+          "sha256": "88f25170b16c96f480d551297b2b53b867f1b89a5b863560b7e43f36c0295c25",
+          "bytes": 1511
+        },
+        "interrupt-luna.txt": {
+          "sha256": "cb213593474d69bee3417c2ec7e61836a318ec87fc08f0fb735a8f2f2d429f59",
+          "bytes": 466
+        },
+        "interrupt-sol.txt": {
+          "sha256": "cb213593474d69bee3417c2ec7e61836a318ec87fc08f0fb735a8f2f2d429f59",
+          "bytes": 466
+        },
+        "round.json": {
+          "sha256": "9b7d2d853799f5fdf059405dbffdbfa9ea3cb60b20b6098a6ca34212ba48d9ce",
+          "bytes": 391
+        },
+        "fixtures-before.json": {
+          "sha256": "23990b84b0dff093bc532cb4676655ee223976e22fab2dc9284ab2b9e0e49d89",
+          "bytes": 17523
+        },
+        "governance/manifest.json": {
+          "sha256": "6c6a545b92a1a9f33ff549b645c8e1a96e0db6d40fbe980ff3d6f8f5fbee5385",
+          "bytes": 1635
+        },
+        "governance/AGENTS.md": {
+          "sha256": "a70c0bfd3142f63c18892f8ff299e81bb1f2aa0e4094bb4d69736cceaf3f61f3",
+          "bytes": 3938
+        },
+        "governance/shared/CONTEXT_MANAGEMENT.md": {
+          "sha256": "c0c8908b250e367726c5aa90664352cfefef9bf7dd4d79d2db9ec6dd04a8f6a6",
+          "bytes": 3544
+        },
+        "governance/policies/AUTHORITY.md": {
+          "sha256": "082de2f8fec06bc6dc9027d2f8605ca61cda12a5f5c175d1c3019bd1035d1118",
+          "bytes": 1883
+        },
+        "governance/policies/SCOPE_BOUNDARIES.md": {
+          "sha256": "928bd2564f7090cfc2379c5362e9265aab83d6ec42ee830106c4da24a3380b82",
+          "bytes": 2485
+        },
+        "governance/policies/CHANGE_CONTROL.md": {
+          "sha256": "95b9916fbbd0ce42e8d32c70b98c20b9bc15103761e62af18df8c69459254207",
+          "bytes": 2322
+        },
+        "governance/policies/PROJECT_CHANGES.md": {
+          "sha256": "efb7af04da619657d585575da17f10cd870083df0470a4d7fe125ddd2761d8d6",
+          "bytes": 2358
+        },
+        "governance/policies/RESOURCE_BUDGETS.md": {
+          "sha256": "47416e3ad0ee31ba15e3c1c8cd92373caa6b500d296ef3956f1d82a6ee474f8c",
+          "bytes": 2034
+        },
+        "governance/policies/APPROVALS.md": {
+          "sha256": "65e6f15ab93cdf1aba5eecc172a51aa8484e0be35a67e29936b5b3cacca976b2",
+          "bytes": 1846
+        },
+        "governance/policies/GIT.md": {
+          "sha256": "5e0494d5903bada6d309295d06b8fcf815972165a05e517cc692a6460b806001",
+          "bytes": 5408
+        },
+        "governance/policies/ACCEPTANCE.md": {
+          "sha256": "e4df277eb7c64b7a3f89f8620e914912e6772a130a96b6891e2bea7935d202c5",
+          "bytes": 5675
+        },
+        "governance/agents/reviewer/CONTEXT.md": {
+          "sha256": "40eeb8053d4ba743fb805bd2ddde44c603c926d66b99b2c9b49046db54e5c872",
+          "bytes": 1454
+        },
+        "governance/agents/reviewer/AGENTS.md": {
+          "sha256": "44c74153fcb9a21eb69026d303428666ef4e5cc878cd9cccdd2607c5fa8920ff",
+          "bytes": 2337
+        }
       },
-      "tools/README.md": {
-        "sha256": "ad2325d3cf5b7ae0ff06d447a0b1d87bab61ad805421ab0fa8fe82e7e0311b21",
-        "bytes": 18366
+      "source_fixture_head": "7e3de5797da876559f69ea4eb695c2dfb5c98de6",
+      "max_native_roots": 6
+    },
+    "observed_at": "2026-10-24T18:59:57.503537+00:00",
+    "native": {
+      "normal-sol": {
+        "expected": "normal completion",
+        "criterion_passed": true,
+        "run_status": "returned",
+        "returncode": 0,
+        "host_seconds": 6.188955783843994,
+        "control": {
+          "type": "agentos.run_control",
+          "version": 1,
+          "control_id": "normal-sol",
+          "timeout_seconds": 120,
+          "grace_seconds": 5,
+          "phase": "finished",
+          "pid": 256,
+          "process_group": 256,
+          "timed_out": false,
+          "signals": [],
+          "child_returncode": 0,
+          "exit_code": 0,
+          "elapsed_seconds": 4.93162217
+        },
+        "actual_runtime": {
+          "name": "normal-sol",
+          "requested_model": "gpt-6.1-sol",
+          "requested_effort": "high",
+          "thread": "01a16f45-2c73-7961-a14d-d948769bfa98",
+          "model": "gpt-6.1-sol",
+          "effort": "high",
+          "native_session": "/home/agent/.codex/sessions/2026/10/24/rollout-2026-10-24T18-56-06-01a16f45-2c73-7961-a14d-d948769bfa98.jsonl"
+        },
+        "original_regulars_unchanged": 27,
+        "raw": {
+          "sha256": "9e73f1bd231660a82924737f8b0cc740e914faf10f2c30653277d7ce684e2a11",
+          "bytes": 1408
+        },
+        "manifest": {
+          "sha256": "00dd5059c0415e1bd5ab3844181ff075a9c1339324d120cfc2eddeb6bf4d957f",
+          "bytes": 20476
+        },
+        "primary": {
+          "sha256": "8ff1bce51a3b9fb2bafe44e9f66ee015b3dad628e256a2673be6938459bb7740",
+          "bytes": 26772
+        }
       },
-      "tests/test_qualification.py": {
-        "sha256": "6d96d6d187869662ac3fcd16594c2ca65b07689241ac445d5befa5e12c478916",
-        "bytes": 42944
+      "normal-luna": {
+        "expected": "normal completion",
+        "criterion_passed": true,
+        "run_status": "returned",
+        "returncode": 0,
+        "host_seconds": 4.041797161102295,
+        "control": {
+          "type": "agentos.run_control",
+          "version": 1,
+          "control_id": "normal-luna",
+          "timeout_seconds": 120,
+          "grace_seconds": 5,
+          "phase": "finished",
+          "pid": 255,
+          "process_group": 255,
+          "timed_out": false,
+          "signals": [],
+          "child_returncode": 0,
+          "exit_code": 0,
+          "elapsed_seconds": 3.5241581269999998
+        },
+        "actual_runtime": {
+          "name": "normal-luna",
+          "requested_model": "gpt-6-luna",
+          "requested_effort": "high",
+          "thread": "01a16f45-2c67-7693-90b7-4f28f376a7f9",
+          "model": "gpt-6-luna",
+          "effort": "high",
+          "native_session": "/home/agent/.codex/sessions/2026/10/24/rollout-2026-10-24T18-56-06-01a16f45-2c67-7693-90b7-4f28f376a7f9.jsonl"
+        },
+        "original_regulars_unchanged": 27,
+        "raw": {
+          "sha256": "f83f356f5d3b7dcd371167a77179043cbb292789fe872f82c43d0568700d909f",
+          "bytes": 1370
+        },
+        "manifest": {
+          "sha256": "fb048e59148fca2c876af666c9ae31ca5aa997acf1a231db171652d5819466d7",
+          "bytes": 20491
+        },
+        "primary": {
+          "sha256": "747af84ad363e520f08ae76786966a80f0daed082bdee890713bcba52338e173",
+          "bytes": 23079
+        }
       },
-      "tests/test_trial_supervisor.py": {
-        "sha256": "694eed674caf3f82d541b3b4bef2c461de4a1ca29c4c1773c8e5469d7b831534",
-        "bytes": 9118
+      "interrupt-sol": {
+        "expected": "deliberate interruption",
+        "criterion_passed": true,
+        "run_status": "failed",
+        "returncode": 124,
+        "host_seconds": 16.289734840393066,
+        "control": {
+          "type": "agentos.run_control",
+          "version": 1,
+          "control_id": "interrupt-sol",
+          "timeout_seconds": 15,
+          "grace_seconds": 5,
+          "phase": "finished",
+          "pid": 255,
+          "process_group": 255,
+          "timed_out": true,
+          "signals": [
+            "SIGINT"
+          ],
+          "child_returncode": 1,
+          "exit_code": 124,
+          "elapsed_seconds": 15.067846924000001
+        },
+        "actual_runtime": {
+          "name": "interrupt-sol",
+          "requested_model": "gpt-6.1-sol",
+          "requested_effort": "high",
+          "thread": "01a16f45-dfc4-70f2-841e-59596eb7abd7",
+          "model": "gpt-6.1-sol",
+          "effort": "high",
+          "native_session": "/home/agent/.codex/sessions/2026/10/24/rollout-2026-10-24T18-56-52-01a16f45-dfc4-70f2-841e-59596eb7abd7.jsonl"
+        },
+        "original_regulars_unchanged": 27,
+        "raw": {
+          "sha256": "2ddddb1bba067f7ffa01be4922c48e68db9ecb157774157d73c9ceeaf200466d",
+          "bytes": 1176
+        },
+        "manifest": {
+          "sha256": "9c1d7a45681dc1271c01b839d1d4374bacb5315eb38a523eb1a457ab9f2e6d93",
+          "bytes": 20335
+        },
+        "primary": {
+          "sha256": "4e85c7747b102159666d5ff0f7148cad61e4f2f6b9bfcc0f308c26ab0e36ded3",
+          "bytes": 26566
+        }
+      },
+      "interrupt-luna": {
+        "expected": "deliberate interruption",
+        "criterion_passed": true,
+        "run_status": "failed",
+        "returncode": 124,
+        "host_seconds": 15.41056513786316,
+        "control": {
+          "type": "agentos.run_control",
+          "version": 1,
+          "control_id": "interrupt-luna",
+          "timeout_seconds": 15,
+          "grace_seconds": 5,
+          "phase": "finished",
+          "pid": 362,
+          "process_group": 362,
+          "timed_out": true,
+          "signals": [
+            "SIGINT"
+          ],
+          "child_returncode": 1,
+          "exit_code": 124,
+          "elapsed_seconds": 15.067876882
+        },
+        "actual_runtime": {
+          "name": "interrupt-luna",
+          "requested_model": "gpt-6-luna",
+          "requested_effort": "high",
+          "thread": "01a16f45-e1e8-7102-99cc-9f2aaf8a6b35",
+          "model": "gpt-6-luna",
+          "effort": "high",
+          "native_session": "/home/agent/.codex/sessions/2026/10/24/rollout-2026-10-24T18-56-53-01a16f45-e1e8-7102-99cc-9f2aaf8a6b35.jsonl"
+        },
+        "original_regulars_unchanged": 27,
+        "raw": {
+          "sha256": "64f084de1df95c6f51b684925a01db104fa6efd72d2c84479d995eb915150863",
+          "bytes": 973
+        },
+        "manifest": {
+          "sha256": "42936b174f13f41488361d5d35d351f16bcf41623f7e30009d5eb2aca7897932",
+          "bytes": 20249
+        },
+        "primary": {
+          "sha256": "f51ab91fb10c856b3f52f93a9db1153e18f8fe6ce37c566fb4dee4ebe7e95d85",
+          "bytes": 22800
+        }
       }
     },
-    "frozen_controls": {
-      "collect_runtime.py": {
-        "sha256": "4d7ac199f1e8fd2efc1eb8711f8292d8784d6ded287734d2ef26ffd381b8e6dd",
-        "bytes": 1763
+    "native_roots": 4,
+    "source_regulars_unchanged": 542,
+    "frozen_controls_unchanged": 23,
+    "local_tests": {
+      "host": {
+        "tests": 60,
+        "seconds": 28.059,
+        "passed": true
       },
-      "normal-luna.txt": {
-        "sha256": "51e000694beb710098aebf986d9c833da03d1739ca88316f919cc4aacf9191d2",
-        "bytes": 199
+      "linux": {
+        "tests": 60,
+        "seconds": 15.116,
+        "passed": true
       },
-      "source-before.json": {
-        "sha256": "73fbc4c5aa18efcfb5eb1bf8e28a5d25a2ee7524eedba3e9a7400ce86ae86ca8",
-        "bytes": 87294
-      },
-      "normal-sol.txt": {
-        "sha256": "51e000694beb710098aebf986d9c833da03d1739ca88316f919cc4aacf9191d2",
-        "bytes": 199
-      },
-      "preregistered-plan.md": {
-        "sha256": "993676d7c15876303c14a5a7821bd80aabbe45b02ed12307202f5e219cdfe878",
-        "bytes": 4845
-      },
-      "model_catalog.py": {
-        "sha256": "88f25170b16c96f480d551297b2b53b867f1b89a5b863560b7e43f36c0295c25",
-        "bytes": 1511
-      },
-      "interrupt-luna.txt": {
-        "sha256": "cb213593474d69bee3417c2ec7e61836a318ec87fc08f0fb735a8f2f2d429f59",
-        "bytes": 466
-      },
-      "interrupt-sol.txt": {
-        "sha256": "cb213593474d69bee3417c2ec7e61836a318ec87fc08f0fb735a8f2f2d429f59",
-        "bytes": 466
-      },
-      "round.json": {
-        "sha256": "9b7d2d853799f5fdf059405dbffdbfa9ea3cb60b20b6098a6ca34212ba48d9ce",
-        "bytes": 391
-      },
-      "fixtures-before.json": {
-        "sha256": "23990b84b0dff093bc532cb4676655ee223976e22fab2dc9284ab2b9e0e49d89",
-        "bytes": 17523
-      },
-      "governance/manifest.json": {
-        "sha256": "6c6a545b92a1a9f33ff549b645c8e1a96e0db6d40fbe980ff3d6f8f5fbee5385",
-        "bytes": 1635
-      },
-      "governance/AGENTS.md": {
-        "sha256": "a70c0bfd3142f63c18892f8ff299e81bb1f2aa0e4094bb4d69736cceaf3f61f3",
-        "bytes": 3938
-      },
-      "governance/shared/CONTEXT_MANAGEMENT.md": {
-        "sha256": "c0c8908b250e367726c5aa90664352cfefef9bf7dd4d79d2db9ec6dd04a8f6a6",
-        "bytes": 3544
-      },
-      "governance/policies/AUTHORITY.md": {
-        "sha256": "082de2f8fec06bc6dc9027d2f8605ca61cda12a5f5c175d1c3019bd1035d1118",
-        "bytes": 1883
-      },
-      "governance/policies/SCOPE_BOUNDARIES.md": {
-        "sha256": "928bd2564f7090cfc2379c5362e9265aab83d6ec42ee830106c4da24a3380b82",
-        "bytes": 2485
-      },
-      "governance/policies/CHANGE_CONTROL.md": {
-        "sha256": "95b9916fbbd0ce42e8d32c70b98c20b9bc15103761e62af18df8c69459254207",
-        "bytes": 2322
-      },
-      "governance/policies/PROJECT_CHANGES.md": {
-        "sha256": "efb7af04da619657d585575da17f10cd870083df0470a4d7fe125ddd2761d8d6",
-        "bytes": 2358
-      },
-      "governance/policies/RESOURCE_BUDGETS.md": {
-        "sha256": "47416e3ad0ee31ba15e3c1c8cd92373caa6b500d296ef3956f1d82a6ee474f8c",
-        "bytes": 2034
-      },
-      "governance/policies/APPROVALS.md": {
-        "sha256": "65e6f15ab93cdf1aba5eecc172a51aa8484e0be35a67e29936b5b3cacca976b2",
-        "bytes": 1846
-      },
-      "governance/policies/GIT.md": {
-        "sha256": "5e0494d5903bada6d309295d06b8fcf815972165a05e517cc692a6460b806001",
-        "bytes": 5408
-      },
-      "governance/policies/ACCEPTANCE.md": {
-        "sha256": "e4df277eb7c64b7a3f89f8620e914912e6772a130a96b6891e2bea7935d202c5",
-        "bytes": 5675
-      },
-      "governance/agents/reviewer/CONTEXT.md": {
-        "sha256": "40eeb8053d4ba743fb805bd2ddde44c603c926d66b99b2c9b49046db54e5c872",
-        "bytes": 1454
-      },
-      "governance/agents/reviewer/AGENTS.md": {
-        "sha256": "44c74153fcb9a21eb69026d303428666ef4e5cc878cd9cccdd2607c5fa8920ff",
-        "bytes": 2337
+      "original_tests": 51
+    },
+    "transport_integration": {
+      "simulation": "Actual local runner with a fake stalled sbx executable; no model root or sandbox connection",
+      "driver_exit": 1,
+      "elapsed_seconds": 31.184438875003252,
+      "expected_transport_seconds": 31,
+      "status": "failed",
+      "transport_timed_out": true,
+      "timed_out": null,
+      "retained_threads": [
+        "simulated-transport"
+      ],
+      "delta": {
+        "added": [],
+        "removed": [],
+        "changed": []
       }
     },
-    "source_fixture_head": "7e3de5797da876559f69ea4eb695c2dfb5c98de6",
-    "max_native_roots": 6
+    "pre_freeze_attempts": {
+      "host_initial_failure": "Unchanged socket bind denied in restricted host; authorized escalation retry passed59tests28.144s.",
+      "new_test_failure": "After receipt validation hardening, host/Linux malformed-NaN assertion used equality; NaN is not equal to itself. Runner rejected receipt correctly. Corrected serialization equality; retained both failures.",
+      "pre_freeze_hardening": "Added complete control fields validation and closed-output cleanup test. All changes before candidate freeze.",
+      "final_tests": "60host28.059s;60Linux15.116s, zero failures. Original51 retained; existing runner mocks updated for required supervisor receipts and timeout kwarg.",
+      "catalog_attempt": "Cached models_cache.json absent; no native turn started. Read installed help then queried short-lived native app-server model/list; both requested models/high verified, process closed.",
+      "sbx_help": "Non-escalated help emitted macOS preferences sandbox warnings; no sandbox mutation.",
+      "fixture_freeze_attempt": "First snapshot raced Git automatic maintenance.lock removal in new normal-luna Git metadata. No native roots admitted, no freeze published. Existing fixtures/source inspected; no locks remain; remaining commits disable auto-maintenance. Original full snapshots now captured before admission. No file deleted to resolve lock."
+    },
+    "process_check": {
+      "observed_epoch": 1792868250.889978,
+      "active_target_processes": []
+    },
+    "limits": [
+      "Native smoke/deadline tests are not onboarding qualification or retrospective repair.",
+      "SIGINT worked for actual models; forcedkill independently exercised by real-process unit cases.",
+      "Transport integration uses a fake stalled sbx, no model invocation.",
+      "Process groups do not contain descendants that change group/session; no hostile containment or transient-write monitoring.",
+      "Native deadline excludes snapshot processing; host transport allowance30sec includes5sec interruptgrace. Suspension/uninterruptible kernel work remain limits.",
+      "Actual serving model/effort observed in native metadata; billing unknown."
+    ]
   },
-  "observed_at": "2026-10-24T18:59:57.503537+00:00",
-  "native": {
-    "normal-sol": {
-      "expected": "normal completion",
-      "criterion_passed": true,
-      "run_status": "returned",
-      "returncode": 0,
-      "host_seconds": 6.188955783843994,
-      "control": {
-        "type": "agentos.run_control",
-        "version": 1,
-        "control_id": "normal-sol",
-        "timeout_seconds": 120,
-        "grace_seconds": 5,
-        "phase": "finished",
-        "pid": 256,
-        "process_group": 256,
-        "timed_out": false,
-        "signals": [],
-        "child_returncode": 0,
-        "exit_code": 0,
-        "elapsed_seconds": 4.93162217
+  "revision1_rejection": {
+    "observed_at": "2026-10-24T19:11:29.865578+00:00",
+    "decision": "reject exact first revision; admit separately pinned repair under Plan2 and existing user grant",
+    "reviewer_integrity": {
+      "reviews": {
+        "review-final": {
+          "receipt": {
+            "sha256": "e257300c93345e858a650643ff7492fc1f247b916afa265796c51dd9f943605a",
+            "bytes": 18579
+          },
+          "index": {
+            "sha256": "4fc0157934ada3d89a5c7385cb184923dd539cc0909b35bb80586e08e39d0afc",
+            "bytes": 179399
+          },
+          "indexed_files": 880,
+          "indexed_bytes": 5341926,
+          "original_regulars_unchanged": 27,
+          "exact_current_fileset_verified": true
+        }
       },
-      "actual_runtime": {
-        "name": "normal-sol",
-        "requested_model": "gpt-6.1-sol",
-        "requested_effort": "high",
-        "thread": "01a16f45-2c73-7961-a14d-d948769bfa98",
-        "model": "gpt-6.1-sol",
-        "effort": "high",
-        "native_session": "/home/agent/.codex/sessions/2026/10/24/rollout-2026-10-24T18-56-06-01a16f45-2c73-7961-a14d-d948769bfa98.jsonl"
-      },
-      "original_regulars_unchanged": 27,
-      "raw": {
-        "sha256": "9e73f1bd231660a82924737f8b0cc740e914faf10f2c30653277d7ce684e2a11",
-        "bytes": 1408
-      },
-      "manifest": {
-        "sha256": "00dd5059c0415e1bd5ab3844181ff075a9c1339324d120cfc2eddeb6bf4d957f",
-        "bytes": 20476
-      },
-      "primary": {
-        "sha256": "8ff1bce51a3b9fb2bafe44e9f66ee015b3dad628e256a2673be6938459bb7740",
-        "bytes": 26772
+      "reviewed_files_unchanged": true,
+      "review_final": {
+        "runtime": {
+          "name": "review-final",
+          "requested_model": "gpt-6.1-sol",
+          "requested_effort": "high",
+          "thread": "01a16f4a-8d4f-7a53-bbad-5782407970cc",
+          "model": "gpt-6.1-sol",
+          "effort": "high",
+          "native_session": "/home/agent/.codex/sessions/2026/10/24/rollout-2026-10-24T19-01-59-01a16f4a-8d4f-7a53-bbad-5782407970cc.jsonl"
+        },
+        "seconds": 413.97641921043396,
+        "failed_cli_commands": 1,
+        "primary": {
+          "sha256": "4f746e09e92c2bba25b08dc491ba62a51bdc8b31bbbf1bb22fc7549a3cf9005e",
+          "bytes": 399765
+        }
       }
     },
-    "normal-luna": {
-      "expected": "normal completion",
-      "criterion_passed": true,
-      "run_status": "returned",
-      "returncode": 0,
-      "host_seconds": 4.041797161102295,
-      "control": {
-        "type": "agentos.run_control",
-        "version": 1,
-        "control_id": "normal-luna",
-        "timeout_seconds": 120,
-        "grace_seconds": 5,
-        "phase": "finished",
-        "pid": 255,
-        "process_group": 255,
-        "timed_out": false,
-        "signals": [],
-        "child_returncode": 0,
-        "exit_code": 0,
-        "elapsed_seconds": 3.5241581269999998
-      },
-      "actual_runtime": {
-        "name": "normal-luna",
-        "requested_model": "gpt-6-luna",
-        "requested_effort": "high",
-        "thread": "01a16f45-2c67-7693-90b7-4f28f376a7f9",
-        "model": "gpt-6-luna",
-        "effort": "high",
-        "native_session": "/home/agent/.codex/sessions/2026/10/24/rollout-2026-10-24T18-56-06-01a16f45-2c67-7693-90b7-4f28f376a7f9.jsonl"
-      },
-      "original_regulars_unchanged": 27,
-      "raw": {
-        "sha256": "f83f356f5d3b7dcd371167a77179043cbb292789fe872f82c43d0568700d909f",
-        "bytes": 1370
-      },
-      "manifest": {
-        "sha256": "fb048e59148fca2c876af666c9ae31ca5aa997acf1a231db171652d5819466d7",
-        "bytes": 20491
-      },
-      "primary": {
-        "sha256": "747af84ad363e520f08ae76786966a80f0daed082bdee890713bcba52338e173",
-        "bytes": 23079
-      }
-    },
-    "interrupt-sol": {
-      "expected": "deliberate interruption",
-      "criterion_passed": true,
-      "run_status": "failed",
-      "returncode": 124,
-      "host_seconds": 16.289734840393066,
-      "control": {
-        "type": "agentos.run_control",
-        "version": 1,
-        "control_id": "interrupt-sol",
-        "timeout_seconds": 15,
-        "grace_seconds": 5,
-        "phase": "finished",
-        "pid": 255,
-        "process_group": 255,
-        "timed_out": true,
-        "signals": [
-          "SIGINT"
-        ],
-        "child_returncode": 1,
-        "exit_code": 124,
-        "elapsed_seconds": 15.067846924000001
-      },
-      "actual_runtime": {
-        "name": "interrupt-sol",
-        "requested_model": "gpt-6.1-sol",
-        "requested_effort": "high",
-        "thread": "01a16f45-dfc4-70f2-841e-59596eb7abd7",
-        "model": "gpt-6.1-sol",
-        "effort": "high",
-        "native_session": "/home/agent/.codex/sessions/2026/10/24/rollout-2026-10-24T18-56-52-01a16f45-dfc4-70f2-841e-59596eb7abd7.jsonl"
-      },
-      "original_regulars_unchanged": 27,
-      "raw": {
-        "sha256": "2ddddb1bba067f7ffa01be4922c48e68db9ecb157774157d73c9ceeaf200466d",
-        "bytes": 1176
-      },
-      "manifest": {
-        "sha256": "9c1d7a45681dc1271c01b839d1d4374bacb5315eb38a523eb1a457ab9f2e6d93",
-        "bytes": 20335
-      },
-      "primary": {
-        "sha256": "4e85c7747b102159666d5ff0f7148cad61e4f2f6b9bfcc0f308c26ab0e36ded3",
-        "bytes": 26566
-      }
-    },
-    "interrupt-luna": {
-      "expected": "deliberate interruption",
-      "criterion_passed": true,
-      "run_status": "failed",
-      "returncode": 124,
-      "host_seconds": 15.41056513786316,
-      "control": {
-        "type": "agentos.run_control",
-        "version": 1,
-        "control_id": "interrupt-luna",
-        "timeout_seconds": 15,
-        "grace_seconds": 5,
-        "phase": "finished",
-        "pid": 362,
-        "process_group": 362,
-        "timed_out": true,
-        "signals": [
-          "SIGINT"
-        ],
-        "child_returncode": 1,
-        "exit_code": 124,
-        "elapsed_seconds": 15.067876882
-      },
-      "actual_runtime": {
-        "name": "interrupt-luna",
-        "requested_model": "gpt-6-luna",
-        "requested_effort": "high",
-        "thread": "01a16f45-e1e8-7102-99cc-9f2aaf8a6b35",
-        "model": "gpt-6-luna",
-        "effort": "high",
-        "native_session": "/home/agent/.codex/sessions/2026/10/24/rollout-2026-10-24T18-56-53-01a16f45-e1e8-7102-99cc-9f2aaf8a6b35.jsonl"
-      },
-      "original_regulars_unchanged": 27,
-      "raw": {
-        "sha256": "64f084de1df95c6f51b684925a01db104fa6efd72d2c84479d995eb915150863",
-        "bytes": 973
-      },
-      "manifest": {
-        "sha256": "42936b174f13f41488361d5d35d351f16bcf41623f7e30009d5eb2aca7897932",
-        "bytes": 20249
-      },
-      "primary": {
-        "sha256": "f51ab91fb10c856b3f52f93a9db1153e18f8fe6ce37c566fb4dee4ebe7e95d85",
-        "bytes": 22800
-      }
-    }
+    "next_approval": "APP-000035",
+    "native_roots_used": 5,
+    "prospective_max_roots": 11,
+    "original_criteria_unchanged": true
   },
-  "native_roots": 4,
-  "source_regulars_unchanged": 542,
-  "frozen_controls_unchanged": 23,
-  "local_tests": {
-    "host": {
-      "tests": 60,
-      "seconds": 28.059,
-      "passed": true
-    },
-    "linux": {
-      "tests": 60,
-      "seconds": 15.116,
-      "passed": true
-    },
-    "original_tests": 51
-  },
-  "transport_integration": {
-    "simulation": "Actual local runner with a fake stalled sbx executable; no model root or sandbox connection",
-    "driver_exit": 1,
-    "elapsed_seconds": 31.184438875003252,
-    "expected_transport_seconds": 31,
-    "status": "failed",
-    "transport_timed_out": true,
-    "timed_out": null,
-    "retained_threads": [
-      "simulated-transport"
-    ],
-    "delta": {
-      "added": [],
-      "removed": [],
-      "changed": []
-    }
-  },
-  "pre_freeze_attempts": {
-    "host_initial_failure": "Unchanged socket bind denied in restricted host; authorized escalation retry passed59tests28.144s.",
-    "new_test_failure": "After receipt validation hardening, host/Linux malformed-NaN assertion used equality; NaN is not equal to itself. Runner rejected receipt correctly. Corrected serialization equality; retained both failures.",
-    "pre_freeze_hardening": "Added complete control fields validation and closed-output cleanup test. All changes before candidate freeze.",
-    "final_tests": "60host28.059s;60Linux15.116s, zero failures. Original51 retained; existing runner mocks updated for required supervisor receipts and timeout kwarg.",
-    "catalog_attempt": "Cached models_cache.json absent; no native turn started. Read installed help then queried short-lived native app-server model/list; both requested models/high verified, process closed.",
-    "sbx_help": "Non-escalated help emitted macOS preferences sandbox warnings; no sandbox mutation.",
-    "fixture_freeze_attempt": "First snapshot raced Git automatic maintenance.lock removal in new normal-luna Git metadata. No native roots admitted, no freeze published. Existing fixtures/source inspected; no locks remain; remaining commits disable auto-maintenance. Original full snapshots now captured before admission. No file deleted to resolve lock."
-  },
-  "process_check": {
-    "observed_epoch": 1792868250.889978,
-    "active_target_processes": []
-  },
-  "limits": [
-    "Native smoke/deadline tests are not onboarding qualification or retrospective repair.",
-    "SIGINT worked for actual models; forcedkill independently exercised by real-process unit cases.",
-    "Transport integration uses a fake stalled sbx, no model invocation.",
-    "Process groups do not contain descendants that change group/session; no hostile containment or transient-write monitoring.",
-    "Native deadline excludes snapshot processing; host transport allowance30sec includes5sec interruptgrace. Suspension/uninterruptible kernel work remain limits.",
-    "Actual serving model/effort observed in native metadata; billing unknown."
-  ]
+  "new_regression": {
+    "cases": 24,
+    "expected_red_failures": 15,
+    "original_criteria_unchanged": true
+  }
 }

@@ -142,4 +142,27 @@ class RunnerDeadlineTests(unittest.TestCase):
             self.assertEqual(record['delta']['added'],['artifact'])
             self.assertTrue((root/'evidence/deadline.jsonl').read_text().endswith('partial line'))
 
+    def test_control_integer_fields_reject_boolean_and_float_substitutes(self):
+        common = {'type':'agentos.run_control','version':1,'control_id':'deadline',
+                  'timeout_seconds':1,'grace_seconds':5,'pid':123,'process_group':123}
+        good = [dict(common,phase='started'),dict(common,phase='finished',timed_out=False,
+                exit_code=0,child_returncode=0,elapsed_seconds=0.1,signals=[])]
+        cases = []
+        for phase in [0,1]:
+            for key in ['version','timeout_seconds','grace_seconds','pid','process_group']:
+                cases.extend((phase,key,value) for value in [True,float(good[phase][key])])
+        for key in ['exit_code','child_returncode']:
+            cases.extend((1,key,value) for value in [False,0.0])
+        for phase,key,value in cases:
+            with self.subTest(phase=phase,key=key,value=value),tempfile.TemporaryDirectory() as d:
+                root=Path(d);args=self.args(root);rows=[dict(row) for row in good];rows[phase][key]=value
+                def fixture(cmd,input,stdout,stderr,timeout):
+                    for row in [{'type':'turn.completed'},*rows]:stdout.write((json.dumps(row)+'\n').encode())
+                    return SimpleNamespace(returncode=0)
+                with patch.object(q.subprocess,'run',side_effect=fixture),contextlib.redirect_stdout(io.StringIO()):
+                    self.assertEqual(q.run(args),1)
+                record=json.loads((root/'evidence/deadline.run.json').read_text())
+                self.assertFalse(record['control_evidence_valid']);self.assertEqual(record['status'],'failed')
+                self.assertIsNone(record['timed_out'])
+
 if __name__=='__main__': unittest.main()

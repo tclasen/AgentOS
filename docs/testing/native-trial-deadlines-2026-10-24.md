@@ -1,4 +1,12 @@
-# Native trial deadlines
+# Native trial deadlines — revised candidate under validation
+
+Independent APP-000034 rejected revision1 because Boolean numeric fields could be accepted as valid successful supervisor evidence. Its60 passing tests and four native cases did not establish the full malformed-record requirement. That rejection is retained and never regraded.
+
+Plan2 keeps the original acceptance criteria and separately repairs primitive-type validation for version, limit, grace, PID, process-group and exit-code fields. A new24case adversarial regression produced15 failures against the rejected code before the fix. New host/Linux tests, a fresh source freeze, four newly named native Sol/Luna cases and independent APP35 are required before promotion. Original candidate/source/controls/targets and all880 indexed reviewer files remain immutable.
+
+The original result record below is historical revision1 evidence, not approval of the current change.
+
+## Revision1 evidence
 
 Recommend merging the runner deadline change, subject to fresh independent APP-000034 and normal protected delivery. The previous Luna design run exceeded its600second grant because parent monitoring paused during compaction. This change moves native deadline enforcement into a separate sandbox process and bounds the host transport wait. It does not repair or regrade that failed onboarding experiment.
 

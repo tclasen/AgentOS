@@ -383,6 +383,8 @@ def run(args):
     controls = [row for row in events(log) if row.get('type') == 'agentos.run_control']
     control_valid = (len(controls) == 2
         and [row.get('phase') for row in controls] == ['started', 'finished']
+        and all(type(row.get(key)) is int for row in controls
+                for key in ('version', 'timeout_seconds', 'grace_seconds', 'pid', 'process_group'))
         and all(row.get('version') == 1 and row.get('control_id') == args.name
                 and row.get('timeout_seconds') == timeout_seconds
                 and row.get('grace_seconds') == 5 for row in controls)
@@ -395,6 +397,7 @@ def run(args):
         and math.isfinite(controls[-1]['elapsed_seconds']) and controls[-1]['elapsed_seconds'] >= 0
         and isinstance(controls[-1].get('signals'), list)
         and all(sig in ('SIGINT', 'SIGKILL') for sig in controls[-1]['signals'])
+        and type(controls[-1].get('exit_code')) is int
         and controls[-1].get('exit_code') == returncode
         and returncode == (124 if controls[-1]['timed_out'] else
             (controls[-1]['child_returncode'] if controls[-1]['child_returncode'] >= 0
