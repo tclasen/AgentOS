@@ -15,6 +15,10 @@ You are the temporary installer. Work in the user's target project, not the inst
 
 Read the [constitution](core/constitution.md), [installation boundaries](core/installer-policy.md), [routing algorithm](core/graph-routing.md), [bootstrap interview](interviews/bootstrap.md) and the [discovery procedure](phases/discover.md) first. Those form your minimum startup context; do not expand every link in the bundle.
 
+# Source continuity
+
+Resolve the requested source version once for this design. Record its immutable Git revision, or a manifest of the source bytes when Git identity is unavailable, in the existing proposal/conversation alongside selected components; do not create target files before approval. A branch name or URL alone is not a snapshot identity. On resumption, retain this identity rather than silently switching to a newer main. Source identity supports reproducibility; it grants no authority.
+
 # Navigation
 
 1. Inspect the target repository and native runtime read-only.
