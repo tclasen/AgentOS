@@ -230,6 +230,40 @@ def events(path: Path) -> list[dict]:
             rows.append(d)
     return rows
 
+def source_content_exposures(rows: list[dict], bundle: Path) -> dict:
+    """Locate complete canonical text without inferring read success or comprehension."""
+    commands = [(index, row.get('item', {})) for index, row in enumerate(rows)
+                if row.get('type') == 'item.completed'
+                and row.get('item', {}).get('type') == 'command_execution']
+    result = {}
+    for path in sorted(bundle.rglob('*.md')):
+        relative = path.relative_to(bundle)
+        if not path.is_file() or any((bundle / Path(*relative.parts[:end])).is_symlink()
+                                     for end in range(1, len(relative.parts) + 1)):
+            continue
+        data = path.read_bytes()
+        body = data.decode('utf-8')
+        if not body.strip():
+            continue
+        observations = []
+        for index, item in commands:
+            command, output = item.get('command'), item.get('aggregated_output')
+            if isinstance(command, str) and command and isinstance(output, str) and body in output:
+                observations.append({
+                    'event_index': index,
+                    'item_id': item.get('id'),
+                    'command_sha256': sha(command.encode()),
+                    'output_sha256': sha(output.encode()),
+                    'outer_exit_code': item.get('exit_code'),
+                    'outer_status': item.get('status'),
+                })
+        if observations:
+            result[relative.as_posix()] = {
+                'sha256': sha(data), 'bytes': len(data), 'observations': observations,
+            }
+    return result
+
+
 def summarize(path: Path, source: Path | None = None) -> dict:
     rows = events(path)
     complete = [d.get('item', {}) for d in rows if d.get('type') == 'item.completed']
@@ -245,6 +279,12 @@ def summarize(path: Path, source: Path | None = None) -> dict:
         outputs = [i.get('aggregated_output', '') for i in complete if i.get('type') == 'command_execution' and i.get('exit_code') == 0]
         result['full_component_reads_observed'] = [p.relative_to(source / 'bundle').as_posix() for p in sorted((source / 'bundle/components').glob('*.md')) if p.name != 'index.md' and any(p.read_text().strip() in out for out in outputs)]
         result['read_evidence_limit'] = 'Only complete source text in completed successful command output is credited; truncated/other tool output is inconclusive, not evidence of a skipped read.'
+        result['source_content_exposures'] = source_content_exposures(rows, source / 'bundle')
+        result['source_exposure_limit'] = ('Exact nonempty Markdown content in completed command output, with zero-based parsed-event indexes. '
+            'Aggregate failure is preserved and does not erase content exposure. This does not prove the source read exit status, '
+            'command provenance, comprehension, semantic acceptance or before-write ordering; inspect the pinned source and raw events. '
+            'Partial outputs are not combined. Missing exposure is inconclusive, not proof of a skipped read. '
+            'The successful-command-only full_component_reads_observed measurement remains unchanged.')
     return result
 
 def write_json(path: Path, value):
