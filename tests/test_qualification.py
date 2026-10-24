@@ -17,6 +17,14 @@ from unittest.mock import patch
 SPEC=importlib.util.spec_from_file_location('qualification',Path(__file__).parents[1]/'tools/qualification.py')
 q=importlib.util.module_from_spec(SPEC);SPEC.loader.exec_module(q)
 
+def finished_control(cmd, stdout):
+    """Simulated supervisor receipt for existing isolated runner tests."""
+    index = cmd.index('codex')
+    common = {'type':'agentos.run_control','version':1,'control_id':cmd[index-1],
+              'timeout_seconds':int(cmd[index-2]),'pid':123,'process_group':123,'grace_seconds':5}
+    for row in [dict(common,phase='started'),dict(common,phase='finished',timed_out=False,exit_code=0,child_returncode=0,elapsed_seconds=0.1,signals=[])]:
+        stdout.write((json.dumps(row)+'\n').encode())
+
 class QualificationTests(unittest.TestCase):
     def test_verify_selection_preserves_actual_extra_components_without_profile_substitution(self):
         bundle=Path(__file__).parents[1]/'bundle'
@@ -201,11 +209,11 @@ class QualificationTests(unittest.TestCase):
                                  add_dir=[str(extra)],sandbox='unit-fixture',model='gpt-6-luna',policy='workspace-write',
                                  agents=0,strict_config=False,resume=None,schema=None,prompt=str(prompt),
                                  source=str(Path(__file__).parents[1]))
-            def fixture_worker(cmd, input, stdout, stderr):
+            def fixture_worker(cmd, input, stdout, stderr, timeout):
                 (target/'artifact.txt').write_text('returned artifact')
                 (target/'empty').mkdir();(extra/'empty/nested').mkdir(parents=True)
                 (extra/'receipt.txt').write_text('returned receipt')
-                stdout.write((json.dumps({'type':'turn.completed','usage':{}})+'\n').encode())
+                stdout.write((json.dumps({'type':'turn.completed','usage':{}})+'\n').encode()); finished_control(cmd, stdout)
                 return SimpleNamespace(returncode=0)
             with patch.object(q.subprocess,'run',side_effect=fixture_worker), contextlib.redirect_stdout(io.StringIO()):
                 self.assertEqual(q.run(args),0)
@@ -245,8 +253,8 @@ class QualificationTests(unittest.TestCase):
                     output=str(root/'evidence'),add_dir=[],sandbox='unit-fixture',model='gpt-6-luna',
                     policy='workspace-write',agents=0,strict_config=False,resume=None,schema=None,
                     prompt=str(prompt),source=str(Path(__file__).parents[1]))
-                def returned(cmd,input,stdout,stderr):
-                    stdout.write(b'{"type":"turn.completed","usage":{}}\n')
+                def returned(cmd,input,stdout,stderr,timeout):
+                    stdout.write(b'{"type":"turn.completed","usage":{}}\n'); finished_control(cmd, stdout)
                     return SimpleNamespace(returncode=0)
                 with patch.object(q.subprocess,'run',side_effect=returned),contextlib.redirect_stdout(io.StringIO()):
                     self.assertEqual(q.run(args),0)
@@ -263,7 +271,7 @@ class QualificationTests(unittest.TestCase):
                         output=str(root/'evidence'),add_dir=[],sandbox='unit-fixture',model='gpt-6-luna',
                         policy='read-only',agents=0,strict_config=False,resume=resume,schema=None,
                         prompt=str(prompt),source=str(Path(__file__).parents[1]),reasoning_effort=effort)
-                    def returned(cmd,input,stdout,stderr):
+                    def returned(cmd,input,stdout,stderr,timeout):
                         overrides=[(i,x) for i,x in enumerate(cmd) if x.startswith('model_reasoning_effort=')]
                         if effort is None:
                             self.assertEqual(overrides,[])
@@ -275,7 +283,7 @@ class QualificationTests(unittest.TestCase):
                         self.assertIn('agents.enabled=false',cmd)
                         self.assertEqual(cmd[cmd.index('--sandbox')+1],'read-only')
                         self.assertEqual(cmd[-2:] if resume else cmd[-1:], [resume,'-'] if resume else ['-'])
-                        stdout.write(b'{"type":"turn.completed","usage":{}}\n')
+                        stdout.write(b'{"type":"turn.completed","usage":{}}\n'); finished_control(cmd, stdout)
                         return SimpleNamespace(returncode=0)
                     with patch.object(q.subprocess,'run',side_effect=returned),contextlib.redirect_stdout(io.StringIO()):
                         self.assertEqual(q.run(args),0)
@@ -474,9 +482,9 @@ class QualificationTests(unittest.TestCase):
                 output=str(root/'evidence'),add_dir=[str(extra)],sandbox='unit-fixture',model='gpt-6-luna',
                 policy='workspace-write',agents=0,strict_config=False,resume=None,schema=None,
                 prompt=str(prompt),source=str(Path(__file__).parents[1]))
-            def returned(cmd,input,stdout,stderr):
+            def returned(cmd,input,stdout,stderr,timeout):
                 os.mkfifo(target/'entry');os.mkfifo(extra/'entry')
-                stdout.write((json.dumps({'type':'turn.completed','usage':{}})+'\n').encode())
+                stdout.write((json.dumps({'type':'turn.completed','usage':{}})+'\n').encode()); finished_control(cmd, stdout)
                 return SimpleNamespace(returncode=0)
             original_read=Path.read_bytes
             def regular_read(path):
