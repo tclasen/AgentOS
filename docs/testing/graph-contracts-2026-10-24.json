@@ -1,0 +1,698 @@
+{
+  "task": "TASK-000180",
+  "phases": {
+    "c1": {
+      "expected_cases": {
+        "valid_empty": {
+          "exit": 0,
+          "selected": [
+            "components/a.md"
+          ]
+        },
+        "valid_transitive": {
+          "exit": 0,
+          "selected": [
+            "components/a.md",
+            "components/b.md",
+            "components/c.md"
+          ]
+        },
+        "blank_separator": {
+          "exit": 0,
+          "selected": [
+            "components/a.md",
+            "components/b.md",
+            "components/c.md"
+          ]
+        },
+        "comment_separator": {
+          "exit": 0,
+          "selected": [
+            "components/a.md",
+            "components/b.md",
+            "components/c.md"
+          ]
+        },
+        "unsupported_indent": {
+          "exit": 2,
+          "selected": null
+        },
+        "duplicate_requires": {
+          "exit": 2,
+          "selected": null
+        },
+        "duplicate_agentos": {
+          "exit": 2,
+          "selected": null
+        },
+        "duplicate_selection": {
+          "exit": 2,
+          "selected": null
+        },
+        "unterminated_frontmatter": {
+          "exit": 2,
+          "selected": null
+        },
+        "foreign_mapping_fields": {
+          "exit": 2,
+          "selected": null
+        },
+        "null_requires": {
+          "exit": 2,
+          "selected": null
+        },
+        "inline_requires": {
+          "exit": 2,
+          "selected": null
+        },
+        "dependency_suffix": {
+          "exit": 2,
+          "selected": null
+        },
+        "quoted_dependency": {
+          "exit": 2,
+          "selected": null
+        }
+      },
+      "full_verification_sha256": "2fb068ea0b989e4d5b452a2c1ff4e2c0cff3929d5e0558866aa563e78094eacd",
+      "source_tools_sha256": {
+        "baseline": "57149283188d61ea8bbf7171644f87c045b375ae31d490a852c2532cb4b563da",
+        "c1-candidate": "5fc0653799d92f780b6d52e4c314886312918ee6dc95143cbb732ca069393712"
+      },
+      "runs": [
+        {
+          "run": "c1-baseline-sol-r1",
+          "revision": "baseline",
+          "model_requested": "gpt-6.1-sol",
+          "native_threads": [
+            "01a16c04-2396-75c3-9ae8-d8a6fc2b147f"
+          ],
+          "case_count": 14,
+          "contract_passes": 4,
+          "actual_cli_results_match_worker_artifact": true,
+          "scope_and_git_preserved": true,
+          "manifest_sha256": "b2d54e950195a9670f819e96c69928a5373561aa1dc531a9421bb13d93e619b5",
+          "artifact_sha256": "5cc82cf9438ebb6b68ea3a92f6e00009e92ab432f41ba5dc2d51d34a7699eddd",
+          "nonzero_native_commands_retained": 1,
+          "failed_cases": [
+            {
+              "id": "blank_separator",
+              "expected": {
+                "exit": 0,
+                "selected": [
+                  "components/a.md",
+                  "components/b.md",
+                  "components/c.md"
+                ]
+              },
+              "actual": {
+                "exit": 0,
+                "selected": [
+                  "components/a.md"
+                ]
+              },
+              "passed": false
+            },
+            {
+              "id": "comment_separator",
+              "expected": {
+                "exit": 0,
+                "selected": [
+                  "components/a.md",
+                  "components/b.md",
+                  "components/c.md"
+                ]
+              },
+              "actual": {
+                "exit": 0,
+                "selected": [
+                  "components/a.md"
+                ]
+              },
+              "passed": false
+            },
+            {
+              "id": "unsupported_indent",
+              "expected": {
+                "exit": 2,
+                "selected": null
+              },
+              "actual": {
+                "exit": 0,
+                "selected": [
+                  "components/a.md"
+                ]
+              },
+              "passed": false
+            },
+            {
+              "id": "duplicate_requires",
+              "expected": {
+                "exit": 2,
+                "selected": null
+              },
+              "actual": {
+                "exit": 0,
+                "selected": [
+                  "components/a.md"
+                ]
+              },
+              "passed": false
+            },
+            {
+              "id": "duplicate_agentos",
+              "expected": {
+                "exit": 2,
+                "selected": null
+              },
+              "actual": {
+                "exit": 0,
+                "selected": [
+                  "components/a.md"
+                ]
+              },
+              "passed": false
+            },
+            {
+              "id": "duplicate_selection",
+              "expected": {
+                "exit": 2,
+                "selected": null
+              },
+              "actual": {
+                "exit": 0,
+                "selected": [
+                  "components/a.md",
+                  "components/b.md",
+                  "components/c.md"
+                ]
+              },
+              "passed": false
+            },
+            {
+              "id": "unterminated_frontmatter",
+              "expected": {
+                "exit": 2,
+                "selected": null
+              },
+              "actual": {
+                "exit": 0,
+                "selected": [
+                  "components/a.md",
+                  "components/b.md",
+                  "components/c.md"
+                ]
+              },
+              "passed": false
+            },
+            {
+              "id": "foreign_mapping_fields",
+              "expected": {
+                "exit": 2,
+                "selected": null
+              },
+              "actual": {
+                "exit": 0,
+                "selected": [
+                  "components/a.md",
+                  "components/b.md",
+                  "components/c.md"
+                ]
+              },
+              "passed": false
+            },
+            {
+              "id": "null_requires",
+              "expected": {
+                "exit": 2,
+                "selected": null
+              },
+              "actual": {
+                "exit": 0,
+                "selected": [
+                  "components/a.md"
+                ]
+              },
+              "passed": false
+            },
+            {
+              "id": "dependency_suffix",
+              "expected": {
+                "exit": 2,
+                "selected": null
+              },
+              "actual": {
+                "exit": 0,
+                "selected": [
+                  "components/a.md"
+                ]
+              },
+              "passed": false
+            }
+          ]
+        },
+        {
+          "run": "c1-baseline-luna-r1",
+          "revision": "baseline",
+          "model_requested": "gpt-6-luna",
+          "native_threads": [
+            "01a16c04-23ff-7cd2-b16d-574e8f5e53d1"
+          ],
+          "case_count": 14,
+          "contract_passes": 4,
+          "actual_cli_results_match_worker_artifact": true,
+          "scope_and_git_preserved": true,
+          "manifest_sha256": "0677bdaaca8997fca7a83c66e974f84eaeb67d120f1bcbd8d604fef3278f457e",
+          "artifact_sha256": "5cc82cf9438ebb6b68ea3a92f6e00009e92ab432f41ba5dc2d51d34a7699eddd",
+          "nonzero_native_commands_retained": 0,
+          "failed_cases": [
+            {
+              "id": "blank_separator",
+              "expected": {
+                "exit": 0,
+                "selected": [
+                  "components/a.md",
+                  "components/b.md",
+                  "components/c.md"
+                ]
+              },
+              "actual": {
+                "exit": 0,
+                "selected": [
+                  "components/a.md"
+                ]
+              },
+              "passed": false
+            },
+            {
+              "id": "comment_separator",
+              "expected": {
+                "exit": 0,
+                "selected": [
+                  "components/a.md",
+                  "components/b.md",
+                  "components/c.md"
+                ]
+              },
+              "actual": {
+                "exit": 0,
+                "selected": [
+                  "components/a.md"
+                ]
+              },
+              "passed": false
+            },
+            {
+              "id": "unsupported_indent",
+              "expected": {
+                "exit": 2,
+                "selected": null
+              },
+              "actual": {
+                "exit": 0,
+                "selected": [
+                  "components/a.md"
+                ]
+              },
+              "passed": false
+            },
+            {
+              "id": "duplicate_requires",
+              "expected": {
+                "exit": 2,
+                "selected": null
+              },
+              "actual": {
+                "exit": 0,
+                "selected": [
+                  "components/a.md"
+                ]
+              },
+              "passed": false
+            },
+            {
+              "id": "duplicate_agentos",
+              "expected": {
+                "exit": 2,
+                "selected": null
+              },
+              "actual": {
+                "exit": 0,
+                "selected": [
+                  "components/a.md"
+                ]
+              },
+              "passed": false
+            },
+            {
+              "id": "duplicate_selection",
+              "expected": {
+                "exit": 2,
+                "selected": null
+              },
+              "actual": {
+                "exit": 0,
+                "selected": [
+                  "components/a.md",
+                  "components/b.md",
+                  "components/c.md"
+                ]
+              },
+              "passed": false
+            },
+            {
+              "id": "unterminated_frontmatter",
+              "expected": {
+                "exit": 2,
+                "selected": null
+              },
+              "actual": {
+                "exit": 0,
+                "selected": [
+                  "components/a.md",
+                  "components/b.md",
+                  "components/c.md"
+                ]
+              },
+              "passed": false
+            },
+            {
+              "id": "foreign_mapping_fields",
+              "expected": {
+                "exit": 2,
+                "selected": null
+              },
+              "actual": {
+                "exit": 0,
+                "selected": [
+                  "components/a.md",
+                  "components/b.md",
+                  "components/c.md"
+                ]
+              },
+              "passed": false
+            },
+            {
+              "id": "null_requires",
+              "expected": {
+                "exit": 2,
+                "selected": null
+              },
+              "actual": {
+                "exit": 0,
+                "selected": [
+                  "components/a.md"
+                ]
+              },
+              "passed": false
+            },
+            {
+              "id": "dependency_suffix",
+              "expected": {
+                "exit": 2,
+                "selected": null
+              },
+              "actual": {
+                "exit": 0,
+                "selected": [
+                  "components/a.md"
+                ]
+              },
+              "passed": false
+            }
+          ]
+        },
+        {
+          "run": "c1-c1-candidate-sol-r1",
+          "revision": "c1-candidate",
+          "model_requested": "gpt-6.1-sol",
+          "native_threads": [
+            "01a16c05-5ea7-7923-9c8b-2e96a971b810"
+          ],
+          "case_count": 14,
+          "contract_passes": 14,
+          "actual_cli_results_match_worker_artifact": true,
+          "scope_and_git_preserved": true,
+          "manifest_sha256": "9a3991a85a7679c48039b9f8a2618de5eaa72604c8280a0cd9cdd9a8fbcb1eb9",
+          "artifact_sha256": "c2b16e270522e79829c8e9042f68f3da4ea52b12c49b1b886def848ecadbaa90",
+          "nonzero_native_commands_retained": 1,
+          "failed_cases": []
+        },
+        {
+          "run": "c1-c1-candidate-luna-r1",
+          "revision": "c1-candidate",
+          "model_requested": "gpt-6-luna",
+          "native_threads": [
+            "01a16c05-5ea5-70b1-9540-e3708a1cb5d9"
+          ],
+          "case_count": 14,
+          "contract_passes": 14,
+          "actual_cli_results_match_worker_artifact": true,
+          "scope_and_git_preserved": true,
+          "manifest_sha256": "4f3150c97313e1b43812ccaa32ac344a7b378f7529b7a3048d22969d984469f4",
+          "artifact_sha256": "c2b16e270522e79829c8e9042f68f3da4ea52b12c49b1b886def848ecadbaa90",
+          "nonzero_native_commands_retained": 0,
+          "failed_cases": []
+        }
+      ]
+    },
+    "c2": {
+      "expected_cases": {
+        "missing_unused": {
+          "exit": 0,
+          "selected": [
+            "components/a.md"
+          ]
+        },
+        "missing_requested": {
+          "exit": 2,
+          "selected": null
+        },
+        "missing_required": {
+          "exit": 2,
+          "selected": null
+        },
+        "missing_global_audit": {
+          "exit": 1,
+          "selected": null
+        },
+        "cycle_unused": {
+          "exit": 0,
+          "selected": [
+            "components/a.md"
+          ]
+        },
+        "cycle_requested": {
+          "exit": 2,
+          "selected": null
+        },
+        "cycle_required": {
+          "exit": 2,
+          "selected": null
+        },
+        "cycle_global_audit": {
+          "exit": 1,
+          "selected": null
+        },
+        "escape_unused": {
+          "exit": 0,
+          "selected": [
+            "components/a.md"
+          ]
+        },
+        "escape_requested": {
+          "exit": 2,
+          "selected": null
+        },
+        "escape_global_audit": {
+          "exit": 1,
+          "selected": null
+        },
+        "deprecated_unused": {
+          "exit": 0,
+          "selected": [
+            "components/a.md"
+          ]
+        },
+        "deprecated_requested": {
+          "exit": 2,
+          "selected": null
+        },
+        "valid_transitive_requested": {
+          "exit": 0,
+          "selected": [
+            "components/a.md",
+            "components/b.md",
+            "components/c.md"
+          ]
+        },
+        "unknown_requested": {
+          "exit": 2,
+          "selected": null
+        },
+        "malformed_unused": {
+          "exit": 2,
+          "selected": null
+        }
+      },
+      "full_verification_sha256": "e8c7e26e71362e837374f4398f3a442d25fdc67c0f1f66a032c4cf683efae196",
+      "source_tools_sha256": {
+        "c2-baseline": "5fc0653799d92f780b6d52e4c314886312918ee6dc95143cbb732ca069393712",
+        "c2-candidate": "3eea373e6b7549b46dd971524e5fcbfb084a01132cd51b0382e5451867034122"
+      },
+      "runs": [
+        {
+          "run": "c2-c2-baseline-sol-r1",
+          "revision": "c2-baseline",
+          "model_requested": "gpt-6.1-sol",
+          "native_threads": [
+            "01a16c08-bd1f-7ff2-aa2e-32f6f6712c75"
+          ],
+          "case_count": 16,
+          "contract_passes": 13,
+          "actual_cli_results_match_worker_artifact": true,
+          "scope_and_git_preserved": true,
+          "manifest_sha256": "2c74ad646d04a424f08a875d5ecf77cf6fb62307f717eaa3de02a27ce2a40022",
+          "artifact_sha256": "c6c2443577ae5ee08ca96defbd24cd8f1b629b33a1e0baa77841d3c1f9e8b0a0",
+          "nonzero_native_commands_retained": 1,
+          "failed_cases": [
+            {
+              "id": "missing_unused",
+              "expected": {
+                "exit": 0,
+                "selected": [
+                  "components/a.md"
+                ]
+              },
+              "actual": {
+                "exit": 2,
+                "selected": null
+              },
+              "passed": false
+            },
+            {
+              "id": "cycle_unused",
+              "expected": {
+                "exit": 0,
+                "selected": [
+                  "components/a.md"
+                ]
+              },
+              "actual": {
+                "exit": 2,
+                "selected": null
+              },
+              "passed": false
+            },
+            {
+              "id": "escape_unused",
+              "expected": {
+                "exit": 0,
+                "selected": [
+                  "components/a.md"
+                ]
+              },
+              "actual": {
+                "exit": 2,
+                "selected": null
+              },
+              "passed": false
+            }
+          ]
+        },
+        {
+          "run": "c2-c2-baseline-luna-r1",
+          "revision": "c2-baseline",
+          "model_requested": "gpt-6-luna",
+          "native_threads": [
+            "01a16c08-bd4b-7f40-a445-77692f1a61f6"
+          ],
+          "case_count": 16,
+          "contract_passes": 13,
+          "actual_cli_results_match_worker_artifact": true,
+          "scope_and_git_preserved": true,
+          "manifest_sha256": "4c8aafcb68a4f664c13faed3122167b139a24935362241ab247c44c846b224fd",
+          "artifact_sha256": "c6c2443577ae5ee08ca96defbd24cd8f1b629b33a1e0baa77841d3c1f9e8b0a0",
+          "nonzero_native_commands_retained": 1,
+          "failed_cases": [
+            {
+              "id": "missing_unused",
+              "expected": {
+                "exit": 0,
+                "selected": [
+                  "components/a.md"
+                ]
+              },
+              "actual": {
+                "exit": 2,
+                "selected": null
+              },
+              "passed": false
+            },
+            {
+              "id": "cycle_unused",
+              "expected": {
+                "exit": 0,
+                "selected": [
+                  "components/a.md"
+                ]
+              },
+              "actual": {
+                "exit": 2,
+                "selected": null
+              },
+              "passed": false
+            },
+            {
+              "id": "escape_unused",
+              "expected": {
+                "exit": 0,
+                "selected": [
+                  "components/a.md"
+                ]
+              },
+              "actual": {
+                "exit": 2,
+                "selected": null
+              },
+              "passed": false
+            }
+          ]
+        },
+        {
+          "run": "c2-c2-candidate-sol-r1",
+          "revision": "c2-candidate",
+          "model_requested": "gpt-6.1-sol",
+          "native_threads": [
+            "01a16c09-e19c-76b3-a1bb-d49777d60a91"
+          ],
+          "case_count": 16,
+          "contract_passes": 16,
+          "actual_cli_results_match_worker_artifact": true,
+          "scope_and_git_preserved": true,
+          "manifest_sha256": "e6d037c297371ab2ec9104b73b0b6dfac11119a8200dfe1776fb77477811f1bd",
+          "artifact_sha256": "238073dc27f4d3de708a5d2eebc30a0f4da1b2db5d04da5f3e18a5fcea96e18b",
+          "nonzero_native_commands_retained": 1,
+          "failed_cases": []
+        },
+        {
+          "run": "c2-c2-candidate-luna-r1",
+          "revision": "c2-candidate",
+          "model_requested": "gpt-6-luna",
+          "native_threads": [
+            "01a16c09-e2a7-7772-909d-b629c2227652"
+          ],
+          "case_count": 16,
+          "contract_passes": 16,
+          "actual_cli_results_match_worker_artifact": true,
+          "scope_and_git_preserved": true,
+          "manifest_sha256": "346c808d2186df9a97b2ded9591f93718f7b1d71dce20efd5763cc63be9e53c5",
+          "artifact_sha256": "238073dc27f4d3de708a5d2eebc30a0f4da1b2db5d04da5f3e18a5fcea96e18b",
+          "nonzero_native_commands_retained": 1,
+          "failed_cases": []
+        }
+      ]
+    }
+  },
+  "limits": "Counts describe deterministic CLI case results, not model reliability. Each native artifact matched independent actual CLI replay; original failures and complete results remain in the indexed local archive."
+}
