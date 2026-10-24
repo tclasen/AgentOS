@@ -1,0 +1,120 @@
+{
+  "kind": "Coordinator machine identity and cleanup attestation; not independent acceptance",
+  "task": "TASK-000181",
+  "run": "RUN-000176",
+  "observed_at": "2026-10-24T04:24:57.972844+00:00",
+  "reviewed_head": "f9f44d8ba389baa1b0769db382598f9baa3c5eed",
+  "reviewed_tree": "f42fe77ede15387c0f9fe386f41656e6dbb2669c",
+  "receipt_sha256": "f52bcb2eec74f3188c7a1a53eebf6ffcfeab53915a0a8df6b221205c3593c54d",
+  "receipt_format_correction": "Same independent reviewer execution added only ID, conditional Status and exact Observation Time. Initial receipt preserved; substantive findings and bindings unchanged.",
+  "models": [
+    {
+      "run": "baseline-planning-luna-r1",
+      "requested_model": "gpt-6-luna",
+      "thread": "01a16c1c-b49b-7c80-8922-8a9da36e453f",
+      "model": "gpt-6-luna",
+      "reasoning": null
+    },
+    {
+      "run": "baseline-resume-luna-r1",
+      "requested_model": "gpt-6-luna",
+      "thread": "01a16c1e-8c02-7bd2-98a9-a41c90f94d2e",
+      "model": "gpt-6-luna",
+      "reasoning": null
+    },
+    {
+      "run": "candidate-resume-luna-r1",
+      "requested_model": "gpt-6-luna",
+      "thread": "01a16c20-5fb5-7232-848b-8558c5e22bf7",
+      "model": "gpt-6-luna",
+      "reasoning": null
+    },
+    {
+      "run": "candidate-planning-sol-r1",
+      "requested_model": "gpt-6.1-sol",
+      "thread": "01a16c1e-8876-7693-ac56-bed5503e4886",
+      "model": "gpt-6.1-sol",
+      "reasoning": null
+    },
+    {
+      "run": "baseline-planning-sol-r1",
+      "requested_model": "gpt-6.1-sol",
+      "thread": "01a16c1c-af25-7990-a01f-74e067fe2e93",
+      "model": "gpt-6.1-sol",
+      "reasoning": null
+    },
+    {
+      "run": "review-final-r1",
+      "continuation": "review-receipt-fields-r1",
+      "requested_model": "gpt-6.1-sol",
+      "thread": "01a16c23-4fb2-79d0-b57d-1301a9f59211",
+      "model": "gpt-6.1-sol",
+      "reasoning": null
+    },
+    {
+      "run": "candidate-resume-sol-r1",
+      "requested_model": "gpt-6.1-sol",
+      "thread": "01a16c20-5c37-73a1-80c3-82391b44f1f2",
+      "model": "gpt-6.1-sol",
+      "reasoning": null
+    },
+    {
+      "run": "candidate-planning-luna-r1",
+      "requested_model": "gpt-6-luna",
+      "thread": "01a16c1d-8f6a-7a41-9edb-8bb4d5e28ce6",
+      "model": "gpt-6-luna",
+      "reasoning": null
+    },
+    {
+      "run": "baseline-resume-sol-r1",
+      "requested_model": "gpt-6.1-sol",
+      "thread": "01a16c1f-0ff2-7670-a8ca-1e595e552c4b",
+      "model": "gpt-6.1-sol",
+      "reasoning": null
+    }
+  ],
+  "actual_model_names_match_requested": true,
+  "effort_and_cost": "unknown",
+  "returned_distinct_roots": 9,
+  "returned_invocations": 10,
+  "native_trial_roots": 8,
+  "trial_nonzero_command_items": 11,
+  "review_nonzero_command_items": 1,
+  "regression_tests_per_variant": 32,
+  "disposition": "retain source-continuity guidance",
+  "archives": [
+    {
+      "archive": "/private/tmp/agentos-source-continuity-20261024-trials.tar.gz",
+      "sha256": "31d9ae24f1504621d9f7ef3835aa7dc4effae6507b893535ff7c1c89f4ffb628",
+      "bytes": 1133405,
+      "indexed_files": 1144,
+      "all_indexed_members_verified": true,
+      "index": "evidence/trials-index.json"
+    },
+    {
+      "archive": "/private/tmp/agentos-source-continuity-20261024-acceptance.tar.gz",
+      "sha256": "75038b8c05a3628f707d4202ee7d6fc4c47e7f161aaf1a432a5bd8e013bfe2f7",
+      "bytes": 115445,
+      "indexed_files": 42,
+      "all_indexed_members_verified": true,
+      "index": "evidence/acceptance-index.json"
+    }
+  ],
+  "archive_total_bytes": 1248850,
+  "cleanup": {
+    "owned_sandbox": "agentos-source-continuity-20261024",
+    "removed_and_absent": true,
+    "original_sandbox_pairs_preserved": 63,
+    "global_prune_performed": false,
+    "raw_fixture_directory_removed": true
+  },
+  "governance_hashes_unchanged": 14,
+  "delivery": "pending normal protected PR and fetched owning-main verification; recorded separately after delivery",
+  "global_goal_status": "active",
+  "limits": [
+    "one planning/preflight sample per model/variant/phase; no full onboarding rerun",
+    "no preflight decision gain: both6/6",
+    "non-Git source manifests and dirty source behavior untested",
+    "no global exhaustion claim"
+  ]
+}
