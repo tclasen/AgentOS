@@ -1,0 +1,275 @@
+{
+  "task": "TASK-000202",
+  "run": "RUN-000197",
+  "base": "db2623e1ead49a05abb34a5084472bb9eb7bf110",
+  "operative_candidate": "163db97a70bb76144fe9509b1c1b95cbb5bf766d",
+  "source_fixture_head": "cd4269160b38bc8c39ffc1f105718de08f9bc6f6",
+  "disposition": "reject whole twelve-path operative package; findings only",
+  "mandatory_failure": "bundle-luna-I examples/source-manifest.md not delivered before first write at native line123",
+  "unstarted": [
+    "full-luna-I",
+    "full-sol-I",
+    "bundle-luna-U",
+    "bundle-sol-U",
+    "full-luna-U",
+    "full-sol-U"
+  ],
+  "runs": {
+    "bundle-luna-D": {
+      "thread": [
+        "01a16eb9-408f-7bf2-8c08-7cf85d915b83"
+      ],
+      "duration_seconds": 73.87724113464355,
+      "status": "returned",
+      "nonzero_commands": 0,
+      "usage": [
+        {
+          "input_tokens": 503838,
+          "cached_input_tokens": 446464,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 4944,
+          "reasoning_output_tokens": 1308
+        }
+      ],
+      "raw_sha256": "e558c397a13a2ec245ce5f6fe063785695ae6198b4651110f372eadd50ef3327",
+      "run_sha256": "843f014e0f2860b632ab634d0fb0eef38b73d62559d636c5ffc100c3a81dd9c3"
+    },
+    "bundle-luna-I": {
+      "thread": [
+        "01a16ec4-4c7a-75d2-a597-a6c76e33b35a"
+      ],
+      "duration_seconds": 238.74961709976196,
+      "status": "returned",
+      "nonzero_commands": 1,
+      "usage": [
+        {
+          "input_tokens": 1088416,
+          "cached_input_tokens": 1021312,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 16811,
+          "reasoning_output_tokens": 4049
+        }
+      ],
+      "raw_sha256": "8e9d119adee53cbcc35bc61eb39b54ac2e079ddfd4b2454d90b3344bc591efc3",
+      "run_sha256": "98b6b05ac536d8f1d9202e8dad40f61468883094105bd8d4b1164ba55681dc24"
+    },
+    "bundle-sol-D": {
+      "thread": [
+        "01a16eb9-4c9c-7fe3-8d06-a3f0b453ed19"
+      ],
+      "duration_seconds": 233.47831511497498,
+      "status": "returned",
+      "nonzero_commands": 2,
+      "usage": [
+        {
+          "input_tokens": 743959,
+          "cached_input_tokens": 706048,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 7054,
+          "reasoning_output_tokens": 2232
+        }
+      ],
+      "raw_sha256": "33e100d37909974f2617ee05c727512c3cea1e07217e8a8d57e7b2a89cb0784a",
+      "run_sha256": "abf1ad0393e0bb56c2d2e47a28936f07c907f1ce7fa95d0e79adf2ac6079e323"
+    },
+    "bundle-sol-I": {
+      "thread": [
+        "01a16ec4-5a99-7513-a18e-cc0c828869da"
+      ],
+      "duration_seconds": 614.0381608009338,
+      "status": "returned",
+      "nonzero_commands": 1,
+      "usage": [
+        {
+          "input_tokens": 1753580,
+          "cached_input_tokens": 1667072,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 30809,
+          "reasoning_output_tokens": 5241
+        }
+      ],
+      "raw_sha256": "3b2fad2651fab47095274202f20401900c52e1ae7f2e594b93109d6f4808a879",
+      "run_sha256": "8dc5f3e49b35c0210a01d0acf2b06a08436e6b6403c99e3876fc8b97ec63b7f8"
+    },
+    "full-luna-D": {
+      "thread": [
+        "01a16ebe-e839-7e72-8530-c03a321a5d5b"
+      ],
+      "duration_seconds": 95.38880586624146,
+      "status": "returned",
+      "nonzero_commands": 0,
+      "usage": [
+        {
+          "input_tokens": 560208,
+          "cached_input_tokens": 501120,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 6088,
+          "reasoning_output_tokens": 2336
+        }
+      ],
+      "raw_sha256": "2de16a1aaa52352ab58c263dbd1a9b59c35bd61b687b9ca3b3a6e2dc3ca9a115",
+      "run_sha256": "d0a128bd17996aafb77e2bf62f038a93b49af05d60322ca2272085bd40cda500"
+    },
+    "full-sol-D": {
+      "thread": [
+        "01a16ebe-f0ff-7a52-9022-5ff7b22e0709"
+      ],
+      "duration_seconds": 262.6889898777008,
+      "status": "returned",
+      "nonzero_commands": 0,
+      "usage": [
+        {
+          "input_tokens": 750855,
+          "cached_input_tokens": 694528,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 8678,
+          "reasoning_output_tokens": 2045
+        }
+      ],
+      "raw_sha256": "df07302ff0285c493fe675792dda7a5744a0e00d2bf020bd7076b9e3809c3af8",
+      "run_sha256": "68c5334bdc40d716dabffa791aa4ae84960c667ad2a07f033ce6e95b4bc66d97"
+    }
+  },
+  "usage_totals": {
+    "input_tokens": 5400856,
+    "cached_input_tokens": 5036544,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 74384,
+    "reasoning_output_tokens": 17211
+  },
+  "billing": "unknown",
+  "native_metadata": "work/runtime-complete.json",
+  "primary_I": {
+    "bundle-luna-I": {
+      "thread": "01a16ec4-4c7a-75d2-a597-a6c76e33b35a",
+      "primary_sha256": "07db633962e1a09492844cea99a45523eaf292c5fbaf5c47c88b454694942b27",
+      "first_write_native_call": 123,
+      "full_prewrite_sources": 19,
+      "required_sources": 20,
+      "approval_delivery": {
+        "approved-handoff": {
+          "sha256": "4926cf8b441c014b40cebd33e445cdb773247f393fd5217b505e93e3f94b6698",
+          "bytes": 6627,
+          "outputs": [
+            {
+              "call": 16,
+              "output": 19
+            }
+          ]
+        },
+        "approved-identity": {
+          "sha256": "e6eca14b78ae625c755c364f6be7079c4a7ab6acca1c0803a038b5c7e952a2cb",
+          "bytes": 8730,
+          "outputs": [
+            {
+              "call": 23,
+              "output": 26
+            }
+          ]
+        }
+      },
+      "protected_regular_files": 33,
+      "protected_unchanged": true,
+      "added_regular_files": [
+        ".agentos/README.md",
+        ".agentos/installation.md",
+        ".agentos/learning/README.md",
+        ".agentos/policies/operations.md",
+        ".agentos/qualification-example.json",
+        ".agentos/qualification.md",
+        ".agentos/roles/chief-of-staff.md",
+        ".agentos/roles/director.md",
+        "AGENTS.md"
+      ],
+      "no_cache_paths": true,
+      "fixture_dispositions": [
+        "accepted; retain",
+        "rejected; restore accepted route",
+        "inconclusive: no performance evidence; restore accepted state"
+      ]
+    },
+    "bundle-sol-I": {
+      "thread": "01a16ec4-5a99-7513-a18e-cc0c828869da",
+      "primary_sha256": "ec82e31472a594d2952c143bce3de38fc94d33f0b6353b99fc66795adef88662",
+      "first_write_native_call": 171,
+      "full_prewrite_sources": 20,
+      "required_sources": 20,
+      "approval_delivery": {
+        "approved-handoff": {
+          "sha256": "5bff3b9db51b1c14f70ec4d4315680324f9b22654d9df9f527aa919bce2f5fbf",
+          "bytes": 9921,
+          "outputs": [
+            {
+              "call": 14,
+              "output": 17
+            }
+          ]
+        },
+        "approved-identity": {
+          "sha256": "da715279b1d214f3b4cf91727cd3700a319b499b56dfa4f0b13586b7123736d7",
+          "bytes": 10017,
+          "outputs": [
+            {
+              "call": 19,
+              "output": 24
+            }
+          ]
+        }
+      },
+      "protected_regular_files": 33,
+      "protected_unchanged": true,
+      "added_regular_files": [
+        ".agentos/core.md",
+        ".agentos/installation.md",
+        ".agentos/operations.md",
+        ".agentos/qualification-example.json",
+        ".agentos/records.md",
+        ".agentos/roles.md",
+        "AGENTS.md"
+      ],
+      "no_cache_paths": true,
+      "fixture_dispositions": [
+        "accepted; retain",
+        "rejected; restore accepted state",
+        "inconclusive: no performance evidence; restore accepted state"
+      ]
+    }
+  },
+  "evidence_pins": {
+    "evidence/final-audit.json": {
+      "sha256": "2e56e327acb60dca4e5f250a375277aa875551b0d3b84a50f34facaaf7e6dc23",
+      "bytes": 49295
+    },
+    "evidence/stop-unstarted.json": {
+      "sha256": "d30127c53fc63f2eb0fa07e5e4283c33cb134e21ebd5c4b1c78704530bdb595a",
+      "bytes": 8572
+    },
+    "evidence/local-validation.json": {
+      "sha256": "3b1e1237d258dccda81bd973023d4eb68ddd68d3f62ccbf7602a64847f5315e1",
+      "bytes": 8911
+    },
+    "evidence/handoff-format-validation.json": {
+      "sha256": "78dd74a184c396d3180273fc2d1fc12e5b7b1016a9bf6ed922a74ce5a23febfa",
+      "bytes": 4131
+    },
+    "evidence/manifest-recipe-validation.json": {
+      "sha256": "082673d4a04a46f66683f9417ff31a8f350ba6ad21eb9c741fdf251d3087a336",
+      "bytes": 22435
+    },
+    "controls/preregistered-plan.md": {
+      "sha256": "ce55dfcc7339e57b311e1562dff3fe9cebffc84b5c64cfdb3216fe2c95e6e7b4",
+      "bytes": 7658
+    },
+    "controls/preregistered.json": {
+      "sha256": "652e125b4a4670b69d38535bb56232899639404424f81d02b37702e59f526b0b",
+      "bytes": 106495
+    }
+  },
+  "limitations": [
+    "No ordinary first use admitted",
+    "No full-checkout installation admitted",
+    "No broader execution path qualification",
+    "No historical failed result regraded",
+    "Source coverage and concrete simulations do not prove fresh runtime behavior"
+  ]
+}
