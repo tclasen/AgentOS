@@ -103,13 +103,17 @@ def select_components(bundle: Path, requested: list[str]) -> dict:
                       'and obtain applicable authority before installation or effects.'}
 
 def snapshot(root: Path) -> dict:
-    """Never follow symlinks into another project or credential directory."""
+    """Record files, subdirectories and links; never follow links outside the fixture."""
     root = root.resolve()
     result = {}
     for folder, dirs, files in os.walk(root, followlinks=False):
         dirs[:] = [d for d in dirs if d not in ('.git', '__pycache__', '.pytest_cache')]
         base = Path(folder)
-        for name in files + [d for d in dirs if (base / d).is_symlink()]:
+        for name in sorted(dirs):
+            p = base / name
+            if not p.is_symlink():
+                result[p.relative_to(root).as_posix()] = {'directory': True}
+        for name in sorted(files + [d for d in dirs if (base / d).is_symlink()]):
             p = base / name
             key = p.relative_to(root).as_posix()
             if p.is_symlink():
@@ -156,6 +160,8 @@ def write_json(path: Path, value):
 def run(args):
     if not re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9_.-]{0,127}', args.name):
         raise ValueError('run name must be a simple evidence filename, not a path')
+    if not re.fullmatch(r'TASK-[0-9]{6}', args.task):
+        raise ValueError('task must be an explicit TASK-NNNNNN identifier')
     target = Path(args.target).resolve()
     workspace = Path(args.workspace).resolve()
     if not target.is_relative_to(workspace) or not (target / '.git').exists():
@@ -187,7 +193,7 @@ def run(args):
         cmd += [args.resume]
     cmd += ['-']
     source = Path(args.source).resolve()
-    record = {'name': args.name, 'task': 'TASK-000176', 'status': 'running', 'started_epoch': time.time(), 'owner': 'Coordinator', 'scope': str(target), 'additional_scopes_before': {str(p): snapshot(p) for p in extra}, 'requested_model': args.model, 'actual_model': 'unknown until session metadata collected', 'policy': args.policy, 'native_child_cap': args.agents, 'command': cmd, 'prompt_sha256': sha(Path(args.prompt).read_bytes()), 'before': before, 'source_components': graph(source / 'bundle'), 'monetary_cost': 'unknown'}
+    record = {'name': args.name, 'task': args.task, 'status': 'running', 'started_epoch': time.time(), 'owner': 'Coordinator', 'scope': str(target), 'additional_scopes_before': {str(p): snapshot(p) for p in extra}, 'requested_model': args.model, 'actual_model': 'unknown until session metadata collected', 'policy': args.policy, 'native_child_cap': args.agents, 'command': cmd, 'prompt_sha256': sha(Path(args.prompt).read_bytes()), 'before': before, 'source_components': graph(source / 'bundle'), 'monetary_cost': 'unknown'}
     record['source_bundle'] = snapshot(source / 'bundle')
     write_json(manifest, record)
     with log.open('wb') as stream:
@@ -211,7 +217,7 @@ def main():
     p = sub.add_parser('snapshot'); p.add_argument('root'); p.add_argument('output')
     p = sub.add_parser('inspect'); p.add_argument('log'); p.add_argument('--source')
     p = sub.add_parser('run')
-    for name in ('target', 'workspace', 'sandbox', 'output', 'name', 'prompt', 'source'):
+    for name in ('target', 'workspace', 'sandbox', 'output', 'name', 'task', 'prompt', 'source'):
         p.add_argument('--' + name, required=True)
     p.add_argument('--model', choices=MODELS, required=True)
     p.add_argument('--policy', choices=('read-only', 'workspace-write'), default='workspace-write')

@@ -1,0 +1,87 @@
+{
+  "criterion": "TASK-000178 provenance preserved with correct graph artifact and scoped execution",
+  "disposition": "retain C1, pending independent acceptance and main delivery",
+  "results": [
+    {
+      "run": "c1-baseline-sol-r1",
+      "requested_model": "gpt-6.1-sol",
+      "native_threads": [
+        "01a16bc0-b80a-73b2-8a91-4a12612756bc"
+      ],
+      "actual_manifest_task": "TASK-000176",
+      "checks": {
+        "returned": true,
+        "artifact_task": true,
+        "selected": true,
+        "required": true,
+        "correct_manifest_task": false,
+        "scope_delta": true,
+        "git_index_unchanged": true,
+        "one_initial_commit": true
+      },
+      "manifest_sha256": "66558d18f16601cc29b66047462fa1263f5c325b9ab044cc7983f946d61dba90",
+      "artifact_sha256": "81a1c1e0fb26feb004233375eadf856a2bd01247a3da9da8f137917e656848e6"
+    },
+    {
+      "run": "c1-baseline-luna-r1",
+      "requested_model": "gpt-6-luna",
+      "native_threads": [
+        "01a16bc0-b36e-73c3-89c0-cf8a590f6010"
+      ],
+      "actual_manifest_task": "TASK-000176",
+      "checks": {
+        "returned": true,
+        "artifact_task": true,
+        "selected": true,
+        "required": true,
+        "correct_manifest_task": false,
+        "scope_delta": true,
+        "git_index_unchanged": true,
+        "one_initial_commit": true
+      },
+      "manifest_sha256": "236e3caefc61f43b64539796376078e4fd4489fb2990b4c0064cc2d19254203e",
+      "artifact_sha256": "81a1c1e0fb26feb004233375eadf856a2bd01247a3da9da8f137917e656848e6"
+    },
+    {
+      "run": "c1-c1-candidate-sol-r1",
+      "requested_model": "gpt-6.1-sol",
+      "native_threads": [
+        "01a16bc1-979f-7841-ba72-8978eec4938a"
+      ],
+      "actual_manifest_task": "TASK-000178",
+      "checks": {
+        "returned": true,
+        "artifact_task": true,
+        "selected": true,
+        "required": true,
+        "correct_manifest_task": true,
+        "scope_delta": true,
+        "git_index_unchanged": true,
+        "one_initial_commit": true
+      },
+      "manifest_sha256": "e7e60a9f8e327ba4ea65e2ad78e16b15902fdf081b2469e48367029b158e16ea",
+      "artifact_sha256": "81a1c1e0fb26feb004233375eadf856a2bd01247a3da9da8f137917e656848e6"
+    },
+    {
+      "run": "c1-c1-candidate-luna-r1",
+      "requested_model": "gpt-6-luna",
+      "native_threads": [
+        "01a16bc1-9116-73a3-a93b-434d31b48710"
+      ],
+      "actual_manifest_task": "TASK-000178",
+      "checks": {
+        "returned": true,
+        "artifact_task": true,
+        "selected": true,
+        "required": true,
+        "correct_manifest_task": true,
+        "scope_delta": true,
+        "git_index_unchanged": true,
+        "one_initial_commit": true
+      },
+      "manifest_sha256": "bae48259822c17e04c3b27735d9c21f8b02934a6fbbb3139c34d515c8094e2b8",
+      "artifact_sha256": "81a1c1e0fb26feb004233375eadf856a2bd01247a3da9da8f137917e656848e6"
+    }
+  ],
+  "limit": "Two roots per variant; deterministic manifest attribution improvement, not model-quality measurement. Baseline misattribution intentionally preserved."
+}

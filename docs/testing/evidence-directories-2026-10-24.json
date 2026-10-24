@@ -1,0 +1,194 @@
+{
+  "disposition": "retain C2 pending independent acceptance and main delivery",
+  "results": [
+    {
+      "run": "c2-baseline-sol-r1",
+      "scope": "target",
+      "actual_delta": {
+        "added": [
+          "outbox",
+          "outbox/pending"
+        ],
+        "removed": [
+          "obsolete"
+        ],
+        "changed": []
+      },
+      "recorded_delta": {
+        "added": [],
+        "removed": [],
+        "changed": []
+      },
+      "directory_evidence_complete": false,
+      "manifest_sha256": "2d078dd5b35e34610599e6a762eae5f830f4fb1a9e79a8acb9a8d29cc6dd62ae"
+    },
+    {
+      "run": "c2-baseline-sol-r1",
+      "scope": "destination",
+      "actual_delta": {
+        "added": [
+          "outbox",
+          "outbox/pending"
+        ],
+        "removed": [
+          "obsolete"
+        ],
+        "changed": []
+      },
+      "recorded_delta": {
+        "added": [],
+        "removed": [],
+        "changed": []
+      },
+      "directory_evidence_complete": false,
+      "manifest_sha256": "2d078dd5b35e34610599e6a762eae5f830f4fb1a9e79a8acb9a8d29cc6dd62ae"
+    },
+    {
+      "run": "c2-baseline-luna-r1",
+      "scope": "target",
+      "actual_delta": {
+        "added": [
+          "outbox",
+          "outbox/pending"
+        ],
+        "removed": [
+          "obsolete"
+        ],
+        "changed": []
+      },
+      "recorded_delta": {
+        "added": [],
+        "removed": [],
+        "changed": []
+      },
+      "directory_evidence_complete": false,
+      "manifest_sha256": "f05e5a881723bc1bdd1bebe5ca0d60b73f1d83a85b6b859142bbe8ffe18fa31d"
+    },
+    {
+      "run": "c2-baseline-luna-r1",
+      "scope": "destination",
+      "actual_delta": {
+        "added": [
+          "outbox",
+          "outbox/pending"
+        ],
+        "removed": [
+          "obsolete"
+        ],
+        "changed": []
+      },
+      "recorded_delta": {
+        "added": [],
+        "removed": [],
+        "changed": []
+      },
+      "directory_evidence_complete": false,
+      "manifest_sha256": "f05e5a881723bc1bdd1bebe5ca0d60b73f1d83a85b6b859142bbe8ffe18fa31d"
+    },
+    {
+      "run": "c2-candidate-sol-r1",
+      "scope": "target",
+      "actual_delta": {
+        "added": [
+          "outbox",
+          "outbox/pending"
+        ],
+        "removed": [
+          "obsolete"
+        ],
+        "changed": []
+      },
+      "recorded_delta": {
+        "added": [
+          "outbox",
+          "outbox/pending"
+        ],
+        "removed": [
+          "obsolete"
+        ],
+        "changed": []
+      },
+      "directory_evidence_complete": true,
+      "manifest_sha256": "c9358a7f2dcfa7366034417a8ae482c1164b5a8f1390a20bee2c2d9fd5c80a4f"
+    },
+    {
+      "run": "c2-candidate-sol-r1",
+      "scope": "destination",
+      "actual_delta": {
+        "added": [
+          "outbox",
+          "outbox/pending"
+        ],
+        "removed": [
+          "obsolete"
+        ],
+        "changed": []
+      },
+      "recorded_delta": {
+        "added": [
+          "outbox",
+          "outbox/pending"
+        ],
+        "removed": [
+          "obsolete"
+        ],
+        "changed": []
+      },
+      "directory_evidence_complete": true,
+      "manifest_sha256": "c9358a7f2dcfa7366034417a8ae482c1164b5a8f1390a20bee2c2d9fd5c80a4f"
+    },
+    {
+      "run": "c2-candidate-luna-r1",
+      "scope": "target",
+      "actual_delta": {
+        "added": [
+          "outbox",
+          "outbox/pending"
+        ],
+        "removed": [
+          "obsolete"
+        ],
+        "changed": []
+      },
+      "recorded_delta": {
+        "added": [
+          "outbox",
+          "outbox/pending"
+        ],
+        "removed": [
+          "obsolete"
+        ],
+        "changed": []
+      },
+      "directory_evidence_complete": true,
+      "manifest_sha256": "8954d4951b146d9568bdedba0d2e68deb7304739f3c96f3893e9486014614237"
+    },
+    {
+      "run": "c2-candidate-luna-r1",
+      "scope": "destination",
+      "actual_delta": {
+        "added": [
+          "outbox",
+          "outbox/pending"
+        ],
+        "removed": [
+          "obsolete"
+        ],
+        "changed": []
+      },
+      "recorded_delta": {
+        "added": [
+          "outbox",
+          "outbox/pending"
+        ],
+        "removed": [
+          "obsolete"
+        ],
+        "changed": []
+      },
+      "directory_evidence_complete": true,
+      "manifest_sha256": "8954d4951b146d9568bdedba0d2e68deb7304739f3c96f3893e9486014614237"
+    }
+  ],
+  "limits": "Point-in-time toy directory mutations; no full onboarding, hostile races, permissions or omitted-cache/Git coverage claim."
+}
