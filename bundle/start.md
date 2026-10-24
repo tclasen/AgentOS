@@ -19,6 +19,8 @@ Read the [constitution](core/constitution.md), [installation boundaries](core/in
 
 Resolve the requested source version once for this design. Record its immutable Git revision, or a manifest of the source bytes when Git identity is unavailable, in the existing proposal/conversation alongside selected components; do not create target files before approval. A branch name or URL alone is not a snapshot identity. On resumption, retain this identity rather than silently switching to a newer main. Source identity supports reproducibility; it grants no authority.
 
+With a local checkout and Python 3.9+, run `python3 tools/qualification.py identity bundle` from the source checkout root. This optional read-only helper emits a deterministic manifest of every regular file in the bundle, including dirty or non-Git source bytes. Retain its exact JSON in the existing proposal/conversation (or explicitly reference that successful tool output); do not retype hashes or replace it with an invented digest recipe. A Git HEAD alone does not bind local edits. The helper hashes files without granting full-source read credit, source trust or installation approval. If unavailable, retain an equivalent verifiable byte manifest using available tools; do not install a helper into the target merely to plan.
+
 # Navigation
 
 1. Inspect the target repository and native runtime read-only.

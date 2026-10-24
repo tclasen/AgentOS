@@ -7,6 +7,7 @@ import json
 import os
 from pathlib import Path
 import re
+import stat
 import subprocess
 import sys
 import time
@@ -173,6 +174,50 @@ def snapshot(root: Path) -> dict:
 def difference(before: dict, after: dict) -> dict:
     return {'added': sorted(after.keys() - before.keys()), 'removed': sorted(before.keys() - after.keys()), 'changed': sorted(k for k in before.keys() & after.keys() if before[k] != after[k])}
 
+def source_identity(bundle: Path) -> dict:
+    """Hash the whole local bundle without granting source-read credit or writing files."""
+    bundle = bundle.resolve()
+    if not bundle.is_dir() or not (bundle / 'start.md').is_file():
+        raise ValueError('source bundle must be a directory containing start.md')
+    files = {}
+    def fail(error):
+        raise error
+    for folder, dirs, names in os.walk(bundle, followlinks=False, onerror=fail):
+        for name in dirs + names:
+            path = Path(folder) / name
+            mode = path.lstat().st_mode
+            key = path.relative_to(bundle).as_posix()
+            if stat.S_ISDIR(mode):
+                continue
+            if not stat.S_ISREG(mode):
+                raise ValueError(f'source identity requires regular files, not links or special files: {key}')
+            data = path.read_bytes()
+            files[key] = {'sha256': sha(data), 'bytes': len(data)}
+    return {'format': 'agentos-source-v1', 'files': dict(sorted(files.items()))}
+
+def unique_json_keys(pairs):
+    result = {}
+    for key, value in pairs:
+        if key in result:
+            raise ValueError(f'duplicate manifest key: {key}')
+        result[key] = value
+    return result
+
+def verify_source_identity(actual: dict, approved: dict) -> dict:
+    """Compare complete maps; manifest paths are data and are never opened."""
+    if (not isinstance(approved, dict) or set(approved) != {'format', 'files'}
+            or approved['format'] != 'agentos-source-v1' or not isinstance(approved['files'], dict)
+            or 'start.md' not in approved['files']):
+        raise ValueError('unsupported or incomplete source identity manifest')
+    for path, entry in approved['files'].items():
+        if (not path or path.startswith('/') or any(p in ('', '.', '..') for p in path.split('/'))
+                or not isinstance(entry, dict) or set(entry) != {'sha256', 'bytes'}
+                or not isinstance(entry['sha256'], str) or not re.fullmatch(r'[0-9a-f]{64}', entry['sha256'])
+                or type(entry['bytes']) is not int or entry['bytes'] < 0):
+            raise ValueError(f'invalid source identity entry: {path}')
+    delta = difference(approved['files'], actual['files'])
+    return {'match': not any(delta.values()), 'delta': delta}
+
 def events(path: Path) -> list[dict]:
     rows = []
     for line in path.read_text(errors='replace').splitlines():
@@ -262,6 +307,9 @@ def main():
     p = sub.add_parser('select', help='Read-only required and requested dependency closure')
     p.add_argument('bundle')
     p.add_argument('--component', action='append', default=[], help='Requested bundle-relative component path; repeatable')
+    p = sub.add_parser('identity', help='Read-only whole-bundle byte manifest or comparison')
+    p.add_argument('bundle')
+    p.add_argument('--verify', metavar='MANIFEST', help='Compare saved JSON; use - to read stdin')
     p = sub.add_parser('snapshot'); p.add_argument('root'); p.add_argument('output')
     p = sub.add_parser('inspect'); p.add_argument('log'); p.add_argument('--source')
     p = sub.add_parser('run')
@@ -283,6 +331,17 @@ def main():
         except ValueError as error:
             parser.error(str(error))
         print(json.dumps(result, indent=2)); return 0
+    if args.command == 'identity':
+        try:
+            result = source_identity(Path(args.bundle))
+            if args.verify is not None:
+                data = sys.stdin.read() if args.verify == '-' else Path(args.verify).read_text()
+                approved = json.loads(data, object_pairs_hook=unique_json_keys)
+                result = verify_source_identity(result, approved)
+        except (ValueError, OSError) as error:
+            parser.error(str(error))
+        print(json.dumps(result, indent=2))
+        return 1 if result.get('match') is False else 0
     if args.command == 'snapshot':
         write_json(Path(args.output), snapshot(Path(args.root))); return 0
     if args.command == 'inspect':

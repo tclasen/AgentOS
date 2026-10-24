@@ -1,0 +1,328 @@
+{
+  "task": "TASK-000183",
+  "run": "RUN-000178",
+  "base": "3d805cefd2847dd14c95f06fc823d22a0c2eb63b",
+  "recommendation": "retain optional deterministic bundle identity generation/verification, subject to independent acceptance and delivery",
+  "scope": "local bundle byte identity; no full installation qualification",
+  "planning": [
+    {
+      "run": "candidate-archive-luna-r1",
+      "harness_status": "returned",
+      "artifact_sha256": "accdf0359deb1cfc8be8dfacbb5c9d04917377402443adae32c4611bd9e73122",
+      "source_identity": "pass: exact46-file manifest; proposal explicitly references tool output or embeds exact JSON",
+      "manifest_locations": [
+        {
+          "location": "command-output-18",
+          "exact_match": true,
+          "files": 46
+        }
+      ],
+      "required_full_reads": 10,
+      "preservation": true,
+      "nonzero_command_items": 0
+    },
+    {
+      "run": "candidate-archive-sol-r1",
+      "harness_status": "returned",
+      "artifact_sha256": "103ec52bb418783de922270da8e92a83685f18659d4ae4fa727ba11c02cc1f38",
+      "source_identity": "pass: exact46-file manifest; proposal explicitly references tool output or embeds exact JSON",
+      "manifest_locations": [
+        {
+          "location": "proposal",
+          "exact_match": true,
+          "files": 46
+        },
+        {
+          "location": "command-output-4",
+          "exact_match": true,
+          "files": 46
+        }
+      ],
+      "required_full_reads": 10,
+      "preservation": true,
+      "nonzero_command_items": 0
+    },
+    {
+      "run": "candidate-dirty-luna-r1",
+      "harness_status": "returned",
+      "artifact_sha256": "6208db2cec2f9242042cf4a2b3cc6cda22e1bef2289346f24877930e8cf30093",
+      "source_identity": "pass: exact46-file manifest; proposal explicitly references tool output or embeds exact JSON",
+      "manifest_locations": [
+        {
+          "location": "command-output-8",
+          "exact_match": true,
+          "files": 46
+        }
+      ],
+      "required_full_reads": 10,
+      "preservation": true,
+      "nonzero_command_items": 0
+    },
+    {
+      "run": "candidate-dirty-sol-r1",
+      "harness_status": "returned",
+      "artifact_sha256": "6a934d16d1ac5cbb2bb39ebbd1c2726e65842f3a6f529d4c44ee322ce1606f87",
+      "source_identity": "pass: exact46-file manifest; proposal explicitly references tool output or embeds exact JSON",
+      "manifest_locations": [
+        {
+          "location": "command-output-3",
+          "exact_match": true,
+          "files": 46
+        }
+      ],
+      "required_full_reads": 10,
+      "preservation": true,
+      "nonzero_command_items": 1
+    }
+  ],
+  "planning_identity_passes": "4/4",
+  "required_full_source_reads": "40/40",
+  "preflight": [
+    {
+      "run": "preflight-luna-r1",
+      "harness_status": "returned",
+      "artifact_sha256": "586873acb44b2078abf7604bdfe231eb67fb1cb7166a0a235fec01c8a7e3f188",
+      "expected": [
+        "continue",
+        "reconcile",
+        "reconcile",
+        "blocked"
+      ],
+      "observed": [
+        "continue",
+        "reconcile",
+        "reconcile",
+        "reconcile"
+      ],
+      "literal_matches": 3,
+      "preservation": true,
+      "uses_helper_verification": false,
+      "results": [
+        {
+          "id": "A",
+          "decision": "continue",
+          "evidence": "Approved manifest contains 46 bundle files; current bundle has the same 46 paths, byte counts, and SHA-256 values. Named entrypoint and implementation guide are present.",
+          "reason": "The current source bytes match the retained approval identity exactly, so the approved design can continue from this source.",
+          "next_action": "Continue from the approved design and perform its authorized target checks before implementation."
+        },
+        {
+          "id": "B",
+          "decision": "reconcile",
+          "evidence": "The named entrypoint and implementation guide are present. The bundle has 46 expected paths with no additions or removals, but components/authority.md differs: approved 1,950 bytes, SHA-256 fbc6b99852540f20a25dfd224d0d0f07399a9021e8cb1fc1d87f53c5156fb8a9; current 2,038 bytes, SHA-256 cc8c149453414c954a9a50fe2d972f7ca531ed25bfe017ee96adbec7f78fbea0.",
+          "reason": "Current source no longer matches the retained byte manifest. The contract change and any effects on the approved design are unresolved.",
+          "next_action": "Compare the changed authority instructions with the approved design and reconcile the affected design/checks and approval before adopting changed source bytes."
+        },
+        {
+          "id": "C",
+          "decision": "reconcile",
+          "evidence": "Current Git HEAD matches the approved revision 06baba9b10c52a2f0da6312a824f143abe2dfd5a. However, the 46-file approved manifest differs at components/authority.md: approved 1,950 bytes, SHA-256 fbc6b99852540f20a25dfd224d0d0f07399a9021e8cb1fc1d87f53c5156fb8a9; current 2,038 bytes, SHA-256 cc8c149453414c954a9a50fe2d972f7ca531ed25bfe017ee96adbec7f78fbea0. Named entrypoint and implementation guide are present.",
+          "reason": "The approved Git revision is present, but the actual bundle includes changed local bytes that the Git identity alone does not bind. Their effect on the approved design remains unresolved.",
+          "next_action": "Compare the changed authority instructions with the approved design and reconcile the affected design/checks and approval before adopting changed source bytes; use the approved revision only if its intact source can be verified."
+        },
+        {
+          "id": "D",
+          "decision": "reconcile",
+          "evidence": "The 45-file approved manifest matches every listed current file, and named entrypoint and implementation guide are present. Current bundle has 46 files: start.md is present (3,615 bytes, SHA-256 e051b4825362e420b5ca7d564d4c563a3911eeb8b448b03ec4e8a75280d45f2d) but absent from the approved manifest.",
+          "reason": "An unbound entrypoint file is now part of the source being resumed. Its consistency with the approved identity and design has not been established.",
+          "next_action": "Compare the added start.md with the approved design and reconcile its effect and approval before continuing from the current source."
+        }
+      ]
+    },
+    {
+      "run": "preflight-sol-r1",
+      "harness_status": "returned",
+      "artifact_sha256": "6e0ecdb33bfdfacfc6589ef7661b5f40a07e3748d82ab04952b563a0c14e83ed",
+      "expected": [
+        "continue",
+        "reconcile",
+        "reconcile",
+        "blocked"
+      ],
+      "observed": [
+        "continue",
+        "reconcile",
+        "reconcile",
+        "blocked"
+      ],
+      "literal_matches": 4,
+      "preservation": true,
+      "uses_helper_verification": true,
+      "results": [
+        {
+          "id": "A",
+          "decision": "continue",
+          "evidence": {
+            "verification_exit": 0,
+            "match": true,
+            "approved_files": 46,
+            "current_files": 46,
+            "delta": {
+              "added": [],
+              "removed": [],
+              "changed": []
+            },
+            "git_checkout_present": false
+          },
+          "reason": "The complete current bundle matches the retained approved byte manifest. Relocation and absence of Git do not break this source identity. This finding concerns source continuity only and grants no installation writes.",
+          "next_action": "Retain approved-A.json as the approval identity and use the verified bundle for any separately authorized continuation. Perform no implementation under the current preflight-only grant."
+        },
+        {
+          "id": "B",
+          "decision": "reconcile",
+          "evidence": {
+            "verification_exit": 1,
+            "match": false,
+            "delta": {
+              "added": [],
+              "removed": [],
+              "changed": [
+                "components/authority.md"
+              ]
+            },
+            "authority_approved": {
+              "sha256": "fbc6b99852540f20a25dfd224d0d0f07399a9021e8cb1fc1d87f53c5156fb8a9",
+              "bytes": 1950
+            },
+            "authority_current": {
+              "sha256": "cc8c149453414c954a9a50fe2d972f7ca531ed25bfe017ee96adbec7f78fbea0",
+              "bytes": 2038
+            },
+            "git_checkout_present": false,
+            "current_authority_appendix": "# Changed after approval\nA local source edit is present; reconcile it before adoption."
+          },
+          "reason": "The current mandatory authority component is outside the approved byte identity; the other 45 files match. The appended text does not authorize adopting changed source. No intact approved snapshot was verified within this case.",
+          "next_action": "Keep the mismatch unresolved. Recover and verify the intact approved source, or compare the authority contracts and reconcile the design, checks and affected approval before adopting current bytes. Do not reconstruct approved source from hashes, replace the retained manifest, or implement."
+        },
+        {
+          "id": "C",
+          "decision": "reconcile",
+          "evidence": {
+            "verification_exit": 1,
+            "match": false,
+            "delta": {
+              "added": [],
+              "removed": [],
+              "changed": [
+                "components/authority.md"
+              ]
+            },
+            "approved_git_head": "06baba9b10c52a2f0da6312a824f143abe2dfd5a",
+            "observed_git_head": "06baba9b10c52a2f0da6312a824f143abe2dfd5a",
+            "git_status": " M bundle/components/authority.md",
+            "git_diff": "Appends a Changed after approval heading and the sentence: A local source edit is present; reconcile it before adoption.",
+            "approved_commit_bundle_verification": {
+              "files": 46,
+              "all_entries_match_retained_manifest": true
+            }
+          },
+          "reason": "Matching HEAD does not bind the dirty working bytes: the current bundle fails manifest verification. The intact approved snapshot is available in the retained commit and all 46 committed bundle files were independently verified against approved-C.json. Current working bytes cannot silently inherit that approval.",
+          "next_action": "For a later authorized continuation, use the verified immutable approved commit bytes without resetting or overwriting the dirty checkout. If adopting the working edit instead, reconcile the affected contracts, design, checks and approval first. Leave Git and source untouched during this preflight."
+        },
+        {
+          "id": "D",
+          "decision": "blocked",
+          "evidence": {
+            "verification_exit": 2,
+            "verification_error": "unsupported or incomplete source identity manifest",
+            "retained_manifest_files": 45,
+            "current_bundle_files": 46,
+            "missing_required_manifest_entry": "start.md",
+            "diagnostic_comparison": "All 45 retained entries match current bytes; start.md is present in the current bundle but absent from the retained identity.",
+            "approved_git_head": null,
+            "git_checkout_present": false
+          },
+          "reason": "The retained manifest is incomplete and the verifier refuses it. The approved entrypoint bytes cannot be established from this approval record. This is invalid identity input, not a successful match or an ordinary verified source delta.",
+          "next_action": "Recover the complete original approval identity and verify it, or obtain a newly approved design bound to a valid complete identity. Do not add the current start.md hash to the retained manifest or present a new manifest as the earlier approval. No continuation or implementation until identity is resolved."
+        }
+      ]
+    }
+  ],
+  "preflight_literal_matches": "7/8",
+  "preflight_limitation": "Luna D reports reconcile instead of blocked, detects the unbound entrypoint and withholds continuation; preserved label mismatch, not a literal pass. Luna manually compares all file hashes rather than invoking optional verifier. Sol uses verifier and refuses malformed identity.",
+  "regression_tests": 39,
+  "parent_helper_fixture_exits": {
+    "sol": [
+      0,
+      1,
+      1,
+      2
+    ],
+    "luna": [
+      0,
+      1,
+      1,
+      2
+    ]
+  },
+  "trial_nonzero_command_items": 1,
+  "diagnostic": "Sol dirty planning rg search of empty .agents/.codex returned1; no scope/identity failure. Native expected-negative helper exits are preserved inside successful enclosing commands.",
+  "models": [
+    {
+      "run": "candidate-dirty-sol-r1",
+      "requested_model": "gpt-6.1-sol",
+      "harness_status": "returned",
+      "thread": "01a16c48-984b-74d1-b039-5a6aadce3c1f",
+      "model": "gpt-6.1-sol",
+      "reasoning": null
+    },
+    {
+      "run": "candidate-archive-luna-r1",
+      "requested_model": "gpt-6-luna",
+      "harness_status": "returned",
+      "thread": "01a16c49-a5ad-7c93-baa9-4cd41ea48d2c",
+      "model": "gpt-6-luna",
+      "reasoning": null
+    },
+    {
+      "run": "preflight-sol-r1",
+      "requested_model": "gpt-6.1-sol",
+      "harness_status": "returned",
+      "thread": "01a16c4c-285a-7d83-8c4b-855b72710cf2",
+      "model": "gpt-6.1-sol",
+      "reasoning": null
+    },
+    {
+      "run": "candidate-archive-sol-r1",
+      "requested_model": "gpt-6.1-sol",
+      "harness_status": "returned",
+      "thread": "01a16c4a-94dd-7fe2-a47c-b14629395b95",
+      "model": "gpt-6.1-sol",
+      "reasoning": null
+    },
+    {
+      "run": "candidate-dirty-luna-r1",
+      "requested_model": "gpt-6-luna",
+      "harness_status": "returned",
+      "thread": "01a16c48-9ad5-7521-867c-2115d30a4e90",
+      "model": "gpt-6-luna",
+      "reasoning": null
+    },
+    {
+      "run": "preflight-luna-r1",
+      "requested_model": "gpt-6-luna",
+      "harness_status": "returned",
+      "thread": "01a16c4a-9724-7400-94f3-365775487c6a",
+      "model": "gpt-6-luna",
+      "reasoning": null
+    }
+  ],
+  "effort_and_cost": "unknown",
+  "bindings": {
+    "preregistered.json": "7861d8f1e76a73b084874af87ad3e3920ca20fa316257a13e0e6c8e9fb5ffc74",
+    "input-hashes.json": "73200e8cf114c57420d9dda09107eb5923cdbcae0921e218975c4ad1de746a6b",
+    "candidate-files.json": "56c901e3c56fa08dfae7c1aeb243643ddd335067cdc2ad76240fc8fe4260a207",
+    "verify_trials.py": "5e015ad775413abcd8ae4c78f8d8be133b33f8fc6d494f716158336daedb63b6",
+    "verification.json": "8557d8583bd08fc60487e747d55b436146758d98e9fbc1cee82ef2fb3c5e57cb",
+    "preflight-oracle.json": "8a67c44d90f2b294dfb07ed3fb15c233f88859826bc4f7f5c0e44a55bd0e1701",
+    "approved-git-recovery.json": "edf8fe226fdc98c814acdc0037989111a14c68f9dcac0ded925e5dcc44f937b4",
+    "candidate-tests.txt": "8cd53170d69e16b70bbcd13d61b806a16748ce41a452283a8acaa0a24dfaa8ce"
+  },
+  "limits": [
+    "one sample per model/source kind; historical baseline from PR9 is not a fresh statistical control",
+    "manual/no-Python/no-local-checkout identity path not qualified by this round",
+    "whole-bundle hashing grants no full-read credit, trust, authority or stable concurrent snapshot guarantee",
+    "three proposals retain identity by explicit successful conversation-output reference, not standalone JSON in proposal",
+    "7/8 literal preflight labels; no full onboarding or global exhaustion claim"
+  ],
+  "global_goal_status": "active"
+}
