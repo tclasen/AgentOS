@@ -1,0 +1,32 @@
+{
+  "baseline": "e352574dc4b932ae1cdc8e5d94a98a5e86f619ae",
+  "checks": [
+    {
+      "actual_exit": 1,
+      "argv": [
+        "/opt/homebrew/opt/python@3.15/bin/python3.15",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "cwd": "/Users/Shared/projects/AgentOS",
+      "elapsed_seconds": 30.731469207967166,
+      "expected_exit": 0,
+      "name": "existing-regressions",
+      "output_sha256": "c002a5c4418d0a0bd3dc8c1eafc2969cd9d28564a19b3d4927e3794e0b2500ad",
+      "pass": false
+    }
+  ],
+  "error": "AssertionError(('existing-regressions', 1, '_manifest_schema_and_paths_are_refused (test_source_identity.SourceIdentityTests.test_invalid_manifest_schema_and_paths_are_refused) ... ok\\ntest_links_and_special_files_are_refused_without_following (test_source_identity.SourceIdentityTests.test_links_and_special_files_are_refused_without_following) ... ok\\ntest_missing_bundle_or_entrypoint_refuses_empty_match (test_source_identity.SourceIdentityTests.test_missing_bundle_or_entrypoint_refuses_empty_match) ... ok\\ntest_same_git_head_cannot_hide_dirty_bundle (test_source_identity.SourceIdentityTests.test_same_git_head_cannot_hide_dirty_bundle) ... ok\\ntest_control_integer_fields_reject_boolean_and_float_substitutes (test_trial_supervisor.RunnerDeadlineTests.test_control_integer_fields_reject_boolean_and_float_substitutes) ... ok\\ntest_invalid_timeout_has_no_effect (test_trial_supervisor.RunnerDeadlineTests.test_invalid_timeout_has_no_effect) ... ok\\ntest_missing_ambiguous_and_timeout_receipts_fail_closed (test_trial_supervisor.RunnerDeadlineTests.test_missing_ambiguous_and_timeout_receipts_fail_closed) ... ok\\ntest_transport_timeout_retains_partial_evidence_and_after_state (test_trial_supervisor.RunnerDeadlineTests.test_transport_timeout_retains_partial_evidence_and_after_state) ... ok\\ntest_closed_transport_output_does_not_leave_new_command_running (test_trial_supervisor.SupervisorTests.test_closed_transport_output_does_not_leave_new_command_running) ... ok\\ntest_deadline_preserves_partial_output_even_with_fake_completed_turn (test_trial_supervisor.SupervisorTests.test_deadline_preserves_partial_output_even_with_fake_completed_turn) ... ok\\ntest_interrupt_ignored_is_killed_and_unrelated_process_survives (test_trial_supervisor.SupervisorTests.test_interrupt_ignored_is_killed_and_unrelated_process_survives) ... ok\\ntest_launch_failure_and_invalid_limit_do_not_become_success (test_trial_supervisor.SupervisorTests.test_launch_failure_and_invalid_limit_do_not_become_success) ... ok\\ntest_same_group_descendant_cannot_continue_writing_after_deadline (test_trial_supervisor.SupervisorTests.test_same_group_descendant_cannot_continue_writing_after_deadline) ... ok\\ntest_success_preserves_stdin_argv_and_real_exit_124_is_not_timeout (test_trial_supervisor.SupervisorTests.test_success_preserves_stdin_argv_and_real_exit_124_is_not_timeout) ... ok\\n\\n======================================================================\\nERROR: test_snapshot_cli_does_not_open_fifo_or_socket (test_qualification.QualificationTests.test_snapshot_cli_does_not_open_fifo_or_socket)\\n----------------------------------------------------------------------\\nTraceback (most recent call last):\\n  File \"/Users/Shared/projects/AgentOS/tests/test_qualification.py\", line 454, in test_snapshot_cli_does_not_open_fifo_or_socket\\n    endpoint.bind(str(root/\\'socket\\'))\\n    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^\\nPermissionError: [Errno 1] Operation not permitted\\n\\n----------------------------------------------------------------------\\nRan 61 tests in 30.430s\\n\\nFAILED (errors=1)\\n'))",
+  "limits": "CPU-only local checks; no AI installation, native model trial, external effect or runtime qualification",
+  "log_sha256": "9793d8991fef5709403d55a81886baccf2d79d0e60e1297c809044a8b1c8b98a",
+  "observed_at": "2026-10-24T20:16:12.671322+00:00",
+  "pass": false,
+  "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+  "python": "3.15.0 (main, Oct  9 2026, 11:16:41) [Clang 21.0.0 (clang-2100.3.34.2)]",
+  "script_sha256": "b1e55c2bf7d351ce863606f598e646abbe0b2d856b3c8f67a0efeccc96c25395"
+}

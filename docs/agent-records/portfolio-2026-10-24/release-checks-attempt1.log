@@ -1,0 +1,80 @@
+AgentOS CPU-only release verification
+
+## existing-regressions
+["/opt/homebrew/opt/python@3.15/bin/python3.15", "-B", "-m", "unittest", "discover", "-s", "tests", "-v"]
+test_absent_or_unavailable_lookup_cannot_claim_candidate_binding (test_local_effect_fixture.LocalEffectTests.test_absent_or_unavailable_lookup_cannot_claim_candidate_binding) ... ok
+test_lookup_binds_committed_candidate_without_echoing_payload (test_local_effect_fixture.LocalEffectTests.test_lookup_binds_committed_candidate_without_echoing_payload) ... ok
+test_lost_ack_preserves_effect_and_fresh_lookup_observes_it (test_local_effect_fixture.LocalEffectTests.test_lost_ack_preserves_effect_and_fresh_lookup_observes_it) ... ok
+test_replay_is_detectable_and_changed_candidate_is_rejected (test_local_effect_fixture.LocalEffectTests.test_replay_is_detectable_and_changed_candidate_is_rejected) ... ok
+test_unavailable_lookup_does_not_claim_absence_or_create_effect (test_local_effect_fixture.LocalEffectTests.test_unavailable_lookup_does_not_claim_absence_or_create_effect) ... ok
+test_additional_scope_rejects_symlink_escape_before_execution (test_qualification.QualificationTests.test_additional_scope_rejects_symlink_escape_before_execution) ... ok
+test_ambiguous_metadata_cannot_silently_remove_dependencies (test_qualification.QualificationTests.test_ambiguous_metadata_cannot_silently_remove_dependencies) ... ok
+test_closure_detects_cycles_and_only_selected_cycles_block_selection (test_qualification.QualificationTests.test_closure_detects_cycles_and_only_selected_cycles_block_selection) ... ok
+test_cyclic_graph_is_rejected (test_qualification.QualificationTests.test_cyclic_graph_is_rejected) ... ok
+test_dependency_closure_includes_transitive_prerequisites (test_qualification.QualificationTests.test_dependency_closure_includes_transitive_prerequisites) ... ok
+test_directory_snapshot_cli_is_read_only_preserves_exclusions_and_links (test_qualification.QualificationTests.test_directory_snapshot_cli_is_read_only_preserves_exclusions_and_links) ... ok
+test_distinct_task_ids_are_not_replaced_with_historical_task (test_qualification.QualificationTests.test_distinct_task_ids_are_not_replaced_with_historical_task) ... ok
+test_empty_directory_add_remove_and_type_changes_are_observable (test_qualification.QualificationTests.test_empty_directory_add_remove_and_type_changes_are_observable) ... ok
+test_existing_evidence_is_preserved_before_execution (test_qualification.QualificationTests.test_existing_evidence_is_preserved_before_execution) ... ok
+test_exposure_requires_complete_matching_command_output (test_qualification.QualificationTests.test_exposure_requires_complete_matching_command_output) ... ok
+test_exposure_skips_empty_and_linked_sources_and_preserves_inputs (test_qualification.QualificationTests.test_exposure_skips_empty_and_linked_sources_and_preserves_inputs) ... ok
+test_failed_compound_command_exposure_keeps_failure_and_strict_metric (test_qualification.QualificationTests.test_failed_compound_command_exposure_keeps_failure_and_strict_metric) ... ok
+test_invalid_or_duplicate_status_declarations_fail_closed (test_qualification.QualificationTests.test_invalid_or_duplicate_status_declarations_fail_closed) ... ok
+test_invalid_reasoning_effort_is_rejected_before_any_effect (test_qualification.QualificationTests.test_invalid_reasoning_effort_is_rejected_before_any_effect) ... ok
+test_inventory_and_matrix_cover_same_25_components (test_qualification.QualificationTests.test_inventory_and_matrix_cover_same_25_components) ... ok
+test_missing_dependency_and_escape_are_rejected (test_qualification.QualificationTests.test_missing_dependency_and_escape_are_rejected) ... ok
+test_missing_or_invalid_task_is_rejected_before_native_effects (test_qualification.QualificationTests.test_missing_or_invalid_task_is_rejected_before_native_effects) ... ok
+test_noise_and_error_are_retained_without_becoming_a_pass (test_qualification.QualificationTests.test_noise_and_error_are_retained_without_becoming_a_pass) ... ok
+test_only_successfully_completed_full_source_reads_are_credited (test_qualification.QualificationTests.test_only_successfully_completed_full_source_reads_are_credited) ... ok
+test_reasoning_override_and_unset_preserve_fresh_and_resume_commands (test_qualification.QualificationTests.test_reasoning_override_and_unset_preserve_fresh_and_resume_commands) ... ok
+test_requires_blank_comments_and_trailing_space_preserve_dependencies (test_qualification.QualificationTests.test_requires_blank_comments_and_trailing_space_preserve_dependencies) ... ok
+test_returned_artifact_identities_survive_later_mutation_in_both_scopes (test_qualification.QualificationTests.test_returned_artifact_identities_survive_later_mutation_in_both_scopes) ... ok
+test_run_rejects_path_names_before_any_output (test_qualification.QualificationTests.test_run_rejects_path_names_before_any_output) ... ok
+test_selected_deprecated_node_and_prerequisite_rejected_but_unselected_allowed (test_qualification.QualificationTests.test_selected_deprecated_node_and_prerequisite_rejected_but_unselected_allowed) ... ok
+test_selection_and_full_audit_cli_keep_distinct_read_only_contracts (test_qualification.QualificationTests.test_selection_and_full_audit_cli_keep_distinct_read_only_contracts) ... ok
+test_selection_cli_is_read_only_and_rejects_unknown_nodes (test_qualification.QualificationTests.test_selection_cli_is_read_only_and_rejects_unknown_nodes) ... ok
+test_selection_ignores_unselected_broken_edges_but_graph_audits_them (test_qualification.QualificationTests.test_selection_ignores_unselected_broken_edges_but_graph_audits_them) ... ok
+test_selection_seeds_required_and_closes_requested_dependencies (test_qualification.QualificationTests.test_selection_seeds_required_and_closes_requested_dependencies) ... ok
+test_snapshot_cli_does_not_open_fifo_or_socket (test_qualification.QualificationTests.test_snapshot_cli_does_not_open_fifo_or_socket) ... ERROR
+test_snapshot_tracks_untracked_edits_without_following_symlink (test_qualification.QualificationTests.test_snapshot_tracks_untracked_edits_without_following_symlink) ... ok
+test_special_file_deltas_and_run_finalization_in_both_scopes (test_qualification.QualificationTests.test_special_file_deltas_and_run_finalization_in_both_scopes) ... ok
+test_status_spellings_cannot_bypass_cli_deprecation_check (test_qualification.QualificationTests.test_status_spellings_cannot_bypass_cli_deprecation_check) ... ok
+test_symlinked_source_cannot_escape (test_qualification.QualificationTests.test_symlinked_source_cannot_escape) ... ok
+test_unterminated_frontmatter_cannot_borrow_body_metadata (test_qualification.QualificationTests.test_unterminated_frontmatter_cannot_borrow_body_metadata) ... ok
+test_verify_selection_cli_file_stdin_exit_codes_and_input_preservation (test_qualification.QualificationTests.test_verify_selection_cli_file_stdin_exit_codes_and_input_preservation) ... ok
+test_verify_selection_preserves_actual_extra_components_without_profile_substitution (test_qualification.QualificationTests.test_verify_selection_preserves_actual_extra_components_without_profile_substitution) ... ok
+test_verify_selection_rejects_ambiguous_lists_and_noncanonical_or_unknown_paths (test_qualification.QualificationTests.test_verify_selection_rejects_ambiguous_lists_and_noncanonical_or_unknown_paths) ... ok
+test_verify_selection_reports_required_and_transitive_omissions_without_filling_declared (test_qualification.QualificationTests.test_verify_selection_reports_required_and_transitive_omissions_without_filling_declared) ... ok
+test_verify_selection_validates_selected_graph_without_activating_unrelated_branches (test_qualification.QualificationTests.test_verify_selection_validates_selected_graph_without_activating_unrelated_branches) ... ok
+test_added_removed_changed_and_tampered_entries_do_not_match (test_source_identity.SourceIdentityTests.test_added_removed_changed_and_tampered_entries_do_not_match) ... ok
+test_exact_bytes_determinism_relocation_and_no_writes (test_source_identity.SourceIdentityTests.test_exact_bytes_determinism_relocation_and_no_writes) ... ok
+test_file_input_and_invalid_json_never_write_or_succeed (test_source_identity.SourceIdentityTests.test_file_input_and_invalid_json_never_write_or_succeed) ... ok
+test_invalid_manifest_schema_and_paths_are_refused (test_source_identity.SourceIdentityTests.test_invalid_manifest_schema_and_paths_are_refused) ... ok
+test_links_and_special_files_are_refused_without_following (test_source_identity.SourceIdentityTests.test_links_and_special_files_are_refused_without_following) ... ok
+test_missing_bundle_or_entrypoint_refuses_empty_match (test_source_identity.SourceIdentityTests.test_missing_bundle_or_entrypoint_refuses_empty_match) ... ok
+test_same_git_head_cannot_hide_dirty_bundle (test_source_identity.SourceIdentityTests.test_same_git_head_cannot_hide_dirty_bundle) ... ok
+test_control_integer_fields_reject_boolean_and_float_substitutes (test_trial_supervisor.RunnerDeadlineTests.test_control_integer_fields_reject_boolean_and_float_substitutes) ... ok
+test_invalid_timeout_has_no_effect (test_trial_supervisor.RunnerDeadlineTests.test_invalid_timeout_has_no_effect) ... ok
+test_missing_ambiguous_and_timeout_receipts_fail_closed (test_trial_supervisor.RunnerDeadlineTests.test_missing_ambiguous_and_timeout_receipts_fail_closed) ... ok
+test_transport_timeout_retains_partial_evidence_and_after_state (test_trial_supervisor.RunnerDeadlineTests.test_transport_timeout_retains_partial_evidence_and_after_state) ... ok
+test_closed_transport_output_does_not_leave_new_command_running (test_trial_supervisor.SupervisorTests.test_closed_transport_output_does_not_leave_new_command_running) ... ok
+test_deadline_preserves_partial_output_even_with_fake_completed_turn (test_trial_supervisor.SupervisorTests.test_deadline_preserves_partial_output_even_with_fake_completed_turn) ... ok
+test_interrupt_ignored_is_killed_and_unrelated_process_survives (test_trial_supervisor.SupervisorTests.test_interrupt_ignored_is_killed_and_unrelated_process_survives) ... ok
+test_launch_failure_and_invalid_limit_do_not_become_success (test_trial_supervisor.SupervisorTests.test_launch_failure_and_invalid_limit_do_not_become_success) ... ok
+test_same_group_descendant_cannot_continue_writing_after_deadline (test_trial_supervisor.SupervisorTests.test_same_group_descendant_cannot_continue_writing_after_deadline) ... ok
+test_success_preserves_stdin_argv_and_real_exit_124_is_not_timeout (test_trial_supervisor.SupervisorTests.test_success_preserves_stdin_argv_and_real_exit_124_is_not_timeout) ... ok
+
+======================================================================
+ERROR: test_snapshot_cli_does_not_open_fifo_or_socket (test_qualification.QualificationTests.test_snapshot_cli_does_not_open_fifo_or_socket)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/Shared/projects/AgentOS/tests/test_qualification.py", line 454, in test_snapshot_cli_does_not_open_fifo_or_socket
+    endpoint.bind(str(root/'socket'))
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 1] Operation not permitted
+
+----------------------------------------------------------------------
+Ran 61 tests in 30.430s
+
+FAILED (errors=1)
+
