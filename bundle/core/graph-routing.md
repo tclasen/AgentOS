@@ -34,6 +34,18 @@ A component may declare:
 
 # Safety and graph discipline
 
+Reconcile each stated requirement with a selected operating contract, an explicitly approved alternative, or an unresolved gap before deferring a candidate. **Contract selection, runtime activation and permission to execute an effect are separate decisions.** A future action grant or unavailable background runtime does not by itself remove the requested contract:
+
+- Planned Git delivery needs the Git-delivery contract even when installation permits no commit or push.
+- An approved on-session/event fallback still needs the scheduling contract; prohibiting daemons does not prohibit that fallback.
+- Limited agent slots and cumulative retry/delegation accounting activate resource budgeting even without a dollar cap.
+- A requested scorecard still needs the telemetry contract when measurements are unknown; unknown coverage is a measurement-health result, not a reason to omit the contract.
+- Requested adversarial/refusal/recovery qualification still needs advanced validation when its scenarios are controlled locally rather than sent to a real provider.
+
+Selection only proposes the needed responsibilities. It grants neither target mutations nor future effects; obtain the applicable approvals before either.
+
+Do not label a component deferred while proposing to implement its contract in another file. Consolidation or declining a dedicated tool/service does not defer the responsibilities. Before the proposal, show a compact conversation-only table: **stated requirement → selected component path → proposed mechanism → activation/grant status**. Check every deferral against this table; an omitted requirement or contradictory deferral is unresolved, not a completed design.
+
 Before proposing an installation, reconcile a compact **selection/read checklist** against the actual catalog and completed reads, rather than memory. For each selected component, track its bundle path, selection reason, hard prerequisites and whether its full source has been read. Compare the checklist with **every required catalog entry**, then follow each selected node's `agentos.requires` until every prerequisite is selected and read. A batch read covers only the files actually included and successfully returned; mentioning a capability in a proposal does not satisfy this check. Load any missing source before asking for approval. Keep this provisional checklist in conversation until persistence is authorized; it need not become another installed file.
 
 - An OKF link states a relationship, **not necessarily a hard dependency**; only `agentos.requires` does that in this installer profile.

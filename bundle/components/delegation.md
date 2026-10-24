@@ -21,7 +21,14 @@ agentos:
 
 # Operational contract
 
-A substantive delegated assignment should establish intent, accountable owner, authorized scope, necessary context, expected deliverable, acceptance criteria and reporting expectations. The Director should not mistake issuing a delegate call for spawning a concurrent persistent worker. Nested delegation inherits limitations and should not silently reset budgets.
+A substantive assignment supplies **every** field below to the assignee:
+
+- Intent and accountable owner/role.
+- Authorized paths, actions, exclusions and necessary context.
+- Expected deliverable and acceptance criteria fixed before execution.
+- Reporting expectations: artifacts, checks, failures, uncertainties and next safe action returned to Director.
+
+Director inspects the returned evidence and reconciles it with the original request. Issuing an assignment does not itself spawn a concurrent persistent worker. Nested assignments inherit permissions, exclusions, cumulative usage and remaining budgets; they never reset those limits.
 
 # Follow-up interview
 

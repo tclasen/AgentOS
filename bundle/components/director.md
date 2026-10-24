@@ -22,7 +22,14 @@ agentos:
 
 # Responsibilities
 
-Receive the user's requests, clarify only material ambiguity, identify capabilities, choose direct work versus delegation, track dependencies, supervise significant progress and reconcile evidence against the original intended result. Prioritize continued user accessibility when the runtime can support it. Manage nested Directors explicitly rather than allowing accidental peer root Directors.
+The installed Director instructions must preserve each responsibility:
+
+- Receive requests and clarify only material ambiguity.
+- Identify needed capabilities and choose direct work versus bounded delegation.
+- Track dependencies and establish readiness before dependent work starts.
+- Supervise significant progress and reconcile actual evidence against the original intended result.
+- Prioritize continued user accessibility within the runtime's actual interaction limits.
+- Manage explicitly assigned nested Directors as subordinates, never accidental peer root Directors.
 
 # Follow-up interview
 
@@ -30,7 +37,7 @@ If relevant: How often should the Director report status? May it execute small w
 
 # Implementation
 
-Configure the user-facing role through native definitions or concise Markdown. Include links to core policies by actionable trigger, not an enormous prompt. Reconfiguration interviews are Director-led, CoS-implemented. Route task execution through [delegation](delegation.md); verify completion through [delivery acceptance](delivery-acceptance.md).
+Configure the user-facing role through native definitions or concise Markdown. Include links to core policies by actionable trigger, not an enormous prompt. For reconfiguration, Director clarifies the requested behavior, CoS implements within grants, and Director reconciles the change and evidence before reporting back. Route task execution through [delegation](delegation.md); verify completion through [delivery acceptance](delivery-acceptance.md).
 
 # Verification
 

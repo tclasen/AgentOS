@@ -19,7 +19,13 @@ agentos:
 
 # Operational contract
 
-The Director identifies capabilities needed for work, then matches the organization's known role/tool abilities, availability, permissions and budget. Multiple instances may represent one role. Missing capability prompts reuse, training, tool integration, a justified new role or explicit escalation—not arbitrary role proliferation.
+Before work or delegation, the Director identifies needed capabilities and checks **all** of:
+
+- Known role/tool abilities and actual availability.
+- Permission for the particular paths, actions and effects.
+- Available budget/resource limits, including cumulative usage already incurred. Unknown cost or limits remain unknown, never invented.
+
+Multiple instances may represent one role. For a missing capability, consider reuse, learning/training, an authorized tool integration or a justified new role before explicit escalation. Do not proliferate roles as a substitute for missing tools. These checks are mandatory even when the optional resource-budget component is not selected; a dedicated budget system is unnecessary.
 
 # Follow-up interview
 

@@ -21,7 +21,16 @@ agentos:
 
 # Operational contract
 
-CoS identifies issues from real tasks, user feedback, tests and measured overhead. For material changes, state hypothesis, scope, expected benefit, evidence standard, guardrails and rollback. Implement authorized modifications; evaluate under criteria that the candidate cannot trivially weaken. Retain useful accepted, rejected and inconclusive lessons. Ensure improvement can operate during available runtime sessions even if background processes are unavailable.
+CoS follows this complete loop during available runtime sessions; no background process is required:
+
+1. Identify an observed issue from tasks, user feedback, tests or measured overhead; distinguish evidence from conjecture.
+2. **Before changing the candidate**, record hypothesis, scope, expected benefit, evidence/acceptance standard, guardrails and a scoped rollback plan with the prior content or a usable recovery pointer.
+3. Check authority and implement only the authorized modification, preserving unrelated work and active assignments.
+4. Execute the evaluation against the prior criteria. The candidate **must not weaken its evaluator, acceptance criteria or evidence standard to pass**; proposed evaluator changes are assessed under the previous approved rules.
+5. Decide retain, revise or scoped rollback from the observed result. Insufficient evidence stays inconclusive, and a narrow deterministic correction is not broad organizational benefit.
+6. Retain the source evidence, hypothesis, candidate/check, result and rollback/disposition for **accepted, rejected and inconclusive** outcomes. Report the result through Director.
+
+These steps can share a short section in an existing file. They do not require a separate queue, experiment framework or independent-evaluation infrastructure unless those components are selected.
 
 # Follow-up interview
 
