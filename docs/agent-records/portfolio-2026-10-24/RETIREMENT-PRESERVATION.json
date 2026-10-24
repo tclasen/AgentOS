@@ -1,5 +1,5 @@
 {
-  "status": "preserved_remote_tags; release_main_pending",
+  "status": "release_verified_on_remote_main; final_preservation_metadata_pending",
   "origin": "https://github.com/tclasen/AgentOS.git",
   "release_pr": "https://github.com/tclasen/AgentOS/pull/34",
   "reviewed_original_head": "bba2b9222288a7cadb51e723d482b5d8a59997ce",
@@ -17,5 +17,13 @@
     "verification": "all exact original bytes and file modes packed; readback tar members compared individually without extraction"
   },
   "deletion_gate": "main merge/owningremote content verification, all reachable commits covered by live remote refs, metadata delivered, no active users, immediate final status/ignored/nested inventory",
-  "preview_limit": "supervised installer supported; broader all-path onboarding unqualified; no experimental package reinstated"
+  "preview_limit": "supervised installer supported; broader all-path onboarding unqualified; no experimental package reinstated",
+  "verified_release_main": "330e5ce88e4f243db76ec05ad51f0fa4509e63c1",
+  "reviewed_release_content": "exact70e66d2tree_equals330e5ce_remote_main; approvedoriginal11unchanged",
+  "unreachable_git_objects": {
+    "path": "UNREACHABLE-OBJECTS.json",
+    "sha256": "1a7c8d0882cf468aec20760dc6d1c994c30f6f410da05ed2097eb7bdcf18ff77",
+    "count": 8,
+    "verification": "rawGitobjecttype/length/bytesrecomputesalloriginalSHA1s; secrets-patternscanclear; preserveforrestorationwithgithash-object"
+  }
 }
