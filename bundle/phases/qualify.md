@@ -22,6 +22,8 @@ status: stable
 
 Missing required operating steps are installation defects even when the corresponding role/file exists. Correct them within the approved paths and authority, or report the installation incomplete with the exact gap. Do not label it qualified or complete on structural checks alone. Fresh-runtime tests may remain explicitly unverified where unavailable; that limitation does not excuse missing operational instructions.
 
+For the minimal portable profile described in [implementation](implement.md), use the [concrete reference and correction exercise](../examples/portable-implementation.md) to check synthesis and evidence quality. The example is not a passing result: inspect the actual installed duties and evaluate concrete prior/candidate values against criteria fixed before the change. Retain usable recovery content and the real result; copying an illustrative outcome or saying how an edit could be checked is insufficient. Equivalent scoped exercises are allowed, and richer selected profiles retain all their own obligations.
+
 # Required operating checks
 
 Use these checks to catch frequently lost obligations in a compact installation. The component sources remain authoritative; this is a qualification aid, not a replacement for reading them. A controlled scenario can be carried out locally or reasoned through with an honest simulation label when native execution is unavailable.
