@@ -1,0 +1,262 @@
+{
+  "task": "TASK-000195",
+  "run": "RUN-000190",
+  "plan_revision": 1,
+  "base": "861a15cecdc14256f3ce46cd9a93540621f349d7",
+  "operative_head": "1d7e19de95ab4e98aaa20f6a78d1c5ba8221df37",
+  "operative_tree": "d283faec89fdf1d416e39db359b79ae4c5252ff8",
+  "decision": "Recommend accepting the bounded actual-selection verifier, pending independent review and protected delivery.",
+  "scope": [
+    "tools/qualification.py",
+    "tools/README.md",
+    "tests/test_qualification.py"
+  ],
+  "bundle_changes": [],
+  "criteria": {
+    "local_regressions": {
+      "count": 49,
+      "seconds": 13.944,
+      "all_prior_44_preserved": true
+    },
+    "profiles": {
+      "portable": 10,
+      "engineering": 22,
+      "portfolio": 18
+    },
+    "components": 25,
+    "native_cases_per_model": 6,
+    "native_expected_exits": {
+      "A": 0,
+      "B": 1,
+      "C": 1,
+      "D": 0,
+      "E": 2,
+      "F": 0
+    },
+    "source_read_gate_changes": false
+  },
+  "models": {
+    "luna": {
+      "status": "bounded evaluator-use pass, pending independent review",
+      "thread": "01a16db2-d901-78b1-9c8a-35609186e329",
+      "actual_model": "gpt-6-luna",
+      "actual_effort": "high",
+      "duration_seconds": 41.71517992019653,
+      "raw_sha256": "8782d2f953eeb7ffae751d5b0ac8cc134427be67ddc6de939b73b09b4965cdbc",
+      "case_observations": {
+        "A": {
+          "exit": 0,
+          "item": "item_7",
+          "complete": true,
+          "declared_count": 12,
+          "missing_required": [],
+          "missing_dependencies": []
+        },
+        "B": {
+          "exit": 1,
+          "item": "item_7",
+          "complete": false,
+          "declared_count": 10,
+          "missing_required": [
+            "components/director.md"
+          ],
+          "missing_dependencies": []
+        },
+        "C": {
+          "exit": 1,
+          "item": "item_7",
+          "complete": false,
+          "declared_count": 12,
+          "missing_required": [],
+          "missing_dependencies": [
+            "components/work-ledger.md"
+          ]
+        },
+        "D": {
+          "exit": 0,
+          "item": "item_7",
+          "complete": true,
+          "declared_count": 11,
+          "missing_required": [],
+          "missing_dependencies": []
+        },
+        "E": {
+          "exit": 2,
+          "item": "item_7",
+          "error": "selection contains duplicate component paths"
+        },
+        "F": {
+          "exit": 0,
+          "item": "item_7",
+          "complete": true,
+          "declared_count": 12,
+          "missing_required": [],
+          "missing_dependencies": []
+        }
+      },
+      "preset_observation": null,
+      "command_count": 8,
+      "outer_nonzero_commands": [],
+      "usage": [
+        {
+          "input_tokens": 126077,
+          "cached_input_tokens": 100864,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 3770,
+          "reasoning_output_tokens": 2131
+        }
+      ],
+      "source_fixture_git_unchanged": true,
+      "raw_command_audit": "Parent inspected all command bodies: read-only cat/rg/ls/pwd/sed and guarded Python JSON/subprocess CLI use; no imports of target code, mutation, tests, children or external actions.",
+      "semantic_assessment": "Both reject substituting preset 11 for actual 12, detect omissions/duplicate/contradictory deferral, discuss selected additional duties and honest independence limits, and withhold installation/source-read/authority credit. Luna reasons from supplied preset instead of invoking that extra CLI; Sol also invokes it. A is insufficient for acceptance on supplied evidence, not proof all same-context limited mechanisms are forbidden."
+    },
+    "sol": {
+      "status": "bounded evaluator-use pass, pending independent review",
+      "thread": "01a16db2-d593-7002-9db2-1d8854192bb2",
+      "actual_model": "gpt-6.1-sol",
+      "actual_effort": "high",
+      "duration_seconds": 80.2844078540802,
+      "raw_sha256": "98b76fb23d80be89a2897e3336b60e8ac1000186207535ba416ef70110b541b5",
+      "case_observations": {
+        "B": {
+          "exit": 1,
+          "item": "item_10",
+          "complete": false,
+          "declared_count": 10,
+          "missing_required": [
+            "components/director.md"
+          ],
+          "missing_dependencies": []
+        },
+        "D": {
+          "exit": 0,
+          "item": "item_11",
+          "complete": true,
+          "declared_count": 11,
+          "missing_required": [],
+          "missing_dependencies": []
+        },
+        "C": {
+          "exit": 1,
+          "item": "item_12",
+          "complete": false,
+          "declared_count": 12,
+          "missing_required": [],
+          "missing_dependencies": [
+            "components/work-ledger.md"
+          ]
+        },
+        "F": {
+          "exit": 0,
+          "item": "item_13",
+          "complete": true,
+          "declared_count": 12,
+          "missing_required": [],
+          "missing_dependencies": []
+        },
+        "E": {
+          "exit": 2,
+          "item": "item_15",
+          "error": "selection contains duplicate component paths"
+        },
+        "A": {
+          "exit": 0,
+          "item": "item_14",
+          "complete": true,
+          "declared_count": 12,
+          "missing_required": [],
+          "missing_dependencies": []
+        }
+      },
+      "preset_observation": {
+        "exit": 0,
+        "item": "item_16",
+        "complete": true,
+        "declared_count": 11
+      },
+      "command_count": 19,
+      "outer_nonzero_commands": [
+        [
+          "item_10",
+          1
+        ],
+        [
+          "item_12",
+          1
+        ],
+        [
+          "item_15",
+          2
+        ]
+      ],
+      "usage": [
+        {
+          "input_tokens": 131702,
+          "cached_input_tokens": 101632,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 2501,
+          "reasoning_output_tokens": 554
+        }
+      ],
+      "source_fixture_git_unchanged": true,
+      "raw_command_audit": "Parent inspected all command bodies: read-only cat/rg/ls/pwd/sed and guarded Python JSON/subprocess CLI use; no imports of target code, mutation, tests, children or external actions.",
+      "semantic_assessment": "Both reject substituting preset 11 for actual 12, detect omissions/duplicate/contradictory deferral, discuss selected additional duties and honest independence limits, and withhold installation/source-read/authority credit. Luna reasons from supplied preset instead of invoking that extra CLI; Sol also invokes it. A is insufficient for acceptance on supplied evidence, not proof all same-context limited mechanisms are forbidden."
+    }
+  },
+  "runtime": {
+    "models": [
+      {
+        "name": "sol-selection",
+        "expected_model": "gpt-6.1-sol",
+        "expected_effort": "high",
+        "expected_cwd": "/private/tmp/agentos-selection-20261024/work/sol",
+        "thread": "01a16db2-d593-7002-9db2-1d8854192bb2",
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "native_session": "/home/agent/.codex/sessions/2026/10/24/rollout-2026-10-24T11-36-39-01a16db2-d593-7002-9db2-1d8854192bb2.jsonl"
+      },
+      {
+        "name": "luna-selection",
+        "expected_model": "gpt-6-luna",
+        "expected_effort": "high",
+        "expected_cwd": "/private/tmp/agentos-selection-20261024/work/luna",
+        "thread": "01a16db2-d901-78b1-9c8a-35609186e329",
+        "model": "gpt-6-luna",
+        "effort": "high",
+        "native_session": "/home/agent/.codex/sessions/2026/10/24/rollout-2026-10-24T11-36-39-01a16db2-d901-78b1-9c8a-35609186e329.jsonl"
+      }
+    ],
+    "startup": []
+  },
+  "raw_trial_usage": {
+    "input_tokens": 257779,
+    "cached_input_tokens": 202496,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 6271,
+    "reasoning_output_tokens": 2685
+  },
+  "full_task_billing": "unknown",
+  "owned_sandbox": {
+    "name": "agentos-selection-20261024",
+    "id": "2572ccfc-d372-48bc-9ddc-3921415bc5b1"
+  },
+  "original_sandbox_pairs": 63,
+  "codex_update": {
+    "before": "0.149.1",
+    "after": "0.164.0"
+  },
+  "limitations": [
+    "Structural verification cannot infer or authenticate a supplied list from prose. Proposal binding and semantic review remain mandatory.",
+    "Both complete 11 and 12 lists are valid structural sets; their difference is not an automatic helper error.",
+    "Native prompts explicitly request evaluator use. These are evaluator-use trials, not fresh onboarding, installation or U results.",
+    "No historical verdict or successful-source criterion is changed.",
+    "A lacks evidence of protected duties/independence sufficient for approval; this is not a universal prohibition of disclosed, operator-accepted limited mechanisms.",
+    "No proof of all-model/all-designed-path onboarding success.",
+    "Remote merge and final export/cleanup remain unobserved at report creation."
+  ],
+  "diagnostics": [
+    "Pre-freeze case generation guessed role-director.md; count assertion stopped before case files were written. Corrected using actual graph key director.md, and revalidated expected exits before freeze.",
+    "Restricted sbx help emitted macOS preference access warnings; it succeeded without creating resources.",
+    "Native nonzero cases B/C/E are expected detections, not retried failures. Luna retains them inside an exit-zero aggregate; Sol exposes three nonzero outer commands. No native retries."
+  ]
+}
