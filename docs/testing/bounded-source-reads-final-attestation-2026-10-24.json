@@ -1,0 +1,87 @@
+{
+  "observed_at": "2026-10-24T13:59:14.224323+00:00",
+  "scope": "Observed review and retention facts only; no product promotion or future approval.",
+  "reviewed_candidate": {
+    "head": "c0df84e4d6be5ba26dfeb0cfa358c948d77c1c53",
+    "tree": "6eca7dd88b345d7a27846d1a9080abc5ce1964f0",
+    "base": "e7962a32982392308a93c02332e6d98a0a8be396",
+    "operative": "864ba90c206c47eb2cb617731876ed7c03a6c20e",
+    "files": {
+      "docs/agent-records/runs/RUN-000193.md": "5fddd4db803cb535a58c5de3d593fd3ea77bafd4786aa497fc703de732b808d4",
+      "docs/agent-records/tasks/project/TASK-000198.md": "75aefe1cf60ffa02268dc4a375035667f5c71539d2dd1853fe0ce4d31c43520d",
+      "docs/testing/bounded-source-reads-2026-10-24.json": "2210530a9ca1780228cbdcef374269a5bb1e761d85933f0b4f9d8dc87b433db2",
+      "docs/testing/bounded-source-reads-2026-10-24.md": "8cda7c00597ceabb22a6b01e90901b2fb0b19b3561dab1297a6e75cbc0ee839e"
+    },
+    "trials_export": {
+      "archive": "/private/tmp/agentos-boundedreads-20261024-trials.tar.gz",
+      "sha256": "ee08ef60267fc3e16ed6595991c317fd89b171a21700ba452aa15755af286c96",
+      "bytes": 1836111,
+      "indexed_files": 801,
+      "index": "evidence/trials-index.json",
+      "verified_all_members": true
+    },
+    "protocol_sha256": "6745d9bc17269074a06dfa36c56139fb73a639c50736dd1edfd7aac4b3b9201c"
+  },
+  "reviewer": {
+    "thread": "01a16e27-d9d8-7542-8844-3797358f089e",
+    "actual_configuration": {
+      "name": "review-final",
+      "requested_model": "gpt-6.1-sol",
+      "requested_effort": "high",
+      "thread": "01a16e27-d9d8-7542-8844-3797358f089e",
+      "model": "gpt-6.1-sol",
+      "effort": "high",
+      "native_session": "/home/agent/.codex/sessions/2026/10/24/rollout-2026-10-24T13-44-27-01a16e27-d9d8-7542-8844-3797358f089e.jsonl"
+    },
+    "status": "returned",
+    "seconds": 817.063423871994,
+    "receipt_path": "docs/agent-records/approvals/APP-000026.md",
+    "receipt_sha256": "fbf74656bebb9e32de452bf02caa7a6b41e5cc6d45ba598fb78cea53d34f382a",
+    "byte_identical_receipt": true,
+    "raw_usage": {
+      "input_tokens": 2418716,
+      "cached_input_tokens": 2317696,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 25575,
+      "reasoning_output_tokens": 5435
+    },
+    "billing": "unknown",
+    "all_started_command_items_completed": true,
+    "failed_commands": [
+      {
+        "id": "item_45",
+        "exit": 1,
+        "command": "/bin/bash -lc 'PYTHONDONTWRITEBYTECODE=1 TMPDIR=\"$PWD/scratch/tmp\" python3 -B - <<'\"'PY'\nfrom pathlib import Path\nimport json,subprocess,hashlib\ns=Path('scratch');x=s/'extracted';r='/Users/Shared/projects/AgentOS';c=json.loads(Path('/private/tmp/agentos-boundedreads-20261024/controls/review-candidate.json').read_text());env={'PATH':'/usr/bin:/bin','GIT_OPTIONAL_LOCKS':'0'}\ndef g(*a):return subprocess.check_output(['git','-C',r,*a],env=env)\ntracked=g('ls-tree','-r','--name-only',c['operative']).decode().splitlines();rows=[];missing=[]\nfor p in tracked:\n f=x/'controls/source-full'/p\n if not f.is_file():missing.append(p);continue\n b=g('show',c['operative']+':'+p);assert f.read_bytes()==b,p;rows.append(p)\nprint('tracked operative compared',len(rows),'missing',missing)\nchanges=g('diff','--name-only',c['base'],c['operative'],'--','bundle').decode().splitlines();assert len(changes)==10\nfor p in changes:assert g('show',c['head']+':'+p)==g('show',c['base']+':'+p)\nprotocol=g('show',c['base']+':tools/read-evidence.md');assert protocol==(x/'controls/source-full/tools/read-evidence.md').read_bytes()\npre=json.loads((x/'controls/preregistered.json').read_text());assert pre['plan'] in (Path('/private/tmp/agentos-boundedreads-20261024/controls/review-records/TASK-000198.md').read_text())\nassert (x/'controls/prior-plan.md').read_bytes()==Path('/private/tmp/agentos-boundedreads-20261024/controls/prior-plan.md').read_bytes()\nu={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in (x/'controls').glob('*-use.txt')};assert len(u)==4 and set(u.values())=={'f0836c258fdba99afccdf0436a672ddb1fcf7b6de659677b082e3ba44870de29'}\nres={'operative_tracked_compared':rows,'operative_tracked_not_in_source_fixture':missing,'all_ten_withdrawn':changes,'current_protocol_equals_preregistered_baseline':True,'frozen_plan1_exact_prefix_of_current':True,'prior_original_plan_exact':True,'use_prompt_hashes':u,'base_is_ancestor_of_head':subprocess.run(['git','-C',r,'merge-base','--is-ancestor',c['base'],c['head']],env=env).returncode==0}\n(s/'history-and-criteria-audit.json').write_text(json.dumps(res,indent=2)+'\\\\n')\nPY\""
+      }
+    ]
+  },
+  "reviewer_evidence": {
+    "index_sha256": "0dce2b4391d4c5d04723abb81672fcefd7b8b529b28effd192d1bed886ab3253",
+    "regular_files": 933,
+    "bytes": 5140841,
+    "symlink_targets": 2,
+    "all_current_hashes_verified": true,
+    "export_requirement": "Retain every indexed regular file directly in acceptance export plus exact index/receipt and recoverable link metadata before cleanup."
+  },
+  "parent_postreview_diagnostic": {
+    "at": "2026-10-24T13:56:31.647800+00:00",
+    "operation": "parent read-only index format inspection",
+    "attempt1_exit": 1,
+    "error": "StopIteration while sampling nonexistent files map after printing actual keys",
+    "diagnosis": "Fresh reviewer uses regular_files instead of previous round files; no index mutation or data loss.",
+    "recovery": "Read actual regular_files schema before retention validation; preserve original reviewer index byte-for-byte.",
+    "attempt2_exit": 0,
+    "sample": [
+      "scratch/adaptations.json",
+      {
+        "sha256": "10a5e54fa8655dbbae1979f8f3b2a7377e5fa76a0a31c7bc829eee9e8d80c71e",
+        "bytes": 397
+      }
+    ]
+  },
+  "reviewed_hashes_unchanged": true,
+  "participant_primary_subsets_unchanged": true,
+  "remaining_delivery": "Pending normal PR/current checks/expectedhead merge and fetchedmain content/tree/ancestry verification.",
+  "remaining_cleanup": "Pending verified acceptance export, exactowned sandbox/rawroot cleanup; preserve63originalidentities/unrelatedbranch/priorarchives.",
+  "broader_goal": "active; no installation/first-use/all-path completion claimed"
+}
