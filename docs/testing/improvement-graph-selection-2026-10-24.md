@@ -1,0 +1,11 @@
+# Graph-selection helper experiment
+
+The optional `select` command computes every required component plus requested dependencies and rejects selected deprecated components, including deprecated prerequisites. The earlier closure function admitted deprecated nodes. Source reads, requirement interpretation, installation qualification and action authority remain separate; portable manual traversal remains supported and no target helper installation is required.
+
+Preregistered criteria: TASK-000177 revision1. Eighteen tests pass, including the actual read-only CLI, minimal/transitive closure, source identities, selected/dependency deprecation and an unrelated deprecated optional component. Existing evidence-retention, graph-cycle/escape and local-effect tests remain passing.
+
+Four fresh native contexts used Codex0.164.0, updated from0.149.1 before any model use. Both gpt-6.1-sol and gpt-6-luna correctly handled six baseline manual scenarios and seven candidate scenarios, using the new CLI in the latter. All four actual root-model metadata observations match requests. Only each authorized result.json changed; indexes stayed empty and no commits were created. This establishes usable deterministic structural checking, not improved model accuracy: baseline manual answers were already correct. Exact reasoning, dollars and general reliability remain unknown.
+
+Both baseline models caught an operator oracle error: Git delivery does not depend on work-ledger, so deprecating that unrelated component does not block Git selection. The original wrong oracle and all outputs remain retained. Corrected expectations preserve that ready result; an additional candidate-only case uses the real parallel-coordination → work-ledger edge and blocks correctly. Six original cases are paired; the seventh is not falsely presented as a paired model improvement. No deprecation criterion was weakened.
+
+The [machine evidence summary](improvement-graph-selection-2026-10-24.json) binds native roots, output/run hashes, parent observations and the verified local phase archive. Raw logs and sandbox inventory are excluded from public commits. Independent exact-candidate review/acceptance and protected PR/main delivery remain required. Task-owned sandbox cleanup follows the remaining two candidate experiments; it is still owned under RUN-000172.

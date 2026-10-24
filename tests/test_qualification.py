@@ -5,6 +5,8 @@ import io
 import json
 from pathlib import Path
 import tempfile
+import subprocess
+import sys
 from types import SimpleNamespace
 import unittest
 from unittest.mock import patch
@@ -13,6 +15,45 @@ SPEC=importlib.util.spec_from_file_location('qualification',Path(__file__).paren
 q=importlib.util.module_from_spec(SPEC);SPEC.loader.exec_module(q)
 
 class QualificationTests(unittest.TestCase):
+    def test_selection_seeds_required_and_closes_requested_dependencies(self):
+        root=Path(__file__).parents[1];nodes=q.graph(root/'bundle')
+        minimal=q.select_components(root/'bundle',[])
+        self.assertEqual(set(minimal['selected']),{k for k,v in nodes.items() if v['selection']=='required'})
+        requested=['components/parallel-coordination.md']
+        extended=q.select_components(root/'bundle',requested*2)
+        self.assertEqual(extended['requested'],requested)
+        self.assertTrue(set(minimal['selected']) <= set(extended['selected']))
+        self.assertIn('components/work-ledger.md',extended['selected'])
+        for key in extended['selected']:
+            self.assertTrue(set(nodes[key]['requires']) <= set(extended['selected']))
+            self.assertEqual(extended['components'][key]['sha256'],q.sha((root/'bundle'/key).read_bytes()))
+
+    def test_selected_deprecated_node_and_prerequisite_rejected_but_unselected_allowed(self):
+        with tempfile.TemporaryDirectory() as d:
+            root=Path(d);self.fixture_graph(root)
+            b=root/'components/b.md';b.write_text(b.read_text().replace('---\n','---\nstatus: deprecated\n',1))
+            with self.assertRaisesRegex(ValueError,'deprecated: components/b.md'):
+                q.select_components(root,[])  # a requires b, so even the minimal closure is blocked.
+            a=root/'components/a.md';a.write_text(a.read_text().replace('requires:\n  - /components/b.md\n','requires: []\n'))
+            self.assertEqual(q.select_components(root,[])['selected'],['components/a.md'])
+            with self.assertRaisesRegex(ValueError,'deprecated: components/b.md'):
+                q.select_components(root,['components/b.md'])
+            a.write_text(a.read_text().replace('---\n','---\nstatus: deprecated\n',1))
+            with self.assertRaisesRegex(ValueError,'deprecated: components/a.md'):
+                q.select_components(root,[])
+
+    def test_selection_cli_is_read_only_and_rejects_unknown_nodes(self):
+        script=Path(__file__).parents[1]/'tools/qualification.py'
+        with tempfile.TemporaryDirectory() as d:
+            root=Path(d);self.fixture_graph(root);before=q.snapshot(root)
+            cmd=[sys.executable,str(script),'select',str(root)]
+            good=subprocess.run(cmd,capture_output=True,text=True)
+            self.assertEqual(good.returncode,0,good.stderr)
+            self.assertEqual(json.loads(good.stdout)['selected'],['components/a.md','components/b.md'])
+            bad=subprocess.run(cmd+['--component','components/absent.md'],capture_output=True,text=True)
+            self.assertNotEqual(bad.returncode,0);self.assertIn('unknown component',bad.stderr)
+            self.assertEqual(bad.stdout,'');self.assertEqual(q.snapshot(root),before)
+
     def test_returned_artifact_identities_survive_later_mutation_in_both_scopes(self):
         with tempfile.TemporaryDirectory() as d:
             root=Path(d);target=root/'fixture';target.mkdir();(target/'.git').mkdir()

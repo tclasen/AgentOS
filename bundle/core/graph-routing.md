@@ -34,6 +34,8 @@ A component may declare:
 
 # Safety and graph discipline
 
+When a local AgentOS checkout and Python 3.9+ are available, the optional read-only command `python3 tools/qualification.py select bundle --component components/git-delivery.md` (from the AgentOS checkout root) computes required plus requested dependency closure and rejects deprecated selected nodes. Repeat `--component` for additional requested nodes; omit it for the required closure. Its hashes and path list do not establish full-source reads, requirement coverage or authority. Continue the interview/read/approval checks below. Manual traversal remains sufficient when the helper is unavailable; do not install it into the target merely to plan an organization.
+
 Reconcile each stated requirement with a selected operating contract, an explicitly approved alternative, or an unresolved gap before deferring a candidate. **Contract selection, runtime activation and permission to execute an effect are separate decisions.** A future action grant or unavailable background runtime does not by itself remove the requested contract:
 
 - Planned Git delivery needs the Git-delivery contract even when installation permits no commit or push.

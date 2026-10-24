@@ -6,6 +6,7 @@ Use Python 3.9 or later, `sbx`, and an updated/authenticated sandbox Codex. Moun
 
 ```sh
 python3 tools/qualification.py graph bundle
+python3 tools/qualification.py select bundle --component components/git-delivery.md
 python3 tools/qualification.py snapshot /path/to/fixture /path/to/baseline.json
 python3 tools/qualification.py run \
   --target /path/to/work/fixture --workspace /path/to/work \
@@ -17,6 +18,8 @@ python3 tools/qualification.py run \
 `--agents` caps subordinate contexts for the trial; operators must also account for descendants and simultaneous trials. `--strict-config` exercises the actual Codex parser. `--resume` requires an observed native thread ID. `--add-dir` grants an additional existing directory inside the declared disposable workspace; keep it as narrow as the test destination. This directory's file delta is recorded separately. Existing evidence names cannot be reused. Failed or inconclusive trials need a separately named retry with a recorded diagnosis; never overwrite them.
 
 The manifest records source hashes, prompts, before and after file hashes/deltas for both target and additional scopes, CLI events, reported native thread IDs and available usage. Retained after hashes allow later artifact mutation to be detected; they do not make the files immutable. Read-credit is conservative: only complete source text in successful completed command output is credited; truncation is inconclusive. Actual child model identity and monetary cost remain unknown unless independently observed. Graph parsing supports this repository's small metadata profile, not arbitrary YAML. Snapshots omit Git internals and Python caches and record symlinks without following them; inspect Git status/index/history independently.
+
+`select` is an optional read-only planning aid. With no `--component` arguments it selects all required components and their dependencies; repeat the flag to add requested optional components. It reports the selected closure and source hashes, and rejects unknown or deprecated selected components, including deprecated transitive prerequisites. An unrelated deprecated optional component is not selected. The command does not infer user requirements, prove full-source reads, validate an installed organization or grant authority. Manual traversal remains supported when Python or a local checkout is unavailable; no helper needs to be installed into the target project.
 
 `qualification-matrix.json` fixes source-derived component criteria for both model names and three installation profiles. It is a coverage plan, not a result. See the qualification reports under `docs/testing/` for observed outcomes and limitations.
 

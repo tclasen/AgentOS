@@ -39,7 +39,9 @@ def graph(bundle: Path) -> dict:
             if not target.is_relative_to(bundle) or not target.is_file():
                 raise ValueError(f'missing or escaping dependency: {path.name} -> {dep}')
         key = path.relative_to(bundle).as_posix()
-        nodes[key] = {'selection': selection.group(1), 'requires': [x.lstrip('/') for x in deps], 'sha256': sha(path.read_bytes())}
+        status = re.search(r'^status: (\S+)\s*$', front, re.M)
+        nodes[key] = {'selection': selection.group(1), 'requires': [x.lstrip('/') for x in deps],
+                      'status': status.group(1) if status else None, 'sha256': sha(path.read_bytes())}
     def visit(node, visiting, visited):
         if node in visiting:
             raise ValueError(f'dependency cycle: {node}')
@@ -67,12 +69,25 @@ def closure(nodes: dict, selected: list[str]) -> list[str]:
             return
         if node not in nodes:
             raise ValueError(f'unknown component: {node}')
+        if nodes[node].get('status') == 'deprecated':
+            raise ValueError(f'selected component is deprecated: {node}')
         result.add(node)
         for dep in nodes[node]['requires']:
             visit(dep)
     for node in selected:
         visit(node)
     return sorted(result)
+
+def select_components(bundle: Path, requested: list[str]) -> dict:
+    """Compute structural selection only; this grants no authority or source-read credit."""
+    nodes = graph(bundle)
+    required = sorted(k for k, v in nodes.items() if v['selection'] == 'required')
+    requested = sorted(set(requested))
+    selected = closure(nodes, required + requested)
+    return {'required': required, 'requested': requested, 'selected': selected,
+            'components': {k: nodes[k] for k in selected},
+            'limits': 'Structural selection only. Read full selected sources, reconcile user requirements, '
+                      'and obtain applicable authority before installation or effects.'}
 
 def snapshot(root: Path) -> dict:
     """Never follow symlinks into another project or credential directory."""
@@ -177,6 +192,9 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     sub = parser.add_subparsers(dest='command', required=True)
     p = sub.add_parser('graph'); p.add_argument('bundle')
+    p = sub.add_parser('select', help='Read-only required and requested dependency closure')
+    p.add_argument('bundle')
+    p.add_argument('--component', action='append', default=[], help='Requested bundle-relative component path; repeatable')
     p = sub.add_parser('snapshot'); p.add_argument('root'); p.add_argument('output')
     p = sub.add_parser('inspect'); p.add_argument('log'); p.add_argument('--source')
     p = sub.add_parser('run')
@@ -192,6 +210,12 @@ def main():
     args = parser.parse_args()
     if args.command == 'graph':
         print(json.dumps(graph(Path(args.bundle)), indent=2)); return 0
+    if args.command == 'select':
+        try:
+            result = select_components(Path(args.bundle), args.component)
+        except ValueError as error:
+            parser.error(str(error))
+        print(json.dumps(result, indent=2)); return 0
     if args.command == 'snapshot':
         write_json(Path(args.output), snapshot(Path(args.root))); return 0
     if args.command == 'inspect':
