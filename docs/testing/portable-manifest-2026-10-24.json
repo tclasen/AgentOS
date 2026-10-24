@@ -1,0 +1,858 @@
+{
+  "task": "TASK-000193",
+  "run": "RUN-000188",
+  "approval_required": "APP-000021",
+  "base": "af662db52c123c6286794974319abd5c2f06d9f6",
+  "operative_candidate": "5eece88600e6111cfc38afd68a3a1ce3f4d2ca0e",
+  "decision": "Reject coherent eight-source-file promotion; findings-only candidate. Both checkout installations passed bounded qualification, but Luna first use did not write formatter-returned output.",
+  "source_change_withdrawn": true,
+  "final_bundle_tools_tests_equal_base": true,
+  "local": {
+    "regressions": 44,
+    "regression_seconds": 12.032,
+    "manifest_recipe_cases": 31,
+    "manifest_recipe_all_passed": true,
+    "recipe_sha256": "8970c3d3fd38abd0dbffa9ac954998ee4caa2c258ca771b402d5b5ad213eae22",
+    "candidate_source_files": 48,
+    "unchanged_component_bodies": 23,
+    "profile_closures": {
+      "portable": 10,
+      "engineering": 22,
+      "portfolio": 18
+    },
+    "links": 26,
+    "correction_cases": 4,
+    "cache_probes": 4
+  },
+  "native": {
+    "full-luna-D": {
+      "thread": "01a16d77-5a87-7f90-b01d-4299aa05cbd7",
+      "actual_model": "gpt-6-luna",
+      "actual_reasoning_effort": "high",
+      "elapsed_seconds": 54.357463121414185,
+      "status": "returned",
+      "delta": {
+        "added": [],
+        "removed": [],
+        "changed": []
+      },
+      "raw_sha256": "d33df2027d334d0acc566b9e54be3ee34562c9f0ec16012ed11cb0e79be95051",
+      "nonzero_commands": [
+        {
+          "command": "/bin/bash -lc 'cat /private/tmp/agentos-manifest-20261024/controls/source-full/bundle/start.md && cat /private/tmp/agentos-manifest-20261024/controls/source-full/bundle/index.md && ls -la && find . -maxdepth 3 -type f -print | sort &&'",
+          "exit_code": 2,
+          "aggregated_output": "/bin/bash: -c: line 2: syntax error: unexpected end of file\n"
+        },
+        {
+          "command": "/bin/bash -lc \"find /private/tmp/agentos-manifest-20261024/controls/source-full/tools -maxdepth 2 -type f -print | sort; git status --porcelain=v1; rg --files -g 'AGENTS.md' -g 'CLAUDE.md' -g '.cursorrules' -g '.github/**' -g 'pyproject.toml' -g 'setup.cfg' -g 'requirements*.txt' -g '.gitignore' .\"",
+          "exit_code": 1,
+          "aggregated_output": "/private/tmp/agentos-manifest-20261024/controls/source-full/tools/README.md\n/private/tmp/agentos-manifest-20261024/controls/source-full/tools/local_effect_fixture.py\n/private/tmp/agentos-manifest-20261024/controls/source-full/tools/qualification-matrix.json\n/private/tmp/agentos-manifest-20261024/controls/source-full/tools/qualification.py\n"
+        }
+      ],
+      "non_json_router_lines": [],
+      "original_project_and_git_unchanged": true,
+      "decision": {
+        "design": "accepted for bounded installation after parent semantic/provenance/effects review; not installation qualification",
+        "source_identity": "actual48file manifest independently matched; raw command status retained",
+        "source_content_exposures": {
+          "components/activation.md": {
+            "sha256": "2893e4d66fc47158d5267cae0a04132d832c8436ad90f7ca6f58d322aaef4284",
+            "bytes": 2064,
+            "observations": [
+              {
+                "event_index": 20,
+                "item_id": "item_10",
+                "command_sha256": "7134b56bf286c73386ba4cf5147ff92562ad0b7202f101978dc6d4f23d1427ea",
+                "output_sha256": "53e9d1e9aa61ef6ec07ca527cc3694f8fc0e81a70b476b37a78024bf97cae72c",
+                "outer_exit_code": 0,
+                "outer_status": "completed"
+              }
+            ]
+          },
+          "components/authority.md": {
+            "sha256": "47ae9e02646be13d453e3219a55bc16610e115d2da221b944103b6c95a53ff95",
+            "bytes": 3041,
+            "observations": [
+              {
+                "event_index": 20,
+                "item_id": "item_10",
+                "command_sha256": "7134b56bf286c73386ba4cf5147ff92562ad0b7202f101978dc6d4f23d1427ea",
+                "output_sha256": "53e9d1e9aa61ef6ec07ca527cc3694f8fc0e81a70b476b37a78024bf97cae72c",
+                "outer_exit_code": 0,
+                "outer_status": "completed"
+              }
+            ]
+          },
+          "components/capability-routing.md": {
+            "sha256": "d7f86c5cbf4b1a505f9db20fcbd68487a809bbdc04adce3cd12221114d0fc161",
+            "bytes": 1846,
+            "observations": [
+              {
+                "event_index": 20,
+                "item_id": "item_10",
+                "command_sha256": "7134b56bf286c73386ba4cf5147ff92562ad0b7202f101978dc6d4f23d1427ea",
+                "output_sha256": "53e9d1e9aa61ef6ec07ca527cc3694f8fc0e81a70b476b37a78024bf97cae72c",
+                "outer_exit_code": 0,
+                "outer_status": "completed"
+              }
+            ]
+          },
+          "components/chief-of-staff.md": {
+            "sha256": "c43203e841a0a10ef4ef3887b6a7d89eb834eb255b3b4386231488f4f9efb8b5",
+            "bytes": 1726,
+            "observations": [
+              {
+                "event_index": 20,
+                "item_id": "item_10",
+                "command_sha256": "7134b56bf286c73386ba4cf5147ff92562ad0b7202f101978dc6d4f23d1427ea",
+                "output_sha256": "53e9d1e9aa61ef6ec07ca527cc3694f8fc0e81a70b476b37a78024bf97cae72c",
+                "outer_exit_code": 0,
+                "outer_status": "completed"
+              }
+            ]
+          },
+          "components/context-core.md": {
+            "sha256": "8046c83f2eec46be879ce418e68827fdd95f6388ad3ff2090b8254840e74bca0",
+            "bytes": 1602,
+            "observations": [
+              {
+                "event_index": 22,
+                "item_id": "item_11",
+                "command_sha256": "8938aa5671220fe71547576ce4266cdd49e974c8fd667b9378d91e0f7c98b96a",
+                "output_sha256": "9c925d11bc90f8ca3dc60f7d2e08a9e53941abd48de4891a33a37cf0842abc50",
+                "outer_exit_code": 0,
+                "outer_status": "completed"
+              }
+            ]
+          },
+          "components/delegation.md": {
+            "sha256": "d34dcf7c5bb102fc4f0e1a1603954ce51e33aa5f05f9a3561ae33315d2725169",
+            "bytes": 2146,
+            "observations": [
+              {
+                "event_index": 22,
+                "item_id": "item_11",
+                "command_sha256": "8938aa5671220fe71547576ce4266cdd49e974c8fd667b9378d91e0f7c98b96a",
+                "output_sha256": "9c925d11bc90f8ca3dc60f7d2e08a9e53941abd48de4891a33a37cf0842abc50",
+                "outer_exit_code": 0,
+                "outer_status": "completed"
+              }
+            ]
+          },
+          "components/delivery-acceptance.md": {
+            "sha256": "540b6b083ca6eeb70214cb7711d9f1326c4c75c6de17327fa7048aa76d0be4bb",
+            "bytes": 1672,
+            "observations": [
+              {
+                "event_index": 22,
+                "item_id": "item_11",
+                "command_sha256": "8938aa5671220fe71547576ce4266cdd49e974c8fd667b9378d91e0f7c98b96a",
+                "output_sha256": "9c925d11bc90f8ca3dc60f7d2e08a9e53941abd48de4891a33a37cf0842abc50",
+                "outer_exit_code": 0,
+                "outer_status": "completed"
+              }
+            ]
+          },
+          "components/director.md": {
+            "sha256": "beafa827c5ce6c53937537fa9521c2b46ebb9ec049788648b7e2b010b0eea9b0",
+            "bytes": 2115,
+            "observations": [
+              {
+                "event_index": 20,
+                "item_id": "item_10",
+                "command_sha256": "7134b56bf286c73386ba4cf5147ff92562ad0b7202f101978dc6d4f23d1427ea",
+                "output_sha256": "53e9d1e9aa61ef6ec07ca527cc3694f8fc0e81a70b476b37a78024bf97cae72c",
+                "outer_exit_code": 0,
+                "outer_status": "completed"
+              }
+            ]
+          },
+          "components/resource-budgets.md": {
+            "sha256": "1c6e69123d8186d8cda6f74cac0850d7c64aa0b97f7ef8d5f679982951834a5e",
+            "bytes": 1441,
+            "observations": [
+              {
+                "event_index": 24,
+                "item_id": "item_12",
+                "command_sha256": "7d6f0c2bd1ca66334ace0617acf87a2d41c5fb4ff2a389630a570eca6945a902",
+                "output_sha256": "0174295b04df027498f9e0d72bdf2ea91f590288f54b8c5e83e712147dd1e7ed",
+                "outer_exit_code": 0,
+                "outer_status": "completed"
+              }
+            ]
+          },
+          "components/role-lifecycle.md": {
+            "sha256": "ae0fc9a30668666d22cb9b0ab03049b98ec095a590f81ecb7b843972073bf95f",
+            "bytes": 1897,
+            "observations": [
+              {
+                "event_index": 22,
+                "item_id": "item_11",
+                "command_sha256": "8938aa5671220fe71547576ce4266cdd49e974c8fd667b9378d91e0f7c98b96a",
+                "output_sha256": "9c925d11bc90f8ca3dc60f7d2e08a9e53941abd48de4891a33a37cf0842abc50",
+                "outer_exit_code": 0,
+                "outer_status": "completed"
+              }
+            ]
+          },
+          "components/self-improvement.md": {
+            "sha256": "0bf78a0d5f04096c9e0b3603588f8b865aed218ba980f59f4dc11922656d5ac7",
+            "bytes": 3002,
+            "observations": [
+              {
+                "event_index": 22,
+                "item_id": "item_11",
+                "command_sha256": "8938aa5671220fe71547576ce4266cdd49e974c8fd667b9378d91e0f7c98b96a",
+                "output_sha256": "9c925d11bc90f8ca3dc60f7d2e08a9e53941abd48de4891a33a37cf0842abc50",
+                "outer_exit_code": 0,
+                "outer_status": "completed"
+              }
+            ]
+          },
+          "core/constitution.md": {
+            "sha256": "6797e597f48135da527f87aff5b0f1b01e2c265ebb5378cb2826d70665a5ed82",
+            "bytes": 2665,
+            "observations": [
+              {
+                "event_index": 10,
+                "item_id": "item_4",
+                "command_sha256": "3e19e4b0d5f2b0368b2950c0369da0d47a2ca99daf0c9bd15e85e198f4f93724",
+                "output_sha256": "f993367e53e0cfe30913ded4e00e0843540335833cf8cd2125147b3df6e10913",
+                "outer_exit_code": 0,
+                "outer_status": "completed"
+              }
+            ]
+          },
+          "core/graph-routing.md": {
+            "sha256": "e99f69e05d3982ffd72f564bc98f167297cc7b07fad1238cfc121df83af2d1e8",
+            "bytes": 7000,
+            "observations": [
+              {
+                "event_index": 10,
+                "item_id": "item_4",
+                "command_sha256": "3e19e4b0d5f2b0368b2950c0369da0d47a2ca99daf0c9bd15e85e198f4f93724",
+                "output_sha256": "f993367e53e0cfe30913ded4e00e0843540335833cf8cd2125147b3df6e10913",
+                "outer_exit_code": 0,
+                "outer_status": "completed"
+              }
+            ]
+          },
+          "core/installer-policy.md": {
+            "sha256": "c6e48d24fa13124d2f623e131c96c83b77aa32734b5ae706f2e6912cc82db4aa",
+            "bytes": 2634,
+            "observations": [
+              {
+                "event_index": 10,
+                "item_id": "item_4",
+                "command_sha256": "3e19e4b0d5f2b0368b2950c0369da0d47a2ca99daf0c9bd15e85e198f4f93724",
+                "output_sha256": "f993367e53e0cfe30913ded4e00e0843540335833cf8cd2125147b3df6e10913",
+                "outer_exit_code": 0,
+                "outer_status": "completed"
+              }
+            ]
+          },
+          "interviews/bootstrap.md": {
+            "sha256": "eb471fc596bf6705c656911716e3022e99d818a905b744b8314acf3b3c988ce4",
+            "bytes": 2279,
+            "observations": [
+              {
+                "event_index": 10,
+                "item_id": "item_4",
+                "command_sha256": "3e19e4b0d5f2b0368b2950c0369da0d47a2ca99daf0c9bd15e85e198f4f93724",
+                "output_sha256": "f993367e53e0cfe30913ded4e00e0843540335833cf8cd2125147b3df6e10913",
+                "outer_exit_code": 0,
+                "outer_status": "completed"
+              }
+            ]
+          },
+          "phases/design.md": {
+            "sha256": "95681cf0f3fd3d77219bbe14d79ac4be78056a69dbe50e5f04c13fd768396aba",
+            "bytes": 2207,
+            "observations": [
+              {
+                "event_index": 10,
+                "item_id": "item_4",
+                "command_sha256": "3e19e4b0d5f2b0368b2950c0369da0d47a2ca99daf0c9bd15e85e198f4f93724",
+                "output_sha256": "f993367e53e0cfe30913ded4e00e0843540335833cf8cd2125147b3df6e10913",
+                "outer_exit_code": 0,
+                "outer_status": "completed"
+              }
+            ]
+          },
+          "phases/discover.md": {
+            "sha256": "513fc2cea5ca6a7164e1f37ce764abf1a7a5c3e849d9ff83dd3fd894d4238b9d",
+            "bytes": 1377,
+            "observations": [
+              {
+                "event_index": 10,
+                "item_id": "item_4",
+                "command_sha256": "3e19e4b0d5f2b0368b2950c0369da0d47a2ca99daf0c9bd15e85e198f4f93724",
+                "output_sha256": "f993367e53e0cfe30913ded4e00e0843540335833cf8cd2125147b3df6e10913",
+                "outer_exit_code": 0,
+                "outer_status": "completed"
+              }
+            ]
+          },
+          "start.md": {
+            "sha256": "ca6f26ceaccb033011eb1bf7ae07ef6dda07da3b584c531a02ec2e1ddd27f258",
+            "bytes": 5357,
+            "observations": [
+              {
+                "event_index": 8,
+                "item_id": "item_3",
+                "command_sha256": "caf481d18b3a2f753ef9789eadb6af42f1f26ca2922c8fcb2783637f478a33a6",
+                "output_sha256": "749ccb070910d2d90194c52b848d4e1d33a316026f1df690e1a0a72e7a7d7c0b",
+                "outer_exit_code": 0,
+                "outer_status": "completed"
+              }
+            ]
+          }
+        },
+        "old_successful_component_metric": [
+          "components/activation.md",
+          "components/authority.md",
+          "components/capability-routing.md",
+          "components/chief-of-staff.md",
+          "components/context-core.md",
+          "components/delegation.md",
+          "components/delivery-acceptance.md",
+          "components/director.md",
+          "components/resource-budgets.md",
+          "components/role-lifecycle.md",
+          "components/self-improvement.md"
+        ],
+        "selected_components": [
+          "components/activation.md",
+          "components/authority.md",
+          "components/capability-routing.md",
+          "components/chief-of-staff.md",
+          "components/context-core.md",
+          "components/delegation.md",
+          "components/delivery-acceptance.md",
+          "components/director.md",
+          "components/resource-budgets.md",
+          "components/role-lifecycle.md",
+          "components/self-improvement.md"
+        ],
+        "source_target_git_preserved": true,
+        "handoff_sha256": "310d0303c219376cac8ca36cf6124686d4881c7aea6c39e9e42be02268265a5a"
+      }
+    },
+    "full-sol-D": {
+      "thread": "01a16d77-61f7-7ff2-89fd-5cefc8aab3cd",
+      "actual_model": "gpt-6.1-sol",
+      "actual_reasoning_effort": "high",
+      "elapsed_seconds": 179.61316466331482,
+      "status": "returned",
+      "delta": {
+        "added": [],
+        "removed": [],
+        "changed": []
+      },
+      "raw_sha256": "d342e7d3cabb83362ba535324df1ce420b7fee92d71fb1fbf9a1efdae41d3f06",
+      "nonzero_commands": [],
+      "non_json_router_lines": [],
+      "original_project_and_git_unchanged": true,
+      "decision": {
+        "design": "accepted for bounded installation after parent semantic/provenance/effects review; not installation qualification",
+        "source_identity": "actual48file manifest independently matched; raw command status retained",
+        "source_content_exposures": {
+          "components/activation.md": {
+            "sha256": "2893e4d66fc47158d5267cae0a04132d832c8436ad90f7ca6f58d322aaef4284",
+            "bytes": 2064,
+            "observations": [
+              {
+                "event_index": 22,
+                "item_id": "item_10",
+                "command_sha256": "1eb8b76d15d195ba7fde482b38fa876b68f8f0e8e9ee7eaba344aa1bcb8d03fb",
+                "output_sha256": "6695ea1e0184182e1236bce0333de95d4d7e91b46d30e13de8bec27b4dc6231a",
+                "outer_exit_code": 0,
+                "outer_status": "completed"
+              }
+            ]
+          },
+          "components/authority.md": {
+            "sha256": "47ae9e02646be13d453e3219a55bc16610e115d2da221b944103b6c95a53ff95",
+            "bytes": 3041,
+            "observations": [
+              {
+                "event_index": 24,
+                "item_id": "item_11",
+                "command_sha256": "b02559b39f0cce8e5bcbac8705f9258630a1b3cb23970cdc7b45885eb548704e",
+                "output_sha256": "661bcf3bdd4264bdc5e3e60e2f65cd87e9bdf8a5f6e0cfec1f691c61db26cf11",
+                "outer_exit_code": 0,
+                "outer_status": "completed"
+              }
+            ]
+          },
+          "components/capability-routing.md": {
+            "sha256": "d7f86c5cbf4b1a505f9db20fcbd68487a809bbdc04adce3cd12221114d0fc161",
+            "bytes": 1846,
+            "observations": [
+              {
+                "event_index": 24,
+                "item_id": "item_11",
+                "command_sha256": "b02559b39f0cce8e5bcbac8705f9258630a1b3cb23970cdc7b45885eb548704e",
+                "output_sha256": "661bcf3bdd4264bdc5e3e60e2f65cd87e9bdf8a5f6e0cfec1f691c61db26cf11",
+                "outer_exit_code": 0,
+                "outer_status": "completed"
+              }
+            ]
+          },
+          "components/chief-of-staff.md": {
+            "sha256": "c43203e841a0a10ef4ef3887b6a7d89eb834eb255b3b4386231488f4f9efb8b5",
+            "bytes": 1726,
+            "observations": [
+              {
+                "event_index": 22,
+                "item_id": "item_10",
+                "command_sha256": "1eb8b76d15d195ba7fde482b38fa876b68f8f0e8e9ee7eaba344aa1bcb8d03fb",
+                "output_sha256": "6695ea1e0184182e1236bce0333de95d4d7e91b46d30e13de8bec27b4dc6231a",
+                "outer_exit_code": 0,
+                "outer_status": "completed"
+              }
+            ]
+          },
+          "components/context-core.md": {
+            "sha256": "8046c83f2eec46be879ce418e68827fdd95f6388ad3ff2090b8254840e74bca0",
+            "bytes": 1602,
+            "observations": [
+              {
+                "event_index": 30,
+                "item_id": "item_14",
+                "command_sha256": "34e6c0db26965fe65b1ba7dabfc46847429f6d9dc7e7663fb441244b21ee7c8d",
+                "output_sha256": "0b4bd0b7339ef4c713ab8758dafadaba9b848a165ac42d354f98332f25508ee6",
+                "outer_exit_code": 0,
+                "outer_status": "completed"
+              }
+            ]
+          },
+          "components/delegation.md": {
+            "sha256": "d34dcf7c5bb102fc4f0e1a1603954ce51e33aa5f05f9a3561ae33315d2725169",
+            "bytes": 2146,
+            "observations": [
+              {
+                "event_index": 24,
+                "item_id": "item_11",
+                "command_sha256": "b02559b39f0cce8e5bcbac8705f9258630a1b3cb23970cdc7b45885eb548704e",
+                "output_sha256": "661bcf3bdd4264bdc5e3e60e2f65cd87e9bdf8a5f6e0cfec1f691c61db26cf11",
+                "outer_exit_code": 0,
+                "outer_status": "completed"
+              }
+            ]
+          },
+          "components/delivery-acceptance.md": {
+            "sha256": "540b6b083ca6eeb70214cb7711d9f1326c4c75c6de17327fa7048aa76d0be4bb",
+            "bytes": 1672,
+            "observations": [
+              {
+                "event_index": 30,
+                "item_id": "item_14",
+                "command_sha256": "34e6c0db26965fe65b1ba7dabfc46847429f6d9dc7e7663fb441244b21ee7c8d",
+                "output_sha256": "0b4bd0b7339ef4c713ab8758dafadaba9b848a165ac42d354f98332f25508ee6",
+                "outer_exit_code": 0,
+                "outer_status": "completed"
+              }
+            ]
+          },
+          "components/director.md": {
+            "sha256": "beafa827c5ce6c53937537fa9521c2b46ebb9ec049788648b7e2b010b0eea9b0",
+            "bytes": 2115,
+            "observations": [
+              {
+                "event_index": 22,
+                "item_id": "item_10",
+                "command_sha256": "1eb8b76d15d195ba7fde482b38fa876b68f8f0e8e9ee7eaba344aa1bcb8d03fb",
+                "output_sha256": "6695ea1e0184182e1236bce0333de95d4d7e91b46d30e13de8bec27b4dc6231a",
+                "outer_exit_code": 0,
+                "outer_status": "completed"
+              }
+            ]
+          },
+          "components/resource-budgets.md": {
+            "sha256": "1c6e69123d8186d8cda6f74cac0850d7c64aa0b97f7ef8d5f679982951834a5e",
+            "bytes": 1441,
+            "observations": [
+              {
+                "event_index": 31,
+                "item_id": "item_15",
+                "command_sha256": "06095ef2bcd70d460ae0a3de1d7d237a9fd22990a0def0f8730259f92d4bf914",
+                "output_sha256": "77a5212d2ebc9f10754673d9ae347d39f438e65e7a44b8c74b6af506a20fe29f",
+                "outer_exit_code": 0,
+                "outer_status": "completed"
+              }
+            ]
+          },
+          "components/role-lifecycle.md": {
+            "sha256": "ae0fc9a30668666d22cb9b0ab03049b98ec095a590f81ecb7b843972073bf95f",
+            "bytes": 1897,
+            "observations": [
+              {
+                "event_index": 31,
+                "item_id": "item_15",
+                "command_sha256": "06095ef2bcd70d460ae0a3de1d7d237a9fd22990a0def0f8730259f92d4bf914",
+                "output_sha256": "77a5212d2ebc9f10754673d9ae347d39f438e65e7a44b8c74b6af506a20fe29f",
+                "outer_exit_code": 0,
+                "outer_status": "completed"
+              }
+            ]
+          },
+          "components/self-improvement.md": {
+            "sha256": "0bf78a0d5f04096c9e0b3603588f8b865aed218ba980f59f4dc11922656d5ac7",
+            "bytes": 3002,
+            "observations": [
+              {
+                "event_index": 30,
+                "item_id": "item_14",
+                "command_sha256": "34e6c0db26965fe65b1ba7dabfc46847429f6d9dc7e7663fb441244b21ee7c8d",
+                "output_sha256": "0b4bd0b7339ef4c713ab8758dafadaba9b848a165ac42d354f98332f25508ee6",
+                "outer_exit_code": 0,
+                "outer_status": "completed"
+              }
+            ]
+          },
+          "core/constitution.md": {
+            "sha256": "6797e597f48135da527f87aff5b0f1b01e2c265ebb5378cb2826d70665a5ed82",
+            "bytes": 2665,
+            "observations": [
+              {
+                "event_index": 12,
+                "item_id": "item_5",
+                "command_sha256": "c5a4568a52a0b8848df9fd5dda3a970abf3981467092407738655372814308eb",
+                "output_sha256": "4d205b6b76bf4dbd9b3b21f72f3721042dc951944e863a48470bc9c03f21af8f",
+                "outer_exit_code": 0,
+                "outer_status": "completed"
+              }
+            ]
+          },
+          "core/graph-routing.md": {
+            "sha256": "e99f69e05d3982ffd72f564bc98f167297cc7b07fad1238cfc121df83af2d1e8",
+            "bytes": 7000,
+            "observations": [
+              {
+                "event_index": 12,
+                "item_id": "item_5",
+                "command_sha256": "c5a4568a52a0b8848df9fd5dda3a970abf3981467092407738655372814308eb",
+                "output_sha256": "4d205b6b76bf4dbd9b3b21f72f3721042dc951944e863a48470bc9c03f21af8f",
+                "outer_exit_code": 0,
+                "outer_status": "completed"
+              }
+            ]
+          },
+          "core/installer-policy.md": {
+            "sha256": "c6e48d24fa13124d2f623e131c96c83b77aa32734b5ae706f2e6912cc82db4aa",
+            "bytes": 2634,
+            "observations": [
+              {
+                "event_index": 12,
+                "item_id": "item_5",
+                "command_sha256": "c5a4568a52a0b8848df9fd5dda3a970abf3981467092407738655372814308eb",
+                "output_sha256": "4d205b6b76bf4dbd9b3b21f72f3721042dc951944e863a48470bc9c03f21af8f",
+                "outer_exit_code": 0,
+                "outer_status": "completed"
+              }
+            ]
+          },
+          "interviews/bootstrap.md": {
+            "sha256": "eb471fc596bf6705c656911716e3022e99d818a905b744b8314acf3b3c988ce4",
+            "bytes": 2279,
+            "observations": [
+              {
+                "event_index": 17,
+                "item_id": "item_8",
+                "command_sha256": "c9156dff33b2d2b711e3a1e2eda23c215da5b83f84e353a19931e091f966ecb5",
+                "output_sha256": "efc49601931031dd2b2095a224248a0888a605ff9e476664618930c284f5215e",
+                "outer_exit_code": 0,
+                "outer_status": "completed"
+              }
+            ]
+          },
+          "phases/design.md": {
+            "sha256": "95681cf0f3fd3d77219bbe14d79ac4be78056a69dbe50e5f04c13fd768396aba",
+            "bytes": 2207,
+            "observations": [
+              {
+                "event_index": 17,
+                "item_id": "item_8",
+                "command_sha256": "c9156dff33b2d2b711e3a1e2eda23c215da5b83f84e353a19931e091f966ecb5",
+                "output_sha256": "efc49601931031dd2b2095a224248a0888a605ff9e476664618930c284f5215e",
+                "outer_exit_code": 0,
+                "outer_status": "completed"
+              }
+            ]
+          },
+          "phases/discover.md": {
+            "sha256": "513fc2cea5ca6a7164e1f37ce764abf1a7a5c3e849d9ff83dd3fd894d4238b9d",
+            "bytes": 1377,
+            "observations": [
+              {
+                "event_index": 17,
+                "item_id": "item_8",
+                "command_sha256": "c9156dff33b2d2b711e3a1e2eda23c215da5b83f84e353a19931e091f966ecb5",
+                "output_sha256": "efc49601931031dd2b2095a224248a0888a605ff9e476664618930c284f5215e",
+                "outer_exit_code": 0,
+                "outer_status": "completed"
+              }
+            ]
+          },
+          "start.md": {
+            "sha256": "ca6f26ceaccb033011eb1bf7ae07ef6dda07da3b584c531a02ec2e1ddd27f258",
+            "bytes": 5357,
+            "observations": [
+              {
+                "event_index": 6,
+                "item_id": "item_2",
+                "command_sha256": "13d434d96ff0ae38dba5975a58e1ae580074b66f8822fd300ee6950abd9b0553",
+                "output_sha256": "ca6f26ceaccb033011eb1bf7ae07ef6dda07da3b584c531a02ec2e1ddd27f258",
+                "outer_exit_code": 0,
+                "outer_status": "completed"
+              }
+            ]
+          }
+        },
+        "old_successful_component_metric": [
+          "components/activation.md",
+          "components/authority.md",
+          "components/capability-routing.md",
+          "components/chief-of-staff.md",
+          "components/context-core.md",
+          "components/delegation.md",
+          "components/delivery-acceptance.md",
+          "components/director.md",
+          "components/resource-budgets.md",
+          "components/role-lifecycle.md",
+          "components/self-improvement.md"
+        ],
+        "selected_components": [
+          "components/activation.md",
+          "components/authority.md",
+          "components/capability-routing.md",
+          "components/chief-of-staff.md",
+          "components/context-core.md",
+          "components/delegation.md",
+          "components/delivery-acceptance.md",
+          "components/director.md",
+          "components/resource-budgets.md",
+          "components/role-lifecycle.md",
+          "components/self-improvement.md"
+        ],
+        "source_target_git_preserved": true,
+        "handoff_sha256": "9b141ec92cd27889fa40b8657690889bb1771ffe97c06bb9266b8f37fd8aa662"
+      }
+    },
+    "full-luna-I": {
+      "thread": "01a16d7c-a455-7e71-9373-ddcdeeed4a3c",
+      "actual_model": "gpt-6-luna",
+      "actual_reasoning_effort": "high",
+      "elapsed_seconds": 136.1393439769745,
+      "status": "returned",
+      "delta": {
+        "added": [
+          ".agentos",
+          ".agentos/README.md",
+          ".agentos/capabilities.md",
+          ".agentos/improvement.md",
+          ".agentos/installation.json",
+          ".agentos/policies",
+          ".agentos/policies/authority.md",
+          ".agentos/qualification-example.json",
+          ".agentos/qualification.md",
+          ".agentos/roles",
+          ".agentos/roles/chief-of-staff.md",
+          ".agentos/roles/director.md",
+          "AGENTS.md"
+        ],
+        "removed": [],
+        "changed": []
+      },
+      "raw_sha256": "f03ec33c492e349c05e753a7f6f1ad97cbbdac6fb5bde12bc7e85a1174d9356f",
+      "nonzero_commands": [
+        {
+          "command": "/bin/bash -lc \"python3 -c 'import json,sys; p=\\\"/private/tmp/agentos-manifest-20261024/controls/full-luna-approved-handoff.json\\\"; print(json.dumps(json.load(open(p))[\\\"source_identity_observations_verbatim\\\"][0][\\\"aggregated_output\\\"]))' | python3 tools/qualification.py identity bundle --verify -\"",
+          "exit_code": 2,
+          "aggregated_output": "usage: qualification.py [-h] {graph,select,identity,snapshot,inspect,run} ...\nqualification.py: error: unsupported or incomplete source identity manifest\n"
+        },
+        {
+          "command": "/bin/bash -lc \"PYTHONDONTWRITEBYTECODE=1 python3 -B - <<'PY'\nfrom pathlib import Path\nimport json, re\nroot=Path.cwd()\nfiles=[root/'AGENTS.md']+sorted((root/'.agentos').rglob('*'))\nassert all(p.is_file() and not p.is_symlink() for p in files)\nfor p in [root/'.agentos/installation.json', root/'.agentos/qualification-example.json']:\n    json.loads(p.read_text())\nfor p in [root/'AGENTS.md'] + list((root/'.agentos').rglob('*.md')):\n    body=p.read_text()\n    for target in re.findall(r'\\\\]\\\\(([\"'^)#]+)(?:#[''^)]*)?'\"\\\\)', body):\n        q=(p.parent/target).resolve()\n        assert q.is_file(), (p, target)\nprotected=['formatter.py','test_formatter.py','README.md','request.json']\nassert all((root/name).is_file() for name in protected)\nfixture=json.loads((root/'.agentos/qualification-example.json').read_text())\nassert fixture['current']=={'route':'Director','unrelated':'keep','later_note':'preserve this later work'}\nassert [e.get('disposition') for e in fixture['events'][1:]]==['accepted; retain','rejected; restore accepted state','inconclusive: no performance evidence; restore accepted state']\nprint('Installed files:', len(files))\nprint('Markdown links: resolved')\nprint('Installation and fixture JSON: valid')\nprint('Fixture current state and dispositions: match')\nPY\"",
+          "exit_code": 1,
+          "aggregated_output": "Traceback (most recent call last):\n  File \"<stdin>\", line 5, in <module>\nAssertionError\n"
+        }
+      ],
+      "non_json_router_lines": [
+        {
+          "line": 1,
+          "text": "  \u2713 sandbox agentos-manifest-20261024 \u2014 started"
+        }
+      ],
+      "original_project_and_git_unchanged": true,
+      "decision": {
+        "accepted_for_fresh_use": true,
+        "raw_sha256": "f03ec33c492e349c05e753a7f6f1ad97cbbdac6fb5bde12bc7e85a1174d9356f",
+        "source_before_first_write": {
+          "first_write_item": "item_15",
+          "parsed_event_index": 29,
+          "required_sources": [
+            "components/activation.md",
+            "components/authority.md",
+            "components/capability-routing.md",
+            "components/chief-of-staff.md",
+            "components/context-core.md",
+            "components/delegation.md",
+            "components/delivery-acceptance.md",
+            "components/director.md",
+            "components/resource-budgets.md",
+            "components/role-lifecycle.md",
+            "components/self-improvement.md",
+            "core/constitution.md",
+            "core/graph-routing.md",
+            "core/installer-policy.md",
+            "examples/portable-implementation.md",
+            "phases/handoff.md",
+            "phases/implement.md",
+            "phases/qualify.md",
+            "start.md"
+          ],
+          "all_complete_in_successful_commands_before_write": true,
+          "retained_identity_compare_item": "item_9"
+        },
+        "semantic_review": "Read every installed instruction and concrete qualification record. All selected duties present, including Director readiness/progress/accessibility, CoS regression evidence, meaningful full sequential assignment/return, pinned active-role transfer, task-appropriate model/effort and cumulative budgets. Seven scenarios have concrete inputs/decisions/results and honest simulation labels. Actual fixture item17 saves criteria before candidates, retains three dispositions and scoped rollback preserving later_note.",
+        "effects_review": "Reviewed every completed command and file change; only AGENTS.md and .agentos files written. Unprotected stdlib-only Python helpers import no local module; no project code/tests or cleanup ran. All protected files/Git and both sources unchanged; 15 links resolve.",
+        "failures_retained": "item8 double-encoded approved manifest string rejected2; item9 original JSON passed. item20 validator erroneously required directories to be files; item21 handles directories and reports issues=[] preserving link/JSON/fixture checks. Two diagnosed recoveries, no weakened substantive criterion. Non-JSON sandbox-start line retained; parent trace printer initially refused it and was corrected to preserve/display non-JSON lines.",
+        "limitations": "Bounded installation qualification only: seven role scenarios simulated, fixture actual; fresh U and native model/effort observation remain pending. Early first-paragraph one-recovery statement is historical to identity check; final audit explicitly records two total."
+      }
+    },
+    "full-sol-I": {
+      "thread": "01a16d7c-aafa-7b43-b2e9-c3bd123ad2d2",
+      "actual_model": "gpt-6.1-sol",
+      "actual_reasoning_effort": "high",
+      "elapsed_seconds": 600.7261998653412,
+      "status": "returned",
+      "delta": {
+        "added": [
+          ".agentos",
+          ".agentos/core.md",
+          ".agentos/installation.json",
+          ".agentos/operations.md",
+          ".agentos/qualification-example.json",
+          ".agentos/records.md",
+          ".agentos/roles.md",
+          "AGENTS.md"
+        ],
+        "removed": [],
+        "changed": []
+      },
+      "raw_sha256": "ed986795735d1fd3b58b3203a46edabbd198f82c9fa71b67220b0f7bb9601ef2",
+      "nonzero_commands": [],
+      "non_json_router_lines": [
+        {
+          "line": 43,
+          "text": "2026-10-24T10:43:44.784134Z ERROR codex_core::tools::router: error=apply_patch verification failed: invalid patch: multiple operations target /private/tmp/agentos-manifest-20261024/work/full-sol/.agentos/records.md"
+        }
+      ],
+      "original_project_and_git_unchanged": true,
+      "decision": {
+        "accepted_bounded_installation": true,
+        "admit_fresh_use": false,
+        "reason_not_admitted": "Prior full-luna-U failure already stopped all unstarted roots under Plan1.",
+        "raw_sha256": "ed986795735d1fd3b58b3203a46edabbd198f82c9fa71b67220b0f7bb9601ef2",
+        "source_before_first_write": {
+          "first_write_item": "item_16",
+          "parsed_event_index": 32,
+          "required_sources": [
+            "components/activation.md",
+            "components/authority.md",
+            "components/capability-routing.md",
+            "components/chief-of-staff.md",
+            "components/context-core.md",
+            "components/delegation.md",
+            "components/delivery-acceptance.md",
+            "components/director.md",
+            "components/resource-budgets.md",
+            "components/role-lifecycle.md",
+            "components/self-improvement.md",
+            "core/constitution.md",
+            "core/graph-routing.md",
+            "core/installer-policy.md",
+            "examples/portable-implementation.md",
+            "phases/handoff.md",
+            "phases/implement.md",
+            "phases/qualify.md",
+            "start.md"
+          ],
+          "all_complete_in_successful_commands_before_write": true,
+          "retained_identity_compare_item": "item_14"
+        },
+        "semantic_review": "Read all installed instructions and complete scenario records. All selected duties preserved, including Director readiness/progress/accessibility, CoS regression evidence, model/reasoning choice, meaningful complete Q-FIXTURE assignment/return, active pinned-contract transfer, cumulative limits. Seven concrete role scenarios simulated; item20 actual fixture saves fixed criteria/prior state before candidates, retains three dispositions and scoped recovery preserving later_note.",
+        "effects_review": "Reviewed all commands/patches: first write item16 .agentos/installation.json; subsequent changes only seven granted files. Python -B stdlib/helper only; no local project import, external operations, caches or cleanup. All original project/Git and source bytes unchanged.",
+        "failures_retained": "One truncated reference re-read before writes, one apply_patch multiple-operation rejection corrected without prior mutation. Zero nonzero completed shell commands does not mean no failures: raw router patch error and item28 audit false predicate remain. Two diagnosed recoveries. item29 read-only diagnosis shows sole pending substring inside spending; item30 retains raw failed predicate and separately adjudicates original no-stale-status criterion without rerunning audit or changing instructions/fixture/criterion. Parent inspected exact scanner/text/adjudication and accepts that narrow original-criterion interpretation.",
+        "limits": "Bounded installed and simulated-path qualification only; no Sol fresh U, no independent runtime worker, no bundle-only trials, no general benefit."
+      }
+    },
+    "full-luna-U": {
+      "thread": "01a16d7f-648d-7382-b302-29efc5f0b63c",
+      "actual_model": "gpt-6-luna",
+      "actual_reasoning_effort": "high",
+      "elapsed_seconds": 18.741420030593872,
+      "status": "returned",
+      "delta": {
+        "added": [
+          "sample-output.txt"
+        ],
+        "removed": [],
+        "changed": []
+      },
+      "raw_sha256": "5d91f2642ac492466467c4ad0b38b2cd133953e77cf5abfcbbe1559f22da8dcf",
+      "nonzero_commands": [],
+      "non_json_router_lines": [],
+      "original_project_and_git_unchanged": true,
+      "decision": {
+        "observed_at": "2026-10-24T10:41:20.640514+00:00",
+        "accepted": false,
+        "decision": "Do not credit the requested formatter-to-artifact first use; stop all unstarted native D/I/U roots under Plan1. Already-admitted Sol I may finish.",
+        "raw_sha256": "5d91f2642ac492466467c4ad0b38b2cd133953e77cf5abfcbbe1559f22da8dcf",
+        "positive_evidence": [
+          "Exact requested 14 output bytes",
+          "All three original tests passed; test_whitespace invoked formatter on requested input",
+          "Only sample-output.txt added; no changed/removed bytes",
+          "No local import outside guarded unittest; no transient cache/delete commands",
+          "Reads installed startup index, authority and Director instructions"
+        ],
+        "missing_behavior": "Artifact item5 uses printf with the literal expected answer; no command connects formatter.format_text returned output to sample-output.txt. Existing tests exercise the formatter independently but do not produce the requested artifact. Original task specifically asks use the existing formatter to normalize and write the result; exact artifact correctness alone does not establish this requested execution path.",
+        "interpretation_limit": "No claim of wrong output, broken formatter, unauthorized cache, absent source identity or model safety failure. The shortfall is requested method/provenance, subject to fresh independent review under original intent/gates. Do not rewrite raw evidence or waive criterion after result.",
+        "native_model_effort": "pending exact metadata collection",
+        "source_package_disposition": "Reject coherent eight-path candidate for promotion under preregistered all-four-cell gate; installed benefit remains bounded/inconclusive."
+      }
+    }
+  },
+  "not_run": [
+    "bundle-luna-D",
+    "bundle-luna-I",
+    "bundle-luna-U",
+    "bundle-sol-D",
+    "bundle-sol-I",
+    "bundle-sol-U",
+    "full-sol-U"
+  ],
+  "known_raw_native_usage_sums": {
+    "input_tokens": 2202663,
+    "cached_input_tokens": 1978624,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 50501,
+    "reasoning_output_tokens": 12298
+  },
+  "usage_limits": "Known counters from five raw turn.completed rows retained; not full task billing. Parent, local and review usage/cost separate or unknown.",
+  "codex_update": "0.149.1 to 0.164.0 before roots; catalog high support observed",
+  "concurrency_peak": 2,
+  "children": 0,
+  "native_roots_before_review": 5,
+  "native_limit": 14,
+  "source_success_gate": "Prior successful whole-command reads or pinned source-specific success proof; no new-exposure-only approval. All mandatory sources here have successful complete output.",
+  "first_use_limits": "Fresh injected AGENTS provenance observed; installed index/authority/Director read. Correct14bytes and3tests, no unauthorized transient effects, but literal printf creates artifact; test invokes formatter independently. No formatter-result-to-artifact path observed. Not wrong bytes or broken formatter.",
+  "causal_limits": "One combined package, no isolation of which instruction caused a behavior. Bundle-only manifest recipe has local correctness evidence but no native portable-path outcome. No all-path or general model-reliability conclusion.",
+  "setup_and_parent_diagnostics": [
+    "Local apply_patch anchor mismatch refused before freeze; actual label inspected and corrected before any native root.",
+    "Parent live trace printer initially parsed a sandbox-start banner as JSON; corrected read-only printer preserved and displayed non-JSON lines. No trial changed."
+  ],
+  "delivery": "Independent exact-head review, normal protected PR merge and fetched-owning-main verification pending.",
+  "cleanup": "Owned sandbox agentos-manifest-20261024 /304d00bd-3a1b-4fdf-81de-66f8b06516bb and raw root only after both indexed verified archives; preserve63original identities; no global prune."
+}
