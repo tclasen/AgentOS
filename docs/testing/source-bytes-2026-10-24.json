@@ -1,0 +1,394 @@
+{
+  "task": "TASK-000182",
+  "base": "5089b766e048a2b5d76b5abd201fe5ee0745df90",
+  "dispositions": {
+    "candidate1": "reject; incorrect selected-component hash",
+    "candidate2": "reject; emitted digest recipe does not reproduce digest"
+  },
+  "final_source": "unchanged baseline; no operative change proposed",
+  "original_criteria_sha256": "b6ef1d292988561441bce10fdcb90caf408cd73618a3195400cb106416ae5712",
+  "plan2_sha256": "183fd8c34745a5ae4207d5f748aa2c39a17950664b2c6fa47887ab5f7937eb2c",
+  "evaluator_sha256": "2a251dfee953d47b13ce91f30ef102f2948d78414726f32345759ca80f816f68",
+  "verification_sha256": "26fd748db0c58476dc3f802ed62b0aa45346abc069bbe861b50e183df7c12503",
+  "models": [
+    {
+      "run": "baseline-dirty-luna-r1",
+      "requested_model": "gpt-6-luna",
+      "harness_status": "returned",
+      "thread": "01a16c2c-dec5-7f21-843d-6406e38d2ead",
+      "model": "gpt-6-luna",
+      "reasoning": null
+    },
+    {
+      "run": "candidate-dirty-luna-r1",
+      "requested_model": "gpt-6-luna",
+      "harness_status": "returned",
+      "thread": "01a16c2f-842f-7060-b58c-d1b8bc1450d6",
+      "model": "gpt-6-luna",
+      "reasoning": null
+    },
+    {
+      "run": "candidate2-dirty-sol-r1",
+      "requested_model": "gpt-6.1-sol",
+      "harness_status": "failed",
+      "thread": "01a16c31-ed09-77b1-9867-43cd236ade55",
+      "model": "gpt-6.1-sol",
+      "reasoning": null
+    },
+    {
+      "run": "candidate2-dirty-luna-r1",
+      "requested_model": "gpt-6-luna",
+      "harness_status": "returned",
+      "thread": "01a16c31-efd2-7f10-bde9-548eccf2cf9e",
+      "model": "gpt-6-luna",
+      "reasoning": null
+    },
+    {
+      "run": "baseline-archive-luna-r1",
+      "requested_model": "gpt-6-luna",
+      "harness_status": "returned",
+      "thread": "01a16c2d-e356-7a02-88fb-cb065f6adb16",
+      "model": "gpt-6-luna",
+      "reasoning": null
+    },
+    {
+      "run": "candidate2-archive-luna-r1",
+      "requested_model": "gpt-6-luna",
+      "harness_status": "returned",
+      "thread": "01a16c33-9483-7b13-a1b8-dbbdeec21676",
+      "model": "gpt-6-luna",
+      "reasoning": null
+    },
+    {
+      "run": "baseline-archive-sol-r1",
+      "requested_model": "gpt-6.1-sol",
+      "harness_status": "returned",
+      "thread": "01a16c2e-d0bb-7db0-9d7c-5d9d139f698d",
+      "model": "gpt-6.1-sol",
+      "reasoning": null
+    },
+    {
+      "run": "candidate2-archive-sol-r1",
+      "requested_model": "gpt-6.1-sol",
+      "harness_status": "returned",
+      "thread": "01a16c35-0041-7c32-bd65-c6c8fb17d32c",
+      "model": "gpt-6.1-sol",
+      "reasoning": null
+    },
+    {
+      "run": "baseline-dirty-sol-r1",
+      "requested_model": "gpt-6.1-sol",
+      "harness_status": "returned",
+      "thread": "01a16c2c-dadf-7673-b9d2-c0d88f6a15f1",
+      "model": "gpt-6.1-sol",
+      "reasoning": null
+    },
+    {
+      "run": "final-resume-sol-r1",
+      "requested_model": "gpt-6.1-sol",
+      "harness_status": "returned",
+      "thread": "01a16c37-16f5-7f32-9f1a-171b9f5d3bb9",
+      "model": "gpt-6.1-sol",
+      "reasoning": null
+    },
+    {
+      "run": "candidate-archive-luna-r1",
+      "requested_model": "gpt-6-luna",
+      "harness_status": "returned",
+      "thread": "01a16c30-73fc-7d32-a6be-0b2c3f394f00",
+      "model": "gpt-6-luna",
+      "reasoning": null
+    },
+    {
+      "run": "final-resume-luna-r1",
+      "requested_model": "gpt-6-luna",
+      "harness_status": "returned",
+      "thread": "01a16c37-1817-71d2-823d-9e2b714326a5",
+      "model": "gpt-6-luna",
+      "reasoning": null
+    }
+  ],
+  "runs": [
+    {
+      "run": "baseline-archive-luna-r1",
+      "requested_model": "gpt-6-luna",
+      "native_thread": "01a16c2d-e356-7a02-88fb-cb065f6adb16",
+      "harness_status": "returned",
+      "cli_returncode": 0,
+      "completed_turns": 1,
+      "errors": [],
+      "manifest_sha256": "f9bb7d2ecbee0b1fef84475015e87c01de8d7e75ca8493fe24b8ce37530d20fb",
+      "artifact_sha256": "f94d94780a24819f6bc7b34680e4d8382918f6e4577667f67ba382fb0bf34a30",
+      "source_input_git_preserved": true,
+      "nonzero_command_items": 1,
+      "identity_grade": "fail",
+      "finding": "Delegation hash mistyped; design guide omitted from identity and full read",
+      "all_required_full_reads_observed": true
+    },
+    {
+      "run": "baseline-archive-sol-r1",
+      "requested_model": "gpt-6.1-sol",
+      "native_thread": "01a16c2e-d0bb-7db0-9d7c-5d9d139f698d",
+      "harness_status": "returned",
+      "cli_returncode": 0,
+      "completed_turns": 1,
+      "errors": [],
+      "manifest_sha256": "e0b9a056ce2615b93b241c61c11699cf46a953d28520dfd578d6ab54dcbbd1d5",
+      "artifact_sha256": "c40f5acd3747650349f838893a15bea93e947f541022615ccf489caebc2fa192",
+      "source_input_git_preserved": true,
+      "nonzero_command_items": 1,
+      "identity_grade": "pass",
+      "finding": "Exact all50-file relative-path recipe reproduces aggregate",
+      "all_required_full_reads_observed": true
+    },
+    {
+      "run": "baseline-dirty-luna-r1",
+      "requested_model": "gpt-6-luna",
+      "native_thread": "01a16c2c-dec5-7f21-843d-6406e38d2ead",
+      "harness_status": "returned",
+      "cli_returncode": 0,
+      "completed_turns": 1,
+      "errors": [],
+      "manifest_sha256": "368d57ab96c1ec6994117c94bded46387fb373f4025f045c061de15513a29d73",
+      "artifact_sha256": "186435dff83f509b3306d1ee59ac0eacd52a8cfd4219950378625390f5e66752",
+      "source_input_git_preserved": true,
+      "nonzero_command_items": 0,
+      "identity_grade": "fail",
+      "finding": "Acknowledges dirty source but emits no byte identity; no hash command or manifest in session",
+      "all_required_full_reads_observed": true
+    },
+    {
+      "run": "baseline-dirty-sol-r1",
+      "requested_model": "gpt-6.1-sol",
+      "native_thread": "01a16c2c-dadf-7673-b9d2-c0d88f6a15f1",
+      "harness_status": "returned",
+      "cli_returncode": 0,
+      "completed_turns": 1,
+      "errors": [],
+      "manifest_sha256": "43dc3a941f81323f784ca4ac21d5150e67bd336d4a63ff10b9a70d71e23997d9",
+      "artifact_sha256": "1c2453d37690f888e23d000ee9b6248464e7ed7abdcc116f455b52fe318e7e8e",
+      "source_input_git_preserved": true,
+      "nonzero_command_items": 0,
+      "identity_grade": "pass",
+      "finding": "20-path manifest and whole-source aggregate independently match",
+      "all_required_full_reads_observed": true
+    },
+    {
+      "run": "candidate-archive-luna-r1",
+      "requested_model": "gpt-6-luna",
+      "native_thread": "01a16c30-73fc-7d32-a6be-0b2c3f394f00",
+      "harness_status": "returned",
+      "cli_returncode": 0,
+      "completed_turns": 1,
+      "errors": [],
+      "manifest_sha256": "2eccb351b115f9e4481829807f7f82f87ee14706454d2d869088d779dfafb61d",
+      "artifact_sha256": "d71191b23e2f6b966f65c3cbfc2c53ce4fc6819860212e90e2dde42942a919cf",
+      "source_input_git_preserved": true,
+      "nonzero_command_items": 0,
+      "identity_grade": "pass_with_limit",
+      "finding": "Proposal references accurate18-path conversation manifest; original rule allows conversation, but proposal not self-contained",
+      "all_required_full_reads_observed": true
+    },
+    {
+      "run": "candidate-dirty-luna-r1",
+      "requested_model": "gpt-6-luna",
+      "native_thread": "01a16c2f-842f-7060-b58c-d1b8bc1450d6",
+      "harness_status": "returned",
+      "cli_returncode": 0,
+      "completed_turns": 1,
+      "errors": [],
+      "manifest_sha256": "9f53d1ba48ca6781134cae1d727c27ab5a243dcf327756d9f832342a23664e8c",
+      "artifact_sha256": "77151424487f92f6e7dd8c19f132630c85aecccf9586e08b55b6d26274a78848",
+      "source_input_git_preserved": true,
+      "nonzero_command_items": 0,
+      "identity_grade": "fail",
+      "finding": "Capability-routing digest transposed in proposal",
+      "all_required_full_reads_observed": true
+    },
+    {
+      "run": "candidate2-archive-luna-r1",
+      "requested_model": "gpt-6-luna",
+      "native_thread": "01a16c33-9483-7b13-a1b8-dbbdeec21676",
+      "harness_status": "returned",
+      "cli_returncode": 0,
+      "completed_turns": 1,
+      "errors": [],
+      "manifest_sha256": "8abd16b5473511db9bd5ffdf2145612efdc4443b6ba2957298ff82a7c40df9bd",
+      "artifact_sha256": "0d6c2dfec918b3d3afd72ef1b9cdd486e8778c4933d53c70eb92723e15191eb6",
+      "source_input_git_preserved": true,
+      "nonzero_command_items": 6,
+      "identity_grade": "fail",
+      "finding": "Declared absolute-path order computes be282321b4ebe521a04f9da32746ab853ef3b98fbdca90b93b8b14b3d0f99a87, not reported ffb1bd45222f4c10f57a067be9ccc43c5b470d8aa50bd39160d20ba14cf9b69c",
+      "all_required_full_reads_observed": true,
+      "additional_observation": "Also proposes an optional formatter-specialist file; this role was not independently qualified or adopted."
+    },
+    {
+      "run": "candidate2-archive-sol-r1",
+      "requested_model": "gpt-6.1-sol",
+      "native_thread": "01a16c35-0041-7c32-bd65-c6c8fb17d32c",
+      "harness_status": "returned",
+      "cli_returncode": 0,
+      "completed_turns": 1,
+      "errors": [],
+      "manifest_sha256": "cf74923ecc60a3256d2c44d6f4a267ea01427f3cdcc59f7947850ef5153a103b",
+      "artifact_sha256": "fa3689f43b4e5f6c820671eede1199597daf7f1a1030874911b2d64f39e67108",
+      "source_input_git_preserved": true,
+      "nonzero_command_items": 0,
+      "identity_grade": "pass",
+      "finding": "20-path manifest matches",
+      "all_required_full_reads_observed": true
+    },
+    {
+      "run": "candidate2-dirty-luna-r1",
+      "requested_model": "gpt-6-luna",
+      "native_thread": "01a16c31-efd2-7f10-bde9-548eccf2cf9e",
+      "harness_status": "returned",
+      "cli_returncode": 0,
+      "completed_turns": 1,
+      "errors": [],
+      "manifest_sha256": "bcc6ff86038c94c51eb728b6c36168c3ce9b560009f865912d45e4ee81133da3",
+      "artifact_sha256": "6cf22464d58e878cc71ea3827dd67066fd3b3d86fadf0511b0265293cbb1f011",
+      "source_input_git_preserved": true,
+      "nonzero_command_items": 0,
+      "identity_grade": "pass_identity_with_diagnostic",
+      "finding": "Exact20-path relative-name recipe reproduces digest; failed read-only source write attempt retained",
+      "all_required_full_reads_observed": true
+    },
+    {
+      "run": "candidate2-dirty-sol-r1",
+      "requested_model": "gpt-6.1-sol",
+      "native_thread": "01a16c31-ed09-77b1-9867-43cd236ade55",
+      "harness_status": "failed",
+      "cli_returncode": 0,
+      "completed_turns": 1,
+      "errors": [
+        {
+          "type": "error",
+          "message": "Reconnecting... 1/5 (stream disconnected before completion: Transport error: network error: error decoding response body)"
+        }
+      ],
+      "manifest_sha256": "472a3eb249e3dab93c03197eb07511feac9decd3a4575df89890bd4b71d51bb8",
+      "artifact_sha256": "5a0fe69337a0fcd2cc4838382d361451420af577b4d7301185ca096b8f161a70",
+      "source_input_git_preserved": true,
+      "nonzero_command_items": 1,
+      "identity_grade": "pass_artifact_only",
+      "finding": "20-path manifest matches; native transport reconnect recovered, strict harness status remains failed",
+      "all_required_full_reads_observed": true
+    },
+    {
+      "run": "final-resume-luna-r1",
+      "requested_model": "gpt-6-luna",
+      "native_thread": "01a16c37-1817-71d2-823d-9e2b714326a5",
+      "harness_status": "returned",
+      "cli_returncode": 0,
+      "completed_turns": 1,
+      "errors": [],
+      "manifest_sha256": "07f7abfd039d5b0947e108d1db500aab84c313c48cca5d7ffb077ce1b914e0e3",
+      "artifact_sha256": "eb487bb5a27a65604a382a01d336b674109d06c88009c520a23f82a3a51d5213",
+      "source_input_git_preserved": true,
+      "nonzero_command_items": 1,
+      "cases": [
+        {
+          "id": "a",
+          "expected_decision": "continue",
+          "actual_decision": "continue",
+          "actual_authority_sha256": "fbc6b99852540f20a25dfd224d0d0f07399a9021e8cb1fc1d87f53c5156fb8a9",
+          "changed_paths": [],
+          "literal_matches": true,
+          "recovery_observation": "Actual source differences and returned evidence inspected; no implementation occurred."
+        },
+        {
+          "id": "b",
+          "expected_decision": "reconcile",
+          "actual_decision": "reconcile",
+          "actual_authority_sha256": "797444a676888f15ccccd78954ae8969203859de0217dd7f4322eb9eb2ce0486",
+          "changed_paths": [
+            "bundle/components/authority.md"
+          ],
+          "literal_matches": true,
+          "recovery_observation": "Actual source differences and returned evidence inspected; no implementation occurred."
+        },
+        {
+          "id": "c",
+          "expected_decision": "reconcile",
+          "actual_decision": "reconcile",
+          "actual_authority_sha256": "797444a676888f15ccccd78954ae8969203859de0217dd7f4322eb9eb2ce0486",
+          "changed_paths": [
+            "bundle/components/authority.md"
+          ],
+          "literal_matches": true,
+          "recovery_observation": "Actual source differences and returned evidence inspected; no implementation occurred."
+        }
+      ]
+    },
+    {
+      "run": "final-resume-sol-r1",
+      "requested_model": "gpt-6.1-sol",
+      "native_thread": "01a16c37-16f5-7f32-9f1a-171b9f5d3bb9",
+      "harness_status": "returned",
+      "cli_returncode": 0,
+      "completed_turns": 1,
+      "errors": [],
+      "manifest_sha256": "bc28ee64fd71d95a67947a15e817f3996168c542a155aef18fb484eb41271b96",
+      "artifact_sha256": "3498ef177901737a5f670888b1a0c302ddd45a12e22ca21d72558ab423c8415d",
+      "source_input_git_preserved": true,
+      "nonzero_command_items": 1,
+      "cases": [
+        {
+          "id": "a",
+          "expected_decision": "continue",
+          "actual_decision": "continue",
+          "actual_authority_sha256": "fbc6b99852540f20a25dfd224d0d0f07399a9021e8cb1fc1d87f53c5156fb8a9",
+          "changed_paths": [],
+          "literal_matches": true,
+          "recovery_observation": "Actual source differences and returned evidence inspected; no implementation occurred."
+        },
+        {
+          "id": "b",
+          "expected_decision": "reconcile",
+          "actual_decision": "reconcile",
+          "actual_authority_sha256": "797444a676888f15ccccd78954ae8969203859de0217dd7f4322eb9eb2ce0486",
+          "changed_paths": [
+            "bundle/components/authority.md"
+          ],
+          "literal_matches": true,
+          "recovery_observation": "Actual source differences and returned evidence inspected; no implementation occurred."
+        },
+        {
+          "id": "c",
+          "expected_decision": "reconcile",
+          "actual_decision": "continue",
+          "actual_authority_sha256": "797444a676888f15ccccd78954ae8969203859de0217dd7f4322eb9eb2ce0486",
+          "changed_paths": [
+            "bundle/components/authority.md"
+          ],
+          "literal_matches": false,
+          "recovery_observation": "Sol verifies all46 approved Git blobs and continues from immutable approved objects, preserving dirty worktree; retain literal expected-label mismatch."
+        }
+      ]
+    }
+  ],
+  "counts": {
+    "trial_roots": 12,
+    "completed_cli_turns": 12,
+    "harness_returned": 11,
+    "harness_failed_retained": 1,
+    "planning_roots": 10,
+    "required_component_full_reads": 100,
+    "resume_literal_matches": 5,
+    "resume_cases": 6,
+    "regression_tests_unchanged_source": 32,
+    "nonzero_command_items": 11,
+    "additional_failed_write_with_zero_command_exit": 1,
+    "transport_reconnection_error_events": 1
+  },
+  "limits": [
+    "source identity grades are not whole-installation or model-quality grades",
+    "one sample per tested condition; candidate1 Sol not run after material failure",
+    "no native retries; candidate revisions retain original criteria and prior failures",
+    "conversation manifest credited under original allowance, not retrospective standalone-output requirement",
+    "Sol resumeC literal mismatch preserved; verified approved-snapshot recovery assessed separately",
+    "dirty/non-Git planning identity remains unreliable in Luna samples; no full path qualification or global exhaustion claim",
+    "effort/cost unknown; agents0; source and target actual bytes preserved despite retained blocked write attempt"
+  ]
+}
