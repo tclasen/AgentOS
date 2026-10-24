@@ -1,0 +1,273 @@
+{
+  "decision": "reject whole twelve-path operative package; findings only",
+  "observed_at": "2026-10-24T18:27:44.099624+00:00",
+  "luna": {
+    "status": "failed",
+    "returncode": 1,
+    "seconds": 699.0223872661591,
+    "limit_seconds": 600,
+    "terminal": [
+      {
+        "type": "error",
+        "message": "Incomplete response returned, reason: max_output_tokens"
+      },
+      {
+        "type": "turn.failed",
+        "error": {
+          "message": "Incomplete response returned, reason: max_output_tokens"
+        }
+      }
+    ],
+    "failed_cli_commands": [
+      {
+        "event": 25,
+        "item": "item_12",
+        "exit_code": 2,
+        "command": "/bin/bash -lc 'rg --files --hidden /private/tmp/agentos-boundedbatch-20261024/controls/source-bundle/bundle /private/tmp/agentos-boundedbatch-20261024/controls/source-bundle/tools'"
+      },
+      {
+        "event": 37,
+        "item": "item_18",
+        "exit_code": 128,
+        "command": "/bin/bash -lc 'git -C /private/tmp/agentos-boundedbatch-20261024/controls/source-bundle rev-parse --show-toplevel && git -C /private/tmp/agentos-boundedbatch-20261024/controls/source-bundle rev-parse HEAD && git -C /private/tmp/agentos-boundedbatch-20261024/controls/source-bundle status --short --branch'"
+      }
+    ],
+    "final_message": {
+      "bytes": 259016,
+      "sha256": "8f5bbcb9ff56c56d3781fdd7ac28ddad84d64db255ab6e4413e6b50df2c49e78",
+      "complete": false,
+      "repetition_location": "phases/handoff.md digest within copied final manifest"
+    },
+    "actual_manifest_generation": {
+      "event": 39,
+      "item": "item_19",
+      "native_call": 61,
+      "native_output": 64,
+      "matches_frozen_files": 48
+    },
+    "actual_selected_components": [
+      "components/director.md",
+      "components/chief-of-staff.md",
+      "components/activation.md",
+      "components/authority.md",
+      "components/capability-routing.md",
+      "components/delegation.md",
+      "components/delivery-acceptance.md",
+      "components/context-core.md",
+      "components/self-improvement.md",
+      "components/role-lifecycle.md",
+      "components/resource-budgets.md"
+    ],
+    "source_locations": {
+      "components/activation.md": [
+        {
+          "native_output_line": 55,
+          "truncated": false,
+          "call_id": "call_34db3e985b1247feb34b9864ea19a2ab"
+        }
+      ],
+      "components/authority.md": [
+        {
+          "native_output_line": 55,
+          "truncated": false,
+          "call_id": "call_34db3e985b1247feb34b9864ea19a2ab"
+        }
+      ],
+      "components/capability-routing.md": [
+        {
+          "native_output_line": 55,
+          "truncated": false,
+          "call_id": "call_34db3e985b1247feb34b9864ea19a2ab"
+        }
+      ],
+      "components/chief-of-staff.md": [
+        {
+          "native_output_line": 55,
+          "truncated": false,
+          "call_id": "call_34db3e985b1247feb34b9864ea19a2ab"
+        }
+      ],
+      "components/context-core.md": [
+        {
+          "native_output_line": 55,
+          "truncated": false,
+          "call_id": "call_34db3e985b1247feb34b9864ea19a2ab"
+        }
+      ],
+      "components/delegation.md": [
+        {
+          "native_output_line": 55,
+          "truncated": false,
+          "call_id": "call_34db3e985b1247feb34b9864ea19a2ab"
+        }
+      ],
+      "components/delivery-acceptance.md": [
+        {
+          "native_output_line": 55,
+          "truncated": false,
+          "call_id": "call_34db3e985b1247feb34b9864ea19a2ab"
+        }
+      ],
+      "components/director.md": [
+        {
+          "native_output_line": 55,
+          "truncated": false,
+          "call_id": "call_34db3e985b1247feb34b9864ea19a2ab"
+        }
+      ],
+      "components/resource-budgets.md": [
+        {
+          "native_output_line": 55,
+          "truncated": false,
+          "call_id": "call_34db3e985b1247feb34b9864ea19a2ab"
+        }
+      ],
+      "components/role-lifecycle.md": [
+        {
+          "native_output_line": 55,
+          "truncated": false,
+          "call_id": "call_34db3e985b1247feb34b9864ea19a2ab"
+        }
+      ],
+      "components/self-improvement.md": [
+        {
+          "native_output_line": 55,
+          "truncated": false,
+          "call_id": "call_34db3e985b1247feb34b9864ea19a2ab"
+        }
+      ],
+      "core/constitution.md": [
+        {
+          "native_output_line": 31,
+          "truncated": false,
+          "call_id": "call_d263e89fc74541c08f9d2ab0d8fa13f5"
+        }
+      ],
+      "core/graph-routing.md": [
+        {
+          "native_output_line": 31,
+          "truncated": false,
+          "call_id": "call_d263e89fc74541c08f9d2ab0d8fa13f5"
+        }
+      ],
+      "core/installer-policy.md": [
+        {
+          "native_output_line": 31,
+          "truncated": false,
+          "call_id": "call_d263e89fc74541c08f9d2ab0d8fa13f5"
+        }
+      ],
+      "examples/source-manifest.md": [
+        {
+          "native_output_line": 55,
+          "truncated": false,
+          "call_id": "call_34db3e985b1247feb34b9864ea19a2ab"
+        }
+      ],
+      "interviews/bootstrap.md": [
+        {
+          "native_output_line": 31,
+          "truncated": false,
+          "call_id": "call_d263e89fc74541c08f9d2ab0d8fa13f5"
+        }
+      ],
+      "phases/design.md": [
+        {
+          "native_output_line": 44,
+          "truncated": false,
+          "call_id": "call_117f1b4bf3aa46a7a67580099bfff57f"
+        }
+      ],
+      "phases/discover.md": [
+        {
+          "native_output_line": 31,
+          "truncated": false,
+          "call_id": "call_d263e89fc74541c08f9d2ab0d8fa13f5"
+        }
+      ],
+      "start.md": [
+        {
+          "native_output_line": 19,
+          "truncated": false,
+          "call_id": "call_0a4cd697ce66427e81bead67e94bdcda"
+        }
+      ]
+    },
+    "source_gate": "19/19 full bodies in untruncated primary outputs before final proposal; manual actual cat provenance reviewed; no proposal/handoff admission",
+    "primary": {
+      "sha256": "b9063ee09c48c4260e2add25af426bb45142759ab7fab9ae6bfac733d40f385e",
+      "bytes": 125602
+    },
+    "cli": {
+      "sha256": "d8c6b8dfef45ad3f6a70da871f012036e37613bc535be63590af14d493181528",
+      "bytes": 357085
+    },
+    "non_json_lines": [
+      {
+        "raw_line": 1,
+        "text": "WARNING: proceeding, even though we could not create PATH aliases: Operation not permitted (os error 1)"
+      }
+    ],
+    "scope": {
+      "original_regulars_unchanged": 33,
+      "new_regulars": 0,
+      "cache_paths": []
+    }
+  },
+  "sol": {
+    "decision": "D admitted only; no I",
+    "parent_review": {
+      "sha256": "82dbf592627d348cd9d89d75a5d3feac7c4f5e3a5fca5ea83ea0a1f03c30ddd2",
+      "bytes": 60344
+    },
+    "handoff": {
+      "sha256": "4f9cf08dcb0fa872652270cd12e77d8a7b408a4274dcc57f367a935399d0fd15",
+      "bytes": 7866
+    },
+    "source_gate": "19/19 full current required bodies before proposal; original48file identity; lossless compact handoff",
+    "seconds": 168.69546222686768
+  },
+  "preservation": {
+    "bundle-luna": {
+      "original_regulars_unchanged": 33,
+      "new_regulars": 0,
+      "cache_paths": []
+    },
+    "bundle-sol": {
+      "original_regulars_unchanged": 33,
+      "new_regulars": 0,
+      "cache_paths": []
+    },
+    "full-luna": {
+      "original_regulars_unchanged": 33,
+      "new_regulars": 0,
+      "cache_paths": []
+    },
+    "full-sol": {
+      "original_regulars_unchanged": 33,
+      "new_regulars": 0,
+      "cache_paths": []
+    }
+  },
+  "source_regulars": {
+    "full": 528,
+    "bundle": 48
+  },
+  "frozen_controls_unchanged": 69,
+  "matrix": {
+    "admitted": 2,
+    "unstarted": 10,
+    "implementation": 0,
+    "first_use": 0,
+    "semantic_reruns": 0
+  },
+  "monitoring_failure": "Luna exceeded600seconds and returned failed after699.022387seconds before parent enforced bound. No signal sent, no timeout success claimed. Parent monitoring failed during context compaction; elapsed time is not authorization. No dependent root admitted. Future hard deadline enforcement is an evidenced harness recommendation, not implemented in this frozen round.",
+  "causality": "max_output_tokens terminal observed; cause of repetitive generation and any relation to three passage change unknown. No graph-navigation failure inferred.",
+  "parent_diagnostics": [
+    "Disposition audit initially resolved control-relative freeze paths from rawroot: FileNotFoundError before mutations; corrected controls prefix.",
+    "Earlier wrong import name for hyphenated helper: ModuleNotFoundError; corrected importlib loading.",
+    "Read-only terminal inspection initially parsed sbx non-JSON router line as JSON: JSONDecodeError; corrected skip with raw retained.",
+    "Read-only diagnostic expected summary.last_message: KeyError; corrected actual CLI event46 access.",
+    "First run summary display and returned host output exceeded display limit; not used as complete source evidence. Full files retained."
+  ]
+}
