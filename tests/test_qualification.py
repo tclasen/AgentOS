@@ -15,6 +15,29 @@ SPEC=importlib.util.spec_from_file_location('qualification',Path(__file__).paren
 q=importlib.util.module_from_spec(SPEC);SPEC.loader.exec_module(q)
 
 class QualificationTests(unittest.TestCase):
+    def test_status_spellings_cannot_bypass_cli_deprecation_check(self):
+        script=Path(__file__).parents[1]/'tools/qualification.py'
+        for scalar in ['deprecated', '"deprecated"', "'deprecated'", 'deprecated # old', '"deprecated" # old', "'deprecated' # old"]:
+            with self.subTest(scalar=scalar), tempfile.TemporaryDirectory() as d:
+                root=Path(d);self.fixture_graph(root);p=root/'components/b.md'
+                p.write_text(p.read_text().replace('---\n','---\nstatus: '+scalar+'\n',1))
+                result=subprocess.run([sys.executable,str(script),'select',str(root)],capture_output=True,text=True)
+                self.assertEqual(result.returncode,2);self.assertEqual(result.stdout,'')
+                self.assertIn('deprecated: components/b.md',result.stderr)
+                p.write_text(p.read_text().replace('deprecated','stable'))
+                result=subprocess.run([sys.executable,str(script),'select',str(root)],capture_output=True,text=True)
+                self.assertEqual(result.returncode,0,result.stderr)
+                self.assertEqual(json.loads(result.stdout)['components']['components/b.md']['status'],'stable')
+
+    def test_invalid_or_duplicate_status_declarations_fail_closed(self):
+        for declaration in ['status: [deprecated]', 'status: |\n  deprecated', 'status:',
+                            'status: "deprecated', 'status: stable\nstatus: deprecated']:
+            with self.subTest(declaration=declaration), tempfile.TemporaryDirectory() as d:
+                root=Path(d);self.fixture_graph(root);p=root/'components/b.md'
+                p.write_text(p.read_text().replace('---\n','---\n'+declaration+'\n',1))
+                with self.assertRaisesRegex(ValueError,'status'):
+                    q.select_components(root,[])
+
     def test_selection_seeds_required_and_closes_requested_dependencies(self):
         root=Path(__file__).parents[1];nodes=q.graph(root/'bundle')
         minimal=q.select_components(root/'bundle',[])

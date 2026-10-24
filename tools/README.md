@@ -23,6 +23,8 @@ The manifest records source hashes, prompts, before and after file hashes/deltas
 
 `qualification-matrix.json` fixes source-derived component criteria for both model names and three installation profiles. It is a coverage plan, not a result. See the qualification reports under `docs/testing/` for observed outcomes and limitations.
 
+Within this small profile, a top-level `status` value may be a plain, single-quoted or double-quoted word, with an optional trailing comment. Duplicate or unsupported declared status syntax is rejected; an absent status remains unspecified. This is a bounded scalar parser, not a general YAML loader.
+
 `local_effect_fixture.py` is a local SQLite test destination. A dropped acknowledgment commits a receipt but returns failure; offline attempts remain unknown. All attempt calls are journaled so a duplicate retry cannot be hidden by an idempotent receipt. It establishes no third-party guarantee. Give its exact disposable directory to the worker because lookups also append their call journal.
 
 ```sh

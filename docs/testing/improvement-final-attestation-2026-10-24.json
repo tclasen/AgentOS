@@ -1,0 +1,66 @@
+{
+  "record_type": "Coordinator machine-observed final acceptance and cleanup attestation",
+  "task": "TASK-000177",
+  "run": "RUN-000172",
+  "plan_revision": 5,
+  "observed_at": "2026-10-24T02:02:26.974476+00:00",
+  "reviewed_candidate": "662a6fd051d4ce41e9a91e52123c424dd89e1dab",
+  "reviewed_tree": "d6955c8be444e2fb698c4db9c2e126bf4e640f38",
+  "approval": "APP-000005",
+  "approval_sha256": "6d88315f846bb83c48fdfefd9a50dfc05f80187e8a7e65df2c74caa8586f25d7",
+  "review_execution": {
+    "run": "status-final-review-r1",
+    "requested_model": "gpt-6.1-sol",
+    "thread": "01a16b9e-9743-72a1-ac5d-a7164707e373",
+    "model": "gpt-6.1-sol",
+    "reasoning": null
+  },
+  "native_roots": {
+    "completed": 17,
+    "requested_actual_model_matches": 17,
+    "children": 0,
+    "effort_and_monetary_cost": "unknown"
+  },
+  "review_validation": {
+    "regression_tests_passed": 20,
+    "additional_real_cli_cases_passed": 61,
+    "full_native_onboarding_rerun_for_parser": false
+  },
+  "archives": [
+    {
+      "file": "agentos-improvements-20261024-graph.tar.gz",
+      "sha256": "3b421e7c4f58090c4726d5ebc3b203f1c5901fbf92a4e0028ab2d19176a0af24",
+      "bytes": 373576
+    },
+    {
+      "file": "agentos-improvements-20261024-decisions.tar.gz",
+      "sha256": "9806bb7c19db930284836fef039610c44cf422543e3cd3d32339d0d81bcc4249",
+      "bytes": 391875
+    },
+    {
+      "file": "agentos-improvements-20261024-status-followup.tar.gz",
+      "sha256": "e495996186836751478ea26850e15de5c723ec9e7baafe8e0b878cb16b395f12",
+      "bytes": 104638
+    },
+    {
+      "file": "agentos-improvements-20261024-final-acceptance.tar.gz",
+      "sha256": "a6dd1df520835b291a2bbfd9d5b612ea120de09c3e25e82ef8018a0307630ce0",
+      "bytes": 84904
+    }
+  ],
+  "archive_total_bytes": 954993,
+  "archive_validation": "All four SHA256 values and every indexed member length/hash verified before cleanup; archives retained outside removed fixture directory. Later delta members supersede earlier copies without erasing history.",
+  "cleanup": {
+    "removed_sandbox": "agentos-improvements-20261024",
+    "removed_sandbox_id": "0cae212e-a98d-4d81-a200-6367212782b3",
+    "sandbox_absent_in_fresh_inventory": true,
+    "baseline_sandboxes_preserved_by_name_and_id": 63,
+    "raw_fixture_directory_removed": true,
+    "raw_files_removed": 1264,
+    "raw_file_bytes_removed": 5277463,
+    "unrelated_sandboxes_removed": 0,
+    "global_prune_performed": false
+  },
+  "delivery": "Pending ordinary protected PR, merge and fetched owning-main verification; this attestation makes no premature main-delivery claim. Final observed closure is recorded separately after delivery.",
+  "content_equivalence": "Post-approval publication adds only the byte-identical receipt and this machine attestation; reviewed source and reports remain unchanged."
+}
