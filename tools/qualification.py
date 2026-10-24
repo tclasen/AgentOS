@@ -152,6 +152,25 @@ def select_components(bundle: Path, requested: list[str]) -> dict:
             'limits': 'Structural selection only. Read full selected sources, reconcile user requirements, '
                       'and obtain applicable authority before installation or effects.'}
 
+def verify_selection(bundle: Path, declared: list[str]) -> dict:
+    """Check a proposed set as supplied; never silently complete or replace it."""
+    if not isinstance(declared, list) or any(not isinstance(p, str) for p in declared):
+        raise ValueError('selection must be a JSON list of component paths')
+    if len(declared) != len(set(declared)):
+        raise ValueError('selection contains duplicate component paths')
+    nodes = graph(bundle, validate_dependencies=False)
+    required = sorted(k for k, v in nodes.items() if v['selection'] == 'required')
+    declared = sorted(declared)
+    needed = closure(nodes, required + declared)
+    missing = set(needed) - set(declared)
+    return {'complete': not missing, 'declared': declared, 'required': required,
+            'closure': needed, 'missing_required': sorted(missing & set(required)),
+            'missing_dependencies': sorted(missing - set(required)),
+            'components': {k: nodes[k] for k in needed},
+            'limits': 'Structural completeness only. Independently bind this exact list to the actual '
+                      'proposal, resolve contradictory deferrals, and assess every selected duty. '
+                      'No source-read, implementation, independence or authority credit.'}
+
 def snapshot(root: Path) -> dict:
     """Record files, subdirectories and links; never follow links outside the fixture."""
     root = root.resolve()
@@ -355,6 +374,9 @@ def main():
     p = sub.add_parser('select', help='Read-only required and requested dependency closure')
     p.add_argument('bundle')
     p.add_argument('--component', action='append', default=[], help='Requested bundle-relative component path; repeatable')
+    p = sub.add_parser('verify-selection', help='Check an actual proposed set without filling omissions')
+    p.add_argument('bundle')
+    p.add_argument('--selection', required=True, metavar='JSON', help='JSON list of proposed paths; use - for stdin')
     p = sub.add_parser('identity', help='Read-only whole-bundle byte manifest or comparison')
     p.add_argument('bundle')
     p.add_argument('--verify', metavar='MANIFEST', help='Compare saved JSON; use - to read stdin')
@@ -375,12 +397,17 @@ def main():
     args = parser.parse_args()
     if args.command == 'graph':
         print(json.dumps(graph(Path(args.bundle)), indent=2)); return 0
-    if args.command == 'select':
+    if args.command in ('select', 'verify-selection'):
         try:
-            result = select_components(Path(args.bundle), args.component)
-        except ValueError as error:
+            if args.command == 'select':
+                result = select_components(Path(args.bundle), args.component)
+            else:
+                data = sys.stdin.read() if args.selection == '-' else Path(args.selection).read_text()
+                result = verify_selection(Path(args.bundle), json.loads(data, object_pairs_hook=unique_json_keys))
+        except (ValueError, OSError) as error:
             parser.error(str(error))
-        print(json.dumps(result, indent=2)); return 0
+        print(json.dumps(result, indent=2))
+        return 1 if result.get('complete') is False else 0
     if args.command == 'identity':
         try:
             result = source_identity(Path(args.bundle))
