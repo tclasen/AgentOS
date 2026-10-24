@@ -1,0 +1,43 @@
+{
+  "observed_at": "2026-10-24T13:22:48.133717+00:00",
+  "task": "TASK-000197",
+  "run": "RUN-000192",
+  "reviewed_head": "b6d70f490bbde9e28a9b1592c1b606f73c998798",
+  "reviewed_tree": "07361701f507c05275d4c4c1dd3409666417db2b",
+  "reviewed_hashes_unchanged": {
+    "docs/agent-records/runs/RUN-000192.md": "42cce1899a70657a8389922d446fbabdf411f3f47312b64fd3b462a2a3864e62",
+    "docs/agent-records/tasks/project/TASK-000197.md": "cb3750ab8f68904c6728eda5e1e2611ad1025bc0f5494ddf8aa05da675a7002d",
+    "docs/testing/onboarding-primary-evidence-2026-10-24.json": "6550d476e06a07131c8ab61bcc11aed07299bcde1546ce267f90f87c51724463",
+    "docs/testing/onboarding-primary-evidence-2026-10-24.md": "9f0be03d3ddb9b0ee0c24e67840b1b34e5e3153579f554e7bc3564d817e22069"
+  },
+  "approval": "APP-000025",
+  "receipt_sha256": "5104e3160ef0d3093be2ae88ea6ae9ef7e62a4fe9eaac3e70cfc08a2e9e0e636",
+  "receipt_byte_identical": true,
+  "reviewer_native_metadata": {
+    "name": "review-final",
+    "thread": "01a16e00-681d-7103-98ab-105b9854affc",
+    "model": "gpt-6.1-sol",
+    "effort": "high",
+    "native_session": "/home/agent/.codex/sessions/2026/10/24/rollout-2026-10-24T13-01-22-01a16e00-681d-7103-98ab-105b9854affc.jsonl"
+  },
+  "reviewer_elapsed_seconds": 1207.0574879646301,
+  "reviewer_raw_usage": {
+    "input_tokens": 7107335,
+    "cached_input_tokens": 6875264,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 34447,
+    "reasoning_output_tokens": 10512
+  },
+  "billing": "unknown; separate from participant counters",
+  "reviewer_evidence_index_sha256": "f4d46013a1af51d7e07f23a5d0244ea3a2c9d4ab706d673c93f76d4f3eb818f6",
+  "reviewer_regular_files_verified": 1047,
+  "reviewer_symlink_identities_verified": 2,
+  "reviewer_regular_bytes": 10489351,
+  "reviewer_failure_record": "scratch/reviewer-failures.json; original diagnostics and one recovery per failing operation retained",
+  "reviewer_outer_nonzero_commands": 3,
+  "bundle_tools_tests_equal_base": true,
+  "disposition": "findings-only approval; no operative package promotion or first-use acceptance",
+  "delivery": "Pending normal protected PR/merge and fetched owning-main verification; separate observed delivery receipt retained in final archive",
+  "cleanup": "Pending two verified indexed exports and exact sandbox/raw-root removal; preserve63originalidentities",
+  "broader_goal": "active; current task does not establish all-designed-path success"
+}
