@@ -27,7 +27,7 @@ These are **required operating responsibilities**, not necessarily ten installed
 - [Independent evaluation](independent-evaluation.md) — `high_assurance`, `repeatable_improvement`, `strict_review`.
 - [Learning queue](learning-queue.md) — `repeatable_improvement`, `recurring_failures`, `high_assurance`.
 - [Telemetry](telemetry.md) — `rich_telemetry`, `optimization_metrics`.
-- [Resource budgets](resource-budgets.md) — `time_limits`, `retry_limits`, `agent_slot_limits`, `cost_constraints`, `parallel_workers`, `expensive_tools`; explicit time, retry or agent-slot limits apply to sequential work too. Investigate this contract before deferring budgeting merely because no parallel workers or dollar cap were requested.
+- [Resource budgets](resource-budgets.md) — `cost_constraints`, `parallel_workers`, `expensive_tools`.
 - [Git delivery](git-delivery.md) — `remote_git_delivery`.
 - [Information boundaries](information-boundaries.md) — `sensitive_data`, `multiple_repositories`, `public_repository`.
 - [Multi-repository operation](multi-repo.md) — `multiple_repositories`, `portfolio_management`.
