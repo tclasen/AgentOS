@@ -1,0 +1,300 @@
+{
+  "task": "TASK-000199",
+  "run": "RUN-000194",
+  "base": "3763b16578251d145aaee18e5c41219b8db1619a",
+  "operative_candidate": "a47073e59f5de502ad74dfed5ac4458d67b22568",
+  "source_fixture_git_head": "2ab8e80843e037da282f1bb34f1603e3cbe9b458",
+  "protocol_sha256": "6745d9bc17269074a06dfa36c56139fb73a639c50736dd1edfd7aac4b3b9201c",
+  "disposition": "reject package promotion; withdraw all eleven operative paths",
+  "local_checks": {
+    "regressions": 49,
+    "manifest_cases": 31,
+    "embedded_examples": 4,
+    "cache_probes": 4,
+    "graph_nodes": 25,
+    "profile_closures": [
+      10,
+      22,
+      18
+    ],
+    "unchanged_other_component_bodies": 22,
+    "touched_links": 58
+  },
+  "runs": {
+    "bundle-luna-D": {
+      "elapsed_seconds": 99.06093716621399,
+      "status": "returned",
+      "thread": "01a16e3d-08f8-7541-9e78-a14e0a36af0c",
+      "commands": 25,
+      "nonzero": [],
+      "all_started_commands_completed": true,
+      "usage": {
+        "input_tokens": 471693,
+        "cached_input_tokens": 427904,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 6896,
+        "reasoning_output_tokens": 3759
+      }
+    },
+    "bundle-luna-I": {
+      "elapsed_seconds": 289.9567129611969,
+      "status": "returned",
+      "thread": "01a16e4a-8f0a-7413-9ec6-86fa6d36cf48",
+      "commands": 39,
+      "nonzero": [
+        {
+          "item": "item_34",
+          "exit_code": 1,
+          "output": "fixture output path mismatch\n"
+        }
+      ],
+      "all_started_commands_completed": true,
+      "usage": {
+        "input_tokens": 2084123,
+        "cached_input_tokens": 2011136,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 28211,
+        "reasoning_output_tokens": 12452
+      }
+    },
+    "bundle-sol-D": {
+      "elapsed_seconds": 336.00991797447205,
+      "status": "returned",
+      "thread": "01a16e3c-f990-77d3-bfd4-f23fa9d7f3d8",
+      "commands": 33,
+      "nonzero": [],
+      "all_started_commands_completed": true,
+      "usage": {
+        "input_tokens": 662671,
+        "cached_input_tokens": 621440,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 6899,
+        "reasoning_output_tokens": 2429
+      }
+    },
+    "bundle-sol-I": {
+      "elapsed_seconds": 670.5273017883301,
+      "status": "returned",
+      "thread": "01a16e4a-8f08-7ce1-a616-38284778bfac",
+      "commands": 36,
+      "nonzero": [],
+      "all_started_commands_completed": true,
+      "usage": {
+        "input_tokens": 2639009,
+        "cached_input_tokens": 2547456,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 21502,
+        "reasoning_output_tokens": 4143
+      }
+    },
+    "full-luna-D": {
+      "elapsed_seconds": 90.73944687843323,
+      "status": "returned",
+      "thread": "01a16e43-6252-7470-979a-af06abf5b059",
+      "commands": 27,
+      "nonzero": [],
+      "all_started_commands_completed": true,
+      "usage": {
+        "input_tokens": 514851,
+        "cached_input_tokens": 485376,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 5606,
+        "reasoning_output_tokens": 1949
+      }
+    },
+    "full-sol-D": {
+      "elapsed_seconds": 294.34096598625183,
+      "status": "returned",
+      "thread": "01a16e43-62e4-7783-ae1a-1f66a1ecc381",
+      "commands": 36,
+      "nonzero": [
+        {
+          "item": "item_37",
+          "exit_code": 2,
+          "output": "ls: cannot access 'AGENTS.md': No such file or directory\nls: cannot access '.agentos': No such file or directory\n"
+        }
+      ],
+      "all_started_commands_completed": true,
+      "usage": {
+        "input_tokens": 854622,
+        "cached_input_tokens": 753920,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 5631,
+        "reasoning_output_tokens": 2269
+      }
+    }
+  },
+  "parent_review": {
+    "decision": "reject package promotion; withdraw all eleven operative paths",
+    "basis": "bundle-luna-I start.md source gate unestablished before first mutation under the frozen protocol",
+    "source_audit": "evidence/I-source-review.json",
+    "source_failure_detail": {
+      "complete_body_present": true,
+      "primary_output_line": 19,
+      "explicit_transport_flags": true,
+      "reread_before_write": false,
+      "first_patch_item": "item_32",
+      "first_patch_native_call": 204,
+      "late_handoff_read_item": "item_45",
+      "no_claim_of_missing_body_or_comprehension": true
+    },
+    "sol_handoff": {
+      "characters": 71443,
+      "exact_slices_delivered": [
+        [
+          0,
+          25000,
+          25
+        ],
+        [
+          25000,
+          49000,
+          39
+        ],
+        [
+          49000,
+          71443,
+          39
+        ]
+      ],
+      "actual_later_items": [
+        6,
+        7
+      ],
+      "initial_second_batch_output": 31,
+      "initial_second_batch_truncated": true,
+      "display_retries": 2,
+      "source_contract_gate_separate": true
+    },
+    "semantic_review": {
+      "both": "All eleven selected duties have installed pathways; concrete seven operating cases plus actual bounded improvement fixture retained. Same-context simulations are not runtime proof. Both fixtures retain fixed plan, actual prior/candidate writes and evaluations, accepted/rejected/inconclusive dispositions and scoped rollback preserving later_note. Parent made no repairs.",
+      "sol": "Bounded I evidence positive:20/20 required source bodies delivered untruncated before item34/native177; original identity comparison before mutation; seven files; no unexpected command nonzero; two diagnosed display retries; cumulative clock and counters explicit. Fresh U untested.",
+      "luna": "Overall I rejected.19/20 required source gates. qualification.md falsely claims every source read was untruncated. installation.md retry0 row is stale after one diagnosed fixture retry; finalqualification/message retain one fixture retry. Total elapsed unmetered by participant (parent observed289.9567s). The earlier truncated-handoff recovery was not included in its stated one-fixture-retry count. Do not endorse its self-reported completeness."
+    },
+    "effects": "All actual commands inspected: source/target reads, guarded stdlib identity comparisons, authorized AGENTS/.agentos patches, actual approved fixture execution and report persistence; no project imports/tests, caches, children or external operations observed. Full original regular-file/Git/source snapshots unchanged; snapshots supplement actual-command review, not a transient-effect proof alone.",
+    "failures": [
+      "full-sol-D absent AGENTS/.agentos probe item37 exit2; subsequent status/discovery separate item38 succeeds",
+      "bundle-luna-I item34 guard exit1 before writes, corrected guard item36 same fixture/criteria and allowed destination succeeds",
+      "Sol I two truncated display attempts counted as retries; all shell exits0",
+      "parent first native patch locator missed wrapped apply_patch; corrected using call204/output207, initial diagnostic retained; no admission or verdict change",
+      "parent read of assumed task/run paths returned absent; rg located actual project-owned records; no mutation or trial change"
+    ],
+    "unstarted": [
+      "full-luna-I",
+      "full-sol-I",
+      "bundle-luna-U",
+      "bundle-sol-U",
+      "full-luna-U",
+      "full-sol-U"
+    ],
+    "next_hypothesis": "Prospectively test compact approval handoffs retaining original design, exact successful manifest and authority/caveats while keeping bulky parent read proofs separately. This is not yet designed, validated or approved; do not alter this round or source protocol."
+  },
+  "protected_inventory": {
+    "bundle-luna": {
+      "protected_regular_files_unchanged": 33,
+      "added": {
+        ".agentos/README.md": {
+          "sha256": "4c5848754bc20ef4301d0dcd84f5ff5d4208e1fdd57ab4bfec2c0ca5d5878151",
+          "bytes": 1291
+        },
+        ".agentos/authority-and-context.md": {
+          "sha256": "bbffc0908faa6d2a2325a8b4e172c1979b65d1519ee7a0b9c1ca05bf063e996e",
+          "bytes": 3281
+        },
+        ".agentos/capability-registry.md": {
+          "sha256": "26276013e4cd752bc1e251d728b910f26544078f1708a405e5a956fedea9d850",
+          "bytes": 1618
+        },
+        ".agentos/chief-of-staff.md": {
+          "sha256": "30e444add5adf7ffa558cbece7ba29e802deb2a6e77ae203979481ef6fd9d72c",
+          "bytes": 1280
+        },
+        ".agentos/director.md": {
+          "sha256": "79279b689e197cadf5cecea15c9014333b241cfe06b32550f63af2ff036ed8c4",
+          "bytes": 2085
+        },
+        ".agentos/improvement-log.md": {
+          "sha256": "640ddd6ed57ba04aaacb08f06bfc33cfb1a3d36245e3ba43e84cd406018a677c",
+          "bytes": 951
+        },
+        ".agentos/installation.md": {
+          "sha256": "35534deb4fc0914fcec090818638edf6c02741d667a92e285efb74b4925bdaeb",
+          "bytes": 9548
+        },
+        ".agentos/operations.md": {
+          "sha256": "b811f91e217a75f3dee0b4d0c042fc54d9a6ee741226290692b4a26f547b529c",
+          "bytes": 4784
+        },
+        ".agentos/qualification-example.json": {
+          "sha256": "94a2c2ff1c650840d5b000bb7b324e8a4a377338cb1ad6e3b6b431ee4f9bec36",
+          "bytes": 2626
+        },
+        ".agentos/qualification.md": {
+          "sha256": "ceb63157a14a7c1df7ec46e36091ca460d5ccca20b73e22034fce90b24f85b71",
+          "bytes": 15013
+        },
+        "AGENTS.md": {
+          "sha256": "678822e8ff9417c16335a687fb251e26f2765334332f86a0aa152876cf280c2a",
+          "bytes": 664
+        }
+      },
+      "fixture_readback_pass": true
+    },
+    "bundle-sol": {
+      "protected_regular_files_unchanged": 33,
+      "added": {
+        ".agentos/core.md": {
+          "sha256": "3e0bb350e19154badc909d932c11a71689914c29cd4e6f630aff4e2a5ca0bccb",
+          "bytes": 5830
+        },
+        ".agentos/installation.md": {
+          "sha256": "a061a0aa1113466d06bd46d5d22e8923795a8e91c67fe3d57fe1795bf3b49267",
+          "bytes": 44616
+        },
+        ".agentos/operations.md": {
+          "sha256": "5a098d211d68a0dc643552be18cf8f8077ce7c86fdd65f20bd0ac7d868b12264",
+          "bytes": 6689
+        },
+        ".agentos/qualification-example.json": {
+          "sha256": "b614fe216cb2aa63b434ba09e737c9bb72095dfdae26e1468997f3a3f57a8fa2",
+          "bytes": 2625
+        },
+        ".agentos/records.md": {
+          "sha256": "9404c4703baabd915ba53e65eda5821ee49425fb45d7e1b04af4fed3799b3d28",
+          "bytes": 17742
+        },
+        ".agentos/roles.md": {
+          "sha256": "3fa3882a76ab24c6c82edfc4685b9910342058be6d0e630cfcc84a2c9f26a78a",
+          "bytes": 3521
+        },
+        "AGENTS.md": {
+          "sha256": "e8d8e2f6302e5175c19ab3139bcc9c10b2f73bda0b697504eee3ee15c0a92017",
+          "bytes": 1027
+        }
+      },
+      "fixture_readback_pass": true
+    },
+    "full-luna": {
+      "protected_regular_files_unchanged": 33,
+      "added": {}
+    },
+    "full-sol": {
+      "protected_regular_files_unchanged": 33,
+      "added": {}
+    }
+  },
+  "frozen_entries_unchanged": 563,
+  "source_trees_unchanged": true,
+  "actual_models": "All six native session metadata match requested gpt-6.1-sol or gpt-6-luna and high effort; Codex updated0.149.1\u21920.164.0 before roots.",
+  "usage": {
+    "input_tokens": 7226969,
+    "cached_input_tokens": 6847232,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 74745,
+    "reasoning_output_tokens": 27001
+  },
+  "billing": "unknown",
+  "archive_prefix": "/private/tmp/agentos-budgetsignals-20261024",
+  "limitations": "Four D accepted; one bounded I positive; Luna I failed mandatory source gate. Checkout I and all U untested. No current all-path or causal benefit claim. Broader goal remains active.",
+  "delivery": "Pending fresh APP27 review and normal protected PR/fetched-main verification; cleanup follows verified exports."
+}
