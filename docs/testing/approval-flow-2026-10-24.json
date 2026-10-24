@@ -1,0 +1,527 @@
+{
+  "task": "TASK-000185",
+  "run": "RUN-000180",
+  "source_base": "9956f05c3494063fe8eb2a8641c4853ca82540d9",
+  "source_operative_changes": false,
+  "recommendation_disposition": {
+    "additional_approval_checkpoint": "rejected as unsupported for tested explicit verbatim-handoff workflow; no operative candidate diff tested or promoted",
+    "concrete_obligation_and_correction_support": "follow-up candidate needed; not implemented or validated in this round"
+  },
+  "aggregate": {
+    "native_trials": 10,
+    "design_pass": 4,
+    "installation_contract_pass": 2,
+    "installation_contract_fail": 2,
+    "first_use_pass": 2,
+    "first_use_blocked_not_run": 2,
+    "mandatory_component_full_reads_D_I": 80,
+    "selected_component_full_reads_D_I": 88,
+    "nonzero_command_items": 9,
+    "all_trial_models_confirmed": true,
+    "original_project_git_and_sources_preserved": true,
+    "repository_regressions": 39
+  },
+  "codex_update": {
+    "before": "0.149.1",
+    "after": "0.164.0",
+    "before_any_native_root": true
+  },
+  "flows": {
+    "full-sol": {
+      "D": {
+        "design": "accepted for bounded installation; not installation qualification",
+        "full_component_reads": [
+          "components/activation.md",
+          "components/authority.md",
+          "components/capability-routing.md",
+          "components/chief-of-staff.md",
+          "components/context-core.md",
+          "components/delegation.md",
+          "components/delivery-acceptance.md",
+          "components/director.md",
+          "components/resource-budgets.md",
+          "components/role-lifecycle.md",
+          "components/self-improvement.md"
+        ],
+        "source_identity": "exact successful 46-file helper output explicitly referenced by proposal; matched frozen bundle",
+        "source_and_target_git_and_files_preserved": true,
+        "selection": "ten mandatory plus resource-budgets, all full reads observed",
+        "note": "No failed command items."
+      },
+      "I": {
+        "installation": "accepted for bounded fresh first-use test; not overall qualification",
+        "observed_at": "2026-10-24T06:09:46.903742+00:00",
+        "source_continuity": "approved46-file helper manifest compared successfully",
+        "contract_review": "Parent read every generated Markdown artifact against all11 selected original component contracts; complete instructions including Director readiness/responsiveness, role lifecycle/pinnedhistory, model/reasoning choice, every delegation field, scoped grants and full improvement/evaluation/rollback loop. No mandatory static gap identified.",
+        "qualification": "Actual inert pointer fixture initial defect, accepted correction, wrong-role rejection+scopedrollback and insufficient-speed-evidence inconclusive+rollback with precriteria/priorcontent retained. Additional modeled authority, lifecycle, cumulative budgets and activation traces honestly labeled. Native first use/delegated startup and independent review still unverified.",
+        "preservation": "all original target including Git file bytes and source preserved, allowed added paths only",
+        "native_thread": [
+          "01a16c82-cb9d-74b0-9316-464aa58925d6"
+        ]
+      },
+      "U": {
+        "first_use": "pass for this narrow task",
+        "output_hex": "48656c6c6f204167656e744f530a",
+        "exact_expected_bytes": true,
+        "only_sample_output_added": true,
+        "installed_org_preserved": true,
+        "native_root_instructions_provenance": "agents_md, full root body matched",
+        "startup_reads": "observed full core and Director, then operations on task trigger",
+        "observed_behavior": "root Director task path, imported existing formatter, checked exact output and whole target preservation; no installer restart or manual log side effects",
+        "diagnostic": "python alias unavailable exit127; explicit diagnosed retry using python3 succeeded. One retry, not a fresh model run.",
+        "limits": "single local task, no fresh delegated-role/other profile qualification"
+      }
+    },
+    "full-luna": {
+      "D": {
+        "design": "accepted for bounded installation; not installation qualification",
+        "full_component_reads": [
+          "components/activation.md",
+          "components/authority.md",
+          "components/capability-routing.md",
+          "components/chief-of-staff.md",
+          "components/context-core.md",
+          "components/delegation.md",
+          "components/delivery-acceptance.md",
+          "components/director.md",
+          "components/resource-budgets.md",
+          "components/role-lifecycle.md",
+          "components/self-improvement.md"
+        ],
+        "source_identity": "exact successful 46-file helper output explicitly referenced by proposal; matched frozen bundle",
+        "source_and_target_git_and_files_preserved": true,
+        "selection": "ten mandatory plus resource-budgets, all full reads observed",
+        "note": "Luna reference says immediately preceding output although intervening reads occurred; explicit unique successful helper command disambiguates. Two nonzero commands were empty rg queries, not identity failure."
+      },
+      "I": {
+        "installation": "rejected as incomplete; first-use phase blocked",
+        "strengths": [
+          "all11 selected components and start/implement/qualify/handoff bodies exposed in successful outputs",
+          "exact approved46-file helper identity comparison succeeds before writes",
+          "only authorized organization additions; source, original project files and Git bytes preserved",
+          "root role routing and lifecycle/inherited assignment limits explicit"
+        ],
+        "defects": [
+          {
+            "source": "components/director.md Responsibilities",
+            "artifact": ".agentos/roles/director.md; all installed files",
+            "finding": "No operational instruction to track dependencies/establish readiness before dependent work, supervise significant progress, or prioritize continued user accessibility within actual runtime interaction limits. Qualification collapses Director obligations into a broad component row."
+          },
+          {
+            "source": "components/resource-budgets.md Implementation",
+            "artifact": ".agentos/operations.md Resource limits; all installed files",
+            "finding": "Selected component task-appropriate model and reasoning choice obligation absent; counters/unknowns alone are not full coverage."
+          },
+          {
+            "source": "components/self-improvement.md steps2/4/6; phases/qualify.md",
+            "artifact": ".agentos/learning.md ScenarioA; .agentos/qualification.md",
+            "finding": "Claims a prior shorter paragraph and accepted wording correction, but no actual prior artifact text or usable recovery pointer is retained. Raw writes create the final paragraphs directly. Removing both capability-routing paragraphs cannot recover the claimed unspecified baseline. Does not demonstrate the required concrete pre-change/evaluation/recovery cycle; honest simulation label does not supply missing inputs."
+          }
+        ],
+        "reporting": "Final claims installation complete; rejected by parent obligation-level review. Says five organization files but six actual .agentos files. Two diagnostic failures retained: source verify wrong cwd then corrected; scope checker initially treated unchanged files as prohibited writes then corrected. Markdown regex overescaping examined separately.",
+        "observed_at": "2026-10-24T06:07:39.258397+00:00"
+      },
+      "U": {
+        "first_use": "blocked by failed mandatory installation gate; no invocation"
+      }
+    },
+    "bundle-sol": {
+      "D": {
+        "design": "accepted for bounded installation; not installation qualification",
+        "source_identity": "explicitly referenced correct exact 46-file manual manifest; all hashes/lengths/membership checked",
+        "full_component_reads": [
+          "components/activation.md",
+          "components/authority.md",
+          "components/capability-routing.md",
+          "components/chief-of-staff.md",
+          "components/context-core.md",
+          "components/delegation.md",
+          "components/delivery-acceptance.md",
+          "components/director.md",
+          "components/resource-budgets.md",
+          "components/role-lifecycle.md",
+          "components/self-improvement.md"
+        ],
+        "source_and_target_git_and_files_preserved": true,
+        "native_reference_verified": "144998",
+        "note": "Sol says seven paths but lists six; approval covers the actual listed paths within AGENTS.md/.agentos. One missing optional tools probe each; no helper installed. Bundle Luna suppressed unavailable Git probes before successful Python output; this zero-exit command does not establish successful Git identity."
+      },
+      "I": {
+        "installation": "accepted for bounded fresh first-use test; not overall qualification",
+        "observed_at": "2026-10-24T06:12:04.017526+00:00",
+        "source_continuity": "both retained representations identical; exact46-file manual manifest matched and persisted",
+        "contract_review": "Parent read generated core/roles/operations/records and component obligation mapping against all11 source contracts. Complete instructions include dependencies/readiness, responsiveness, model/reasoning choices, role lifecycle/history/transfer, assignment fields, authority and actual improvement loop. No mandatory static gap identified.",
+        "qualification": "Concrete seeded unassigned=Installer fixture within records; precommitted accepted Director, rejected CoS and inconclusive timing claim candidates; actual local evaluations and scoped rollbacks with prior values/results retained. Other scenario traces labeled simulated.",
+        "preservation": "only six enumerated approved files; initial proposal numeric seven count corrected explicitly by installer; existing target/Git and both source distributions unchanged",
+        "native_thread": [
+          "01a16c85-0774-7e41-aaec-e04cc5679011"
+        ],
+        "limits": "fresh root/delegated role behavior and independent review remain unverified at this gate"
+      },
+      "U": {
+        "first_use": "pass for this narrow task",
+        "output_hex": "48656c6c6f204167656e744f530a",
+        "exact_expected_bytes": true,
+        "only_sample_output_added": true,
+        "installed_org_preserved": true,
+        "native_root_instructions_provenance": "agents_md, full root body matched",
+        "startup_reads": "core and exact Director section exposed; relevant operations read. Combined role read command ends with expected absent-output ls exit2, retained as diagnostic.",
+        "observed_behavior": "root Director used existing formatter and exact bytes/preservation assertions; no installer restart/manual log writes",
+        "diagnostics": [
+          "expected absent output ls exit2",
+          "python alias unavailable exit127; diagnosed python3 retry succeeds"
+        ],
+        "limits": "single local task, no fresh delegated-role/other profile qualification"
+      }
+    },
+    "bundle-luna": {
+      "D": {
+        "design": "accepted for bounded installation; not installation qualification",
+        "source_identity": "explicitly referenced correct exact 46-file manual manifest; all hashes/lengths/membership checked",
+        "full_component_reads": [
+          "components/activation.md",
+          "components/authority.md",
+          "components/capability-routing.md",
+          "components/chief-of-staff.md",
+          "components/context-core.md",
+          "components/delegation.md",
+          "components/delivery-acceptance.md",
+          "components/director.md",
+          "components/resource-budgets.md",
+          "components/role-lifecycle.md",
+          "components/self-improvement.md"
+        ],
+        "source_and_target_git_and_files_preserved": true,
+        "native_reference_verified": "unique preceding manifest output",
+        "note": "Sol says seven paths but lists six; approval covers the actual listed paths within AGENTS.md/.agentos. One missing optional tools probe each; no helper installed. Bundle Luna suppressed unavailable Git probes before successful Python output; this zero-exit command does not establish successful Git identity."
+      },
+      "I": {
+        "installation": "rejected as incomplete; first-use phase blocked",
+        "strengths": [
+          "all11 selected components and required phase guides read",
+          "exact retained manual46-file manifest compared before writes",
+          "Director dependency/readiness/progress/user interaction duties present",
+          "scope and original project/Git/source bytes preserved; no failed command items"
+        ],
+        "defects": [
+          {
+            "source": "components/self-improvement.md steps2/4/6; phases/qualify.md",
+            "artifact": ".agentos/README.md Bounded correction qualification; .agentos/improvement-log.md",
+            "finding": "Only traces a hypothetical single-line correction with no actual original/candidate text, evaluated concrete output or recoverable prior value. It says workflow specifies a pointer/comparison but supplies neither. This is how an edit could be checked, not the required bounded correction or concrete evaluated controlled scenario."
+          },
+          {
+            "source": "components/resource-budgets.md Implementation",
+            "artifact": ".agentos/governance.md; all installed files",
+            "finding": "Selected component task-appropriate model/reasoning choice obligation absent."
+          }
+        ],
+        "reporting": "Final claims installation complete; simulated-not-executed limitation is honest but does not excuse incomplete required qualification. First use not run.",
+        "observed_at": "2026-10-24T06:07:39.258962+00:00"
+      },
+      "U": {
+        "first_use": "blocked by failed mandatory installation gate; no invocation"
+      }
+    }
+  },
+  "native_runs": [
+    {
+      "name": "bundle-luna-D",
+      "model": "gpt-6-luna",
+      "thread": "01a16c81-5fea-7eb1-97ca-c763f59265f1",
+      "harness_status": "returned",
+      "duration_seconds": 35.229,
+      "full_selected_component_reads": 11,
+      "nonzero_command_items": 1,
+      "router_diagnostics": [],
+      "delta": {
+        "added": [],
+        "removed": [],
+        "changed": []
+      },
+      "protected_project_and_git_preserved": true
+    },
+    {
+      "name": "bundle-luna-I",
+      "model": "gpt-6-luna",
+      "thread": "01a16c83-a267-7853-918d-0a1316c223c7",
+      "harness_status": "returned",
+      "duration_seconds": 45.969,
+      "full_selected_component_reads": 11,
+      "nonzero_command_items": 0,
+      "router_diagnostics": [],
+      "delta": {
+        "added": [
+          ".agentos",
+          ".agentos/README.md",
+          ".agentos/capabilities.md",
+          ".agentos/chief-of-staff.md",
+          ".agentos/director.md",
+          ".agentos/governance.md",
+          ".agentos/improvement-log.md",
+          "AGENTS.md"
+        ],
+        "removed": [],
+        "changed": []
+      },
+      "protected_project_and_git_preserved": true
+    },
+    {
+      "name": "bundle-sol-D",
+      "model": "gpt-6.1-sol",
+      "thread": "01a16c81-6206-7482-801b-cae19af50607",
+      "harness_status": "returned",
+      "duration_seconds": 67.682,
+      "full_selected_component_reads": 11,
+      "nonzero_command_items": 1,
+      "router_diagnostics": [],
+      "delta": {
+        "added": [],
+        "removed": [],
+        "changed": []
+      },
+      "protected_project_and_git_preserved": true
+    },
+    {
+      "name": "bundle-sol-I",
+      "model": "gpt-6.1-sol",
+      "thread": "01a16c85-0774-7e41-aaec-e04cc5679011",
+      "harness_status": "returned",
+      "duration_seconds": 269.446,
+      "full_selected_component_reads": 11,
+      "nonzero_command_items": 0,
+      "router_diagnostics": [],
+      "delta": {
+        "added": [
+          ".agentos",
+          ".agentos/core.md",
+          ".agentos/installation.md",
+          ".agentos/operations.md",
+          ".agentos/records.md",
+          ".agentos/roles.md",
+          "AGENTS.md"
+        ],
+        "removed": [],
+        "changed": []
+      },
+      "protected_project_and_git_preserved": true
+    },
+    {
+      "name": "bundle-sol-U",
+      "model": "gpt-6.1-sol",
+      "thread": "01a16c89-b9d8-7582-af4a-a529d7cc5d5b",
+      "harness_status": "returned",
+      "duration_seconds": 26.258,
+      "full_selected_component_reads": 0,
+      "nonzero_command_items": 2,
+      "router_diagnostics": [
+        {
+          "line": 1,
+          "text": "  \u2713 sandbox agentos-flow-20261024 \u2014 started"
+        }
+      ],
+      "delta": {
+        "added": [
+          "sample-output.txt"
+        ],
+        "removed": [],
+        "changed": []
+      },
+      "protected_project_and_git_preserved": true
+    },
+    {
+      "name": "full-luna-D",
+      "model": "gpt-6-luna",
+      "thread": "01a16c80-8d4e-7610-9f5d-3272cc8660bf",
+      "harness_status": "returned",
+      "duration_seconds": 28.428,
+      "full_selected_component_reads": 11,
+      "nonzero_command_items": 2,
+      "router_diagnostics": [],
+      "delta": {
+        "added": [],
+        "removed": [],
+        "changed": []
+      },
+      "protected_project_and_git_preserved": true
+    },
+    {
+      "name": "full-luna-I",
+      "model": "gpt-6-luna",
+      "thread": "01a16c82-65bc-72f3-9ad3-afe4fde2edd2",
+      "harness_status": "returned",
+      "duration_seconds": 70.227,
+      "full_selected_component_reads": 11,
+      "nonzero_command_items": 2,
+      "router_diagnostics": [],
+      "delta": {
+        "added": [
+          ".agentos",
+          ".agentos/README.md",
+          ".agentos/learning.md",
+          ".agentos/operations.md",
+          ".agentos/qualification.md",
+          ".agentos/roles",
+          ".agentos/roles/chief-of-staff.md",
+          ".agentos/roles/director.md",
+          "AGENTS.md"
+        ],
+        "removed": [],
+        "changed": []
+      },
+      "protected_project_and_git_preserved": true
+    },
+    {
+      "name": "full-sol-D",
+      "model": "gpt-6.1-sol",
+      "thread": "01a16c80-8bb0-7ca2-8965-da0ff2e8758c",
+      "harness_status": "returned",
+      "duration_seconds": 46.214,
+      "full_selected_component_reads": 11,
+      "nonzero_command_items": 0,
+      "router_diagnostics": [],
+      "delta": {
+        "added": [],
+        "removed": [],
+        "changed": []
+      },
+      "protected_project_and_git_preserved": true
+    },
+    {
+      "name": "full-sol-I",
+      "model": "gpt-6.1-sol",
+      "thread": "01a16c82-cb9d-74b0-9316-464aa58925d6",
+      "harness_status": "returned",
+      "duration_seconds": 287.514,
+      "full_selected_component_reads": 11,
+      "nonzero_command_items": 0,
+      "router_diagnostics": [],
+      "delta": {
+        "added": [
+          ".agentos",
+          ".agentos/core.md",
+          ".agentos/evidence.md",
+          ".agentos/installation.json",
+          ".agentos/operations.md",
+          ".agentos/qualification-fixture.before.json",
+          ".agentos/qualification-fixture.json",
+          ".agentos/qualification-results.json",
+          ".agentos/roles",
+          ".agentos/roles/chief-of-staff.md",
+          ".agentos/roles/director.md",
+          "AGENTS.md"
+        ],
+        "removed": [],
+        "changed": []
+      },
+      "protected_project_and_git_preserved": true
+    },
+    {
+      "name": "full-sol-U",
+      "model": "gpt-6.1-sol",
+      "thread": "01a16c87-9e53-7b22-a4a0-5bc030a36cfd",
+      "harness_status": "returned",
+      "duration_seconds": 28.933,
+      "full_selected_component_reads": 0,
+      "nonzero_command_items": 1,
+      "router_diagnostics": [],
+      "delta": {
+        "added": [
+          "sample-output.txt"
+        ],
+        "removed": [],
+        "changed": []
+      },
+      "protected_project_and_git_preserved": true
+    }
+  ],
+  "actual_models": [
+    {
+      "name": "bundle-luna-D",
+      "requested": "gpt-6-luna",
+      "thread": "01a16c81-5fea-7eb1-97ca-c763f59265f1",
+      "model": "gpt-6-luna",
+      "effort": null
+    },
+    {
+      "name": "bundle-luna-I",
+      "requested": "gpt-6-luna",
+      "thread": "01a16c83-a267-7853-918d-0a1316c223c7",
+      "model": "gpt-6-luna",
+      "effort": null
+    },
+    {
+      "name": "full-luna-D",
+      "requested": "gpt-6-luna",
+      "thread": "01a16c80-8d4e-7610-9f5d-3272cc8660bf",
+      "model": "gpt-6-luna",
+      "effort": null
+    },
+    {
+      "name": "full-sol-I",
+      "requested": "gpt-6.1-sol",
+      "thread": "01a16c82-cb9d-74b0-9316-464aa58925d6",
+      "model": "gpt-6.1-sol",
+      "effort": null
+    },
+    {
+      "name": "full-sol-U",
+      "requested": "gpt-6.1-sol",
+      "thread": "01a16c87-9e53-7b22-a4a0-5bc030a36cfd",
+      "model": "gpt-6.1-sol",
+      "effort": null
+    },
+    {
+      "name": "bundle-sol-U",
+      "requested": "gpt-6.1-sol",
+      "thread": "01a16c89-b9d8-7582-af4a-a529d7cc5d5b",
+      "model": "gpt-6.1-sol",
+      "effort": null
+    },
+    {
+      "name": "full-luna-I",
+      "requested": "gpt-6-luna",
+      "thread": "01a16c82-65bc-72f3-9ad3-afe4fde2edd2",
+      "model": "gpt-6-luna",
+      "effort": null
+    },
+    {
+      "name": "bundle-sol-I",
+      "requested": "gpt-6.1-sol",
+      "thread": "01a16c85-0774-7e41-aaec-e04cc5679011",
+      "model": "gpt-6.1-sol",
+      "effort": null
+    },
+    {
+      "name": "full-sol-D",
+      "requested": "gpt-6.1-sol",
+      "thread": "01a16c80-8bb0-7ca2-8965-da0ff2e8758c",
+      "model": "gpt-6.1-sol",
+      "effort": null
+    },
+    {
+      "name": "bundle-sol-D",
+      "requested": "gpt-6.1-sol",
+      "thread": "01a16c81-6206-7482-801b-cae19af50607",
+      "model": "gpt-6.1-sol",
+      "effort": null
+    }
+  ],
+  "evidence_limits": [
+    "One flow/model/distribution, no statistical reliability claim.",
+    "Operator supplied actual proposal plus successful tool-output evidence verbatim in fresh-session handoff; automatic conversation transfer not tested.",
+    "Non-Git bundle fallback had Python available; physical absence of Python not tested.",
+    "Luna first use blocked, not a pass and not a runtime failure observation.",
+    "Other profiles/delegated fresh startup/native hooks/external delivery not exercised here; prior broader matrix remains separate.",
+    "No extra source checkpoint or operative repair candidate was tested in this baseline round.",
+    "Model effort and monetary cost unknown; source tool hashes outside bundle not source authority.",
+    "Global all-execution-path objective remains active."
+  ],
+  "diagnostic_notes": [
+    "Pre-root expected-output JSON escape typo corrected to actual LF before trials; hex recorded.",
+    "D: full Luna two empty rg queries; bundle models one absent optional tools probe each. Bundle Luna unavailable Git probes suppressed in enclosing successful Python command; no Git identity claimed.",
+    "I: full Luna initial source-verify wrong cwd and incorrect scope checker corrected. Other I roots zero nonzero command items.",
+    "U: both Sol roots first used unavailable python alias, then diagnosed python3 retry succeeded; bundle Sol also expected absent output ls exit2.",
+    "Proposal minor count/reference errors retained: bundle Sol says seven paths but enumerates six and installer explicitly corrects; full Luna says immediately preceding helper output despite intervening reads; unique successful command reference resolves. Full Luna final organization file count off by one.",
+    "No non-JSON router diagnostics observed in ten trial logs. No parent corrections to installed artifacts."
+  ]
+}
