@@ -1,0 +1,19 @@
+{
+  "initial_probe": {
+    "artifact": "graph-status-compatibility-probe.json",
+    "sha256": "429d2a985607f4330639eb7e4a42213bf947e6b2b26b591f89b22ab93bbbbd96"
+  },
+  "expected": "Normalize supported simple status scalar spellings; reject deprecated selected closures and invalid/duplicate declarations; retain valid stable/missing status and existing behavior",
+  "tests": 20,
+  "test_output": {
+    "artifact": "graph-status-tests-r1.txt",
+    "sha256": "f2f0e3f93394496c224ae9c01132ea94e2f992d0969aa09fd8997fa265ec8d81"
+  },
+  "source_hashes": {
+    "tools/qualification.py": "bdec23d0abf10455c3da5c807b052c10a52f9416a138e47465b25dd26d40d02f",
+    "tools/README.md": "251b46a083d05310a95285c91d87ff4e2a4cddb56d31255a3fc16c204d760eab",
+    "tests/test_qualification.py": "50309f4b4aef2478c5ea88ac686ff971c557b950c499b8de92b1ed49ee9a9e55"
+  },
+  "scope": "Three code/test/documentation paths only; all bundle component contracts and rejected proposal restorations unchanged",
+  "model_regression_limit": "Existing both-model CLI trials cover unchanged interface/ordinary metadata; new actual CLI unit cases cover scalar spellings, no full native rerun claim"
+}

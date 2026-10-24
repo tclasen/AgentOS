@@ -16,6 +16,20 @@ MODELS = ('gpt-6.1-sol', 'gpt-6-luna')
 def sha(data: bytes) -> str:
     return hashlib.sha256(data).hexdigest()
 
+def component_status(front: str) -> str | None:
+    """Parse the simple status scalar profile; do not silently ignore malformed declarations."""
+    declarations = re.findall(r'^status[ \t]*:(.*)$', front, re.M)
+    if not declarations:
+        return None
+    if len(declarations) != 1:
+        raise ValueError('duplicate status declaration')
+    value = re.fullmatch(
+        r'''(?:([A-Za-z][A-Za-z0-9_-]*)|"([A-Za-z][A-Za-z0-9_-]*)"|'([A-Za-z][A-Za-z0-9_-]*)')(?:[ \t]+\#.*)?''',
+        declarations[0].strip())
+    if not value:
+        raise ValueError('unsupported status scalar; use a plain or quoted word, optionally followed by a comment')
+    return next(part for part in value.groups() if part is not None)
+
 def graph(bundle: Path) -> dict:
     """Read the deliberately small AgentOS metadata profile, not arbitrary YAML."""
     bundle = bundle.resolve()
@@ -39,9 +53,8 @@ def graph(bundle: Path) -> dict:
             if not target.is_relative_to(bundle) or not target.is_file():
                 raise ValueError(f'missing or escaping dependency: {path.name} -> {dep}')
         key = path.relative_to(bundle).as_posix()
-        status = re.search(r'^status: (\S+)\s*$', front, re.M)
         nodes[key] = {'selection': selection.group(1), 'requires': [x.lstrip('/') for x in deps],
-                      'status': status.group(1) if status else None, 'sha256': sha(path.read_bytes())}
+                      'status': component_status(front), 'sha256': sha(path.read_bytes())}
     def visit(node, visiting, visited):
         if node in visiting:
             raise ValueError(f'dependency cycle: {node}')
