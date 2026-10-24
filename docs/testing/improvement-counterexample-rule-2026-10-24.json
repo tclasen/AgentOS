@@ -1,0 +1,199 @@
+{
+  "candidate": 3,
+  "rows": [
+    {
+      "name": "counterexample-baseline-sol-r1",
+      "revision": "baseline",
+      "model": "gpt-6.1-sol",
+      "native_thread": "01a16b84-0a8c-7db0-93f2-92fb21381a85",
+      "expected": {
+        "P1": "reject",
+        "P2": "retain",
+        "P3": "inconclusive"
+      },
+      "actual": {
+        "P1": "reject",
+        "P2": "retain",
+        "P3": "inconclusive"
+      },
+      "correct_dispositions": 3,
+      "total_dispositions": 3,
+      "observed_local_inputs_per_proposal": {
+        "P1": 8,
+        "P2": 8,
+        "P3": 8
+      },
+      "P1_observed_counterexamples": 5,
+      "fresh_inputs_across_proposals": 21,
+      "only_decision_file_added_and_index_preserved": true,
+      "decision_sha256": "827f7ae7723255096a88c53a1c962f9bd3ee89392f0cb6ee84bb9c444e62fe9e",
+      "run_sha256": "b8120383142587b74e15df4ebccbc91b29a5fb681326c686828261ff0ea4561a",
+      "prompt_sha256": "2a99ab743b935f6a7eefe9e9f0cc76a560cc54c24da52572e6a06971602849c2",
+      "evaluator_sha256": "f94e762c9e98c170d2580dbcb24fa214136f76ca34db9676b90138850b18fe1d"
+    },
+    {
+      "name": "counterexample-baseline-luna-r1",
+      "revision": "baseline",
+      "model": "gpt-6-luna",
+      "native_thread": "01a16b84-0a8e-76e1-82da-b3e46e99293d",
+      "expected": {
+        "P1": "reject",
+        "P2": "retain",
+        "P3": "inconclusive"
+      },
+      "actual": {
+        "P1": "reject",
+        "P2": "retain",
+        "P3": "reject"
+      },
+      "correct_dispositions": 2,
+      "total_dispositions": 3,
+      "observed_local_inputs_per_proposal": {
+        "P1": 6,
+        "P2": 6,
+        "P3": 6
+      },
+      "P1_observed_counterexamples": 4,
+      "fresh_inputs_across_proposals": 15,
+      "only_decision_file_added_and_index_preserved": true,
+      "decision_sha256": "b3ac34139d2958ddf33478175c03d03e2cf889d13f491cd74da05a64244481da",
+      "run_sha256": "ea1752ea52c3be80b9985897b6af0f6cad6cd81e3ca02f771607938caec563d9",
+      "prompt_sha256": "2a99ab743b935f6a7eefe9e9f0cc76a560cc54c24da52572e6a06971602849c2",
+      "evaluator_sha256": "f94e762c9e98c170d2580dbcb24fa214136f76ca34db9676b90138850b18fe1d"
+    },
+    {
+      "name": "counterexample-candidate-sol-r1",
+      "revision": "candidate",
+      "model": "gpt-6.1-sol",
+      "native_thread": "01a16b85-557d-71e1-b7a7-2e0c8f332e5e",
+      "expected": {
+        "P1": "reject",
+        "P2": "retain",
+        "P3": "inconclusive"
+      },
+      "actual": {
+        "P1": "reject",
+        "P2": "retain",
+        "P3": "inconclusive"
+      },
+      "correct_dispositions": 3,
+      "total_dispositions": 3,
+      "observed_local_inputs_per_proposal": {
+        "P1": 7,
+        "P2": 7,
+        "P3": 7
+      },
+      "P1_observed_counterexamples": 4,
+      "fresh_inputs_across_proposals": 18,
+      "only_decision_file_added_and_index_preserved": true,
+      "decision_sha256": "9465ad4526db0ebf46f29d1fd286d6c902aa78a6b0d44e5440a5a9b62285b289",
+      "run_sha256": "549faa5ee7b0c630bada2d89ce9fe37d8c1ce926b261ba8a75342c2e5ca54369",
+      "prompt_sha256": "2a99ab743b935f6a7eefe9e9f0cc76a560cc54c24da52572e6a06971602849c2",
+      "evaluator_sha256": "f94e762c9e98c170d2580dbcb24fa214136f76ca34db9676b90138850b18fe1d"
+    },
+    {
+      "name": "counterexample-candidate-luna-r1",
+      "revision": "candidate",
+      "model": "gpt-6-luna",
+      "native_thread": "01a16b85-513c-71d0-a590-b68ed2962802",
+      "expected": {
+        "P1": "reject",
+        "P2": "retain",
+        "P3": "inconclusive"
+      },
+      "actual": {
+        "P1": "reject",
+        "P2": "retain",
+        "P3": "inconclusive"
+      },
+      "correct_dispositions": 3,
+      "total_dispositions": 3,
+      "observed_local_inputs_per_proposal": {
+        "P1": 7,
+        "P2": 7,
+        "P3": 7
+      },
+      "P1_observed_counterexamples": 5,
+      "fresh_inputs_across_proposals": 18,
+      "only_decision_file_added_and_index_preserved": true,
+      "decision_sha256": "6aeac193af3a4e175f85710433cdf0e5f4710369c605697ab12dd03f503b6070",
+      "run_sha256": "a899f9f92c7b1cc767812b759cccf872cac178b71eeb0ec521edceb6c872b411",
+      "prompt_sha256": "2a99ab743b935f6a7eefe9e9f0cc76a560cc54c24da52572e6a06971602849c2",
+      "evaluator_sha256": "f94e762c9e98c170d2580dbcb24fa214136f76ca34db9676b90138850b18fe1d"
+    },
+    {
+      "name": "counterexample-baseline-luna-r2",
+      "revision": "baseline",
+      "model": "gpt-6-luna",
+      "native_thread": "01a16b87-82d2-79d2-b7e7-63bd95d81be3",
+      "expected": {
+        "P1": "reject",
+        "P2": "retain",
+        "P3": "inconclusive"
+      },
+      "actual": {
+        "P1": "reject",
+        "P2": "retain",
+        "P3": "inconclusive"
+      },
+      "correct_dispositions": 3,
+      "total_dispositions": 3,
+      "observed_local_inputs_per_proposal": {
+        "P1": 5,
+        "P2": 5,
+        "P3": 5
+      },
+      "P1_observed_counterexamples": 3,
+      "fresh_inputs_across_proposals": 12,
+      "only_decision_file_added_and_index_preserved": true,
+      "decision_sha256": "325537f67ab4c3d57e3675d249a0ba9f68175545bfc4030f830419ce06caa660",
+      "run_sha256": "77a23dfcfe1eab2fd4dbf19972ba4c2b9f6b71da9482696e3333fd6d8e6996a5",
+      "prompt_sha256": "2a99ab743b935f6a7eefe9e9f0cc76a560cc54c24da52572e6a06971602849c2",
+      "evaluator_sha256": "f94e762c9e98c170d2580dbcb24fa214136f76ca34db9676b90138850b18fe1d"
+    },
+    {
+      "name": "counterexample-candidate-luna-r2",
+      "revision": "candidate",
+      "model": "gpt-6-luna",
+      "native_thread": "01a16b87-82d1-7472-9de0-4615ddadae6b",
+      "expected": {
+        "P1": "reject",
+        "P2": "retain",
+        "P3": "inconclusive"
+      },
+      "actual": {
+        "P1": "reject",
+        "P2": "retain",
+        "P3": "inconclusive"
+      },
+      "correct_dispositions": 3,
+      "total_dispositions": 3,
+      "observed_local_inputs_per_proposal": {
+        "P1": 4,
+        "P2": 4,
+        "P3": 4
+      },
+      "P1_observed_counterexamples": 2,
+      "fresh_inputs_across_proposals": 9,
+      "only_decision_file_added_and_index_preserved": true,
+      "decision_sha256": "0b6fb58a85e853068ab1bd8b9cefbaa7055a12183bb1090de16280d3746b2b7f",
+      "run_sha256": "1cbe08c1107548d714976c3dd07cce73a9cb857935bb080cc1aa6e62c78f17de",
+      "prompt_sha256": "2a99ab743b935f6a7eefe9e9f0cc76a560cc54c24da52572e6a06971602849c2",
+      "evaluator_sha256": "f94e762c9e98c170d2580dbcb24fa214136f76ca34db9676b90138850b18fe1d"
+    }
+  ],
+  "observed_dispositions": {
+    "baseline_correct": 8,
+    "baseline_total": 9,
+    "candidate_correct": 9,
+    "candidate_total": 9
+  },
+  "scope": "Controlled CoS decisions with actual local toy-function execution; no policy activated",
+  "interpretation": "Both revisions already exercised fresh counterexamples, rejected P1 and retained only bounded P2. Baseline Luna r1 safely withheld P3 but labelled missing evidence reject; strict inconclusive criterion FAIL retained. Baseline Luna confirmatory r2 and both candidate Luna runs used inconclusive. One label difference in few samples does not establish repeatable or causal decision improvement.",
+  "evidence_assessment": "Inconclusive added value; no statistical conclusion or proof of no effect",
+  "delivery_decision": "REJECT added mandatory fresh-case source paragraph; preserve concise current guidance and all observations",
+  "criteria_waived": false,
+  "rejected_patch_sha256": "71f5d5fe393ec48f54fbc09866330d620227f9a1b1ef48df6e388937eb18dce3",
+  "all_root_metadata_sha256": "68cce382b99a19b854e07ba13b91c6cea90739afb9c24b4f05bfc8ab48f5f62b",
+  "source_restored_exactly_to_main": true
+}

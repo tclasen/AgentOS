@@ -1,0 +1,409 @@
+{
+  "candidate": 2,
+  "recommendation": "Prefer generated manual readiness checks that are read-only by default, with separately authorized recording",
+  "decision": "REJECT additional source instructions in this batch",
+  "reason": "Both existing-source baseline helpers already meet all eight checks, and candidate helpers show no additional observed benefit. Preserve concise existing guidance instead of asserting improvement.",
+  "baseline_main": "d3d3dfd3e9552ed5d483d2880fb4ca0eb19e07fd",
+  "scope": "Generation of four toy helpers and actual execution of 32 isolated cases; not full-installation or all-input helper certification",
+  "models": [
+    {
+      "revision": "baseline",
+      "model": "gpt-6.1-sol",
+      "native_thread": "01a16b7d-93c9-7d02-9c5e-e3a6d1d97061",
+      "passed": 8,
+      "total": 8,
+      "helper_sha256": "c2aba863e92e90da4c8e953628ba6dfe37eb5f540fc2b56e29a699e5c83c574b",
+      "run_sha256": "db856c1655df892b1b38068523eb84e687b76ee6bc28336dbe7f581bd4cd3d3a",
+      "builder_scope": "Only helper and usage file added; protected files and journal unchanged; empty index/no commit",
+      "cases": [
+        {
+          "case": "intact",
+          "passed": true,
+          "returncode": 0,
+          "delta": {
+            "added": [],
+            "removed": [],
+            "changed": []
+          }
+        },
+        {
+          "case": "protected_drift",
+          "passed": true,
+          "returncode": 1,
+          "delta": {
+            "added": [],
+            "removed": [],
+            "changed": []
+          }
+        },
+        {
+          "case": "missing_protected",
+          "passed": true,
+          "returncode": 1,
+          "delta": {
+            "added": [],
+            "removed": [],
+            "changed": []
+          }
+        },
+        {
+          "case": "authorized_unpinned_output",
+          "passed": true,
+          "returncode": 0,
+          "delta": {
+            "added": [],
+            "removed": [],
+            "changed": []
+          }
+        },
+        {
+          "case": "missing_journal",
+          "passed": true,
+          "returncode": 0,
+          "delta": {
+            "added": [],
+            "removed": [],
+            "changed": []
+          }
+        },
+        {
+          "case": "authorized_record",
+          "passed": true,
+          "returncode": 0,
+          "delta": {
+            "added": [],
+            "removed": [],
+            "changed": [
+              ".agentos/reviews.jsonl"
+            ]
+          }
+        },
+        {
+          "case": "authorized_failure_record",
+          "passed": true,
+          "returncode": 1,
+          "delta": {
+            "added": [],
+            "removed": [],
+            "changed": [
+              ".agentos/reviews.jsonl"
+            ]
+          }
+        },
+        {
+          "case": "malformed_pins",
+          "passed": true,
+          "returncode": 1,
+          "delta": {
+            "added": [],
+            "removed": [],
+            "changed": []
+          }
+        }
+      ]
+    },
+    {
+      "revision": "baseline",
+      "model": "gpt-6-luna",
+      "native_thread": "01a16b7d-93c5-72d2-8ab1-dd887e125fb8",
+      "passed": 8,
+      "total": 8,
+      "helper_sha256": "ba1b51068260cad54a057e829564946447350d77513bf32d71ba7647d1a03191",
+      "run_sha256": "633fa395836d3bbd86bf88a296b17bf028aea8c70950beb65e81f61856dac3b2",
+      "builder_scope": "Only helper and usage file added; protected files and journal unchanged; empty index/no commit",
+      "cases": [
+        {
+          "case": "intact",
+          "passed": true,
+          "returncode": 0,
+          "delta": {
+            "added": [],
+            "removed": [],
+            "changed": []
+          }
+        },
+        {
+          "case": "protected_drift",
+          "passed": true,
+          "returncode": 1,
+          "delta": {
+            "added": [],
+            "removed": [],
+            "changed": []
+          }
+        },
+        {
+          "case": "missing_protected",
+          "passed": true,
+          "returncode": 1,
+          "delta": {
+            "added": [],
+            "removed": [],
+            "changed": []
+          }
+        },
+        {
+          "case": "authorized_unpinned_output",
+          "passed": true,
+          "returncode": 0,
+          "delta": {
+            "added": [],
+            "removed": [],
+            "changed": []
+          }
+        },
+        {
+          "case": "missing_journal",
+          "passed": true,
+          "returncode": 0,
+          "delta": {
+            "added": [],
+            "removed": [],
+            "changed": []
+          }
+        },
+        {
+          "case": "authorized_record",
+          "passed": true,
+          "returncode": 0,
+          "delta": {
+            "added": [],
+            "removed": [],
+            "changed": [
+              ".agentos/reviews.jsonl"
+            ]
+          }
+        },
+        {
+          "case": "authorized_failure_record",
+          "passed": true,
+          "returncode": 1,
+          "delta": {
+            "added": [],
+            "removed": [],
+            "changed": [
+              ".agentos/reviews.jsonl"
+            ]
+          }
+        },
+        {
+          "case": "malformed_pins",
+          "passed": true,
+          "returncode": 1,
+          "delta": {
+            "added": [],
+            "removed": [],
+            "changed": []
+          }
+        }
+      ]
+    },
+    {
+      "revision": "candidate",
+      "model": "gpt-6.1-sol",
+      "native_thread": "01a16b7e-e4d1-70a1-9f10-e2853dee715c",
+      "passed": 8,
+      "total": 8,
+      "helper_sha256": "7db90e0444a65c37b3c26f2e5dcac55063385ff7dab5a33ca0c284876a04a028",
+      "run_sha256": "e5c026d75635ac13763aa27e5e23e8af7b3ff795d213b22941514135d00fbb74",
+      "builder_scope": "Only helper and usage file added; protected files and journal unchanged; empty index/no commit",
+      "cases": [
+        {
+          "case": "intact",
+          "passed": true,
+          "returncode": 0,
+          "delta": {
+            "added": [],
+            "removed": [],
+            "changed": []
+          }
+        },
+        {
+          "case": "protected_drift",
+          "passed": true,
+          "returncode": 1,
+          "delta": {
+            "added": [],
+            "removed": [],
+            "changed": []
+          }
+        },
+        {
+          "case": "missing_protected",
+          "passed": true,
+          "returncode": 1,
+          "delta": {
+            "added": [],
+            "removed": [],
+            "changed": []
+          }
+        },
+        {
+          "case": "authorized_unpinned_output",
+          "passed": true,
+          "returncode": 0,
+          "delta": {
+            "added": [],
+            "removed": [],
+            "changed": []
+          }
+        },
+        {
+          "case": "missing_journal",
+          "passed": true,
+          "returncode": 0,
+          "delta": {
+            "added": [],
+            "removed": [],
+            "changed": []
+          }
+        },
+        {
+          "case": "authorized_record",
+          "passed": true,
+          "returncode": 0,
+          "delta": {
+            "added": [],
+            "removed": [],
+            "changed": [
+              ".agentos/reviews.jsonl"
+            ]
+          }
+        },
+        {
+          "case": "authorized_failure_record",
+          "passed": true,
+          "returncode": 1,
+          "delta": {
+            "added": [],
+            "removed": [],
+            "changed": [
+              ".agentos/reviews.jsonl"
+            ]
+          }
+        },
+        {
+          "case": "malformed_pins",
+          "passed": true,
+          "returncode": 1,
+          "delta": {
+            "added": [],
+            "removed": [],
+            "changed": []
+          }
+        }
+      ]
+    },
+    {
+      "revision": "candidate",
+      "model": "gpt-6-luna",
+      "native_thread": "01a16b7e-e4d4-7411-9607-60c4fb86522a",
+      "passed": 8,
+      "total": 8,
+      "helper_sha256": "60aaba7a77e443aba5938ef30f23ec63dff3689d26e4aefb794cd60014cb6049",
+      "run_sha256": "b84483d8e938893be2382886a2c8a735e842d8a06fe209fa015e44d76fe83773",
+      "builder_scope": "Only helper and usage file added; protected files and journal unchanged; empty index/no commit",
+      "cases": [
+        {
+          "case": "intact",
+          "passed": true,
+          "returncode": 0,
+          "delta": {
+            "added": [],
+            "removed": [],
+            "changed": []
+          }
+        },
+        {
+          "case": "protected_drift",
+          "passed": true,
+          "returncode": 1,
+          "delta": {
+            "added": [],
+            "removed": [],
+            "changed": []
+          }
+        },
+        {
+          "case": "missing_protected",
+          "passed": true,
+          "returncode": 1,
+          "delta": {
+            "added": [],
+            "removed": [],
+            "changed": []
+          }
+        },
+        {
+          "case": "authorized_unpinned_output",
+          "passed": true,
+          "returncode": 0,
+          "delta": {
+            "added": [],
+            "removed": [],
+            "changed": []
+          }
+        },
+        {
+          "case": "missing_journal",
+          "passed": true,
+          "returncode": 0,
+          "delta": {
+            "added": [],
+            "removed": [],
+            "changed": []
+          }
+        },
+        {
+          "case": "authorized_record",
+          "passed": true,
+          "returncode": 0,
+          "delta": {
+            "added": [],
+            "removed": [],
+            "changed": [
+              ".agentos/reviews.jsonl"
+            ]
+          }
+        },
+        {
+          "case": "authorized_failure_record",
+          "passed": true,
+          "returncode": 1,
+          "delta": {
+            "added": [],
+            "removed": [],
+            "changed": [
+              ".agentos/reviews.jsonl"
+            ]
+          }
+        },
+        {
+          "case": "malformed_pins",
+          "passed": true,
+          "returncode": 1,
+          "delta": {
+            "added": [],
+            "removed": [],
+            "changed": []
+          }
+        }
+      ]
+    }
+  ],
+  "evidence": {
+    "readiness-parent-cases.json": "09e65102cf7bcf478e3365eecbcd18d311329688b9880d054c9d82d6d4c3af07",
+    "readiness-model-metadata.json": "a8ad5c4bb38be656d1d30b9cea15e6aac7dab125c5df5808de08e2f7dc906024",
+    "readiness-terminal-artifacts.json": "8f087e59fde42d6546b315481ca6eed967f86fe55e0a4dd97eabae240e229ce3",
+    "readiness-rejected-candidate.patch": "556237a12631956569c5f0034244e052495e4df9c0655b0c0b91a0f3e70bb03c"
+  },
+  "evaluator_sha256": "87505de13d8d4bc996419d5fe61d29e72da67a8331520389d76dbc3a4883dcc4",
+  "source_disposition": "Both proposed source paths restored byte-for-byte to baseline; candidate source/patch retained in private evidence",
+  "limits": [
+    "One generated helper per model/revision; no reliability percentage or proof that prior failures cannot recur.",
+    "Only the stated pin/drift/recording contract is tested, not hostile symlinks, races or complete authorization enforcement.",
+    "CLI recording flags require caller authority; flag availability does not confer a grant.",
+    "No code from generated toy helpers is shipped to AgentOS or installed into a user project.",
+    "No broad suite rerun for rejected prose; existing 18-test evidence remains unchanged."
+  ]
+}
