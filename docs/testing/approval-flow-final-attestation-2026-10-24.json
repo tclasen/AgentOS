@@ -1,0 +1,123 @@
+{
+  "record_kind": "Observed post-review facts under APP-000013 limited addition allowance; no retroactive trial/report edits",
+  "observed_at": "2026-10-24T06:24:04.403493+00:00",
+  "task": "TASK-000185",
+  "run": "RUN-000180",
+  "reviewed_candidate": {
+    "base": "9956f05c3494063fe8eb2a8641c4853ca82540d9",
+    "head": "778ceab64d46231796877d7b8837fff2a77609a6",
+    "tree": "655041a2b65aa8e959fd3eebac88c73f4af0bc77",
+    "paths": {
+      "docs/agent-records/runs/RUN-000180.md": "31f94da29479ef4e78dac06927d6f008fd6700a9a6c24ecdb9a9c7aa34571160",
+      "docs/agent-records/tasks/project/TASK-000185.md": "91b58a1a659309194a3ee791417591e4976f0ba9a74386f2fc235c35722e4452",
+      "docs/testing/approval-flow-2026-10-24.json": "a0d1072718aa36f7b864e3458cb04d8cb42c2b59545ff7663d8076fbb4207977",
+      "docs/testing/approval-flow-2026-10-24.md": "800f3e345f9df1c7d356c77b5d1ddb0acf8a46bfaad70f4b987412969cf81339"
+    }
+  },
+  "receipt": {
+    "path": "docs/agent-records/approvals/APP-000013.md",
+    "sha256": "ee09cd8d86c7b1e0abbf16672ce2e7f102a9e7d769b68a69ccc966bd6ae64e8b",
+    "byte_identical_to_independent_output": true,
+    "decision": "conditional acceptance of four-path report only; both Luna installations rejected; all-path goal remains active"
+  },
+  "reviewer_actual": {
+    "name": "review-final",
+    "requested": "gpt-6.1-sol",
+    "thread": "01a16c8d-e743-7122-9790-56c2c27992de",
+    "model": "gpt-6.1-sol",
+    "effort": null
+  },
+  "all_eleven_native_models_matched": true,
+  "native_trials": 10,
+  "independent_review_invocations": 1,
+  "receipt_correction_invocations": 0,
+  "actual_effort_cost": "unknown",
+  "reviewer_validation": {
+    "regressions": 39,
+    "formatter_reproductions": 2,
+    "formatter_unit_tests_per_reproduction": 3,
+    "original_criteria_unchanged": true
+  },
+  "review_precision": {
+    "benign_non_json_trial_line": {
+      "run": "bundle-sol-U",
+      "line": 1,
+      "text": "  \u2713 sandbox agentos-flow-20261024 \u2014 started"
+    },
+    "clarification": "One harmless sandbox-start status line is retained in machine report/raw log; no failed tool-router operation was observed. Read terse prose accordingly, as independent receipt states.",
+    "reviewer_diagnostic": "Consolidated audit KeyError bytes on legitimate size field; normalization corrected and remaining comparisons passed. Zero nonzero completed command items does not mean no internal diagnostic; raw matching lines and receipt retain it.",
+    "parent_diagnostic": "Post-trial inventory inspection initially used nonexistent original-sandboxes filename; located actual sandboxes-before.json and verified against admission copy. Read-only error, no trial effects."
+  },
+  "cleanup": {
+    "observed_at": "2026-10-24T06:23:33.913645+00:00",
+    "owned_sandbox_removed": {
+      "name": "agentos-flow-20261024",
+      "id": "c4b93a5e-559f-472b-bfde-479eee5dc5a7"
+    },
+    "owned_raw_directory_removed": "/private/tmp/agentos-flow-20261024",
+    "original_sandbox_pairs_preserved": 63,
+    "all_others_unchanged": true,
+    "remaining_count": 63,
+    "archives": [
+      {
+        "archive": "/private/tmp/agentos-flow-20261024-trials.tar.gz",
+        "sha256": "916d79933617393d332fb08b87d4bd0966d8d565b645b0ad3ab551e6ad974faa",
+        "bytes": 982388,
+        "indexed_files": 371,
+        "index": "evidence/trials-index.json",
+        "verified_all_members": true
+      },
+      {
+        "archive": "/private/tmp/agentos-flow-20261024-acceptance.tar.gz",
+        "sha256": "8f6e562b1451d945be37d77f4a2c2e31953330863d7d96f201fc4ce30e199692",
+        "bytes": 255511,
+        "indexed_files": 41,
+        "index": "evidence/acceptance-index.json",
+        "verified_all_members": true
+      }
+    ],
+    "archive_bytes_total": 1237899,
+    "no_global_prune": true,
+    "diagnostic": "Initial sbx rm refused non-terminal stdin and requested --force; inventory reconciled unchanged, then explicit owned-only --force removal succeeded. One diagnosed cleanup retry; no automatic approval review rejection.",
+    "primary_worktrees_before_cleanup": "worktree /Users/Shared/projects/AgentOS\nHEAD 778ceab64d46231796877d7b8837fff2a77609a6\nbranch refs/heads/audit/approval-flow\n\n"
+  },
+  "current_main_rules_observed": [
+    {
+      "type": "deletion",
+      "ruleset_source_type": "Repository",
+      "ruleset_source": "tclasen/AgentOS",
+      "ruleset_id": 25755038
+    },
+    {
+      "type": "non_fast_forward",
+      "ruleset_source_type": "Repository",
+      "ruleset_source": "tclasen/AgentOS",
+      "ruleset_id": 25755038
+    },
+    {
+      "type": "pull_request",
+      "parameters": {
+        "required_approving_review_count": 0,
+        "dismiss_stale_reviews_on_push": false,
+        "required_reviewers": [],
+        "require_code_owner_review": false,
+        "require_last_push_approval": false,
+        "required_review_thread_resolution": true,
+        "require_extra_approval_for_unattributed_changes": true,
+        "allowed_merge_methods": [
+          "merge"
+        ]
+      },
+      "ruleset_source_type": "Repository",
+      "ruleset_source": "tclasen/AgentOS",
+      "ruleset_id": 25755038
+    }
+  ],
+  "post_review_paths_allowed": [
+    "docs/agent-records/approvals/APP-000013.md",
+    "docs/testing/approval-flow-final-attestation-2026-10-24.json"
+  ],
+  "operative_source_changes": false,
+  "delivery_status": "pending normal protected PR, checks/threads, merge and fetched-main equivalence; recorded separately after actual observation",
+  "global_goal_status": "active; Luna contract/correction support requires a new scoped candidate and validation"
+}
