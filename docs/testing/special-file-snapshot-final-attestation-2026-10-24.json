@@ -1,0 +1,98 @@
+{
+  "observed_at": "2026-10-24T15:42:55.636116+00:00",
+  "reviewed_candidate": {
+    "head": "eb7a3557eaa949d17dfee4fad05c79ad998ad669",
+    "tree": "822e5153c5d301f5eefa53a17e49a5b88fdb0a1c",
+    "base": "e98e06ca51ea6cf8e1518fb1f181906585350b59",
+    "operative": "9c7ad18fe4589793cce393340b761b33c52cf3eb",
+    "files": {
+      "docs/agent-records/runs/RUN-000195.md": {
+        "sha256": "c343eac38e1caaae8ebb4b3fbcc6ae6f7887a8f8b5955bb09842e7c5ceba08f2",
+        "bytes": 6863
+      },
+      "docs/agent-records/tasks/project/TASK-000200.md": {
+        "sha256": "f3661052bb84fbef7d678da848aa36a3aa6e1976a4edd8a01a25f595f6471bb7",
+        "bytes": 6865
+      },
+      "docs/testing/special-file-snapshot-2026-10-24.json": {
+        "sha256": "48fda53dd26d91f63b36333feff8a4ec77c066e15ceafc197f0660c7e23e36c3",
+        "bytes": 12452
+      },
+      "docs/testing/special-file-snapshot-2026-10-24.md": {
+        "sha256": "3f551f0a6b8155b3a1575a84dee47ae67e134e0cc29f098a4a782a138e58065f",
+        "bytes": 7967
+      }
+    }
+  },
+  "reviewer": {
+    "thread": "01a16e82-9401-7973-8e21-b38d1861cc79",
+    "actual_model": "gpt-6.1-sol",
+    "actual_effort": "high",
+    "status": "returned",
+    "elapsed_seconds": 1089.448422908783,
+    "bound_seconds": 1200,
+    "collector": "exact frozen operative controls/source-full/tools/qualification.py; not promoted product",
+    "collector_after_baseline_fifo": {
+      "special": 4096
+    },
+    "parent_fifo_intervention": false,
+    "cli_completed_command_items": 32,
+    "all_started_cli_commands_completed": true,
+    "cli_nonzero": [
+      {
+        "item": "item_5",
+        "exit_code": 127,
+        "output": "/bin/bash: line 1: python: command not found\n"
+      },
+      {
+        "item": "item_33",
+        "exit_code": 1,
+        "output": "Traceback (most recent call last):\n  File \"<stdin>\", line 14, in <module>\nTypeError: list indices must be integers or slices, not str\n"
+      }
+    ],
+    "usage": [
+      {
+        "input_tokens": 2365565,
+        "cached_input_tokens": 2257664,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 23610,
+        "reasoning_output_tokens": 6601
+      }
+    ],
+    "billing": "unknown"
+  },
+  "approval": {
+    "path": "docs/agent-records/approvals/APP-000028.md",
+    "sha256": "021b981a1a3f74b368fcf20b01cff16d827976b8448aa6b297ebec5084d0cb07",
+    "bytes": 18397,
+    "decision": "approve truthful findings-only withdrawal; reject product promotion"
+  },
+  "independent_validation": {
+    "full_suite": "50 passes, one socket.bind EPERM error,51tests; all49original regressions pass; no skips or modified assertions",
+    "focused_suite": "one finalization pass, one same socket.bind EPERM error",
+    "baseline": "independently timed out3.008seconds, killed/reaped owned child, no writer/output",
+    "own_fifo_cli": "passed0.0242seconds under5secondbound",
+    "metadata_and_outputs": "exact source/controls/candidate, actual native identities, live types, original bytes/Git, Sol30checks/deltas and Luna partial evidence verified",
+    "limitations": "Native bound-socket and Luna remaining scenarios unqualified; no all-path/onboarding/product approval."
+  },
+  "reviewer_index": {
+    "path": "work/review-final/scratch/reviewer-index.json",
+    "sha256": "c68ad00ab56d900483960e5996a9a4e96a0d7c30d2fc7a4a86ab36c352030b03",
+    "regular_files": 417,
+    "regular_bytes": 3376673,
+    "all_indexed_regular_files_verified_on_disk": true,
+    "direct_acceptance_retention": "pending final archive; required before cleanup",
+    "metadata": "work/review-final/scratch/reviewer-filesystem-metadata.json"
+  },
+  "trials_export": {
+    "archive": "/private/tmp/agentos-specialsnapshot-20261024-trials.tar.gz",
+    "sha256": "7e920c99c8a6707e066c1149785ad7e611f795247e88fd3d6bc7f9d8b8d148ea",
+    "bytes": 803147,
+    "indexed_files": 376,
+    "index": "evidence/trials-index.json",
+    "verified_all_members": true
+  },
+  "delivery": "Pending normal protected PR/current rules/checks/threads/expected-head merge and fetched owning-main content/tree/ancestry; only receipt and this fact attestation may be added with four reviewed hashes unchanged.",
+  "cleanup": "Pending two verified archives retaining every indexed regular file and recoverable special/link/empty-directory metadata; remove only exact-owned sandbox/raw root, preserve63original identities.",
+  "goal": "active; no complete/no-further-improvement claim"
+}
