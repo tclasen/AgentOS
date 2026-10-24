@@ -1,0 +1,59 @@
+{
+  "observed_at": "2026-10-24T12:22:56.406257+00:00",
+  "task": "TASK-000196",
+  "run": "RUN-000191",
+  "reviewed_head": "68ec5f307bdf31d395edb74bc3cb5a1bfb1d44fd",
+  "reviewed_tree": "d59c1f782a80145edcb3e0e1ea27c1218f483cca",
+  "reviewed_files": {
+    "docs/agent-records/runs/RUN-000191.md": "e22495c88a94eb487afcd04dc321fa6467d3418f7702fc40df06aca89be0b9e9",
+    "docs/agent-records/tasks/project/TASK-000196.md": "605e03d369220989874b4254cf610c39b6c6361e4e0b97ff9b507c26748f554d",
+    "docs/testing/source-read-protocol-2026-10-24.json": "7206b9d574130b9bb07eaaa449b1aded42e7c4f17522bb295abe7ffb96e4bda7",
+    "docs/testing/source-read-protocol-2026-10-24.md": "0530321747e9c9bae21ad7ee5b5868da57b569cdbd4ead2f47306af4cc766585",
+    "tools/README.md": "7772a4d2360fd3089c6c2f74ac267365233fe492810a1a120b753f82876342e8",
+    "tools/read-evidence.md": "6745d9bc17269074a06dfa36c56139fb73a639c50736dd1edfd7aac4b3b9201c"
+  },
+  "receipt_sha256": "a339da9bb6624404ac0775284e4b53ea23612f172c03d44b5aa9649ae95ec5ca",
+  "reviewer_evidence_index_sha256": "28a017c1bd8a7fef5d58b69da7745e961b0a206fab04b82c93ddd5922768f54c",
+  "reviewer_index_verified_entries": 371,
+  "reviewer": {
+    "name": "review-final",
+    "expected_model": "gpt-6.1-sol",
+    "expected_effort": "high",
+    "expected_cwd": "/private/tmp/agentos-readproof-20261024/work/review-final",
+    "thread": "01a16dcf-3aaa-7eb0-b841-54961b6477f3",
+    "model": "gpt-6.1-sol",
+    "effort": "high",
+    "native_session": "/home/agent/.codex/sessions/2026/10/24/rollout-2026-10-24T12-07-39-01a16dcf-3aaa-7eb0-b841-54961b6477f3.jsonl"
+  },
+  "reviewer_duration_seconds": 787.0442192554474,
+  "reviewer_raw_usage": [
+    {
+      "input_tokens": 4792801,
+      "cached_input_tokens": 4590592,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 25581,
+      "reasoning_output_tokens": 5675
+    }
+  ],
+  "reviewer_outer_nonzero_commands": 6,
+  "reviewer_diagnostics": "Two diagnosed snapshot/final-candidate recovery steps, two audit API/source-root recovery steps, and one native text-vs-JSON correlation recovery. First audit terminal result was not collected and remains unknown; completed later checks retained. Original tool failures and truncation limits preserved, no source/evaluator repair.",
+  "current_owned_process_reconciliation": "No Codex, audit.py, final_checks.py or Python audit process in observed sandbox process list; this does not reconstruct the unknown earlier exit.",
+  "reviewer_regressions": {
+    "tests": 49,
+    "unittest_seconds": 3.193
+  },
+  "trials_archive": {
+    "archive": "/private/tmp/agentos-readproof-20261024-trials.tar.gz",
+    "sha256": "8b633ee3c08483236564937853016fd58fab1a02abd56b4e310ddfa495104191",
+    "bytes": 673963,
+    "indexed_files": 349,
+    "index": "evidence/trials-index.json",
+    "verified_all_members": true
+  },
+  "all_three_native_roots_returned": true,
+  "reviewed_hashes_unchanged": true,
+  "remote_delivery": "pending; not yet observed",
+  "acceptance_export_and_cleanup": "pending; not yet observed",
+  "full_task_billing_and_cost": "unknown",
+  "broader_goal": "active"
+}

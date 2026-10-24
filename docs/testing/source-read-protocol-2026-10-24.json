@@ -1,0 +1,266 @@
+{
+  "task": "TASK-000196",
+  "run": "RUN-000191",
+  "plan_revision": 1,
+  "base": "9c9944d21e13f442664badde3d08affe29e1f52b",
+  "operative_head": "bcbd9bddbeeca746d5880bdad349c0fe7bd952f3",
+  "operative_tree": "dad64bc08f96580f7a653328076fcb8b05f45cd0",
+  "recommendation": "Accept the bounded prospective manual protocol only if fresh independent original-requirement review approves; no onboarding use yet.",
+  "scope": [
+    "tools/read-evidence.md",
+    "tools/README.md"
+  ],
+  "code_tests_bundle_unchanged": true,
+  "local_regressions": {
+    "count": 49,
+    "seconds": 13.929
+  },
+  "profiles": {
+    "portable": 10,
+    "engineering": 22,
+    "portfolio": 18
+  },
+  "graph_components": 25,
+  "cases": 14,
+  "expected_established": [
+    "A",
+    "B"
+  ],
+  "expected_not_established": [
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "H",
+    "I",
+    "J",
+    "K",
+    "L",
+    "M",
+    "N"
+  ],
+  "controlled_cases_are_simulations": true,
+  "producer_actual_local_commands": 7,
+  "dual_version_fixture_comparison": {
+    "A": {
+      "old_successful_command_text_measurement": true,
+      "proposed_manual_delivery": "established",
+      "no_historical_verdict_change": true
+    },
+    "B": {
+      "old_successful_command_text_measurement": false,
+      "proposed_manual_delivery": "established",
+      "no_historical_verdict_change": true
+    },
+    "C": {
+      "old_successful_command_text_measurement": true,
+      "proposed_manual_delivery": "not established",
+      "no_historical_verdict_change": true
+    },
+    "D": {
+      "old_successful_command_text_measurement": true,
+      "proposed_manual_delivery": "not established",
+      "no_historical_verdict_change": true
+    },
+    "E": {
+      "old_successful_command_text_measurement": false,
+      "proposed_manual_delivery": "not established",
+      "no_historical_verdict_change": true
+    },
+    "F": {
+      "old_successful_command_text_measurement": false,
+      "proposed_manual_delivery": "not established",
+      "no_historical_verdict_change": true
+    },
+    "G": {
+      "old_successful_command_text_measurement": false,
+      "proposed_manual_delivery": "not established",
+      "no_historical_verdict_change": true
+    },
+    "H": {
+      "old_successful_command_text_measurement": true,
+      "proposed_manual_delivery": "not established",
+      "no_historical_verdict_change": true
+    },
+    "I": {
+      "old_successful_command_text_measurement": true,
+      "proposed_manual_delivery": "not established",
+      "no_historical_verdict_change": true
+    },
+    "J": {
+      "old_successful_command_text_measurement": true,
+      "proposed_manual_delivery": "not established",
+      "no_historical_verdict_change": true
+    },
+    "K": {
+      "old_successful_command_text_measurement": true,
+      "proposed_manual_delivery": "not established",
+      "no_historical_verdict_change": true
+    },
+    "L": {
+      "old_successful_command_text_measurement": true,
+      "proposed_manual_delivery": "not established",
+      "no_historical_verdict_change": true
+    },
+    "M": {
+      "old_successful_command_text_measurement": false,
+      "proposed_manual_delivery": "not established",
+      "no_historical_verdict_change": true
+    },
+    "N": {
+      "old_successful_command_text_measurement": true,
+      "proposed_manual_delivery": "not established",
+      "no_historical_verdict_change": true
+    }
+  },
+  "models": {
+    "luna": {
+      "status": "all fourteen classification findings match; independent adoption review pending",
+      "thread": "01a16dc8-23c0-7f22-a8c3-717e2c432f1f",
+      "actual_model": "gpt-6-luna",
+      "actual_effort": "high",
+      "duration_seconds": 103.81297779083252,
+      "raw_sha256": "88c37f57e9f9d8b703b8789961ded19e63f8b33ba270e739b86dbcc64b8c90bd",
+      "classifications": {
+        "A": "established",
+        "B": "established",
+        "C": "not established",
+        "D": "not established",
+        "E": "not established",
+        "F": "not established",
+        "G": "not established",
+        "H": "not established",
+        "I": "not established",
+        "J": "not established",
+        "K": "not established",
+        "L": "not established",
+        "M": "not established",
+        "N": "not established"
+      },
+      "completed_commands": 7,
+      "outer_nonzero_commands": [
+        [
+          "item_4",
+          1
+        ],
+        [
+          "item_6",
+          2
+        ]
+      ],
+      "native_probe": {
+        "event_index": 13,
+        "item_id": "item_6",
+        "exact_inner_command_sha256": "0bfa72c99589cbdda02dd99945f814c7fa2993fea1f3388c3acd22109a4ed785",
+        "raw_command_sha256": "5da4a854fd868d8f00af92326db7d8b3a1926bcf7d37643c4cbd83066e623a96",
+        "output_sha256": "10ad2a0c0a5b2e14fe4c43f1a39829c539b966d352865f7a0a7c3ead51fc3822",
+        "output_bytes": 2078,
+        "source_sha256": "fbc6b99852540f20a25dfd224d0d0f07399a9021e8cb1fc1d87f53c5156fb8a9",
+        "source_bytes": 1950,
+        "aggregate_exit": 2,
+        "source_command_exit": "unknown",
+        "old_successful_command_credit": false,
+        "full_body_exposure": true
+      },
+      "usage": [
+        {
+          "input_tokens": 252427,
+          "cached_input_tokens": 217600,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 9645,
+          "reasoning_output_tokens": 6676
+        }
+      ],
+      "full_control_source_target_git_unchanged": true,
+      "legacy_full_component_reads": [],
+      "notes": "One wrong-directory rg no-hit exits1. Reads protocol including its measurement definitions and routing; does not directly open tools/README.md. Does not compute all legacy case predicates; states their distinction accurately. Initial large case display followed by compact identity/event/exact-body inspection.",
+      "semantic_audit": "Parent inspected all command bodies and complete final table/reasons. Both preserve aggregate failure, unknown cat exit, simulation/native distinction, prospective independent approval and remaining installation gates. No writes, target imports/tests, children or external effects. No semantic retries."
+    },
+    "sol": {
+      "status": "all fourteen classification findings match; independent adoption review pending",
+      "thread": "01a16dc8-271b-7aa1-8921-b72fe1d85ea0",
+      "actual_model": "gpt-6.1-sol",
+      "actual_effort": "high",
+      "duration_seconds": 124.6744589805603,
+      "raw_sha256": "d5924237ef900114e59d1fa54e84eb14f16e0a3af3bf86755de32af31f77a4da",
+      "classifications": {
+        "A": "established",
+        "B": "established",
+        "C": "not established",
+        "D": "not established",
+        "E": "not established",
+        "F": "not established",
+        "G": "not established",
+        "H": "not established",
+        "I": "not established",
+        "J": "not established",
+        "K": "not established",
+        "L": "not established",
+        "M": "not established",
+        "N": "not established"
+      },
+      "completed_commands": 12,
+      "outer_nonzero_commands": [
+        [
+          "item_13",
+          2
+        ]
+      ],
+      "native_probe": {
+        "event_index": 26,
+        "item_id": "item_13",
+        "exact_inner_command_sha256": "0bfa72c99589cbdda02dd99945f814c7fa2993fea1f3388c3acd22109a4ed785",
+        "raw_command_sha256": "1b3e5389b96c482f2b4b70f4426c9c52297e9b44c9244124eb8a0d75b4893057",
+        "output_sha256": "10ad2a0c0a5b2e14fe4c43f1a39829c539b966d352865f7a0a7c3ead51fc3822",
+        "output_bytes": 2078,
+        "source_sha256": "fbc6b99852540f20a25dfd224d0d0f07399a9021e8cb1fc1d87f53c5156fb8a9",
+        "source_bytes": 1950,
+        "aggregate_exit": 2,
+        "source_command_exit": "unknown",
+        "old_successful_command_credit": false,
+        "full_body_exposure": true
+      },
+      "usage": [
+        {
+          "input_tokens": 221404,
+          "cached_input_tokens": 190208,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 5356,
+          "reasoning_output_tokens": 1660
+        }
+      ],
+      "full_control_source_target_git_unchanged": true,
+      "legacy_full_component_reads": [],
+      "notes": "Two large case displays truncate; compact follow-up inspects all premises/output comparisons. Verifies all46bundle identities. Derived analysis of copied native result independently matches the primary item13; it is not a second probe or substituted primary evidence.",
+      "semantic_audit": "Parent inspected all command bodies and complete final table/reasons. Both preserve aggregate failure, unknown cat exit, simulation/native distinction, prospective independent approval and remaining installation gates. No writes, target imports/tests, children or external effects. No semantic retries."
+    }
+  },
+  "raw_trial_usage": {
+    "input_tokens": 473831,
+    "cached_input_tokens": 407808,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 15001,
+    "reasoning_output_tokens": 8336
+  },
+  "full_task_billing_and_cost": "unknown",
+  "owned_sandbox": {
+    "name": "agentos-readproof-20261024",
+    "id": "98649ea2-ffbc-487f-8d54-87edb9512197"
+  },
+  "original_sandbox_pairs": 63,
+  "codex_update": {
+    "before": "0.149.1",
+    "after": "0.164.0"
+  },
+  "limits": [
+    "Both models were explicitly prompted to evaluate the protocol; no unprompted installer behavior, D/I/U, installation or all-path success is established.",
+    "No old source-read metric, historical gate or historical verdict changes. A future trial must preregister this reviewed protocol before native use.",
+    "Source-content exposure alone cannot approve a read. Manual identity/provenance/stability/context/order review and all separate obligations remain required.",
+    "Luna reads the protocol including inline metric definitions but does not directly open tools/README.md; no claim of every ancillary reference being opened. Sol reads it and computes both mechanical predicates.",
+    "Cases are controlled simulated evidence, not native onboarding records. Seven local shell executions produced A/B/C/D/E/M evidence; remaining cases deliberately alter premises, and H does not execute a target write.",
+    "A failed aggregate can support only per-source full-body delivery when the exact narrow provenance conditions hold. It remains a failure and the individual cat exit stays unknown.",
+    "Large case display truncation is not credited as complete case inspection; compact event/identity/exact-body follow-ups supply case coverage. Native probe outputs are untruncated.",
+    "Remote delivery and final archive/cleanup are pending observations."
+  ]
+}
