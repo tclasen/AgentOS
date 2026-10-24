@@ -1,0 +1,375 @@
+{
+  "decision": "reject candidate promotion: transient unauthorized first-use Python cache write",
+  "observed_at": "2026-10-24T09:17:45.877613+00:00",
+  "base": "07ea1f4d26c34f6433ad28cc266e5552f936d744",
+  "operative_candidate": "d717ed4c67f8d1e500314fd501572db938eeb434",
+  "trial_count": 8,
+  "peak_concurrency": 2,
+  "children": 0,
+  "trials": [
+    {
+      "name": "bundle-luna-D",
+      "status": "returned",
+      "requested_model": "gpt-6-luna",
+      "requested_reasoning_effort": "high",
+      "started_epoch": 1792832346.506596,
+      "ended_epoch": 1792832401.162152,
+      "threads": [
+        "01a16d22-9aed-7b80-ad67-5aa2daccdf1d"
+      ],
+      "failed_commands": 1
+    },
+    {
+      "name": "full-sol-D",
+      "status": "returned",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "started_epoch": 1792832295.568811,
+      "ended_epoch": 1792832451.2496178,
+      "threads": [
+        "01a16d21-d3cf-7340-8f7a-409a003ca90c"
+      ],
+      "failed_commands": 0
+    },
+    {
+      "name": "bundle-sol-D",
+      "status": "returned",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "started_epoch": 1792832416.4679492,
+      "ended_epoch": 1792832634.253012,
+      "threads": [
+        "01a16d23-ac43-7333-8e81-757936343a55"
+      ],
+      "failed_commands": 1
+    },
+    {
+      "name": "full-luna-U",
+      "status": "returned",
+      "requested_model": "gpt-6-luna",
+      "requested_reasoning_effort": "high",
+      "started_epoch": 1792832950.5727959,
+      "ended_epoch": 1792832974.925537,
+      "threads": [
+        "01a16d2b-d28f-7973-b2b2-828bf2cfdacf"
+      ],
+      "failed_commands": 0
+    },
+    {
+      "name": "full-sol-I",
+      "status": "returned",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "started_epoch": 1792832689.777827,
+      "ended_epoch": 1792833353.4218738,
+      "threads": [
+        "01a16d27-d797-7661-8014-4261f7d8dda1"
+      ],
+      "failed_commands": 1
+    },
+    {
+      "name": "bundle-luna-I",
+      "status": "returned",
+      "requested_model": "gpt-6-luna",
+      "requested_reasoning_effort": "high",
+      "started_epoch": 1792832993.190887,
+      "ended_epoch": 1792833123.324533,
+      "threads": [
+        "01a16d2c-7944-72c1-847e-5c223e9bf0cd"
+      ],
+      "failed_commands": 0
+    },
+    {
+      "name": "full-luna-D",
+      "status": "returned",
+      "requested_model": "gpt-6-luna",
+      "requested_reasoning_effort": "high",
+      "started_epoch": 1792832289.524359,
+      "ended_epoch": 1792832336.776417,
+      "threads": [
+        "01a16d21-bc53-71b0-8679-2f1d6cd111fb"
+      ],
+      "failed_commands": 4
+    },
+    {
+      "name": "full-luna-I",
+      "status": "returned",
+      "requested_model": "gpt-6-luna",
+      "requested_reasoning_effort": "high",
+      "started_epoch": 1792832687.419683,
+      "ended_epoch": 1792832847.122905,
+      "threads": [
+        "01a16d27-d22c-7c23-86a7-13cf6180d5c1"
+      ],
+      "failed_commands": 1
+    }
+  ],
+  "native_models": [
+    {
+      "name": "bundle-luna-D",
+      "requested_model": "gpt-6-luna",
+      "requested_reasoning_effort": "high",
+      "thread": "01a16d22-9aed-7b80-ad67-5aa2daccdf1d",
+      "model": "gpt-6-luna",
+      "effort": "high",
+      "native_session": "/home/agent/.codex/sessions/2026/10/24/rollout-2026-10-24T08-59-06-01a16d22-9aed-7b80-ad67-5aa2daccdf1d.jsonl"
+    },
+    {
+      "name": "full-luna-I",
+      "requested_model": "gpt-6-luna",
+      "requested_reasoning_effort": "high",
+      "thread": "01a16d27-d22c-7c23-86a7-13cf6180d5c1",
+      "model": "gpt-6-luna",
+      "effort": "high",
+      "native_session": "/home/agent/.codex/sessions/2026/10/24/rollout-2026-10-24T09-04-48-01a16d27-d22c-7c23-86a7-13cf6180d5c1.jsonl"
+    },
+    {
+      "name": "full-luna-D",
+      "requested_model": "gpt-6-luna",
+      "requested_reasoning_effort": "high",
+      "thread": "01a16d21-bc53-71b0-8679-2f1d6cd111fb",
+      "model": "gpt-6-luna",
+      "effort": "high",
+      "native_session": "/home/agent/.codex/sessions/2026/10/24/rollout-2026-10-24T08-58-09-01a16d21-bc53-71b0-8679-2f1d6cd111fb.jsonl"
+    },
+    {
+      "name": "full-luna-U",
+      "requested_model": "gpt-6-luna",
+      "requested_reasoning_effort": "high",
+      "thread": "01a16d2b-d28f-7973-b2b2-828bf2cfdacf",
+      "model": "gpt-6-luna",
+      "effort": "high",
+      "native_session": "/home/agent/.codex/sessions/2026/10/24/rollout-2026-10-24T09-09-10-01a16d2b-d28f-7973-b2b2-828bf2cfdacf.jsonl"
+    },
+    {
+      "name": "full-sol-D",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "thread": "01a16d21-d3cf-7340-8f7a-409a003ca90c",
+      "model": "gpt-6.1-sol",
+      "effort": "high",
+      "native_session": "/home/agent/.codex/sessions/2026/10/24/rollout-2026-10-24T08-58-15-01a16d21-d3cf-7340-8f7a-409a003ca90c.jsonl"
+    },
+    {
+      "name": "full-sol-I",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "thread": "01a16d27-d797-7661-8014-4261f7d8dda1",
+      "model": "gpt-6.1-sol",
+      "effort": "high",
+      "native_session": "/home/agent/.codex/sessions/2026/10/24/rollout-2026-10-24T09-04-50-01a16d27-d797-7661-8014-4261f7d8dda1.jsonl"
+    },
+    {
+      "name": "bundle-luna-I",
+      "requested_model": "gpt-6-luna",
+      "requested_reasoning_effort": "high",
+      "thread": "01a16d2c-7944-72c1-847e-5c223e9bf0cd",
+      "model": "gpt-6-luna",
+      "effort": "high",
+      "native_session": "/home/agent/.codex/sessions/2026/10/24/rollout-2026-10-24T09-09-53-01a16d2c-7944-72c1-847e-5c223e9bf0cd.jsonl"
+    },
+    {
+      "name": "bundle-sol-D",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "thread": "01a16d23-ac43-7333-8e81-757936343a55",
+      "model": "gpt-6.1-sol",
+      "effort": "high",
+      "native_session": "/home/agent/.codex/sessions/2026/10/24/rollout-2026-10-24T09-00-16-01a16d23-ac43-7333-8e81-757936343a55.jsonl"
+    }
+  ],
+  "startup_records": 1,
+  "phase_audit": {
+    "sources_unchanged": true,
+    "all_protected_original_files_and_git_unchanged": true,
+    "final_links_resolve": true
+  },
+  "local_checks": {
+    "regressions": 41,
+    "component_count": 25,
+    "unchanged_components": [
+      "authority.md",
+      "effect-reconciliation.md",
+      "scheduling.md",
+      "work-ledger.md",
+      "self-improvement.md",
+      "activation.md",
+      "brownfield-migration.md",
+      "capability-routing.md",
+      "delivery-acceptance.md",
+      "independent-evaluation.md",
+      "multi-repo.md",
+      "context-core.md",
+      "delegation.md",
+      "director.md",
+      "git-delivery.md",
+      "advanced-validation.md",
+      "role-lifecycle.md",
+      "chief-of-staff.md",
+      "durable-handoff.md",
+      "learning-queue.md",
+      "telemetry.md",
+      "runtime-native.md",
+      "information-boundaries.md",
+      "parallel-coordination.md"
+    ],
+    "resource_budget_change": "four original duties preserved verbatim as separate checklist entries",
+    "profiles": {
+      "portable": 10,
+      "engineering": 22,
+      "portfolio": 18
+    },
+    "relative_links": [
+      [
+        "start.md",
+        "core/constitution.md"
+      ],
+      [
+        "start.md",
+        "core/installer-policy.md"
+      ],
+      [
+        "start.md",
+        "core/graph-routing.md"
+      ],
+      [
+        "start.md",
+        "interviews/bootstrap.md"
+      ],
+      [
+        "start.md",
+        "phases/discover.md"
+      ],
+      [
+        "start.md",
+        "phases/implement.md"
+      ],
+      [
+        "start.md",
+        "phases/qualify.md"
+      ],
+      [
+        "start.md",
+        "phases/handoff.md"
+      ],
+      [
+        "start.md",
+        "components/index.md"
+      ],
+      [
+        "start.md",
+        "phases/implement.md"
+      ],
+      [
+        "start.md",
+        "phases/qualify.md"
+      ],
+      [
+        "start.md",
+        "phases/handoff.md"
+      ],
+      [
+        "phases/implement.md",
+        "qualify.md"
+      ],
+      [
+        "phases/implement.md",
+        "../examples/portable-implementation.md"
+      ],
+      [
+        "phases/implement.md",
+        "qualify.md"
+      ],
+      [
+        "phases/qualify.md",
+        "implement.md"
+      ],
+      [
+        "phases/qualify.md",
+        "../examples/portable-implementation.md"
+      ],
+      [
+        "phases/qualify.md",
+        "../examples/portable-implementation.md#concrete-operating-scenario-worksheet"
+      ],
+      [
+        "phases/qualify.md",
+        "../concepts/evidence-levels.md"
+      ],
+      [
+        "phases/qualify.md",
+        "handoff.md"
+      ],
+      [
+        "examples/index.md",
+        "selection-scenarios.md"
+      ],
+      [
+        "examples/index.md",
+        "portable-implementation.md"
+      ],
+      [
+        "components/resource-budgets.md",
+        "delegation.md"
+      ]
+    ],
+    "normal_and_three_refusal_examples_pass": true,
+    "governance_unchanged": true,
+    "diagnostic": "Initial parent checker incorrectly compared the resource-budget source hash to the previous candidate despite the declared layout edit. Required selections, dependency metadata and all other component identities unchanged. Corrected that checker after diagnosis; no criterion/source revision."
+  },
+  "admission_method_reconciliation": {
+    "original_error": "Missing successful full startup/design body: phases/design.md",
+    "original_checker_sha256": "0ed48e58993e02a35b7eea0d0a5ac7cb6a279a1a9a3fb763db418f53060efd55",
+    "updated_checker_sha256": "78aaab33c0536b731fd0f991cf12d64aed6b63ae3fd1ab294a370d2a46373183",
+    "proof": {
+      "source": "phases/design.md",
+      "item_id": "item_4",
+      "command_sha256": "9446c1082a82c7f9af980058c4e34d6d6f4d94df87b0f8af5301161e585b720a",
+      "output_sha256": "d1f9ab0b23d27a42844ce19baeab69b0680202f7cf6db18c6e642ddaffd741fb",
+      "source_sha256": "95681cf0f3fd3d77219bbe14d79ac4be78056a69dbe50e5f04c13fd768396aba",
+      "reason": "Exact cat source is followed by && ls parent && ls optional-tools. The parent directory listing and final optional-tools error prove the source cat returned zero; full canonical body is present. Whole outer command still failed exit2. No other failed output credited.",
+      "scope": "This one exact source body in this one pinned completed command",
+      "observed_at": "2026-10-24T09:03:18.984965+00:00"
+    },
+    "criterion": "successful complete source read; only source-specific successful subcommand credited",
+    "native_retry": false,
+    "whole_command_status_unchanged": true
+  },
+  "U_reconciliation": {
+    "observed_at": "2026-10-24T09:11:01.572871+00:00",
+    "decision": "reject candidate promotion: mandatory no-other-writes gate failed",
+    "supersedes_current_verdict": "full-luna-U-decision.json local scope pass was only a final-snapshot observation and insufficient; preserve original record",
+    "positive": "exact14byte output and3tests pass; final project/org/Git bytes preserved; startup provenance still to correlate",
+    "failure": "item5 formatter import without -B/PYTHONDONTWRITEBYTECODE writes __pycache__/formatter.cpython-314.pyc; item6 observes cache; item8 deletes cache and directory. Recovery does not erase unauthorized transient writes.",
+    "scope_source": "full-luna-use.txt permits creating only sample-output.txt, no other writes",
+    "parent_admission_limitation": "The parent checked final delta and launched bundle-luna-I in the same tool batch before inspecting the returned raw U trace. That root was already admitted when transient-scope failure was diagnosed. No next U or unstarted bundle-sol-I is admitted. Source/criteria are not repaired or relaxed.",
+    "already_running": [
+      "full-sol-I",
+      "bundle-luna-I"
+    ],
+    "stopped_unstarted": [
+      "bundle-sol-I",
+      "full-sol-U",
+      "bundle-luna-U",
+      "bundle-sol-U"
+    ],
+    "initial_decision_sha256": "37097f21f1ea70044d7348748796433a0cd110daa8952b6abd3e935fbb327837"
+  },
+  "unstarted": [
+    "bundle-sol-I",
+    "full-sol-U",
+    "bundle-luna-U",
+    "bundle-sol-U"
+  ],
+  "six_source_paths_withdrawn_to_base": true,
+  "broader_goal": "active; no complete two-model all-path acceptance",
+  "next": "independent exact-candidate findings review and protected delivery; verified evidence export before owned cleanup",
+  "trial_archive": {
+    "archive": "/private/tmp/agentos-concrete-20261024-trials.tar.gz",
+    "sha256": "6da1c057bf41fe63fc9ee967281c146cc799125bc9906c85f25d0284f4de4249",
+    "bytes": 2153581,
+    "indexed_files": 1106,
+    "index": "evidence/trials-index.json",
+    "verified_all_members": true
+  }
+}
