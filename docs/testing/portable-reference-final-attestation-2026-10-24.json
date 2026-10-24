@@ -1,0 +1,114 @@
+{
+  "record_kind": "Observed post-review facts under APP-000014 limited addition allowance; no retroactive trial edits",
+  "observed_at": "2026-10-24T07:12:07.315188+00:00",
+  "task": "TASK-000186",
+  "run": "RUN-000181",
+  "reviewed_candidate": {
+    "base": "ffe63908d3967cf9c2ef2bbb7e69ec8975c5739d",
+    "head": "41088d9252a7de32f4f07f77798cabc8608d9229",
+    "tree": "ab805ff726d546ac342c48c9e84c7e120b1aa7a2",
+    "paths": {
+      "docs/agent-records/runs/RUN-000181.md": "5ceb03c8cf40a0859e5cb70417f773aa54e84ad4e0fcac8883ee77223cd34d64",
+      "docs/agent-records/tasks/project/TASK-000186.md": "4f26b43677cbf4eec6ad92bb33bfbf03cd2209bcc9af62c308ea5f0ca8034102",
+      "docs/testing/portable-reference-2026-10-24.json": "c6718307d53d439fc82b37dffa723a553c7ea719edfe0f46f6a6ecefda8663b7",
+      "docs/testing/portable-reference-2026-10-24.md": "64f29c1ef639e1975eca79bd6d371d19eaab46dcc033e28e236bf1656641dbe7"
+    }
+  },
+  "receipt": {
+    "path": "docs/agent-records/approvals/APP-000014.md",
+    "sha256": "9ff74551f4b9fffe73970f17658b761bc08cfca505c607ec2b91a056604d6d6f",
+    "byte_identical_to_independent_output": true,
+    "decision": "conditional acceptance of rejection report only"
+  },
+  "reviewer_actual": {
+    "name": "review-final",
+    "requested": "gpt-6.1-sol",
+    "thread": "01a16cba-be88-7472-971a-08d1f928c55e",
+    "model": "gpt-6.1-sol",
+    "effort": null
+  },
+  "all_sixteen_native_models_matched": true,
+  "native_trials": 15,
+  "independent_review_invocations": 1,
+  "receipt_correction_invocations": 0,
+  "reviewer_validation": {
+    "regressions": 39,
+    "formatter_reproductions": 2,
+    "exact_frozen_code_safety_reproduced": true
+  },
+  "reviewer_diagnostics": {
+    "nonzero_command_items": 5,
+    "description": "Missing python alias, assumed artifact paths, import-only module mistaken as CLI, incorrect decision filename, bytes-versus-size manifest field; corrected within limits in scratch. Initial glob-cat directory diagnostics also retained inside successful enclosing command."
+  },
+  "current_main_rules_observed": [
+    {
+      "type": "deletion",
+      "ruleset_source_type": "Repository",
+      "ruleset_source": "tclasen/AgentOS",
+      "ruleset_id": 25755038
+    },
+    {
+      "type": "non_fast_forward",
+      "ruleset_source_type": "Repository",
+      "ruleset_source": "tclasen/AgentOS",
+      "ruleset_id": 25755038
+    },
+    {
+      "type": "pull_request",
+      "parameters": {
+        "required_approving_review_count": 0,
+        "dismiss_stale_reviews_on_push": false,
+        "required_reviewers": [],
+        "require_code_owner_review": false,
+        "require_last_push_approval": false,
+        "required_review_thread_resolution": true,
+        "require_extra_approval_for_unattributed_changes": true,
+        "allowed_merge_methods": [
+          "merge"
+        ]
+      },
+      "ruleset_source_type": "Repository",
+      "ruleset_source": "tclasen/AgentOS",
+      "ruleset_id": 25755038
+    }
+  ],
+  "cleanup": {
+    "observed_at": "2026-10-24T07:11:54.837597+00:00",
+    "owned_sandbox_removed": {
+      "name": "agentos-portable-20261024",
+      "id": "50b63260-a656-4f74-a6bb-416006e24cf2"
+    },
+    "owned_raw_directory_removed": "/private/tmp/agentos-portable-20261024",
+    "original_sandbox_pairs_preserved": 63,
+    "all_others_unchanged": true,
+    "remaining_count": 63,
+    "archives": [
+      {
+        "archive": "/private/tmp/agentos-portable-20261024-trials.tar.gz",
+        "sha256": "37f21cc6e748408b61eaf44e9bc24a45c745e1b52c94b382b14c1b1a80def317",
+        "bytes": 1984882,
+        "indexed_files": 699,
+        "index": "evidence/trials-index.json",
+        "verified_all_members": true
+      },
+      {
+        "archive": "/private/tmp/agentos-portable-20261024-acceptance.tar.gz",
+        "sha256": "9b4e11b8b5f39beb66ff606af2f8a078173c9e1e84fe06cbc47b6f0d0a3837ca",
+        "bytes": 221557,
+        "indexed_files": 36,
+        "index": "evidence/acceptance-index.json",
+        "verified_all_members": true
+      }
+    ],
+    "archive_bytes_total": 2206439,
+    "no_global_prune": true,
+    "primary_worktrees_before_cleanup": "worktree /Users/Shared/projects/AgentOS\nHEAD 41088d9252a7de32f4f07f77798cabc8608d9229\nbranch refs/heads/improve/portable-reference\n\n"
+  },
+  "post_review_paths_allowed": [
+    "docs/agent-records/approvals/APP-000014.md",
+    "docs/testing/portable-reference-final-attestation-2026-10-24.json"
+  ],
+  "operative_source_changes": false,
+  "delivery_status": "Pending normal protected PR/checks/threads/merge and fetched-main equivalence; recorded separately after observation.",
+  "global_goal_status": "active; rejected references did not resolve Luna concrete qualification gaps."
+}
