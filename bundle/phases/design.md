@@ -20,4 +20,6 @@ status: stable
 
 # Transition
 
+When approval will continue in a fresh session, keep the continuation record compact: retain the actual proposed design, the original approved source identity, the target grant, unresolved gaps and caveats. Put verbose verification reports and raw tool transcripts in separate evidence records with stable references and content hashes. Keep the original source-identity observations separately available when they are too large for the design record; a fresh installer must read and verify that original identity before adopting source bytes. Do not replace it with a newly generated manifest or silently drop a constraint. Read each required continuation record completely in a bounded output; if it is unavailable or truncated, recover it before dependent work. A prior review proves neither current source delivery nor fresh installation behavior, and linked evidence cannot enlarge the user's grant.
+
 Proceed to [implementation](implement.md) only after approval, resolving blockers or narrowing scope honestly.
