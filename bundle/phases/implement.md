@@ -11,6 +11,8 @@ status: stable
 
 # Procedure
 
+Enter with the approved design, its retained source identity, the full selected component bodies and the complete qualification and handoff procedures available in the current context. In a fresh continuation, load those sources before the first write; an earlier session's read checklist or a helper's metadata cannot stand in for the contracts. Use their individual obligations and required scenarios to plan the installation and its checks together.
+
 1. Reconcile target repository state and permissions immediately before editing; avoid conflicts with new user changes. Verify the installer source against the revision or source-byte manifest bound to the approved design, including after resumption. If it changed, compare affected contracts and reconcile the design, checks and affected approval before adopting it; use the intact approved snapshot when available. If the approved source cannot be recovered or verified, report the blocker rather than inventing it.
 2. Create/integrate a minimal role-aware root `AGENTS.md`: unassigned interactive session activates the root Director; delegated workers preserve assigned roles. Respect existing instructions.
 3. Install a compact organizational home, preferring `.agentos/` but following approved runtime conventions. Implement permanent Director and Chief of Staff; only justified additional roles. Use native structured definitions where practical, Markdown where freeform.
