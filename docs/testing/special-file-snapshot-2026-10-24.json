@@ -1,0 +1,170 @@
+{
+  "task": "TASK-000200",
+  "run": "RUN-000195",
+  "base": "e98e06ca51ea6cf8e1518fb1f181906585350b59",
+  "operative_candidate": "9c7ad18fe4589793cce393340b761b33c52cf3eb",
+  "decision": "reject promotion under frozen Plan1; withdraw all three operative paths",
+  "reason": "Native Luna socket and added/removed/type-change checks unqualified after AF_UNIX bind EPERM; no semantic rerun or parent repair",
+  "baseline": "Actual FIFO snapshot timed out3seconds and owned child was killed/reaped; original PR26 retained FIFO hang corroborates",
+  "local": "51tests passed14.036seconds after authorized host escalation; initial restricted run failed only new socket-bind setup and retained outputs",
+  "native_audit": {
+    "time": "2026-10-24T15:19:03.264292+00:00",
+    "frozen_controls_unchanged": 243,
+    "source_files_unchanged": 217,
+    "runs": {
+      "sol": {
+        "thread": "01a16e78-59a0-7f70-afff-525be37923da",
+        "elapsed_seconds": 148.71584725379944,
+        "status": "returned",
+        "cli_command_items": 10,
+        "cli_nonzero": [
+          {
+            "item": "item_1",
+            "exit": 1,
+            "output": "/private/tmp/agentos-specialsnapshot-20261024/work/sol\n"
+          },
+          {
+            "item": "item_11",
+            "exit": 1,
+            "output": "{\n  \"task\": \"TASK-000200\",\n  \"run\": \"RUN-000195\",\n  \"result\": \"PASS for filesystem snapshot contract, with socket-bind gap\",\n  \"checks_passed\": 30,\n  \"snapshot_calls\": [\n    {\n      \"argv\": [\n        \"/usr/bin/python3\",\n        \"-B\",\n        \"/private/tmp/agentos-specialsnapshot-20261024/controls/source-full/tools/qualification.py\",\n        \"snapshot\",\n        \"/private/tmp/agentos-specialsnapshot-20261024/work/sol/scratch/q195/r1/fx\",\n        \"/private/tmp/agentos-specialsnapshot-20261024/work/sol/scratch/q195/r1/01-baseline.snapshot.json\"\n      ],\n      \"bytecode_disabled\": true,\n      \"elapsed_seconds\": 0.02459029199999918,\n      \"exit_code\": 0,\n      \"label\": \"01-baseline\",\n      \"timeout_seconds\": 12\n    },\n    {\n      \"argv\": [\n        \"/usr/bin/python3\",\n        \"-B\",\n        \"/private/tmp/agentos-specialsnapshot-20261024/controls/source-full/tools/qualification.py\",\n        \"snapshot\",\n        \"/private/tmp/agentos-specialsnapshot-20261024/work/sol/scratch/q195/r1/fx\",\n        \"/private/tmp/agentos-specialsnapshot-20261024/work/sol/scratch/q195/r1/02-changed.snapshot.json\"\n      ],\n      \"bytecode_disabled\": true,\n      \"elapsed_seconds\": 0.02384999999998172,\n      \"exit_code\": 0,\n      \"label\": \"02-changed\",\n      \"timeout_seconds\": 12\n    },\n    {\n      \"argv\": [\n        \"/usr/bin/python3\",\n        \"-B\",\n        \"/private/tmp/agentos-specialsnapshot-20261024/controls/source-full/tools/qualification.py\",\n        \"snapshot\",\n        \"/private/tmp/agentos-specialsnapshot-20261024/work/sol/scratch/q195/r1/fx\",\n        \"/private/tmp/agentos-specialsnapshot-20261024/work/sol/scratch/q195/r1/03-repeat.snapshot.json\"\n      ],\n      \"bytecode_disabled\": true,\n      \"elapsed_seconds\": 0.02358179099999802,\n      \"exit_code\": 0,\n      \"label\": \"03-repeat\",\n      \"timeout_seconds\": 12\n    }\n  ],\n  \"original_scope_preserved\": false,\n  \"original_scope_entries_compared_including_git\": 31,\n  \"candidate_source_and_readme_unchanged\": true,\n  \"retained_special_entries\": {\n    \"scratch/q195/fx/keep.fifo\": 4096,\n    \"scratch/q195/fx/keep.sock\": 49152,\n    \"scratch/q195/r1/fx/keep.fifo\": 4096,\n    \"scratch/q195/r1/fx/keep.sock\": 49152\n  },\n  \"bytecode_artifacts\": [],\n  \"gap\": \"AF_UNIX bind returned EPERM. Socket inodes created with os.mknod(S_IFSOCK), so bound socket behavior was not tested.\",\n  \"failure_evidence\": [\n    \"scratch/q195/failure.txt\",\n    \"scratch/q195/report.json\"\n  ],\n  \"retry_evidence\": \"scratch/q195/r1/report.json\",\n  \"usage\": \"Session tokens/cost unknown; no provider calls or subordinate agents.\",\n  \"qualification_scope\": \"Local fixture only; no broader onboarding or native runner/parent collection qualification.\"\n}\nTraceback (most recent call last):\n  File \"/private/tmp/agentos-specialsnapshot-20261024/work/sol/scratch/q195/final-verify.py\", line 63, in <module>\n    assert original == latest and source_unchanged and not summary['bytecode_artifacts']\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+          }
+        ],
+        "primary_additional_failures": [
+          {
+            "call": 33,
+            "output": 35,
+            "exit": 1,
+            "reason": "AF_UNIX bind EPERM"
+          }
+        ],
+        "original_regular_files_unchanged": 19,
+        "added_regular_files": 56,
+        "special_entries": {
+          "scratch/q195/fx/keep.sock": 49152,
+          "scratch/q195/fx/keep.fifo": 4096,
+          "scratch/q195/r1/fx/keep.sock": 49152,
+          "scratch/q195/r1/fx/keep.fifo": 4096,
+          "scratch/q195/r1/fx/file-to-socket": 49152,
+          "scratch/q195/r1/fx/link-to-socket": 49152,
+          "scratch/q195/r1/fx/directory-to-socket": 49152,
+          "scratch/q195/r1/fx/added.fifo": 4096,
+          "scratch/q195/r1/fx/link-to-fifo": 4096,
+          "scratch/q195/r1/fx/directory-to-fifo": 4096,
+          "scratch/q195/r1/fx/file-to-fifo": 4096,
+          "scratch/q195/r1/fx/added.socket": 49152
+        },
+        "links": {
+          "scratch/q195/r1/fx/dir.link": "empty",
+          "scratch/q195/r1/fx/mutable.link": "empty",
+          "scratch/q195/r1/fx/socket-to-link": "regular.bin",
+          "scratch/q195/r1/fx/socket.link": "keep.sock",
+          "scratch/q195/r1/fx/dangling.link": "missing-target",
+          "scratch/q195/r1/fx/file.link": "regular.bin",
+          "scratch/q195/r1/fx/added.link": "regular.bin",
+          "scratch/q195/r1/fx/fifo-to-link": "regular.bin",
+          "scratch/q195/r1/fx/fifo.link": "keep.fifo"
+        },
+        "host_after_snapshot_types_match_actual_lstat": true,
+        "no_parent_fifo_intervention": true,
+        "usage": {
+          "input_tokens": 204426,
+          "cached_input_tokens": 188928,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 8030,
+          "reasoning_output_tokens": 1550
+        },
+        "final_message": "Local fixture checks passed with limitations: 30 checks, three successful CLI snapshots, additions/removals, and 12 special-to-ordinary type transitions.\n\nRetained under `scratch/q195/r1/fx/`:\n\n- `regular.bin`: original bytes preserved\n- `empty/`: empty directory\n- `file.link \u2192 regular.bin`: target preserved\n- `keep.fifo`: type `4096`\n- `keep.sock`: type `49152`\n\nSocket bind returned `EPERM`; the socket inode was created with `mknod`, so bound-socket behavior remains untested. No FIFO was opened or socket connected/listened.\n\nAll worker writes stayed in scratch. README, Git metadata/history, and original bytes/types matched. Cross-attempt timestamps changed on `.agents`, `.aws`, and `.codex` directory roots; cause unknown.\n\nFailures and actual outputs are retained in the [evidence report](/private/tmp/agentos-specialsnapshot-20261024/work/sol/scratch/q195/RESULT.md). Parent collection remains pending. Usage/cost are unknown. No broader onboarding qualification is claimed."
+      },
+      "luna": {
+        "thread": "01a16e78-5b8e-7233-b3b6-1690737ae142",
+        "elapsed_seconds": 81.5475640296936,
+        "status": "returned",
+        "cli_command_items": 10,
+        "cli_nonzero": [
+          {
+            "item": "item_3",
+            "exit": 1,
+            "output": "/private/tmp/agentos-specialsnapshot-20261024/work/luna\n"
+          },
+          {
+            "item": "item_10",
+            "exit": 1,
+            "output": "/bin/bash: line 1: scratch/q/attempt-2-output.txt: No such file or directory\ncat: scratch/q/attempt-2-output.txt: No such file or directory\n"
+          }
+        ],
+        "primary_additional_failures": [
+          {
+            "call": 48,
+            "output": 50,
+            "exit": 1,
+            "reason": "initial AF_UNIX bind EPERM"
+          },
+          {
+            "call": 68,
+            "output": 70,
+            "exit": 1,
+            "reason": "short-path AF_UNIX bind EPERM after redirection recovery"
+          }
+        ],
+        "original_regular_files_unchanged": 19,
+        "added_regular_files": 8,
+        "special_entries": {
+          "scratch/snapshot-evidence/fixture/fifo-entry": 4096,
+          "scratch/q/fixture/fifo-entry": 4096
+        },
+        "links": {
+          "scratch/snapshot-evidence/fixture/link-entry": "regular.bin",
+          "scratch/q/fixture/link-entry": "regular.bin"
+        },
+        "host_after_snapshot_types_match_actual_lstat": true,
+        "no_parent_fifo_intervention": true,
+        "usage": {
+          "input_tokens": 232307,
+          "cached_input_tokens": 189440,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 7158,
+          "reasoning_output_tokens": 2321
+        },
+        "final_message": "**Partial qualification only.** The actual snapshot CLI succeeded once with a 20-second timeout and bytecode disabled. It reported the regular file\u2019s 25-byte hash, the empty directory, FIFO type `4096`, and symlink target `regular.bin`; independent checks agreed.\n\nBoth Unix socket bind attempts failed with `EPERM`, including one using a shorter path. I retained the failure outputs and stopped retrying. The socket check and added/removed entry and type-change deltas remain untested. Usage is unknown.\n\nA FIFO remains in `scratch/`. No files outside `scratch/` were changed; the pre-existing untracked `README.md` is unchanged. The detailed record and CLI snapshot are in [qualification-result.md](/private/tmp/agentos-specialsnapshot-20261024/work/luna/scratch/qualification-result.md) and [partial.json](/private/tmp/agentos-specialsnapshot-20261024/work/luna/scratch/partial-evidence/partial.json). This does not qualify broader onboarding."
+      }
+    },
+    "usage": {
+      "input_tokens": 436733,
+      "cached_input_tokens": 378368,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 15188,
+      "reasoning_output_tokens": 3871
+    },
+    "billing": "unknown",
+    "models": [
+      {
+        "name": "sol",
+        "requested_model": "gpt-6.1-sol",
+        "requested_effort": "high",
+        "thread": "01a16e78-59a0-7f70-afff-525be37923da",
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "native_session": "/home/agent/.codex/sessions/2026/10/24/rollout-2026-10-24T15-12-23-01a16e78-59a0-7f70-afff-525be37923da.jsonl"
+      },
+      {
+        "name": "luna",
+        "requested_model": "gpt-6-luna",
+        "requested_effort": "high",
+        "thread": "01a16e78-5b8e-7233-b3b6-1690737ae142",
+        "model": "gpt-6-luna",
+        "effort": "high",
+        "native_session": "/home/agent/.codex/sessions/2026/10/24/rollout-2026-10-24T15-12-23-01a16e78-5b8e-7233-b3b6-1690737ae142.jsonl"
+      }
+    ]
+  },
+  "evidence_limits": [
+    "Both parent candidate runners completed with retained FIFO entries and correct special metadata; Sol additionally retained filesystem socket nodes created by mknod, not bound sockets.",
+    "Sol30checks and3CLIcalls/12bidirectionaltransitions passed after diagnosed fixture setup alternative; actual bound-socket behavior untested in native workspace policy.",
+    "Luna partialCLI success only; remaining declared scenarios not exercised.",
+    "RawCLI command summaries omit some actual nested exec results; native primary calls/outputs retain three additional failures. Summary command count is not complete command history.",
+    "Sol corrected an overbroad strict timestamp assertion after preserving failed report: read-only .agents/.aws/.codex root mtime/ctime drift cause unknown; bytes/types, README and Git remain unchanged.",
+    "No device I/O, concurrent-race safety, full onboarding or all-path qualification."
+  ],
+  "future_hypothesis": "Prospectively validate a native-compatible filesystem socket-entry setup (for example mknod under the current grant) before both-model trials; retain real bound-socket CLI test on authorized host. Do not regrade this round.",
+  "delivery": "Pending independent APP28 findings-only review, normal protected merge/fetched-main and verified archives/cleanup."
+}
