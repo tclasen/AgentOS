@@ -1,0 +1,156 @@
+{
+  "record_kind": "Observed post-review facts under APP-000016 narrow addition allowance",
+  "observed_at": "2026-10-24T08:18:41.228166+00:00",
+  "task": "TASK-000188",
+  "run": "RUN-000183",
+  "reviewed_candidate": {
+    "base": "3def1b566f99c07e076c79d85f7b2cbb35880383",
+    "head": "65c458e19dd304eac0cc103753a3a067bd9c17b8",
+    "tree": "34ea8dc4c8498b70fd57f3edc8899707f05bbf08",
+    "paths": {
+      "docs/agent-records/runs/RUN-000183.md": "26aa7d653e9f1393a2a6df2cbe8e1bfcd8b9159b646d09e3b217fa4bb91d5a19",
+      "docs/agent-records/tasks/project/TASK-000188.md": "d59fc2f50e5eaa4dd21c9f0f2a6b432452023dfa2f503b28578998b08fef87c1",
+      "docs/testing/reasoning-effort-2026-10-24.json": "722c82c264f98e806b29d2a7a69c4c8c3f316ab78e15c31df5f374519b6622b9",
+      "docs/testing/reasoning-effort-2026-10-24.md": "4d5d560e5340f6c7d1987968868725f726624bd120a004481d88c9826942c9b1",
+      "tests/test_qualification.py": "8373333143ac3548b1cd633aff1283333ee8345e82fbe57256d7b436d0352dd1",
+      "tools/README.md": "5a46727e15fb3a1be86ce38f29bb5bffe5a22d6d9686ee697b68eb8afc07132d",
+      "tools/qualification.py": "be5a89f787fc560f268534b57511029496f99df79cb4c81e7ac582dfdd035af3"
+    },
+    "observed_at": "2026-10-24T08:05:29.994587+00:00",
+    "archive": {
+      "archive": "/private/tmp/agentos-reasoning-20261024-trials.tar.gz",
+      "sha256": "ec644b1916e18055a7355f6980b2d644cbc82bdee5a342cf346e52a9b3e12d03",
+      "bytes": 2276462,
+      "indexed_files": 1374,
+      "index": "evidence/trials-index.json",
+      "verified_all_members": true
+    }
+  },
+  "receipt": {
+    "path": "docs/agent-records/approvals/APP-000016.md",
+    "sha256": "b3bccdbecab6f6d4d98cf3d78a1b2186255ffc9d1fa8b7b6111143b369e5faf7"
+  },
+  "reviewer_actual": {
+    "name": "review-final",
+    "requested": "gpt-6.1-sol",
+    "requested_effort": "high",
+    "thread": "01a16cf2-db5e-76c0-86fb-4e337d33875c",
+    "model": "gpt-6.1-sol",
+    "effort": "high",
+    "native_session": "/home/agent/.codex/sessions/2026/10/24/rollout-2026-10-24T08-06-57-01a16cf2-db5e-76c0-86fb-4e337d33875c.jsonl"
+  },
+  "native_trials": 8,
+  "independent_review_invocations": 1,
+  "receipt_correction_invocations": 0,
+  "all_nine_native_models_matched": true,
+  "review_validation": "41 regressions; archive/profile/bundle verification; all8native sessions independently read; pure evaluator replay; scoped artifacts/source/Git verified",
+  "review_terminal_reconciliation": {
+    "observed_at": "2026-10-24T08:17:53.131937+00:00",
+    "name": "review-final",
+    "native_thread": "01a16cf2-db5e-76c0-86fb-4e337d33875c",
+    "wrapper_status_preserved": "failed",
+    "native_exit": 0,
+    "completed_turns": 1,
+    "turn_failed_events": 0,
+    "recoverable_transport_diagnostic": {
+      "type": "error",
+      "message": "Reconnecting... 1/5 (stream disconnected before completion: Transport error: network error: error decoding response body)"
+    },
+    "terminal_event": "turn.completed after receipt and final unchanged-hash verification",
+    "raw_log_sha256": "3377e77c82369b32a071a6b01c2419ffa2ad6cab9db3a2e7efb1180b6ab17229",
+    "receipt_sha256": "b3bccdbecab6f6d4d98cf3d78a1b2186255ffc9d1fa8b7b6111143b369e5faf7",
+    "duration_seconds": 546.0205957889557,
+    "nonzero_review_command_items": 4,
+    "diagnoses": [
+      "evidence directory not mounted; verified archive fallback",
+      "python unavailable; python3 retry",
+      "incorrect archive index prefix; exact member retry",
+      "cache directory absent after parent owned cleanup; final clean-state verified"
+    ],
+    "disposition": "Completed independent review receipt is valid. Preserve conservative failed wrapper status; no new invocation/retry or change to source/criteria/receipt. Reconcile completion separately before owned cleanup."
+  },
+  "parent_cache_cleanup": {
+    "observed_at": "2026-10-24T08:08:31.410521+00:00",
+    "failure": "Parent clean-status assertion detected an untracked host Python3.15 qualification module cache made by parent import-based checks. No tracked source changed.",
+    "path": "/Users/Shared/projects/AgentOS/tools/__pycache__/qualification.cpython-315.pyc",
+    "sha256": "51f6f4c45739a7661197ecf30742b41376ca229835ca08dfd8b2a1f3415232d9",
+    "preserved_copy": "/private/tmp/agentos-reasoning-20261024/evidence/parent-qualification.cpython-315.pyc",
+    "recovery": "Preserved exact bytecode in review evidence then removed only parent-owned cache and empty __pycache__ directory; seven reviewed file hashes/head unchanged and status clean.",
+    "retry": 1,
+    "approval_impact": "No change to pinned tracked candidate, criteria or trial evidence; cache cleanup observation retained separately."
+  },
+  "cleanup": {
+    "observed_at": "2026-10-24T08:18:27.607180+00:00",
+    "owned_sandbox_removed": {
+      "name": "agentos-reasoning-20261024",
+      "id": "1ffefee6-ebc8-4127-a069-f39ba3dd8a0b"
+    },
+    "owned_raw_directory_removed": "/private/tmp/agentos-reasoning-20261024",
+    "original_sandbox_pairs_preserved": 63,
+    "all_others_unchanged": true,
+    "remaining_count": 63,
+    "archives": [
+      {
+        "archive": "/private/tmp/agentos-reasoning-20261024-trials.tar.gz",
+        "sha256": "ec644b1916e18055a7355f6980b2d644cbc82bdee5a342cf346e52a9b3e12d03",
+        "bytes": 2276462,
+        "indexed_files": 1374,
+        "index": "evidence/trials-index.json",
+        "verified_all_members": true
+      },
+      {
+        "archive": "/private/tmp/agentos-reasoning-20261024-acceptance.tar.gz",
+        "sha256": "eb2aa97f9d97f2df32d8760acd4d88784491c7f9b6dc22e77552395e7f9a668b",
+        "bytes": 212895,
+        "indexed_files": 42,
+        "index": "evidence/acceptance-index.json",
+        "verified_all_members": true
+      }
+    ],
+    "archive_bytes_total": 2489357,
+    "no_global_prune": true,
+    "primary_worktrees_before_cleanup": "worktree /Users/Shared/projects/AgentOS\nHEAD 65c458e19dd304eac0cc103753a3a067bd9c17b8\nbranch refs/heads/improve/reasoning-evidence\n\n"
+  },
+  "main_rules_observed": [
+    {
+      "type": "deletion",
+      "ruleset_source_type": "Repository",
+      "ruleset_source": "tclasen/AgentOS",
+      "ruleset_id": 25755038
+    },
+    {
+      "type": "non_fast_forward",
+      "ruleset_source_type": "Repository",
+      "ruleset_source": "tclasen/AgentOS",
+      "ruleset_id": 25755038
+    },
+    {
+      "type": "pull_request",
+      "parameters": {
+        "required_approving_review_count": 0,
+        "dismiss_stale_reviews_on_push": false,
+        "required_reviewers": [],
+        "require_code_owner_review": false,
+        "require_last_push_approval": false,
+        "required_review_thread_resolution": true,
+        "require_extra_approval_for_unattributed_changes": true,
+        "allowed_merge_methods": [
+          "merge"
+        ]
+      },
+      "ruleset_source_type": "Repository",
+      "ruleset_source": "tclasen/AgentOS",
+      "ruleset_id": 25755038
+    }
+  ],
+  "post_review_paths_allowed": [
+    "docs/agent-records/approvals/APP-000016.md",
+    "docs/testing/reasoning-effort-final-attestation-2026-10-24.json"
+  ],
+  "decisions": {
+    "A": "independently accepted optional runner reasoning selection/evidence",
+    "B": "rejected high effort as sufficient two-model onboarding remedy"
+  },
+  "delivery_status": "Pending protected PR/merge and fetched-main equivalence; recorded separately after observation.",
+  "global_goal_status": "active; required two-model/all-path onboarding not achieved."
+}
