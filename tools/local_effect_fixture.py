@@ -37,7 +37,10 @@ def main():
         if a.drop_ack and code==0:
             result='acknowledgment_lost';code=75
     db.execute('INSERT INTO calls(action,identity,result) VALUES(?,?,?)',(a.action,a.id,result));db.commit();db.close()
-    print(json.dumps({'fixture':'LOCAL_DESTINATION_ONLY','id':a.id,'outcome':result,'lookup_is_available':not a.offline,'note':'Does not establish any real provider behavior or idempotence guarantee.'}))
+    response={'fixture':'LOCAL_DESTINATION_ONLY','id':a.id,'outcome':result,'lookup_is_available':not a.offline,'note':'Does not establish any real provider behavior or idempotence guarantee.'}
+    if a.action=='lookup':
+        response['observed_payload_sha256']=row[0] if row and not a.offline else None
+    print(json.dumps(response))
     return code
 
 if __name__=='__main__':raise SystemExit(main())

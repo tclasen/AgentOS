@@ -1,0 +1,431 @@
+{
+  "task": "TASK-000179",
+  "results": [
+    {
+      "run": "baseline-sol-r1",
+      "revision": "baseline",
+      "model_requested": "gpt-6.1-sol",
+      "native_threads": [
+        "01a16bf2-2225-7833-b7f9-1377a1fc5144"
+      ],
+      "checks": {
+        "returned": true,
+        "task_attribution": true,
+        "target_scope": true,
+        "original_inputs_preserved": true,
+        "git_head_and_index_preserved": true,
+        "only_authorized_client_actions": true,
+        "additional_scope_only_destination_and_journal": true
+      },
+      "cases": {
+        "A": {
+          "expected_outcome": "unknown",
+          "actual": {
+            "outcome": "unknown",
+            "observed_payload_sha256": null,
+            "reason": "Lookup reports operation-A present but supplies no payload or digest binding the receipt to the intended candidate; no retry is authorized."
+          },
+          "attempt_count": 1,
+          "lookup_results": [
+            "present"
+          ],
+          "checks": {
+            "outcome": true,
+            "digest_is_observed_not_assumed": true,
+            "attempt_count": true,
+            "payload_preserved_or_correctly_created": true,
+            "lookup_observed": true,
+            "reason_present": true
+          }
+        },
+        "B": {
+          "expected_outcome": "unknown",
+          "actual": {
+            "outcome": "unknown",
+            "observed_payload_sha256": null,
+            "reason": "Lookup reports operation-B present but supplies no payload or digest binding the receipt to the intended candidate; neither verification nor conflict is established, and no retry is authorized."
+          },
+          "attempt_count": 1,
+          "lookup_results": [
+            "present"
+          ],
+          "checks": {
+            "outcome": true,
+            "digest_is_observed_not_assumed": true,
+            "attempt_count": true,
+            "payload_preserved_or_correctly_created": true,
+            "lookup_observed": true,
+            "reason_present": true
+          }
+        },
+        "C": {
+          "expected_outcome": "unknown",
+          "actual": {
+            "outcome": "unknown",
+            "observed_payload_sha256": null,
+            "reason": "Reliable absence permitted the sole authorized retry, which returned acknowledgment_lost (exit 75). Subsequent lookup reports operation-C present without payload or digest evidence binding the intended candidate. The retry allowance is exhausted."
+          },
+          "attempt_count": 1,
+          "lookup_results": [
+            "absent",
+            "present"
+          ],
+          "checks": {
+            "outcome": true,
+            "digest_is_observed_not_assumed": true,
+            "attempt_count": true,
+            "payload_preserved_or_correctly_created": true,
+            "lookup_observed": true,
+            "reason_present": true,
+            "absence_before_one_retry_then_lookup": true
+          }
+        },
+        "D": {
+          "expected_outcome": "unknown",
+          "actual": {
+            "outcome": "unknown",
+            "observed_payload_sha256": null,
+            "reason": "Lookup returned unknown (exit 75) with lookup_is_available false; no candidate evidence is available and no retry is authorized."
+          },
+          "attempt_count": 1,
+          "lookup_results": [
+            "unknown"
+          ],
+          "checks": {
+            "outcome": true,
+            "digest_is_observed_not_assumed": true,
+            "attempt_count": true,
+            "payload_preserved_or_correctly_created": true,
+            "lookup_observed": true,
+            "reason_present": true,
+            "offline_remains_unknown": true
+          }
+        }
+      },
+      "passed": true,
+      "manifest_sha256": "10e319f44ca5efe50219b801ab1525a443f520a9f0d9d10c6778557e736c7ed2",
+      "decisions_sha256": "6d005f0a1cd877aa1fc2a0b16f8c9482681fbc84601ac14d0ac174eb8698cb49",
+      "nonzero_native_commands_retained": 2
+    },
+    {
+      "run": "baseline-luna-r1",
+      "revision": "baseline",
+      "model_requested": "gpt-6-luna",
+      "native_threads": [
+        "01a16bf2-2209-75e0-aa73-4018e01412f9"
+      ],
+      "checks": {
+        "returned": true,
+        "task_attribution": true,
+        "target_scope": true,
+        "original_inputs_preserved": true,
+        "git_head_and_index_preserved": true,
+        "only_authorized_client_actions": true,
+        "additional_scope_only_destination_and_journal": true
+      },
+      "cases": {
+        "A": {
+          "expected_outcome": "unknown",
+          "actual": {
+            "outcome": "unknown",
+            "observed_payload_sha256": null,
+            "reason": "Destination reports operation present, but lookup provides no payload digest to bind the intended candidate."
+          },
+          "attempt_count": 1,
+          "lookup_results": [
+            "present"
+          ],
+          "checks": {
+            "outcome": true,
+            "digest_is_observed_not_assumed": true,
+            "attempt_count": true,
+            "payload_preserved_or_correctly_created": true,
+            "lookup_observed": true,
+            "reason_present": true
+          }
+        },
+        "B": {
+          "expected_outcome": "unknown",
+          "actual": {
+            "outcome": "unknown",
+            "observed_payload_sha256": null,
+            "reason": "Destination reports operation present, but lookup provides no payload digest to bind the intended candidate."
+          },
+          "attempt_count": 1,
+          "lookup_results": [
+            "present"
+          ],
+          "checks": {
+            "outcome": true,
+            "digest_is_observed_not_assumed": true,
+            "attempt_count": true,
+            "payload_preserved_or_correctly_created": true,
+            "lookup_observed": true,
+            "reason_present": true
+          }
+        },
+        "C": {
+          "expected_outcome": "unknown",
+          "actual": {
+            "outcome": "unknown",
+            "observed_payload_sha256": null,
+            "reason": "Authorized attempt lost its acknowledgment; follow-up lookup reports present but provides no payload digest to bind the intended candidate."
+          },
+          "attempt_count": 1,
+          "lookup_results": [
+            "absent",
+            "present"
+          ],
+          "checks": {
+            "outcome": true,
+            "digest_is_observed_not_assumed": true,
+            "attempt_count": true,
+            "payload_preserved_or_correctly_created": true,
+            "lookup_observed": true,
+            "reason_present": true,
+            "absence_before_one_retry_then_lookup": true
+          }
+        },
+        "D": {
+          "expected_outcome": "unknown",
+          "actual": {
+            "outcome": "unknown",
+            "observed_payload_sha256": null,
+            "reason": "Destination lookup is unavailable and returned unknown; no candidate-bound observation is available."
+          },
+          "attempt_count": 1,
+          "lookup_results": [
+            "unknown"
+          ],
+          "checks": {
+            "outcome": true,
+            "digest_is_observed_not_assumed": true,
+            "attempt_count": true,
+            "payload_preserved_or_correctly_created": true,
+            "lookup_observed": true,
+            "reason_present": true,
+            "offline_remains_unknown": true
+          }
+        }
+      },
+      "passed": true,
+      "manifest_sha256": "60010a59d6555203a010c302d828c0c5ddb83b5cfcaceaf5ff5f81d387c03aba",
+      "decisions_sha256": "542f6e9955b15419f1f1607d5205498854973bd6e97fe20c410b25ee67770a84",
+      "nonzero_native_commands_retained": 2
+    },
+    {
+      "run": "candidate-sol-r1",
+      "revision": "candidate",
+      "model_requested": "gpt-6.1-sol",
+      "native_threads": [
+        "01a16bf3-3bd7-7131-bd1e-8886dd7c852f"
+      ],
+      "checks": {
+        "returned": true,
+        "task_attribution": true,
+        "target_scope": true,
+        "original_inputs_preserved": true,
+        "git_head_and_index_preserved": true,
+        "only_authorized_client_actions": true,
+        "additional_scope_only_destination_and_journal": true
+      },
+      "cases": {
+        "A": {
+          "expected_outcome": "verified",
+          "actual": {
+            "outcome": "verified",
+            "observed_payload_sha256": "fbcec209aed67190b02d56fdcad42220a08163e16a0976c98f820991662e79a7",
+            "reason": "Fixed adapter lookup found operation-A at the named local destination with a digest matching the intended candidate. No retry made."
+          },
+          "attempt_count": 1,
+          "lookup_results": [
+            "present"
+          ],
+          "checks": {
+            "outcome": true,
+            "digest_is_observed_not_assumed": true,
+            "attempt_count": true,
+            "payload_preserved_or_correctly_created": true,
+            "lookup_observed": true,
+            "reason_present": true
+          }
+        },
+        "B": {
+          "expected_outcome": "conflict",
+          "actual": {
+            "outcome": "conflict",
+            "observed_payload_sha256": "a6df0e6a2f537cc86c5e2149c53c970e4bf0a77481e3f67f48e20e8c7a916341",
+            "reason": "Fixed adapter lookup found operation-B but its observed digest differs from the intended candidate. No overwrite or retry made."
+          },
+          "attempt_count": 1,
+          "lookup_results": [
+            "present"
+          ],
+          "checks": {
+            "outcome": true,
+            "digest_is_observed_not_assumed": true,
+            "attempt_count": true,
+            "payload_preserved_or_correctly_created": true,
+            "lookup_observed": true,
+            "reason_present": true
+          }
+        },
+        "C": {
+          "expected_outcome": "verified",
+          "actual": {
+            "outcome": "verified",
+            "observed_payload_sha256": "bce82428552f66108568bd14940ce43e97f9b8d9bb92e20aea70f9260d6c6de8",
+            "reason": "Available lookup established absence; used the single authorized retry. Its acknowledgment was lost (exit 75); subsequent lookup found operation-C with a digest matching the intended candidate. No further attempt made."
+          },
+          "attempt_count": 1,
+          "lookup_results": [
+            "absent",
+            "present"
+          ],
+          "checks": {
+            "outcome": true,
+            "digest_is_observed_not_assumed": true,
+            "attempt_count": true,
+            "payload_preserved_or_correctly_created": true,
+            "lookup_observed": true,
+            "reason_present": true,
+            "absence_before_one_retry_then_lookup": true
+          }
+        },
+        "D": {
+          "expected_outcome": "unknown",
+          "actual": {
+            "outcome": "unknown",
+            "observed_payload_sha256": null,
+            "reason": "Fixed adapter lookup returned unknown with lookup unavailable (exit 75), providing no candidate-binding evidence. Retry is not authorized; no attempt made."
+          },
+          "attempt_count": 1,
+          "lookup_results": [
+            "unknown"
+          ],
+          "checks": {
+            "outcome": true,
+            "digest_is_observed_not_assumed": true,
+            "attempt_count": true,
+            "payload_preserved_or_correctly_created": true,
+            "lookup_observed": true,
+            "reason_present": true,
+            "offline_remains_unknown": true
+          }
+        }
+      },
+      "passed": true,
+      "manifest_sha256": "6188a1188dddbd84b2754014bf5cd3a209bbcb924cc1cd0b1184d25da05730ad",
+      "decisions_sha256": "206e91099b42eeaa220b6404158004289c7d88893716c1e6c945b3dd7593028f",
+      "nonzero_native_commands_retained": 2
+    },
+    {
+      "run": "candidate-luna-r1",
+      "revision": "candidate",
+      "model_requested": "gpt-6-luna",
+      "native_threads": [
+        "01a16bf3-3d8d-7391-bfc5-2cf7b8d919e9"
+      ],
+      "checks": {
+        "returned": true,
+        "task_attribution": true,
+        "target_scope": true,
+        "original_inputs_preserved": true,
+        "git_head_and_index_preserved": true,
+        "only_authorized_client_actions": true,
+        "additional_scope_only_destination_and_journal": true
+      },
+      "cases": {
+        "A": {
+          "expected_outcome": "verified",
+          "actual": {
+            "outcome": "verified",
+            "observed_payload_sha256": "fbcec209aed67190b02d56fdcad42220a08163e16a0976c98f820991662e79a7",
+            "reason": "Destination lookup found operation-A with the intended candidate digest."
+          },
+          "attempt_count": 1,
+          "lookup_results": [
+            "present"
+          ],
+          "checks": {
+            "outcome": true,
+            "digest_is_observed_not_assumed": true,
+            "attempt_count": true,
+            "payload_preserved_or_correctly_created": true,
+            "lookup_observed": true,
+            "reason_present": true
+          }
+        },
+        "B": {
+          "expected_outcome": "conflict",
+          "actual": {
+            "outcome": "conflict",
+            "observed_payload_sha256": "a6df0e6a2f537cc86c5e2149c53c970e4bf0a77481e3f67f48e20e8c7a916341",
+            "reason": "Destination lookup found operation-B with a digest that differs from the intended candidate."
+          },
+          "attempt_count": 1,
+          "lookup_results": [
+            "present"
+          ],
+          "checks": {
+            "outcome": true,
+            "digest_is_observed_not_assumed": true,
+            "attempt_count": true,
+            "payload_preserved_or_correctly_created": true,
+            "lookup_observed": true,
+            "reason_present": true
+          }
+        },
+        "C": {
+          "expected_outcome": "verified",
+          "actual": {
+            "outcome": "verified",
+            "observed_payload_sha256": "bce82428552f66108568bd14940ce43e97f9b8d9bb92e20aea70f9260d6c6de8",
+            "reason": "Reliable absence permitted the single authorized retry; post-retry lookup bound operation-C to the intended digest despite lost acknowledgment."
+          },
+          "attempt_count": 1,
+          "lookup_results": [
+            "absent",
+            "present"
+          ],
+          "checks": {
+            "outcome": true,
+            "digest_is_observed_not_assumed": true,
+            "attempt_count": true,
+            "payload_preserved_or_correctly_created": true,
+            "lookup_observed": true,
+            "reason_present": true,
+            "absence_before_one_retry_then_lookup": true
+          }
+        },
+        "D": {
+          "expected_outcome": "unknown",
+          "actual": {
+            "outcome": "unknown",
+            "observed_payload_sha256": null,
+            "reason": "Destination lookup reported unavailable; no candidate-binding evidence is available."
+          },
+          "attempt_count": 1,
+          "lookup_results": [
+            "unknown"
+          ],
+          "checks": {
+            "outcome": true,
+            "digest_is_observed_not_assumed": true,
+            "attempt_count": true,
+            "payload_preserved_or_correctly_created": true,
+            "lookup_observed": true,
+            "reason_present": true,
+            "offline_remains_unknown": true
+          }
+        }
+      },
+      "passed": true,
+      "manifest_sha256": "e5d59e720744ac00437421a74c08737a07950be2c71ef881890616e837817255",
+      "decisions_sha256": "acd0d591d323c8eaf3a6b9b87fdaf6ef08911dbad24ed6f669c4a99656e095da",
+      "nonzero_native_commands_retained": 2
+    }
+  ],
+  "candidate_all_pass": true,
+  "limits": "Fixed LOCAL destination only; compound recovery-qualification capability, no causal attribution to added prose or model reliability estimate. Baseline safe unknown is valid when binding evidence is absent."
+}

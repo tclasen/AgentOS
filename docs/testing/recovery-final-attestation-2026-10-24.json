@@ -1,0 +1,67 @@
+{
+  "record_type": "Coordinator machine-observed review identity and cleanup attestation",
+  "task": "TASK-000179",
+  "run": "RUN-000174",
+  "plan_revision": 1,
+  "observed_at": "2026-10-24T03:35:25.182976+00:00",
+  "reviewed_candidate": "a1bdfb13900ce14cc943086002610c055664d4d0",
+  "reviewed_tree": "dd6edb384f05a46c3a82c898066d94301f468e29",
+  "approval": "APP-000007",
+  "approval_sha256": "21792d3508c37783537ddd35010cbf31cf116bbf264761f5948bd87f05119333",
+  "review_execution": {
+    "run": "review-final-r1",
+    "requested_model": "gpt-6.1-sol",
+    "thread": "01a16bf6-f2c1-77b2-9979-ce8e3ba81333",
+    "model": "gpt-6.1-sol",
+    "reasoning": null
+  },
+  "native_roots": {
+    "returned": 5,
+    "requested_actual_model_matches": 5,
+    "child_cap_each": 0,
+    "repeated_trial_attempts": 0,
+    "trial_expected_nonzero_shell_commands_retained": 8,
+    "actual_effort_and_monetary_cost": "unknown"
+  },
+  "independent_review": {
+    "regression_tests_passed": 26,
+    "targeted_real_cli_probes_passed": true,
+    "native_sql_and_output_crosschecks_passed": true,
+    "material_defects": 0,
+    "full_onboarding_rerun": false
+  },
+  "archives": [
+    {
+      "sha256": "d5a7a2096ad581c6dea82a05528660e7843379f20ac3cebf2afb92ee3f81db5e",
+      "bytes": 240120,
+      "indexed_files": 278,
+      "index": "evidence/trials-index.json",
+      "file": "agentos-recovery-20261024-trials.tar.gz"
+    },
+    {
+      "sha256": "5d1ee15bb223d33a83cf2ef08fa2f6f4734f8794ab92e9ea805095c231cd49ed",
+      "bytes": 79184,
+      "indexed_files": 31,
+      "index": "evidence/acceptance-index.json",
+      "file": "agentos-recovery-20261024-acceptance.tar.gz"
+    }
+  ],
+  "archive_total_bytes": 319304,
+  "all_archive_and_indexed_member_hashes_verified": true,
+  "cleanup": {
+    "removed_sandbox": "agentos-recovery-20261024",
+    "removed_sandbox_id": "6b031306-0520-4f7f-8e4f-6022771a954e",
+    "owned_sandbox_absent_in_fresh_inventory": true,
+    "baseline_sandboxes_preserved_by_name_and_id": 63,
+    "owned_raw_fixture_directory_removed": true,
+    "raw_files_removed": 311,
+    "raw_file_bytes_removed": 1399779,
+    "unrelated_sandboxes_removed": 0,
+    "global_prune_performed": false,
+    "previous_round_evidence_preserved": true
+  },
+  "governance_snapshot_hashes_unchanged": 14,
+  "delivery": "Pending ordinary protected PR/merge and fetched owning-main verification; observed round closure recorded separately after delivery.",
+  "global_goal": "active; this round does not establish that no further improvements remain",
+  "publication_scope": "Only byte-identical APP-000007 receipt and this machine attestation follow reviewed candidate; reviewed source/report semantics unchanged."
+}

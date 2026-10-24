@@ -1,4 +1,5 @@
 import json
+import hashlib
 from contextlib import closing
 from pathlib import Path
 import sqlite3
@@ -39,5 +40,30 @@ class LocalEffectTests(unittest.TestCase):
             with closing(sqlite3.connect(p)) as db:
                 self.assertEqual(db.execute('SELECT count(*) FROM receipts').fetchone()[0],1)
                 self.assertEqual(db.execute("SELECT count(*) FROM calls WHERE action='attempt'").fetchone()[0],3)
+
+    def test_lookup_binds_committed_candidate_without_echoing_payload(self):
+        with tempfile.TemporaryDirectory() as d:
+            p=Path(d)/'destination.sqlite';payload='approved candidate payload'
+            self.assertEqual(self.call(p,'attempt','--payload',payload,'--drop-ack')[0],75)
+            code,receipt=self.call(p,'lookup')
+            self.assertEqual(code,0);self.assertEqual(receipt['outcome'],'present')
+            expected=hashlib.sha256(payload.encode()).hexdigest()
+            self.assertEqual(receipt['observed_payload_sha256'],expected)
+            self.assertNotIn(payload,json.dumps(receipt))
+            self.assertEqual(self.call(p,'attempt','--payload','conflicting candidate')[0],65)
+            self.assertEqual(self.call(p,'lookup')[1]['observed_payload_sha256'],expected)
+
+    def test_absent_or_unavailable_lookup_cannot_claim_candidate_binding(self):
+        with tempfile.TemporaryDirectory() as d:
+            p=Path(d)/'destination.sqlite'
+            code,absent=self.call(p,'lookup')
+            self.assertEqual(code,0);self.assertEqual(absent['outcome'],'absent')
+            self.assertIsNone(absent['observed_payload_sha256'])
+            self.call(p,'attempt')
+            code,offline=self.call(p,'lookup','--offline')
+            self.assertEqual(code,75);self.assertEqual(offline['outcome'],'unknown')
+            self.assertFalse(offline['lookup_is_available'])
+            self.assertIsNone(offline['observed_payload_sha256'])
+            self.assertIsNotNone(self.call(p,'lookup')[1]['observed_payload_sha256'])
 
 if __name__=='__main__':unittest.main()
