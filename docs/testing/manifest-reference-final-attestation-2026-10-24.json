@@ -1,0 +1,141 @@
+{
+  "task": "TASK-000206",
+  "run": "RUN-000201",
+  "observed_at": "2026-10-24T19:53:22.269355+00:00",
+  "disposition": "Rejected operative package; independently approved findings only",
+  "reviewed_candidate": {
+    "base": "ac38e29304571a2c47be4ffd3990f247e29733f5",
+    "candidate": "4dd77ca7e21d2c8ffbab00f09146142f4436b313",
+    "tree": "04e6fde872bef70dcdf013a86c76fe510b4c11f7",
+    "files": {
+      "docs/agent-records/runs/RUN-000201.md": {
+        "sha256": "9053434e67829b0c33cefc8bd9623783bf1e0f891e93abaafb7b202f9ce42170",
+        "bytes": 11037
+      },
+      "docs/agent-records/tasks/project/TASK-000206.md": {
+        "sha256": "c9f80963cc56e14255b227014969c962774c37bc7044e528198fc8bc23ae529e",
+        "bytes": 11039
+      },
+      "docs/testing/manifest-reference-2026-10-24.json": {
+        "sha256": "50f0a42a26185104b68a9ee3a5ff41d1fc08c4ff048858ec957481f02a612ae2",
+        "bytes": 136835
+      },
+      "docs/testing/manifest-reference-2026-10-24.md": {
+        "sha256": "5e5a8a0c4477caa0401ed2bd3b2f0a054601fbb7f05e992dd3c0adfc4da5e5c6",
+        "bytes": 6202
+      }
+    },
+    "scope": "Four findings/records only; rejected operative package withdrawn"
+  },
+  "review_integrity": {
+    "reviews": {
+      "review-final": {
+        "receipt": {
+          "sha256": "999d8fce3cd9b190f25bed197986cf16ee71f74dd2e8e1bea350cc9ba5964f50",
+          "bytes": 19217
+        },
+        "index": {
+          "sha256": "3bdf7500c507528837caa71445d60c06e4e6f9a863637b2663c37e4251779723",
+          "bytes": 282169
+        },
+        "indexed_files": 1479,
+        "indexed_bytes": 14434551,
+        "original_regulars_unchanged": 27,
+        "exact_current_fileset_verified": true
+      }
+    },
+    "reviewed_files_unchanged": true,
+    "review_final": {
+      "runtime": {
+        "name": "review-final",
+        "requested_model": "gpt-6.1-sol",
+        "requested_effort": "high",
+        "thread": "01a16f6f-a0d1-7362-b71f-d21982e0e05b",
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "native_session": "/home/agent/.codex/sessions/2026/10/24/rollout-2026-10-24T19-42-29-01a16f6f-a0d1-7362-b71f-d21982e0e05b.jsonl"
+      },
+      "seconds": 577.5186059474945,
+      "failed_cli_commands": 2,
+      "primary": {
+        "sha256": "058be8d65b76b1629be55c14fabc3256bd014e702c96b752dfc666641e85e719",
+        "bytes": 586012
+      }
+    }
+  },
+  "observed_review_decision": {
+    "decision": "approved findings only",
+    "receipt_sha256": "999d8fce3cd9b190f25bed197986cf16ee71f74dd2e8e1bea350cc9ba5964f50",
+    "receipt_read_completely": true,
+    "operative_package": "rejected; all twelve paths withdrawn",
+    "permitted_additions": [
+      "docs/agent-records/approvals/APP-000036.md",
+      "docs/testing/manifest-reference-final-attestation-2026-10-24.json"
+    ],
+    "conditions": "Four reviewed files unchanged; normal protected expected-head PR33 merge and fetched-main verification; every indexed review file directly retained in each of two verified external archives; native primary/model/finished-control and original failure records retained; exact-owned cleanup preserving original63sandboxpairs.",
+    "parent_observed_reviewer": "gpt-6.1-sol/high; returned0 with valid controls and no timeout;577.5186059474945seconds",
+    "original_parent_failure_recovered_after_review": {
+      "path": "evidence/parent-handoff-attempt1-native-record.json",
+      "sha256": "70cb30eb2b35bf6e84c125445881d9a4797ebae4f602e6b5b02e0f295d947ddf",
+      "bytes": 6861,
+      "native_call_line": 21605,
+      "native_output_line": 21608,
+      "note": "Actual original current-session tool call and output; not a reconstruction. Reviewer archive lacked this record, as sealed receipt correctly states. No contradiction or changed result; final retention will include it directly."
+    },
+    "user_steering": "Finish this pass, then pause the goal and project iteration; no new candidate will be started."
+  },
+  "reviewer_native_control": [
+    {
+      "type": "agentos.run_control",
+      "version": 1,
+      "control_id": "review-final",
+      "timeout_seconds": 1800,
+      "grace_seconds": 5,
+      "phase": "started",
+      "pid": 254,
+      "process_group": 254
+    },
+    {
+      "type": "agentos.run_control",
+      "version": 1,
+      "control_id": "review-final",
+      "timeout_seconds": 1800,
+      "grace_seconds": 5,
+      "phase": "finished",
+      "pid": 254,
+      "process_group": 254,
+      "timed_out": false,
+      "signals": [],
+      "child_returncode": 0,
+      "exit_code": 0,
+      "elapsed_seconds": 575.987751191
+    }
+  ],
+  "reviewer_usage": [
+    {
+      "input_tokens": 3226476,
+      "cached_input_tokens": 2980608,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 29446,
+      "reasoning_output_tokens": 8211
+    }
+  ],
+  "archive": {
+    "archive": "/private/tmp/agentos-manifestref-20261024-trials.tar.gz",
+    "sha256": "950883f04cd20a15fce31529fffea6e87ed3bb12c0ff3cad6c3b2c59552d1893",
+    "bytes": 2649059,
+    "indexed_files": 1017,
+    "index": "evidence/trials-index.json",
+    "verified_all_members": true
+  },
+  "delivery": "Pending normal protected expected-head PR33 merge and fetched owning-main verification",
+  "cleanup": "Pending exact-owned removal after verified direct reviewer retention in both final archives",
+  "limits": [
+    "Only2of12design/installation/use roots ran;10unstarted;noinstallationorfirstusequalification",
+    "Bothactualmodelshigh;updatedCodex0.164.0",
+    "Correct48filemanifestsand19requiredsourcebodiesdo not waive prescribed literal recipe",
+    "No historical regrade, causal or reliability claim",
+    "Billingunknown"
+  ],
+  "broader_goal": "active"
+}
