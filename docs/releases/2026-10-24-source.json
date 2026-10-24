@@ -1,0 +1,189 @@
+{
+  "format": "agentos-source-v1",
+  "files": {
+    "components/activation.md": {
+      "sha256": "2893e4d66fc47158d5267cae0a04132d832c8436ad90f7ca6f58d322aaef4284",
+      "bytes": 2064
+    },
+    "components/advanced-validation.md": {
+      "sha256": "b4ac3d7f3a53d3194e7495a3729f8abc4dc6c632892c8acc69f22be0f9063648",
+      "bytes": 1693
+    },
+    "components/authority.md": {
+      "sha256": "fbc6b99852540f20a25dfd224d0d0f07399a9021e8cb1fc1d87f53c5156fb8a9",
+      "bytes": 1950
+    },
+    "components/brownfield-migration.md": {
+      "sha256": "dd0cac8f10b20aed0554fd6ed4504c4263ba1bd8be374a4f966ca86290f4f121",
+      "bytes": 1598
+    },
+    "components/capability-routing.md": {
+      "sha256": "d7f86c5cbf4b1a505f9db20fcbd68487a809bbdc04adce3cd12221114d0fc161",
+      "bytes": 1846
+    },
+    "components/chief-of-staff.md": {
+      "sha256": "c43203e841a0a10ef4ef3887b6a7d89eb834eb255b3b4386231488f4f9efb8b5",
+      "bytes": 1726
+    },
+    "components/context-core.md": {
+      "sha256": "8046c83f2eec46be879ce418e68827fdd95f6388ad3ff2090b8254840e74bca0",
+      "bytes": 1602
+    },
+    "components/delegation.md": {
+      "sha256": "d34dcf7c5bb102fc4f0e1a1603954ce51e33aa5f05f9a3561ae33315d2725169",
+      "bytes": 2146
+    },
+    "components/delivery-acceptance.md": {
+      "sha256": "540b6b083ca6eeb70214cb7711d9f1326c4c75c6de17327fa7048aa76d0be4bb",
+      "bytes": 1672
+    },
+    "components/director.md": {
+      "sha256": "beafa827c5ce6c53937537fa9521c2b46ebb9ec049788648b7e2b010b0eea9b0",
+      "bytes": 2115
+    },
+    "components/durable-handoff.md": {
+      "sha256": "f620977f68ad65bb99415afaa75e2afab51cdaae00037e65948927cb3c2eebd8",
+      "bytes": 1477
+    },
+    "components/effect-reconciliation.md": {
+      "sha256": "955360b0112b872255287836a713d7bd646461f2ca073dd20042581e468cd2b8",
+      "bytes": 2074
+    },
+    "components/git-delivery.md": {
+      "sha256": "548f1d4eb37bf8bdb08e93bce84918cdfb5ea9ed03efc6c38112006b875de7cc",
+      "bytes": 1644
+    },
+    "components/independent-evaluation.md": {
+      "sha256": "b8056f3712e264d67628bcf8320436f9069a7605bd08c74c0f75ff33f88a5391",
+      "bytes": 1716
+    },
+    "components/index.md": {
+      "sha256": "87ae2c052e8df78cd6c8fc2453ccf40b819a54859961b186a9d5a46ca9d8cfe8",
+      "bytes": 3377
+    },
+    "components/information-boundaries.md": {
+      "sha256": "ca62d743eb5e146fde9905c6314553cac50c113241a9e2115713831c2f705454",
+      "bytes": 1425
+    },
+    "components/learning-queue.md": {
+      "sha256": "e8b77df91474a3f010d903d036fc02ccf0f70ac308dc62e2811dcd58519c100e",
+      "bytes": 1533
+    },
+    "components/multi-repo.md": {
+      "sha256": "f3e66aa254d41161bd2c888731d9776d00f221a17d54381c6975a80f1aa39d3a",
+      "bytes": 1443
+    },
+    "components/parallel-coordination.md": {
+      "sha256": "c356df44bb713f7f79a37c8fa82c9609d1c6702446643bbb82a447b48a00e510",
+      "bytes": 1484
+    },
+    "components/resource-budgets.md": {
+      "sha256": "82e10d06933148538f9df9d153fe1b5441d054bcd2203cf3952918feda3164a7",
+      "bytes": 1371
+    },
+    "components/role-lifecycle.md": {
+      "sha256": "ae0fc9a30668666d22cb9b0ab03049b98ec095a590f81ecb7b843972073bf95f",
+      "bytes": 1897
+    },
+    "components/runtime-native.md": {
+      "sha256": "4d61f9e83c878efb8718fdddf5adf196e86f9525a73ea3cb2b18d53cfea1cf74",
+      "bytes": 1441
+    },
+    "components/scheduling.md": {
+      "sha256": "20b4efed9901cd9bc9bb9df55651a84df9df37e5521aeab46739ace5aaccec33",
+      "bytes": 1508
+    },
+    "components/self-improvement.md": {
+      "sha256": "0bf78a0d5f04096c9e0b3603588f8b865aed218ba980f59f4dc11922656d5ac7",
+      "bytes": 3002
+    },
+    "components/telemetry.md": {
+      "sha256": "51d1bc186c3d6e45933dc671bfe92170f3cdda48cb36d419dc8c307db2b485d3",
+      "bytes": 1483
+    },
+    "components/work-ledger.md": {
+      "sha256": "d912bc474f79722ef403dde880e1fa864bb7f08fd0b899a9b774880e7bb78cab",
+      "bytes": 1713
+    },
+    "concepts/evidence-levels.md": {
+      "sha256": "da302b93ef5f1cd85b51c3d4b4973b03da1031f10554d5e7417c51ca995846d2",
+      "bytes": 1257
+    },
+    "concepts/index.md": {
+      "sha256": "c334562a78706220654b15394e6d9f4b747867acda296b03660053d72e18cb5b",
+      "bytes": 362
+    },
+    "concepts/progressive-context.md": {
+      "sha256": "e810a0b0862e20852483b13661e03fda07f26bd96f0c48fd75a9ec58cc9b33fe",
+      "bytes": 1082
+    },
+    "concepts/role-capability-instance.md": {
+      "sha256": "b0b4a7f3124956343caea65c21be255a3f323f52351935bdb07f4d72308ad69d",
+      "bytes": 1282
+    },
+    "core/constitution.md": {
+      "sha256": "6797e597f48135da527f87aff5b0f1b01e2c265ebb5378cb2826d70665a5ed82",
+      "bytes": 2665
+    },
+    "core/graph-routing.md": {
+      "sha256": "e99f69e05d3982ffd72f564bc98f167297cc7b07fad1238cfc121df83af2d1e8",
+      "bytes": 7000
+    },
+    "core/index.md": {
+      "sha256": "16d92c1d015d84a6ab2c3af56fc3a0581f77b671c7f85fb71849ee7a804a48d1",
+      "bytes": 279
+    },
+    "core/installer-policy.md": {
+      "sha256": "c6e48d24fa13124d2f623e131c96c83b77aa32734b5ae706f2e6912cc82db4aa",
+      "bytes": 2634
+    },
+    "examples/index.md": {
+      "sha256": "57084a035eb303da3c395b1f9eafe7695fe2c13d7bd6a5efec17d25f867b5252",
+      "bytes": 146
+    },
+    "examples/selection-scenarios.md": {
+      "sha256": "e59845245220622b50b1a16e9fead94825e6c2fdf07f7872c54d131ff7c86470",
+      "bytes": 2259
+    },
+    "index.md": {
+      "sha256": "2635e2fb8d4791bde2792ebb0d904c6347350ae18454bc01f435007fee4d7226",
+      "bytes": 1416
+    },
+    "interviews/bootstrap.md": {
+      "sha256": "eb471fc596bf6705c656911716e3022e99d818a905b744b8314acf3b3c988ce4",
+      "bytes": 2279
+    },
+    "interviews/index.md": {
+      "sha256": "02f4b6b9a94e8af5260f1d90cdc3ad01bb004291b14259d2a55870b9642d4057",
+      "bytes": 162
+    },
+    "phases/design.md": {
+      "sha256": "95681cf0f3fd3d77219bbe14d79ac4be78056a69dbe50e5f04c13fd768396aba",
+      "bytes": 2207
+    },
+    "phases/discover.md": {
+      "sha256": "513fc2cea5ca6a7164e1f37ce764abf1a7a5c3e849d9ff83dd3fd894d4238b9d",
+      "bytes": 1377
+    },
+    "phases/handoff.md": {
+      "sha256": "8b282f7b34684c4323b9677c00b72323861043ad605ecc79a4fa2371ec6e9511",
+      "bytes": 2105
+    },
+    "phases/implement.md": {
+      "sha256": "e8587cf9153e922c17029a4885684b0cbaad01cfabcc7c52a33402411ee021b3",
+      "bytes": 3725
+    },
+    "phases/index.md": {
+      "sha256": "6d529c0d37adca24391092eabfa68a3c94b3dbeaa7ae2849ba329309a93c68cc",
+      "bytes": 468
+    },
+    "phases/qualify.md": {
+      "sha256": "e333b115ca5f9ad4d2a17532e47a6a129d9b70adcc244d6a6db783aa792cfcc9",
+      "bytes": 7094
+    },
+    "start.md": {
+      "sha256": "e051b4825362e420b5ca7d564d4c563a3911eeb8b448b03ec4e8a75280d45f2d",
+      "bytes": 3615
+    }
+  }
+}

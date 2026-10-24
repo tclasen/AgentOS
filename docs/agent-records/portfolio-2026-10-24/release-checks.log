@@ -1,0 +1,1100 @@
+AgentOS CPU-only release verification
+
+## existing-regressions
+["/opt/homebrew/opt/python@3.15/bin/python3.15", "-B", "-m", "unittest", "discover", "-s", "tests", "-v"]
+test_absent_or_unavailable_lookup_cannot_claim_candidate_binding (test_local_effect_fixture.LocalEffectTests.test_absent_or_unavailable_lookup_cannot_claim_candidate_binding) ... ok
+test_lookup_binds_committed_candidate_without_echoing_payload (test_local_effect_fixture.LocalEffectTests.test_lookup_binds_committed_candidate_without_echoing_payload) ... ok
+test_lost_ack_preserves_effect_and_fresh_lookup_observes_it (test_local_effect_fixture.LocalEffectTests.test_lost_ack_preserves_effect_and_fresh_lookup_observes_it) ... ok
+test_replay_is_detectable_and_changed_candidate_is_rejected (test_local_effect_fixture.LocalEffectTests.test_replay_is_detectable_and_changed_candidate_is_rejected) ... ok
+test_unavailable_lookup_does_not_claim_absence_or_create_effect (test_local_effect_fixture.LocalEffectTests.test_unavailable_lookup_does_not_claim_absence_or_create_effect) ... ok
+test_additional_scope_rejects_symlink_escape_before_execution (test_qualification.QualificationTests.test_additional_scope_rejects_symlink_escape_before_execution) ... ok
+test_ambiguous_metadata_cannot_silently_remove_dependencies (test_qualification.QualificationTests.test_ambiguous_metadata_cannot_silently_remove_dependencies) ... ok
+test_closure_detects_cycles_and_only_selected_cycles_block_selection (test_qualification.QualificationTests.test_closure_detects_cycles_and_only_selected_cycles_block_selection) ... ok
+test_cyclic_graph_is_rejected (test_qualification.QualificationTests.test_cyclic_graph_is_rejected) ... ok
+test_dependency_closure_includes_transitive_prerequisites (test_qualification.QualificationTests.test_dependency_closure_includes_transitive_prerequisites) ... ok
+test_directory_snapshot_cli_is_read_only_preserves_exclusions_and_links (test_qualification.QualificationTests.test_directory_snapshot_cli_is_read_only_preserves_exclusions_and_links) ... ok
+test_distinct_task_ids_are_not_replaced_with_historical_task (test_qualification.QualificationTests.test_distinct_task_ids_are_not_replaced_with_historical_task) ... ok
+test_empty_directory_add_remove_and_type_changes_are_observable (test_qualification.QualificationTests.test_empty_directory_add_remove_and_type_changes_are_observable) ... ok
+test_existing_evidence_is_preserved_before_execution (test_qualification.QualificationTests.test_existing_evidence_is_preserved_before_execution) ... ok
+test_exposure_requires_complete_matching_command_output (test_qualification.QualificationTests.test_exposure_requires_complete_matching_command_output) ... ok
+test_exposure_skips_empty_and_linked_sources_and_preserves_inputs (test_qualification.QualificationTests.test_exposure_skips_empty_and_linked_sources_and_preserves_inputs) ... ok
+test_failed_compound_command_exposure_keeps_failure_and_strict_metric (test_qualification.QualificationTests.test_failed_compound_command_exposure_keeps_failure_and_strict_metric) ... ok
+test_invalid_or_duplicate_status_declarations_fail_closed (test_qualification.QualificationTests.test_invalid_or_duplicate_status_declarations_fail_closed) ... ok
+test_invalid_reasoning_effort_is_rejected_before_any_effect (test_qualification.QualificationTests.test_invalid_reasoning_effort_is_rejected_before_any_effect) ... ok
+test_inventory_and_matrix_cover_same_25_components (test_qualification.QualificationTests.test_inventory_and_matrix_cover_same_25_components) ... ok
+test_missing_dependency_and_escape_are_rejected (test_qualification.QualificationTests.test_missing_dependency_and_escape_are_rejected) ... ok
+test_missing_or_invalid_task_is_rejected_before_native_effects (test_qualification.QualificationTests.test_missing_or_invalid_task_is_rejected_before_native_effects) ... ok
+test_noise_and_error_are_retained_without_becoming_a_pass (test_qualification.QualificationTests.test_noise_and_error_are_retained_without_becoming_a_pass) ... ok
+test_only_successfully_completed_full_source_reads_are_credited (test_qualification.QualificationTests.test_only_successfully_completed_full_source_reads_are_credited) ... ok
+test_reasoning_override_and_unset_preserve_fresh_and_resume_commands (test_qualification.QualificationTests.test_reasoning_override_and_unset_preserve_fresh_and_resume_commands) ... ok
+test_requires_blank_comments_and_trailing_space_preserve_dependencies (test_qualification.QualificationTests.test_requires_blank_comments_and_trailing_space_preserve_dependencies) ... ok
+test_returned_artifact_identities_survive_later_mutation_in_both_scopes (test_qualification.QualificationTests.test_returned_artifact_identities_survive_later_mutation_in_both_scopes) ... ok
+test_run_rejects_path_names_before_any_output (test_qualification.QualificationTests.test_run_rejects_path_names_before_any_output) ... ok
+test_selected_deprecated_node_and_prerequisite_rejected_but_unselected_allowed (test_qualification.QualificationTests.test_selected_deprecated_node_and_prerequisite_rejected_but_unselected_allowed) ... ok
+test_selection_and_full_audit_cli_keep_distinct_read_only_contracts (test_qualification.QualificationTests.test_selection_and_full_audit_cli_keep_distinct_read_only_contracts) ... ok
+test_selection_cli_is_read_only_and_rejects_unknown_nodes (test_qualification.QualificationTests.test_selection_cli_is_read_only_and_rejects_unknown_nodes) ... ok
+test_selection_ignores_unselected_broken_edges_but_graph_audits_them (test_qualification.QualificationTests.test_selection_ignores_unselected_broken_edges_but_graph_audits_them) ... ok
+test_selection_seeds_required_and_closes_requested_dependencies (test_qualification.QualificationTests.test_selection_seeds_required_and_closes_requested_dependencies) ... ok
+test_snapshot_cli_does_not_open_fifo_or_socket (test_qualification.QualificationTests.test_snapshot_cli_does_not_open_fifo_or_socket) ... snapshot socket fixture: bound Unix socket
+ok
+test_snapshot_tracks_untracked_edits_without_following_symlink (test_qualification.QualificationTests.test_snapshot_tracks_untracked_edits_without_following_symlink) ... ok
+test_special_file_deltas_and_run_finalization_in_both_scopes (test_qualification.QualificationTests.test_special_file_deltas_and_run_finalization_in_both_scopes) ... ok
+test_status_spellings_cannot_bypass_cli_deprecation_check (test_qualification.QualificationTests.test_status_spellings_cannot_bypass_cli_deprecation_check) ... ok
+test_symlinked_source_cannot_escape (test_qualification.QualificationTests.test_symlinked_source_cannot_escape) ... ok
+test_unterminated_frontmatter_cannot_borrow_body_metadata (test_qualification.QualificationTests.test_unterminated_frontmatter_cannot_borrow_body_metadata) ... ok
+test_verify_selection_cli_file_stdin_exit_codes_and_input_preservation (test_qualification.QualificationTests.test_verify_selection_cli_file_stdin_exit_codes_and_input_preservation) ... ok
+test_verify_selection_preserves_actual_extra_components_without_profile_substitution (test_qualification.QualificationTests.test_verify_selection_preserves_actual_extra_components_without_profile_substitution) ... ok
+test_verify_selection_rejects_ambiguous_lists_and_noncanonical_or_unknown_paths (test_qualification.QualificationTests.test_verify_selection_rejects_ambiguous_lists_and_noncanonical_or_unknown_paths) ... ok
+test_verify_selection_reports_required_and_transitive_omissions_without_filling_declared (test_qualification.QualificationTests.test_verify_selection_reports_required_and_transitive_omissions_without_filling_declared) ... ok
+test_verify_selection_validates_selected_graph_without_activating_unrelated_branches (test_qualification.QualificationTests.test_verify_selection_validates_selected_graph_without_activating_unrelated_branches) ... ok
+test_added_removed_changed_and_tampered_entries_do_not_match (test_source_identity.SourceIdentityTests.test_added_removed_changed_and_tampered_entries_do_not_match) ... ok
+test_exact_bytes_determinism_relocation_and_no_writes (test_source_identity.SourceIdentityTests.test_exact_bytes_determinism_relocation_and_no_writes) ... ok
+test_file_input_and_invalid_json_never_write_or_succeed (test_source_identity.SourceIdentityTests.test_file_input_and_invalid_json_never_write_or_succeed) ... ok
+test_invalid_manifest_schema_and_paths_are_refused (test_source_identity.SourceIdentityTests.test_invalid_manifest_schema_and_paths_are_refused) ... ok
+test_links_and_special_files_are_refused_without_following (test_source_identity.SourceIdentityTests.test_links_and_special_files_are_refused_without_following) ... ok
+test_missing_bundle_or_entrypoint_refuses_empty_match (test_source_identity.SourceIdentityTests.test_missing_bundle_or_entrypoint_refuses_empty_match) ... ok
+test_same_git_head_cannot_hide_dirty_bundle (test_source_identity.SourceIdentityTests.test_same_git_head_cannot_hide_dirty_bundle) ... ok
+test_control_integer_fields_reject_boolean_and_float_substitutes (test_trial_supervisor.RunnerDeadlineTests.test_control_integer_fields_reject_boolean_and_float_substitutes) ... ok
+test_invalid_timeout_has_no_effect (test_trial_supervisor.RunnerDeadlineTests.test_invalid_timeout_has_no_effect) ... ok
+test_missing_ambiguous_and_timeout_receipts_fail_closed (test_trial_supervisor.RunnerDeadlineTests.test_missing_ambiguous_and_timeout_receipts_fail_closed) ... ok
+test_transport_timeout_retains_partial_evidence_and_after_state (test_trial_supervisor.RunnerDeadlineTests.test_transport_timeout_retains_partial_evidence_and_after_state) ... ok
+test_closed_transport_output_does_not_leave_new_command_running (test_trial_supervisor.SupervisorTests.test_closed_transport_output_does_not_leave_new_command_running) ... ok
+test_deadline_preserves_partial_output_even_with_fake_completed_turn (test_trial_supervisor.SupervisorTests.test_deadline_preserves_partial_output_even_with_fake_completed_turn) ... ok
+test_interrupt_ignored_is_killed_and_unrelated_process_survives (test_trial_supervisor.SupervisorTests.test_interrupt_ignored_is_killed_and_unrelated_process_survives) ... ok
+test_launch_failure_and_invalid_limit_do_not_become_success (test_trial_supervisor.SupervisorTests.test_launch_failure_and_invalid_limit_do_not_become_success) ... ok
+test_same_group_descendant_cannot_continue_writing_after_deadline (test_trial_supervisor.SupervisorTests.test_same_group_descendant_cannot_continue_writing_after_deadline) ... ok
+test_success_preserves_stdin_argv_and_real_exit_124_is_not_timeout (test_trial_supervisor.SupervisorTests.test_success_preserves_stdin_argv_and_real_exit_124_is_not_timeout) ... ok
+
+----------------------------------------------------------------------
+Ran 61 tests in 29.818s
+
+OK
+
+
+## bundle-graph
+["/opt/homebrew/opt/python@3.15/bin/python3.15", "-B", "tools/qualification.py", "graph", "bundle"]
+{
+  "components/activation.md": {
+    "selection": "required",
+    "requires": [
+      "components/authority.md",
+      "components/context-core.md"
+    ],
+    "status": "stable",
+    "sha256": "2893e4d66fc47158d5267cae0a04132d832c8436ad90f7ca6f58d322aaef4284"
+  },
+  "components/advanced-validation.md": {
+    "selection": "conditional",
+    "requires": [
+      "components/delivery-acceptance.md",
+      "components/independent-evaluation.md"
+    ],
+    "status": "stable",
+    "sha256": "b4ac3d7f3a53d3194e7495a3729f8abc4dc6c632892c8acc69f22be0f9063648"
+  },
+  "components/authority.md": {
+    "selection": "required",
+    "requires": [],
+    "status": "stable",
+    "sha256": "fbc6b99852540f20a25dfd224d0d0f07399a9021e8cb1fc1d87f53c5156fb8a9"
+  },
+  "components/brownfield-migration.md": {
+    "selection": "conditional",
+    "requires": [
+      "components/activation.md",
+      "components/authority.md",
+      "components/context-core.md"
+    ],
+    "status": "stable",
+    "sha256": "dd0cac8f10b20aed0554fd6ed4504c4263ba1bd8be374a4f966ca86290f4f121"
+  },
+  "components/capability-routing.md": {
+    "selection": "required",
+    "requires": [],
+    "status": "stable",
+    "sha256": "d7f86c5cbf4b1a505f9db20fcbd68487a809bbdc04adce3cd12221114d0fc161"
+  },
+  "components/chief-of-staff.md": {
+    "selection": "required",
+    "requires": [
+      "components/role-lifecycle.md",
+      "components/self-improvement.md"
+    ],
+    "status": "stable",
+    "sha256": "c43203e841a0a10ef4ef3887b6a7d89eb834eb255b3b4386231488f4f9efb8b5"
+  },
+  "components/context-core.md": {
+    "selection": "required",
+    "requires": [],
+    "status": "stable",
+    "sha256": "8046c83f2eec46be879ce418e68827fdd95f6388ad3ff2090b8254840e74bca0"
+  },
+  "components/delegation.md": {
+    "selection": "required",
+    "requires": [
+      "components/authority.md",
+      "components/capability-routing.md"
+    ],
+    "status": "stable",
+    "sha256": "d34dcf7c5bb102fc4f0e1a1603954ce51e33aa5f05f9a3561ae33315d2725169"
+  },
+  "components/delivery-acceptance.md": {
+    "selection": "required",
+    "requires": [
+      "components/authority.md"
+    ],
+    "status": "stable",
+    "sha256": "540b6b083ca6eeb70214cb7711d9f1326c4c75c6de17327fa7048aa76d0be4bb"
+  },
+  "components/director.md": {
+    "selection": "required",
+    "requires": [
+      "components/activation.md",
+      "components/delegation.md",
+      "components/delivery-acceptance.md"
+    ],
+    "status": "stable",
+    "sha256": "beafa827c5ce6c53937537fa9521c2b46ebb9ec049788648b7e2b010b0eea9b0"
+  },
+  "components/durable-handoff.md": {
+    "selection": "conditional",
+    "requires": [
+      "components/work-ledger.md",
+      "components/context-core.md"
+    ],
+    "status": "stable",
+    "sha256": "f620977f68ad65bb99415afaa75e2afab51cdaae00037e65948927cb3c2eebd8"
+  },
+  "components/effect-reconciliation.md": {
+    "selection": "conditional",
+    "requires": [
+      "components/authority.md"
+    ],
+    "status": "stable",
+    "sha256": "955360b0112b872255287836a713d7bd646461f2ca073dd20042581e468cd2b8"
+  },
+  "components/git-delivery.md": {
+    "selection": "conditional",
+    "requires": [
+      "components/delivery-acceptance.md",
+      "components/effect-reconciliation.md"
+    ],
+    "status": "stable",
+    "sha256": "548f1d4eb37bf8bdb08e93bce84918cdfb5ea9ed03efc6c38112006b875de7cc"
+  },
+  "components/independent-evaluation.md": {
+    "selection": "conditional",
+    "requires": [
+      "components/self-improvement.md",
+      "components/delivery-acceptance.md"
+    ],
+    "status": "stable",
+    "sha256": "b8056f3712e264d67628bcf8320436f9069a7605bd08c74c0f75ff33f88a5391"
+  },
+  "components/information-boundaries.md": {
+    "selection": "conditional",
+    "requires": [
+      "components/authority.md"
+    ],
+    "status": "stable",
+    "sha256": "ca62d743eb5e146fde9905c6314553cac50c113241a9e2115713831c2f705454"
+  },
+  "components/learning-queue.md": {
+    "selection": "conditional",
+    "requires": [
+      "components/self-improvement.md"
+    ],
+    "status": "stable",
+    "sha256": "e8b77df91474a3f010d903d036fc02ccf0f70ac308dc62e2811dcd58519c100e"
+  },
+  "components/multi-repo.md": {
+    "selection": "conditional",
+    "requires": [
+      "components/information-boundaries.md",
+      "components/authority.md"
+    ],
+    "status": "stable",
+    "sha256": "f3e66aa254d41161bd2c888731d9776d00f221a17d54381c6975a80f1aa39d3a"
+  },
+  "components/parallel-coordination.md": {
+    "selection": "conditional",
+    "requires": [
+      "components/delegation.md",
+      "components/work-ledger.md"
+    ],
+    "status": "stable",
+    "sha256": "c356df44bb713f7f79a37c8fa82c9609d1c6702446643bbb82a447b48a00e510"
+  },
+  "components/resource-budgets.md": {
+    "selection": "conditional",
+    "requires": [
+      "components/delegation.md"
+    ],
+    "status": "stable",
+    "sha256": "82e10d06933148538f9df9d153fe1b5441d054bcd2203cf3952918feda3164a7"
+  },
+  "components/role-lifecycle.md": {
+    "selection": "required",
+    "requires": [
+      "components/capability-routing.md"
+    ],
+    "status": "stable",
+    "sha256": "ae0fc9a30668666d22cb9b0ab03049b98ec095a590f81ecb7b843972073bf95f"
+  },
+  "components/runtime-native.md": {
+    "selection": "conditional",
+    "requires": [
+      "components/activation.md"
+    ],
+    "status": "stable",
+    "sha256": "4d61f9e83c878efb8718fdddf5adf196e86f9525a73ea3cb2b18d53cfea1cf74"
+  },
+  "components/scheduling.md": {
+    "selection": "conditional",
+    "requires": [
+      "components/authority.md",
+      "components/self-improvement.md"
+    ],
+    "status": "stable",
+    "sha256": "20b4efed9901cd9bc9bb9df55651a84df9df37e5521aeab46739ace5aaccec33"
+  },
+  "components/self-improvement.md": {
+    "selection": "required",
+    "requires": [
+      "components/authority.md",
+      "components/delivery-acceptance.md"
+    ],
+    "status": "stable",
+    "sha256": "0bf78a0d5f04096c9e0b3603588f8b865aed218ba980f59f4dc11922656d5ac7"
+  },
+  "components/telemetry.md": {
+    "selection": "conditional",
+    "requires": [
+      "components/self-improvement.md"
+    ],
+    "status": "stable",
+    "sha256": "51d1bc186c3d6e45933dc671bfe92170f3cdda48cb36d419dc8c307db2b485d3"
+  },
+  "components/work-ledger.md": {
+    "selection": "conditional",
+    "requires": [
+      "components/delegation.md",
+      "components/delivery-acceptance.md"
+    ],
+    "status": "stable",
+    "sha256": "d912bc474f79722ef403dde880e1fa864bb7f08fd0b899a9b774880e7bb78cab"
+  }
+}
+
+
+## portable-selection
+["/opt/homebrew/opt/python@3.15/bin/python3.15", "-B", "tools/qualification.py", "select", "bundle"]
+{
+  "required": [
+    "components/activation.md",
+    "components/authority.md",
+    "components/capability-routing.md",
+    "components/chief-of-staff.md",
+    "components/context-core.md",
+    "components/delegation.md",
+    "components/delivery-acceptance.md",
+    "components/director.md",
+    "components/role-lifecycle.md",
+    "components/self-improvement.md"
+  ],
+  "requested": [],
+  "selected": [
+    "components/activation.md",
+    "components/authority.md",
+    "components/capability-routing.md",
+    "components/chief-of-staff.md",
+    "components/context-core.md",
+    "components/delegation.md",
+    "components/delivery-acceptance.md",
+    "components/director.md",
+    "components/role-lifecycle.md",
+    "components/self-improvement.md"
+  ],
+  "components": {
+    "components/activation.md": {
+      "selection": "required",
+      "requires": [
+        "components/authority.md",
+        "components/context-core.md"
+      ],
+      "status": "stable",
+      "sha256": "2893e4d66fc47158d5267cae0a04132d832c8436ad90f7ca6f58d322aaef4284"
+    },
+    "components/authority.md": {
+      "selection": "required",
+      "requires": [],
+      "status": "stable",
+      "sha256": "fbc6b99852540f20a25dfd224d0d0f07399a9021e8cb1fc1d87f53c5156fb8a9"
+    },
+    "components/capability-routing.md": {
+      "selection": "required",
+      "requires": [],
+      "status": "stable",
+      "sha256": "d7f86c5cbf4b1a505f9db20fcbd68487a809bbdc04adce3cd12221114d0fc161"
+    },
+    "components/chief-of-staff.md": {
+      "selection": "required",
+      "requires": [
+        "components/role-lifecycle.md",
+        "components/self-improvement.md"
+      ],
+      "status": "stable",
+      "sha256": "c43203e841a0a10ef4ef3887b6a7d89eb834eb255b3b4386231488f4f9efb8b5"
+    },
+    "components/context-core.md": {
+      "selection": "required",
+      "requires": [],
+      "status": "stable",
+      "sha256": "8046c83f2eec46be879ce418e68827fdd95f6388ad3ff2090b8254840e74bca0"
+    },
+    "components/delegation.md": {
+      "selection": "required",
+      "requires": [
+        "components/authority.md",
+        "components/capability-routing.md"
+      ],
+      "status": "stable",
+      "sha256": "d34dcf7c5bb102fc4f0e1a1603954ce51e33aa5f05f9a3561ae33315d2725169"
+    },
+    "components/delivery-acceptance.md": {
+      "selection": "required",
+      "requires": [
+        "components/authority.md"
+      ],
+      "status": "stable",
+      "sha256": "540b6b083ca6eeb70214cb7711d9f1326c4c75c6de17327fa7048aa76d0be4bb"
+    },
+    "components/director.md": {
+      "selection": "required",
+      "requires": [
+        "components/activation.md",
+        "components/delegation.md",
+        "components/delivery-acceptance.md"
+      ],
+      "status": "stable",
+      "sha256": "beafa827c5ce6c53937537fa9521c2b46ebb9ec049788648b7e2b010b0eea9b0"
+    },
+    "components/role-lifecycle.md": {
+      "selection": "required",
+      "requires": [
+        "components/capability-routing.md"
+      ],
+      "status": "stable",
+      "sha256": "ae0fc9a30668666d22cb9b0ab03049b98ec095a590f81ecb7b843972073bf95f"
+    },
+    "components/self-improvement.md": {
+      "selection": "required",
+      "requires": [
+        "components/authority.md",
+        "components/delivery-acceptance.md"
+      ],
+      "status": "stable",
+      "sha256": "0bf78a0d5f04096c9e0b3603588f8b865aed218ba980f59f4dc11922656d5ac7"
+    }
+  },
+  "limits": "Structural selection only. Read full selected sources, reconcile user requirements, and obtain applicable authority before installation or effects."
+}
+
+
+## engineering-selection
+["/opt/homebrew/opt/python@3.15/bin/python3.15", "-B", "tools/qualification.py", "select", "bundle", "--component", "components/runtime-native.md", "--component", "components/work-ledger.md", "--component", "components/parallel-coordination.md", "--component", "components/durable-handoff.md", "--component", "components/effect-reconciliation.md", "--component", "components/independent-evaluation.md", "--component", "components/learning-queue.md", "--component", "components/resource-budgets.md", "--component", "components/git-delivery.md", "--component", "components/scheduling.md", "--component", "components/advanced-validation.md", "--component", "components/telemetry.md"]
+{
+  "required": [
+    "components/activation.md",
+    "components/authority.md",
+    "components/capability-routing.md",
+    "components/chief-of-staff.md",
+    "components/context-core.md",
+    "components/delegation.md",
+    "components/delivery-acceptance.md",
+    "components/director.md",
+    "components/role-lifecycle.md",
+    "components/self-improvement.md"
+  ],
+  "requested": [
+    "components/advanced-validation.md",
+    "components/durable-handoff.md",
+    "components/effect-reconciliation.md",
+    "components/git-delivery.md",
+    "components/independent-evaluation.md",
+    "components/learning-queue.md",
+    "components/parallel-coordination.md",
+    "components/resource-budgets.md",
+    "components/runtime-native.md",
+    "components/scheduling.md",
+    "components/telemetry.md",
+    "components/work-ledger.md"
+  ],
+  "selected": [
+    "components/activation.md",
+    "components/advanced-validation.md",
+    "components/authority.md",
+    "components/capability-routing.md",
+    "components/chief-of-staff.md",
+    "components/context-core.md",
+    "components/delegation.md",
+    "components/delivery-acceptance.md",
+    "components/director.md",
+    "components/durable-handoff.md",
+    "components/effect-reconciliation.md",
+    "components/git-delivery.md",
+    "components/independent-evaluation.md",
+    "components/learning-queue.md",
+    "components/parallel-coordination.md",
+    "components/resource-budgets.md",
+    "components/role-lifecycle.md",
+    "components/runtime-native.md",
+    "components/scheduling.md",
+    "components/self-improvement.md",
+    "components/telemetry.md",
+    "components/work-ledger.md"
+  ],
+  "components": {
+    "components/activation.md": {
+      "selection": "required",
+      "requires": [
+        "components/authority.md",
+        "components/context-core.md"
+      ],
+      "status": "stable",
+      "sha256": "2893e4d66fc47158d5267cae0a04132d832c8436ad90f7ca6f58d322aaef4284"
+    },
+    "components/advanced-validation.md": {
+      "selection": "conditional",
+      "requires": [
+        "components/delivery-acceptance.md",
+        "components/independent-evaluation.md"
+      ],
+      "status": "stable",
+      "sha256": "b4ac3d7f3a53d3194e7495a3729f8abc4dc6c632892c8acc69f22be0f9063648"
+    },
+    "components/authority.md": {
+      "selection": "required",
+      "requires": [],
+      "status": "stable",
+      "sha256": "fbc6b99852540f20a25dfd224d0d0f07399a9021e8cb1fc1d87f53c5156fb8a9"
+    },
+    "components/capability-routing.md": {
+      "selection": "required",
+      "requires": [],
+      "status": "stable",
+      "sha256": "d7f86c5cbf4b1a505f9db20fcbd68487a809bbdc04adce3cd12221114d0fc161"
+    },
+    "components/chief-of-staff.md": {
+      "selection": "required",
+      "requires": [
+        "components/role-lifecycle.md",
+        "components/self-improvement.md"
+      ],
+      "status": "stable",
+      "sha256": "c43203e841a0a10ef4ef3887b6a7d89eb834eb255b3b4386231488f4f9efb8b5"
+    },
+    "components/context-core.md": {
+      "selection": "required",
+      "requires": [],
+      "status": "stable",
+      "sha256": "8046c83f2eec46be879ce418e68827fdd95f6388ad3ff2090b8254840e74bca0"
+    },
+    "components/delegation.md": {
+      "selection": "required",
+      "requires": [
+        "components/authority.md",
+        "components/capability-routing.md"
+      ],
+      "status": "stable",
+      "sha256": "d34dcf7c5bb102fc4f0e1a1603954ce51e33aa5f05f9a3561ae33315d2725169"
+    },
+    "components/delivery-acceptance.md": {
+      "selection": "required",
+      "requires": [
+        "components/authority.md"
+      ],
+      "status": "stable",
+      "sha256": "540b6b083ca6eeb70214cb7711d9f1326c4c75c6de17327fa7048aa76d0be4bb"
+    },
+    "components/director.md": {
+      "selection": "required",
+      "requires": [
+        "components/activation.md",
+        "components/delegation.md",
+        "components/delivery-acceptance.md"
+      ],
+      "status": "stable",
+      "sha256": "beafa827c5ce6c53937537fa9521c2b46ebb9ec049788648b7e2b010b0eea9b0"
+    },
+    "components/durable-handoff.md": {
+      "selection": "conditional",
+      "requires": [
+        "components/work-ledger.md",
+        "components/context-core.md"
+      ],
+      "status": "stable",
+      "sha256": "f620977f68ad65bb99415afaa75e2afab51cdaae00037e65948927cb3c2eebd8"
+    },
+    "components/effect-reconciliation.md": {
+      "selection": "conditional",
+      "requires": [
+        "components/authority.md"
+      ],
+      "status": "stable",
+      "sha256": "955360b0112b872255287836a713d7bd646461f2ca073dd20042581e468cd2b8"
+    },
+    "components/git-delivery.md": {
+      "selection": "conditional",
+      "requires": [
+        "components/delivery-acceptance.md",
+        "components/effect-reconciliation.md"
+      ],
+      "status": "stable",
+      "sha256": "548f1d4eb37bf8bdb08e93bce84918cdfb5ea9ed03efc6c38112006b875de7cc"
+    },
+    "components/independent-evaluation.md": {
+      "selection": "conditional",
+      "requires": [
+        "components/self-improvement.md",
+        "components/delivery-acceptance.md"
+      ],
+      "status": "stable",
+      "sha256": "b8056f3712e264d67628bcf8320436f9069a7605bd08c74c0f75ff33f88a5391"
+    },
+    "components/learning-queue.md": {
+      "selection": "conditional",
+      "requires": [
+        "components/self-improvement.md"
+      ],
+      "status": "stable",
+      "sha256": "e8b77df91474a3f010d903d036fc02ccf0f70ac308dc62e2811dcd58519c100e"
+    },
+    "components/parallel-coordination.md": {
+      "selection": "conditional",
+      "requires": [
+        "components/delegation.md",
+        "components/work-ledger.md"
+      ],
+      "status": "stable",
+      "sha256": "c356df44bb713f7f79a37c8fa82c9609d1c6702446643bbb82a447b48a00e510"
+    },
+    "components/resource-budgets.md": {
+      "selection": "conditional",
+      "requires": [
+        "components/delegation.md"
+      ],
+      "status": "stable",
+      "sha256": "82e10d06933148538f9df9d153fe1b5441d054bcd2203cf3952918feda3164a7"
+    },
+    "components/role-lifecycle.md": {
+      "selection": "required",
+      "requires": [
+        "components/capability-routing.md"
+      ],
+      "status": "stable",
+      "sha256": "ae0fc9a30668666d22cb9b0ab03049b98ec095a590f81ecb7b843972073bf95f"
+    },
+    "components/runtime-native.md": {
+      "selection": "conditional",
+      "requires": [
+        "components/activation.md"
+      ],
+      "status": "stable",
+      "sha256": "4d61f9e83c878efb8718fdddf5adf196e86f9525a73ea3cb2b18d53cfea1cf74"
+    },
+    "components/scheduling.md": {
+      "selection": "conditional",
+      "requires": [
+        "components/authority.md",
+        "components/self-improvement.md"
+      ],
+      "status": "stable",
+      "sha256": "20b4efed9901cd9bc9bb9df55651a84df9df37e5521aeab46739ace5aaccec33"
+    },
+    "components/self-improvement.md": {
+      "selection": "required",
+      "requires": [
+        "components/authority.md",
+        "components/delivery-acceptance.md"
+      ],
+      "status": "stable",
+      "sha256": "0bf78a0d5f04096c9e0b3603588f8b865aed218ba980f59f4dc11922656d5ac7"
+    },
+    "components/telemetry.md": {
+      "selection": "conditional",
+      "requires": [
+        "components/self-improvement.md"
+      ],
+      "status": "stable",
+      "sha256": "51d1bc186c3d6e45933dc671bfe92170f3cdda48cb36d419dc8c307db2b485d3"
+    },
+    "components/work-ledger.md": {
+      "selection": "conditional",
+      "requires": [
+        "components/delegation.md",
+        "components/delivery-acceptance.md"
+      ],
+      "status": "stable",
+      "sha256": "d912bc474f79722ef403dde880e1fa864bb7f08fd0b899a9b774880e7bb78cab"
+    }
+  },
+  "limits": "Structural selection only. Read full selected sources, reconcile user requirements, and obtain applicable authority before installation or effects."
+}
+
+
+## portfolio-selection
+["/opt/homebrew/opt/python@3.15/bin/python3.15", "-B", "tools/qualification.py", "select", "bundle", "--component", "components/work-ledger.md", "--component", "components/durable-handoff.md", "--component", "components/effect-reconciliation.md", "--component", "components/independent-evaluation.md", "--component", "components/information-boundaries.md", "--component", "components/multi-repo.md", "--component", "components/brownfield-migration.md", "--component", "components/advanced-validation.md"]
+{
+  "required": [
+    "components/activation.md",
+    "components/authority.md",
+    "components/capability-routing.md",
+    "components/chief-of-staff.md",
+    "components/context-core.md",
+    "components/delegation.md",
+    "components/delivery-acceptance.md",
+    "components/director.md",
+    "components/role-lifecycle.md",
+    "components/self-improvement.md"
+  ],
+  "requested": [
+    "components/advanced-validation.md",
+    "components/brownfield-migration.md",
+    "components/durable-handoff.md",
+    "components/effect-reconciliation.md",
+    "components/independent-evaluation.md",
+    "components/information-boundaries.md",
+    "components/multi-repo.md",
+    "components/work-ledger.md"
+  ],
+  "selected": [
+    "components/activation.md",
+    "components/advanced-validation.md",
+    "components/authority.md",
+    "components/brownfield-migration.md",
+    "components/capability-routing.md",
+    "components/chief-of-staff.md",
+    "components/context-core.md",
+    "components/delegation.md",
+    "components/delivery-acceptance.md",
+    "components/director.md",
+    "components/durable-handoff.md",
+    "components/effect-reconciliation.md",
+    "components/independent-evaluation.md",
+    "components/information-boundaries.md",
+    "components/multi-repo.md",
+    "components/role-lifecycle.md",
+    "components/self-improvement.md",
+    "components/work-ledger.md"
+  ],
+  "components": {
+    "components/activation.md": {
+      "selection": "required",
+      "requires": [
+        "components/authority.md",
+        "components/context-core.md"
+      ],
+      "status": "stable",
+      "sha256": "2893e4d66fc47158d5267cae0a04132d832c8436ad90f7ca6f58d322aaef4284"
+    },
+    "components/advanced-validation.md": {
+      "selection": "conditional",
+      "requires": [
+        "components/delivery-acceptance.md",
+        "components/independent-evaluation.md"
+      ],
+      "status": "stable",
+      "sha256": "b4ac3d7f3a53d3194e7495a3729f8abc4dc6c632892c8acc69f22be0f9063648"
+    },
+    "components/authority.md": {
+      "selection": "required",
+      "requires": [],
+      "status": "stable",
+      "sha256": "fbc6b99852540f20a25dfd224d0d0f07399a9021e8cb1fc1d87f53c5156fb8a9"
+    },
+    "components/brownfield-migration.md": {
+      "selection": "conditional",
+      "requires": [
+        "components/activation.md",
+        "components/authority.md",
+        "components/context-core.md"
+      ],
+      "status": "stable",
+      "sha256": "dd0cac8f10b20aed0554fd6ed4504c4263ba1bd8be374a4f966ca86290f4f121"
+    },
+    "components/capability-routing.md": {
+      "selection": "required",
+      "requires": [],
+      "status": "stable",
+      "sha256": "d7f86c5cbf4b1a505f9db20fcbd68487a809bbdc04adce3cd12221114d0fc161"
+    },
+    "components/chief-of-staff.md": {
+      "selection": "required",
+      "requires": [
+        "components/role-lifecycle.md",
+        "components/self-improvement.md"
+      ],
+      "status": "stable",
+      "sha256": "c43203e841a0a10ef4ef3887b6a7d89eb834eb255b3b4386231488f4f9efb8b5"
+    },
+    "components/context-core.md": {
+      "selection": "required",
+      "requires": [],
+      "status": "stable",
+      "sha256": "8046c83f2eec46be879ce418e68827fdd95f6388ad3ff2090b8254840e74bca0"
+    },
+    "components/delegation.md": {
+      "selection": "required",
+      "requires": [
+        "components/authority.md",
+        "components/capability-routing.md"
+      ],
+      "status": "stable",
+      "sha256": "d34dcf7c5bb102fc4f0e1a1603954ce51e33aa5f05f9a3561ae33315d2725169"
+    },
+    "components/delivery-acceptance.md": {
+      "selection": "required",
+      "requires": [
+        "components/authority.md"
+      ],
+      "status": "stable",
+      "sha256": "540b6b083ca6eeb70214cb7711d9f1326c4c75c6de17327fa7048aa76d0be4bb"
+    },
+    "components/director.md": {
+      "selection": "required",
+      "requires": [
+        "components/activation.md",
+        "components/delegation.md",
+        "components/delivery-acceptance.md"
+      ],
+      "status": "stable",
+      "sha256": "beafa827c5ce6c53937537fa9521c2b46ebb9ec049788648b7e2b010b0eea9b0"
+    },
+    "components/durable-handoff.md": {
+      "selection": "conditional",
+      "requires": [
+        "components/work-ledger.md",
+        "components/context-core.md"
+      ],
+      "status": "stable",
+      "sha256": "f620977f68ad65bb99415afaa75e2afab51cdaae00037e65948927cb3c2eebd8"
+    },
+    "components/effect-reconciliation.md": {
+      "selection": "conditional",
+      "requires": [
+        "components/authority.md"
+      ],
+      "status": "stable",
+      "sha256": "955360b0112b872255287836a713d7bd646461f2ca073dd20042581e468cd2b8"
+    },
+    "components/independent-evaluation.md": {
+      "selection": "conditional",
+      "requires": [
+        "components/self-improvement.md",
+        "components/delivery-acceptance.md"
+      ],
+      "status": "stable",
+      "sha256": "b8056f3712e264d67628bcf8320436f9069a7605bd08c74c0f75ff33f88a5391"
+    },
+    "components/information-boundaries.md": {
+      "selection": "conditional",
+      "requires": [
+        "components/authority.md"
+      ],
+      "status": "stable",
+      "sha256": "ca62d743eb5e146fde9905c6314553cac50c113241a9e2115713831c2f705454"
+    },
+    "components/multi-repo.md": {
+      "selection": "conditional",
+      "requires": [
+        "components/information-boundaries.md",
+        "components/authority.md"
+      ],
+      "status": "stable",
+      "sha256": "f3e66aa254d41161bd2c888731d9776d00f221a17d54381c6975a80f1aa39d3a"
+    },
+    "components/role-lifecycle.md": {
+      "selection": "required",
+      "requires": [
+        "components/capability-routing.md"
+      ],
+      "status": "stable",
+      "sha256": "ae0fc9a30668666d22cb9b0ab03049b98ec095a590f81ecb7b843972073bf95f"
+    },
+    "components/self-improvement.md": {
+      "selection": "required",
+      "requires": [
+        "components/authority.md",
+        "components/delivery-acceptance.md"
+      ],
+      "status": "stable",
+      "sha256": "0bf78a0d5f04096c9e0b3603588f8b865aed218ba980f59f4dc11922656d5ac7"
+    },
+    "components/work-ledger.md": {
+      "selection": "conditional",
+      "requires": [
+        "components/delegation.md",
+        "components/delivery-acceptance.md"
+      ],
+      "status": "stable",
+      "sha256": "d912bc474f79722ef403dde880e1fa864bb7f08fd0b899a9b774880e7bb78cab"
+    }
+  },
+  "limits": "Structural selection only. Read full selected sources, reconcile user requirements, and obtain applicable authority before installation or effects."
+}
+
+
+## release-manifest
+["/opt/homebrew/opt/python@3.15/bin/python3.15", "-B", "tools/qualification.py", "identity", "bundle", "--verify", "docs/releases/2026-10-24-source.json"]
+{
+  "match": true,
+  "delta": {
+    "added": [],
+    "removed": [],
+    "changed": []
+  }
+}
+
+
+## copied-source-graph
+["/opt/homebrew/opt/python@3.15/bin/python3.15", "-B", "tools/qualification.py", "graph", "bundle"]
+{
+  "components/activation.md": {
+    "selection": "required",
+    "requires": [
+      "components/authority.md",
+      "components/context-core.md"
+    ],
+    "status": "stable",
+    "sha256": "2893e4d66fc47158d5267cae0a04132d832c8436ad90f7ca6f58d322aaef4284"
+  },
+  "components/advanced-validation.md": {
+    "selection": "conditional",
+    "requires": [
+      "components/delivery-acceptance.md",
+      "components/independent-evaluation.md"
+    ],
+    "status": "stable",
+    "sha256": "b4ac3d7f3a53d3194e7495a3729f8abc4dc6c632892c8acc69f22be0f9063648"
+  },
+  "components/authority.md": {
+    "selection": "required",
+    "requires": [],
+    "status": "stable",
+    "sha256": "fbc6b99852540f20a25dfd224d0d0f07399a9021e8cb1fc1d87f53c5156fb8a9"
+  },
+  "components/brownfield-migration.md": {
+    "selection": "conditional",
+    "requires": [
+      "components/activation.md",
+      "components/authority.md",
+      "components/context-core.md"
+    ],
+    "status": "stable",
+    "sha256": "dd0cac8f10b20aed0554fd6ed4504c4263ba1bd8be374a4f966ca86290f4f121"
+  },
+  "components/capability-routing.md": {
+    "selection": "required",
+    "requires": [],
+    "status": "stable",
+    "sha256": "d7f86c5cbf4b1a505f9db20fcbd68487a809bbdc04adce3cd12221114d0fc161"
+  },
+  "components/chief-of-staff.md": {
+    "selection": "required",
+    "requires": [
+      "components/role-lifecycle.md",
+      "components/self-improvement.md"
+    ],
+    "status": "stable",
+    "sha256": "c43203e841a0a10ef4ef3887b6a7d89eb834eb255b3b4386231488f4f9efb8b5"
+  },
+  "components/context-core.md": {
+    "selection": "required",
+    "requires": [],
+    "status": "stable",
+    "sha256": "8046c83f2eec46be879ce418e68827fdd95f6388ad3ff2090b8254840e74bca0"
+  },
+  "components/delegation.md": {
+    "selection": "required",
+    "requires": [
+      "components/authority.md",
+      "components/capability-routing.md"
+    ],
+    "status": "stable",
+    "sha256": "d34dcf7c5bb102fc4f0e1a1603954ce51e33aa5f05f9a3561ae33315d2725169"
+  },
+  "components/delivery-acceptance.md": {
+    "selection": "required",
+    "requires": [
+      "components/authority.md"
+    ],
+    "status": "stable",
+    "sha256": "540b6b083ca6eeb70214cb7711d9f1326c4c75c6de17327fa7048aa76d0be4bb"
+  },
+  "components/director.md": {
+    "selection": "required",
+    "requires": [
+      "components/activation.md",
+      "components/delegation.md",
+      "components/delivery-acceptance.md"
+    ],
+    "status": "stable",
+    "sha256": "beafa827c5ce6c53937537fa9521c2b46ebb9ec049788648b7e2b010b0eea9b0"
+  },
+  "components/durable-handoff.md": {
+    "selection": "conditional",
+    "requires": [
+      "components/work-ledger.md",
+      "components/context-core.md"
+    ],
+    "status": "stable",
+    "sha256": "f620977f68ad65bb99415afaa75e2afab51cdaae00037e65948927cb3c2eebd8"
+  },
+  "components/effect-reconciliation.md": {
+    "selection": "conditional",
+    "requires": [
+      "components/authority.md"
+    ],
+    "status": "stable",
+    "sha256": "955360b0112b872255287836a713d7bd646461f2ca073dd20042581e468cd2b8"
+  },
+  "components/git-delivery.md": {
+    "selection": "conditional",
+    "requires": [
+      "components/delivery-acceptance.md",
+      "components/effect-reconciliation.md"
+    ],
+    "status": "stable",
+    "sha256": "548f1d4eb37bf8bdb08e93bce84918cdfb5ea9ed03efc6c38112006b875de7cc"
+  },
+  "components/independent-evaluation.md": {
+    "selection": "conditional",
+    "requires": [
+      "components/self-improvement.md",
+      "components/delivery-acceptance.md"
+    ],
+    "status": "stable",
+    "sha256": "b8056f3712e264d67628bcf8320436f9069a7605bd08c74c0f75ff33f88a5391"
+  },
+  "components/information-boundaries.md": {
+    "selection": "conditional",
+    "requires": [
+      "components/authority.md"
+    ],
+    "status": "stable",
+    "sha256": "ca62d743eb5e146fde9905c6314553cac50c113241a9e2115713831c2f705454"
+  },
+  "components/learning-queue.md": {
+    "selection": "conditional",
+    "requires": [
+      "components/self-improvement.md"
+    ],
+    "status": "stable",
+    "sha256": "e8b77df91474a3f010d903d036fc02ccf0f70ac308dc62e2811dcd58519c100e"
+  },
+  "components/multi-repo.md": {
+    "selection": "conditional",
+    "requires": [
+      "components/information-boundaries.md",
+      "components/authority.md"
+    ],
+    "status": "stable",
+    "sha256": "f3e66aa254d41161bd2c888731d9776d00f221a17d54381c6975a80f1aa39d3a"
+  },
+  "components/parallel-coordination.md": {
+    "selection": "conditional",
+    "requires": [
+      "components/delegation.md",
+      "components/work-ledger.md"
+    ],
+    "status": "stable",
+    "sha256": "c356df44bb713f7f79a37c8fa82c9609d1c6702446643bbb82a447b48a00e510"
+  },
+  "components/resource-budgets.md": {
+    "selection": "conditional",
+    "requires": [
+      "components/delegation.md"
+    ],
+    "status": "stable",
+    "sha256": "82e10d06933148538f9df9d153fe1b5441d054bcd2203cf3952918feda3164a7"
+  },
+  "components/role-lifecycle.md": {
+    "selection": "required",
+    "requires": [
+      "components/capability-routing.md"
+    ],
+    "status": "stable",
+    "sha256": "ae0fc9a30668666d22cb9b0ab03049b98ec095a590f81ecb7b843972073bf95f"
+  },
+  "components/runtime-native.md": {
+    "selection": "conditional",
+    "requires": [
+      "components/activation.md"
+    ],
+    "status": "stable",
+    "sha256": "4d61f9e83c878efb8718fdddf5adf196e86f9525a73ea3cb2b18d53cfea1cf74"
+  },
+  "components/scheduling.md": {
+    "selection": "conditional",
+    "requires": [
+      "components/authority.md",
+      "components/self-improvement.md"
+    ],
+    "status": "stable",
+    "sha256": "20b4efed9901cd9bc9bb9df55651a84df9df37e5521aeab46739ace5aaccec33"
+  },
+  "components/self-improvement.md": {
+    "selection": "required",
+    "requires": [
+      "components/authority.md",
+      "components/delivery-acceptance.md"
+    ],
+    "status": "stable",
+    "sha256": "0bf78a0d5f04096c9e0b3603588f8b865aed218ba980f59f4dc11922656d5ac7"
+  },
+  "components/telemetry.md": {
+    "selection": "conditional",
+    "requires": [
+      "components/self-improvement.md"
+    ],
+    "status": "stable",
+    "sha256": "51d1bc186c3d6e45933dc671bfe92170f3cdda48cb36d419dc8c307db2b485d3"
+  },
+  "components/work-ledger.md": {
+    "selection": "conditional",
+    "requires": [
+      "components/delegation.md",
+      "components/delivery-acceptance.md"
+    ],
+    "status": "stable",
+    "sha256": "d912bc474f79722ef403dde880e1fa864bb7f08fd0b899a9b774880e7bb78cab"
+  }
+}
+
+
+## copied-source-identity
+["/opt/homebrew/opt/python@3.15/bin/python3.15", "-B", "tools/qualification.py", "identity", "bundle", "--verify", "approved.json"]
+{
+  "match": true,
+  "delta": {
+    "added": [],
+    "removed": [],
+    "changed": []
+  }
+}
+
+
+## copied-source-change-refused
+["/opt/homebrew/opt/python@3.15/bin/python3.15", "-B", "tools/qualification.py", "identity", "bundle", "--verify", "approved.json"]
+{
+  "match": false,
+  "delta": {
+    "added": [],
+    "removed": [],
+    "changed": [
+      "start.md"
+    ]
+  }
+}
+
