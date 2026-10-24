@@ -1,0 +1,628 @@
+{
+  "task": "TASK-000187",
+  "run": "RUN-000182",
+  "observed_at": "2026-10-24T07:27:27.853671+00:00",
+  "base": "c3f84f87ce47aa6668597a3f1204c020985ecc50",
+  "tested_candidate": "39de21952d0677b1b600c9a1528a25cd8549e8b4",
+  "disposition": {
+    "task": "TASK-000187",
+    "candidate": "39de21952d0677b1b600c9a1528a25cd8549e8b4",
+    "time": "2026-10-24T07:23:20.493077+00:00",
+    "decision": "reject; stop unstarted bundle I and all U; let already admitted Sol I return",
+    "reason": "Full Luna I fails original mandatory contract/qualification gates despite complete source/reference exposure. No parent artifact repairs.",
+    "full_luna_findings": [
+      "Selected task-appropriate model/reasoning rule absent from installed operative files.",
+      "Director user accessibility and CoS regression-evidence retention not preserved explicitly; authority lacks explicit granted-root path anchoring.",
+      "Correction trace claims accepted hypothetical prior wording, but never exercises rejected/inconclusive outcomes or scoped recovery. Register says none occurred.",
+      "Assignment trace substitutes an unauthorized project edit refusal for the required meaningful allowed assignment/work/return path.",
+      "Reconfiguration and lifecycle traces remain generic; no concrete installed prior passage/candidate/evaluated reconfiguration and incomplete particular transfer/discovery state.",
+      "Retains D target/source Git misattribution; exact helper byte replay succeeded and remains binding."
+    ],
+    "exposure": "All11selected full bodies, full start/implement/qualify/handoff and complete enlarged reference observed in successful command output. One failed relative-source cat from wrong cwd, corrected once.",
+    "scope": "Original target/project/Git/source preserved. Missing dependent exposure is not pass.",
+    "next": "Inspect completed Sol I; archive all evidence; withdraw source; independent review findings and source-equivalence; owned cleanup and protected PR/main delivery."
+  },
+  "design_decisions": [
+    {
+      "design": "accepted for bounded installation after parent semantic review; not installation qualification",
+      "source_identity": "explicitly referenced successful exact47-file byte manifest, independently matched every path/hash/length",
+      "full_component_reads": [
+        "components/activation.md",
+        "components/authority.md",
+        "components/capability-routing.md",
+        "components/chief-of-staff.md",
+        "components/context-core.md",
+        "components/delegation.md",
+        "components/delivery-acceptance.md",
+        "components/director.md",
+        "components/resource-budgets.md",
+        "components/role-lifecycle.md",
+        "components/self-improvement.md"
+      ],
+      "selected_components": [
+        "components/activation.md",
+        "components/authority.md",
+        "components/capability-routing.md",
+        "components/chief-of-staff.md",
+        "components/context-core.md",
+        "components/delegation.md",
+        "components/delivery-acceptance.md",
+        "components/director.md",
+        "components/resource-budgets.md",
+        "components/role-lifecycle.md",
+        "components/self-improvement.md"
+      ],
+      "source_and_target_git_and_files_preserved": true,
+      "handoff_sha256": "eb0248d11f24608239a90484877a1fe29ce76d57a20f796efd9c688ee3d5b219"
+    },
+    {
+      "design": "accepted for bounded installation after parent semantic review; not installation qualification",
+      "source_identity": "explicitly referenced successful exact47-file byte manifest, independently matched every path/hash/length",
+      "full_component_reads": [
+        "components/activation.md",
+        "components/authority.md",
+        "components/capability-routing.md",
+        "components/chief-of-staff.md",
+        "components/context-core.md",
+        "components/delegation.md",
+        "components/delivery-acceptance.md",
+        "components/director.md",
+        "components/resource-budgets.md",
+        "components/role-lifecycle.md",
+        "components/self-improvement.md"
+      ],
+      "selected_components": [
+        "components/activation.md",
+        "components/authority.md",
+        "components/capability-routing.md",
+        "components/chief-of-staff.md",
+        "components/context-core.md",
+        "components/delegation.md",
+        "components/delivery-acceptance.md",
+        "components/director.md",
+        "components/resource-budgets.md",
+        "components/role-lifecycle.md",
+        "components/self-improvement.md"
+      ],
+      "source_and_target_git_and_files_preserved": true,
+      "handoff_sha256": "3c65ced27244135f44e42e8127a61f254bfaf6b8087b1c806d62084160b82fcd"
+    },
+    {
+      "design": "accepted for bounded installation after parent semantic review; not installation qualification",
+      "source_identity": "explicitly referenced successful exact47-file byte manifest, independently matched every path/hash/length",
+      "full_component_reads": [
+        "components/activation.md",
+        "components/authority.md",
+        "components/capability-routing.md",
+        "components/chief-of-staff.md",
+        "components/context-core.md",
+        "components/delegation.md",
+        "components/delivery-acceptance.md",
+        "components/director.md",
+        "components/resource-budgets.md",
+        "components/role-lifecycle.md",
+        "components/self-improvement.md"
+      ],
+      "selected_components": [
+        "components/activation.md",
+        "components/authority.md",
+        "components/capability-routing.md",
+        "components/chief-of-staff.md",
+        "components/context-core.md",
+        "components/delegation.md",
+        "components/delivery-acceptance.md",
+        "components/director.md",
+        "components/resource-budgets.md",
+        "components/role-lifecycle.md",
+        "components/self-improvement.md"
+      ],
+      "source_and_target_git_and_files_preserved": true,
+      "handoff_sha256": "349442c4ca9d951a3b506d1acc4312f26207a27a5b70cdeb9b70712efe7ea552",
+      "retained_error": "Proposal misattributes target Git HEAD 9863520e278b2f1f75da58945a5c23773ae317ba to source checkout. Raw git log command was target discovery; frozen source HEAD is39de21952d0677b1b600c9a1528a25cd8549e8b4. Exact successful47file helper manifest is the explicit byte binding and remains correct. Verbatim handoff is not repaired."
+    },
+    {
+      "design": "accepted for bounded installation after parent semantic review; not installation qualification",
+      "source_identity": "explicitly referenced successful exact47-file byte manifest, independently matched every path/hash/length",
+      "full_component_reads": [
+        "components/activation.md",
+        "components/authority.md",
+        "components/capability-routing.md",
+        "components/chief-of-staff.md",
+        "components/context-core.md",
+        "components/delegation.md",
+        "components/delivery-acceptance.md",
+        "components/director.md",
+        "components/resource-budgets.md",
+        "components/role-lifecycle.md",
+        "components/self-improvement.md"
+      ],
+      "selected_components": [
+        "components/activation.md",
+        "components/authority.md",
+        "components/capability-routing.md",
+        "components/chief-of-staff.md",
+        "components/context-core.md",
+        "components/delegation.md",
+        "components/delivery-acceptance.md",
+        "components/director.md",
+        "components/resource-budgets.md",
+        "components/role-lifecycle.md",
+        "components/self-improvement.md"
+      ],
+      "source_and_target_git_and_files_preserved": true,
+      "handoff_sha256": "d7fa40bd1c485a2cecb3000bbff076506adc3e5acb1bbda1b3e15cff65dd9103"
+    }
+  ],
+  "trials": [
+    {
+      "name": "bundle-luna-D",
+      "model_requested": "gpt-6-luna",
+      "threads": [
+        "01a16cc7-88e9-79e2-a8e8-4376cad6997f"
+      ],
+      "status": "returned",
+      "duration_seconds": 36.282092809677124,
+      "full_component_reads": [
+        "components/activation.md",
+        "components/authority.md",
+        "components/capability-routing.md",
+        "components/chief-of-staff.md",
+        "components/context-core.md",
+        "components/delegation.md",
+        "components/delivery-acceptance.md",
+        "components/director.md",
+        "components/resource-budgets.md",
+        "components/role-lifecycle.md",
+        "components/self-improvement.md"
+      ],
+      "full_source_bodies_in_successful_outputs": [
+        "components/activation.md",
+        "components/authority.md",
+        "components/capability-routing.md",
+        "components/chief-of-staff.md",
+        "components/context-core.md",
+        "components/delegation.md",
+        "components/delivery-acceptance.md",
+        "components/director.md",
+        "components/index.md",
+        "components/resource-budgets.md",
+        "components/role-lifecycle.md",
+        "components/self-improvement.md",
+        "concepts/evidence-levels.md",
+        "concepts/progressive-context.md",
+        "concepts/role-capability-instance.md",
+        "core/constitution.md",
+        "core/graph-routing.md",
+        "core/installer-policy.md",
+        "examples/portable-implementation.md",
+        "interviews/bootstrap.md",
+        "phases/design.md",
+        "phases/discover.md",
+        "start.md"
+      ],
+      "failed_commands": [],
+      "non_json_lines": [],
+      "delta": {
+        "added": [],
+        "removed": [],
+        "changed": []
+      },
+      "manifest_sha256": "51a4be4869623c99f3c888c6cd6c9fd8fa0017cbba089304958999e7bfa486ec",
+      "raw_sha256": "5441a4854f1165ec1126ed6e5c54f89515d73a4edfb488d42ff2c3d251b3c366"
+    },
+    {
+      "name": "bundle-sol-D",
+      "model_requested": "gpt-6.1-sol",
+      "threads": [
+        "01a16cc8-0414-7320-a5c3-b8beae5d177d"
+      ],
+      "status": "returned",
+      "duration_seconds": 66.79254078865051,
+      "full_component_reads": [
+        "components/activation.md",
+        "components/authority.md",
+        "components/capability-routing.md",
+        "components/chief-of-staff.md",
+        "components/context-core.md",
+        "components/delegation.md",
+        "components/delivery-acceptance.md",
+        "components/director.md",
+        "components/resource-budgets.md",
+        "components/role-lifecycle.md",
+        "components/self-improvement.md"
+      ],
+      "full_source_bodies_in_successful_outputs": [
+        "components/activation.md",
+        "components/authority.md",
+        "components/capability-routing.md",
+        "components/chief-of-staff.md",
+        "components/context-core.md",
+        "components/delegation.md",
+        "components/delivery-acceptance.md",
+        "components/director.md",
+        "components/index.md",
+        "components/resource-budgets.md",
+        "components/role-lifecycle.md",
+        "components/self-improvement.md",
+        "concepts/evidence-levels.md",
+        "concepts/progressive-context.md",
+        "concepts/role-capability-instance.md",
+        "core/constitution.md",
+        "core/graph-routing.md",
+        "core/installer-policy.md",
+        "examples/portable-implementation.md",
+        "interviews/bootstrap.md",
+        "phases/design.md",
+        "phases/discover.md",
+        "phases/handoff.md",
+        "phases/implement.md",
+        "phases/qualify.md",
+        "start.md"
+      ],
+      "failed_commands": [
+        {
+          "command": "/bin/bash -lc 'ls -la /private/tmp/agentos-scenarios-20261024/controls/source-bundle/tools'",
+          "exit_code": 2,
+          "aggregated_output": "ls: cannot access '/private/tmp/agentos-scenarios-20261024/controls/source-bundle/tools': No such file or directory\n"
+        }
+      ],
+      "non_json_lines": [],
+      "delta": {
+        "added": [],
+        "removed": [],
+        "changed": []
+      },
+      "manifest_sha256": "8baeeb83e0fe8f09a3ca37dbc3910c61b658674686e3ce077f0950e1f0badc15",
+      "raw_sha256": "5ac4422548360f2e08dcee96c891ea6a911a56682e276a133a0d39e7670a0c1c"
+    },
+    {
+      "name": "full-luna-D",
+      "model_requested": "gpt-6-luna",
+      "threads": [
+        "01a16cc6-4fbf-7721-bcf3-09f0a2ed16e2"
+      ],
+      "status": "returned",
+      "duration_seconds": 26.830899953842163,
+      "full_component_reads": [
+        "components/activation.md",
+        "components/authority.md",
+        "components/capability-routing.md",
+        "components/chief-of-staff.md",
+        "components/context-core.md",
+        "components/delegation.md",
+        "components/delivery-acceptance.md",
+        "components/director.md",
+        "components/resource-budgets.md",
+        "components/role-lifecycle.md",
+        "components/self-improvement.md"
+      ],
+      "full_source_bodies_in_successful_outputs": [
+        "components/activation.md",
+        "components/authority.md",
+        "components/capability-routing.md",
+        "components/chief-of-staff.md",
+        "components/context-core.md",
+        "components/delegation.md",
+        "components/delivery-acceptance.md",
+        "components/director.md",
+        "components/index.md",
+        "components/resource-budgets.md",
+        "components/role-lifecycle.md",
+        "components/self-improvement.md",
+        "core/constitution.md",
+        "core/graph-routing.md",
+        "core/installer-policy.md",
+        "examples/portable-implementation.md",
+        "interviews/bootstrap.md",
+        "phases/design.md",
+        "phases/discover.md",
+        "phases/implement.md",
+        "phases/qualify.md",
+        "start.md"
+      ],
+      "failed_commands": [],
+      "non_json_lines": [],
+      "delta": {
+        "added": [],
+        "removed": [],
+        "changed": []
+      },
+      "manifest_sha256": "ef7e8004b309fcfc90c6d2e259e76e03a3f5c3a5c5ec5f5d3136c3be4e12176b",
+      "raw_sha256": "a0fe429e9740652ec756c97b6a4bf2eac2ec1233756e8a6d4949038ddcc336b5"
+    },
+    {
+      "name": "full-luna-I",
+      "model_requested": "gpt-6-luna",
+      "threads": [
+        "01a16cc8-7542-7d41-8165-611d6fc4c5e1"
+      ],
+      "status": "returned",
+      "duration_seconds": 59.087310791015625,
+      "full_component_reads": [
+        "components/activation.md",
+        "components/authority.md",
+        "components/capability-routing.md",
+        "components/chief-of-staff.md",
+        "components/context-core.md",
+        "components/delegation.md",
+        "components/delivery-acceptance.md",
+        "components/director.md",
+        "components/resource-budgets.md",
+        "components/role-lifecycle.md",
+        "components/self-improvement.md"
+      ],
+      "full_source_bodies_in_successful_outputs": [
+        "components/activation.md",
+        "components/authority.md",
+        "components/capability-routing.md",
+        "components/chief-of-staff.md",
+        "components/context-core.md",
+        "components/delegation.md",
+        "components/delivery-acceptance.md",
+        "components/director.md",
+        "components/resource-budgets.md",
+        "components/role-lifecycle.md",
+        "components/self-improvement.md",
+        "concepts/evidence-levels.md",
+        "core/constitution.md",
+        "core/graph-routing.md",
+        "core/installer-policy.md",
+        "examples/portable-implementation.md",
+        "phases/handoff.md",
+        "phases/implement.md",
+        "phases/qualify.md",
+        "start.md"
+      ],
+      "failed_commands": [
+        {
+          "command": "/bin/bash -lc 'cat bundle/start.md bundle/core/constitution.md bundle/core/installer-policy.md bundle/core/graph-routing.md bundle/phases/implement.md bundle/phases/qualify.md bundle/phases/handoff.md bundle/examples/portable-implementation.md bundle/concepts/evidence-levels.md bundle/components/director.md bundle/components/chief-of-staff.md bundle/components/activation.md bundle/components/authority.md bundle/components/capability-routing.md bundle/components/delegation.md bundle/components/delivery-acceptance.md bundle/components/context-core.md bundle/components/self-improvement.md bundle/components/role-lifecycle.md bundle/components/resource-budgets.md'",
+          "exit_code": 20,
+          "aggregated_output": "cat: bundle/start.md: No such file or directory\ncat: bundle/core/constitution.md: No such file or directory\ncat: bundle/core/installer-policy.md: No such file or directory\ncat: bundle/core/graph-routing.md: No such file or directory\ncat: bundle/phases/implement.md: No such file or directory\ncat: bundle/phases/qualify.md: No such file or directory\ncat: bundle/phases/handoff.md: No such file or directory\ncat: bundle/examples/portable-implementation.md: No such file or directory\ncat: bundle/concepts/evidence-levels.md: No such file or directory\ncat: bundle/components/director.md: No such file or directory\ncat: bundle/components/chief-of-staff.md: No such file or directory\ncat: bundle/components/activation.md: No such file or directory\ncat: bundle/components/authority.md: No such file or directory\ncat: bundle/components/capability-routing.md: No such file or directory\ncat: bundle/components/delegation.md: No such file or directory\ncat: bundle/components/delivery-acceptance.md: No such file or directory\ncat: bundle/components/context-core.md: No such file or directory\ncat: bundle/components/self-improvement.md: No such file or directory\ncat: bundle/components/role-lifecycle.md: No such file or directory\ncat: bundle/components/resource-budgets.md: No such file or directory\n"
+        }
+      ],
+      "non_json_lines": [],
+      "delta": {
+        "added": [
+          ".agentos",
+          ".agentos/operations.md",
+          ".agentos/records.md",
+          ".agentos/roles.md",
+          "AGENTS.md"
+        ],
+        "removed": [],
+        "changed": []
+      },
+      "manifest_sha256": "52faaf69507a65f61cc0f0b5d27aba36728a489e788b13e6eab82e7fe3f1d30d",
+      "raw_sha256": "45bd537e1c7580b1f3b43f43051130c9d6023597089870ac36e481fbf0e95526"
+    },
+    {
+      "name": "full-sol-D",
+      "model_requested": "gpt-6.1-sol",
+      "threads": [
+        "01a16cc6-4bd8-7470-80ae-c0c455294c09"
+      ],
+      "status": "returned",
+      "duration_seconds": 85.79380583763123,
+      "full_component_reads": [
+        "components/activation.md",
+        "components/authority.md",
+        "components/capability-routing.md",
+        "components/chief-of-staff.md",
+        "components/context-core.md",
+        "components/delegation.md",
+        "components/delivery-acceptance.md",
+        "components/director.md",
+        "components/resource-budgets.md",
+        "components/role-lifecycle.md",
+        "components/self-improvement.md"
+      ],
+      "full_source_bodies_in_successful_outputs": [
+        "components/activation.md",
+        "components/authority.md",
+        "components/capability-routing.md",
+        "components/chief-of-staff.md",
+        "components/context-core.md",
+        "components/delegation.md",
+        "components/delivery-acceptance.md",
+        "components/director.md",
+        "components/index.md",
+        "components/resource-budgets.md",
+        "components/role-lifecycle.md",
+        "components/self-improvement.md",
+        "concepts/evidence-levels.md",
+        "concepts/progressive-context.md",
+        "concepts/role-capability-instance.md",
+        "core/constitution.md",
+        "core/graph-routing.md",
+        "core/installer-policy.md",
+        "examples/portable-implementation.md",
+        "interviews/bootstrap.md",
+        "phases/design.md",
+        "phases/discover.md",
+        "phases/handoff.md",
+        "phases/implement.md",
+        "phases/qualify.md",
+        "start.md"
+      ],
+      "failed_commands": [],
+      "non_json_lines": [
+        {
+          "line": 1,
+          "text": "  \u2713 sandbox agentos-scenarios-20261024 \u2014 started"
+        }
+      ],
+      "delta": {
+        "added": [],
+        "removed": [],
+        "changed": []
+      },
+      "manifest_sha256": "0dc9a4a4c264c7b697077a000e9a641763f48739e89a0c5bb0ea1acc06971135",
+      "raw_sha256": "8f4b3b652ca043159ef734d92bb01548e1f10faedd20a453ab4dfa0f646331d5"
+    },
+    {
+      "name": "full-sol-I",
+      "model_requested": "gpt-6.1-sol",
+      "threads": [
+        "01a16cc9-b9c2-7dd1-935a-70809db7a06e"
+      ],
+      "status": "returned",
+      "duration_seconds": 264.1378741264343,
+      "full_component_reads": [
+        "components/activation.md",
+        "components/authority.md",
+        "components/capability-routing.md",
+        "components/chief-of-staff.md",
+        "components/context-core.md",
+        "components/delegation.md",
+        "components/delivery-acceptance.md",
+        "components/director.md",
+        "components/resource-budgets.md",
+        "components/role-lifecycle.md",
+        "components/self-improvement.md"
+      ],
+      "full_source_bodies_in_successful_outputs": [
+        "components/activation.md",
+        "components/authority.md",
+        "components/capability-routing.md",
+        "components/chief-of-staff.md",
+        "components/context-core.md",
+        "components/delegation.md",
+        "components/delivery-acceptance.md",
+        "components/director.md",
+        "components/index.md",
+        "components/resource-budgets.md",
+        "components/role-lifecycle.md",
+        "components/self-improvement.md",
+        "concepts/evidence-levels.md",
+        "concepts/progressive-context.md",
+        "concepts/role-capability-instance.md",
+        "core/constitution.md",
+        "core/graph-routing.md",
+        "core/installer-policy.md",
+        "examples/portable-implementation.md",
+        "interviews/bootstrap.md",
+        "phases/discover.md",
+        "phases/handoff.md",
+        "phases/implement.md",
+        "phases/qualify.md",
+        "start.md"
+      ],
+      "failed_commands": [],
+      "non_json_lines": [],
+      "delta": {
+        "added": [
+          ".agentos",
+          ".agentos/core.md",
+          ".agentos/installation.md",
+          ".agentos/operations.md",
+          ".agentos/qualification-example.json",
+          ".agentos/records.md",
+          ".agentos/roles.md",
+          "AGENTS.md"
+        ],
+        "removed": [],
+        "changed": []
+      },
+      "manifest_sha256": "ca1edca933cd22982da99b308bd73689197143d65f733470a89e8454807f0e15",
+      "raw_sha256": "4cd75e8c006d8263f719dc1c5898affa75338c91410926ca1a20ae1985d3bcae"
+    }
+  ],
+  "models": {
+    "models": [
+      {
+        "name": "full-sol-I",
+        "requested": "gpt-6.1-sol",
+        "thread": "01a16cc9-b9c2-7dd1-935a-70809db7a06e",
+        "model": "gpt-6.1-sol",
+        "effort": null
+      },
+      {
+        "name": "full-luna-D",
+        "requested": "gpt-6-luna",
+        "thread": "01a16cc6-4fbf-7721-bcf3-09f0a2ed16e2",
+        "model": "gpt-6-luna",
+        "effort": null
+      },
+      {
+        "name": "full-luna-I",
+        "requested": "gpt-6-luna",
+        "thread": "01a16cc8-7542-7d41-8165-611d6fc4c5e1",
+        "model": "gpt-6-luna",
+        "effort": null
+      },
+      {
+        "name": "bundle-luna-D",
+        "requested": "gpt-6-luna",
+        "thread": "01a16cc7-88e9-79e2-a8e8-4376cad6997f",
+        "model": "gpt-6-luna",
+        "effort": null
+      },
+      {
+        "name": "full-sol-D",
+        "requested": "gpt-6.1-sol",
+        "thread": "01a16cc6-4bd8-7470-80ae-c0c455294c09",
+        "model": "gpt-6.1-sol",
+        "effort": null
+      },
+      {
+        "name": "bundle-sol-D",
+        "requested": "gpt-6.1-sol",
+        "thread": "01a16cc8-0414-7320-a5c3-b8beae5d177d",
+        "model": "gpt-6.1-sol",
+        "effort": null
+      }
+    ],
+    "startup": []
+  },
+  "source_preserved": true,
+  "nonzero_command_items": 2,
+  "install_results": {
+    "full-luna": "fail original selected duties and concrete qualification",
+    "full-sol": "complete procedural/local qualification observed; never advanced to U because candidate already rejected",
+    "bundle-luna": "not run after rejection",
+    "bundle-sol": "not run after rejection"
+  },
+  "first_use": "all unrun; no native startup or formatter-use credit in this round",
+  "local_checks": {
+    "python_block_identical_to_prior": true,
+    "code_sha256": "67a9617a1fca2756bbd456f2483ceb8cac56bf47cdeeb66b61216aec11eb5e92",
+    "results": {
+      "success": {
+        "exit": 0,
+        "stdout": "{\n  \"artifact\": \"/private/tmp/agentos-scenarios-20261024/work/example-success/.agentos/qualification-example.json\",\n  \"events\": [\n    {\n      \"stage\": \"baseline\",\n      \"observed\": {\n        \"route\": \"Installer\",\n        \"unrelated\": \"keep\"\n      },\n      \"functional\": false\n    },\n    {\n      \"candidate\": {\n        \"route\": \"Director\",\n        \"unrelated\": \"keep\"\n      },\n      \"functional\": true,\n      \"disposition\": \"accepted; retain\"\n    },\n    {\n      \"candidate\": {\n        \"route\": \"CoS\",\n        \"unrelated\": \"keep\"\n      },\n      \"functional\": false,\n      \"disposition\": \"rejected; restore accepted state\",\n      \"scoped_rollback_verified\": true\n    },\n    {\n      \"candidate\": {\n        \"route\": \"Director\",\n        \"unrelated\": \"keep\",\n        \"claimed_benefit\": \"faster\"\n      },\n      \"functional\": true,\n      \"disposition\": \"inconclusive: no performance evidence; restore accepted state\",\n      \"scoped_rollback_verified\": true\n    }\n  ]\n}\n",
+        "stderr": "",
+        "sentinel_preserved": true,
+        "rerun_exit": 1,
+        "rerun_stderr": "Traceback (most recent call last):\n  File \"<string>\", line 35, in <module>\n    with out.open(\"x\") as stream:\n         ~~~~~~~~^^^^^\n  File \"/opt/homebrew/Cellar/python@3.15/3.15.0_1/Frameworks/Python.framework/Versions/3.15/lib/python3.15/pathlib/__init__.py\", line 970, in open\n    return io.open(self, mode, buffering, encoding, errors, newline)\n           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFileExistsError: [Errno 17] File exists: '/private/tmp/agentos-scenarios-20261024/work/example-success/.agentos/qualification-example.json'\n",
+        "existing_evidence_preserved": true
+      },
+      "wrong-cwd": {
+        "exit": 1,
+        "stdout": "",
+        "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 5, in <module>\n    assert Path.cwd().resolve() == approved_root\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+        "sentinel_preserved": true
+      },
+      "linked-home": {
+        "exit": 1,
+        "stdout": "",
+        "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 7, in <module>\n    assert home.is_dir() and not home.is_symlink()\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+        "sentinel_preserved": true
+      },
+      "linked-output": {
+        "exit": 1,
+        "stdout": "",
+        "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 35, in <module>\n    with out.open(\"x\") as stream:\n         ~~~~~~~~^^^^^\n  File \"/opt/homebrew/Cellar/python@3.15/3.15.0_1/Frameworks/Python.framework/Versions/3.15/lib/python3.15/pathlib/__init__.py\", line 970, in open\n    return io.open(self, mode, buffering, encoding, errors, newline)\n           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFileExistsError: [Errno 17] File exists: '/private/tmp/agentos-scenarios-20261024/work/example-linked-output/.agentos/qualification-example.json'\n",
+        "sentinel_preserved": true
+      }
+    }
+  },
+  "regressions": "39 passed; all25component bytes and profile10/22/18closure unchanged",
+  "limits": [
+    "Sixroot targeted experiment, not causal/statistical reliability evidence.",
+    "All4flows required for promotion; first mandatory failure rejects candidate, missing exposure is notpass.",
+    "Full source/reference exposure observed for failed Luna I; no truncation explanation established.",
+    "No parent artifactrepair, no synthesized handoff identity.",
+    "Effort/cost unknown; native metadata effortnull.",
+    "Globalallpath goal remainsactive."
+  ]
+}
