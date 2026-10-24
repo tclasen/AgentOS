@@ -1,0 +1,485 @@
+{
+  "task": "TASK-000184",
+  "run": "RUN-000179",
+  "base": "8f139e3efe96f09d5a622e117828201d97b248ae",
+  "disposition": "reject the combined two-paragraph manual-identity/validity guidance candidate; operative source restored byte-for-byte to baseline",
+  "planning": [
+    {
+      "run": "baseline-available-luna-r1",
+      "status": "returned",
+      "artifact_sha256": "e0b8ad598e9bcaa36ca7992c4aa448b0c49ceed5faa133eddcf6f5b3ecb8fb8a",
+      "identity_outcome": "fail",
+      "reason": "7incorrect/truncated emitted records; raw output correct; gaps acknowledged",
+      "required_full_reads": 10,
+      "preservation": true,
+      "shell_tool_restriction_obeyed": null,
+      "manifest_observations": [
+        {
+          "location": "proposal",
+          "style": "checksum-lines",
+          "record_count": 46,
+          "incorrect": [
+            "components/chief-of-staff.md",
+            "components/context-core.md",
+            "components/delegation.md",
+            "components/role-lifecycle.md",
+            "concepts/progressive-context.md",
+            "core/installer-policy.md",
+            "phases/qualify.md"
+          ]
+        },
+        {
+          "location": "command-3",
+          "style": "checksum-lines",
+          "record_count": 46,
+          "incorrect": []
+        }
+      ]
+    },
+    {
+      "run": "baseline-available-sol-r1",
+      "status": "returned",
+      "artifact_sha256": "157fc28e40d3d7ab74e5f0a1820aaee4f65b12b05d41b2ba37608b7b618b22ed",
+      "identity_outcome": "pass",
+      "reason": "exact generated manifest embedded or explicitly referenced",
+      "required_full_reads": 10,
+      "preservation": true,
+      "shell_tool_restriction_obeyed": null,
+      "manifest_observations": [
+        {
+          "location": "proposal",
+          "style": "json-files-list",
+          "record_count": 46,
+          "incorrect": []
+        },
+        {
+          "location": "command-5",
+          "style": "json-files-list",
+          "record_count": 46,
+          "incorrect": []
+        }
+      ]
+    },
+    {
+      "run": "baseline-shell-luna-r1",
+      "status": "returned",
+      "artifact_sha256": "50f8e2f1a50ab3d28ace2824de4a6acbf12c7ceb1955e71d88622c6817778249",
+      "identity_outcome": "pass",
+      "reason": "exact generated manifest embedded or explicitly referenced",
+      "required_full_reads": 10,
+      "preservation": true,
+      "shell_tool_restriction_obeyed": true,
+      "manifest_observations": [
+        {
+          "location": "command-22",
+          "style": "checksum-lines",
+          "record_count": 46,
+          "incorrect": []
+        }
+      ],
+      "limitation": "Proposal says44files; actual referenced tool manifest contains46 correct records. Identity passes; counting claim is inaccurate."
+    },
+    {
+      "run": "baseline-shell-sol-r1",
+      "status": "returned",
+      "artifact_sha256": "d17b3b850132c091b70e18eb2125a99790ee000ca997bf61570720d51fb06ef2",
+      "identity_outcome": "pass",
+      "reason": "exact generated manifest embedded or explicitly referenced",
+      "required_full_reads": 10,
+      "preservation": true,
+      "shell_tool_restriction_obeyed": true,
+      "manifest_observations": [
+        {
+          "location": "proposal",
+          "style": "checksum-lines",
+          "record_count": 46,
+          "incorrect": []
+        },
+        {
+          "location": "command-5",
+          "style": "checksum-lines",
+          "record_count": 46,
+          "incorrect": []
+        },
+        {
+          "location": "command-7",
+          "style": "checksum-lines",
+          "record_count": 2,
+          "incorrect": []
+        }
+      ]
+    },
+    {
+      "run": "candidate-available-luna-r1",
+      "status": "returned",
+      "artifact_sha256": "6e44a27103d74003a41cc637e0f5babea6d7f47cee71a3c47f5f34802ad95f81",
+      "identity_outcome": "fail",
+      "reason": "incorrect emitted authority digest in otherwise complete18-path read set; raw output correct",
+      "required_full_reads": 10,
+      "preservation": true,
+      "shell_tool_restriction_obeyed": null,
+      "manifest_observations": [
+        {
+          "location": "proposal",
+          "style": "checksum-lines",
+          "record_count": 18,
+          "incorrect": [
+            "components/authority.md"
+          ]
+        },
+        {
+          "location": "command-22",
+          "style": "checksum-lines",
+          "record_count": 18,
+          "incorrect": []
+        }
+      ]
+    },
+    {
+      "run": "candidate-available-sol-r1",
+      "status": "returned",
+      "artifact_sha256": "86f30af9fc7eb91e618e155caf90a2e4d6cf026177177a975f97cf6a067405c9",
+      "identity_outcome": "pass",
+      "reason": "exact generated manifest embedded or explicitly referenced",
+      "required_full_reads": 10,
+      "preservation": true,
+      "shell_tool_restriction_obeyed": null,
+      "manifest_observations": [
+        {
+          "location": "proposal",
+          "style": "checksum-lines",
+          "record_count": 46,
+          "incorrect": []
+        },
+        {
+          "location": "command-5",
+          "style": "checksum-lines",
+          "record_count": 46,
+          "incorrect": []
+        }
+      ]
+    },
+    {
+      "run": "candidate-shell-luna-r1",
+      "status": "returned",
+      "artifact_sha256": "c009ff73159911d6988b8b4bc67a7c2b0582e90cec5dc7c171666327d3b1a19a",
+      "identity_outcome": "pass",
+      "reason": "exact generated manifest embedded or explicitly referenced",
+      "required_full_reads": 10,
+      "preservation": true,
+      "shell_tool_restriction_obeyed": true,
+      "manifest_observations": [
+        {
+          "location": "proposal",
+          "style": "checksum-lines",
+          "record_count": 18,
+          "incorrect": []
+        },
+        {
+          "location": "command-20",
+          "style": "checksum-lines",
+          "record_count": 18,
+          "incorrect": []
+        }
+      ]
+    },
+    {
+      "run": "candidate-shell-sol-r1",
+      "status": "returned",
+      "artifact_sha256": "f398b54e6be842b11be26c73a2f0b7980332056ffc78c17353a694060ebf30d7",
+      "identity_outcome": "pass",
+      "reason": "exact generated manifest embedded or explicitly referenced",
+      "required_full_reads": 10,
+      "preservation": true,
+      "shell_tool_restriction_obeyed": true,
+      "manifest_observations": [
+        {
+          "location": "command-5",
+          "style": "checksum-lines",
+          "record_count": 46,
+          "incorrect": []
+        }
+      ],
+      "reference": "Native chunk63bb22 independently correlated to its assigned session and exact46-file map."
+    }
+  ],
+  "planning_identity_results": {
+    "baseline": "3/4",
+    "candidate": "3/4"
+  },
+  "required_component_full_reads": "80/80",
+  "preflight": [
+    {
+      "run": "baseline-preflight-luna-r1",
+      "status": "returned",
+      "artifact_sha256": "979336789f4916e45dc3c880d013c414d67fabbd203f53b44dd6cd016e73c110",
+      "expected_can_continue": [
+        true,
+        false,
+        false,
+        false,
+        false
+      ],
+      "observed_can_continue": [
+        true,
+        false,
+        false,
+        true,
+        false
+      ],
+      "boolean_agreements": 4,
+      "observed_labels": [
+        "continue",
+        "reconcile",
+        "reconcile",
+        "continue",
+        "reconcile"
+      ],
+      "full_guide_bodies_observed": false,
+      "preservation": true,
+      "interpretation": "Boolean agreement is not full criterion pass; read failures and contradictory rationale retained separately."
+    },
+    {
+      "run": "baseline-preflight-sol-r1",
+      "status": "returned",
+      "artifact_sha256": "5f1499fe28d258821f5a456a8225d11c9f4724c881efb8228bc89f0698a4549e",
+      "expected_can_continue": [
+        true,
+        false,
+        false,
+        false,
+        false
+      ],
+      "observed_can_continue": [
+        true,
+        false,
+        false,
+        false,
+        false
+      ],
+      "boolean_agreements": 5,
+      "observed_labels": [
+        "continue",
+        "blocked",
+        "reconcile",
+        "blocked",
+        "reconcile"
+      ],
+      "full_guide_bodies_observed": true,
+      "preservation": true,
+      "interpretation": "Boolean agreement is not full criterion pass; read failures and contradictory rationale retained separately."
+    },
+    {
+      "run": "candidate-preflight-luna-r1",
+      "status": "returned",
+      "artifact_sha256": "0e0f425c2f30745efca6cbfa241ef3aca07d300c660786356a6c023dbea79a1f",
+      "expected_can_continue": [
+        true,
+        false,
+        false,
+        false,
+        false
+      ],
+      "observed_can_continue": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "boolean_agreements": 4,
+      "observed_labels": [
+        "reconcile",
+        "reconcile",
+        "reconcile",
+        "blocked",
+        "reconcile"
+      ],
+      "full_guide_bodies_observed": false,
+      "preservation": true,
+      "interpretation": "Boolean agreement is not full criterion pass; read failures and contradictory rationale retained separately."
+    },
+    {
+      "run": "candidate-preflight-sol-r1",
+      "status": "returned",
+      "artifact_sha256": "4646b5fdf0244d3bea07c6b728b6aee605eb38f5befc34c2bf4a936bbf64ad35",
+      "expected_can_continue": [
+        true,
+        false,
+        false,
+        false,
+        false
+      ],
+      "observed_can_continue": [
+        true,
+        false,
+        false,
+        false,
+        false
+      ],
+      "boolean_agreements": 5,
+      "observed_labels": [
+        "continue",
+        "blocked",
+        "blocked",
+        "blocked",
+        "reconcile"
+      ],
+      "full_guide_bodies_observed": true,
+      "preservation": true,
+      "interpretation": "Boolean agreement is not full criterion pass; read failures and contradictory rationale retained separately."
+    }
+  ],
+  "preflight_boolean_agreements": {
+    "baseline": "9/10",
+    "candidate": "9/10"
+  },
+  "preflight_failures": [
+    "Baseline Luna D accepts last-key-wins duplicate files field and falsely claims approved continuity.",
+    "Candidate Luna A refuses complete matching non-Git source because it invents a Git source-revision requirement.",
+    "Candidate Luna E records a changed authority file but its reason falsely says the complete manifest matches.",
+    "Neither Luna R root exposes full start/implementation body text; baseline checks presence, candidate exposes metadata headers and hashes. Sol R roots expose both full bodies. No causal guidance-benefit/harm claim."
+  ],
+  "regression_tests": {
+    "candidate": 39,
+    "final_unchanged_baseline": 39
+  },
+  "native_trial_roots": 12,
+  "native_trials_returned": 12,
+  "trial_nonzero_command_items": 0,
+  "native_retries": 0,
+  "parent_diagnostics": [
+    "One orchestration cell JavaScript SyntaxError before tools executed; corrected with no side effects.",
+    "Native chunk-reference inspection first assumed string function outputs; adapted to observed custom-tool JSON text lists. Overescaped checksum regex corrected in parent. Actual chunk reference and46hashes verified; no model retry."
+  ],
+  "models": [
+    {
+      "run": "candidate-preflight-luna-r1",
+      "requested_model": "gpt-6-luna",
+      "harness_status": "returned",
+      "thread": "01a16c5f-6be0-7000-ba7b-10962a8dba50",
+      "model": "gpt-6-luna",
+      "reasoning": null
+    },
+    {
+      "run": "baseline-available-luna-r1",
+      "requested_model": "gpt-6-luna",
+      "harness_status": "returned",
+      "thread": "01a16c5a-1b11-7fb1-ae09-a4c99f8f55ce",
+      "model": "gpt-6-luna",
+      "reasoning": null
+    },
+    {
+      "run": "candidate-shell-sol-r1",
+      "requested_model": "gpt-6.1-sol",
+      "harness_status": "returned",
+      "thread": "01a16c65-1ece-72a2-9f7d-bdbc14c8c993",
+      "model": "gpt-6.1-sol",
+      "reasoning": null
+    },
+    {
+      "run": "candidate-preflight-sol-r1",
+      "requested_model": "gpt-6.1-sol",
+      "harness_status": "returned",
+      "thread": "01a16c5f-6be0-75e1-bec7-93ace15f6696",
+      "model": "gpt-6.1-sol",
+      "reasoning": null
+    },
+    {
+      "run": "candidate-shell-luna-r1",
+      "requested_model": "gpt-6-luna",
+      "harness_status": "returned",
+      "thread": "01a16c65-1eca-7ac3-b6ef-f567462c2934",
+      "model": "gpt-6-luna",
+      "reasoning": null
+    },
+    {
+      "run": "candidate-available-luna-r1",
+      "requested_model": "gpt-6-luna",
+      "harness_status": "returned",
+      "thread": "01a16c62-d380-7e42-bf6d-43140cf7d0b3",
+      "model": "gpt-6-luna",
+      "reasoning": null
+    },
+    {
+      "run": "baseline-shell-sol-r1",
+      "requested_model": "gpt-6.1-sol",
+      "harness_status": "returned",
+      "thread": "01a16c5c-4fbc-7032-8bf6-2053073b2c8e",
+      "model": "gpt-6.1-sol",
+      "reasoning": null
+    },
+    {
+      "run": "baseline-preflight-luna-r1",
+      "requested_model": "gpt-6-luna",
+      "harness_status": "returned",
+      "thread": "01a16c58-dda9-78e2-b974-d7d0ac6f3ae7",
+      "model": "gpt-6-luna",
+      "reasoning": null
+    },
+    {
+      "run": "baseline-preflight-sol-r1",
+      "requested_model": "gpt-6.1-sol",
+      "harness_status": "returned",
+      "thread": "01a16c58-db66-7d01-8458-2b4e38b07b31",
+      "model": "gpt-6.1-sol",
+      "reasoning": null
+    },
+    {
+      "run": "baseline-shell-luna-r1",
+      "requested_model": "gpt-6-luna",
+      "harness_status": "returned",
+      "thread": "01a16c5b-696e-74e2-95dc-8f6b9f9879bd",
+      "model": "gpt-6-luna",
+      "reasoning": null
+    },
+    {
+      "run": "candidate-available-sol-r1",
+      "requested_model": "gpt-6.1-sol",
+      "harness_status": "returned",
+      "thread": "01a16c62-d37a-7bf1-bc40-82aa056a4ef9",
+      "model": "gpt-6.1-sol",
+      "reasoning": null
+    },
+    {
+      "run": "baseline-available-sol-r1",
+      "requested_model": "gpt-6.1-sol",
+      "harness_status": "returned",
+      "thread": "01a16c5a-159f-7323-b903-52467f96bb84",
+      "model": "gpt-6.1-sol",
+      "reasoning": null
+    }
+  ],
+  "effort_and_cost": "unknown",
+  "bindings": {
+    "controls/preregistered.json": "277984acb2ccffd95dd5f542dc375f55a837b4af9e3c531180d385ba1803c52d",
+    "controls/input-hashes.json": "ba5970861ab660b11463c70c56e29d3c90680c618c7324d0e50a1ca798d51bb0",
+    "controls/baseline-files.json": "56c901e3c56fa08dfae7c1aeb243643ddd335067cdc2ad76240fc8fe4260a207",
+    "controls/candidate-files.json": "0f78598d7e0ab4371bce00c11a17f05b6a41c19bf45d5825a3bb7d4b6c7fc252",
+    "controls/verify_trials.py": "5db054e4ad74be8c74df61172beb5fd7db0bcdfa837492bff798c1e22a7b0cd0",
+    "controls/inspect_manifests.py": "fbdfb6aa7b874491ebfbc5f9bc8fb43238bc763e67d6d48aee56bd18960635d3",
+    "evidence/verification.json": "0d78f6aed26fdef4b0f1759df518bc169aa587dded67a8072db97998ec67ab8c",
+    "evidence/manifest-observations.json": "83b56fdfd54c364c81c03d9bb30baa45b5cbcc3cac7b7caf9126fde5e8100635",
+    "evidence/baseline-oracle.json": "9b9b9a4c69b184c026a75e1f68fa0cbfb6d435917ecc82a08679017cf305b641",
+    "evidence/candidate-oracle.json": "7cd54ec2abbd7b1366d5e817bf27a82c0c48d1010aacafbd8c5a754456290a9f",
+    "evidence/baseline-ambiguity-finding.json": "04a27bb6415f7443fb97ff926595ff988ad2434d12c2adc3a0f7ea359f8a1881",
+    "evidence/baseline-transcription-finding.json": "4d98602eb98c1f4779db1afd588362d7f65277c90c63a6a55e02818acf856550",
+    "evidence/candidate-transcription-finding.json": "5b65ea42f996f7b90ea671b58f309a08c5afc314b76806024a04d0f6fc524392",
+    "evidence/preflight-guide-read-observations.json": "d61f611f16525a6073c0a1d0dccf4bf002d4cb98ee450c341a6533ac76347ae3",
+    "evidence/candidate-rejection.json": "fb628eb5a1c7f702532daa61d46a818e796ebff887730b6e3ca88e96b85fc08e",
+    "evidence/reference-verification.json": "0d1a8daac0407a7af0bdc90e3ba818ad508ca2ca4dd2edae6d06358e44a138f9",
+    "evidence/parent-diagnostic.txt": "b6e95687f91427ffcfb1a515fdace061e1068d20281dc5c3d160ae9d07908a6e",
+    "evidence/candidate-tests.txt": "be26603c93ae365d13d4ddebd117976b61092a159957bf05bac8f49da702e937",
+    "evidence/final-tests.txt": "4d16a097754e399a8d5f16b71b5f84623ad68fed2060f577eebcc4eee9588011"
+  },
+  "limits": [
+    "one sample per model/variant/case; no statistical or causal inference",
+    "R is a synthetic5case batch, not an actual single-installation approval/resume flow",
+    "shell-only is an operator tool restriction; Python is installed, physical absence not simulated",
+    "complete18-path consumed read-set identity is allowed; missing unselected bundle files is not itself failure",
+    "prior TASK1837/8 literal score remains unchanged; current semantic criteria frozen before this round",
+    "no full onboarding/global exhaustion claim"
+  ],
+  "next_action": "qualify a real one-installation approval and fresh resume handoff before proposing further guidance",
+  "global_goal_status": "active"
+}

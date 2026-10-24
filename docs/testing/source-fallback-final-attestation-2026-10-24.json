@@ -1,0 +1,288 @@
+{
+  "kind": "Coordinator observed machine identity and cleanup attestation; not independent acceptance",
+  "task": "TASK-000184",
+  "run": "RUN-000179",
+  "observed_at": "2026-10-24T05:51:03.307226+00:00",
+  "reviewed_head": "32424d8252df698a5d9b78d0c4109f16c8d7ed93",
+  "reviewed_tree": "f0ee1a4c94743d10a1f063747a6705df65f3e603",
+  "receipt_sha256": "0675fd267778b7849cb4cf0368c84e89b7e74b1046faa8e143e526e0e725526b",
+  "receipt_format_correction": {
+    "initial_sha256": "d24655ed1f7b31ac4f3ac41e596a98d18a14563ff57dd6b4a15d614fe55f55b7",
+    "final_sha256": "0675fd267778b7849cb4cf0368c84e89b7e74b1046faa8e143e526e0e725526b",
+    "only_changed_fields": [
+      "Related Requirements",
+      "Related Tasks"
+    ],
+    "all_other_bytes_preserved": true
+  },
+  "models": [
+    {
+      "runs": [
+        "candidate-preflight-luna-r1"
+      ],
+      "requested_model": "gpt-6-luna",
+      "harness_status": "returned",
+      "thread": "01a16c5f-6be0-7000-ba7b-10962a8dba50",
+      "model": "gpt-6-luna",
+      "observed_turn_contexts": [
+        {
+          "model": "gpt-6-luna",
+          "reasoning": null
+        }
+      ]
+    },
+    {
+      "runs": [
+        "baseline-available-luna-r1"
+      ],
+      "requested_model": "gpt-6-luna",
+      "harness_status": "returned",
+      "thread": "01a16c5a-1b11-7fb1-ae09-a4c99f8f55ce",
+      "model": "gpt-6-luna",
+      "observed_turn_contexts": [
+        {
+          "model": "gpt-6-luna",
+          "reasoning": null
+        }
+      ]
+    },
+    {
+      "runs": [
+        "candidate-shell-sol-r1"
+      ],
+      "requested_model": "gpt-6.1-sol",
+      "harness_status": "returned",
+      "thread": "01a16c65-1ece-72a2-9f7d-bdbc14c8c993",
+      "model": "gpt-6.1-sol",
+      "observed_turn_contexts": [
+        {
+          "model": "gpt-6.1-sol",
+          "reasoning": null
+        }
+      ]
+    },
+    {
+      "runs": [
+        "candidate-preflight-sol-r1"
+      ],
+      "requested_model": "gpt-6.1-sol",
+      "harness_status": "returned",
+      "thread": "01a16c5f-6be0-75e1-bec7-93ace15f6696",
+      "model": "gpt-6.1-sol",
+      "observed_turn_contexts": [
+        {
+          "model": "gpt-6.1-sol",
+          "reasoning": null
+        }
+      ]
+    },
+    {
+      "runs": [
+        "candidate-shell-luna-r1"
+      ],
+      "requested_model": "gpt-6-luna",
+      "harness_status": "returned",
+      "thread": "01a16c65-1eca-7ac3-b6ef-f567462c2934",
+      "model": "gpt-6-luna",
+      "observed_turn_contexts": [
+        {
+          "model": "gpt-6-luna",
+          "reasoning": null
+        }
+      ]
+    },
+    {
+      "runs": [
+        "candidate-available-luna-r1"
+      ],
+      "requested_model": "gpt-6-luna",
+      "harness_status": "returned",
+      "thread": "01a16c62-d380-7e42-bf6d-43140cf7d0b3",
+      "model": "gpt-6-luna",
+      "observed_turn_contexts": [
+        {
+          "model": "gpt-6-luna",
+          "reasoning": null
+        }
+      ]
+    },
+    {
+      "runs": [
+        "baseline-shell-sol-r1"
+      ],
+      "requested_model": "gpt-6.1-sol",
+      "harness_status": "returned",
+      "thread": "01a16c5c-4fbc-7032-8bf6-2053073b2c8e",
+      "model": "gpt-6.1-sol",
+      "observed_turn_contexts": [
+        {
+          "model": "gpt-6.1-sol",
+          "reasoning": null
+        }
+      ]
+    },
+    {
+      "runs": [
+        "baseline-preflight-luna-r1"
+      ],
+      "requested_model": "gpt-6-luna",
+      "harness_status": "returned",
+      "thread": "01a16c58-dda9-78e2-b974-d7d0ac6f3ae7",
+      "model": "gpt-6-luna",
+      "observed_turn_contexts": [
+        {
+          "model": "gpt-6-luna",
+          "reasoning": null
+        }
+      ]
+    },
+    {
+      "runs": [
+        "baseline-preflight-sol-r1"
+      ],
+      "requested_model": "gpt-6.1-sol",
+      "harness_status": "returned",
+      "thread": "01a16c58-db66-7d01-8458-2b4e38b07b31",
+      "model": "gpt-6.1-sol",
+      "observed_turn_contexts": [
+        {
+          "model": "gpt-6.1-sol",
+          "reasoning": null
+        }
+      ]
+    },
+    {
+      "runs": [
+        "baseline-shell-luna-r1"
+      ],
+      "requested_model": "gpt-6-luna",
+      "harness_status": "returned",
+      "thread": "01a16c5b-696e-74e2-95dc-8f6b9f9879bd",
+      "model": "gpt-6-luna",
+      "observed_turn_contexts": [
+        {
+          "model": "gpt-6-luna",
+          "reasoning": null
+        }
+      ]
+    },
+    {
+      "runs": [
+        "review-final-r1",
+        "review-receipt-fields-r1"
+      ],
+      "requested_model": "gpt-6.1-sol",
+      "harness_status": "returned",
+      "thread": "01a16c6d-7ca4-77d0-873c-297cf1ac0c36",
+      "model": "gpt-6.1-sol",
+      "observed_turn_contexts": [
+        {
+          "model": "gpt-6.1-sol",
+          "reasoning": null
+        },
+        {
+          "model": "gpt-6.1-sol",
+          "reasoning": null
+        }
+      ]
+    },
+    {
+      "runs": [
+        "candidate-available-sol-r1"
+      ],
+      "requested_model": "gpt-6.1-sol",
+      "harness_status": "returned",
+      "thread": "01a16c62-d37a-7bf1-bc40-82aa056a4ef9",
+      "model": "gpt-6.1-sol",
+      "observed_turn_contexts": [
+        {
+          "model": "gpt-6.1-sol",
+          "reasoning": null
+        }
+      ]
+    },
+    {
+      "runs": [
+        "baseline-available-sol-r1"
+      ],
+      "requested_model": "gpt-6.1-sol",
+      "harness_status": "returned",
+      "thread": "01a16c5a-159f-7323-b903-52467f96bb84",
+      "model": "gpt-6.1-sol",
+      "observed_turn_contexts": [
+        {
+          "model": "gpt-6.1-sol",
+          "reasoning": null
+        }
+      ]
+    }
+  ],
+  "actual_model_names_match_requested": true,
+  "all_observed_turn_context_models_match_requested": true,
+  "effort_and_cost": "unknown",
+  "returned_distinct_roots": 13,
+  "returned_invocations": 14,
+  "native_trial_roots": 12,
+  "native_trial_retries": 0,
+  "trial_nonzero_command_items": 0,
+  "additional_native_router_patch_rejections": 1,
+  "router_diagnostic": "Candidate available Luna invalid apply_patch hunk was rejected before later authorized proposal creation; raw router output retained. Not a nonzero shell command item.",
+  "review_nonzero_command_items": 4,
+  "review_nonzero_by_invocation": {
+    "review-final-r1": 1,
+    "review-receipt-fields-r1": 3
+  },
+  "review_diagnostics": "Main review corrected non-JSON wrapper parsing and absent archived baseline/tests lookup using Git base. Metadata correction encountered unavailable initial-receipt copy, unsuccessful scoped search and intermediate reconstruction assertion; final receipt is independently confirmed to differ only in two required metadata lines. All diagnostics preserved; substantive acceptance unchanged.",
+  "regression_tests": {
+    "private_candidate": 39,
+    "final_unchanged_source": 39,
+    "independent_review_final_source": 39
+  },
+  "disposition": "reject combined guidance candidate; publish reviewed findings only; bundle/tools/tests unchanged",
+  "planning_identity_results": {
+    "baseline": "3/4",
+    "candidate": "3/4"
+  },
+  "preflight_boolean_agreements": {
+    "baseline": "9/10",
+    "candidate": "9/10"
+  },
+  "scores_are_not_full_behavior_passes": true,
+  "required_full_component_reads": "80/80",
+  "archives": [
+    {
+      "archive": "/private/tmp/agentos-fallback-20261024-trials.tar.gz",
+      "sha256": "35b8d8e50c72a74baaccd4fcc7c5ebe7de6ee140b0d6d73c978e5851e940f303",
+      "bytes": 1486287,
+      "indexed_files": 1686,
+      "all_indexed_members_verified": true,
+      "index": "evidence/trials-index.json"
+    },
+    {
+      "archive": "/private/tmp/agentos-fallback-20261024-acceptance.tar.gz",
+      "sha256": "af24efc9f4094565b6bd632ca194bef7ef7b42ae058e1464b08ba9b6289c153b",
+      "bytes": 147074,
+      "indexed_files": 46,
+      "all_indexed_members_verified": true,
+      "index": "evidence/acceptance-index.json"
+    }
+  ],
+  "archive_total_bytes": 1633361,
+  "cleanup": {
+    "owned_sandbox": "agentos-fallback-20261024",
+    "removed_and_absent": true,
+    "original_sandbox_pairs_preserved": 63,
+    "global_prune_performed": false,
+    "raw_fixture_directory_removed": true
+  },
+  "governance_hashes_unchanged": 14,
+  "additional_record_format_copy_matches_canonical": true,
+  "delivery": "pending normal protected PR and fetched owning-main equivalence; recorded separately after delivery",
+  "global_goal_status": "active",
+  "limits": [
+    "synthetic five-case preflight batch; real single-installation approval/resume not qualified here",
+    "Python was installed; shell-only is a fixture grant restriction",
+    "missing Luna full guide reads prevent causal claims about added wording",
+    "no global exhaustion or complete onboarding claim"
+  ]
+}
