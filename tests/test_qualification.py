@@ -15,6 +15,86 @@ SPEC=importlib.util.spec_from_file_location('qualification',Path(__file__).paren
 q=importlib.util.module_from_spec(SPEC);SPEC.loader.exec_module(q)
 
 class QualificationTests(unittest.TestCase):
+    def test_verify_selection_preserves_actual_extra_components_without_profile_substitution(self):
+        bundle=Path(__file__).parents[1]/'bundle'
+        eleven=q.select_components(bundle,['components/resource-budgets.md'])['selected']
+        twelve=eleven+['components/independent-evaluation.md']
+        original=list(twelve)
+        actual=q.verify_selection(bundle,twelve)
+        preset=q.verify_selection(bundle,eleven)
+        self.assertTrue(actual['complete']);self.assertTrue(preset['complete'])
+        self.assertEqual(len(actual['declared']),12);self.assertEqual(len(preset['declared']),11)
+        self.assertNotEqual(actual['declared'],preset['declared'])
+        self.assertEqual(twelve,original)
+        self.assertIn('components/independent-evaluation.md',actual['components'])
+        for key in actual['closure']:
+            self.assertEqual(actual['components'][key]['sha256'],q.sha((bundle/key).read_bytes()))
+        self.assertEqual(actual['missing_required'],[]);self.assertEqual(actual['missing_dependencies'],[])
+
+    def test_verify_selection_reports_required_and_transitive_omissions_without_filling_declared(self):
+        with tempfile.TemporaryDirectory() as d:
+            root=Path(d);self.fixture_graph(root)
+            b=root/'components/b.md';b.write_text(b.read_text().replace('requires: []','requires:\n  - /components/c.md'))
+            (root/'components/c.md').write_text('---\nagentos:\n  selection: conditional\n  requires: []\n---\n# C\n')
+            for declared,missing_required,missing_dependencies in [
+                ([],['components/a.md'],['components/b.md','components/c.md']),
+                (['components/c.md'],['components/a.md'],['components/b.md']),
+                (['components/a.md'],[],['components/b.md','components/c.md']),
+                (['components/a.md','components/b.md'],[],['components/c.md'])]:
+                with self.subTest(declared=declared):
+                    result=q.verify_selection(root,declared)
+                    self.assertFalse(result['complete']);self.assertEqual(result['declared'],declared)
+                    self.assertEqual(result['missing_required'],missing_required)
+                    self.assertEqual(result['missing_dependencies'],missing_dependencies)
+            self.assertTrue(q.verify_selection(root,['components/c.md','components/b.md','components/a.md'])['complete'])
+
+    def test_verify_selection_rejects_ambiguous_lists_and_noncanonical_or_unknown_paths(self):
+        with tempfile.TemporaryDirectory() as d:
+            root=Path(d);self.fixture_graph(root)
+            for value in [None,{},'components/a.md',[1],[True],[None],[{}],[[]],
+                          ['components/a.md']*2,[''],['/components/a.md'],['components/../components/a.md'],
+                          ['components/a.md\n'],['components/absent.md']]:
+                with self.subTest(value=value),self.assertRaises(ValueError):q.verify_selection(root,value)
+
+    def test_verify_selection_validates_selected_graph_without_activating_unrelated_branches(self):
+        for replacement in ['requires:\n  - /components/missing.md','requires:\n  - ../outside.md',
+                            'requires:\n  - /components/b.md','requires: []\nstatus: deprecated']:
+            with self.subTest(replacement=replacement),tempfile.TemporaryDirectory() as d:
+                root=Path(d);self.fixture_graph(root)
+                a=root/'components/a.md';a.write_text(a.read_text().replace('requires:\n  - /components/b.md','requires: []'))
+                b=root/'components/b.md';b.write_text(b.read_text().replace('requires: []',replacement))
+                self.assertTrue(q.verify_selection(root,['components/a.md'])['complete'])
+                with self.assertRaises(ValueError):q.verify_selection(root,['components/a.md','components/b.md'])
+                a.write_text(a.read_text().replace('requires: []','requires:\n  - /components/b.md'))
+                with self.assertRaises(ValueError):q.verify_selection(root,['components/a.md'])
+
+    def test_verify_selection_cli_file_stdin_exit_codes_and_input_preservation(self):
+        script=Path(__file__).parents[1]/'tools/qualification.py'
+        cases=[('[]',1),('["components/a.md"]',1),
+               ('["components/b.md","components/a.md"]',0),
+               ('["components/a.md","components/a.md"]',2),('null',2),('[true]',2),
+               ('["/components/a.md"]',2),('["components/absent.md"]',2),('[',2),
+               ('{"selected":[],"selected":[]}',2)]
+        with tempfile.TemporaryDirectory() as d:
+            root=Path(d);bundle=root/'bundle';bundle.mkdir();self.fixture_graph(bundle)
+            for data,expected in cases:
+                for stdin in [False,True]:
+                    with self.subTest(data=data,stdin=stdin):
+                        supplied=root/'proposal.json';supplied.write_text(data);before=q.snapshot(root)
+                        result=subprocess.run([sys.executable,str(script),'verify-selection',str(bundle),
+                            '--selection','-' if stdin else str(supplied)],input=data if stdin else None,
+                            capture_output=True,text=True)
+                        self.assertEqual(result.returncode,expected,result.stderr)
+                        if expected==2:self.assertEqual(result.stdout,'')
+                        else:
+                            report=json.loads(result.stdout)
+                            self.assertEqual(report['complete'],expected==0)
+                            self.assertEqual(report['declared'],sorted(json.loads(data)))
+                        self.assertEqual(q.snapshot(root),before)
+            missing=subprocess.run([sys.executable,str(script),'verify-selection',str(bundle),
+                '--selection',str(root/'missing.json')],capture_output=True,text=True)
+            self.assertEqual(missing.returncode,2);self.assertEqual(missing.stdout,'')
+
     def test_status_spellings_cannot_bypass_cli_deprecation_check(self):
         script=Path(__file__).parents[1]/'tools/qualification.py'
         for scalar in ['deprecated', '"deprecated"', "'deprecated'", 'deprecated # old', '"deprecated" # old', "'deprecated' # old"]:
