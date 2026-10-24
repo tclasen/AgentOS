@@ -1,0 +1,102 @@
+{
+  "task": "TASK-000203",
+  "run": "RUN-000198",
+  "observed_at": "2026-10-24T17:46:57.799047+00:00",
+  "disposition": "independently approved findings; whole twelve-path operative package rejected",
+  "reviewed_candidate": {
+    "base": "dd5c2e7d1369f9b6837e15b435f66baf40320ca9",
+    "head": "d0c8f376397fb2c263f5e0e07cd0ec88a19f1731",
+    "tree": "a98672a000ec32c45990cae92a144997f450198c",
+    "files": {
+      "docs/agent-records/tasks/project/TASK-000203.md": {
+        "sha256": "ffc7156b8b0dc7c244bdbd946c35605dd7feaee9b32e30ec13f8ee9b7ab755ed",
+        "bytes": 9284
+      },
+      "docs/agent-records/runs/RUN-000198.md": {
+        "sha256": "60630ea907d8628b8d9f2c0f27d6e43d5502f71a9386c910ab6d8acfafb471b7",
+        "bytes": 9282
+      },
+      "docs/testing/implementation-manifest-edge-2026-10-24.md": {
+        "sha256": "cd542d4974c5447339784d45a2aeac1e0cd680213f3718efe293c6f14cb978f3",
+        "bytes": 9381
+      },
+      "docs/testing/implementation-manifest-edge-2026-10-24.json": {
+        "sha256": "9704f3823aee934171e3cc1945cd17c39a8ac8a665557fd1d182f2a5b22d63ef",
+        "bytes": 12393
+      }
+    }
+  },
+  "reviewed_files_unchanged": true,
+  "independent_review": {
+    "receipt": {
+      "sha256": "280e55b42a0a3a2ea792f66af6a891308a9fe3f3aab8a1c7691928b00ad9b4d1",
+      "bytes": 20824
+    },
+    "runtime": {
+      "name": "review-final",
+      "requested_model": "gpt-6.1-sol",
+      "requested_effort": "high",
+      "thread": "01a16ef9-8c4f-7d01-8711-33f05c82ea89",
+      "model": "gpt-6.1-sol",
+      "effort": "high",
+      "native_session": "/home/agent/.codex/sessions/2026/10/24/rollout-2026-10-24T17-33-30-01a16ef9-8c4f-7d01-8711-33f05c82ea89.jsonl"
+    },
+    "primary": {
+      "sha256": "bb7a8795062412833cddce522d113db690184ea9eda72fc5eda9ac894ddf0448",
+      "bytes": 703385
+    },
+    "duration_seconds": 717.2162840366364,
+    "nonzero_commands": 1,
+    "native_usage": [
+      {
+        "input_tokens": 3510698,
+        "cached_input_tokens": 3374720,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 29080,
+        "reasoning_output_tokens": 6993
+      }
+    ],
+    "index": {
+      "sha256": "5527c5b21d3d8908b64d4370f166b96019a55870938d8bb7e200d9fb29656499",
+      "bytes": 219958
+    },
+    "indexed_regular_files": 1156,
+    "indexed_regular_bytes": 11784032,
+    "observed_disposition": {
+      "observed_at": "2026-10-24T17:46:42.042665+00:00",
+      "decision": "approved findings only",
+      "receipt_sha256": "280e55b42a0a3a2ea792f66af6a891308a9fe3f3aab8a1c7691928b00ad9b4d1",
+      "receipt": {
+        "sha256": "280e55b42a0a3a2ea792f66af6a891308a9fe3f3aab8a1c7691928b00ad9b4d1",
+        "bytes": 20824
+      },
+      "independent_thread": [
+        "01a16ef9-8c4f-7d01-8711-33f05c82ea89"
+      ],
+      "duration_seconds": 717.2162840366364,
+      "sealed_index_complete_regular_files": 1156,
+      "sealed_bytes": 11784032,
+      "review_retry": "one administrative preseal guard omission of declared readonly placeholders; retained failure and retry; no product/native rerun",
+      "publication_allowed": "byte-identical APP31 and observed-fact attestation only; four reviewed files unchanged",
+      "archive_condition": "Both final archives trials-complete and acceptance will directly retain all1156 reviewer-indexed regular files and exact index/receipt/metadata. Original frozen trials archive remains unchanged as additional input evidence.",
+      "limits": "No operative or installation acceptance; broader goal active"
+    }
+  },
+  "trials_archive": {
+    "archive": "/private/tmp/agentos-manifestedge-20261024-trials.tar.gz",
+    "sha256": "f797376110da0dd2c1de7ab7dac02fb0bc67a2ee60d4d0cfb17d47094a5318e2",
+    "bytes": 2936714,
+    "indexed_files": 939,
+    "index": "evidence/trials-index.json",
+    "verified_all_members": true
+  },
+  "limits": [
+    "20/20 complete prewrite source bodies for both I; Luna separate-display procedure failed",
+    "No historical verdict regrade; no operative approval",
+    "Six remaining matrix roots stopped; no fresh first use or broader path acceptance",
+    "Billing unknown"
+  ],
+  "delivery": "PR30 https://github.com/tclasen/AgentOS/pull/30 subject to normal expected-head merge and fetched owning-main verification",
+  "cleanup": "Pending verified complete reviewer archive and exact-owned sandbox/rawroot removal; preserve original63sandboxpairs",
+  "broader_goal": "active"
+}
