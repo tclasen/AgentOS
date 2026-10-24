@@ -2,8 +2,8 @@
   "version": 1,
   "date": "2026-10-23",
   "scope": "bounded representative execution paths, not universal reliability or first-pass rate",
-  "operative_source_commit": "d73974deac6d60f6588d238eaed1c71f770bc7b6",
-  "operative_source_tree": "1976bbdbe872350885df9ac1d2b966e8b2fba8d6",
+  "operative_source_commit": "192350125fe42d0596c81cace2ea903ba0ff194d",
+  "operative_source_tree": "d7dbf5e786d03ca084377958ccb052e5ef190458",
   "models": [
     "gpt-6.1-sol",
     "gpt-6-luna"
@@ -43,7 +43,8 @@
         "maintenance",
         "lifecycle",
         "readiness",
-        "selection"
+        "selection",
+        "helper_scope"
       ],
       "models": {
         "gpt-6.1-sol": "qualified_sample",
@@ -83,7 +84,8 @@
         "lifecycle",
         "portfolio",
         "git",
-        "selection"
+        "selection",
+        "helper_scope"
       ],
       "models": {
         "gpt-6.1-sol": "qualified_sample",
@@ -180,7 +182,8 @@
         "maintenance",
         "readiness",
         "contracts",
-        "selection"
+        "selection",
+        "helper_scope"
       ],
       "models": {
         "gpt-6.1-sol": "qualified_sample",
@@ -368,8 +371,8 @@
         "selection"
       ],
       "models": {
-        "gpt-6.1-sol": "qualified_operator_assisted",
-        "gpt-6-luna": "qualified_operator_assisted"
+        "gpt-6.1-sol": "qualified_sample",
+        "gpt-6-luna": "qualified_sample"
       }
     },
     {
@@ -416,7 +419,8 @@
         "events",
         "readiness",
         "refusals",
-        "selection"
+        "selection",
+        "helper_scope"
       ],
       "models": {
         "gpt-6.1-sol": "qualified_sample",
@@ -637,6 +641,10 @@
         {
           "artifact": "engineering-sol-destination-event-observe-r1.run.json",
           "sha256": "d7e62b36b6973d85fd28295923b121f14ac2eca1fd4133be7eb6bf24ffc35a0a"
+        },
+        {
+          "artifact": "engineering-sol-git-auto-verification.json",
+          "sha256": "fd4615336d32541505193b3995faad989b393feed7273f10a5b915ad53294298"
         }
       ],
       "gpt-6-luna": [
@@ -647,6 +655,10 @@
         {
           "artifact": "engineering-luna-destination-event-observe-r1.run.json",
           "sha256": "4ebbd8dc6829edc586050cb6df8f7938c5082aaa59d601ed7c6044e357265fc8"
+        },
+        {
+          "artifact": "engineering-luna-git-auto-verification.json",
+          "sha256": "6c36ec1b760245cbc68c0d4fbad4abee0c7f83e435a35bcfcdfa93bf01751d72"
         }
       ]
     },
@@ -733,6 +745,32 @@
           "sha256": "79e325c32cb1bec20b2146f32aa265e03ea1e65b7bd88d034d96e3e454c1f47f"
         }
       ]
+    },
+    "helper_scope": {
+      "gpt-6.1-sol": [
+        {
+          "artifact": "engineering-sol-git-auto-verification.json",
+          "sha256": "fd4615336d32541505193b3995faad989b393feed7273f10a5b915ad53294298"
+        }
+      ],
+      "gpt-6-luna": [
+        {
+          "artifact": "engineering-luna-git-auto-scope-failure.json",
+          "sha256": "1faca538bc7d5639d96dab43237bb8acfb6a0d8d3c780f308cf669dcc8bb234d"
+        },
+        {
+          "artifact": "engineering-luna-startup-scope-fix-parent-verification.json",
+          "sha256": "62bf799ec703447f0f011e4096c23e8edf7786b21f6610888713d0a52d78e826"
+        },
+        {
+          "artifact": "engineering-luna-git-auto-r2-input-lineage.json",
+          "sha256": "387f637340270fc030a4b6d6a0109eb4605e2cd195ec790398249284792bef27"
+        },
+        {
+          "artifact": "engineering-luna-git-auto-verification.json",
+          "sha256": "6c36ec1b760245cbc68c0d4fbad4abee0c7f83e435a35bcfcdfa93bf01751d72"
+        }
+      ]
     }
   },
   "terminal_artifacts": {
@@ -749,7 +787,7 @@
   },
   "unit_tests": 15,
   "important_limits": [
-    "Native Git writes/fetch blocked; reviewed operator delivery independently verified by both models.",
+    "Restrictive-mode Git writes/fetch blocked correctly; operator alternative independently verified. Normal automatic approval enabled actual native local Git delivery for both models; Luna passed original scope after retained r1 failure and CoS correction.",
     "Native configuration promotion/trust performed by explicitly authorized operator.",
     "Local receipts/Git destinations do not prove third-party provider guarantees.",
     "No off-session scheduler; refusal and authorized session/native event paths tested.",
@@ -758,7 +796,9 @@
     "Operator brief capacity over-reservation, mid-run fixture seeds and wrong UUID are retained separately; strict global capacity adherence during that interval is unverified.",
     "Controlled lifecycle/state/injected Git counterexamples are not actual persistent workers or real external effects.",
     "No unobserved custom native selector or technical filesystem isolation claim.",
-    "Late guide changes were tested through clean planning and independent guide review. Mandatory component/runtime contract texts are unchanged; prior runtime trials were not rerun for prose-only selection changes."
+    "Late guide changes were tested through clean planning and independent guide review. Mandatory component/runtime contract texts are unchanged; prior runtime trials were not rerun for prose-only selection changes.",
+    "Manual helper effects need the current task grant; source guard and fresh Luna narrow regression pass, with the original out-of-scope improvement-journal write retained as FAIL. This is procedural guidance, not technical enforcement.",
+    "Sol readiness helper is qualified for its exact bound reconfiguration grant. Subsequent Git tasks retain old-grant failures and use current-task checks without changing the evaluator; generic readiness is unclaimed."
   ],
   "completion_conditions": [
     "independent final report/record acceptance",
@@ -775,13 +815,18 @@
   "reviewed_operative_parts": [
     {
       "commit": "bf1591bf1deff01eff99714cea78804d68fa92aa",
-      "scope": "original 16 source/helper/test paths; unchanged",
+      "scope": "original 16 source/helper/test paths; handoff/qualify additions superseded by separately reviewed 1923501; all other content unchanged",
       "tests": 15
     },
     {
       "commit": "d73974deac6d60f6588d238eaed1c71f770bc7b6",
       "scope": "graph routing and design guides only; full component texts/metadata/dependencies unchanged",
       "tests": "six unchanged-input cold selection trials plus independent semantic/graph review; earlier failures retained"
+    },
+    {
+      "commit": "192350125fe42d0596c81cace2ea903ba0ff194d",
+      "scope": "handoff/qualify helper side-effect grant additions only; all component/metadata/helper/test/selection-guide bytes unchanged",
+      "tests": "independent source review; separate real CoS correction and fresh native Luna narrow-scope Git regression; prior failed attempt retained"
     }
   ],
   "selection_guide_review": {
@@ -798,5 +843,28 @@
     "indexed_files": 128,
     "every_indexed_member_roundtrip_verified": true,
     "basename": "agentos-paths-20261023-selection-supplement.tar.gz"
+  },
+  "helper_scope_guide_review": {
+    "artifact": "source-helper-scope-guide-review-r1.run.json",
+    "sha256": "2bbf1b2c824d341b0d6d6ea92bc3d86b2a073b19d4a7dd0fef2163152346d042"
+  },
+  "native_approval_model_metadata": {
+    "artifact": "model-metadata-native-approval-supplement.json",
+    "sha256": "81baff866467299e0bbc1b4c4c78d79be96ad545574555ab547a826e595486d1"
+  },
+  "native_approval_permission_metadata": {
+    "artifact": "native-approval-permission-metadata.json",
+    "sha256": "4853762ecd5ed934965fb8e8d976bb340a5c305ba5eefb754190026d1aa58636"
+  },
+  "native_approval_terminal_artifacts": {
+    "artifact": "final-native-approval-artifacts.json",
+    "sha256": "ac2d50e689d95966acde0c53acddaec0566c23b587c7e8641f37cf2aeb42528d"
+  },
+  "native_approval_supplement": {
+    "sha256": "881cbe7407d24a084d5fdfea1041ee2376f5be04db1ed392310c2ec3eb578529",
+    "bytes": 437038,
+    "indexed_files": 128,
+    "every_indexed_member_roundtrip_verified": true,
+    "basename": "agentos-paths-20261023-native-approval-supplement.tar.gz"
   }
 }
