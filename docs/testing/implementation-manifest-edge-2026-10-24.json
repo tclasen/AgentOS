@@ -1,0 +1,328 @@
+{
+  "task": "TASK-000203",
+  "run": "RUN-000198",
+  "plan": 1,
+  "observed_at": "2026-10-24T17:32:14.371167+00:00",
+  "base": "dd5c2e7d1369f9b6837e15b435f66baf40320ca9",
+  "operative_candidate": "6c1b80b5b024d938a6490121ead93008286ec916",
+  "disposition": "reject whole twelve-path package; findings only",
+  "mandatory_failure": "Luna separate-display prewrite procedure, not missing/truncated bodies",
+  "prewrite_body_counts": {
+    "bundle-luna-I": 20,
+    "bundle-sol-I": 20
+  },
+  "required_each": 20,
+  "unstarted_roots": 6,
+  "read_protocol_sha256": "6745d9bc17269074a06dfa36c56139fb73a639c50736dd1edfd7aac4b3b9201c",
+  "actual_models": [
+    {
+      "name": "full-sol-D",
+      "requested_model": "gpt-6.1-sol",
+      "requested_effort": "high",
+      "thread": "01a16ee8-a5ea-7901-aed2-6f170381ab42",
+      "model": "gpt-6.1-sol",
+      "effort": "high",
+      "native_session": "/home/agent/.codex/sessions/2026/10/24/rollout-2026-10-24T17-15-03-01a16ee8-a5ea-7901-aed2-6f170381ab42.jsonl"
+    },
+    {
+      "name": "bundle-luna-D",
+      "requested_model": "gpt-6-luna",
+      "requested_effort": "high",
+      "thread": "01a16ee4-ea9a-77e0-b109-3c2f6a556349",
+      "model": "gpt-6-luna",
+      "effort": "high",
+      "native_session": "/home/agent/.codex/sessions/2026/10/24/rollout-2026-10-24T17-10-58-01a16ee4-ea9a-77e0-b109-3c2f6a556349.jsonl"
+    },
+    {
+      "name": "bundle-luna-I",
+      "requested_model": "gpt-6-luna",
+      "requested_effort": "high",
+      "thread": "01a16eec-ec37-7943-948d-1700c2efc8bb",
+      "model": "gpt-6-luna",
+      "effort": "high",
+      "native_session": "/home/agent/.codex/sessions/2026/10/24/rollout-2026-10-24T17-19-43-01a16eec-ec37-7943-948d-1700c2efc8bb.jsonl"
+    },
+    {
+      "name": "full-luna-D",
+      "requested_model": "gpt-6-luna",
+      "requested_effort": "high",
+      "thread": "01a16ee8-a4ef-72b2-9e08-4df5ecc7a7d8",
+      "model": "gpt-6-luna",
+      "effort": "high",
+      "native_session": "/home/agent/.codex/sessions/2026/10/24/rollout-2026-10-24T17-15-02-01a16ee8-a4ef-72b2-9e08-4df5ecc7a7d8.jsonl"
+    },
+    {
+      "name": "bundle-sol-I",
+      "requested_model": "gpt-6.1-sol",
+      "requested_effort": "high",
+      "thread": "01a16eec-ee22-7d43-bc72-f21edca85a90",
+      "model": "gpt-6.1-sol",
+      "effort": "high",
+      "native_session": "/home/agent/.codex/sessions/2026/10/24/rollout-2026-10-24T17-19-43-01a16eec-ee22-7d43-bc72-f21edca85a90.jsonl"
+    },
+    {
+      "name": "bundle-sol-D",
+      "requested_model": "gpt-6.1-sol",
+      "requested_effort": "high",
+      "thread": "01a16ee4-e297-7f82-bb19-a3d23b49fe92",
+      "model": "gpt-6.1-sol",
+      "effort": "high",
+      "native_session": "/home/agent/.codex/sessions/2026/10/24/rollout-2026-10-24T17-10-56-01a16ee4-e297-7f82-bb19-a3d23b49fe92.jsonl"
+    }
+  ],
+  "runs": {
+    "bundle-luna-D": {
+      "status": "returned",
+      "duration_seconds": 75.65179872512817,
+      "thread": [
+        "01a16ee4-ea9a-77e0-b109-3c2f6a556349"
+      ],
+      "requested_model": "gpt-6-luna",
+      "nonzero_commands": [],
+      "usage": [
+        {
+          "input_tokens": 483414,
+          "cached_input_tokens": 428800,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 4531,
+          "reasoning_output_tokens": 784
+        }
+      ],
+      "delta": {
+        "added": [],
+        "removed": [],
+        "changed": []
+      }
+    },
+    "full-sol-D": {
+      "status": "returned",
+      "duration_seconds": 202.21025276184082,
+      "thread": [
+        "01a16ee8-a5ea-7901-aed2-6f170381ab42"
+      ],
+      "requested_model": "gpt-6.1-sol",
+      "nonzero_commands": [],
+      "usage": [
+        {
+          "input_tokens": 785031,
+          "cached_input_tokens": 720896,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 5281,
+          "reasoning_output_tokens": 1568
+        }
+      ],
+      "delta": {
+        "added": [],
+        "removed": [],
+        "changed": []
+      }
+    },
+    "bundle-sol-D": {
+      "status": "returned",
+      "duration_seconds": 183.68415307998657,
+      "thread": [
+        "01a16ee4-e297-7f82-bb19-a3d23b49fe92"
+      ],
+      "requested_model": "gpt-6.1-sol",
+      "nonzero_commands": [
+        {
+          "command": "/bin/bash -lc 'python3 --version; test -d /private/tmp/agentos-manifestedge-20261024/controls/source-bundle/tools && rg --files /private/tmp/agentos-manifestedge-20261024/controls/source-bundle/tools'",
+          "exit_code": 1,
+          "aggregated_output": "Python 3.14.4\n"
+        }
+      ],
+      "usage": [
+        {
+          "input_tokens": 714478,
+          "cached_input_tokens": 656640,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 5585,
+          "reasoning_output_tokens": 1295
+        }
+      ],
+      "delta": {
+        "added": [],
+        "removed": [],
+        "changed": []
+      }
+    },
+    "bundle-sol-I": {
+      "status": "returned",
+      "duration_seconds": 547.9577820301056,
+      "thread": [
+        "01a16eec-ee22-7d43-bc72-f21edca85a90"
+      ],
+      "requested_model": "gpt-6.1-sol",
+      "nonzero_commands": [],
+      "usage": [
+        {
+          "input_tokens": 1093212,
+          "cached_input_tokens": 1040512,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 27303,
+          "reasoning_output_tokens": 6489
+        }
+      ],
+      "delta": {
+        "added": [
+          ".agentos",
+          ".agentos/core.md",
+          ".agentos/installation.md",
+          ".agentos/operations.md",
+          ".agentos/qualification-example.json",
+          ".agentos/records.md",
+          ".agentos/roles.md",
+          "AGENTS.md"
+        ],
+        "removed": [],
+        "changed": []
+      }
+    },
+    "bundle-luna-I": {
+      "status": "returned",
+      "duration_seconds": 247.6900441646576,
+      "thread": [
+        "01a16eec-ec37-7943-948d-1700c2efc8bb"
+      ],
+      "requested_model": "gpt-6-luna",
+      "nonzero_commands": [
+        {
+          "command": "/bin/bash -lc \"PYTHONDONTWRITEBYTECODE=1 python3 -B -c 'from pathlib import Path\nimport hashlib, json, os, stat, sys\nif len(sys.argv) \"'!= 3 or sys.argv[2] != \"--verify\": raise SystemExit(\"usage\")\nroot = Path(sys.argv[1]).resolve()\nif not root.is_dir() or not (root / \"start.md\").is_file(): raise SystemExit(\"invalid source root\")\ndef fail(error): raise error\nfiles = {}\nfor folder, directories, names in os.walk(root, followlinks=False, onerror=fail):\n    for name in directories + names:\n        path = Path(folder) / name\n        mode = path.lstat().st_mode\n        relative = path.relative_to(root).as_posix()\n        if stat.S_ISDIR(mode): continue\n        if not stat.S_ISREG(mode): raise SystemExit(\"nonregular: \" + relative)\n        data = path.read_bytes()\n        files[relative] = {\"sha256\": hashlib.sha256(data).hexdigest(), \"bytes\": len(data)}\nmanifest = {\"format\": \"agentos-source-v1\", \"files\": dict(sorted(files.items()))}\ndef unique_keys(pairs):\n    result = {}\n    for key, value in pairs:\n        if key in result: raise ValueError(\"duplicate key: \" + key)\n        result[key] = value\n    return result\ndef invalid_constant(value): raise ValueError(\"invalid JSON constant: \" + value)\napproved = json.load(sys.stdin, object_pairs_hook=unique_keys, parse_constant=invalid_constant)\nif json.dumps(approved, sort_keys=True) != json.dumps(manifest, sort_keys=True): raise SystemExit(\"source manifest mismatch\")\nprint(json.dumps({\"match\": True}))'\"' /private/tmp/agentos-manifestedge-20261024/controls/source-bundle/bundle --verify < /private/tmp/agentos-manifestedge-20261024/controls/bundle-luna-approved-identity.json\"",
+          "exit_code": 1,
+          "aggregated_output": "source manifest mismatch\n"
+        }
+      ],
+      "usage": [
+        {
+          "input_tokens": 1822531,
+          "cached_input_tokens": 1747456,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 23232,
+          "reasoning_output_tokens": 8354
+        }
+      ],
+      "delta": {
+        "added": [
+          ".agentos",
+          ".agentos/capabilities.md",
+          ".agentos/lessons.md",
+          ".agentos/manifest.md",
+          ".agentos/policies",
+          ".agentos/policies/authority.md",
+          ".agentos/policies/operations.md",
+          ".agentos/qualification-example.json",
+          ".agentos/qualification.md",
+          ".agentos/roles",
+          ".agentos/roles/chief-of-staff.md",
+          ".agentos/roles/director.md",
+          "AGENTS.md"
+        ],
+        "removed": [],
+        "changed": []
+      }
+    },
+    "full-luna-D": {
+      "status": "returned",
+      "duration_seconds": 95.02164030075073,
+      "thread": [
+        "01a16ee8-a4ef-72b2-9e08-4df5ecc7a7d8"
+      ],
+      "requested_model": "gpt-6-luna",
+      "nonzero_commands": [
+        {
+          "command": "/bin/bash -lc \"pwd && rg --files -g 'request.json' -g '\"'!*'\"' /private/tmp/agentos-manifestedge-20261024/work/full-luna /private/tmp/agentos-manifestedge-20261024/controls/source-full/bundle\"",
+          "exit_code": 1,
+          "aggregated_output": "/private/tmp/agentos-manifestedge-20261024/work/full-luna\n"
+        }
+      ],
+      "usage": [
+        {
+          "input_tokens": 593231,
+          "cached_input_tokens": 532480,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 7405,
+          "reasoning_output_tokens": 4220
+        }
+      ],
+      "delta": {
+        "added": [],
+        "removed": [],
+        "changed": []
+      }
+    }
+  },
+  "evidence_root": "/private/tmp/agentos-manifestedge-20261024",
+  "evidence_pins": {
+    "evidence/bundle-luna-D.run.json": {
+      "sha256": "3870d8d1c835e1a8d1e23f3cb43bb1bee1b9881fe38674251e343e176be642a0",
+      "bytes": 36054
+    },
+    "evidence/full-sol-D.run.json": {
+      "sha256": "f717ce8ccc2c42809b4622eea1ae48c035d82d76588cdc3b73f2895b88281eee",
+      "bytes": 41445
+    },
+    "evidence/bundle-sol-D.run.json": {
+      "sha256": "37bd46a809577a20a5200e113c96ed0e9fe106f15702e5cd695967cf14fd16cf",
+      "bytes": 41756
+    },
+    "evidence/bundle-sol-I.run.json": {
+      "sha256": "3ad4f5011ef702121cd49535a92e697d1bdd9359bd99bbf0719d10a4770e6438",
+      "bytes": 35921
+    },
+    "evidence/bundle-luna-I.run.json": {
+      "sha256": "60161ced1cfad70fd28fb0f4f6ffb8114aa7b48be808371ac808e6eaf60e7e93",
+      "bytes": 42718
+    },
+    "evidence/full-luna-D.run.json": {
+      "sha256": "60d31922d01d6d17dce10a7c5b7a179ca2f5be6a6cb3294e7f0c1808c2e3fb85",
+      "bytes": 36503
+    },
+    "work/primary-bundle-luna-I.json": {
+      "sha256": "e9a05d9b171036d0a1206a644630092baa46d9c1660f70cbe3dee534f9b2d4f7",
+      "bytes": 329956
+    },
+    "work/primary-full-luna-D.json": {
+      "sha256": "828713fd7bcedb6cdbbde51c1c8cc5abce23d4e74914fb0fc45b0f43465717d4",
+      "bytes": 146049
+    },
+    "work/primary-bundle-luna-D.json": {
+      "sha256": "8cd36a1a14faa9af07b555deed09aeb84dcfacc3e6cf79d15a98d96918bb0254",
+      "bytes": 139796
+    },
+    "work/primary-full-sol-D.json": {
+      "sha256": "a4eb7859a357ba8a3220f78f4ab828d51513699be70a92bd74cbe2f2647fd4c2",
+      "bytes": 238836
+    },
+    "work/primary-bundle-sol-D.json": {
+      "sha256": "b30cca037132a4bceaf348a66a9ee9e792ec7c7d859bc7dbac633161964f6f03",
+      "bytes": 214502
+    },
+    "work/primary-bundle-sol-I.json": {
+      "sha256": "051bf35cd0781ee53b23df4146089d728dcfc16ecf9aa252fa86104069e124b7",
+      "bytes": 359319
+    },
+    "work/runtime-I-complete.json": {
+      "sha256": "ef0c7bac30516f7dd9a11f5d6f2796394fe4af70d4d75feb7446253bcd147696",
+      "bytes": 3488
+    },
+    "evidence/prewrite-review.json": {
+      "sha256": "927bc6a7bc8c9c4c147064bcee55f9d21e7c062b17ee29524505cc3f027e458a",
+      "bytes": 16792
+    },
+    "evidence/stop-unstarted.json": {
+      "sha256": "a22454e8bbd7bceb8385cde49359ff09f85589e60b0a39e11d48a922b344f0e1",
+      "bytes": 1686
+    },
+    "evidence/final-protection-audit.json": {
+      "sha256": "31ca0fe6ed2b5f67b04b0817bbd3b78bd3ebd808524e6c9fde4ffc8966c70520",
+      "bytes": 26158
+    },
+    "controls/preregistered.json": {
+      "sha256": "3d0e024e463e26975f85420b19a0b8c51df8719df06598c59b6e6765f85be4d3",
+      "bytes": 7685
+    }
+  },
+  "billing": "unknown",
+  "broader_goal": "active",
+  "delivery_and_cleanup": "pending independently approved findings and normal PR/main/archive verification"
+}
