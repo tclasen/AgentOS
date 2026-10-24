@@ -1,0 +1,65 @@
+{
+  "record_type": "Coordinator machine-observed acceptance identity and cleanup attestation",
+  "task": "TASK-000178",
+  "run": "RUN-000173",
+  "plan_revision": 1,
+  "observed_at": "2026-10-24T02:45:14.824909+00:00",
+  "reviewed_candidate": "439a892590a7fde34d80fcb54e678b71e8c5a532",
+  "reviewed_tree": "cef04cf0c48de04140a21ab6f1f468382143b665",
+  "approval": "APP-000006",
+  "approval_sha256": "4bb65e1184cf021422d789b0e6db64a8e9504ced18104c31b024e5652638bccb",
+  "review_execution": {
+    "run": "review-final-r1",
+    "requested_model": "gpt-6.1-sol",
+    "thread": "01a16bc7-6650-7070-91ea-c9c76af8232a",
+    "model": "gpt-6.1-sol",
+    "reasoning": null
+  },
+  "native_roots": {
+    "returned": 9,
+    "requested_actual_model_matches": 9,
+    "child_cap_each": 0,
+    "repeated_trial_attempts": 0,
+    "trial_nonzero_shell_commands_retained": 6,
+    "actual_effort_and_monetary_cost": "unknown"
+  },
+  "independent_review": {
+    "regression_tests_passed": 24,
+    "additional_cli_checks": "missing/malformed task IDs without evidence outputs; file/link-to-directory changes; unchanged12-node select",
+    "full_onboarding_rerun": false,
+    "material_defects": 0
+  },
+  "archives": [
+    {
+      "sha256": "cf43093498440349f4317a5fedaf10c47ead8080766e187d6bee18d87d5930d2",
+      "bytes": 407260,
+      "indexed_files": 520,
+      "index": "evidence/trials-index.json",
+      "file": "agentos-evidence-20261024-trials.tar.gz"
+    },
+    {
+      "sha256": "c3d640ec11da514f1bf9175228622538628fb660d956211c3f3febe82721eb9d",
+      "bytes": 93951,
+      "indexed_files": 31,
+      "index": "evidence/acceptance-index.json",
+      "file": "agentos-evidence-20261024-acceptance.tar.gz"
+    }
+  ],
+  "archive_total_bytes": 501211,
+  "all_archive_and_indexed_member_hashes_verified": true,
+  "cleanup": {
+    "removed_sandbox": "agentos-evidence-20261024",
+    "removed_sandbox_id": "cb5a32af-9773-4641-a225-5b0d2416f0ae",
+    "owned_sandbox_absent_in_fresh_inventory": true,
+    "baseline_sandboxes_preserved_by_name_and_id": 63,
+    "owned_raw_fixture_directory_removed": true,
+    "raw_files_removed": 553,
+    "raw_file_bytes_removed": 2119689,
+    "unrelated_sandboxes_removed": 0,
+    "global_prune_performed": false,
+    "previous_round_evidence_preserved": true
+  },
+  "governance_snapshot_hashes_unchanged": 14,
+  "delivery": "Pending normal protected PR/merge and fetched owning-main verification. Final observed closure will be recorded separately in the session delivery receipt.",
+  "publication_scope": "Only byte-identical APP-000006 receipt plus this machine attestation follow the reviewed candidate; source/report semantics remain unchanged."
+}

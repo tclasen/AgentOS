@@ -81,23 +81,61 @@ class QualificationTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as d:
             root=Path(d);target=root/'fixture';target.mkdir();(target/'.git').mkdir()
             extra=root/'destination';extra.mkdir();prompt=root/'prompt.txt';prompt.write_text('unit fixture')
-            args=SimpleNamespace(name='attempt',target=str(target),workspace=str(root),output=str(root/'evidence'),
+            args=SimpleNamespace(name='attempt',task='TASK-000178',target=str(target),workspace=str(root),output=str(root/'evidence'),
                                  add_dir=[str(extra)],sandbox='unit-fixture',model='gpt-6-luna',policy='workspace-write',
                                  agents=0,strict_config=False,resume=None,schema=None,prompt=str(prompt),
                                  source=str(Path(__file__).parents[1]))
             def fixture_worker(cmd, input, stdout, stderr):
                 (target/'artifact.txt').write_text('returned artifact')
+                (target/'empty').mkdir();(extra/'empty/nested').mkdir(parents=True)
                 (extra/'receipt.txt').write_text('returned receipt')
                 stdout.write((json.dumps({'type':'turn.completed','usage':{}})+'\n').encode())
                 return SimpleNamespace(returncode=0)
             with patch.object(q.subprocess,'run',side_effect=fixture_worker), contextlib.redirect_stdout(io.StringIO()):
                 self.assertEqual(q.run(args),0)
             record=json.loads((root/'evidence/attempt.run.json').read_text())
+            self.assertEqual(record['task'],'TASK-000178')
+            self.assertEqual(record['delta']['added'],['artifact.txt','empty'])
+            self.assertEqual(record['additional_scope_deltas'][str(extra.resolve())]['added'],['empty','empty/nested','receipt.txt'])
             self.assertEqual(record['after'],q.snapshot(target))
             self.assertEqual(record['additional_scopes_after'][str(extra.resolve())],q.snapshot(extra))
             (target/'artifact.txt').write_text('later changed artifact');(extra/'receipt.txt').unlink()
             self.assertEqual(q.difference(record['after'],q.snapshot(target))['changed'],['artifact.txt'])
             self.assertEqual(q.difference(record['additional_scopes_after'][str(extra.resolve())],q.snapshot(extra))['removed'],['receipt.txt'])
+
+    def test_missing_or_invalid_task_is_rejected_before_native_effects(self):
+        script=Path(__file__).parents[1]/'tools/qualification.py'
+        with tempfile.TemporaryDirectory() as d:
+            root=Path(d);out=root/'evidence'
+            cmd=[sys.executable,str(script),'run','--name','attempt','--target',str(root),
+                 '--workspace',str(root),'--output',str(out),'--sandbox','not-a-real-sandbox',
+                 '--source',str(Path(__file__).parents[1]),'--prompt',str(root/'absent-prompt'),
+                 '--model','gpt-6-luna']
+            missing=subprocess.run(cmd,capture_output=True,text=True)
+            self.assertEqual(missing.returncode,2);self.assertIn('--task',missing.stderr)
+            for task in ['', 'TASK-1', 'task-000178', 'TASK-000178/other', 'TASK-000178\n', 'TASK-１２３４５６']:
+                with self.subTest(task=task), patch.object(q.subprocess,'run') as native:
+                    with self.assertRaisesRegex(ValueError,'TASK-NNNNNN'):
+                        q.run(SimpleNamespace(name='attempt',task=task,output=str(out)))
+                    native.assert_not_called()
+            self.assertFalse(out.exists())
+
+    def test_distinct_task_ids_are_not_replaced_with_historical_task(self):
+        with tempfile.TemporaryDirectory() as d:
+            root=Path(d);target=root/'fixture';target.mkdir();(target/'.git').mkdir()
+            prompt=root/'prompt';prompt.write_text('bounded fixture')
+            for task in ['TASK-000178','TASK-123456']:
+                args=SimpleNamespace(name=task,task=task,target=str(target),workspace=str(root),
+                    output=str(root/'evidence'),add_dir=[],sandbox='unit-fixture',model='gpt-6-luna',
+                    policy='workspace-write',agents=0,strict_config=False,resume=None,schema=None,
+                    prompt=str(prompt),source=str(Path(__file__).parents[1]))
+                def returned(cmd,input,stdout,stderr):
+                    stdout.write(b'{"type":"turn.completed","usage":{}}\n')
+                    return SimpleNamespace(returncode=0)
+                with patch.object(q.subprocess,'run',side_effect=returned),contextlib.redirect_stdout(io.StringIO()):
+                    self.assertEqual(q.run(args),0)
+                record=json.loads((root/'evidence'/f'{task}.run.json').read_text())
+                self.assertEqual(record['task'],task)
 
     def test_run_rejects_path_names_before_any_output(self):
         for name in ('../escape', '/absolute', 'nested/name', '.hidden', ''):
@@ -108,7 +146,7 @@ class QualificationTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as d:
             root=Path(d);target=root/'fixture';target.mkdir();(target/'.git').mkdir()
             out=root/'evidence';out.mkdir();log=out/'attempt.jsonl';log.write_text('retained failure')
-            args=SimpleNamespace(name='attempt',target=str(target),workspace=str(root),output=str(out))
+            args=SimpleNamespace(name='attempt',task='TASK-000178',target=str(target),workspace=str(root),output=str(out))
             with self.assertRaisesRegex(ValueError, 'cannot be overwritten'):q.run(args)
             self.assertEqual(log.read_text(),'retained failure')
             self.assertFalse((out/'attempt.run.json').exists())
@@ -118,7 +156,7 @@ class QualificationTests(unittest.TestCase):
             root=Path(d);target=root/'fixture';target.mkdir();(target/'.git').mkdir()
             alias=root/'destination';alias.symlink_to(outside,target_is_directory=True)
             out=root/'evidence'
-            args=SimpleNamespace(name='attempt',target=str(target),workspace=str(root),output=str(out),add_dir=[str(alias)])
+            args=SimpleNamespace(name='attempt',task='TASK-000178',target=str(target),workspace=str(root),output=str(out),add_dir=[str(alias)])
             with self.assertRaisesRegex(ValueError, 'task-owned directories'):q.run(args)
             self.assertEqual(list(out.iterdir()),[])
 
@@ -158,6 +196,36 @@ class QualificationTests(unittest.TestCase):
             outside=Path(d)/'private.md';outside.write_text('private')
             (root/'components/b.md').unlink();(root/'components/b.md').symlink_to(outside)
             with self.assertRaisesRegex(ValueError,'escap'):q.graph(root)
+
+    def test_empty_directory_add_remove_and_type_changes_are_observable(self):
+        with tempfile.TemporaryDirectory() as d:
+            root=Path(d);(root/'removed').mkdir();(root/'to-file').mkdir();(root/'to-link').mkdir()
+            before=q.snapshot(root)
+            (root/'removed').rmdir();(root/'to-file').rmdir();(root/'to-file').write_text('replacement')
+            (root/'to-link').rmdir();(root/'to-link').symlink_to('missing-directory',target_is_directory=True)
+            (root/'added/nested').mkdir(parents=True)
+            after=q.snapshot(root)
+            self.assertEqual(q.difference(before,after),{'added':['added','added/nested'],
+                'removed':['removed'],'changed':['to-file','to-link']})
+            self.assertEqual(after['added/nested'],{'directory':True})
+            self.assertEqual(after['to-link'],{'symlink':'missing-directory'})
+            self.assertEqual(after['to-file']['sha256'],q.sha(b'replacement'))
+            self.assertNotIn('.',after)
+
+    def test_directory_snapshot_cli_is_read_only_preserves_exclusions_and_links(self):
+        script=Path(__file__).parents[1]/'tools/qualification.py'
+        with tempfile.TemporaryDirectory() as d:
+            parent=Path(d);root=parent/'fixture';root.mkdir();outside=parent/'outside';outside.mkdir()
+            (outside/'secret').write_text('not snapshot content')
+            (root/'link').symlink_to(outside,target_is_directory=True);(root/'empty').mkdir()
+            for excluded in ['.git','__pycache__','.pytest_cache']:
+                (root/excluded/'nested').mkdir(parents=True);(root/excluded/'nested/private').write_text('omitted')
+            inventory=lambda: sorted(str(p.relative_to(root)) for p in root.rglob('*'))
+            before=inventory();out=parent/'snapshot.json'
+            result=subprocess.run([sys.executable,str(script),'snapshot',str(root),str(out)],capture_output=True,text=True)
+            self.assertEqual(result.returncode,0,result.stderr)
+            self.assertEqual(json.loads(out.read_text()),{'empty':{'directory':True},'link':{'symlink':str(outside)}})
+            self.assertEqual(inventory(),before);self.assertEqual((outside/'secret').read_text(),'not snapshot content')
 
     def test_snapshot_tracks_untracked_edits_without_following_symlink(self):
         with tempfile.TemporaryDirectory() as d:
