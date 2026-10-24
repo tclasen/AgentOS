@@ -1,0 +1,61 @@
+{
+  "observed_at": "2026-10-24T10:59:43.715701+00:00",
+  "task": "TASK-000193",
+  "run": "RUN-000188",
+  "approval": "APP-000021",
+  "reviewed_head": "579a3e7ef8039d03ea2384586fc4bad4c7c293e7",
+  "reviewed_tree": "a4159ef3ee193abd3bb2e5911e887ac32c9cb1da",
+  "reviewed_file_hashes": {
+    "docs/agent-records/runs/RUN-000188.md": "1421c65fee4adf03dc55e095f02b1a045336712c5bf806fa851d488b2417f7bf",
+    "docs/agent-records/tasks/project/TASK-000193.md": "3c0b984c05401199c17d614b3a247e7a814f42a4f5ee5d6a4155bb0d7c0e6b56",
+    "docs/testing/portable-manifest-2026-10-24.json": "e513fb973d05b49e34ef9e015cbb09de7b34ae26fe5a04ef65217a079bd5b02b",
+    "docs/testing/portable-manifest-2026-10-24.md": "eeaab687e307ac6cca88ee85adc8c64cc9cce471af2d028ca95781bc6bed22fa"
+  },
+  "reviewed_hashes_unchanged": true,
+  "receipt_sha256": "324593266762f37eb09717c8890cd60683aaa41becc9f30a6daad7b4093af20f",
+  "receipt_copied_byte_identically": true,
+  "reviewer_actual": {
+    "name": "review-final",
+    "thread": "01a16d87-c7d2-7770-8b5f-773aa8f45824",
+    "model": "gpt-6.1-sol",
+    "effort": "high",
+    "native_session": "/home/agent/.codex/sessions/2026/10/24/rollout-2026-10-24T10-49-37-01a16d87-c7d2-7770-8b5f-773aa8f45824.jsonl"
+  },
+  "reviewer_wrapper_elapsed_seconds": 547.8143639564514,
+  "reviewer_raw_sha256": "d946b4aaa1a0da1a97e6228a6be625a75f804e2c504945f1cd2c4ef34d785ca5",
+  "reviewer_known_raw_usage": [
+    {
+      "input_tokens": 2251557,
+      "cached_input_tokens": 2137984,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 19293,
+      "reasoning_output_tokens": 3964
+    }
+  ],
+  "reviewer_nonzero_completed_commands": [
+    {
+      "command": "/bin/bash -lc \"mkdir -p scratch && PYTHONDONTWRITEBYTECODE=1 python -B - <<'PY'\nimport tarfile,json,hashlib,pathlib\np=pathlib.Path('/private/tmp/agentos-manifest-20261024/controls/trials-evidence.tar.gz')\nassert hashlib.sha256(p.read_bytes()).hexdigest()=='e6a9c70805a974e45965b32aa0db40cfaf6242147e76eacaefede6f26922fcd0'\nwith tarfile.open(p,'r:gz') as t:\n m=t.getmembers(); print('members',len(m)); print([(x.name,x.type,x.size) for x in m[:8]])\n b=t.extractfile('evidence/trials-index.json').read(); print(b[:2500].decode())\nPY\"",
+      "exit_code": 127,
+      "aggregated_output": "/bin/bash: line 1: python: command not found\n"
+    }
+  ],
+  "reviewer_other_diagnostic": "Missing Sol qualification.md read emitted no-such-file inside a compound command; records.md subsequently located/read. Receipt retains both diagnostics; aggregate successful commands do not erase internal read failures.",
+  "reviewer_result": "Approved findings-only rejection, no substantive corrections.44regressions2.575seconds,31recipe cases,4example cases,4cache probes,25component graph10/22/18closures,23unchangedcomponentbodies,26links.",
+  "reviewer_scope_delta_verified": true,
+  "operative_package": "All8sourcepaths withdrawn; final bundle/tools/tests equalbase. No portable native benefit or all-path claim.",
+  "source_success_interpretation": "Original successful-source gate retained. New exposure field is only evidence locator.",
+  "sol_manual_adjudication": "Raw final_audit.pass remains false; pending substring matched spending. Original no-stale-status criterion separately adjudicated without rerun or weaker criterion; Reviewer accepted narrow finding.",
+  "first_use_interpretation": "Correct14bytes/3tests/noextra writes; literalprintf artifact is not formatter-returned output. Reviewer independently agreed original requested method unmet.",
+  "trials_archive": {
+    "archive": "/private/tmp/agentos-manifest-20261024-trials.tar.gz",
+    "sha256": "e6a9c70805a974e45965b32aa0db40cfaf6242147e76eacaefede6f26922fcd0",
+    "bytes": 2201636,
+    "indexed_files": 1279,
+    "index": "evidence/trials-index.json",
+    "verified_all_members": true
+  },
+  "delivery_state_at_attestation": "Not yet pushed/merged; current remote protection/check/thread review, normal PR merge and fetched-main verification remain required.",
+  "cleanup_state_at_attestation": "Owned sandbox/rawroot remain until delivered and bothindexedarchivesverified;63originalresources to preserve.",
+  "known_usage_limit": "Five-root and reviewer raw counters retained separately. Full-task billing/cost and unobserved parent/local usage remain unknown.",
+  "broader_goal": "active; bothmodels/allpaths not yet qualified."
+}
